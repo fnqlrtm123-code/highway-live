@@ -1,6 +1,7 @@
 import { getCctvPointById, cctvPoints, getCctvPointsByHighway, getHighwayBySlug } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import AdSense from '@/components/AdSense';
+import CctvPlayer from '@/components/CctvPlayer';
 import type { Metadata } from 'next';
 
 interface Props {
@@ -80,7 +81,7 @@ export default async function CctvDetailPage({ params }: Props) {
               <span>LIVE BROADCASTING</span>
             </div>
 
-            {/* 실제 비디오 시뮬레이션 영역 */}
+            {/* 실제 비디오 및 OpenAPI 연동 플레이어 */}
             <div className="relative flex items-center justify-center bg-black overflow-hidden h-[380px] md:h-[450px]">
               {/* CCTV 오버레이 글씨 */}
               <div className="absolute top-6 left-6 z-20 font-mono text-xs text-green-400 space-y-1 pointer-events-none drop-shadow-md">
@@ -100,14 +101,12 @@ export default async function CctvDetailPage({ params }: Props) {
                 }</p>
               </div>
 
-              {/* HLS 스트림 수신 모의 화면 */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center text-slate-500">
-                <svg className="h-20 w-20 text-slate-800 animate-pulse mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                </svg>
-                <p className="text-[16px] text-slate-200 font-black">실시간 교통 피드 스트림 수신 중...</p>
-                <p className="text-[12px] text-slate-500 mt-2 max-w-md">국토교통부 국가교통정보센터(ITS) 제공 실시간 교통 HLS 스트림 데이터 파일이 렌더링 영역에 정상 동기화되어 연결을 유지하고 있습니다.</p>
-              </div>
+              <CctvPlayer 
+                x={cctv.x}
+                y={cctv.y}
+                cctvId={cctv.id}
+                cctvName={cctv.name}
+              />
 
               {/* 하단 투명 오버레이 (주행 분석 텔레메트리) */}
               <div className="absolute bottom-6 left-6 right-6 z-20 flex justify-between items-center pointer-events-none">

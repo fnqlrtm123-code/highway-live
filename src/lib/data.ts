@@ -48,6 +48,8 @@ export interface CctvPoint {
   weather: "clear" | "rainy" | "snowy" | "foggy";
   temp: number; // Celsius
   videoUrl: string; // Mock HLS/MP4 or simulation configs
+  x: number; // Longitude
+  y: number; // Latitude
 }
 
 export const highways: Highway[] = [
@@ -411,7 +413,9 @@ export const cctvPoints: CctvPoint[] = [
     currentSpeed: 102,
     weather: "clear",
     temp: 24.5,
-    videoUrl: "/videos/cctv_sample.mp4"
+    videoUrl: "/videos/cctv_sample.mp4",
+    x: 127.10222,
+    y: 37.37194
   },
   {
     id: "cctv-gb-02",
@@ -425,7 +429,9 @@ export const cctvPoints: CctvPoint[] = [
     currentSpeed: 78,
     weather: "clear",
     temp: 25.1,
-    videoUrl: "/videos/cctv_sample.mp4"
+    videoUrl: "/videos/cctv_sample.mp4",
+    x: 127.13527,
+    y: 37.03472
   },
   {
     id: "cctv-gb-03",
@@ -439,7 +445,9 @@ export const cctvPoints: CctvPoint[] = [
     currentSpeed: 32,
     weather: "rainy",
     temp: 21.0,
-    videoUrl: "/videos/cctv_sample.mp4"
+    videoUrl: "/videos/cctv_sample.mp4",
+    x: 127.18556,
+    y: 36.78250
   },
   {
     id: "cctv-gb-04",
@@ -453,7 +461,9 @@ export const cctvPoints: CctvPoint[] = [
     currentSpeed: 108,
     weather: "foggy",
     temp: 22.4,
-    videoUrl: "/videos/cctv_sample.mp4"
+    videoUrl: "/videos/cctv_sample.mp4",
+    x: 127.42639,
+    y: 36.43806
   },
 
   // 영동고속도로 CCTV
@@ -469,7 +479,9 @@ export const cctvPoints: CctvPoint[] = [
     currentSpeed: 64,
     weather: "clear",
     temp: 23.8,
-    videoUrl: "/videos/cctv_sample.mp4"
+    videoUrl: "/videos/cctv_sample.mp4",
+    x: 127.22167,
+    y: 37.24167
   },
   {
     id: "cctv-yd-02",
@@ -483,7 +495,9 @@ export const cctvPoints: CctvPoint[] = [
     currentSpeed: 98,
     weather: "clear",
     temp: 24.0,
-    videoUrl: "/videos/cctv_sample.mp4"
+    videoUrl: "/videos/cctv_sample.mp4",
+    x: 127.60833,
+    y: 37.24333
   },
   {
     id: "cctv-yd-03",
@@ -497,7 +511,9 @@ export const cctvPoints: CctvPoint[] = [
     currentSpeed: 101,
     weather: "snowy",
     temp: -2.5,
-    videoUrl: "/videos/cctv_sample.mp4"
+    videoUrl: "/videos/cctv_sample.mp4",
+    x: 128.06528,
+    y: 37.45806
   },
 
   // 서해안고속도로 CCTV
@@ -513,7 +529,9 @@ export const cctvPoints: CctvPoint[] = [
     currentSpeed: 70,
     weather: "foggy",
     temp: 19.8,
-    videoUrl: "/videos/cctv_sample.mp4"
+    videoUrl: "/videos/cctv_sample.mp4",
+    x: 126.81556,
+    y: 36.95389
   },
   {
     id: "cctv-sh-02",
@@ -527,7 +545,9 @@ export const cctvPoints: CctvPoint[] = [
     currentSpeed: 105,
     weather: "clear",
     temp: 22.0,
-    videoUrl: "/videos/cctv_sample.mp4"
+    videoUrl: "/videos/cctv_sample.mp4",
+    x: 126.68750,
+    y: 36.91806
   }
 ];
 

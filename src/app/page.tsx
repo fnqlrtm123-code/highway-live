@@ -10,6 +10,7 @@ import {
   searchAll 
 } from '@/lib/data';
 import AdSense from '@/components/AdSense';
+import CctvPlayer from '@/components/CctvPlayer';
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -319,8 +320,8 @@ export default function Home() {
                         <span>{new Date().toLocaleDateString('ko-KR')} LIVE</span>
                       </div>
                       
-                      {/* 실제 비디오 시뮬레이션 영역 */}
-                      <div className="flex-grow relative flex items-center justify-center bg-black overflow-hidden h-[300px]">
+                      {/* 실제 비디오 및 OpenAPI 연동 플레이어 */}
+                      <div className="flex-grow relative h-[300px] bg-black">
                         {/* CCTV 그래픽 오버레이 */}
                         <div className="absolute top-4 left-4 z-20 font-mono text-[11px] text-green-400 space-y-0.5 pointer-events-none drop-shadow-md">
                           <p>CAM ID: {activeCctv.id}</p>
@@ -339,14 +340,12 @@ export default function Home() {
                           }</p>
                         </div>
 
-                        {/* 모형 자동차 애니메이션 도로 배경 및 CCTV 카메라 뷰 */}
-                        <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center text-slate-500">
-                          <svg className="h-16 w-16 text-slate-700 animate-pulse mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                          </svg>
-                          <p className="text-[14px] text-slate-300 font-bold">실시간 고속도로 HLS 스트림 수신중...</p>
-                          <p className="text-[11px] text-slate-500 mt-1 max-w-sm">공공데이터포털 연동 API 키를 적용하시면 실제 CCTV 정지 영상 및 RTSP 연동 미디어 파일을 5초 간격으로 로드해 표시합니다.</p>
-                        </div>
+                        <CctvPlayer 
+                          x={activeCctv.x}
+                          y={activeCctv.y}
+                          cctvId={activeCctv.id}
+                          cctvName={activeCctv.name}
+                        />
 
                         {/* 하단 투명 오버레이 (텔레메트리) */}
                         <div className="absolute bottom-4 left-4 right-4 z-20 flex justify-between items-center pointer-events-none">
