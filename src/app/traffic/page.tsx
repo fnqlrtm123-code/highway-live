@@ -235,14 +235,6 @@ export default function TrafficPage() {
   const [activeTab, setActiveTab] = useState<MainTab>('major');
   const [searchTerm, setSearchTerm] = useState('');
 
-  // 활성화된 CCTV 플레이어
-  const [selectedCctv, setSelectedCctv] = useState<{
-    id: string;
-    x: number;
-    y: number;
-    name: string;
-  } | null>(null);
-
   // 실시간 속도 상태 계산 (원활 / 서행 / 정체)
   const getStatus = (speed: number, type: string) => {
     const limit = (type === 'urban' || type === 'bridge') ? 50 : 80;
@@ -397,9 +389,9 @@ export default function TrafficPage() {
       {/* 1. 상단 허브 타이틀 */}
       <section className="bg-slate-950 text-white py-12 border-b border-slate-800">
         <div className="mx-auto max-w-[1240px] px-4">
-          <h1 className="text-2xl md:text-3xl font-black mt-1.5">실시간 전국 교통정보 & CCTV 상황판</h1>
+          <h1 className="text-2xl md:text-3xl font-black mt-1.5">실시간 전국 교통정보 상황판</h1>
           <p className="text-xs md:text-sm text-slate-400 mt-2 max-w-xl leading-relaxed">
-            전국 고속도로, 도시고속화도로, 일반 국도 및 주요 대교의 실시간 소통 속도와 CCTV 영상을 한곳에 통합 제공합니다.
+            전국 고속도로, 도시고속화도로, 일반 국도 및 주요 대교의 실시간 소통 속도와 세부 상황을 한곳에 통합 제공합니다.
           </p>
         </div>
       </section>
@@ -411,39 +403,39 @@ export default function TrafficPage() {
 
       {/* 3. 허브 위젯 메인 프레임 */}
       <section className="max-w-[1240px] mx-auto px-4 mt-8">
-        <div className={`grid grid-cols-1 gap-8 items-start ${selectedCctv ? 'lg:grid-cols-12' : 'grid-cols-1'}`}>
+        <div className="grid grid-cols-1 gap-8 items-start">
           
-          {/* 좌측: 카테고리 탭 및 도로 리스트 */}
-          <div className={`${selectedCctv ? 'lg:col-span-7' : 'w-full'} bg-white border border-slate-200 overflow-hidden flex flex-col min-h-[650px]`}>
+          {/* 카테고리 탭 및 도로 리스트 */}
+          <div className="w-full bg-white border border-slate-200 overflow-hidden flex flex-col min-h-[650px]">
             
             {/* 카테고리 탭 */}
             <div className="grid grid-cols-5 border-b border-slate-200 bg-slate-50">
               <button 
-                onClick={() => { setActiveTab('major'); setSelectedCctv(null); setSearchTerm(''); }}
+                onClick={() => { setActiveTab('major'); setSearchTerm(''); }}
                 className={`py-3.5 text-xs font-black border-r border-slate-200 transition-colors ${activeTab === 'major' ? 'bg-white text-blue-600 border-b-2 border-b-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
               >
                 주요도로 10
               </button>
               <button 
-                onClick={() => { setActiveTab('highway'); setSelectedCctv(null); setSearchTerm(''); }}
+                onClick={() => { setActiveTab('highway'); setSearchTerm(''); }}
                 className={`py-3.5 text-xs font-black border-r border-slate-200 transition-colors ${activeTab === 'highway' ? 'bg-white text-blue-600 border-b-2 border-b-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
               >
                 고속도로
               </button>
               <button 
-                onClick={() => { setActiveTab('urban'); setSelectedCctv(null); setSearchTerm(''); }}
+                onClick={() => { setActiveTab('urban'); setSearchTerm(''); }}
                 className={`py-3.5 text-xs font-black border-r border-slate-200 transition-colors ${activeTab === 'urban' ? 'bg-white text-blue-600 border-b-2 border-b-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
               >
                 도시고속
               </button>
               <button 
-                onClick={() => { setActiveTab('national'); setSelectedCctv(null); setSearchTerm(''); }}
+                onClick={() => { setActiveTab('national'); setSearchTerm(''); }}
                 className={`py-3.5 text-xs font-black border-r border-slate-200 transition-colors ${activeTab === 'national' ? 'bg-white text-blue-600 border-b-2 border-b-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
               >
                 국도
               </button>
               <button 
-                onClick={() => { setActiveTab('bridge'); setSelectedCctv(null); setSearchTerm(''); }}
+                onClick={() => { setActiveTab('bridge'); setSearchTerm(''); }}
                 className={`py-3.5 text-xs font-black transition-colors ${activeTab === 'bridge' ? 'bg-white text-blue-600 border-b-2 border-b-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
               >
                 대교
@@ -476,15 +468,11 @@ export default function TrafficPage() {
 
             {/* 소통 리스트 */}
             <div className="p-4 flex-grow overflow-y-auto max-h-[550px]">
-              <div className={`grid grid-cols-1 gap-3 ${selectedCctv ? 'md:grid-cols-2' : 'md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'}`}>
+              <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {currentRoadsList.map((road, idx) => (
                   <div 
                     key={idx} 
-                    className={`p-4 border flex flex-col justify-between gap-3 transition-all ${
-                      selectedCctv?.name === road.name 
-                        ? 'bg-blue-50/60 border-blue-400 shadow-sm' 
-                        : 'bg-white border-slate-100 hover:border-slate-350 hover:shadow-xs'
-                    }`}
+                    className="p-4 border flex flex-col justify-between gap-3 bg-white border-slate-100 hover:border-slate-350 hover:shadow-xs transition-all"
                   >
                     <div className="flex justify-between items-start gap-2">
                       <div className="space-y-1 min-w-0">
@@ -506,20 +494,12 @@ export default function TrafficPage() {
                         <span className="text-[10px] text-slate-400 block leading-none mb-1">평균 속도</span>
                         <span className="text-xs font-black text-slate-800">{road.baseSpeed} km/h</span>
                       </div>
-                      <button 
-                        onClick={() => setSelectedCctv({
-                          id: road.cctvId || 'cctv-gb-01',
-                          x: road.x || 127.0275,
-                          y: road.y || 37.5216,
-                          name: road.name
-                        })}
-                        className="bg-blue-600 hover:bg-blue-700 text-white font-bold text-[11px] px-3 py-1.5 transition-colors flex items-center gap-1.5 shadow-2xs"
+                      <a 
+                        href={`/traffic/${road.slug}`}
+                        className="bg-blue-600 hover:bg-blue-700 text-white font-bold text-[11px] px-3.5 py-1.5 transition-colors shadow-2xs"
                       >
-                        <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                        </svg>
-                        CCTV
-                      </button>
+                        상세 상황
+                      </a>
                     </div>
                   </div>
                 ))}
@@ -529,25 +509,6 @@ export default function TrafficPage() {
               )}
             </div>
           </div>
-
-          {/* 우측: 선택된 CCTV 재생 화면 */}
-          {selectedCctv && (
-            <div className="lg:col-span-5 bg-slate-900 text-white overflow-hidden border border-slate-800 shadow-md">
-              <div className="p-4 border-b border-slate-800 flex justify-between items-center bg-slate-950">
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
-                  <span className="text-xs font-black text-white">CCTV 모니터링: {selectedCctv.name}</span>
-                </div>
-                <button onClick={() => setSelectedCctv(null)} className="text-slate-400 hover:text-white text-xs">&times; 닫기</button>
-              </div>
-              <CctvPlayer 
-                cctvId={selectedCctv.id}
-                x={selectedCctv.x}
-                y={selectedCctv.y}
-                cctvName={selectedCctv.name}
-              />
-            </div>
-          )}
         </div>
       </section>
 
