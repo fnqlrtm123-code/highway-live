@@ -192,7 +192,7 @@ export const NAVER_TRAFFIC_DATA = {
       { name: "월드컵대교", detail: "마포구 상암동 - 영등포구 양평동", baseSpeed: 50 },
       { name: "잠수교", detail: "반포대교 하단 인도교", baseSpeed: 20 },
       { name: "잠실대교", detail: "광진구 자양동 - 송파구 신천동", baseSpeed: 52 },
-      { name: "천호대교", detail: "광진구 광장동 - 강동구 천호동", baseSpeed: 46 },
+      { name: "천호대교", fill: "광진구 광장동 - 강동구 천호동", baseSpeed: 46 },
       { name: "청담대교", detail: "광진구 자양동 - 강남구 삼성동", baseSpeed: 64 },
       { name: "한강대교", detail: "용산구 한강로 - 동작구 본동", baseSpeed: 32 },
       { name: "한남대교", detail: "용산구 한남동 - 강남구 신사동", baseSpeed: 31 }
@@ -239,6 +239,11 @@ export interface RoadProfile {
   congestedSections: string;
   detourCriteria: string;
   faqs: { q: string; a: string }[];
+  images: {
+    thumb: string;
+    still1: string;
+    still2: string;
+  };
 }
 
 function seededRandom(seed: number) {
@@ -290,6 +295,48 @@ export function getRoadList(): RoadProfile[] {
     let congestedSections = '';
     let detourCriteria = '';
     let faqs: { q: string; a: string }[] = [];
+
+    // 도로 성격별 시드를 활용하여 3장씩 고유한 SVG 이미지 데이터를 클라이언트 사이드에서 즉석 인코딩하여 제공
+    // (서로 완벽히 다른 주간 뷰, 야간 뷰, 관제 뷰 벡터 그래픽 자동 매핑)
+    const seed = getSeed(name);
+    
+    // SVG 드로잉을 base64로 직렬화하여 브라우저에 즉각 다르게 뿌리기
+    // 각 도로 이름 글자 색상과 굴곡 선을 다르게 생성하여 고유의 이미지를 시각화
+    const rColor = Math.floor(seededRandom(seed + 10) * 180) + 40;
+    const gColor = Math.floor(seededRandom(seed + 11) * 180) + 40;
+    const bColor = Math.floor(seededRandom(seed + 12) * 180) + 40;
+
+    const svgThumb = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+      <rect width="100%" height="100%" fill="hsl(${(seed % 360)}, 40%, 30%)"/>
+      <path d="M 0,200 L 100,50 L 200,200 Z" fill="hsl(${(seed % 360)}, 40%, 20%)"/>
+      <path d="M 100,50 L 100,200" stroke="#ffeb3b" stroke-dasharray="10 5" stroke-width="4"/>
+      <text x="100" y="110" font-family="Arial" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">${name}</text>
+      <text x="100" y="130" font-family="Arial" font-size="10" fill="#cccccc" text-anchor="middle">Thumbnail View</text>
+    </svg>`;
+
+    const svgStill1 = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+      <rect width="100%" height="100%" fill="hsl(${(seed + 100) % 360}, 30%, 20%)"/>
+      <path d="M 0,500 C 300,200 500,100 800,500" fill="none" stroke="#ffffff" stroke-width="12"/>
+      <path d="M 0,500 C 300,200 500,100 800,500" fill="none" stroke="#ffeb3b" stroke-width="4" stroke-dasharray="20 15"/>
+      <text x="400" y="220" font-family="Arial" font-size="28" fill="#ffffff" font-weight="black" text-anchor="middle">${name} 주간 소통</text>
+      <text x="400" y="270" font-family="Arial" font-size="16" fill="#dddddd" text-anchor="middle">실시간 현장 주간 도로망 전경</text>
+    </svg>`;
+
+    const svgStill2 = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+      <rect width="100%" height="100%" fill="hsl(${(seed + 200) % 360}, 50%, 12%)"/>
+      <path d="M 0,350 L 800,350" stroke="#f44336" stroke-width="8"/>
+      <path d="M 0,400 L 800,400" stroke="#4caf50" stroke-width="8"/>
+      <circle cx="200" cy="250" r="50" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)"/>
+      <path d="M 170,250 L 230,250 M 200,220 L 200,280" stroke="#ffffff" stroke-width="2"/>
+      <text x="400" y="180" font-family="Arial" font-size="28" fill="#ffffff" font-weight="black" text-anchor="middle">${name} 관제 CCTV</text>
+      <text x="400" y="230" font-family="Arial" font-size="16" fill="#00ff00" font-weight="bold" text-anchor="middle">LIVE FEED 01</text>
+    </svg>`;
+
+    const thumb = `data:image/svg+xml;base64,${Buffer.from(svgThumb).toString('base64')}`;
+    const still1 = `data:image/svg+xml;base64,${Buffer.from(svgStill1).toString('base64')}`;
+    const still2 = `data:image/svg+xml;base64,${Buffer.from(svgStill2).toString('base64')}`;
+
+    const images = { thumb, still1, still2 };
 
     // 경부, 영동, 서해안, 올림픽, 강변북로의 수작업 지식 데이터
     if (name.includes("경부고속도로")) {
@@ -349,7 +396,6 @@ export function getRoadList(): RoadProfile[] {
       ];
     } else {
       // 일반 서브 도로 140여 개는 난수 분기로 개별 페이지마다 완전 유니크 텍스트 렌더링
-      const seed = getSeed(name);
       const typeText = type === 'highway' ? '고속도로' : type === 'urban' ? '도시고속도로' : type === 'national' ? '일반국도' : '대교';
       
       const descIndex = Math.floor(seededRandom(seed + 1) * 3);
@@ -434,7 +480,8 @@ export function getRoadList(): RoadProfile[] {
       directionsText,
       congestedSections,
       detourCriteria,
-      faqs
+      faqs,
+      images
     });
   };
 

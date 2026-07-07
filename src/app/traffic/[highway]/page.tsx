@@ -42,10 +42,10 @@ export default async function HighwayTrafficPage({ params }: Props) {
       {/* CGV 스타일 히어로 레이아웃 (배경 파란색 완전 제거, 화이트/연한그레이 깔끔한 테두리) */}
       <div className="bg-white border border-slate-200 p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center md:items-start">
         
-        {/* 좌측: 1:1 비율 정사각형 썸네일 이미지 규격 (NO.1 등 텍스트 오버레이 완전 제거) */}
+        {/* 좌측: 1:1 비율 정사각형 썸네일 이미지 규격 (도로별 고유 SVG 썸네일 데이터 매핑) */}
         <div className="w-[180px] h-[180px] shrink-0 bg-slate-100 border border-slate-200 overflow-hidden shadow-sm">
           <img 
-            src="/highway_traffic_1.png" 
+            src={road.images.thumb} 
             alt={`${road.name} 썸네일`}
             className="w-full h-full object-cover"
           />
@@ -108,7 +108,7 @@ export default async function HighwayTrafficPage({ params }: Props) {
       {/* 애드센스 */}
       <AdSense slot="2233445566" />
 
-      {/* CGV 스틸컷 스타일 현장 실사 이미지 갤러리 섹션 (썸네일 포함 총 3장이며 각각 중복 없이 다르게 렌더링) */}
+      {/* CGV 스틸컷 스타일 현장 실사 이미지 갤러리 섹션 (도로 고유 이미지 3장 매핑 완료) */}
       <section className="space-y-4">
         <h3 className="text-lg font-black text-slate-900 border-b pb-2 border-slate-200">
           현장 스틸컷 (실시간 도로 전경)
@@ -116,7 +116,7 @@ export default async function HighwayTrafficPage({ params }: Props) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="aspect-[16/10] bg-slate-100 border border-slate-200 overflow-hidden relative group">
             <img 
-              src="/highway_traffic_2.png" 
+              src={road.images.still1} 
               alt="현장 스틸컷 01" 
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             />
@@ -126,7 +126,7 @@ export default async function HighwayTrafficPage({ params }: Props) {
           </div>
           <div className="aspect-[16/10] bg-slate-100 border border-slate-200 overflow-hidden relative group">
             <img 
-              src="/highway_traffic_3.png" 
+              src={road.images.still2} 
               alt="현장 스틸컷 02" 
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             />
