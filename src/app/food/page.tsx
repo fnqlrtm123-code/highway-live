@@ -1,5 +1,6 @@
 import { serviceAreas } from '@/lib/data';
 import AdSense from '@/components/AdSense';
+import HubHeader from '@/components/HubHeader';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -16,7 +17,9 @@ export default function FoodIndexPage() {
   }));
 
   return (
-    <main className="mx-auto max-w-[1240px] px-4 py-12 flex-grow space-y-10">
+    <>
+      <HubHeader />
+      <main className="mx-auto max-w-[1240px] px-4 py-12 flex-grow space-y-10">
       
       {/* 소개 타이틀 */}
       <div className="space-y-2 text-center md:text-left">
@@ -61,5 +64,6 @@ export default function FoodIndexPage() {
       </section>
 
     </main>
+    </>
   );
 }

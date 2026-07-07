@@ -1,5 +1,6 @@
 import { serviceAreas } from '@/lib/data';
 import AdSense from '@/components/AdSense';
+import HubHeader from '@/components/HubHeader';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -11,7 +12,9 @@ export default function EvIndexPage() {
   const evServiceAreas = serviceAreas.filter(s => s.gasStation.hasEvCharger);
 
   return (
-    <main className="mx-auto max-w-[1240px] px-4 py-12 flex-grow space-y-12">
+    <>
+      <HubHeader />
+      <main className="mx-auto max-w-[1240px] px-4 py-12 flex-grow space-y-12">
       
       {/* 타이틀 헤더 */}
       <div className="space-y-2 text-center md:text-left">
@@ -64,5 +67,6 @@ export default function EvIndexPage() {
       </section>
 
     </main>
+    </>
   );
 }
