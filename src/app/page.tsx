@@ -379,7 +379,7 @@ export default function Home() {
                       <div className="p-4 bg-slate-900 border-t border-slate-800 flex justify-between items-center text-xs">
                         <span className="text-slate-400">교통 흐름 진단: {activeCctv.currentSpeed >= 80 ? '원활한 소통 흐름' : '전방 감속 및 안전운전 당부'}</span>
                         <a 
-                          href={`/cctv/${activeCctv.id}`} 
+                          href={`/cctv/${activeCctv.highwaySlug}/${activeCctv.id}`} 
                           className="bg-blue-600 text-white font-bold px-3.5 py-1.5 rounded hover:bg-blue-700 transition-colors"
                         >
                           CCTV 단독화면 &middot; 상세정보 &rarr;
@@ -442,7 +442,7 @@ export default function Home() {
                           <div className="flex flex-col items-end shrink-0 justify-between h-full">
                             <span className="text-[15px] font-mono font-black text-blue-600">{s.signatureMenu.price.toLocaleString()}원</span>
                             <a 
-                              href={`/service-area/${s.slug}`}
+                              href={`/rest-areas/${s.slug}`}
                               className="mt-6 text-[11.5px] font-bold text-slate-500 hover:text-blue-600 transition-colors"
                             >
                               전체메뉴 보기 &rarr;
@@ -487,7 +487,7 @@ export default function Home() {
                           <div className="flex flex-col items-end shrink-0 justify-between h-full">
                             <span className="text-[15px] font-mono font-black text-blue-600">{s.signatureMenu.price.toLocaleString()}원</span>
                             <a 
-                              href={`/service-area/${s.slug}`}
+                              href={`/rest-areas/${s.slug}`}
                               className="mt-6 text-[11.5px] font-bold text-slate-500 hover:text-blue-600 transition-colors"
                             >
                               전체메뉴 보기 &rarr;
@@ -530,7 +530,7 @@ export default function Home() {
                           <div className="flex flex-col items-end shrink-0 justify-between h-full">
                             <span className="text-[15px] font-mono font-black text-blue-600">{s.signatureMenu.price.toLocaleString()}원</span>
                             <a 
-                              href={`/service-area/${s.slug}`}
+                              href={`/rest-areas/${s.slug}`}
                               className="mt-6 text-[11.5px] font-bold text-slate-500 hover:text-blue-600 transition-colors"
                             >
                               전체메뉴 보기 &rarr;
@@ -659,7 +659,7 @@ export default function Home() {
               <div className="mt-6 flex justify-between items-center pt-4 border-t border-slate-100">
                 <span className="text-[16px] font-mono font-black text-slate-900">{s.signatureMenu.price.toLocaleString()}원</span>
                 <a 
-                  href={`/service-area/${s.slug}`}
+                  href={`/rest-areas/${s.slug}`}
                   className="bg-slate-900 text-white hover:bg-slate-800 text-xs font-bold px-3 py-1.5 transition-colors"
                 >
                   맛집 상세 정보 &rarr;

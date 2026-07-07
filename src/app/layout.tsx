@@ -68,16 +68,16 @@ export default function RootLayout({
 
             {/* 네비게이션 링크 */}
             <nav className="hidden md:flex items-center gap-6">
-              <a href="/" className="text-[14px] font-bold text-slate-700 hover:text-blue-600 transition-colors">실시간 교통상황</a>
+              <a href="/traffic" className="text-[14px] font-bold text-slate-700 hover:text-blue-600 transition-colors">실시간 교통상황</a>
               <a href="/#highways" className="text-[14px] font-bold text-slate-700 hover:text-blue-600 transition-colors">고속도로 노선별</a>
-              <a href="/#service-areas" className="text-[14px] font-bold text-slate-700 hover:text-blue-600 transition-colors">휴게소 맛집</a>
+              <a href="/rest-areas" className="text-[14px] font-bold text-slate-700 hover:text-blue-600 transition-colors">휴게소 맛집</a>
               <a href="/#gas-stations" className="text-[14px] font-bold text-slate-700 hover:text-blue-600 transition-colors">최저가 주유소</a>
             </nav>
 
             {/* 모바일 퀵버튼 */}
             <div className="flex items-center gap-3">
               <a 
-                href="/#cctv-fast-view" 
+                href="/cctv" 
                 className="flex items-center gap-1.5 rounded-lg bg-blue-50 px-3.5 py-2 text-[13.5px] font-extrabold text-blue-600 hover:bg-blue-100 transition-all duration-200"
               >
                 <span className="relative flex h-2 w-2">
@@ -117,8 +117,8 @@ export default function RootLayout({
                 <h4 className="text-sm font-bold text-white uppercase tracking-wider">주요 서비스</h4>
                 <ul className="space-y-2 text-[13px]">
                   <li><a href="/#highways" className="hover:text-white transition-colors">고속도로 노선 안내</a></li>
-                  <li><a href="/#cctv" className="hover:text-white transition-colors">실시간 교통 CCTV 조회</a></li>
-                  <li><a href="/#service-areas" className="hover:text-white transition-colors">휴게소 상·하행 맛집 리스트</a></li>
+                  <li><a href="/cctv" className="hover:text-white transition-colors">실시간 교통 CCTV 조회</a></li>
+                  <li><a href="/rest-areas" className="hover:text-white transition-colors">휴게소 상·하행 맛집 리스트</a></li>
                   <li><a href="/#gas-stations" className="hover:text-white transition-colors">알뜰주유소 유가 및 EV 충전</a></li>
                 </ul>
               </div>

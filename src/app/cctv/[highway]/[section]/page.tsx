@@ -5,13 +5,13 @@ import CctvPlayer from '@/components/CctvPlayer';
 import type { Metadata } from 'next';
 
 interface Props {
-  params: Promise<{ id: string }>;
+  params: Promise<{ highway: string; section: string }>;
 }
 
 // SEO 동적 메타데이터 생성
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { id } = await params;
-  const cctv = getCctvPointById(id);
+  const { section } = await params;
+  const cctv = getCctvPointById(section);
   if (!cctv) return {};
 
   return {
@@ -24,15 +24,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 // Programmatic SEO를 위한 정적 경로(Static Params) 사전 정의
 export async function generateStaticParams() {
   return cctvPoints.map((cctv) => ({
-    id: cctv.id,
+    highway: cctv.highwaySlug,
+    section: cctv.id,
   }));
 }
 
-export default async function CctvDetailPage({ params }: Props) {
-  const { id } = await params;
-  const cctv = getCctvPointById(id);
+export default async function CctvSectionDetailPage({ params }: Props) {
+  const { highway: highwaySlug, section } = await params;
+  const cctv = getCctvPointById(section);
 
-  if (!cctv) {
+  if (!cctv || cctv.highwaySlug !== highwaySlug) {
     notFound();
   }
 
@@ -43,8 +44,8 @@ export default async function CctvDetailPage({ params }: Props) {
     <main className="mx-auto max-w-[1240px] px-4 py-12 flex-grow">
       
       {/* 뒤로가기 링크 */}
-      <a href="/" className="inline-flex items-center gap-1 text-xs font-bold text-slate-500 hover:text-blue-600 transition-colors mb-6">
-        &larr; 고속도로 상황판 홈으로 돌아가기
+      <a href={`/cctv/${highwaySlug}`} className="inline-flex items-center gap-1 text-xs font-bold text-slate-500 hover:text-blue-600 transition-colors mb-6">
+        &larr; {highway?.name || '노선'} CCTV 목록으로 돌아가기
       </a>
 
       {/* 상단 애드센스 광고 */}
@@ -160,25 +161,25 @@ export default async function CctvDetailPage({ params }: Props) {
           
           {/* 노선 기본 제원 카드 */}
           <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-2xs space-y-4">
-            <h3 className="text-base font-black text-slate-900 border-b pb-3 border-slate-100">
+            <h3 className="text-base font-black text-slate-900 border-b pb-3 border-slate-100 font-sans">
               🛣️ 노선 기본 제원
             </h3>
             {highway ? (
               <div className="space-y-3.5 text-xs text-slate-600">
                 <div className="flex justify-between">
-                  <span className="font-bold text-slate-400">노선명</span>
+                  <span className="font-bold text-slate-400 font-sans">노선명</span>
                   <span className="font-black text-slate-800">{highway.name} ({highway.number})</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="font-bold text-slate-400">노선 총길이</span>
+                  <span className="font-bold text-slate-400 font-sans">노선 총길이</span>
                   <span className="font-black text-slate-800 font-mono">{highway.length}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="font-bold text-slate-400">기점 (출발지)</span>
+                  <span className="font-bold text-slate-400 font-sans">기점 (출발지)</span>
                   <span className="font-black text-slate-800">{highway.start}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="font-bold text-slate-400">종점 (도착지)</span>
+                  <span className="font-bold text-slate-400 font-sans">종점 (도착지)</span>
                   <span className="font-black text-slate-800">{highway.end}</span>
                 </div>
               </div>
@@ -189,7 +190,7 @@ export default async function CctvDetailPage({ params }: Props) {
 
           {/* 동일 노선의 기타 CCTV 카메라 목록 */}
           <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-2xs space-y-4">
-            <h3 className="text-base font-black text-slate-900 border-b pb-3 border-slate-100">
+            <h3 className="text-base font-black text-slate-900 border-b pb-3 border-slate-100 font-sans">
               🎥 이 노선의 다른 CCTV
             </h3>
             
@@ -197,7 +198,7 @@ export default async function CctvDetailPage({ params }: Props) {
               {siblingCctvs.map((c) => (
                 <a 
                   key={c.id}
-                  href={`/cctv/${c.id}`}
+                  href={`/cctv/${c.highwaySlug}/${c.id}`}
                   className="block p-3 border border-slate-100 rounded-xl hover:border-blue-600 hover:bg-slate-50 transition-all text-left"
                 >
                   <div className="flex justify-between items-center mb-1">
