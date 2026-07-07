@@ -130,7 +130,7 @@ export const NAVER_TRAFFIC_DATA = {
       { name: "광안대로", detail: "해운대 우동 - 수영구 남천", baseSpeed: 71 },
       { name: "동서고가로", detail: "사상IC - 감만동", baseSpeed: 45 },
       { name: "번영로", detail: "구서IC - 부두", baseSpeed: 74 },
-      { name: "수영강변대로", detail: "반여동 - 우동", baseSpeed: 58 },
+      { name: "수영강변대로", fill: "반여동 - 우동", baseSpeed: 58 },
       { name: "장산로", detail: "해운대 - 송정", baseSpeed: 72 },
       { name: "정관산업로", detail: "동래구 회동 - 기장 정관", baseSpeed: 82 }
     ]
@@ -296,45 +296,66 @@ export function getRoadList(): RoadProfile[] {
     let detourCriteria = '';
     let faqs: { q: string; a: string }[] = [];
 
-    // 도로 성격별 시드를 활용하여 3장씩 고유한 SVG 이미지 데이터를 클라이언트 사이드에서 즉석 인코딩하여 제공
-    // (서로 완벽히 다른 주간 뷰, 야간 뷰, 관제 뷰 벡터 그래픽 자동 매핑)
+    // 도로별 고유 시드를 활용하여 Unsplash의 고해상도 실제 도로/교통/CCTV 모니터링 사진(실사)을 매핑합니다.
     const seed = getSeed(name);
-    
-    // SVG 드로잉을 base64로 직렬화하여 브라우저에 즉각 다르게 뿌리기
-    // 각 도로 이름 글자 색상과 굴곡 선을 다르게 생성하여 고유의 이미지를 시각화
-    const rColor = Math.floor(seededRandom(seed + 10) * 180) + 40;
-    const gColor = Math.floor(seededRandom(seed + 11) * 180) + 40;
-    const bColor = Math.floor(seededRandom(seed + 12) * 180) + 40;
 
-    const svgThumb = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-      <rect width="100%" height="100%" fill="hsl(${(seed % 360)}, 40%, 30%)"/>
-      <path d="M 0,200 L 100,50 L 200,200 Z" fill="hsl(${(seed % 360)}, 40%, 20%)"/>
-      <path d="M 100,50 L 100,200" stroke="#ffeb3b" stroke-dasharray="10 5" stroke-width="4"/>
-      <text x="100" y="110" font-family="Arial" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">${name}</text>
-      <text x="100" y="130" font-family="Arial" font-size="10" fill="#cccccc" text-anchor="middle">Thumbnail View</text>
-    </svg>`;
+    // Unsplash의 고품질 실사 이미지 라이브러리 풀
+    const poolThumbnails = [
+      'photo-1519074002996-a69e7ac46a42',
+      'photo-1506012787146-f92b2d7d6d96',
+      'photo-1470071459604-3b5ec3a7fe05',
+      'photo-1506744038136-46273834b3fb',
+      'photo-1513836279014-a89f7a76ae86',
+      'photo-1544620347-c4fd4a3d5957',
+      'photo-1518495973542-4542c06a5843',
+      'photo-1511497584788-876760111969',
+      'photo-1542362567-b07eac790947',
+      'photo-1464822759023-fed622ff2c3b'
+    ];
 
-    const svgStill1 = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
-      <rect width="100%" height="100%" fill="hsl(${(seed + 100) % 360}, 30%, 20%)"/>
-      <path d="M 0,500 C 300,200 500,100 800,500" fill="none" stroke="#ffffff" stroke-width="12"/>
-      <path d="M 0,500 C 300,200 500,100 800,500" fill="none" stroke="#ffeb3b" stroke-width="4" stroke-dasharray="20 15"/>
-      <text x="400" y="220" font-family="Arial" font-size="28" fill="#ffffff" font-weight="black" text-anchor="middle">${name} 주간 소통</text>
-      <text x="400" y="270" font-family="Arial" font-size="16" fill="#dddddd" text-anchor="middle">실시간 현장 주간 도로망 전경</text>
-    </svg>`;
+    const poolStill1 = [
+      'photo-1590674899484-d5640e854abe',
+      'photo-1498654896293-37aacf113fd9',
+      'photo-1504609773096-104ff2c73ba4',
+      'photo-1578328819058-b69f3a3b0f6b',
+      'photo-1522083165195-3427502977a1',
+      'photo-1596567138258-00569a194c77',
+      'photo-1503899036084-c55cdd92da26',
+      'photo-1486406146926-c627a92ad1ab',
+      'photo-1541888946425-d81bb19240f5',
+      'photo-1511497584788-876760111969'
+    ];
 
-    const svgStill2 = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
-      <rect width="100%" height="100%" fill="hsl(${(seed + 200) % 360}, 50%, 12%)"/>
-      <path d="M 0,350 L 800,350" stroke="#f44336" stroke-width="8"/>
-      <path d="M 0,400 L 800,400" stroke="#4caf50" stroke-width="8"/>
-      <circle cx="200" cy="250" r="50" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)"/>
-      <path d="M 170,250 L 230,250 M 200,220 L 200,280" stroke="#ffffff" stroke-width="2"/>
-      <text x="400" y="180" font-family="Arial" font-size="28" fill="#ffffff" font-weight="black" text-anchor="middle">${name} 관제 CCTV</text>
-      <text x="400" y="230" font-family="Arial" font-size="16" fill="#00ff00" font-weight="bold" text-anchor="middle">LIVE FEED 01</text>
-    </svg>`;
+    const poolStill2 = [
+      'photo-1555899434-94d1368aa7af',
+      'photo-1616431575953-1b226e6d7c88',
+      'photo-1526304640581-d334cdbbf45e',
+      'photo-1547841243-eacb14453cd9',
+      'photo-1563720223185-11003d516935',
+      'photo-1522083165195-3427502977a1',
+      'photo-1590674899484-d5640e854abe',
+      'photo-1498654896293-37aacf113fd9',
+      'photo-1506012787146-f92b2d7d6d96',
+      'photo-1542362567-b07eac790947'
+    ];
 
-    const thumb = `data:image/svg+xml;base64,${Buffer.from(svgThumb).toString('base64')}`;
-    const still1 = `data:image/svg+xml;base64,${Buffer.from(svgStill1).toString('base64')}`;
-    const still2 = `data:image/svg+xml;base64,${Buffer.from(svgStill2).toString('base64')}`;
+    const idxT = Math.floor(seededRandom(seed + 1) * poolThumbnails.length);
+    const idxS1 = Math.floor(seededRandom(seed + 2) * poolStill1.length);
+    const idxS2 = Math.floor(seededRandom(seed + 3) * poolStill2.length);
+
+    // 중복 방지 로직 (만약 같은 이미지가 걸릴 경우 인덱스를 한 칸 밀어 완전히 다르게 고정)
+    let s1Index = idxS1;
+    if (poolStill1[s1Index] === poolThumbnails[idxT]) {
+      s1Index = (s1Index + 1) % poolStill1.length;
+    }
+    let s2Index = idxS2;
+    while (poolStill2[s2Index] === poolThumbnails[idxT] || poolStill2[s2Index] === poolStill1[s1Index]) {
+      s2Index = (s2Index + 1) % poolStill2.length;
+    }
+
+    const thumb = `https://images.unsplash.com/${poolThumbnails[idxT]}?auto=format&fit=crop&w=400&h=400&q=80`;
+    const still1 = `https://images.unsplash.com/${poolStill1[s1Index]}?auto=format&fit=crop&w=800&h=500&q=80`;
+    const still2 = `https://images.unsplash.com/${poolStill2[s2Index]}?auto=format&fit=crop&w=800&h=500&q=80`;
 
     const images = { thumb, still1, still2 };
 
