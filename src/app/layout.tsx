@@ -62,7 +62,7 @@ export default function RootLayout({
               </div>
               <div className="flex flex-col">
                 <span className="text-[17px] font-black tracking-tight text-slate-900 leading-none">하이웨이 라이브</span>
-                <span className="text-[10.5px] font-bold tracking-wider text-blue-600 uppercase mt-0.5">HIGHWAY LIVE</span>
+                <span className="text-[10.5px] font-bold tracking-wider text-blue-600 uppercase mt-0.5">실시간 교통정보</span>
               </div>
             </a>
 
