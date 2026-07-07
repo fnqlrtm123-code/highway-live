@@ -51,7 +51,7 @@ export const highways: Highway[] = [
     "length": "416.1 km",
     "start": "부산",
     "end": "서울",
-    "description": "대한민국 핵심 종축 고속도로로, 서울과 부산을 연결합니다."
+    "description": "대한민국의 경제 동맥이자 핵심 종축 고속도로로 서울과 부산을 연결합니다."
   },
   {
     "slug": "namhae",
@@ -195,7 +195,7 @@ export const highways: Highway[] = [
     "length": "266.3 km",
     "start": "내서",
     "end": "양평",
-    "description": "한반도 내륙의 중심부를 종단하는 노선입니다."
+    "description": "한반도 내륙의 중심부를 종단하여 경남 창원과 경기도 양평을 연결합니다."
   },
   {
     "slug": "yeongdong",
@@ -234,40 +234,67 @@ export const highways: Highway[] = [
     "description": "동해안을 따라 해안 도시들을 남북으로 연결합니다."
   },
   {
-    "slug": "울산포항선",
-    "name": "울산포항고속도로",
-    "number": "0",
-    "length": "100.0 km",
-    "start": "기점",
-    "end": "종점",
-    "description": "울산포항고속도로는 대한민국 주요 지역을 연결하는 안전하고 쾌적한 고속도로 노선입니다."
+    "slug": "donghae-ulsan-pohang",
+    "name": "동해고속도로(울산포항)",
+    "number": "65",
+    "length": "53.7 km",
+    "start": "울산",
+    "end": "포항",
+    "description": "울산과 경북 포항을 직접 연결하는 동해안 고속도로입니다."
   },
   {
-    "slug": "수도권제1순환선",
+    "slug": "capital-circular-1",
     "name": "수도권제1순환고속도로",
-    "number": "0",
-    "length": "100.0 km",
-    "start": "기점",
-    "end": "종점",
-    "description": "수도권제1순환고속도로는 대한민국 주요 지역을 연결하는 안전하고 쾌적한 고속도로 노선입니다."
+    "number": "100",
+    "length": "128.0 km",
+    "start": "성남",
+    "end": "성남",
+    "description": "서울특별시 외곽을 고리 모양으로 연결하는 순환형 고속도로입니다."
   },
   {
-    "slug": "서천공주선",
+    "slug": "namhae-branch-2",
+    "name": "남해제2지선고속도로",
+    "number": "104",
+    "length": "20.6 km",
+    "start": "냉정",
+    "end": "사상",
+    "description": "김해 냉정과 부산 사상을 최단으로 이어 통행량을 분산합니다."
+  },
+  {
+    "slug": "seocheon-gongju",
     "name": "서천공주고속도로",
-    "number": "0",
-    "length": "100.0 km",
-    "start": "기점",
-    "end": "종점",
-    "description": "서천공주고속도로는 대한민국 주요 지역을 연결하는 안전하고 쾌적한 고속도로 노선입니다."
+    "number": "151",
+    "length": "61.5 km",
+    "start": "서천",
+    "end": "공주",
+    "description": "충남 서천과 공주를 직결하여 보령 및 충남 내륙 접근성을 높입니다."
   },
   {
-    "slug": "부산외곽순환선",
+    "slug": "honam-branch",
+    "name": "호남고속도로지선",
+    "number": "251",
+    "length": "54.0 km",
+    "start": "논산",
+    "end": "대전",
+    "description": "논산과 대전을 이어 호남고속도로의 교통을 충청권과 연결합니다."
+  },
+  {
+    "slug": "jungbunaeryuk-branch",
+    "name": "중부내륙고속도로지선",
+    "number": "451",
+    "length": "30.0 km",
+    "start": "현풍",
+    "end": "대구",
+    "description": "중부내륙선과 대구광역시를 연결하는 노선입니다."
+  },
+  {
+    "slug": "busan-outer-circular",
     "name": "부산외곽순환고속도로",
-    "number": "0",
-    "length": "100.0 km",
-    "start": "기점",
-    "end": "종점",
-    "description": "부산외곽순환고속도로는 대한민국 주요 지역을 연결하는 안전하고 쾌적한 고속도로 노선입니다."
+    "number": "600",
+    "length": "48.8 km",
+    "start": "진영",
+    "end": "기장",
+    "description": "부산외곽 지역을 순환하여 남해선과 동해선을 직접 잇는 우회 도로입니다."
   }
 ];
 
@@ -9394,8 +9421,8 @@ export const serviceAreas: ServiceArea[] = [
     "name": "외동휴게소",
     "direction": "하행",
     "directionName": "동해방향",
-    "highwaySlug": "울산포항선",
-    "highwayName": "울산포항고속도로",
+    "highwaySlug": "donghae-ulsan-pohang",
+    "highwayName": "동해고속도로(울산포항)",
     "locationKm": 45,
     "signatureMenu": {
       "name": "가마솥 소고기국밥",
@@ -9438,8 +9465,8 @@ export const serviceAreas: ServiceArea[] = [
     "name": "외동휴게소",
     "direction": "하행",
     "directionName": "속초방향",
-    "highwaySlug": "울산포항선",
-    "highwayName": "울산포항고속도로",
+    "highwaySlug": "donghae-ulsan-pohang",
+    "highwayName": "동해고속도로(울산포항)",
     "locationKm": 52,
     "signatureMenu": {
       "name": "수제 등심돈가스",
@@ -9487,7 +9514,7 @@ export const serviceAreas: ServiceArea[] = [
     "name": "성남휴게소",
     "direction": "하행",
     "directionName": "퇴계원방향",
-    "highwaySlug": "수도권제1순환선",
+    "highwaySlug": "capital-circular-1",
     "highwayName": "수도권제1순환고속도로",
     "locationKm": 59,
     "signatureMenu": {
@@ -9529,7 +9556,7 @@ export const serviceAreas: ServiceArea[] = [
     "name": "시흥하늘휴게소",
     "direction": "하행",
     "directionName": "퇴계원방향",
-    "highwaySlug": "수도권제1순환선",
+    "highwaySlug": "capital-circular-1",
     "highwayName": "수도권제1순환고속도로",
     "locationKm": 66,
     "signatureMenu": {
@@ -9572,7 +9599,7 @@ export const serviceAreas: ServiceArea[] = [
     "name": "구리휴게소",
     "direction": "하행",
     "directionName": "퇴계원방향",
-    "highwaySlug": "수도권제1순환선",
+    "highwaySlug": "capital-circular-1",
     "highwayName": "수도권제1순환고속도로",
     "locationKm": 73,
     "signatureMenu": {
@@ -9620,7 +9647,7 @@ export const serviceAreas: ServiceArea[] = [
     "name": "의왕청계휴게소",
     "direction": "하행",
     "directionName": "판교방향",
-    "highwaySlug": "수도권제1순환선",
+    "highwaySlug": "capital-circular-1",
     "highwayName": "수도권제1순환고속도로",
     "locationKm": 80,
     "signatureMenu": {
@@ -9661,7 +9688,7 @@ export const serviceAreas: ServiceArea[] = [
     "name": "서하남휴게소",
     "direction": "하행",
     "directionName": "판교방향",
-    "highwaySlug": "수도권제1순환선",
+    "highwaySlug": "capital-circular-1",
     "highwayName": "수도권제1순환고속도로",
     "locationKm": 87,
     "signatureMenu": {
@@ -9707,7 +9734,7 @@ export const serviceAreas: ServiceArea[] = [
     "name": "구리남양주휴게소",
     "direction": "하행",
     "directionName": "판교방향",
-    "highwaySlug": "수도권제1순환선",
+    "highwaySlug": "capital-circular-1",
     "highwayName": "수도권제1순환고속도로",
     "locationKm": 94,
     "signatureMenu": {
@@ -9754,7 +9781,7 @@ export const serviceAreas: ServiceArea[] = [
     "name": "시흥하늘휴게소",
     "direction": "하행",
     "directionName": "판교방향",
-    "highwaySlug": "수도권제1순환선",
+    "highwaySlug": "capital-circular-1",
     "highwayName": "수도권제1순환고속도로",
     "locationKm": 101,
     "signatureMenu": {
@@ -9794,8 +9821,8 @@ export const serviceAreas: ServiceArea[] = [
     "name": "장유휴게소",
     "direction": "하행",
     "directionName": "냉정방향",
-    "highwaySlug": "namhae",
-    "highwayName": "남해제2지고속도로",
+    "highwaySlug": "namhae-branch-2",
+    "highwayName": "남해제2지선고속도로",
     "locationKm": 108,
     "signatureMenu": {
       "name": "추억의 옛날 우동",
@@ -9839,8 +9866,8 @@ export const serviceAreas: ServiceArea[] = [
     "name": "서부산휴게소",
     "direction": "하행",
     "directionName": "부산방향",
-    "highwaySlug": "namhae",
-    "highwayName": "남해제2지고속도로",
+    "highwaySlug": "namhae-branch-2",
+    "highwayName": "남해제2지선고속도로",
     "locationKm": 115,
     "signatureMenu": {
       "name": "가마솥 소고기국밥",
@@ -9889,7 +9916,7 @@ export const serviceAreas: ServiceArea[] = [
     "name": "부여백제휴게소",
     "direction": "하행",
     "directionName": "공주방향",
-    "highwaySlug": "서천공주선",
+    "highwaySlug": "seocheon-gongju",
     "highwayName": "서천공주고속도로",
     "locationKm": 122,
     "signatureMenu": {
@@ -9928,7 +9955,7 @@ export const serviceAreas: ServiceArea[] = [
     "name": "부여백제휴게소",
     "direction": "하행",
     "directionName": "서천방향",
-    "highwaySlug": "서천공주선",
+    "highwaySlug": "seocheon-gongju",
     "highwayName": "서천공주고속도로",
     "locationKm": 129,
     "signatureMenu": {
@@ -9972,8 +9999,8 @@ export const serviceAreas: ServiceArea[] = [
     "name": "벌곡휴게소",
     "direction": "하행",
     "directionName": "논산방향",
-    "highwaySlug": "honam",
-    "highwayName": "호남선의 지고속도로",
+    "highwaySlug": "honam-branch",
+    "highwayName": "호남고속도로지선",
     "locationKm": 136,
     "signatureMenu": {
       "name": "해물 순두부찌개",
@@ -10021,8 +10048,8 @@ export const serviceAreas: ServiceArea[] = [
     "name": "벌곡휴게소",
     "direction": "하행",
     "directionName": "대전방향",
-    "highwaySlug": "honam",
-    "highwayName": "호남선의 지고속도로",
+    "highwaySlug": "honam-branch",
+    "highwayName": "호남고속도로지선",
     "locationKm": 143,
     "signatureMenu": {
       "name": "추억의 옛날 우동",
@@ -10063,8 +10090,8 @@ export const serviceAreas: ServiceArea[] = [
     "name": "현풍휴게소",
     "direction": "상행",
     "directionName": "대구방향",
-    "highwaySlug": "jungbu",
-    "highwayName": "중부내륙선의 지고속도로",
+    "highwaySlug": "jungbunaeryuk-branch",
+    "highwayName": "중부내륙고속도로지선",
     "locationKm": 150,
     "signatureMenu": {
       "name": "가마솥 소고기국밥",
@@ -10106,8 +10133,8 @@ export const serviceAreas: ServiceArea[] = [
     "name": "현풍휴게소",
     "direction": "하행",
     "directionName": "현풍방향",
-    "highwaySlug": "jungbu",
-    "highwayName": "중부내륙선의 지고속도로",
+    "highwaySlug": "jungbunaeryuk-branch",
+    "highwayName": "중부내륙고속도로지선",
     "locationKm": 157,
     "signatureMenu": {
       "name": "수제 등심돈가스",
@@ -10154,7 +10181,7 @@ export const serviceAreas: ServiceArea[] = [
     "name": "김해금관가야휴게소",
     "direction": "하행",
     "directionName": "기장방향",
-    "highwaySlug": "부산외곽순환선",
+    "highwaySlug": "busan-outer-circular",
     "highwayName": "부산외곽순환고속도로",
     "locationKm": 164,
     "signatureMenu": {
@@ -10195,7 +10222,7 @@ export const serviceAreas: ServiceArea[] = [
     "name": "김해금관가야휴게소",
     "direction": "하행",
     "directionName": "진영방향",
-    "highwaySlug": "부산외곽순환선",
+    "highwaySlug": "busan-outer-circular",
     "highwayName": "부산외곽순환고속도로",
     "locationKm": 171,
     "signatureMenu": {

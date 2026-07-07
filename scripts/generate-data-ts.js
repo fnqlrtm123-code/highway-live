@@ -53,7 +53,7 @@ const REGION_COORDINATES = {
 
 // 4. Detailed mapping of main highways
 const HIGHWAY_MAP = {
-  '경부선': { slug: 'gyeongbu', name: '경부고속도로', number: '1', length: '416.1 km', start: '부산', end: '서울', desc: '대한민국 핵심 종축 고속도로로, 서울과 부산을 연결합니다.' },
+  '경부선': { slug: 'gyeongbu', name: '경부고속도로', number: '1', length: '416.1 km', start: '부산', end: '서울', desc: '대한민국의 경제 동맥이자 핵심 종축 고속도로로 서울과 부산을 연결합니다.' },
   '서해안선': { slug: 'seohaean', name: '서해안고속도로', number: '15', length: '336.6 km', start: '목포', end: '서울', desc: '대한민국 서부 해안을 따라 남북을 잇는 중심 도로입니다.' },
   '남해선': { slug: 'namhae', name: '남해고속도로', number: '10', length: '273.1 km', start: '영암', end: '부산', desc: '대한민국 남부 해안을 동서로 횡단하는 핵심 고속도로입니다.' },
   '남해선(영암순천)': { slug: 'namhae-yeongam-suncheon', name: '남해고속도로(영암순천)', number: '10', length: '106.8 km', start: '영암', end: '순천', desc: '영암과 순천을 직접 연결하는 남해고속도로의 서부 구간입니다.' },
@@ -62,13 +62,16 @@ const HIGHWAY_MAP = {
   '제2중부선': { slug: 'jungbu-2', name: '제2중부고속도로', number: '37', length: '31.1 km', start: '이천', end: '하남', desc: '중부고속도로의 교통 정체를 분산하기 위한 평행 고속도로입니다.' },
   '호남선': { slug: 'honam', name: '호남고속도로', number: '25', length: '194.2 km', start: '순천', end: '논산', desc: '호남 지방과 수도권을 연결하는 중요한 남북 도로입니다.' },
   '호남선지선': { slug: 'honam-branch', name: '호남고속도로지선', number: '251', length: '54.0 km', start: '논산', end: '대전', desc: '논산과 대전을 이어 호남고속도로의 교통을 충청권과 연결합니다.' },
-  '중부내륙선': { slug: 'jungbunaeryuk', name: '중부내륙고속도로', number: '45', length: '266.3 km', start: '내서', end: '양평', desc: '한반도 내륙의 중심부를 종단하는 노선입니다.' },
+  '호남선의 지선': { slug: 'honam-branch', name: '호남고속도로지선', number: '251', length: '54.0 km', start: '논산', end: '대전', desc: '논산과 대전을 이어 호남고속도로의 교통을 충청권과 연결합니다.' },
+  '중부내륙선': { slug: 'jungbunaeryuk', name: '중부내륙고속도로', number: '45', length: '266.3 km', start: '내서', end: '양평', desc: '한반도 내륙의 중심부를 종단하여 경남 창원과 경기도 양평을 연결합니다.' },
   '중부내륙선의지선': { slug: 'jungbunaeryuk-branch', name: '중부내륙고속도로지선', number: '451', length: '30.0 km', start: '현풍', end: '대구', desc: '중부내륙선과 대구광역시를 연결하는 노선입니다.' },
+  '중부내륙선의 지선': { slug: 'jungbunaeryuk-branch', name: '중부내륙고속도로지선', number: '451', length: '30.0 km', start: '현풍', end: '대구', desc: '중부내륙선과 대구광역시를 연결하는 노선입니다.' },
   '순천완주선': { slug: 'suncheon-wanju', name: '순천완주고속도로', number: '27', length: '117.8 km', start: '순천', end: '완주', desc: '전남 순천과 전북 완주를 남북으로 신속하게 연결하는 고속도로입니다.' },
   '광주대구선': { slug: 'gwangju-daegu', name: '광주대구고속도로', number: '12', length: '176.8 km', start: '광주', end: '대구', desc: '호남과 영남을 동서로 잇는 최초의 동서 화합 고속도로입니다.' },
   '동해선': { slug: 'donghae', name: '동해고속도로', number: '65', length: '204.0 km', start: '부산', end: '속초', desc: '동해안을 따라 해안 도시들을 남북으로 연결합니다.' },
   '동해선(부산울산)': { slug: 'donghae-busan-ulsan', name: '동해고속도로(부산울산)', number: '65', length: '47.2 km', start: '부산', end: '울산', desc: '부산광역시와 울산광역시를 최단 거리로 연결합니다.' },
   '동해선(울산포항)': { slug: 'donghae-ulsan-pohang', name: '동해고속도로(울산포항)', number: '65', length: '53.7 km', start: '울산', end: '포항', desc: '울산과 경북 포항을 직접 연결하는 동해안 고속도로입니다.' },
+  '울산포항선': { slug: 'donghae-ulsan-pohang', name: '동해고속도로(울산포항)', number: '65', length: '53.7 km', start: '울산', end: '포항', desc: '울산과 경북 포항을 직접 연결하는 동해안 고속도로입니다.' },
   '동해선(삼척속초)': { slug: 'donghae-samcheok-sokcho', name: '동해고속도로(삼척속초)', number: '65', length: '103.1 km', start: '삼척', end: '속초', desc: '강원 삼척에서 동해, 강릉을 거쳐 속초까지 이어지는 노선입니다.' },
   '중앙선': { slug: 'jungang', name: '중앙고속도로', number: '55', length: '388.1 km', start: '부산', end: '춘천', desc: '내륙 중심부를 종단하여 영남과 강원 영서 지방을 잇습니다.' },
   '서울양양선': { slug: 'seoul-yangyang', name: '서울양양고속도로', number: '60', length: '150.2 km', start: '서울', end: '양양', desc: '수도권과 동해안을 동서로 가장 신속하게 연결하는 고속도로입니다.' },
@@ -79,7 +82,15 @@ const HIGHWAY_MAP = {
   '새만금포항선(대구~포항)': { slug: 'saemangeum-pohang-daegu-pohang', name: '새만금포항고속도로(대구포항)', number: '20', length: '68.4 km', start: '대구', end: '포항', desc: '대구광역시와 경북 포항을 연결하는 핵심 횡단 노선입니다.' },
   '완주장수선': { slug: 'wanju-jangsu', name: '완주장수고속도로', number: '20', length: '48.5 km', start: '완주', end: '장수', desc: '전북 완주군과 장수군을 연결하는 고속도로입니다.' },
   '무안광주선': { slug: 'muan-gwangju', name: '무안광주고속도로', number: '12', length: '41.3 km', start: '무안', end: '광주', desc: '전남 무안국제공항과 광주광역시를 빠르게 잇는 노선입니다.' },
-  '고창담양선': { slug: 'gochang-damyang', name: '고창담양고속도로', number: '253', length: '42.5 km', start: '고창', end: '담양', desc: '전북 고창과 전남 담양을 동서로 횡단하는 우회 고속도로입니다.' }
+  '고창담양선': { slug: 'gochang-damyang', name: '고창담양고속도로', number: '253', length: '42.5 km', start: '고창', end: '담양', desc: '전북 고창과 전남 담양을 동서로 횡단하는 우회 고속도로입니다.' },
+  '수도권제1순환선': { slug: 'capital-circular-1', name: '수도권제1순환고속도로', number: '100', length: '128.0 km', start: '성남', end: '성남', desc: '서울특별시 외곽을 고리 모양으로 연결하는 순환형 고속도로입니다.' },
+  '남해제2지선': { slug: 'namhae-branch-2', name: '남해제2지선고속도로', number: '104', length: '20.6 km', start: '냉정', end: '사상', desc: '김해 냉정과 부산 사상을 최단으로 이어 통행량을 분산합니다.' },
+  '서천공주선': { slug: 'seocheon-gongju', name: '서천공주고속도로', number: '151', length: '61.5 km', start: '서천', end: '공주', desc: '충남 서천과 공주를 직결하여 보령 및 충남 내륙 접근성을 높입니다.' },
+  '부산외곽순환선': { slug: 'busan-outer-circular', name: '부산외곽순환고속도로', number: '600', length: '48.8 km', start: '진영', end: '기장', desc: '부산외곽 지역을 순환하여 남해선과 동해선을 직접 잇는 우회 도로입니다.' },
+  '대전남부순환선': { slug: 'daejeon-southern-circular', name: '대전남부순환고속도로', number: '300', length: '20.9 km', start: '대전', end: '대전', desc: '대전광역시 남부 외곽을 우회하는 순환 고속도로입니다.' },
+  '수도권제2순환선': { slug: 'capital-circular-2', name: '수도권제2순환고속도로', number: '400', length: '263.4 km', start: '화성', end: '양평', desc: '수도권제1순환선 외곽에 건설 중인 제2차 수도권 순환 고속도로망입니다.' },
+  '중앙선의지선': { slug: 'jungang-branch', name: '중앙고속도로지선', number: '551', length: '18.1 km', start: '김해', end: '양산', desc: '중앙고속도로에서 양산 지역을 빠르게 연결하는 연결 도로입니다.' },
+  '대구외곽순환선': { slug: 'daegu-outer-circular', name: '대구외곽순환고속도로', number: '700', length: '32.9 km', start: '대구', end: '대구', desc: '대구광역시 외곽 지역을 고리 형태로 둥글게 이어 교통 흐름을 돕습니다.' }
 };
 
 // 5. Slugify helper function
