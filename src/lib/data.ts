@@ -144,7 +144,7 @@ export const highways: Highway[] = [
     "description": "전남 순천과 전북 완주를 남북으로 신속하게 연결하는 고속도로입니다."
   },
   {
-    "slug": "세종포천선",
+    "slug": "sejongpocheonseon",
     "name": "세종포천고속도로",
     "number": "0",
     "length": "100.0 km",
@@ -153,7 +153,7 @@ export const highways: Highway[] = [
     "description": "세종포천고속도로는 대한민국 주요 지역을 연결하는 안전하고 쾌적한 고속도로 노선입니다."
   },
   {
-    "slug": "서산영덕선",
+    "slug": "seosanyengdeogseon",
     "name": "서산영덕고속도로",
     "number": "0",
     "length": "100.0 km",
@@ -300,7 +300,7 @@ export const highways: Highway[] = [
 
 export const serviceAreas: ServiceArea[] = [
   {
-    "slug": "서울만남-busan",
+    "slug": "seoulmannam-busan",
     "name": "서울만남휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -339,7 +339,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.128
   },
   {
-    "slug": "기흥-busan",
+    "slug": "giheung-busan",
     "name": "기흥휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -383,7 +383,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5993
   },
   {
-    "slug": "안성-busan",
+    "slug": "anseong-busan",
     "name": "안성휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -432,7 +432,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4559
   },
   {
-    "slug": "망향-busan",
+    "slug": "manghyang-busan",
     "name": "망향휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -474,7 +474,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.236
   },
   {
-    "slug": "옥산-busan",
+    "slug": "ogsan-busan",
     "name": "옥산휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -517,7 +517,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4203
   },
   {
-    "slug": "천안호두-busan",
+    "slug": "cheonanhodu-busan",
     "name": "천안호두휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -565,7 +565,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.427
   },
   {
-    "slug": "죽암-busan",
+    "slug": "jugam-busan",
     "name": "죽암휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -606,7 +606,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6337
   },
   {
-    "slug": "금강-busan",
+    "slug": "geumgang-busan",
     "name": "금강휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -652,7 +652,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6028
   },
   {
-    "slug": "황간-busan",
+    "slug": "hwanggan-busan",
     "name": "황간휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -699,7 +699,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4679
   },
   {
-    "slug": "추풍령-busan",
+    "slug": "chupungryeng-busan",
     "name": "추풍령휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -739,7 +739,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.3689
   },
   {
-    "slug": "평사-busan",
+    "slug": "pyengsa-busan",
     "name": "평사휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -784,7 +784,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.3797
   },
   {
-    "slug": "칠곡-busan",
+    "slug": "chilgog-busan",
     "name": "칠곡휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -834,7 +834,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5063
   },
   {
-    "slug": "옥천-busan",
+    "slug": "ogcheon-busan",
     "name": "옥천휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -873,7 +873,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6163
   },
   {
-    "slug": "경주-busan",
+    "slug": "gyengju-busan",
     "name": "경주휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -917,7 +917,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.6417
   },
   {
-    "slug": "김천-busan",
+    "slug": "gimcheon-busan",
     "name": "김천휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -966,7 +966,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5261
   },
   {
-    "slug": "통도사-busan",
+    "slug": "tongdosa-busan",
     "name": "통도사휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -1008,7 +1008,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5785
   },
   {
-    "slug": "옥천만남의광장-busan",
+    "slug": "ogcheonmannamuigwangjang-busan",
     "name": "옥천만남의광장휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -1051,7 +1051,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3461
   },
   {
-    "slug": "건천-busan",
+    "slug": "geoncheon-busan",
     "name": "건천휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -1099,7 +1099,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.4643
   },
   {
-    "slug": "안성-seoul",
+    "slug": "anseong-seoul",
     "name": "안성휴게소",
     "direction": "상행",
     "directionName": "서울방향",
@@ -1140,7 +1140,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6173
   },
   {
-    "slug": "죽전-seoul",
+    "slug": "jugjeon-seoul",
     "name": "죽전휴게소",
     "direction": "상행",
     "directionName": "서울방향",
@@ -1186,7 +1186,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6666
   },
   {
-    "slug": "천안삼거리-seoul",
+    "slug": "cheonansamgeori-seoul",
     "name": "천안삼거리휴게소",
     "direction": "상행",
     "directionName": "서울방향",
@@ -1233,7 +1233,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4457
   },
   {
-    "slug": "죽암-seoul",
+    "slug": "jugam-seoul",
     "name": "죽암휴게소",
     "direction": "상행",
     "directionName": "서울방향",
@@ -1273,7 +1273,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4075
   },
   {
-    "slug": "옥천-seoul",
+    "slug": "ogcheon-seoul",
     "name": "옥천휴게소",
     "direction": "상행",
     "directionName": "서울방향",
@@ -1318,7 +1318,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3397
   },
   {
-    "slug": "황간-seoul",
+    "slug": "hwanggan-seoul",
     "name": "황간휴게소",
     "direction": "상행",
     "directionName": "서울방향",
@@ -1368,7 +1368,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4098
   },
   {
-    "slug": "입장거봉포도-seoul",
+    "slug": "ibjanggeobongpodo-seoul",
     "name": "입장거봉포도휴게소",
     "direction": "상행",
     "directionName": "서울방향",
@@ -1407,7 +1407,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4481
   },
   {
-    "slug": "추풍령-seoul",
+    "slug": "chupungryeng-seoul",
     "name": "추풍령휴게소",
     "direction": "상행",
     "directionName": "서울방향",
@@ -1451,7 +1451,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.6543
   },
   {
-    "slug": "칠곡-seoul",
+    "slug": "chilgog-seoul",
     "name": "칠곡휴게소",
     "direction": "상행",
     "directionName": "서울방향",
@@ -1500,7 +1500,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.6026
   },
   {
-    "slug": "경산-seoul",
+    "slug": "gyengsan-seoul",
     "name": "경산휴게소",
     "direction": "상행",
     "directionName": "서울방향",
@@ -1542,7 +1542,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.4618
   },
   {
-    "slug": "건천-seoul",
+    "slug": "geoncheon-seoul",
     "name": "건천휴게소",
     "direction": "상행",
     "directionName": "서울방향",
@@ -1585,7 +1585,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.3612
   },
   {
-    "slug": "언양-seoul",
+    "slug": "eonyang-seoul",
     "name": "언양휴게소",
     "direction": "상행",
     "directionName": "서울방향",
@@ -1633,7 +1633,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 129.1992
   },
   {
-    "slug": "양산-seoul",
+    "slug": "yangsan-seoul",
     "name": "양산휴게소",
     "direction": "상행",
     "directionName": "서울방향",
@@ -1674,7 +1674,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.7156
   },
   {
-    "slug": "신탄진-seoul",
+    "slug": "sintanjin-seoul",
     "name": "신탄진휴게소",
     "direction": "상행",
     "directionName": "서울방향",
@@ -1720,7 +1720,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5217
   },
   {
-    "slug": "청주-seoul",
+    "slug": "cheongju-seoul",
     "name": "청주휴게소",
     "direction": "상행",
     "directionName": "서울방향",
@@ -1767,7 +1767,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6148
   },
   {
-    "slug": "김천-seoul",
+    "slug": "gimcheon-seoul",
     "name": "김천휴게소",
     "direction": "상행",
     "directionName": "서울방향",
@@ -1807,7 +1807,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5036
   },
   {
-    "slug": "섬진강-busan",
+    "slug": "seomjingang-busan",
     "name": "섬진강휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -1852,7 +1852,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.3356
   },
   {
-    "slug": "사천-busan",
+    "slug": "sacheon-busan",
     "name": "사천휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -1902,7 +1902,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5569
   },
   {
-    "slug": "진영-busan",
+    "slug": "jinyeng-busan",
     "name": "진영휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -1941,7 +1941,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.6733
   },
   {
-    "slug": "진주-busan",
+    "slug": "jinju-busan",
     "name": "진주휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -1985,7 +1985,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.8073
   },
   {
-    "slug": "함안-busan",
+    "slug": "haman-busan",
     "name": "함안휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -2034,7 +2034,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.8358
   },
   {
-    "slug": "섬진강-busan-1",
+    "slug": "seomjingang-busan-1",
     "name": "섬진강휴게소",
     "direction": "하행",
     "directionName": "순천방향",
@@ -2076,7 +2076,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.5029
   },
   {
-    "slug": "사천-busan-1",
+    "slug": "sacheon-busan-1",
     "name": "사천휴게소",
     "direction": "하행",
     "directionName": "순천방향",
@@ -2119,7 +2119,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5925
   },
   {
-    "slug": "진영-busan-1",
+    "slug": "jinyeng-busan-1",
     "name": "진영휴게소",
     "direction": "하행",
     "directionName": "순천방향",
@@ -2167,7 +2167,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5444
   },
   {
-    "slug": "문산-busan",
+    "slug": "munsan-busan",
     "name": "문산휴게소",
     "direction": "하행",
     "directionName": "순천방향",
@@ -2208,7 +2208,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4583
   },
   {
-    "slug": "함안-busan-1",
+    "slug": "haman-busan-1",
     "name": "함안휴게소",
     "direction": "하행",
     "directionName": "순천방향",
@@ -2254,7 +2254,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.7758
   },
   {
-    "slug": "보성녹차-busan",
+    "slug": "boseongnogcha-busan",
     "name": "보성녹차휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -2301,7 +2301,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.6129
   },
   {
-    "slug": "보성녹차-busan-1",
+    "slug": "boseongnogcha-busan-1",
     "name": "보성녹차휴게소",
     "direction": "하행",
     "directionName": "순천방향",
@@ -2341,7 +2341,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.5417
   },
   {
-    "slug": "장흥정남진-busan",
+    "slug": "jangheungjeongnamjin-busan",
     "name": "장흥정남진휴게소",
     "direction": "하행",
     "directionName": "순천방향",
@@ -2386,7 +2386,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 129.0108
   },
   {
-    "slug": "함평나비-seoul",
+    "slug": "hampyengnabi-seoul",
     "name": "함평나비휴게소",
     "direction": "상행",
     "directionName": "대구방향",
@@ -2436,7 +2436,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.314
   },
   {
-    "slug": "함평나비-both",
+    "slug": "hampyengnabi-both",
     "name": "함평나비휴게소",
     "direction": "하행",
     "directionName": "무안방향",
@@ -2475,7 +2475,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.3669
   },
   {
-    "slug": "지리산-seoul",
+    "slug": "jirisan-seoul",
     "name": "지리산휴게소",
     "direction": "상행",
     "directionName": "대구방향",
@@ -2519,7 +2519,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.1931
   },
   {
-    "slug": "거창-seoul",
+    "slug": "geochang-seoul",
     "name": "거창휴게소",
     "direction": "상행",
     "directionName": "대구방향",
@@ -2568,7 +2568,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.8372
   },
   {
-    "slug": "강천산-seoul",
+    "slug": "gangcheonsan-seoul",
     "name": "강천산휴게소",
     "direction": "상행",
     "directionName": "대구방향",
@@ -2610,7 +2610,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.2593
   },
   {
-    "slug": "논공-seoul",
+    "slug": "nongong-seoul",
     "name": "논공휴게소",
     "direction": "상행",
     "directionName": "대구방향",
@@ -2653,7 +2653,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.577
   },
   {
-    "slug": "지리산-both",
+    "slug": "jirisan-both",
     "name": "지리산휴게소",
     "direction": "하행",
     "directionName": "무안방향",
@@ -2701,7 +2701,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.0103
   },
   {
-    "slug": "거창-both",
+    "slug": "geochang-both",
     "name": "거창휴게소",
     "direction": "하행",
     "directionName": "무안방향",
@@ -2742,7 +2742,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5681
   },
   {
-    "slug": "강천산-both",
+    "slug": "gangcheonsan-both",
     "name": "강천산휴게소",
     "direction": "하행",
     "directionName": "무안방향",
@@ -2788,7 +2788,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.1513
   },
   {
-    "slug": "논공-both",
+    "slug": "nongong-both",
     "name": "논공휴게소",
     "direction": "하행",
     "directionName": "무안방향",
@@ -2835,7 +2835,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.7294
   },
   {
-    "slug": "밀양영남루-both",
+    "slug": "milyangyengnamru-both",
     "name": "밀양영남루휴게소",
     "direction": "하행",
     "directionName": "밀양방향",
@@ -2875,7 +2875,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.8275
   },
   {
-    "slug": "울주-both",
+    "slug": "ulju-both",
     "name": "울주휴게소",
     "direction": "하행",
     "directionName": "밀양방향",
@@ -2920,7 +2920,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 129.3293
   },
   {
-    "slug": "밀양영남루-busan",
+    "slug": "milyangyengnamru-busan",
     "name": "밀양영남루휴게소",
     "direction": "하행",
     "directionName": "울산방향",
@@ -2970,7 +2970,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5768
   },
   {
-    "slug": "울주-busan",
+    "slug": "ulju-busan",
     "name": "울주휴게소",
     "direction": "하행",
     "directionName": "울산방향",
@@ -3009,7 +3009,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 129.1685
   },
   {
-    "slug": "화성-busan",
+    "slug": "hwaseong-busan",
     "name": "화성휴게소",
     "direction": "하행",
     "directionName": "목포방향",
@@ -3053,7 +3053,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4796
   },
   {
-    "slug": "행담도-busan",
+    "slug": "haengdamdo-busan",
     "name": "행담도휴게소",
     "direction": "하행",
     "directionName": "목포방향",
@@ -3102,7 +3102,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4855
   },
   {
-    "slug": "대천-busan",
+    "slug": "daecheon-busan",
     "name": "대천휴게소",
     "direction": "하행",
     "directionName": "목포방향",
@@ -3144,7 +3144,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5324
   },
   {
-    "slug": "서산-busan",
+    "slug": "seosan-busan",
     "name": "서산휴게소",
     "direction": "하행",
     "directionName": "목포방향",
@@ -3187,7 +3187,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4433
   },
   {
-    "slug": "군산-busan",
+    "slug": "gunsan-busan",
     "name": "군산휴게소",
     "direction": "하행",
     "directionName": "목포방향",
@@ -3235,7 +3235,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4339
   },
   {
-    "slug": "함평천지-busan",
+    "slug": "hampyengcheonji-busan",
     "name": "함평천지휴게소",
     "direction": "하행",
     "directionName": "목포방향",
@@ -3276,7 +3276,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3684
   },
   {
-    "slug": "고창고인돌-busan",
+    "slug": "gochanggoindol-busan",
     "name": "고창고인돌휴게소",
     "direction": "하행",
     "directionName": "목포방향",
@@ -3322,7 +3322,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.0703
   },
   {
-    "slug": "홍성-busan",
+    "slug": "hongseong-busan",
     "name": "홍성휴게소",
     "direction": "하행",
     "directionName": "목포방향",
@@ -3369,7 +3369,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4505
   },
   {
-    "slug": "서천-busan",
+    "slug": "seocheon-busan",
     "name": "서천휴게소",
     "direction": "하행",
     "directionName": "목포방향",
@@ -3409,7 +3409,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5335
   },
   {
-    "slug": "매송-busan",
+    "slug": "maesong-busan",
     "name": "매송휴게소",
     "direction": "하행",
     "directionName": "목포방향",
@@ -3454,7 +3454,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6133
   },
   {
-    "slug": "부안고려청자-busan",
+    "slug": "buangoryecheongja-busan",
     "name": "부안고려청자휴게소",
     "direction": "하행",
     "directionName": "목포방향",
@@ -3504,7 +3504,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.1016
   },
   {
-    "slug": "화성-seoul",
+    "slug": "hwaseong-seoul",
     "name": "화성휴게소",
     "direction": "상행",
     "directionName": "시흥방향",
@@ -3543,7 +3543,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3732
   },
   {
-    "slug": "대천-seoul",
+    "slug": "daecheon-seoul",
     "name": "대천휴게소",
     "direction": "상행",
     "directionName": "시흥방향",
@@ -3587,7 +3587,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.2741
   },
   {
-    "slug": "서산-seoul",
+    "slug": "seosan-seoul",
     "name": "서산휴게소",
     "direction": "상행",
     "directionName": "시흥방향",
@@ -3636,7 +3636,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5441
   },
   {
-    "slug": "군산-seoul",
+    "slug": "gunsan-seoul",
     "name": "군산휴게소",
     "direction": "상행",
     "directionName": "시흥방향",
@@ -3678,7 +3678,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6566
   },
   {
-    "slug": "함평천지-seoul",
+    "slug": "hampyengcheonji-seoul",
     "name": "함평천지휴게소",
     "direction": "상행",
     "directionName": "시흥방향",
@@ -3721,7 +3721,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6419
   },
   {
-    "slug": "고창고인돌-seoul",
+    "slug": "gochanggoindol-seoul",
     "name": "고창고인돌휴게소",
     "direction": "상행",
     "directionName": "시흥방향",
@@ -3769,7 +3769,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.1434
   },
   {
-    "slug": "홍성-seoul",
+    "slug": "hongseong-seoul",
     "name": "홍성휴게소",
     "direction": "상행",
     "directionName": "시흥방향",
@@ -3810,7 +3810,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.2558
   },
   {
-    "slug": "서천-seoul",
+    "slug": "seocheon-seoul",
     "name": "서천휴게소",
     "direction": "상행",
     "directionName": "시흥방향",
@@ -3856,7 +3856,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.2501
   },
   {
-    "slug": "매송-seoul",
+    "slug": "maesong-seoul",
     "name": "매송휴게소",
     "direction": "상행",
     "directionName": "시흥방향",
@@ -3903,7 +3903,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5017
   },
   {
-    "slug": "부안고려청자-seoul",
+    "slug": "buangoryecheongja-seoul",
     "name": "부안고려청자휴게소",
     "direction": "상행",
     "directionName": "시흥방향",
@@ -3943,7 +3943,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.2645
   },
   {
-    "slug": "진안마이산-both",
+    "slug": "jinanmaisan-both",
     "name": "진안마이산휴게소",
     "direction": "하행",
     "directionName": "익산방향",
@@ -3988,7 +3988,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.2905
   },
   {
-    "slug": "진안마이산-both-1",
+    "slug": "jinanmaisan-both-1",
     "name": "진안마이산휴게소",
     "direction": "하행",
     "directionName": "포항방향",
@@ -4038,7 +4038,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.1854
   },
   {
-    "slug": "영천-both",
+    "slug": "yengcheon-both",
     "name": "영천휴게소",
     "direction": "하행",
     "directionName": "익산방향",
@@ -4077,7 +4077,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.4036
   },
   {
-    "slug": "청통-both",
+    "slug": "cheongtong-both",
     "name": "청통휴게소",
     "direction": "하행",
     "directionName": "익산방향",
@@ -4121,7 +4121,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.3579
   },
   {
-    "slug": "와촌-both",
+    "slug": "wachon-both",
     "name": "와촌휴게소",
     "direction": "하행",
     "directionName": "포항방향",
@@ -4170,7 +4170,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.448
   },
   {
-    "slug": "영천-both-1",
+    "slug": "yengcheon-both-1",
     "name": "영천휴게소",
     "direction": "하행",
     "directionName": "포항방향",
@@ -4212,7 +4212,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6038
   },
   {
-    "slug": "익산미륵사지-both",
+    "slug": "igsanmireugsaji-both",
     "name": "익산미륵사지휴게소",
     "direction": "하행",
     "directionName": "논산방향",
@@ -4255,7 +4255,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.2979
   },
   {
-    "slug": "정읍녹두장군-both",
+    "slug": "jeongeubnogdujanggun-both",
     "name": "정읍녹두장군휴게소",
     "direction": "하행",
     "directionName": "논산방향",
@@ -4303,7 +4303,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.2245
   },
   {
-    "slug": "곡성-both",
+    "slug": "gogseong-both",
     "name": "곡성휴게소",
     "direction": "하행",
     "directionName": "논산방향",
@@ -4344,7 +4344,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.3957
   },
   {
-    "slug": "백양사-both",
+    "slug": "baegyangsa-both",
     "name": "백양사휴게소",
     "direction": "하행",
     "directionName": "논산방향",
@@ -4390,7 +4390,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3691
   },
   {
-    "slug": "주암-both",
+    "slug": "juam-both",
     "name": "주암휴게소",
     "direction": "하행",
     "directionName": "논산방향",
@@ -4437,7 +4437,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.3689
   },
   {
-    "slug": "이서-both",
+    "slug": "iseo-both",
     "name": "이서휴게소",
     "direction": "하행",
     "directionName": "논산방향",
@@ -4477,7 +4477,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.1956
   },
   {
-    "slug": "익산미륵사지-busan",
+    "slug": "igsanmireugsaji-busan",
     "name": "익산미륵사지휴게소",
     "direction": "하행",
     "directionName": "순천방향",
@@ -4522,7 +4522,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.2934
   },
   {
-    "slug": "정읍녹두장군-busan",
+    "slug": "jeongeubnogdujanggun-busan",
     "name": "정읍녹두장군휴게소",
     "direction": "하행",
     "directionName": "순천방향",
@@ -4572,7 +4572,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.2575
   },
   {
-    "slug": "곡성-busan",
+    "slug": "gogseong-busan",
     "name": "곡성휴게소",
     "direction": "하행",
     "directionName": "순천방향",
@@ -4611,7 +4611,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.4358
   },
   {
-    "slug": "주암-busan",
+    "slug": "juam-busan",
     "name": "주암휴게소",
     "direction": "하행",
     "directionName": "순천방향",
@@ -4655,7 +4655,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.3241
   },
   {
-    "slug": "백양사-busan",
+    "slug": "baegyangsa-busan",
     "name": "백양사휴게소",
     "direction": "하행",
     "directionName": "순천방향",
@@ -4704,7 +4704,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3954
   },
   {
-    "slug": "이서-busan",
+    "slug": "iseo-busan",
     "name": "이서휴게소",
     "direction": "하행",
     "directionName": "순천방향",
@@ -4746,7 +4746,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.984
   },
   {
-    "slug": "오수-both",
+    "slug": "osu-both",
     "name": "오수휴게소",
     "direction": "하행",
     "directionName": "광양방향",
@@ -4789,7 +4789,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.2773
   },
   {
-    "slug": "황전-both",
+    "slug": "hwangjeon-both",
     "name": "황전휴게소",
     "direction": "하행",
     "directionName": "광양방향",
@@ -4837,7 +4837,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.5967
   },
   {
-    "slug": "춘향-both",
+    "slug": "chunhyang-both",
     "name": "춘향휴게소",
     "direction": "하행",
     "directionName": "광양방향",
@@ -4878,7 +4878,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.1632
   },
   {
-    "slug": "오수-both-1",
+    "slug": "osu-both-1",
     "name": "오수휴게소",
     "direction": "하행",
     "directionName": "전주방향",
@@ -4924,7 +4924,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.0307
   },
   {
-    "slug": "황전-both-1",
+    "slug": "hwangjeon-both-1",
     "name": "황전휴게소",
     "direction": "하행",
     "directionName": "전주방향",
@@ -4971,7 +4971,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.3209
   },
   {
-    "slug": "춘향-both-1",
+    "slug": "chunhyang-both-1",
     "name": "춘향휴게소",
     "direction": "하행",
     "directionName": "전주방향",
@@ -5011,11 +5011,11 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.1119
   },
   {
-    "slug": "처인-both",
+    "slug": "cheoin-both",
     "name": "처인휴게소",
     "direction": "하행",
     "directionName": "null방향",
-    "highwaySlug": "세종포천선",
+    "highwaySlug": "sejongpocheonseon",
     "highwayName": "세종포천고속도로",
     "locationKm": 52,
     "signatureMenu": {
@@ -5056,11 +5056,11 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6213
   },
   {
-    "slug": "처인-both-1",
+    "slug": "cheoin-both-1",
     "name": "처인휴게소",
     "direction": "하행",
     "directionName": "null방향",
-    "highwaySlug": "세종포천선",
+    "highwaySlug": "sejongpocheonseon",
     "highwayName": "세종포천고속도로",
     "locationKm": 59,
     "signatureMenu": {
@@ -5106,11 +5106,11 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6657
   },
   {
-    "slug": "고삼호수-both",
+    "slug": "gosamhosu-both",
     "name": "고삼호수휴게소",
     "direction": "하행",
     "directionName": "null방향",
-    "highwaySlug": "세종포천선",
+    "highwaySlug": "sejongpocheonseon",
     "highwayName": "세종포천고속도로",
     "locationKm": 66,
     "signatureMenu": {
@@ -5145,11 +5145,11 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5746
   },
   {
-    "slug": "고삼호수-both-1",
+    "slug": "gosamhosu-both-1",
     "name": "고삼호수휴게소",
     "direction": "하행",
     "directionName": "null방향",
-    "highwaySlug": "세종포천선",
+    "highwaySlug": "sejongpocheonseon",
     "highwayName": "세종포천고속도로",
     "locationKm": 73,
     "signatureMenu": {
@@ -5189,11 +5189,11 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4317
   },
   {
-    "slug": "화서-both",
+    "slug": "hwaseo-both",
     "name": "화서휴게소",
     "direction": "하행",
     "directionName": "상주방향",
-    "highwaySlug": "서산영덕선",
+    "highwaySlug": "seosanyengdeogseon",
     "highwayName": "서산영덕고속도로",
     "locationKm": 80,
     "signatureMenu": {
@@ -5238,11 +5238,11 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.3557
   },
   {
-    "slug": "예산-both",
+    "slug": "yesan-both",
     "name": "예산휴게소",
     "direction": "하행",
     "directionName": "상주방향",
-    "highwaySlug": "서산영덕선",
+    "highwaySlug": "seosanyengdeogseon",
     "highwayName": "서산영덕고속도로",
     "locationKm": 87,
     "signatureMenu": {
@@ -5280,11 +5280,11 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3091
   },
   {
-    "slug": "공주-both",
+    "slug": "gongju-both",
     "name": "공주휴게소",
     "direction": "하행",
     "directionName": "상주방향",
-    "highwaySlug": "서산영덕선",
+    "highwaySlug": "seosanyengdeogseon",
     "highwayName": "서산영덕고속도로",
     "locationKm": 94,
     "signatureMenu": {
@@ -5323,11 +5323,11 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4529
   },
   {
-    "slug": "의성-both",
+    "slug": "uiseong-both",
     "name": "의성휴게소",
     "direction": "하행",
     "directionName": "상주방향",
-    "highwaySlug": "서산영덕선",
+    "highwaySlug": "seosanyengdeogseon",
     "highwayName": "서산영덕고속도로",
     "locationKm": 101,
     "signatureMenu": {
@@ -5371,11 +5371,11 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.6549
   },
   {
-    "slug": "청송-both",
+    "slug": "cheongsong-both",
     "name": "청송휴게소",
     "direction": "하행",
     "directionName": "상주방향",
-    "highwaySlug": "서산영덕선",
+    "highwaySlug": "seosanyengdeogseon",
     "highwayName": "서산영덕고속도로",
     "locationKm": 108,
     "signatureMenu": {
@@ -5412,11 +5412,11 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5985
   },
   {
-    "slug": "문의청남대-both",
+    "slug": "munuicheongnamdae-both",
     "name": "문의청남대휴게소",
     "direction": "하행",
     "directionName": "상주방향",
-    "highwaySlug": "서산영덕선",
+    "highwaySlug": "seosanyengdeogseon",
     "highwayName": "서산영덕고속도로",
     "locationKm": 115,
     "signatureMenu": {
@@ -5458,11 +5458,11 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4408
   },
   {
-    "slug": "속리산-both",
+    "slug": "sogrisan-both",
     "name": "속리산휴게소",
     "direction": "하행",
     "directionName": "청원방향",
-    "highwaySlug": "서산영덕선",
+    "highwaySlug": "seosanyengdeogseon",
     "highwayName": "서산영덕고속도로",
     "locationKm": 122,
     "signatureMenu": {
@@ -5505,11 +5505,11 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.344
   },
   {
-    "slug": "예산-both-1",
+    "slug": "yesan-both-1",
     "name": "예산휴게소",
     "direction": "하행",
     "directionName": "청원방향",
-    "highwaySlug": "서산영덕선",
+    "highwaySlug": "seosanyengdeogseon",
     "highwayName": "서산영덕고속도로",
     "locationKm": 129,
     "signatureMenu": {
@@ -5545,11 +5545,11 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.2759
   },
   {
-    "slug": "공주-both-1",
+    "slug": "gongju-both-1",
     "name": "공주휴게소",
     "direction": "하행",
     "directionName": "청원방향",
-    "highwaySlug": "서산영덕선",
+    "highwaySlug": "seosanyengdeogseon",
     "highwayName": "서산영덕고속도로",
     "locationKm": 136,
     "signatureMenu": {
@@ -5590,11 +5590,11 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4129
   },
   {
-    "slug": "의성-both-1",
+    "slug": "uiseong-both-1",
     "name": "의성휴게소",
     "direction": "하행",
     "directionName": "청원방향",
-    "highwaySlug": "서산영덕선",
+    "highwaySlug": "seosanyengdeogseon",
     "highwayName": "서산영덕고속도로",
     "locationKm": 143,
     "signatureMenu": {
@@ -5640,11 +5640,11 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.6449
   },
   {
-    "slug": "청송-both-1",
+    "slug": "cheongsong-both-1",
     "name": "청송휴게소",
     "direction": "하행",
     "directionName": "청원방향",
-    "highwaySlug": "서산영덕선",
+    "highwaySlug": "seosanyengdeogseon",
     "highwayName": "서산영덕고속도로",
     "locationKm": 150,
     "signatureMenu": {
@@ -5679,11 +5679,11 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.6277
   },
   {
-    "slug": "문의청남대-both-1",
+    "slug": "munuicheongnamdae-both-1",
     "name": "문의청남대휴게소",
     "direction": "하행",
     "directionName": "청원방향",
-    "highwaySlug": "서산영덕선",
+    "highwaySlug": "seosanyengdeogseon",
     "highwayName": "서산영덕고속도로",
     "locationKm": 157,
     "signatureMenu": {
@@ -5723,7 +5723,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4824
   },
   {
-    "slug": "산청-both",
+    "slug": "sancheong-both",
     "name": "산청휴게소",
     "direction": "하행",
     "directionName": "통영방향",
@@ -5772,7 +5772,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5625
   },
   {
-    "slug": "금산인삼랜드-both",
+    "slug": "geumsaninsamraendeu-both",
     "name": "금산인삼랜드휴게소",
     "direction": "하행",
     "directionName": "통영방향",
@@ -5814,7 +5814,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.2513
   },
   {
-    "slug": "덕유산-both",
+    "slug": "deogyusan-both",
     "name": "덕유산휴게소",
     "direction": "하행",
     "directionName": "통영방향",
@@ -5857,7 +5857,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5044
   },
   {
-    "slug": "함양-both",
+    "slug": "hamyang-both",
     "name": "함양휴게소",
     "direction": "하행",
     "directionName": "통영방향",
@@ -5905,7 +5905,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.8107
   },
   {
-    "slug": "고성공룡나라-both",
+    "slug": "goseonggongryongnara-both",
     "name": "고성공룡나라휴게소",
     "direction": "하행",
     "directionName": "통영방향",
@@ -5946,7 +5946,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.8341
   },
   {
-    "slug": "산청-both-1",
+    "slug": "sancheong-both-1",
     "name": "산청휴게소",
     "direction": "하행",
     "directionName": "하남방향",
@@ -5992,7 +5992,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.7274
   },
   {
-    "slug": "금산인삼랜드-both-1",
+    "slug": "geumsaninsamraendeu-both-1",
     "name": "금산인삼랜드휴게소",
     "direction": "하행",
     "directionName": "하남방향",
@@ -6039,7 +6039,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.2806
   },
   {
-    "slug": "덕유산-both-1",
+    "slug": "deogyusan-both-1",
     "name": "덕유산휴게소",
     "direction": "하행",
     "directionName": "하남방향",
@@ -6079,7 +6079,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.2373
   },
   {
-    "slug": "함양-both-1",
+    "slug": "hamyang-both-1",
     "name": "함양휴게소",
     "direction": "하행",
     "directionName": "하남방향",
@@ -6124,7 +6124,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.6374
   },
   {
-    "slug": "고성공룡나라-both-1",
+    "slug": "goseonggongryongnara-both-1",
     "name": "고성공룡나라휴게소",
     "direction": "하행",
     "directionName": "하남방향",
@@ -6174,7 +6174,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.7801
   },
   {
-    "slug": "하남드림-both",
+    "slug": "hanamdeurim-both",
     "name": "하남드림휴게소",
     "direction": "하행",
     "directionName": "통영방향",
@@ -6213,7 +6213,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6681
   },
   {
-    "slug": "오창-both",
+    "slug": "ochang-both",
     "name": "오창휴게소",
     "direction": "하행",
     "directionName": "통영방향",
@@ -6257,7 +6257,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5925
   },
   {
-    "slug": "음성-both",
+    "slug": "eumseong-both",
     "name": "음성휴게소",
     "direction": "하행",
     "directionName": "통영방향",
@@ -6306,7 +6306,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4487
   },
   {
-    "slug": "이천-both",
+    "slug": "icheon-both",
     "name": "이천휴게소",
     "direction": "하행",
     "directionName": "통영방향",
@@ -6348,7 +6348,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3689
   },
   {
-    "slug": "이천쌀-both",
+    "slug": "icheonssal-both",
     "name": "이천쌀휴게소",
     "direction": "하행",
     "directionName": "하남방향",
@@ -6391,7 +6391,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4264
   },
   {
-    "slug": "오창-both-1",
+    "slug": "ochang-both-1",
     "name": "오창휴게소",
     "direction": "하행",
     "directionName": "하남방향",
@@ -6439,7 +6439,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5398
   },
   {
-    "slug": "음성-both-1",
+    "slug": "eumseong-both-1",
     "name": "음성휴게소",
     "direction": "하행",
     "directionName": "하남방향",
@@ -6480,7 +6480,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6357
   },
   {
-    "slug": "마장복합-both",
+    "slug": "majangboghab-both",
     "name": "마장복합휴게소",
     "direction": "하행",
     "directionName": "하남방향",
@@ -6526,7 +6526,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.626
   },
   {
-    "slug": "안성맞춤-both",
+    "slug": "anseongmajchum-both",
     "name": "안성맞춤휴게소",
     "direction": "하행",
     "directionName": "제천방향",
@@ -6573,7 +6573,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4886
   },
   {
-    "slug": "금왕-both",
+    "slug": "geumwang-both",
     "name": "금왕휴게소",
     "direction": "하행",
     "directionName": "제천방향",
@@ -6613,7 +6613,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3499
   },
   {
-    "slug": "천등산-both",
+    "slug": "cheondeungsan-both",
     "name": "천등산휴게소",
     "direction": "하행",
     "directionName": "제천방향",
@@ -6658,7 +6658,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3683
   },
   {
-    "slug": "평택-both",
+    "slug": "pyengtaeg-both",
     "name": "평택휴게소",
     "direction": "하행",
     "directionName": "제천방향",
@@ -6708,7 +6708,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5269
   },
   {
-    "slug": "안성맞춤-both-1",
+    "slug": "anseongmajchum-both-1",
     "name": "안성맞춤휴게소",
     "direction": "하행",
     "directionName": "평택방향",
@@ -6747,7 +6747,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.649
   },
   {
-    "slug": "금왕-both-1",
+    "slug": "geumwang-both-1",
     "name": "금왕휴게소",
     "direction": "하행",
     "directionName": "평택방향",
@@ -6791,7 +6791,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6223
   },
   {
-    "slug": "천등산-both-1",
+    "slug": "cheondeungsan-both-1",
     "name": "천등산휴게소",
     "direction": "하행",
     "directionName": "평택방향",
@@ -6840,7 +6840,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5023
   },
   {
-    "slug": "평택-both-1",
+    "slug": "pyengtaeg-both-1",
     "name": "평택휴게소",
     "direction": "하행",
     "directionName": "평택방향",
@@ -6882,7 +6882,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3993
   },
   {
-    "slug": "영산-both",
+    "slug": "yengsan-both",
     "name": "영산휴게소",
     "direction": "하행",
     "directionName": "마산방향",
@@ -6925,7 +6925,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5513
   },
   {
-    "slug": "선산-both",
+    "slug": "seonsan-both",
     "name": "선산휴게소",
     "direction": "하행",
     "directionName": "마산방향",
@@ -6973,7 +6973,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.472
   },
   {
-    "slug": "충주-both",
+    "slug": "chungju-both",
     "name": "충주휴게소",
     "direction": "하행",
     "directionName": "마산방향",
@@ -7014,7 +7014,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5946
   },
   {
-    "slug": "괴산-both",
+    "slug": "goesan-both",
     "name": "괴산휴게소",
     "direction": "하행",
     "directionName": "마산방향",
@@ -7060,7 +7060,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6366
   },
   {
-    "slug": "문경-both",
+    "slug": "mungyeng-both",
     "name": "문경휴게소",
     "direction": "하행",
     "directionName": "마산방향",
@@ -7107,7 +7107,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5595
   },
   {
-    "slug": "남성주참외-both",
+    "slug": "namseongjuchamoe-both",
     "name": "남성주참외휴게소",
     "direction": "하행",
     "directionName": "마산방향",
@@ -7147,7 +7147,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.4169
   },
   {
-    "slug": "서여주-both",
+    "slug": "seoyeju-both",
     "name": "서여주휴게소",
     "direction": "하행",
     "directionName": "마산방향",
@@ -7192,7 +7192,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3686
   },
   {
-    "slug": "성주-both",
+    "slug": "seongju-both",
     "name": "성주휴게소",
     "direction": "하행",
     "directionName": "마산방향",
@@ -7242,7 +7242,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4452
   },
   {
-    "slug": "남한강-both",
+    "slug": "namhangang-both",
     "name": "남한강휴게소",
     "direction": "하행",
     "directionName": "마산방향",
@@ -7281,7 +7281,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.589
   },
   {
-    "slug": "칠서-both",
+    "slug": "chilseo-both",
     "name": "칠서휴게소",
     "direction": "하행",
     "directionName": "양평방향",
@@ -7325,7 +7325,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.842
   },
   {
-    "slug": "선산-both-1",
+    "slug": "seonsan-both-1",
     "name": "선산휴게소",
     "direction": "하행",
     "directionName": "양평방향",
@@ -7374,7 +7374,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5964
   },
   {
-    "slug": "충주-both-1",
+    "slug": "chungju-both-1",
     "name": "충주휴게소",
     "direction": "하행",
     "directionName": "양평방향",
@@ -7416,7 +7416,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4383
   },
   {
-    "slug": "괴산-both-1",
+    "slug": "goesan-both-1",
     "name": "괴산휴게소",
     "direction": "하행",
     "directionName": "양평방향",
@@ -7459,7 +7459,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3434
   },
   {
-    "slug": "문경-both-1",
+    "slug": "mungyeng-both-1",
     "name": "문경휴게소",
     "direction": "하행",
     "directionName": "양평방향",
@@ -7507,7 +7507,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.3988
   },
   {
-    "slug": "남성주참외-both-1",
+    "slug": "namseongjuchamoe-both-1",
     "name": "남성주참외휴게소",
     "direction": "하행",
     "directionName": "양평방향",
@@ -7548,7 +7548,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5366
   },
   {
-    "slug": "서여주-both-1",
+    "slug": "seoyeju-both-1",
     "name": "서여주휴게소",
     "direction": "하행",
     "directionName": "양평방향",
@@ -7594,7 +7594,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6585
   },
   {
-    "slug": "성주-both-1",
+    "slug": "seongju-both-1",
     "name": "성주휴게소",
     "direction": "하행",
     "directionName": "양평방향",
@@ -7641,7 +7641,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6389
   },
   {
-    "slug": "남한강-both-1",
+    "slug": "namhangang-both-1",
     "name": "남한강휴게소",
     "direction": "하행",
     "directionName": "양평방향",
@@ -7681,7 +7681,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5083
   },
   {
-    "slug": "용인-busan",
+    "slug": "yongin-busan",
     "name": "용인휴게소",
     "direction": "하행",
     "directionName": "강릉방향",
@@ -7726,7 +7726,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.387
   },
   {
-    "slug": "여주-busan",
+    "slug": "yeju-busan",
     "name": "여주휴게소",
     "direction": "하행",
     "directionName": "강릉방향",
@@ -7776,7 +7776,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3863
   },
   {
-    "slug": "횡성-busan",
+    "slug": "hoengseong-busan",
     "name": "횡성휴게소",
     "direction": "하행",
     "directionName": "강릉방향",
@@ -7815,7 +7815,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.8647
   },
   {
-    "slug": "문막-busan",
+    "slug": "munmag-busan",
     "name": "문막휴게소",
     "direction": "하행",
     "directionName": "강릉방향",
@@ -7859,7 +7859,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.9958
   },
   {
-    "slug": "평창-busan",
+    "slug": "pyengchang-busan",
     "name": "평창휴게소",
     "direction": "하행",
     "directionName": "강릉방향",
@@ -7908,7 +7908,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 129.0167
   },
   {
-    "slug": "강릉-busan",
+    "slug": "gangreung-busan",
     "name": "강릉휴게소",
     "direction": "하행",
     "directionName": "강릉방향",
@@ -7950,7 +7950,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.9083
   },
   {
-    "slug": "안산-busan",
+    "slug": "ansan-busan",
     "name": "안산휴게소",
     "direction": "하행",
     "directionName": "강릉방향",
@@ -7993,7 +7993,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4125
   },
   {
-    "slug": "용인-seoul",
+    "slug": "yongin-seoul",
     "name": "용인휴게소",
     "direction": "상행",
     "directionName": "인천방향",
@@ -8041,7 +8041,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3717
   },
   {
-    "slug": "문막-seoul",
+    "slug": "munmag-seoul",
     "name": "문막휴게소",
     "direction": "상행",
     "directionName": "인천방향",
@@ -8082,7 +8082,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.8234
   },
   {
-    "slug": "여주-seoul",
+    "slug": "yeju-seoul",
     "name": "여주휴게소",
     "direction": "상행",
     "directionName": "인천방향",
@@ -8128,7 +8128,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6081
   },
   {
-    "slug": "횡성-seoul",
+    "slug": "hoengseong-seoul",
     "name": "횡성휴게소",
     "direction": "상행",
     "directionName": "인천방향",
@@ -8175,7 +8175,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 129.0256
   },
   {
-    "slug": "평창-seoul",
+    "slug": "pyengchang-seoul",
     "name": "평창휴게소",
     "direction": "상행",
     "directionName": "인천방향",
@@ -8215,7 +8215,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.9479
   },
   {
-    "slug": "강릉-seoul",
+    "slug": "gangreung-seoul",
     "name": "강릉휴게소",
     "direction": "상행",
     "directionName": "인천방향",
@@ -8260,7 +8260,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.8041
   },
   {
-    "slug": "덕평-seoul",
+    "slug": "deogpyeng-seoul",
     "name": "덕평휴게소",
     "direction": "상행",
     "directionName": "인천방향",
@@ -8310,7 +8310,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3687
   },
   {
-    "slug": "안산-seoul",
+    "slug": "ansan-seoul",
     "name": "안산휴게소",
     "direction": "상행",
     "directionName": "인천방향",
@@ -8349,7 +8349,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4285
   },
   {
-    "slug": "안동-busan",
+    "slug": "andong-busan",
     "name": "안동휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -8393,7 +8393,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5582
   },
   {
-    "slug": "군위-busan",
+    "slug": "gunwi-busan",
     "name": "군위휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -8442,7 +8442,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.748
   },
   {
-    "slug": "치악-busan",
+    "slug": "chiag-busan",
     "name": "치악휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -8484,7 +8484,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.9818
   },
   {
-    "slug": "단양팔경-busan",
+    "slug": "danyangpalgyeng-busan",
     "name": "단양팔경휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -8527,7 +8527,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.486
   },
   {
-    "slug": "원주-busan",
+    "slug": "wonju-busan",
     "name": "원주휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -8575,7 +8575,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.7353
   },
   {
-    "slug": "춘천-busan",
+    "slug": "chuncheon-busan",
     "name": "춘천휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -8616,7 +8616,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.7562
   },
   {
-    "slug": "동명-busan",
+    "slug": "dongmyeng-busan",
     "name": "동명휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -8662,7 +8662,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5169
   },
   {
-    "slug": "안동-both",
+    "slug": "andong-both",
     "name": "안동휴게소",
     "direction": "하행",
     "directionName": "춘천방향",
@@ -8709,7 +8709,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.6376
   },
   {
-    "slug": "군위-both",
+    "slug": "gunwi-both",
     "name": "군위휴게소",
     "direction": "하행",
     "directionName": "춘천방향",
@@ -8749,7 +8749,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.7327
   },
   {
-    "slug": "치악-both",
+    "slug": "chiag-both",
     "name": "치악휴게소",
     "direction": "하행",
     "directionName": "춘천방향",
@@ -8794,7 +8794,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.8859
   },
   {
-    "slug": "단양팔경-both",
+    "slug": "danyangpalgyeng-both",
     "name": "단양팔경휴게소",
     "direction": "하행",
     "directionName": "춘천방향",
@@ -8844,7 +8844,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3977
   },
   {
-    "slug": "홍천강-both",
+    "slug": "hongcheongang-both",
     "name": "홍천강휴게소",
     "direction": "하행",
     "directionName": "춘천방향",
@@ -8883,7 +8883,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.7358
   },
   {
-    "slug": "원주-both",
+    "slug": "wonju-both",
     "name": "원주휴게소",
     "direction": "하행",
     "directionName": "춘천방향",
@@ -8927,7 +8927,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.845
   },
   {
-    "slug": "동명-both",
+    "slug": "dongmyeng-both",
     "name": "동명휴게소",
     "direction": "하행",
     "directionName": "춘천방향",
@@ -8976,7 +8976,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.6124
   },
   {
-    "slug": "홍천-seoul",
+    "slug": "hongcheon-seoul",
     "name": "홍천휴게소",
     "direction": "상행",
     "directionName": "서울방향",
@@ -9018,7 +9018,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.1243
   },
   {
-    "slug": "내린천-seoul",
+    "slug": "naerincheon-seoul",
     "name": "내린천휴게소",
     "direction": "상행",
     "directionName": "서울방향",
@@ -9061,7 +9061,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.0294
   },
   {
-    "slug": "홍천-both",
+    "slug": "hongcheon-both",
     "name": "홍천휴게소",
     "direction": "하행",
     "directionName": "양양방향",
@@ -9109,7 +9109,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.8872
   },
   {
-    "slug": "내린천-both",
+    "slug": "naerincheon-both",
     "name": "내린천휴게소",
     "direction": "하행",
     "directionName": "양양방향",
@@ -9196,7 +9196,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.8053
   },
   {
-    "slug": "구정-both",
+    "slug": "gujeong-both",
     "name": "구정휴게소",
     "direction": "하행",
     "directionName": "동해방향",
@@ -9243,7 +9243,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.9491
   },
   {
-    "slug": "포항-both",
+    "slug": "pohang-both",
     "name": "포항휴게소",
     "direction": "하행",
     "directionName": "동해방향",
@@ -9283,7 +9283,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.6553
   },
   {
-    "slug": "옥계-both",
+    "slug": "oggye-both",
     "name": "옥계휴게소",
     "direction": "하행",
     "directionName": "속초방향",
@@ -9328,7 +9328,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.9647
   },
   {
-    "slug": "구정-both-1",
+    "slug": "gujeong-both-1",
     "name": "구정휴게소",
     "direction": "하행",
     "directionName": "속초방향",
@@ -9378,7 +9378,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.8221
   },
   {
-    "slug": "영덕-both",
+    "slug": "yengdeog-both",
     "name": "영덕휴게소",
     "direction": "하행",
     "directionName": "속초방향",
@@ -9417,7 +9417,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.3587
   },
   {
-    "slug": "외동-both",
+    "slug": "oedong-both",
     "name": "외동휴게소",
     "direction": "하행",
     "directionName": "동해방향",
@@ -9461,7 +9461,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.4007
   },
   {
-    "slug": "외동-both-1",
+    "slug": "oedong-both-1",
     "name": "외동휴게소",
     "direction": "하행",
     "directionName": "속초방향",
@@ -9510,7 +9510,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5392
   },
   {
-    "slug": "성남-both",
+    "slug": "seongnam-both",
     "name": "성남휴게소",
     "direction": "하행",
     "directionName": "퇴계원방향",
@@ -9552,7 +9552,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6595
   },
   {
-    "slug": "시흥하늘-both",
+    "slug": "siheunghaneul-both",
     "name": "시흥하늘휴게소",
     "direction": "하행",
     "directionName": "퇴계원방향",
@@ -9595,7 +9595,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.097
   },
   {
-    "slug": "구리-both",
+    "slug": "guri-both",
     "name": "구리휴게소",
     "direction": "하행",
     "directionName": "퇴계원방향",
@@ -9643,7 +9643,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.9654
   },
   {
-    "slug": "의왕청계-both",
+    "slug": "uiwangcheonggye-both",
     "name": "의왕청계휴게소",
     "direction": "하행",
     "directionName": "판교방향",
@@ -9684,7 +9684,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3857
   },
   {
-    "slug": "서하남-both",
+    "slug": "seohanam-both",
     "name": "서하남휴게소",
     "direction": "하행",
     "directionName": "판교방향",
@@ -9730,7 +9730,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3876
   },
   {
-    "slug": "구리남양주-both",
+    "slug": "gurinamyangju-both",
     "name": "구리남양주휴게소",
     "direction": "하행",
     "directionName": "판교방향",
@@ -9777,7 +9777,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.9694
   },
   {
-    "slug": "시흥하늘-both-1",
+    "slug": "siheunghaneul-both-1",
     "name": "시흥하늘휴게소",
     "direction": "하행",
     "directionName": "판교방향",
@@ -9817,7 +9817,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.0994
   },
   {
-    "slug": "장유-both",
+    "slug": "jangyu-both",
     "name": "장유휴게소",
     "direction": "하행",
     "directionName": "냉정방향",
@@ -9862,7 +9862,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.8323
   },
   {
-    "slug": "서부산-busan",
+    "slug": "seobusan-busan",
     "name": "서부산휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -9912,7 +9912,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 129.1053
   },
   {
-    "slug": "부여백제-both",
+    "slug": "buyebaegje-both",
     "name": "부여백제휴게소",
     "direction": "하행",
     "directionName": "공주방향",
@@ -9951,7 +9951,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.2768
   },
   {
-    "slug": "부여백제-both-1",
+    "slug": "buyebaegje-both-1",
     "name": "부여백제휴게소",
     "direction": "하행",
     "directionName": "서천방향",
@@ -9995,7 +9995,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.2385
   },
   {
-    "slug": "벌곡-both",
+    "slug": "beolgog-both",
     "name": "벌곡휴게소",
     "direction": "하행",
     "directionName": "논산방향",
@@ -10044,7 +10044,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3344
   },
   {
-    "slug": "벌곡-both-1",
+    "slug": "beolgog-both-1",
     "name": "벌곡휴게소",
     "direction": "하행",
     "directionName": "대전방향",
@@ -10086,7 +10086,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4764
   },
   {
-    "slug": "현풍-seoul",
+    "slug": "hyenpung-seoul",
     "name": "현풍휴게소",
     "direction": "상행",
     "directionName": "대구방향",
@@ -10129,7 +10129,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.7508
   },
   {
-    "slug": "현풍-both",
+    "slug": "hyenpung-both",
     "name": "현풍휴게소",
     "direction": "하행",
     "directionName": "현풍방향",
@@ -10177,7 +10177,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.671
   },
   {
-    "slug": "김해금관가야-both",
+    "slug": "gimhaegeumgwangaya-both",
     "name": "김해금관가야휴게소",
     "direction": "하행",
     "directionName": "기장방향",
@@ -10218,7 +10218,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.6183
   },
   {
-    "slug": "김해금관가야-both-1",
+    "slug": "gimhaegeumgwangaya-both-1",
     "name": "김해금관가야휴게소",
     "direction": "하행",
     "directionName": "진영방향",
@@ -10264,7 +10264,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3685
   },
   {
-    "slug": "김제-both",
+    "slug": "gimje-both",
     "name": "김제휴게소",
     "direction": "하행",
     "directionName": "익산방향",
@@ -10311,7 +10311,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.0604
   },
   {
-    "slug": "김제-both-1",
+    "slug": "gimje-both-1",
     "name": "김제휴게소",
     "direction": "하행",
     "directionName": "포항방향",

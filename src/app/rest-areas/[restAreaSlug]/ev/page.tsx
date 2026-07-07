@@ -1,8 +1,14 @@
-import { getServiceAreaBySlug } from '@/lib/data';
+import { getServiceAreaBySlug, serviceAreas } from '@/lib/data';
 import { notFound } from 'next/navigation';
 
 interface Props {
   params: Promise<{ restAreaSlug: string }>;
+}
+
+export async function generateStaticParams() {
+  return serviceAreas.map((area) => ({
+    restAreaSlug: area.slug,
+  }));
 }
 
 export default async function RestAreaEvPage({ params }: Props) {

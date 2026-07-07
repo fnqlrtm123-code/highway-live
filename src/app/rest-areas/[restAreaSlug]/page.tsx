@@ -1,9 +1,15 @@
-import { getServiceAreaBySlug, getServiceAreasByHighway } from '@/lib/data';
+import { getServiceAreaBySlug, getServiceAreasByHighway, serviceAreas } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import AdSense from '@/components/AdSense';
 
 interface Props {
   params: Promise<{ restAreaSlug: string }>;
+}
+
+export async function generateStaticParams() {
+  return serviceAreas.map((area) => ({
+    restAreaSlug: area.slug,
+  }));
 }
 
 export default async function RestAreaDashboardPage({ params }: Props) {
