@@ -33,6 +33,8 @@ export interface ServiceArea {
     hasHydrogen: boolean;
   };
   facilities: string[]; // e.g. ["수유실", "샤워실", "약국", "전기차충전소"]
+  latitude: number;
+  longitude: number;
 }
 
 export interface CctvPoint {
@@ -121,7 +123,9 @@ export const serviceAreas: ServiceArea[] = [
       evChargersCount: 6,
       hasHydrogen: true
     },
-    facilities: ["수유실", "샤워실", "약국", "임시정비소", "비즈니스센터"]
+    facilities: ["수유실", "샤워실", "약국", "임시정비소", "비즈니스센터"],
+    latitude: 37.0135,
+    longitude: 127.1472
   },
   {
     slug: "anseong-busan",
@@ -151,7 +155,9 @@ export const serviceAreas: ServiceArea[] = [
       evChargersCount: 8,
       hasHydrogen: false
     },
-    facilities: ["수유실", "세탁실", "전기차충전소", "의료안내소"]
+    facilities: ["수유실", "세탁실", "전기차충전소", "의료안내소"],
+    latitude: 37.0150,
+    longitude: 127.1450
   },
   {
     slug: "seoul-manman-busan",
@@ -181,7 +187,9 @@ export const serviceAreas: ServiceArea[] = [
       evChargersCount: 4,
       hasHydrogen: false
     },
-    facilities: ["수유실", "샤워실", "비즈니스코너"]
+    facilities: ["수유실", "샤워실", "비즈니스코너"],
+    latitude: 37.4601,
+    longitude: 127.0423
   },
   {
     slug: "manghyang-busan",
@@ -211,7 +219,9 @@ export const serviceAreas: ServiceArea[] = [
       evChargersCount: 6,
       hasHydrogen: false
     },
-    facilities: ["수유실", "야외쉼터", "애견공원"]
+    facilities: ["수유실", "야외쉼터", "애견공원"],
+    latitude: 36.8530,
+    longitude: 127.1802
   },
   {
     slug: "jukjeon-seoul",
@@ -241,7 +251,9 @@ export const serviceAreas: ServiceArea[] = [
       evChargersCount: 4,
       hasHydrogen: false
     },
-    facilities: ["수유실", "비즈니스센터", "세차장"]
+    facilities: ["수유실", "비즈니스센터", "세차장"],
+    latitude: 37.3324,
+    longitude: 127.1045
   },
 
   // 영동고속도로 휴게소 (상행/하행)
@@ -273,7 +285,9 @@ export const serviceAreas: ServiceArea[] = [
       evChargersCount: 8,
       hasHydrogen: false
     },
-    facilities: ["수유실", "샤워실", "전기차충전소", "특산물판매장"]
+    facilities: ["수유실", "샤워실", "전기차충전소", "특산물판매장"],
+    latitude: 37.4645,
+    longitude: 127.9734
   },
   {
     slug: "hoengseong-gangneung",
@@ -303,7 +317,9 @@ export const serviceAreas: ServiceArea[] = [
       evChargersCount: 6,
       hasHydrogen: true
     },
-    facilities: ["수유실", "샤워실", "쉼터", "기저귀교환대"]
+    facilities: ["수유실", "샤워실", "쉼터", "기저귀교환대"],
+    latitude: 37.4630,
+    longitude: 127.9710
   },
   {
     slug: "deokpyeong-both",
@@ -333,7 +349,9 @@ export const serviceAreas: ServiceArea[] = [
       evChargersCount: 12,
       hasHydrogen: false
     },
-    facilities: ["테마정원", "애견테마파크(달려라코코)", "쇼핑몰", "약국", "유아휴게실"]
+    facilities: ["테마정원", "애견테마파크(달려라코코)", "쇼핑몰", "약국", "유아휴게실"],
+    latitude: 37.2341,
+    longitude: 127.3112
   },
 
   // 서해안고속도로 휴게소 (상행/하행)
@@ -365,7 +383,9 @@ export const serviceAreas: ServiceArea[] = [
       evChargersCount: 6,
       hasHydrogen: false
     },
-    facilities: ["수유실", "특산물판매장", "산책로"]
+    facilities: ["수유실", "특산물판매장", "산책로"],
+    latitude: 36.7123,
+    longitude: 126.5412
   },
   {
     slug: "seosan-mokpo",
@@ -395,7 +415,9 @@ export const serviceAreas: ServiceArea[] = [
       evChargersCount: 6,
       hasHydrogen: false
     },
-    facilities: ["수유실", "야외전망대", "샤워장"]
+    facilities: ["수유실", "야외전망대", "샤워장"],
+    latitude: 36.7110,
+    longitude: 126.5401
   }
 ];
 
@@ -604,3 +626,41 @@ export function searchAll(query: string) {
     menuItems: matchedMenuItems
   };
 }
+
+export interface TravelTime {
+  from: string;
+  to: string;
+  highwayName: string;
+  distanceKm: number;
+  normalTimeMin: number;
+  currentTimeMin: number;
+  status: "smooth" | "slow" | "congested";
+}
+
+export interface Incident {
+  id: string;
+  highwayName: string;
+  highwaySlug: string;
+  location: string;
+  direction: string;
+  type: "accident" | "construction" | "faulty-car";
+  description: string;
+  laneBlocked: string;
+  startedAt: string;
+}
+
+export const travelTimes: TravelTime[] = [
+  { from: "서울", to: "부산", highwayName: "경부선", distanceKm: 396, normalTimeMin: 260, currentTimeMin: 275, status: "smooth" },
+  { from: "서울", to: "대전", highwayName: "경부선", distanceKm: 142, normalTimeMin: 95, currentTimeMin: 115, status: "slow" },
+  { from: "서울", to: "광주", highwayName: "경부/호남선", distanceKm: 292, normalTimeMin: 200, currentTimeMin: 215, status: "smooth" },
+  { from: "서울", to: "강릉", highwayName: "영동선", distanceKm: 220, normalTimeMin: 150, currentTimeMin: 195, status: "congested" },
+  { from: "부산", to: "서울", highwayName: "경부선", distanceKm: 396, normalTimeMin: 260, currentTimeMin: 270, status: "smooth" },
+  { from: "광주", to: "서울", highwayName: "호남/경부선", distanceKm: 292, normalTimeMin: 200, currentTimeMin: 205, status: "smooth" },
+];
+
+export const incidents: Incident[] = [
+  { id: "inc-01", highwayName: "경부고속도로", highwaySlug: "gyeongbu", location: "천안IC 부근", direction: "부산방향", type: "accident", description: "승용차 간 3중 추돌 사고 처리 중", laneBlocked: "1차로 점유", startedAt: "10분 전" },
+  { id: "inc-02", highwayName: "영동고속도로", highwaySlug: "yeongdong", location: "양지터널 부근", direction: "강릉방향", type: "construction", description: "노면 보수 공사 진행 중", laneBlocked: "갓길 및 3차로 통제", startedAt: "30분 전" },
+  { id: "inc-03", highwayName: "서해안고속도로", highwaySlug: "seohaean", location: "서해대교 중앙", direction: "서울방향", type: "faulty-car", description: "고장 화물차량 정차", laneBlocked: "갓길 점유", startedAt: "5분 전" }
+];
+

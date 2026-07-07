@@ -69,9 +69,10 @@ export default function RootLayout({
             {/* 네비게이션 링크 */}
             <nav className="hidden md:flex items-center gap-6">
               <a href="/traffic" className="text-[14px] font-bold text-slate-700 hover:text-blue-600 transition-colors">실시간 교통상황</a>
-              <a href="/#highways" className="text-[14px] font-bold text-slate-700 hover:text-blue-600 transition-colors">고속도로 노선별</a>
-              <a href="/rest-areas" className="text-[14px] font-bold text-slate-700 hover:text-blue-600 transition-colors">휴게소 맛집</a>
-              <a href="/#gas-stations" className="text-[14px] font-bold text-slate-700 hover:text-blue-600 transition-colors">최저가 주유소</a>
+              <a href="/highways" className="text-[14px] font-bold text-slate-700 hover:text-blue-600 transition-colors">고속도로 노선별</a>
+              <a href="/rest-areas" className="text-[14px] font-bold text-slate-700 hover:text-blue-600 transition-colors">전국 휴게소</a>
+              <a href="/food" className="text-[14px] font-bold text-slate-700 hover:text-blue-600 transition-colors">휴게소 맛집</a>
+              <a href="/gas" className="text-[14px] font-bold text-slate-700 hover:text-blue-600 transition-colors">최저가 주유소</a>
             </nav>
 
             {/* 모바일 퀵버튼 */}
@@ -84,7 +85,7 @@ export default function RootLayout({
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
                 </span>
-                실시간 CCTV 보기
+                교통 상황판 보기
               </a>
             </div>
           </div>
@@ -105,7 +106,7 @@ export default function RootLayout({
                   <span className="text-base font-black text-white tracking-tight">하이웨이 라이브</span>
                 </div>
                 <p className="text-[13px] leading-relaxed text-slate-400 max-w-md">
-                  하이웨이 라이브는 전국 고속도로의 실시간 소통 현황, 실시간 CCTV 영상 연동, 그리고 노선별 상·하행 휴게소 대표 맛집(EX-FOOD) 및 실시간 최저가 알뜰주유소 가격을 매핑하여 신속하고 정확하게 제공하고 있습니다.
+                  하이웨이 라이브는 전국 고속도로의 실시간 소통 현황, 실시간 상황판 모니터링, 그리고 노선별 상·하행 휴게소 대표 맛집(EX-FOOD) 및 실시간 최저가 알뜰주유소 가격을 매핑하여 신속하고 정확하게 제공하고 있습니다.
                 </p>
                 <div className="text-[12px] text-slate-500 space-y-1 font-mono">
                   <p>상호명: 하이웨이 라이브 &middot; 대표자: 서승재</p>
@@ -116,10 +117,11 @@ export default function RootLayout({
               <div className="md:col-span-3 space-y-3">
                 <h4 className="text-sm font-bold text-white uppercase tracking-wider">주요 서비스</h4>
                 <ul className="space-y-2 text-[13px]">
-                  <li><a href="/#highways" className="hover:text-white transition-colors">고속도로 노선 안내</a></li>
-                  <li><a href="/cctv" className="hover:text-white transition-colors">실시간 교통 CCTV 조회</a></li>
-                  <li><a href="/rest-areas" className="hover:text-white transition-colors">휴게소 상·하행 맛집 리스트</a></li>
-                  <li><a href="/#gas-stations" className="hover:text-white transition-colors">알뜰주유소 유가 및 EV 충전</a></li>
+                  <li><a href="/highways" className="hover:text-white transition-colors">고속도로 노선 안내</a></li>
+                  <li><a href="/cctv" className="hover:text-white transition-colors">실시간 교통 상황판 조회</a></li>
+                  <li><a href="/rest-areas" className="hover:text-white transition-colors">전국 휴게소 찾기</a></li>
+                  <li><a href="/food" className="hover:text-white transition-colors">휴게소 맛집 리스트</a></li>
+                  <li><a href="/gas" className="hover:text-white transition-colors">알뜰주유소 유가 및 EV 충전</a></li>
                 </ul>
               </div>
 
