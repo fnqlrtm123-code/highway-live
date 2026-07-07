@@ -68,48 +68,13 @@ export default async function HighwayTrafficPage({ params }: Props) {
       {/* 애드센스 */}
       <AdSense slot="2233445566" />
 
-      {/* 노선 내 휴게소 목록 */}
-      {serviceAreas.length > 0 && (
-        <section className="space-y-4">
-          <h2 className="text-xl font-black text-slate-900 border-b pb-3 border-slate-200">
-            이 노선의 휴게소 목록
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {serviceAreas.map((s) => (
-              <div key={s.slug} className="p-5 bg-white border border-slate-200 flex justify-between items-start">
-                <div className="space-y-1">
-                  <div className="flex items-center gap-1.5">
-                    <h3 className="text-base font-black text-slate-800">{s.name}</h3>
-                    <span className="text-[10px] font-bold bg-slate-100 text-slate-600 px-1.5 py-0.5">{s.directionName}</span>
-                  </div>
-                  <p className="text-xs text-slate-400">
-                    {s.locationKm}km 지점 &middot; 주유소 브랜드: {s.gasStation.brand} (휘발유: {s.gasStation.gasolinePrice}원)
-                  </p>
-                </div>
-                <a 
-                  href={`/rest-areas/${s.slug}`}
-                  className="bg-slate-950 text-white hover:bg-slate-800 font-bold text-xs px-3.5 py-2 transition-colors shrink-0"
-                >
-                  상세정보 &rarr;
-                </a>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
-
       {/* AEO / GEO 최적화 교통상황 정보 영역 (지정된 소제목 포맷을 엄격히 준수) */}
       <section className="bg-white border border-slate-200 p-6 md:p-8 space-y-8 text-slate-700 text-sm md:text-base leading-relaxed font-sans">
         
         {/* 개요 소개 */}
-        <div className="space-y-3">
-          <h2 className="text-xl md:text-2xl font-black text-slate-900">
-            {road.name} 교통상황
-          </h2>
-          <p className="text-slate-650">
-            {road.description}
-          </p>
-        </div>
+        <p className="text-slate-650">
+          {road.description}
+        </p>
 
         {/* 1. 교통상황 확인방법 */}
         <div className="space-y-3 border-t border-slate-100 pt-6">
@@ -179,6 +144,36 @@ export default async function HighwayTrafficPage({ params }: Props) {
         </div>
 
       </section>
+
+      {/* 노선 내 휴게소 목록 */}
+      {serviceAreas.length > 0 && (
+        <section className="space-y-4">
+          <h2 className="text-xl font-black text-slate-900 border-b pb-3 border-slate-200">
+            이 노선의 휴게소 목록
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {serviceAreas.map((s) => (
+              <div key={s.slug} className="p-5 bg-white border border-slate-200 flex justify-between items-start">
+                <div className="space-y-1">
+                  <div className="flex items-center gap-1.5">
+                    <h3 className="text-base font-black text-slate-800">{s.name}</h3>
+                    <span className="text-[10px] font-bold bg-slate-100 text-slate-600 px-1.5 py-0.5">{s.directionName}</span>
+                  </div>
+                  <p className="text-xs text-slate-400">
+                    {s.locationKm}km 지점 &middot; 주유소 브랜드: {s.gasStation.brand} (휘발유: {s.gasStation.gasolinePrice}원)
+                  </p>
+                </div>
+                <a 
+                  href={`/rest-areas/${s.slug}`}
+                  className="bg-slate-950 text-white hover:bg-slate-800 font-bold text-xs px-3.5 py-2 transition-colors shrink-0"
+                >
+                  상세정보 &rarr;
+                </a>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
     </main>
   );
