@@ -37,36 +37,122 @@ export default async function HighwayTrafficPage({ params }: Props) {
   const serviceAreas = getServiceAreasByHighway(road.slug);
 
   return (
-    <main className="mx-auto max-w-[1240px] px-4 py-12 flex-grow space-y-12">
-      
-      {/* 뒤로가기 링크 */}
-      <a href="/traffic" className="inline-flex items-center gap-1 text-xs font-bold text-slate-500 hover:text-blue-600 transition-colors">
-        &larr; 교통상황 메인으로 돌아가기
-      </a>
+    <main className="mx-auto max-w-[1240px] px-4 py-8 flex-grow space-y-10">
 
-      {/* 헤더 카드 */}
-      <div className="bg-slate-900 text-white p-8 md:p-10 border border-slate-800 shadow-xl overflow-hidden relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/40 via-transparent to-transparent pointer-events-none" />
-        <div className="relative z-10 space-y-3">
-          <div className="flex items-center gap-2">
+      {/* CGV 스타일 히어로 레이아웃 (배경 파란색 제거 및 화이트/그레이 고대비 매칭) */}
+      <div className="bg-white border border-slate-200 p-6 md:p-8 flex flex-col md:flex-row gap-8 items-start">
+        
+        {/* 좌측: 영화 포스터 스타일의 메인 비주얼 카드 */}
+        <div className="w-full md:w-[220px] shrink-0 aspect-[3/4] bg-slate-100 border border-slate-200 relative overflow-hidden shadow-md">
+          <img 
+            src="/highway_traffic_1.png" 
+            alt={`${road.name} 전경`}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute top-3 left-3">
             {road.number ? (
-              <span className="text-[12px] font-black bg-blue-600 text-white px-2.5 py-0.5">{road.number}</span>
+              <span className="text-[11px] font-black bg-slate-900 text-white px-2 py-0.5 shadow-sm">NO. {road.number}</span>
             ) : (
-              <span className="text-[12px] font-black bg-slate-700 text-white px-2.5 py-0.5">일반</span>
+              <span className="text-[11px] font-black bg-slate-600 text-white px-2 py-0.5 shadow-sm">일반</span>
             )}
-            <span className="text-xs text-blue-300 font-mono tracking-tight">
-              {road.length ? `${road.length} \u00B7 ` : ''} 경로: {road.detail}
-            </span>
           </div>
-          <h1 className="text-3xl md:text-4xl font-black tracking-tight">{road.name} 교통상황</h1>
-          <p className="text-slate-400 text-sm max-w-3xl leading-relaxed">
-            {road.name}의 교통 흐름 파악을 위한 실시간 정보 조회 방법, CCTV 감시 가이드, 방향별 정체 원인, 우회 국도 설계 정보를 제공합니다.
-          </p>
+        </div>
+
+        {/* 우측: 상세 메타데이터 정보 영역 (CGV 스타일) */}
+        <div className="flex-grow space-y-5">
+          <div className="space-y-2 border-b border-slate-100 pb-4">
+            <h1 className="text-2xl md:text-3xl font-black tracking-tight text-slate-900">
+              {road.name} 교통상황
+            </h1>
+            <p className="text-slate-500 text-xs md:text-sm">
+              {road.detail}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 text-sm text-slate-700">
+            <div className="flex items-center gap-2">
+              <span className="font-bold text-slate-400 w-16 shrink-0">구간 연장</span>
+              <span className="font-mono text-slate-800">{road.length || '정보 확인중'}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="font-bold text-slate-400 w-16 shrink-0">도로 유형</span>
+              <span className="text-slate-800">
+                {road.type === 'highway' ? '고속도로' : road.type === 'urban' ? '도시고속도로' : road.type === 'national' ? '일반국도' : '대교'}
+              </span>
+            </div>
+            {road.start && (
+              <div className="flex items-center gap-2">
+                <span className="font-bold text-slate-400 w-16 shrink-0">기점 (시작)</span>
+                <span className="text-slate-800">{road.start}</span>
+              </div>
+            )}
+            {road.end && (
+              <div className="flex items-center gap-2">
+                <span className="font-bold text-slate-400 w-16 shrink-0">종점 (도착)</span>
+                <span className="text-slate-800">{road.end}</span>
+              </div>
+            )}
+          </div>
+
+          {/* CGV 예매하기/상세 버튼 스타일의 액션 버튼 그룹 */}
+          <div className="flex flex-wrap gap-3 pt-2">
+            <a 
+              href="#cctv-section" 
+              className="bg-red-600 text-white font-bold text-xs md:text-sm px-6 py-3 hover:bg-red-700 transition-colors shadow-sm"
+            >
+              CCTV 실시간 확인
+            </a>
+            <a 
+              href="#detour-section" 
+              className="bg-slate-900 text-white font-bold text-xs md:text-sm px-6 py-3 hover:bg-slate-800 transition-colors shadow-sm"
+            >
+              우회도로 선택 기준
+            </a>
+          </div>
         </div>
       </div>
 
       {/* 애드센스 */}
       <AdSense slot="2233445566" />
+
+      {/* CGV 스틸컷 스타일 현장 실사 이미지 갤러리 섹션 (수집된 3장 매핑) */}
+      <section className="space-y-4">
+        <h3 className="text-lg font-black text-slate-900 border-b pb-2 border-slate-200">
+          현장 스틸컷 (실시간 도로 전경)
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="aspect-[16/10] bg-slate-100 border border-slate-200 overflow-hidden relative group">
+            <img 
+              src="/highway_traffic_1.png" 
+              alt="주간 교통 흐름" 
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute bottom-0 inset-x-0 bg-slate-950/60 p-2 text-center">
+              <span className="text-xs text-white font-medium">현장 스틸컷 01 (주간 흐름)</span>
+            </div>
+          </div>
+          <div className="aspect-[16/10] bg-slate-100 border border-slate-200 overflow-hidden relative group">
+            <img 
+              src="/highway_traffic_2.png" 
+              alt="야간 교통 흐름" 
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute bottom-0 inset-x-0 bg-slate-950/60 p-2 text-center">
+              <span className="text-xs text-white font-medium">현장 스틸컷 02 (야간 흐름)</span>
+            </div>
+          </div>
+          <div className="aspect-[16/10] bg-slate-100 border border-slate-200 overflow-hidden relative group">
+            <img 
+              src="/highway_traffic_3.png" 
+              alt="CCTV 관제 모니터" 
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute bottom-0 inset-x-0 bg-slate-950/60 p-2 text-center">
+              <span className="text-xs text-white font-medium">현장 스틸컷 03 (CCTV 관제)</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* AEO / GEO 최적화 교통상황 정보 영역 (지정된 소제목 포맷을 엄격히 준수) */}
       <section className="bg-white border border-slate-200 p-6 md:p-8 space-y-8 text-slate-700 text-sm md:text-base leading-relaxed font-sans">
@@ -87,7 +173,7 @@ export default async function HighwayTrafficPage({ params }: Props) {
         </div>
 
         {/* 2. CCTV 실시간 확인 */}
-        <div className="space-y-3 border-t border-slate-100 pt-6">
+        <div id="cctv-section" className="space-y-3 border-t border-slate-100 pt-6 scroll-mt-6">
           <h2 className="text-lg md:text-xl font-black text-slate-900">
             {road.name} CCTV 실시간 확인
           </h2>
@@ -117,7 +203,7 @@ export default async function HighwayTrafficPage({ params }: Props) {
         </div>
 
         {/* 5. 우회도로 선택 기준 */}
-        <div className="space-y-3 border-t border-slate-100 pt-6">
+        <div id="detour-section" className="space-y-3 border-t border-slate-100 pt-6 scroll-mt-6">
           <h2 className="text-lg md:text-xl font-black text-slate-900">
             {road.name} 우회도로 선택 기준
           </h2>
