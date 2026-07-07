@@ -13,9 +13,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const road = getRoadBySlug(highwaySlug);
   if (!road) return {};
 
+  const rangeText = road.start && road.end ? `${road.start}~${road.end}` : '주요';
+
   return {
-    title: `${road.name} 교통상황 - 실시간 확인방법 및 우회노선 안내`,
-    description: `${road.name}의 교통상황 확인방법, 실시간 CCTV 영상 안내, 상행선·하행선 방향 정리, 상습 정체 구간 분석, 우회도로 선택 기준 및 FAQ 정보를 제공합니다.`,
+    title: `${road.name} 교통상황 실시간 확인 | CCTV·정체구간·우회도로`,
+    description: `${road.name} ${rangeText} 구간의 실시간 교통상황, CCTV, 주요 정체구간, 사고·공사 정보와 우회도로 안내를 확인하세요.`,
   };
 }
 
@@ -37,30 +39,31 @@ export default async function HighwayTrafficPage({ params }: Props) {
   const serviceAreas = getServiceAreasByHighway(road.slug);
 
   return (
-    <main className="mx-auto max-w-[1240px] px-4 py-8 flex-grow space-y-10">
+    <main className="mx-auto max-w-[1240px] px-4 py-8 flex-grow">
+      <article className="space-y-10">
 
-      {/* CGV 스타일 히어로 레이아웃 (배경 파란색 완전 제거, 화이트/연한그레이 깔끔한 테두리, 정사각형 썸네일 노출) */}
-      <div className="bg-white border border-slate-200 p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center md:items-start">
-        
-        {/* 좌측: 1:1 비율 정사각형 썸네일 이미지 규격 (메타정보 제거 및 1:1 크롭 가공됨) */}
-        <div className="w-[180px] h-[180px] shrink-0 bg-slate-100 border border-slate-200 overflow-hidden shadow-xs">
-          <img 
-            src={road.images.thumb} 
-            alt={`${road.name} 썸네일`}
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        {/* 우측: 상세 메타데이터 정보 영역 */}
-        <div className="flex-grow space-y-5 w-full">
-          <div className="space-y-2 border-b border-slate-100 pb-4">
-            <h1 className="text-2xl md:text-3xl font-black tracking-tight text-slate-900">
-              {road.name} 교통상황
-            </h1>
-            <p className="text-slate-500 text-xs md:text-sm font-medium">
-              {road.detail}
-            </p>
+        {/* CGV 스타일 히어로 레이아웃 (배경 파란색 완전 제거, 화이트/연한그레이 깔끔한 테두리, 정사각형 썸네일 노출) */}
+        <div className="bg-white border border-slate-200 p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center md:items-start">
+          
+          {/* 좌측: 1:1 비율 정사각형 썸네일 이미지 규격 (메타정보 제거 및 1:1 크롭 가공됨) */}
+          <div className="w-[180px] h-[180px] shrink-0 bg-slate-100 border border-slate-200 overflow-hidden shadow-xs">
+            <img 
+              src={road.images.thumb} 
+              alt={`${road.name} 썸네일`}
+              className="w-full h-full object-cover"
+            />
           </div>
+
+          {/* 우측: 상세 메타데이터 정보 영역 */}
+          <div className="flex-grow space-y-5 w-full">
+            <div className="space-y-2 border-b border-slate-100 pb-4">
+              <h1 className="text-2xl md:text-3xl font-black tracking-tight text-slate-900">
+                {road.name} 교통상황
+              </h1>
+              <p className="text-slate-500 text-xs md:text-sm font-medium">
+                {road.name} 실시간 교통상황, CCTV, 정체구간, 사고·공사 정보와 우회도로 안내를 확인할 수 있습니다.
+              </p>
+            </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 text-sm text-slate-700">
             <div className="flex items-center gap-2">
@@ -119,7 +122,7 @@ export default async function HighwayTrafficPage({ params }: Props) {
         {/* 1. 교통상황 확인방법 */}
         <div className="space-y-3 border-t border-slate-100 pt-6">
           <h2 className="text-lg md:text-xl font-black text-slate-900">
-            {road.name} 교통상황 확인방법
+            {road.name} 실시간 교통상황 확인
           </h2>
           <p className="text-slate-650">
             {road.verificationMethod}
@@ -129,7 +132,7 @@ export default async function HighwayTrafficPage({ params }: Props) {
         {/* 2. CCTV 실시간 확인 */}
         <div id="cctv-section" className="space-y-3 border-t border-slate-100 pt-6 scroll-mt-6">
           <h2 className="text-lg md:text-xl font-black text-slate-900">
-            {road.name} CCTV 실시간 확인
+            {road.name} CCTV 실시간 보기
           </h2>
           <p className="text-slate-650">
             {road.cctvInfo}
@@ -149,7 +152,7 @@ export default async function HighwayTrafficPage({ params }: Props) {
         {/* 4. 정체가 자주 발생하는 구간 */}
         <div className="space-y-3 border-t border-slate-100 pt-6">
           <h2 className="text-lg md:text-xl font-black text-slate-900">
-            {road.name} 정체가 자주 발생하는 구간
+            {road.name} 주요 정체구간
           </h2>
           <p className="text-slate-650">
             {road.congestedSections}
@@ -215,6 +218,7 @@ export default async function HighwayTrafficPage({ params }: Props) {
         </section>
       )}
 
+      </article>
     </main>
   );
 }
