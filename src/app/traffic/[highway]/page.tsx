@@ -2,6 +2,7 @@ import { getServiceAreasByHighway } from '@/lib/data';
 import { getRoadList, getRoadBySlug } from '@/lib/roadData';
 import { notFound } from 'next/navigation';
 import AdSense from '@/components/AdSense';
+import TravelTimeBoard from '@/components/TravelTimeBoard';
 import type { Metadata } from 'next';
 
 interface Props {
@@ -99,70 +100,9 @@ export default async function HighwayTrafficPage({ params }: Props) {
       {/* 애드센스 */}
       <AdSense slot="2233445566" />
 
-      {/* 톨게이트 간 소요 시간 상황판 */}
+      {/* 톨게이트 간 소요 시간 상황판 (실시간 API 연동형 클라이언트 컴포넌트) */}
       {road.segments && road.segments.length > 0 && (
-        <section className="space-y-4">
-          <h2 className="text-lg md:text-xl font-black text-slate-900 border-b pb-3 border-slate-200 flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
-            실시간 주요 영업소(요금소) 간 예상 소요 시간 상황판
-          </h2>
-          <div className="bg-white border border-slate-200 overflow-hidden shadow-xs">
-            <div className="overflow-x-auto">
-              <table className="w-full text-left border-collapse text-xs md:text-sm">
-                <thead>
-                  <tr className="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold">
-                    <th className="p-3.5 pl-5">구간</th>
-                    <th className="p-3.5 text-center">거리</th>
-                    <th className="p-3.5 text-center">정상 소요시간</th>
-                    <th className="p-3.5 text-center">현재 소요시간</th>
-                    <th className="p-3.5 text-center pr-5">소통 상태</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-100 font-medium text-slate-700">
-                  {road.segments.map((seg, idx) => {
-                    const isDelayed = seg.currentTime > seg.normalTime;
-                    const delayMin = seg.currentTime - seg.normalTime;
-                    
-                    let statusBg = "bg-emerald-50 text-emerald-700 border-emerald-200";
-                    if (seg.status === "정체") {
-                      statusBg = "bg-rose-50 text-rose-700 border-rose-200";
-                    } else if (seg.status === "서행") {
-                      statusBg = "bg-amber-50 text-amber-700 border-amber-200";
-                    }
-
-                    return (
-                      <tr key={idx} className="hover:bg-slate-50/50 transition-colors">
-                        <td className="p-3.5 pl-5 font-bold text-slate-800">
-                          {seg.from} <span className="text-slate-400 font-normal mx-1">&rarr;</span> {seg.to}
-                        </td>
-                        <td className="p-3.5 text-center font-mono text-slate-500">{seg.distance}</td>
-                        <td className="p-3.5 text-center text-slate-500">{seg.normalTime}분</td>
-                        <td className="p-3.5 text-center font-bold">
-                          <span className={isDelayed ? "text-rose-600" : "text-slate-800"}>
-                            {seg.currentTime}분
-                          </span>
-                          {isDelayed && (
-                            <span className="text-[10px] text-rose-500 font-bold ml-1">
-                              (+{delayMin}분 지연)
-                            </span>
-                          )}
-                        </td>
-                        <td className="p-3.5 text-center pr-5">
-                          <span className={`inline-block px-2.5 py-1 text-[11px] font-bold border rounded-xs ${statusBg}`}>
-                            {seg.status}
-                          </span>
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
-            <div className="bg-slate-50 p-3 border-t border-slate-150 text-[11px] text-slate-400 text-center font-bold">
-              ※ 한국도로공사 실시간 영업소간 통행시간 기준 2-3분 주기로 갱신되는 예측 소요 시간입니다.
-            </div>
-          </div>
-        </section>
+        <TravelTimeBoard initialSegments={road.segments} />
       )}
 
       {/* AEO / GEO 최적화 교통상황 정보 영역 (지정된 소제목 포맷을 엄격히 준수) */}
