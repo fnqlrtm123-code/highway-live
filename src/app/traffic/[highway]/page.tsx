@@ -14,8 +14,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!road) return {};
 
   return {
-    title: `${road.name} 교통상황 - 주요 정보 및 FAQ`,
-    description: `${road.name}의 상세 교통 정보, 상/하행선 방향 정리, 상습 정체 구간, 우회도로 기준 및 자주 묻는 질문(FAQ)을 확인하세요.`,
+    title: `${road.name} 교통상황 - 실시간 확인방법 및 우회노선 안내`,
+    description: `${road.name}의 교통상황 확인방법, 실시간 CCTV 영상 안내, 상행선·하행선 방향 정리, 상습 정체 구간 분석, 우회도로 선택 기준 및 FAQ 정보를 제공합니다.`,
   };
 }
 
@@ -60,7 +60,7 @@ export default async function HighwayTrafficPage({ params }: Props) {
           </div>
           <h1 className="text-3xl md:text-4xl font-black tracking-tight">{road.name} 교통상황</h1>
           <p className="text-slate-400 text-sm max-w-3xl leading-relaxed">
-            {road.name}의 통행 특성 및 방향별 정체 시간대, 상습 정체 구간 대피를 위한 우회 국도 선택 기준을 알기 쉽게 정리해 드립니다.
+            {road.name}의 교통 흐름 파악을 위한 실시간 정보 조회 방법, CCTV 감시 가이드, 방향별 정체 원인, 우회 국도 설계 정보를 제공합니다.
           </p>
         </div>
       </div>
@@ -68,7 +68,7 @@ export default async function HighwayTrafficPage({ params }: Props) {
       {/* 애드센스 */}
       <AdSense slot="2233445566" />
 
-      {/* 노선 내 휴게소 목록 (휴게소 정보가 존재할 경우에만 렌더링) */}
+      {/* 노선 내 휴게소 목록 */}
       {serviceAreas.length > 0 && (
         <section className="space-y-4">
           <h2 className="text-xl font-black text-slate-900 border-b pb-3 border-slate-200">
@@ -98,51 +98,86 @@ export default async function HighwayTrafficPage({ params }: Props) {
         </section>
       )}
 
-      {/* AEO / GEO 최적화 교통상황 정보 영역 */}
+      {/* AEO / GEO 최적화 교통상황 정보 영역 (지정된 소제목 포맷을 엄격히 준수) */}
       <section className="bg-white border border-slate-200 p-6 md:p-8 space-y-8 text-slate-700 text-sm md:text-base leading-relaxed font-sans">
-        <div className="space-y-6">
-          <div>
-            <h2 className="text-xl md:text-2xl font-black text-slate-900 mb-3">
-              {road.name} 교통 분석 리포트
-            </h2>
-            <p className="text-slate-650">
-              {road.description}
-            </p>
-          </div>
+        
+        {/* 개요 소개 */}
+        <div className="space-y-3">
+          <h2 className="text-xl md:text-2xl font-black text-slate-900">
+            {road.name} 교통상황
+          </h2>
+          <p className="text-slate-650">
+            {road.description}
+          </p>
+        </div>
 
-          {road.sections.map((section, idx) => (
-            <div key={idx} className="space-y-2.5">
-              {section.level === 'h2' ? (
-                <h2 className="text-xl font-black text-slate-900 pt-2">
-                  {section.title}
-                </h2>
-              ) : (
-                <h3 className="text-lg font-bold text-slate-900 pt-1">
-                  {section.title}
-                </h3>
-              )}
-              <p className="text-slate-650">
-                {section.content}
-              </p>
-            </div>
-          ))}
+        {/* 1. 교통상황 확인방법 */}
+        <div className="space-y-3 border-t border-slate-100 pt-6">
+          <h2 className="text-lg md:text-xl font-black text-slate-900">
+            {road.name} 교통상황 확인방법
+          </h2>
+          <p className="text-slate-650">
+            {road.verificationMethod}
+          </p>
+        </div>
 
-          <div className="border-t border-slate-100 pt-6">
-            <h3 className="text-lg font-bold text-slate-900 mb-4">
-              자주 묻는 질문 FAQ
-            </h3>
-            <div className="space-y-4">
-              {road.faqs.map((faq, idx) => (
-                <div key={idx} className="border-b border-slate-50 pb-4 last:border-b-0 last:pb-0">
-                  <h4 className="font-bold text-slate-800 text-[15px]">Q{idx + 1}. {faq.q}</h4>
-                  <p className="text-slate-600 mt-1">
-                    {faq.a}
-                  </p>
-                </div>
-              ))}
-            </div>
+        {/* 2. CCTV 실시간 확인 */}
+        <div className="space-y-3 border-t border-slate-100 pt-6">
+          <h2 className="text-lg md:text-xl font-black text-slate-900">
+            {road.name} CCTV 실시간 확인
+          </h2>
+          <p className="text-slate-650">
+            {road.cctvInfo}
+          </p>
+        </div>
+
+        {/* 3. 상행선·하행선 방향 정리 */}
+        <div className="space-y-3 border-t border-slate-100 pt-6">
+          <h2 className="text-lg md:text-xl font-black text-slate-900">
+            {road.name} 상행선·하행선 방향 정리
+          </h2>
+          <p className="text-slate-650">
+            {road.directionsText}
+          </p>
+        </div>
+
+        {/* 4. 정체가 자주 발생하는 구간 */}
+        <div className="space-y-3 border-t border-slate-100 pt-6">
+          <h2 className="text-lg md:text-xl font-black text-slate-900">
+            {road.name} 정체가 자주 발생하는 구간
+          </h2>
+          <p className="text-slate-650">
+            {road.congestedSections}
+          </p>
+        </div>
+
+        {/* 5. 우회도로 선택 기준 */}
+        <div className="space-y-3 border-t border-slate-100 pt-6">
+          <h2 className="text-lg md:text-xl font-black text-slate-900">
+            {road.name} 우회도로 선택 기준
+          </h2>
+          <p className="text-slate-650">
+            {road.detourCriteria}
+          </p>
+        </div>
+
+        {/* 6. 자주 묻는 질문 FAQ */}
+        <div className="space-y-4 border-t border-slate-100 pt-6">
+          <h2 className="text-lg md:text-xl font-black text-slate-900">
+            자주 묻는 질문 FAQ
+          </h2>
+          <div className="space-y-4">
+            {road.faqs.map((faq, idx) => (
+              <div key={idx} className="border-b border-slate-50 pb-4 last:border-b-0 last:pb-0">
+                <h4 className="font-bold text-slate-800 text-[15px]">Q{idx + 1}. {faq.q}</h4>
+                <p className="text-slate-600 mt-1">
+                  {faq.a}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
+
       </section>
 
     </main>
