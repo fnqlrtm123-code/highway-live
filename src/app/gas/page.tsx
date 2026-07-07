@@ -22,7 +22,7 @@ export default function GasIndexPage() {
       
       {/* 타이틀 헤더 */}
       <div className="space-y-2 text-center md:text-left">
-        <h1 className="text-3xl font-black text-slate-900 tracking-tight">⛽ 실시간 고속도로 주유소 가격 비교</h1>
+        <h1 className="text-3xl font-black text-slate-900 tracking-tight">실시간 고속도로 주유소 가격 비교</h1>
         <p className="text-slate-500 text-sm max-w-2xl leading-relaxed">
           오늘 전국 고속도로 유가 동향 및 가장 가격이 저렴한 알뜰주유소 실시간 최저가 순위를 확인하고 지능적인 주유 설계를 완료해보세요.
         </p>
@@ -36,7 +36,7 @@ export default function GasIndexPage() {
         {/* 휘발유 최저가 순위 */}
         <div className="bg-white border border-slate-200 rounded-3xl p-6 shadow-2xs space-y-4">
           <h2 className="text-lg font-black text-slate-900 border-b pb-3 border-slate-100 flex items-center gap-2">
-            <span className="text-blue-600 font-sans">🔵</span> 휘발유 최저가 TOP 5
+            휘발유 최저가 TOP 5
           </h2>
           <div className="space-y-3.5">
             {gasolineRanking.slice(0, 5).map((area, idx) => (
@@ -54,7 +54,7 @@ export default function GasIndexPage() {
         {/* 경유 최저가 순위 */}
         <div className="bg-white border border-slate-200 rounded-3xl p-6 shadow-2xs space-y-4">
           <h2 className="text-lg font-black text-slate-900 border-b pb-3 border-slate-100 flex items-center gap-2">
-            <span className="text-orange-600 font-sans">🟠</span> 경유 최저가 TOP 5
+            경유 최저가 TOP 5
           </h2>
           <div className="space-y-3.5">
             {dieselRanking.slice(0, 5).map((area, idx) => (
@@ -73,7 +73,7 @@ export default function GasIndexPage() {
 
       {/* LPG 충전소 가능 휴게소 */}
       <section className="bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-2xs space-y-6">
-        <h2 className="text-xl font-black text-slate-900">🚙 LPG 충전 가능 고속도로 휴게소</h2>
+        <h2 className="text-xl font-black text-slate-900">LPG 충전 가능 고속도로 휴게소</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {lpgStations.map((area) => (
             <div key={area.slug} className="p-4 border border-slate-100 bg-slate-50/50 rounded-xl flex justify-between items-center text-xs">

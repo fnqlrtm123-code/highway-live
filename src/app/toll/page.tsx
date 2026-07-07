@@ -18,7 +18,7 @@ export default function TollIndexPage() {
       
       {/* 타이틀 헤더 */}
       <div className="space-y-2 text-center md:text-left">
-        <h1 className="text-3xl font-black text-slate-900 tracking-tight">💵 전국 고속도로 통행료 요금 정보</h1>
+        <h1 className="text-3xl font-black text-slate-900 tracking-tight">전국 고속도로 통행료 요금 정보</h1>
         <p className="text-slate-500 text-sm max-w-2xl leading-relaxed">
           주요 대도시 간 통행 요금 계산 정보와 차종별(1종 승용차 ~ 5종 대형 화물차) 하이패스 할인 팁을 안내합니다.
         </p>
@@ -29,7 +29,7 @@ export default function TollIndexPage() {
       {/* 요금 계산 시뮬레이터 */}
       <section className="bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-2xs space-y-6">
         <h2 className="text-xl font-black text-slate-900 border-b pb-4 border-slate-100">
-          🚗 차종별 대표 통행 요금표
+          차종별 대표 통행 요금표
         </h2>
         
         {/* 차종 선택 라디오 버튼 */}
@@ -81,7 +81,7 @@ export default function TollIndexPage() {
 
       {/* 할인정보 및 명절 무료통행 안내 */}
       <section className="bg-slate-900 text-white rounded-3xl p-6 md:p-8 space-y-4">
-        <h3 className="text-lg font-black">📅 명절 및 연휴 고속도로 통행료 면제</h3>
+        <h3 className="text-lg font-black">명절 및 연휴 고속도로 통행료 면제</h3>
         <p className="text-slate-400 text-xs md:text-sm leading-relaxed">
           설날 및 추석 명절 전후 3일간은 정부 특별 교통안전 대책에 따라 전국 모든 재정/민자 고속도로의 통행료가 100% 면제됩니다. 
           면제 적용 기간 내에 고속도로에 진입하거나 진출하는 모든 차량에 혜택이 자동 적용됩니다.

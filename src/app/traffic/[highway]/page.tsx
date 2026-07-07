@@ -104,7 +104,7 @@ export default async function HighwayTrafficPage({ params }: Props) {
       {/* 지점별 CCTV 및 소통 상황 테이블 */}
       <section className="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-2xs space-y-6">
         <h2 className="text-xl font-black text-slate-900 border-b pb-4 border-slate-100">
-          📹 지점별 실시간 주행 CCTV 목록
+          지점별 실시간 주행 CCTV 목록
         </h2>
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse text-slate-700 text-xs md:text-sm">
@@ -158,7 +158,7 @@ export default async function HighwayTrafficPage({ params }: Props) {
       {/* 노선 내 휴게소 바로가기 */}
       <section className="space-y-4">
         <h2 className="text-xl font-black text-slate-900 border-b pb-3 border-slate-200">
-          🍽️ 이 노선의 휴게소 목록
+          이 노선의 휴게소 목록
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {serviceAreas.map((s) => (

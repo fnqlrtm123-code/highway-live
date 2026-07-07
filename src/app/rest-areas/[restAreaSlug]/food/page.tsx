@@ -17,7 +17,7 @@ export default async function RestAreaFoodPage({ params }: Props) {
     <div className="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-2xs space-y-6">
       <div className="flex items-center justify-between pb-4 border-b border-slate-100">
         <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
-          🍽️ 대표 먹거리 맛집 메뉴
+          대표 먹거리 맛집 메뉴
         </h2>
         <span className="text-xs font-bold text-slate-400">도로공사 인증 및 식당가 대표 음식</span>
       </div>

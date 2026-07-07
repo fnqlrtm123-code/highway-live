@@ -90,7 +90,6 @@ export default function Home() {
       <section className="bg-slate-950 text-white py-12 border-b border-slate-800">
         <div className="mx-auto max-w-[1240px] px-4 text-center space-y-6">
           <div className="space-y-2">
-            <span className="text-[11px] font-black text-blue-400 uppercase tracking-widest block font-mono">HIGHWAY REAL-TIME CONVENIENCE PORTAL</span>
             <h1 className="text-2xl md:text-3.5xl font-black tracking-tight leading-tight">
               고속도로 실시간 편의정보 포털
             </h1>
@@ -102,7 +101,9 @@ export default function Home() {
           {/* 실전용 통합 검색 입력창 */}
           <div className="max-w-xl mx-auto relative">
             <div className="relative flex items-center bg-white rounded-2xl border border-slate-800 shadow-lg overflow-hidden">
-              <span className="pl-4 text-slate-400">🔍</span>
+              <svg className="h-5 w-5 text-slate-400 ml-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
               <input 
                 type="text" 
                 placeholder="어느 고속도로 노선이나 휴게소 명칭을 입력해 보세요." 
@@ -120,7 +121,7 @@ export default function Home() {
                     <span className="text-[10px] font-black text-slate-400 px-2 block mb-1">고속도로 노선 바로가기</span>
                     {filteredHighways.map(h => (
                       <a key={h.slug} href={`/traffic/${h.slug}`} className="block px-2 py-1.5 rounded-lg hover:bg-slate-50 text-xs font-bold text-slate-800">
-                        🛣️ {h.name} (소통상황 & CCTV)
+                        {h.name} (소통상황 & CCTV)
                       </a>
                     ))}
                   </div>
@@ -130,7 +131,7 @@ export default function Home() {
                     <span className="text-[10px] font-black text-slate-400 px-2 block mb-1">휴게소 & 맛집 바로가기</span>
                     {filteredRestAreas.map(s => (
                       <a key={s.slug} href={`/rest-areas/${s.slug}`} className="block px-2 py-1.5 rounded-lg hover:bg-slate-50 text-xs font-bold text-slate-800 flex justify-between">
-                        <span>🏪 {s.name} ({s.directionName})</span>
+                        <span>{s.name} ({s.directionName})</span>
                         <span className="text-blue-600 text-[10px]">{s.signatureMenu.name}</span>
                       </a>
                     ))}
@@ -191,7 +192,7 @@ export default function Home() {
 
             {/* 실시간 주요 CCTV 포인트 */}
             <div className="space-y-2">
-              <span className="text-[10px] font-black text-slate-400 block uppercase tracking-wider">주요 정제 발생지역 CCTV</span>
+              <span className="text-[10px] font-black text-slate-400 block uppercase tracking-wider">주요 정체 발생지역 CCTV</span>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {cctvPoints.slice(0, 4).map(c => (
                   <button 
@@ -207,13 +208,11 @@ export default function Home() {
                   </button>
                 ))}
               </div>
-            </div>
-
-            {/* CCTV 모달 플레이어 연계 */}
+            </div>            {/* CCTV 모달 플레이어 연계 */}
             {activeCctv && (
               <div className="bg-slate-950 text-white rounded-2xl overflow-hidden border border-slate-800 mt-4">
                 <div className="p-3 bg-slate-900 flex justify-between items-center text-xs">
-                  <span className="font-bold">📹 CCTV 모니터링: {activeCctv.name} ({activeCctv.direction})</span>
+                  <span className="font-bold">CCTV 모니터링: {activeCctv.name} ({activeCctv.direction})</span>
                   <button onClick={() => setActiveCctv(null)} className="text-slate-400 hover:text-white font-bold">&times; 닫기</button>
                 </div>
                 <CctvPlayer 
@@ -229,7 +228,6 @@ export default function Home() {
           {/* [Pillar 4] 고속도로 통행료 계산기 */}
           <div className="bg-white border border-slate-200 rounded-3xl p-5 shadow-2xs space-y-4">
             <div>
-              <span className="text-[10px] font-black text-slate-400 block font-mono">TOLL FEE ESTIMATOR</span>
               <h2 className="text-[15px] font-black text-slate-800">고속도로 통행료 계산기</h2>
             </div>
             
@@ -288,7 +286,6 @@ export default function Home() {
           {/* [Pillar 2] 고속도로 휴게소 (상행선·하행선 리스트 및 맛집) */}
           <div className="bg-white border border-slate-200 rounded-3xl p-5 shadow-2xs space-y-5">
             <div>
-              <span className="text-[10px] font-black text-slate-400 block font-mono">REST AREA DIRECTION & EX-FOOD</span>
               <h2 className="text-[15px] font-black text-slate-800">고속도로 휴게소 (상행선 &middot; 하행선 방향별 조회)</h2>
             </div>
 
@@ -335,7 +332,7 @@ export default function Home() {
               {/* 상행선 방향 */}
               <div className="space-y-2">
                 <span className="text-xs font-black text-slate-700 border-b pb-1 block border-slate-100 flex items-center gap-1.5">
-                  🔼 상행선 방향 ({selectedRestHighway === '경부고속도로' ? '서울방향' : '상행선'})
+                  상행선 방향 ({selectedRestHighway === '경부고속도로' ? '서울방향' : '상행선'})
                 </span>
                 <div className="space-y-1.5 max-h-[220px] overflow-y-auto pr-1">
                   {upBoundRestAreas
@@ -363,7 +360,7 @@ export default function Home() {
               {/* 하행선 방향 */}
               <div className="space-y-2">
                 <span className="text-xs font-black text-slate-700 border-b pb-1 block border-slate-100 flex items-center gap-1.5">
-                  🔽 하행선 방향 ({selectedRestHighway === '경부고속도로' ? '부산방향' : '하행선'})
+                  하행선 방향 ({selectedRestHighway === '경부고속도로' ? '부산방향' : '하행선'})
                 </span>
                 <div className="space-y-1.5 max-h-[220px] overflow-y-auto pr-1">
                   {downBoundRestAreas
@@ -402,15 +399,15 @@ export default function Home() {
                 </div>
 
                 <div className="grid grid-cols-2 gap-2 text-[11px] border-t border-b border-slate-800 py-2.5 my-2">
-                  <p>⛽ 휘발유: <strong className="text-blue-400">{selectedRestArea.gasStation.gasolinePrice.toLocaleString()}원</strong></p>
-                  <p>⛽ 경유: <strong className="text-blue-400">{selectedRestArea.gasStation.dieselPrice.toLocaleString()}원</strong></p>
-                  <p className="col-span-2">⚡ 전기차 충전기: <strong className="text-emerald-400">{selectedRestArea.gasStation.hasEvCharger ? `${selectedRestArea.gasStation.evChargersCount}기 설치` : '없음'}</strong></p>
+                  <p>휘발유: <strong className="text-blue-400">{selectedRestArea.gasStation.gasolinePrice.toLocaleString()}원</strong></p>
+                  <p>경유: <strong className="text-blue-400">{selectedRestArea.gasStation.dieselPrice.toLocaleString()}원</strong></p>
+                  <p className="col-span-2">전기차 충전기: <strong className="text-emerald-400">{selectedRestArea.gasStation.hasEvCharger ? `${selectedRestArea.gasStation.evChargersCount}기 설치` : '없음'}</strong></p>
                 </div>
 
                 <div className="space-y-1">
                   <span className="text-[10px] font-black text-slate-400 block">식당가 대표 추천메뉴</span>
                   <div className="flex justify-between items-center bg-slate-950 p-2.5 rounded-lg border border-slate-850">
-                    <span className="text-xs font-bold text-slate-300">🍜 {selectedRestArea.signatureMenu.name}</span>
+                    <span className="text-xs font-bold text-slate-300">{selectedRestArea.signatureMenu.name}</span>
                     <span className="text-xs font-bold text-blue-400">{selectedRestArea.signatureMenu.price.toLocaleString()}원</span>
                   </div>
                   <p className="text-[10px] text-slate-500">{selectedRestArea.signatureMenu.description}</p>
@@ -430,14 +427,13 @@ export default function Home() {
           {/* [Pillar 3] 고속도로 주유소 전기차 충전소 */}
           <div className="bg-white border border-slate-200 rounded-3xl p-5 shadow-2xs space-y-4">
             <div>
-              <span className="text-[10px] font-black text-slate-400 block font-mono">REAL-TIME FUEL & EV VALUES</span>
               <h2 className="text-[15px] font-black text-slate-800">주유소 유가 비교 · 전기차 충전소</h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* 휘발유 최저가 랭킹 */}
               <div className="space-y-2 bg-slate-50 p-3.5 border border-slate-100 rounded-2xl">
-                <span className="text-[10px] font-black text-slate-400 block uppercase tracking-wider">⛽ 휘발유 최저가 TOP 3</span>
+                <span className="text-[10px] font-black text-slate-400 block uppercase tracking-wider">휘발유 최저가 TOP 3</span>
                 <div className="space-y-1.5">
                   {cheapestGasoline.map((g, idx) => (
                     <div key={idx} className="flex justify-between items-center text-xs font-bold text-slate-700">
@@ -450,7 +446,7 @@ export default function Home() {
 
               {/* 경유 최저가 랭킹 */}
               <div className="space-y-2 bg-slate-50 p-3.5 border border-slate-100 rounded-2xl">
-                <span className="text-[10px] font-black text-slate-400 block uppercase tracking-wider">⛽ 경유 최저가 TOP 3</span>
+                <span className="text-[10px] font-black text-slate-400 block uppercase tracking-wider">경유 최저가 TOP 3</span>
                 <div className="space-y-1.5">
                   {cheapestDiesel.map((d, idx) => (
                     <div key={idx} className="flex justify-between items-center text-xs font-bold text-slate-700">
@@ -464,7 +460,7 @@ export default function Home() {
 
             {/* 전기차 충전소 순위 */}
             <div className="p-3.5 bg-slate-900 text-white rounded-2xl space-y-2">
-              <span className="text-[10px] font-black text-slate-400 block uppercase tracking-wider">⚡ 전기차(EV) 최다 충전소 보유 휴게소</span>
+              <span className="text-[10px] font-black text-slate-400 block uppercase tracking-wider">전기차(EV) 최다 충전소 보유 휴게소</span>
               <div className="space-y-1.5">
                 {topEvAreas.map((e, idx) => (
                   <div key={idx} className="flex justify-between items-center text-xs font-bold">

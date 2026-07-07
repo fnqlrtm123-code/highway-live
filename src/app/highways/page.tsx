@@ -13,7 +13,7 @@ export default function HighwaysIndexPage() {
       
       {/* 타이틀 및 소개 */}
       <div className="space-y-2 text-center md:text-left">
-        <h1 className="text-3xl font-black text-slate-900 tracking-tight">🛣️ 전국 고속도로 노선 정보</h1>
+        <h1 className="text-3xl font-black text-slate-900 tracking-tight">전국 고속도로 노선 정보</h1>
         <p className="text-slate-500 text-sm max-w-2xl leading-relaxed">
           국토 교통망의 뼈대를 이루는 주요 노선별 기본 정보와 실시간 교통상황, 휴게소 리스트를 제공합니다.
         </p>

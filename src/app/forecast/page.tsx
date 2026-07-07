@@ -32,7 +32,6 @@ export default function TrafficForecast() {
       {/* 타이틀 섹션 */}
       <section className="bg-slate-900 text-white py-10">
         <div className="max-w-[1240px] mx-auto px-4">
-          <span className="text-[10px] font-black text-blue-400 font-mono tracking-widest block uppercase">Traffic Forecast Center</span>
           <h1 className="text-2xl font-black mt-1">고속도로 실시간 교통예보 및 소요시간 예측</h1>
           <p className="text-slate-400 text-xs mt-2 max-w-xl leading-relaxed">
             주말 및 공휴일, 연휴 기간 동안의 주요 도시 간 교통 정체 예상 시간과 소요 시간을 미리 확인하고, 최적의 출발 시간대를 시뮬레이션해 보세요.
@@ -46,7 +45,6 @@ export default function TrafficForecast() {
         {/* 좌측: 혼잡 시뮬레이션 컨트롤러 */}
         <div className="lg:col-span-5 bg-white border border-slate-200 rounded-2xl p-5 shadow-2xs space-y-6">
           <div>
-            <span className="text-[10px] font-black text-blue-600 block uppercase font-mono mb-1">CONGESTION SIMULATOR</span>
             <h3 className="text-sm font-black text-slate-800">요일 및 출발시간 대별 정체 예측</h3>
           </div>
 
@@ -112,7 +110,6 @@ export default function TrafficForecast() {
         <div className="lg:col-span-7 bg-white border border-slate-200 rounded-2xl p-5 shadow-2xs space-y-4">
           <div className="flex justify-between items-center border-b pb-3 border-slate-100">
             <div>
-              <span className="text-[10px] font-black text-blue-600 block uppercase font-mono">CITY TO CITY ESTIMATES</span>
               <h3 className="text-sm font-black text-slate-800">주요 도시 간 기준 소요시간 대시보드</h3>
             </div>
             <span className="text-[10px] font-bold text-slate-400">실시간 데이터 갱신 적용</span>
@@ -143,7 +140,7 @@ export default function TrafficForecast() {
 
           {/* 명절 귀성길 특별 팁 */}
           <div className="bg-red-50 border border-red-100 p-4 rounded-xl space-y-2 mt-4">
-            <span className="text-[10px] font-black text-red-700 block">🚗 명절/연휴 귀성 최적 시간대 팁</span>
+            <span className="text-[10px] font-black text-red-700 block">명절/연휴 귀성 최적 시간대 팁</span>
             <p className="text-[11px] text-red-800 leading-relaxed">
               추석 및 설 명절 기간 동안의 최대 정체 시점은 명절 전날 오전과 당일 오후입니다. 혼잡 시간대를 피해 명절 전날 오후 8시 이후 또는 당일 새벽 5시 이전에 출발하시면 정체 시간을 평균 1.5시간 이상 줄일 수 있습니다.
             </p>

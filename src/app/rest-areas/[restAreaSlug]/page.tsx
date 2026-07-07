@@ -27,7 +27,7 @@ export default async function RestAreaDashboardPage({ params }: Props) {
           <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-2xs hover:shadow-md transition-shadow">
             <div className="flex justify-between items-center mb-4 pb-2 border-b border-slate-100">
               <h3 className="font-black text-slate-800 flex items-center gap-2">
-                🍽️ 대표 먹거리 맛집
+                대표 먹거리 맛집
               </h3>
               <a href={`/rest-areas/${restAreaSlug}/food`} className="text-xs font-bold text-blue-600 hover:underline">
                 메뉴 전체보기 &rarr;
@@ -54,7 +54,7 @@ export default async function RestAreaDashboardPage({ params }: Props) {
           <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-2xs hover:shadow-md transition-shadow">
             <div className="flex justify-between items-center mb-4 pb-2 border-b border-slate-100">
               <h3 className="font-black text-slate-800 flex items-center gap-2">
-                ⛽ 주유 및 충전소 가격
+                주유 및 충전소 가격
               </h3>
               <a href={`/rest-areas/${restAreaSlug}/gas`} className="text-xs font-bold text-blue-600 hover:underline">
                 가격 상세비교 &rarr;
@@ -83,7 +83,7 @@ export default async function RestAreaDashboardPage({ params }: Props) {
         {/* 실시간 이용 팁 */}
         <div className="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-2xs space-y-4 text-[14px] leading-relaxed text-slate-600">
           <h3 className="text-base font-black text-slate-900 flex items-center gap-1.5">
-            💡 {area.name} ({area.directionName}) 실시간 이용 꿀팁
+            {area.name} ({area.directionName}) 실시간 이용 꿀팁
           </h3>
           <p>
             {area.name} 휴게소는 {area.highwayName} {area.locationKm}km 구간에 있으며, 장거리 이동 운전자들의 피로를 덜어줄 다양한 편의시설과 식음료 매장이 입점해 있습니다. 
@@ -102,7 +102,7 @@ export default async function RestAreaDashboardPage({ params }: Props) {
         {/* 편의시설 현황 */}
         <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-2xs">
           <h3 className="text-base font-black text-slate-900 border-b pb-3 border-slate-100 mb-4">
-            ✨ 주요 편의 서비스
+            주요 편의 서비스
           </h3>
           <div className="space-y-3">
             {area.facilities.map((facility) => (
@@ -117,7 +117,7 @@ export default async function RestAreaDashboardPage({ params }: Props) {
         {/* 인근 휴게소 추천 */}
         <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-2xs">
           <h3 className="text-base font-black text-slate-900 border-b pb-3 border-slate-100 mb-4">
-            🛣️ 동일 노선 인근 휴게소
+            동일 노선 인근 휴게소
           </h3>
           <div className="space-y-3">
             {siblingAreas.slice(0, 3).map((s) => (

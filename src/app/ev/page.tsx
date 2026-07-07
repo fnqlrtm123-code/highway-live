@@ -15,7 +15,7 @@ export default function EvIndexPage() {
       
       {/* 타이틀 헤더 */}
       <div className="space-y-2 text-center md:text-left">
-        <h1 className="text-3xl font-black text-slate-900 tracking-tight">🔌 고속도로 전기차(EV) 충전소 현황</h1>
+        <h1 className="text-3xl font-black text-slate-900 tracking-tight">고속도로 전기차(EV) 충전소 현황</h1>
         <p className="text-slate-500 text-sm max-w-2xl leading-relaxed">
           고속도로 주행 중 방전을 예방하기 위해 초급속 충전 시설을 보유한 휴게소 충전기 수량 목록을 제공합니다.
         </p>
@@ -26,7 +26,7 @@ export default function EvIndexPage() {
       {/* 충전기 다수 보유 순위 */}
       <section className="bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-2xs space-y-6">
         <h2 className="text-xl font-black text-slate-900 border-b pb-4 border-slate-100">
-          ⚡ 초급속 &middot; 급속 충전기 보유 휴게소 리스트
+          초급속 &middot; 급속 충전기 보유 휴게소 리스트
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

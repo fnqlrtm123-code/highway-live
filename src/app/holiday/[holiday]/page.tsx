@@ -9,10 +9,10 @@ const holidayMap: Record<string, { name: string; title: string; desc: string; ti
     title: '추석 연휴 고속도로 교통상황 예보', 
     desc: '한가위 명절 연휴 기간 동안 발생하는 대규모 통행량을 피해 정체를 우회할 수 있는 요령과 분석 자료입니다.',
     tips: [
-      '🚗 귀성길 추천 출발시간: 연휴 전날 오전 7시 이전 또는 연휴 둘째날 오후 8시 이후',
-      '🚙 귀경길 추천 출발시간: 추석 당일 다음날 새벽 6시 이전 또는 밤 10시 이후',
-      '💵 통행료 무료: 연휴 시작일 00:00부터 종료일 24:00까지 전 차량 통행료 100% 면제',
-      '🚻 휴게소 팁: 식당 대기줄을 줄이려면 간편식 스낵코너(호두과자, 소떡소떡 등) 전용 키오스크를 이용하세요.'
+      '귀성길 추천 출발시간: 연휴 전날 오전 7시 이전 또는 연휴 둘째날 오후 8시 이후',
+      '귀경길 추천 출발시간: 추석 당일 다음날 새벽 6시 이전 또는 밤 10시 이후',
+      '통행료 무료: 연휴 시작일 00:00부터 종료일 24:00까지 전 차량 통행료 100% 면제',
+      '휴게소 팁: 식당 대기줄을 줄이려면 간편식 스낵코너(호두과자, 소떡소떡 등) 전용 키오스크를 이용하세요.'
     ]
   },
   'seollal': { 
@@ -20,10 +20,10 @@ const holidayMap: Record<string, { name: string; title: string; desc: string; ti
     title: '설날 연휴 고속도로 교통상황 예보', 
     desc: '겨울철 안전 주행 수칙과 설날 연휴 대이동 정체구간 피하기 꿀팁을 확인해보세요.',
     tips: [
-      '🚗 귀성길 추천 출발시간: 연휴 첫날 새벽 5시 이전 또는 전날 밤 9시 이후',
-      '🚙 귀경길 추천 출발시간: 설날 당일 당일 저녁 9시 이후 또는 다음날 새벽 시간대',
-      '💵 통행료 무료: 연휴 첫날 00:00부터 마지막날 24:00까지 면제 적용',
-      '⚠️ 결빙 주의: 터널 입구 및 다리 위 블랙아이스 결빙에 각별히 유의하고 감속 운전하세요.'
+      '귀성길 추천 출발시간: 연휴 첫날 새벽 5시 이전 또는 전날 밤 9시 이후',
+      '귀경길 추천 출발시간: 설날 당일 당일 저녁 9시 이후 또는 다음날 새벽 시간대',
+      '통행료 무료: 연휴 첫날 00:00부터 마지막날 24:00까지 면제 적용',
+      '결빙 주의: 터널 입구 및 다리 위 블랙아이스 결빙에 각별히 유의하고 감속 운전하세요.'
     ]
   }
 };
@@ -73,7 +73,6 @@ export default async function HolidayDetailPage({ params }: Props) {
       <div className="bg-slate-900 text-white p-8 md:p-10 rounded-3xl border border-slate-800 relative overflow-hidden shadow-xl">
         <div className="absolute top-0 right-0 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
         <div className="relative z-10 space-y-3">
-          <span className="text-[10px] font-black bg-blue-500 text-white px-2.5 py-0.5 rounded uppercase tracking-wider">SEASON FORECAST</span>
           <h1 className="text-3xl font-black tracking-tight">{info.title}</h1>
           <p className="text-slate-400 text-xs md:text-sm max-w-3xl leading-relaxed">
             {info.desc}
@@ -85,7 +84,7 @@ export default async function HolidayDetailPage({ params }: Props) {
 
       {/* 추천 행동 가이드 */}
       <section className="bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-2xs space-y-6">
-        <h2 className="text-xl font-black text-slate-900">💡 {info.name} 연휴 스트레스 줄이는 핵심 요령</h2>
+        <h2 className="text-xl font-black text-slate-900">{info.name} 연휴 스트레스 줄이는 핵심 요령</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {info.tips.map((tip, idx) => (
             <div key={idx} className="p-5 bg-slate-50 border border-slate-100 rounded-2xl text-xs md:text-sm font-semibold text-slate-700 leading-relaxed">
@@ -97,7 +96,7 @@ export default async function HolidayDetailPage({ params }: Props) {
 
       {/* 노선별 명절 상세 상황판 퀵 바로가기 */}
       <section className="space-y-4">
-        <h2 className="text-xl font-black text-slate-900">📊 노선별 명절 정체구간 실시간 조회</h2>
+        <h2 className="text-xl font-black text-slate-900">노선별 명절 정체구간 실시간 조회</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {highways.map(h => (
             <a 

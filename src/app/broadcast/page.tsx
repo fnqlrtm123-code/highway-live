@@ -30,7 +30,6 @@ export default function TrafficBroadcast() {
       {/* 타이틀 섹션 */}
       <section className="bg-slate-900 text-white py-10">
         <div className="max-w-[1240px] mx-auto px-4">
-          <span className="text-[10px] font-black text-blue-400 font-mono tracking-widest block uppercase">Live Audio & Video Broadcast</span>
           <h1 className="text-2xl font-black mt-1">고속도로 실시간 exTV 교통방송 & 속보 모니터링</h1>
           <p className="text-slate-400 text-xs mt-2 max-w-xl leading-relaxed">
             한국도로공사의 공식 교통안내 방송 exTV 라이브 모니터링 및 실시간 교통 상황 팟캐스트, 돌발 안전 운전 수칙 캠페인을 통합해서 실시간 제공합니다.
@@ -46,7 +45,7 @@ export default function TrafficBroadcast() {
           <div className="p-5 border-b border-slate-800 flex justify-between items-center bg-slate-950">
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-red-600 animate-ping"></span>
-              <span className="text-xs font-black text-white font-mono">exTV LIVE STREAMING</span>
+              <span className="text-xs font-black text-white">exTV 실시간 중계</span>
             </div>
             <span className="text-[10px] font-bold text-slate-500">24시간 연속 방송</span>
           </div>
@@ -91,7 +90,7 @@ export default function TrafficBroadcast() {
               onClick={() => setIsPlaying(!isPlaying)}
               className="text-xs text-slate-400 hover:text-white font-bold"
             >
-              {isPlaying ? '⏸ 일시 정지' : '▶️ 방송 재생'}
+              {isPlaying ? '일시 정지' : '방송 재생'}
             </button>
             <span className="text-[10px] text-slate-600 font-mono">제공: 한국도로공사 exTV</span>
           </div>
@@ -102,7 +101,7 @@ export default function TrafficBroadcast() {
           
           {/* 주요 속보 피드 */}
           <div className="bg-white border border-slate-200 rounded-3xl p-5 shadow-2xs space-y-4">
-            <h3 className="text-xs font-black text-slate-800">📡 교통 상황실 브리핑 리스트</h3>
+            <h3 className="text-xs font-black text-slate-800">교통 상황실 브리핑 리스트</h3>
             <div className="space-y-3">
               <div className="p-3 bg-slate-50 border border-slate-100 rounded-xl space-y-1">
                 <span className="text-[9px] font-bold text-blue-600">오후 4시 20분 브리핑</span>
@@ -127,7 +126,6 @@ export default function TrafficBroadcast() {
 
           {/* 안전 운전 필수 캠페인 */}
           <div className="bg-slate-900 text-white rounded-3xl p-5 border border-slate-850 space-y-3">
-            <span className="text-[10px] font-black text-emerald-400 block font-mono">SAFETY FIRST</span>
             <h4 className="text-sm font-black">2차 사고 예방 행동 요령</h4>
             <p className="text-xs text-slate-400 leading-relaxed">
               고속도로 주행 중 차량 고장이나 사고 발생 시 즉시 비상등을 켜고, 가드레일 밖 안전한 곳으로 우선 대피하신 후 112 또는 한국도로공사 1588-2504로 안전 순찰 지원을 요청하세요.

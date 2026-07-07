@@ -20,7 +20,7 @@ export default function FoodIndexPage() {
       
       {/* 소개 타이틀 */}
       <div className="space-y-2 text-center md:text-left">
-        <h1 className="text-3xl font-black text-slate-900 tracking-tight">🍽️ 고속도로 휴게소 대표 맛집 메뉴</h1>
+        <h1 className="text-3xl font-black text-slate-900 tracking-tight">고속도로 휴게소 대표 맛집 메뉴</h1>
         <p className="text-slate-500 text-sm max-w-2xl leading-relaxed">
           한국도로공사에서 공식 인증한 ex-food 대표 메뉴부터 휴게소마다 소문난 실시간 시그니처 밥상 가격표를 확인하세요.
         </p>
@@ -31,7 +31,7 @@ export default function FoodIndexPage() {
       {/* 전국 휴게소 맛집 리스트 */}
       <section className="bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-2xs space-y-6">
         <h2 className="text-xl font-black text-slate-900 border-b pb-4 border-slate-100">
-          ⭐ 휴게소별 시그니처 대표 메뉴판
+          휴게소별 시그니처 대표 메뉴판
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {popularMenus.map((item, idx) => (

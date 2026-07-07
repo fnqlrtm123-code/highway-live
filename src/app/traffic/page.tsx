@@ -337,7 +337,6 @@ export default function TrafficPage() {
       {/* 1. 상단 허브 타이틀 */}
       <section className="bg-slate-950 text-white py-12 border-b border-slate-800">
         <div className="mx-auto max-w-[1240px] px-4">
-          <span className="text-[10px] font-black text-blue-400 uppercase tracking-widest block font-mono">TRAFFIC & CCTV HUB PORTAL</span>
           <h1 className="text-2xl md:text-3xl font-black mt-1.5">실시간 전국 교통정보 & CCTV 상황판</h1>
           <p className="text-xs md:text-sm text-slate-400 mt-2 max-w-xl leading-relaxed">
             네이버 검색 기준의 실시간 도로 소통 현황을 **누락 없이 100% 모두 수집**하여 고속도로, 도시고속화도로, 일반 국도 및 주요 대교의 실시간 소통 속도와 CCTV 중계를 한곳에 통합 제공합니다.
@@ -458,7 +457,7 @@ export default function TrafficPage() {
             )}
 
             {activeTab === 'major' && (
-              <span className="text-xs font-bold text-slate-500">⭐️ 수도권 및 주요 고속도로 중 가장 혼잡도가 높은 10대 핵심 도로 현황</span>
+              <span className="text-xs font-bold text-slate-500">수도권 및 주요 고속도로 중 가장 혼잡도가 높은 10대 핵심 도로 현황</span>
             )}
           </div>
 
@@ -493,7 +492,7 @@ export default function TrafficPage() {
                     })}
                     className="bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs px-3.5 py-2 rounded-lg transition-colors shadow-2xs"
                   >
-                    📹 CCTV
+                    CCTV
                   </button>
                 </div>
               </div>
@@ -531,7 +530,9 @@ export default function TrafficPage() {
           ) : (
             <div className="bg-white border border-slate-200 rounded-3xl p-6 shadow-2xs text-center space-y-4">
               <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto text-slate-400">
-                📹
+                <svg className="w-7 h-7 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
               </div>
               <div className="space-y-1">
                 <h3 className="text-xs font-black text-slate-800">실시간 도로 CCTV 화면 재생기</h3>
@@ -544,7 +545,6 @@ export default function TrafficPage() {
 
           {/* 안전 운전 안내 */}
           <div className="bg-slate-900 text-white rounded-3xl p-5 border border-slate-800 space-y-3">
-            <span className="text-[10px] font-black text-blue-400 font-mono tracking-widest block uppercase">Safe Driving Campaign</span>
             <h4 className="text-sm font-black">실시간 교통상황 체크 가이드</h4>
             <p className="text-xs text-slate-400 leading-relaxed">
               출발 전 가고자 하는 고속도로 혹은 올림픽대로/강변북로의 도시고속도로 소통 흐름을 미리 확인하시면 예상 도착 시간을 최소 20~30분 이상 지연 없이 단축할 수 있습니다. 빗길이나 안개 낀 날은 평소 속도보다 20% 이상 감속 안전운전하십시오.

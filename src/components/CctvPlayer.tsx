@@ -25,11 +25,11 @@ export default function CctvPlayer({ x, y, cctvId, cctvName }: CctvPlayerProps) 
 
     // 시스템 시뮬레이션 로그 생성
     const logs = [
-      `[SYS] Initializing Traffic Monitor Node #${cctvId}...`,
-      `[GPS] Latitude: ${y.toFixed(6)}, Longitude: ${x.toFixed(6)}`,
-      `[NET] Connecting to Highway Traffic Database...`,
-      `[SYS] Channel Status: ACTIVE (Data Only)`,
-      `[INFO] Video streaming is offline by administrative policy.`,
+      `[시스템] 교통 모니터링 노드 #${cctvId} 초기화 중...`,
+      `[위치] 위도: ${y.toFixed(6)}, 경도: ${x.toFixed(6)}`,
+      `[네트워크] 고속도로 교통 데이터베이스 연결 중...`,
+      `[시스템] 채널 상태: 활성 (데이터 전용)`,
+      `[안내] 행정 정책에 따라 비디오 스트리밍이 제한되었습니다.`,
     ];
     setTerminalLogs(logs);
 
@@ -37,10 +37,10 @@ export default function CctvPlayer({ x, y, cctvId, cctvName }: CctvPlayerProps) 
       setTerminalLogs((prev) => {
         const next = [...prev];
         if (next.length > 8) next.shift();
-        const eventType = Math.random() > 0.5 ? 'FLOW' : 'WEATHER';
-        const value = eventType === 'FLOW' 
-          ? `Speed update: ${Math.floor(Math.random() * 30 + 75)}km/h` 
-          : `Sensor check: status OK`;
+        const eventType = Math.random() > 0.5 ? '교통' : '상태';
+        const value = eventType === '교통' 
+          ? `속도 갱신: ${Math.floor(Math.random() * 30 + 75)}km/h` 
+          : `센서 자가진단 결과 정상`;
         next.push(`[${new Date().toLocaleTimeString('ko-KR', { hour12: false })}] [${eventType}] ${value}`);
         return next;
       });
@@ -89,7 +89,7 @@ export default function CctvPlayer({ x, y, cctvId, cctvName }: CctvPlayerProps) 
 
         {/* 레이더 라벨 */}
         <div className="absolute bottom-2 text-[9px] font-mono text-emerald-500/40 uppercase tracking-widest">
-          Radar Active
+          레이더 활성
         </div>
       </div>
 
@@ -97,8 +97,8 @@ export default function CctvPlayer({ x, y, cctvId, cctvName }: CctvPlayerProps) 
       <div className="flex-grow flex flex-col justify-between h-full w-full min-h-[180px] space-y-4">
         {/* 시스템 스테이터스 */}
         <div className="space-y-1">
-          <span className="text-[10px] font-black font-mono tracking-widest text-emerald-400 uppercase bg-emerald-950/40 px-2 py-0.5 rounded border border-emerald-500/20 inline-block">
-            SYSTEM ONLINE
+          <span className="text-[10px] font-black tracking-widest text-emerald-400 uppercase bg-emerald-950/40 px-2 py-0.5 rounded border border-emerald-500/20 inline-block">
+            시스템 정상 작동
           </span>
           <h4 className="text-[17px] font-black text-white font-sans tracking-tight">
             {cctvName} 지점 교통 모니터링

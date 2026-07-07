@@ -48,7 +48,6 @@ export default function NoticePage() {
       {/* 타이틀 섹션 */}
       <section className="bg-slate-900 text-white py-10">
         <div className="max-w-[1240px] mx-auto px-4">
-          <span className="text-[10px] font-black text-blue-400 font-mono tracking-widest block uppercase">Customer Center</span>
           <h1 className="text-2xl font-black mt-1">공지사항 및 자주 묻는 질문(FAQ)</h1>
           <p className="text-slate-400 text-xs mt-2 max-w-xl leading-relaxed">
             로드플러스 라이브 서비스의 신규 기능 업데이트 소식과 공지사항, 그리고 실시간 고속도로 정보 조회 시 자주 문의하시는 질문들을 빠르게 답변해 드립니다.
@@ -62,7 +61,7 @@ export default function NoticePage() {
         {/* 좌측: 공지사항 리스트 */}
         <div className="lg:col-span-6 bg-white border border-slate-200 rounded-3xl p-5 shadow-2xs space-y-4">
           <div className="flex justify-between items-center border-b pb-3 border-slate-100">
-            <h3 className="text-sm font-black text-slate-800">📢 최근 서비스 공지사항</h3>
+            <h3 className="text-sm font-black text-slate-800">최근 서비스 공지사항</h3>
             <span className="text-[10px] text-slate-400 font-bold">최근 업데이트 순</span>
           </div>
 
@@ -89,7 +88,7 @@ export default function NoticePage() {
         {/* 우측: FAQ 아코디언 */}
         <div className="lg:col-span-6 bg-white border border-slate-200 rounded-3xl p-5 shadow-2xs space-y-4">
           <div className="space-y-2">
-            <h3 className="text-sm font-black text-slate-800">❓ 자주 묻는 질문 (FAQ)</h3>
+            <h3 className="text-sm font-black text-slate-800">자주 묻는 질문 (FAQ)</h3>
             <input 
               type="text" 
               placeholder="궁금한 단어나 질문을 검색해 보세요."

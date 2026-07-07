@@ -25,7 +25,7 @@ export default function CctvHubPage() {
 
       {/* 노선별 CCTV 카테고리 빠른 탐색 */}
       <section className="space-y-4">
-        <h2 className="text-xl font-black text-slate-900 border-b pb-3 border-slate-200">🎥 노선별 CCTV 실시간 보기</h2>
+        <h2 className="text-xl font-black text-slate-900 border-b pb-3 border-slate-200">노선별 CCTV 실시간 보기</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {highways.map((h) => (
             <a 
@@ -47,7 +47,7 @@ export default function CctvHubPage() {
       {/* 전체 CCTV 카메라 목록 */}
       <section className="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-2xs space-y-6">
         <h2 className="text-xl font-black text-slate-900 border-b pb-4 border-slate-100">
-          📍 전체 고속도로 CCTV 지점 목록
+          전체 고속도로 CCTV 지점 목록
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {cctvPoints.map((c) => (

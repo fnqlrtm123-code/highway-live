@@ -24,7 +24,7 @@ export default async function RestAreaGasPage({ params }: Props) {
     <div className="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-2xs space-y-6">
       <div className="flex items-center justify-between pb-4 border-b border-slate-100">
         <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
-          ⛽ 실시간 주유소 가격표
+          실시간 주유소 가격표
         </h2>
         <span className="text-xs font-bold text-slate-400">도로공사 유가정보 실시간 수집 피드</span>
       </div>
@@ -69,7 +69,7 @@ export default async function RestAreaGasPage({ params }: Props) {
       </div>
 
       <div className="p-4 bg-blue-50 border border-blue-100 rounded-xl space-y-2">
-        <h4 className="text-xs font-black text-blue-800">💡 주유소 이용 정보</h4>
+        <h4 className="text-xs font-black text-blue-800">주유소 이용 정보</h4>
         <p className="text-xs text-blue-700 leading-relaxed">
           해당 주유소의 브랜드는 <strong>{area.gasStation.brand}</strong>입니다. 고속도로 전용 알뜰주유소(ex-oil)는 도로공사의 정품 유류 대량 공동구매 정책으로 시중 정유사 폴 주유소보다 리터당 저렴합니다. 세차장 가용 여부는 현장 기상 상태에 따라 달라질 수 있습니다.
         </p>

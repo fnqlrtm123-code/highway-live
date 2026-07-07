@@ -25,7 +25,7 @@ export default function RestAreasPage() {
 
       {/* 노선별 휴게소 찾기 빠른 링크 */}
       <section className="space-y-4">
-        <h2 className="text-xl font-black text-slate-900 border-b pb-3 border-slate-200">🛣️ 노선별 휴게소 목록</h2>
+        <h2 className="text-xl font-black text-slate-900 border-b pb-3 border-slate-200">노선별 휴게소 목록</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {highways.map((h) => (
             <a 
@@ -43,7 +43,7 @@ export default function RestAreasPage() {
       {/* 전체 휴게소 리스트 */}
       <section className="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-2xs space-y-6">
         <h2 className="text-xl font-black text-slate-900 border-b pb-4 border-slate-100">
-          🍽️ 전국 휴게소 맛집 &middot; 편의시설 통합 목록
+          전국 휴게소 맛집 &middot; 편의시설 통합 목록
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

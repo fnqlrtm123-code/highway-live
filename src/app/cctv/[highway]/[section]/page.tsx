@@ -56,7 +56,7 @@ export default async function CctvSectionDetailPage({ params }: Props) {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/40 via-transparent to-transparent pointer-events-none" />
         <div className="relative z-10 space-y-3">
           <div className="flex items-center gap-2">
-            <span className="text-[12px] font-black bg-red-600 text-white px-2.5 py-0.5 rounded">LIVE CAM</span>
+            <span className="text-[12px] font-black bg-red-600 text-white px-2.5 py-0.5 rounded">실시간 캠</span>
             <span className="text-xs text-blue-300 font-mono tracking-tight">{cctv.highwayName} &middot; {cctv.locationKm}km 지점</span>
           </div>
           <h1 className="text-3xl md:text-4xl font-black tracking-tight">
@@ -77,28 +77,28 @@ export default async function CctvSectionDetailPage({ params }: Props) {
             <div className="p-4 bg-slate-900 border-b border-slate-800 flex justify-between items-center text-xs font-mono text-slate-400">
               <span className="flex items-center gap-1.5">
                 <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
-                HIGHWAY CCTV STREAM &middot; {cctv.name} ({cctv.direction})
+                고속도로 CCTV 송출 &middot; {cctv.name} ({cctv.direction})
               </span>
-              <span>LIVE BROADCASTING</span>
+              <span>실시간 방송중</span>
             </div>
 
             {/* 실제 비디오 및 OpenAPI 연동 플레이어 */}
             <div className="relative flex items-center justify-center bg-black overflow-hidden h-[380px] md:h-[450px]">
               {/* CCTV 오버레이 글씨 */}
               <div className="absolute top-6 left-6 z-20 font-mono text-xs text-green-400 space-y-1 pointer-events-none drop-shadow-md">
-                <p>CAMERA ID: {cctv.id}</p>
-                <p>ROUTE: {cctv.highwayName}</p>
-                <p>LOCATION: {cctv.locationKm}.0 km MARK</p>
-                <p>LIMIT: {cctv.speedLimit} km/h</p>
+                <p>카메라 ID: {cctv.id}</p>
+                <p>노선명: {cctv.highwayName}</p>
+                <p>위치: {cctv.locationKm}.0 km 지점</p>
+                <p>제한속도: {cctv.speedLimit} km/h</p>
               </div>
 
               <div className="absolute top-6 right-6 z-20 font-mono text-xs text-green-400 text-right pointer-events-none drop-shadow-md">
-                <p>SYSTEM STATUS: CONNECTED</p>
-                <p>TEMP: {cctv.temp}°C</p>
-                <p>WEATHER: {
-                  cctv.weather === 'clear' ? '맑음 (CLEAR)' :
-                  cctv.weather === 'rainy' ? '우천 (RAIN)' :
-                  cctv.weather === 'snowy' ? '강설 (SNOW)' : '안개 (FOG)'
+                <p>시스템 상태: 연결됨</p>
+                <p>기온: {cctv.temp}°C</p>
+                <p>날씨: {
+                  cctv.weather === 'clear' ? '맑음' :
+                  cctv.weather === 'rainy' ? '우천' :
+                  cctv.weather === 'snowy' ? '강설' : '안개'
                 }</p>
               </div>
 
@@ -146,7 +146,7 @@ export default async function CctvSectionDetailPage({ params }: Props) {
 
           {/* 본문 보강 설명 */}
           <div className="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-2xs space-y-4 text-[14px] leading-relaxed text-slate-600">
-            <h3 className="text-base font-black text-slate-900">🔍 {cctv.name} 지점 교통 흐름 분석 가이드</h3>
+            <h3 className="text-base font-black text-slate-900">{cctv.name} 지점 교통 흐름 분석 가이드</h3>
             <p>
               {cctv.name} 지점은 {cctv.highwayName} 노선 중에서도 출퇴근 시간대와 주말 연휴에 병목 현상이 발생하기 쉬운 중추 구간입니다. 현재 해당 CCTV 단독 실시간 중계를 통해 도로 소통 지수와 구간 제한 속도 준수 현황을 신속하게 점검하실 수 있습니다.
             </p>
@@ -162,7 +162,7 @@ export default async function CctvSectionDetailPage({ params }: Props) {
           {/* 노선 기본 제원 카드 */}
           <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-2xs space-y-4">
             <h3 className="text-base font-black text-slate-900 border-b pb-3 border-slate-100 font-sans">
-              🛣️ 노선 기본 제원
+              노선 기본 제원
             </h3>
             {highway ? (
               <div className="space-y-3.5 text-xs text-slate-600">
@@ -191,7 +191,7 @@ export default async function CctvSectionDetailPage({ params }: Props) {
           {/* 동일 노선의 기타 CCTV 카메라 목록 */}
           <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-2xs space-y-4">
             <h3 className="text-base font-black text-slate-900 border-b pb-3 border-slate-100 font-sans">
-              🎥 이 노선의 다른 CCTV
+              이 노선의 다른 CCTV
             </h3>
             
             <div className="space-y-3">

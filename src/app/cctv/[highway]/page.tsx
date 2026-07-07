@@ -63,7 +63,7 @@ export default async function HighwayCctvPage({ params }: Props) {
       {/* CCTV 리스트 */}
       <section className="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-2xs space-y-6">
         <h2 className="text-xl font-black text-slate-900 border-b pb-4 border-slate-100">
-          📍 {highway.name} CCTV 포인트 목록 ({cctvs.length})
+          {highway.name} CCTV 포인트 목록 ({cctvs.length})
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {cctvs.map((c) => (

@@ -17,7 +17,7 @@ export default function HolidayIndexPage() {
       
       {/* 소개 타이틀 */}
       <div className="space-y-2 text-center md:text-left">
-        <h1 className="text-3xl font-black text-slate-900 tracking-tight">📅 명절 &middot; 연휴 특별 교통상황 예보</h1>
+        <h1 className="text-3xl font-black text-slate-900 tracking-tight">명절 &middot; 연휴 특별 교통상황 예보</h1>
         <p className="text-slate-500 text-sm max-w-2xl leading-relaxed">
           대규모 이동이 발생하는 한가위 및 설 명절 기간 동안의 혼잡도를 최소화하기 위해 공공 통계 기반의 예상 혼잡 예측 가이드입니다.
         </p>

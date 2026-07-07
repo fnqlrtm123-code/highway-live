@@ -3,13 +3,13 @@ import { notFound } from 'next/navigation';
 import AdSense from '@/components/AdSense';
 import type { Metadata } from 'next';
 
-const facilityMap: Record<string, { name: string; tag: string; desc: string }> = {
-  'baby-room': { name: '수유실', tag: '🍼 수유실', desc: '기저귀 교환대, 젖병 소독기 및 수유용 쇼파가 안전하게 구비된 고속도로 휴게소입니다.' },
-  'shower': { name: '샤워실', tag: '🚿 샤워실', desc: '장거리 기사님들과 여행객들의 피로 회복을 위해 샤워 시설을 제공하는 휴게소입니다.' },
-  'sleep': { name: '수면실', tag: '😴 수면실', desc: '졸음운전을 사전에 예방하고 휴식을 취할 수 있는 무료 졸음 수면쉼터 보유 휴게소입니다.' },
-  'dog': { name: '반려견 쉼터', tag: '🐕 반려견 쉼터', desc: '반려견이 목줄을 풀고 신나게 뛰놀 수 있는 애견 놀이터 보유 휴게소입니다.' },
-  'pharmacy': { name: '약국', tag: '💊 약국', desc: '구급 약품 및 비상약을 언제든지 안전하게 구매할 수 있는 휴게소 내부 약국입니다.' },
-  'atm': { name: 'ATM 기기', tag: '🏧 ATM 기기', desc: '현금 출금 및 통장 정리가 가능한 365 자동화기기 보유 휴게소 목록입니다.' }
+const facilityMap: Record<string, { name: string; desc: string }> = {
+  'baby-room': { name: '수유실', desc: '기저귀 교환대, 젖병 소독기 및 수유용 쇼파가 안전하게 구비된 고속도로 휴게소입니다.' },
+  'shower': { name: '샤워실', desc: '장거리 기사님들과 여행객들의 피로 회복을 위해 샤워 시설을 제공하는 휴게소입니다.' },
+  'sleep': { name: '수면실', desc: '졸음운전을 사전에 예방하고 휴식을 취할 수 있는 무료 졸음 수면쉼터 보유 휴게소입니다.' },
+  'dog': { name: '반려견 쉼터', desc: '반려견이 목줄을 풀고 신나게 뛰놀 수 있는 애견 놀이터 보유 휴게소입니다.' },
+  'pharmacy': { name: '약국', desc: '구급 약품 및 비상약을 언제든지 안전하게 구매할 수 있는 휴게소 내부 약국입니다.' },
+  'atm': { name: 'ATM 기기', desc: '현금 출금 및 통장 정리가 가능한 365 자동화기기 보유 휴게소 목록입니다.' }
 };
 
 interface Props {
@@ -59,7 +59,6 @@ export default async function FacilityDetailPage({ params }: Props) {
       {/* 헤더 안내 */}
       <div className="bg-white border border-slate-200 p-8 rounded-3xl shadow-2xs space-y-3">
         <div className="flex items-center gap-2">
-          <span className="text-2xl">{info.tag.split(' ')[0]}</span>
           <h1 className="text-2xl font-black text-slate-900">{info.name} 있는 고속도로 휴게소</h1>
         </div>
         <p className="text-slate-500 text-xs md:text-sm leading-relaxed">

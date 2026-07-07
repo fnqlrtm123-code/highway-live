@@ -46,13 +46,13 @@ export default function RootLayout({
         {/* 1. 최상단 실시간 돌발 상황 속보 배너 (Roadplus 스타일) */}
         <div className="w-full bg-red-600 text-white py-2 px-4 text-xs font-black overflow-hidden relative z-50 shadow-sm">
           <div className="mx-auto max-w-[1240px] flex items-center gap-3">
-            <span className="bg-white text-red-600 px-2 py-0.5 rounded-md text-[10px] uppercase font-mono tracking-wider shrink-0 animate-pulse">BREAKING</span>
+            <span className="bg-white text-red-600 px-2 py-0.5 rounded-md text-[10px] uppercase font-mono tracking-wider shrink-0 animate-pulse">속보</span>
             <div className="flex-1 overflow-hidden relative h-5">
               <div className="animate-[marquee_25s_linear_infinite] whitespace-nowrap absolute flex gap-12 hover:[animation-play-state:paused] cursor-pointer">
-                <span>⚠️ [경부고속도로] 천안IC 부근 승용차 3중 추돌 사고 처리 중 (1차로 점유)</span>
-                <span>⚠️ [영동고속도로] 양지터널 부근 노면 보수 공사 진행 중 (갓길 통제)</span>
-                <span>⚠️ [서해안고속도로] 서해대교 구간 강풍으로 인한 감속 운행 권고</span>
-                <span>⚠️ [중부고속도로] 곤지암IC 인근 낙하물 수거 완료, 서행 해소 중</span>
+                <span>[경부고속도로] 천안IC 부근 승용차 3중 추돌 사고 처리 중 (1차로 점유)</span>
+                <span>[영동고속도로] 양지터널 부근 노면 보수 공사 진행 중 (갓길 통제)</span>
+                <span>[서해안고속도로] 서해대교 구간 강풍으로 인한 감속 운행 권고</span>
+                <span>[중부고속도로] 곤지암IC 인근 낙하물 수거 완료, 서행 해소 중</span>
               </div>
             </div>
             <span className="text-[10px] text-red-200 hidden md:inline">24시간 교통콜센터: 1588-2504</span>
@@ -71,7 +71,6 @@ export default function RootLayout({
               </div>
               <div className="flex flex-col">
                 <span className="text-[17px] font-black tracking-tight text-white leading-none">고속도로 교통정보</span>
-                <span className="text-[10px] font-bold tracking-widest text-blue-400 uppercase mt-1">ROADPLUS LIVE</span>
               </div>
             </a>
 
@@ -89,10 +88,10 @@ export default function RootLayout({
                 </button>
                 <div className="absolute top-full left-0 mt-1 w-52 rounded-xl bg-slate-900 border border-slate-800 shadow-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
                   <a href="/rest-areas" className="block px-4 py-2.5 text-[13px] font-bold text-slate-300 hover:bg-white/10 hover:text-white transition-all">
-                    ↔ 고속도로 상행·하행선 방향
+                    상행선·하행선 방향
                   </a>
                   <a href="/food" className="block px-4 py-2.5 text-[13px] font-bold text-slate-300 hover:bg-white/10 hover:text-white transition-all">
-                    🍲 휴게소 상행·하행 맛집
+                    휴게소 상행·하행 맛집
                   </a>
                 </div>
               </div>
