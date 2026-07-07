@@ -223,6 +223,15 @@ export const NAVER_TRAFFIC_DATA = {
   }
 };
 
+export interface RouteSegment {
+  from: string;
+  to: string;
+  distance: string;
+  normalTime: number;
+  currentTime: number;
+  status: '원활' | '서행' | '정체';
+}
+
 export interface RoadProfile {
   slug: string;
   name: string;
@@ -244,6 +253,7 @@ export interface RoadProfile {
     still1: string;
     still2: string;
   };
+  segments: RouteSegment[];
 }
 
 function seededRandom(seed: number) {
@@ -486,6 +496,115 @@ export function getRoadList(): RoadProfile[] {
       faqs = faqPool[faqSetIndex];
     }
 
+    let segments: RouteSegment[] = [];
+
+    // 도로명에 맞춰 세그먼트 데이터 구성
+    if (name.includes("경부고속도로")) {
+      segments = [
+        { from: "서울요금소", to: "신갈JC", distance: "11.5 km", normalTime: 8, currentTime: 14, status: "서행" },
+        { from: "신갈JC", to: "안성IC", distance: "42.1 km", normalTime: 28, currentTime: 51, status: "정체" },
+        { from: "안성IC", to: "천안JC", distance: "29.8 km", normalTime: 20, currentTime: 20, status: "원활" },
+        { from: "천안JC", to: "대전JC", distance: "68.2 km", normalTime: 45, currentTime: 48, status: "원활" },
+        { from: "대전JC", to: "동대구JC", distance: "142.0 km", normalTime: 95, currentTime: 98, status: "원활" },
+        { from: "동대구JC", to: "부산요금소", distance: "98.4 km", normalTime: 65, currentTime: 72, status: "서행" }
+      ];
+    } else if (name.includes("영동고속도로")) {
+      segments = [
+        { from: "서창JC", to: "군자JC", distance: "9.2 km", normalTime: 7, currentTime: 7, status: "원활" },
+        { from: "군자JC", to: "안산JC", distance: "8.5 km", normalTime: 6, currentTime: 12, status: "서행" },
+        { from: "안산JC", to: "신갈JC", distance: "22.4 km", normalTime: 15, currentTime: 28, status: "정체" },
+        { from: "신갈JC", to: "호법JC", distance: "33.6 km", normalTime: 22, currentTime: 25, status: "원활" },
+        { from: "호법JC", to: "여주JC", distance: "16.5 km", normalTime: 11, currentTime: 22, status: "정체" },
+        { from: "여주JC", to: "강릉분기점", distance: "138.8 km", normalTime: 90, currentTime: 90, status: "원활" }
+      ];
+    } else if (name.includes("서해안고속도로")) {
+      segments = [
+        { from: "금천IC", to: "목감IC", distance: "9.5 km", normalTime: 8, currentTime: 15, status: "서행" },
+        { from: "목감IC", to: "비봉IC", distance: "18.2 km", normalTime: 12, currentTime: 12, status: "원활" },
+        { from: "비봉IC", to: "서평택JC", distance: "28.5 km", normalTime: 19, currentTime: 38, status: "정체" },
+        { from: "서평택JC", to: "송악IC", distance: "12.5 km", normalTime: 9, currentTime: 25, status: "정체" },
+        { from: "송악IC", to: "군산IC", distance: "112.4 km", normalTime: 75, currentTime: 75, status: "원활" },
+        { from: "군산IC", to: "목포IC", distance: "122.1 km", normalTime: 82, currentTime: 85, status: "원활" }
+      ];
+    } else if (name.includes("올림픽대로")) {
+      segments = [
+        { from: "행주대교 남단", to: "가양대교 남단", distance: "4.5 km", normalTime: 4, currentTime: 7, status: "서행" },
+        { from: "가양대교 남단", to: "성산대교 남단", distance: "5.2 km", normalTime: 5, currentTime: 10, status: "서행" },
+        { from: "성산대교 남단", to: "여의하류IC", distance: "3.8 km", normalTime: 3, currentTime: 9, status: "정체" },
+        { from: "여의하류IC", to: "한강대교 남단", distance: "6.2 km", normalTime: 5, currentTime: 14, status: "정체" },
+        { from: "한강대교 남단", to: "한남대교 남단", distance: "7.1 km", normalTime: 6, currentTime: 15, status: "정체" },
+        { from: "한남대교 남단", to: "영동대교 남단", distance: "3.2 km", normalTime: 3, currentTime: 8, status: "서행" },
+        { from: "영동대교 남단", to: "강일IC", distance: "12.5 km", normalTime: 10, currentTime: 10, status: "원활" }
+      ];
+    } else if (name.includes("강변북로")) {
+      segments = [
+        { from: "가양대교 북단", to: "성산대교 북단", distance: "4.8 km", normalTime: 4, currentTime: 8, status: "서행" },
+        { from: "성산대교 북단", to: "양화대교 북단", distance: "2.5 km", normalTime: 2, currentTime: 5, status: "서행" },
+        { from: "양화대교 북단", to: "서강대교 북단", distance: "2.1 km", normalTime: 2, currentTime: 6, status: "정체" },
+        { from: "서강대교 북단", to: "마포대교 북단", distance: "1.8 km", normalTime: 2, currentTime: 5, status: "서행" },
+        { from: "마포대교 북단", to: "한강대교 북단", distance: "4.2 km", normalTime: 4, currentTime: 12, status: "정체" },
+        { from: "한강대교 북단", to: "한남대교 북단", distance: "5.5 km", normalTime: 5, currentTime: 14, status: "정체" },
+        { from: "한남대교 북단", to: "구리시계", distance: "14.8 km", normalTime: 12, currentTime: 15, status: "서행" }
+      ];
+    } else {
+      // 일반 도로 자동 생성
+      const segmentsCount = 3 + Math.floor(seededRandom(seed + 15) * 3); // 3~5개 구간
+      let totalLenNum = 35;
+      if (length) {
+        const cleaned = length.replace(/[^0-9\.]/g, '');
+        if (cleaned) totalLenNum = parseFloat(cleaned);
+      }
+      if (isNaN(totalLenNum) || totalLenNum <= 0) {
+        totalLenNum = 20 + Math.floor(seededRandom(seed + 16) * 60);
+      }
+
+      const startPoint = start || "시작 지점";
+      const endPoint = end || "종료 지점";
+
+      const subPoints: string[] = [];
+      if (detail && detail.includes(" - ")) {
+        const parts = detail.split(" - ").map(p => p.split("(")[0].trim());
+        if (parts.length > 2) {
+          subPoints.push(...parts.slice(1, parts.length - 1));
+        }
+      }
+
+      while (subPoints.length < segmentsCount - 1) {
+        const num = subPoints.length + 1;
+        subPoints.push(`${name} 경유지 ${num}`);
+      }
+
+      const checkpoints = [startPoint, ...subPoints.slice(0, segmentsCount - 1), endPoint];
+      const segmentLen = totalLenNum / segmentsCount;
+
+      for (let i = 0; i < segmentsCount; i++) {
+        const distVal = segmentLen * (0.8 + seededRandom(seed + 17 + i) * 0.4);
+        const distStr = `${distVal.toFixed(1)} km`;
+
+        const normalSpeed = type === 'highway' ? 100 : type === 'urban' ? 80 : 60;
+        const speedFactor = 0.5 + seededRandom(seed + 18 + i) * 0.6; // 0.5 ~ 1.1
+
+        const normTime = Math.max(1, Math.round((distVal / normalSpeed) * 60));
+        const currTime = Math.max(1, Math.round((distVal / (normalSpeed * speedFactor)) * 60));
+
+        let status: '원활' | '서행' | '정체' = '원활';
+        if (speedFactor < 0.65) {
+          status = '정체';
+        } else if (speedFactor < 0.85) {
+          status = '서행';
+        }
+
+        segments.push({
+          from: checkpoints[i],
+          to: checkpoints[i + 1],
+          distance: distStr,
+          normalTime: normTime,
+          currentTime: currTime,
+          status
+        });
+      }
+    }
+
     roadProfiles.push({
       slug,
       name,
@@ -502,7 +621,8 @@ export function getRoadList(): RoadProfile[] {
       congestedSections,
       detourCriteria,
       faqs,
-      images
+      images,
+      segments
     });
   };
 
