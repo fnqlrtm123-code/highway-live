@@ -43,21 +43,7 @@ export default function RootLayout({
     >
       <head />
       <body className="min-h-full flex flex-col bg-slate-50 text-slate-900 font-sans antialiased">
-        {/* 1. 최상단 실시간 돌발 상황 속보 배너 (Roadplus 스타일) */}
-        <div className="w-full bg-slate-900 text-slate-300 py-2 px-4 text-xs border-b border-slate-800 relative z-50 shadow-xs">
-          <div className="mx-auto max-w-[1240px] flex items-center gap-3">
-            <span className="bg-red-600 text-white px-2 py-0.5 rounded text-[10px] font-black tracking-wider shrink-0 animate-pulse">속보</span>
-            <div className="flex-1 overflow-hidden relative h-5">
-              <div className="animate-[marquee_25s_linear_infinite] whitespace-nowrap absolute flex gap-12 hover:[animation-play-state:paused] cursor-pointer text-slate-300 font-bold">
-                <span>[경부고속도로] 천안IC 부근 승용차 3중 추돌 사고 처리 중 (1차로 점유)</span>
-                <span>[영동고속도로] 양지터널 부근 노면 보수 공사 진행 중 (갓길 통제)</span>
-                <span>[서해안고속도로] 서해대교 구간 강풍으로 인한 감속 운행 권고</span>
-                <span>[중부고속도로] 곤지암IC 인근 낙하물 수거 완료, 서행 해소 중</span>
-              </div>
-            </div>
-            <span className="text-[10px] text-slate-500 hidden md:inline">24시간 교통콜센터: 1588-2504</span>
-          </div>
-        </div>
+
 
         {/* 2. 글로벌 헤더 (Roadplus 다크 네이비 테마) */}
         <header className="sticky top-0 z-40 w-full border-b border-slate-800 bg-slate-950 text-white">
