@@ -20,30 +20,41 @@ export default async function RestAreaFacilitiesPage({ params }: Props) {
   }
 
   return (
-    <div className="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-2xs space-y-6">
-      <div className="flex items-center justify-between pb-4 border-b border-slate-100">
-        <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
-          편의시설 및 부대 서비스 현황
+    <div className="max-w-3xl mx-auto space-y-8 text-slate-800 leading-relaxed">
+      
+      {/* 타이틀 */}
+      <div className="space-y-2">
+        <h2 className="text-xl md:text-2xl font-black text-slate-900 border-l-4 border-slate-900 pl-4">
+          ⛺ {area.name} 휴게소 편의시설 및 서비스 현황
         </h2>
-        <span className="text-xs font-bold text-slate-400">휴게소 부대시설 및 테마 안내</span>
+        <p className="text-sm text-slate-500">
+          운전자분들의 휴식을 돕는 휴게소 부대 서비스 시설과 편의시설 리스트입니다.
+        </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {area.facilities.map((f) => (
-          <div key={f} className="flex justify-between items-center p-4 border border-slate-100 rounded-xl">
-            <div className="flex items-center gap-2">
-              <span className="text-[14px] font-black text-slate-800">{f}</span>
-            </div>
-            <span className="text-xs text-blue-600 bg-blue-50 px-2.5 py-1 rounded font-black">
-              24시간 운영/가용
-            </span>
-          </div>
-        ))}
+      {/* 세로 목록형 편의시설 */}
+      <div className="space-y-4">
+        <h3 className="text-sm font-black text-slate-400 tracking-wider uppercase">이용 가능한 부대 서비스</h3>
+        <ul className="divide-y divide-slate-100 text-sm">
+          {area.facilities.map((f) => (
+            <li key={f} className="py-3.5 flex justify-between items-center">
+              <span className="font-semibold text-slate-800">{f}</span>
+              <span className="text-xs font-bold text-slate-500 bg-slate-100 px-2.5 py-1 rounded">
+                이용 가능
+              </span>
+            </li>
+          ))}
+        </ul>
       </div>
 
-      <div className="p-4 bg-slate-50 border border-slate-100 rounded-xl text-xs text-slate-500 leading-relaxed">
-        <strong>테마 시설 안내</strong>: 각 휴게소는 특산물 판매장, 전망대, 산책로 등을 별도로 구성하고 있습니다. 덕평휴게소와 같은 특정 복합 휴게소의 경우 애견동반 테마파크(달려라코코)나 쇼핑 가든 테마 공원이 조성되어 회차형 쉼터로 높은 인기를 자랑합니다.
+      {/* 가이드 설명글 */}
+      <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-3">
+        <h3 className="text-sm font-black text-slate-800">💡 휴게소 부대시설 이용 정보</h3>
+        <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
+          고속도로 휴게소의 수유실, 장애인 편의시설 등 핵심 서비스는 24시간 가용되도록 관리되고 있으나, 특산물 판매장이나 개별 스낵코너, 테마 산책로 시설 등은 휴게소 영업 사정이나 현지 기상 상황에 따라 운영 시간 및 가용 여부가 달라질 수 있으니 참고해주시기 바랍니다.
+        </p>
       </div>
+
     </div>
   );
 }

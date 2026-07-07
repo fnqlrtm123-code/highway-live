@@ -20,61 +20,70 @@ export default async function RestAreaEvPage({ params }: Props) {
   }
 
   return (
-    <div className="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-2xs space-y-6">
-      <div className="flex items-center justify-between pb-4 border-b border-slate-100">
-        <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
-          친환경차 충전소 및 세부 사양
+    <div className="max-w-3xl mx-auto space-y-8 text-slate-800 leading-relaxed">
+      
+      {/* 타이틀 */}
+      <div className="space-y-2">
+        <h2 className="text-xl md:text-2xl font-black text-slate-900 border-l-4 border-slate-900 pl-4">
+          ⚡ {area.name} 휴게소 전기차 충전소 및 수소차 충전 현황
         </h2>
-        <span className="text-xs font-bold text-slate-400">전기차 급속 충전 &middot; 수소차 충전 현황</span>
+        <p className="text-sm text-slate-500">
+          친환경 차량 운전자를 위한 급속 전기차 충전기와 수소 충전소 사양 정보입니다.
+        </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* 전기차 충전소 카드 */}
-        <div className="p-6 border border-slate-100 bg-slate-50/50 rounded-xl space-y-3">
-          <h3 className="font-extrabold text-slate-800 flex items-center gap-1.5">
-            전기차(EV) 급속 충전
-          </h3>
-          <div className="space-y-2 text-xs text-slate-600">
-            <div className="flex justify-between">
-              <span>충전 가능 여부</span>
-              <span className={`font-black ${area.gasStation.hasEvCharger ? 'text-emerald-600' : 'text-red-500'}`}>
-                {area.gasStation.hasEvCharger ? '이용 가능' : '이용 불가능'}
+      {/* 세로 목록형 충전소 사양 */}
+      <div className="space-y-6">
+        
+        {/* 전기차(EV) */}
+        <div className="py-4 border-b border-slate-200 space-y-3">
+          <h3 className="text-lg font-black text-slate-900">전기차 (EV) 충전 인프라</h3>
+          <ul className="divide-y divide-slate-100 text-sm">
+            <li className="py-3 flex justify-between">
+              <span className="text-slate-500 font-bold">충전 가용 여부</span>
+              <span className={`font-black ${area.gasStation.hasEvCharger ? 'text-emerald-700' : 'text-slate-400'}`}>
+                {area.gasStation.hasEvCharger ? '이용 가능' : '미운영'}
               </span>
-            </div>
-            <div className="flex justify-between">
-              <span>충전기 대수</span>
-              <span className="font-black text-slate-800 font-mono">{area.gasStation.evChargersCount}기</span>
-            </div>
-            <div className="flex justify-between">
-              <span>충전 속도</span>
-              <span className="font-black text-slate-800">급속 (100kW ~ 350kW 초급속 지원)</span>
-            </div>
-          </div>
+            </li>
+            <li className="py-3 flex justify-between">
+              <span className="text-slate-500 font-bold">설치된 충전기 대수</span>
+              <span className="font-mono font-black text-slate-900">{area.gasStation.evChargersCount}대 운영 중</span>
+            </li>
+            <li className="py-3 flex justify-between">
+              <span className="text-slate-500 font-bold">충전 속도 규격</span>
+              <span className="font-bold text-slate-700">급속 (100kW) ~ 초급속 (300kW 이상) 지원</span>
+            </li>
+          </ul>
         </div>
 
-        {/* 수소차 충전소 카드 */}
-        <div className="p-6 border border-slate-100 bg-slate-50/50 rounded-xl space-y-3">
-          <h3 className="font-extrabold text-slate-800 flex items-center gap-1.5">
-            수소차(FCEV) 충전
-          </h3>
-          <div className="space-y-2 text-xs text-slate-600">
-            <div className="flex justify-between">
-              <span>수소 충전소 가용 여부</span>
-              <span className={`font-black ${area.gasStation.hasHydrogen ? 'text-sky-600' : 'text-slate-400'}`}>
-                {area.gasStation.hasHydrogen ? '이용 가능' : '미운영'}
+        {/* 수소차(FCEV) */}
+        <div className="py-4 border-b border-slate-200 space-y-3">
+          <h3 className="text-lg font-black text-slate-900">수소차 (FCEV) 충전 인프라</h3>
+          <ul className="divide-y divide-slate-100 text-sm">
+            <li className="py-3 flex justify-between">
+              <span className="text-slate-500 font-bold">수소 충전소 운영 여부</span>
+              <span className={`font-black ${area.gasStation.hasHydrogen ? 'text-slate-900' : 'text-slate-400'}`}>
+                {area.gasStation.hasHydrogen ? '이용 가능 (정상 운영)' : '미운영'}
               </span>
-            </div>
-            <div className="flex justify-between">
-              <span>충전 압력</span>
-              <span className="font-black text-slate-800 font-mono">700 bar (지원 대상 차량 전용)</span>
-            </div>
-          </div>
+            </li>
+            <li className="py-3 flex justify-between">
+              <span className="text-slate-500 font-bold">충전 압력 규격</span>
+              <span className="font-bold text-slate-700">700 bar (승용 수소 차량 전용 표준)</span>
+            </li>
+          </ul>
         </div>
+
       </div>
 
-      <div className="p-4 bg-emerald-50 border border-emerald-100 rounded-xl text-xs text-emerald-800 leading-relaxed">
-        <strong>전기차 충전 꿀팁</strong>: 고속도로 휴게소 전기차 충전기는 환경부 및 대기업 제휴(E-pit 등)를 통한 초급속 충전이 주를 이룹니다. 충전 대기 차량이 많은 명절이나 주말에는 다음 휴게소의 가용 여부를 네비게이션이나 무공해차 통합누리집 앱으로 미리 크로스체킹하시는 것이 좋습니다.
+      {/* 충전 가이드 설명글 */}
+      <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-3">
+        <h3 className="text-sm font-black text-slate-800">💡 친환경차 고속도로 충전 가이드</h3>
+        <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
+          고속도로 휴게소에 설치된 전기차 충전소는 주로 환경부나 대기업 제휴를 통한 고출력 초급속 충전 인프라가 구축되어 있어 단시간 내 충전이 가능합니다. 
+          다만 명절이나 주말 등 통행량이 많을 때는 대기 줄이 길어질 수 있으므로, 목적지 도달 전에 네비게이션이나 무공해차 통합누리집 등을 활용해 가용 충전기 대수를 사전에 파악하여 이용하는 것을 추천드립니다.
+        </p>
       </div>
+
     </div>
   );
 }

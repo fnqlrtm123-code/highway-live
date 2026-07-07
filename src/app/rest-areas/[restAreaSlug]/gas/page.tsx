@@ -27,59 +27,76 @@ export default async function RestAreaGasPage({ params }: Props) {
   const dieselDiff = area.gasStation.dieselPrice - highwayAvgDiesel;
 
   return (
-    <div className="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-2xs space-y-6">
-      <div className="flex items-center justify-between pb-4 border-b border-slate-100">
-        <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
-          실시간 주유소 가격표
+    <div className="max-w-3xl mx-auto space-y-8 text-slate-800 leading-relaxed">
+      
+      {/* 타이틀 */}
+      <div className="space-y-2">
+        <h2 className="text-xl md:text-2xl font-black text-slate-900 border-l-4 border-slate-900 pl-4">
+          ⛽ {area.name} 휴게소 실시간 주유소 및 LPG 충전소 유가 정보
         </h2>
-        <span className="text-xs font-bold text-slate-400">도로공사 유가정보 실시간 수집 피드</span>
+        <p className="text-sm text-slate-500">
+          한국도로공사 유가정보 피드 데이터를 기반으로 제공하는 실시간 기름값 정보입니다.
+        </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {/* 세로 리스트형 가격표 (블로그 가독성 포맷) */}
+      <div className="space-y-4">
+        
         {/* 휘발유 */}
-        <div className="p-5 border border-slate-100 bg-slate-50/50 rounded-xl space-y-2">
-          <span className="text-xs text-slate-400 font-bold uppercase tracking-wider">휘발유 (Gasoline)</span>
-          <div className="flex justify-between items-baseline">
-            <span className="text-2xl font-mono font-black text-slate-800">
+        <div className="py-4 border-b border-slate-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+          <div className="space-y-1">
+            <span className="text-xs text-slate-400 font-bold uppercase tracking-wider block">휘발유 (1L)</span>
+            <span className="text-xl font-mono font-black text-slate-900">
               {area.gasStation.gasolinePrice.toLocaleString()}원
             </span>
-            <span className={`text-xs font-bold ${gasolineDiff < 0 ? 'text-emerald-600' : 'text-red-500'}`}>
-              {gasolineDiff < 0 ? `평균대비 ${Math.abs(gasolineDiff)}원 저렴` : `평균대비 ${gasolineDiff}원 비쌈`}
+          </div>
+          <div className="sm:text-right">
+            <span className={`text-xs font-black px-2.5 py-1 rounded-lg ${gasolineDiff < 0 ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : 'bg-rose-50 text-rose-700 border border-rose-200'}`}>
+              {gasolineDiff < 0 ? `노선 평균 대비 ${Math.abs(gasolineDiff)}원 저렴` : `노선 평균 대비 ${gasolineDiff}원 비쌈`}
             </span>
           </div>
         </div>
 
         {/* 경유 */}
-        <div className="p-5 border border-slate-100 bg-slate-50/50 rounded-xl space-y-2">
-          <span className="text-xs text-slate-400 font-bold uppercase tracking-wider">경유 (Diesel)</span>
-          <div className="flex justify-between items-baseline">
-            <span className="text-2xl font-mono font-black text-slate-800">
+        <div className="py-4 border-b border-slate-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+          <div className="space-y-1">
+            <span className="text-xs text-slate-400 font-bold uppercase tracking-wider block">경유 (1L)</span>
+            <span className="text-xl font-mono font-black text-slate-900">
               {area.gasStation.dieselPrice.toLocaleString()}원
             </span>
-            <span className={`text-xs font-bold ${dieselDiff < 0 ? 'text-emerald-600' : 'text-red-500'}`}>
-              {dieselDiff < 0 ? `평균대비 ${Math.abs(dieselDiff)}원 저렴` : `평균대비 ${dieselDiff}원 비쌈`}
+          </div>
+          <div className="sm:text-right">
+            <span className={`text-xs font-black px-2.5 py-1 rounded-lg ${dieselDiff < 0 ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : 'bg-rose-50 text-rose-700 border border-rose-200'}`}>
+              {dieselDiff < 0 ? `노선 평균 대비 ${Math.abs(dieselDiff)}원 저렴` : `노선 평균 대비 ${dieselDiff}원 비쌈`}
             </span>
           </div>
         </div>
 
         {/* LPG */}
-        <div className="p-5 border border-slate-100 bg-slate-50/50 rounded-xl space-y-2">
-          <span className="text-xs text-slate-400 font-bold uppercase tracking-wider">LPG 충전</span>
-          <div className="flex justify-between items-baseline">
-            <span className="text-2xl font-mono font-black text-slate-800">
-              {area.gasStation.lpgPrice ? `${area.gasStation.lpgPrice.toLocaleString()}원` : '판매안함'}
+        <div className="py-4 border-b border-slate-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+          <div className="space-y-1">
+            <span className="text-xs text-slate-400 font-bold uppercase tracking-wider block">LPG 충전 (1L)</span>
+            <span className="text-xl font-mono font-black text-slate-900">
+              {area.gasStation.lpgPrice ? `${area.gasStation.lpgPrice.toLocaleString()}원` : '충전기 미운영'}
             </span>
-            <span className="text-xs text-slate-400 font-bold">LPG 전용차량 가능</span>
+          </div>
+          <div className="sm:text-right text-xs text-slate-400 font-semibold">
+            {area.gasStation.lpgPrice ? 'LPG 차량 전용 충전 가능' : '일반 유류 전용 주유소'}
           </div>
         </div>
+
       </div>
 
-      <div className="p-4 bg-blue-50 border border-blue-100 rounded-xl space-y-2">
-        <h4 className="text-xs font-black text-blue-800">주유소 이용 정보</h4>
-        <p className="text-xs text-blue-700 leading-relaxed">
-          해당 주유소의 브랜드는 <strong>{area.gasStation.brand}</strong>입니다. 고속도로 전용 알뜰주유소(ex-oil)는 도로공사의 정품 유류 대량 공동구매 정책으로 시중 정유사 폴 주유소보다 리터당 저렴합니다. 세차장 가용 여부는 현장 기상 상태에 따라 달라질 수 있습니다.
+      {/* 가이드 설명글 */}
+      <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-3">
+        <h3 className="text-sm font-black text-slate-800">💡 고속도로 주유 팁</h3>
+        <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
+          {area.name} 주유소는 <strong>{area.gasStation.brand}</strong> 브랜드로 운영되고 있습니다. 
+          고속도로 알뜰주유소(ex-oil)는 도로공사의 일괄 공동구매 정책에 의해 시중 폴 주유소 대비 리터당 비교적 저렴한 가격에 주유가 가능한 장점이 있습니다. 
+          장거리 주행 시 다음 휴게소 주유소와의 유가 차이를 미리 확인하시어 현명하게 주유 계획을 세우시길 추천드립니다.
         </p>
       </div>
+
     </div>
   );
 }
