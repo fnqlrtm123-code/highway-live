@@ -1,3 +1,5 @@
+import realGasStations from './realGasStations.json';
+
 export interface Highway {
   slug: string;
   name: string;
@@ -93,7 +95,7 @@ export const highways: Highway[] = [
   }
 ];
 
-export const serviceAreas: ServiceArea[] = [
+const mockServiceAreas: ServiceArea[] = [
   // 경부고속도로 휴게소 (상행/하행)
   {
     slug: "anseong-seoul",
@@ -420,6 +422,39 @@ export const serviceAreas: ServiceArea[] = [
     longitude: 126.5401
   }
 ];
+
+export const serviceAreas: ServiceArea[] = mockServiceAreas.map(area => {
+  const match = realGasStations.find((g: any) => {
+    if (area.slug === 'anseong-seoul') return g.name.includes('안성') && g.direction === '서울';
+    if (area.slug === 'anseong-busan') return g.name.includes('안성') && g.direction === '부산';
+    if (area.slug === 'seoul-manman-busan') return g.name.includes('서울만남') && g.direction === '부산';
+    if (area.slug === 'manghyang-busan') return g.name.includes('망향') && g.direction === '부산';
+    if (area.slug === 'jukjeon-seoul') return g.name.includes('죽전') && g.direction === '서울';
+    if (area.slug === 'hoengseong-seoul') return g.name.includes('횡성') && (g.direction === '인천' || g.direction === '서울');
+    if (area.slug === 'hoengseong-gangneung') return g.name.includes('횡성') && g.direction === '강릉';
+    if (area.slug === 'deokpyeong-both') return g.name.includes('덕평');
+    if (area.slug === 'seosan-seoul') return g.name.includes('서산') && (g.direction === '서울' || g.direction === '시흥');
+    if (area.slug === 'seosan-mokpo') return g.name.includes('서산') && g.direction === '목포';
+    return false;
+  });
+
+  if (match) {
+    const gasolinePrice = (match.gasolinePrice && match.gasolinePrice > 0) ? match.gasolinePrice : area.gasStation.gasolinePrice;
+    const dieselPrice = (match.dieselPrice && match.dieselPrice > 0) ? match.dieselPrice : area.gasStation.dieselPrice;
+    const lpgPrice = (match.lpgPrice && match.lpgPrice > 0) ? match.lpgPrice : area.gasStation.lpgPrice;
+    return {
+      ...area,
+      gasStation: {
+        ...area.gasStation,
+        brand: (match.brand === '알뜰주유소' ? '알뜰주유소' : match.brand) as any,
+        gasolinePrice,
+        dieselPrice,
+        lpgPrice,
+      }
+    };
+  }
+  return area;
+});
 
 export const cctvPoints: CctvPoint[] = [
   // 경부고속도로 CCTV
