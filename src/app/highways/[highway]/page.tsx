@@ -1,8 +1,7 @@
 import { 
   getHighwayBySlug, 
   highways, 
-  getServiceAreasByHighway, 
-  getCctvPointsByHighway 
+  getServiceAreasByHighway 
 } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import AdSense from '@/components/AdSense';
@@ -38,7 +37,6 @@ export default async function HighwayDetailPage({ params }: Props) {
   }
 
   const serviceAreas = getServiceAreasByHighway(highwaySlug);
-  const cctvs = getCctvPointsByHighway(highwaySlug);
 
   // 노선 내 최저가 유가 찾기
   const gasolinePrices = serviceAreas.map(s => s.gasStation.gasolinePrice).filter(p => p > 0);
@@ -63,11 +61,11 @@ export default async function HighwayDetailPage({ params }: Props) {
       </div>
 
       {/* 헤더 대시보드 카드 */}
-      <div className="bg-slate-900 text-white p-8 md:p-10 rounded-3xl border border-slate-800 relative overflow-hidden shadow-xl">
+      <div className="bg-slate-900 text-white p-8 md:p-10 border border-slate-800 relative overflow-hidden shadow-xl">
         <div className="absolute top-0 right-0 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
         <div className="relative z-10 space-y-4">
           <div className="flex items-center gap-2">
-            <span className="text-xs font-black bg-blue-600 text-white px-2.5 py-0.5 rounded">{highway.number}</span>
+            <span className="text-xs font-black bg-blue-600 text-white px-2.5 py-0.5">{highway.number}</span>
             <span className="text-xs text-blue-300 font-mono">총연장: {highway.length}</span>
           </div>
           <h1 className="text-3xl md:text-4xl font-black tracking-tight">{highway.name} 정보</h1>
@@ -101,17 +99,14 @@ export default async function HighwayDetailPage({ params }: Props) {
       </div>
 
       {/* 내부 링크 퀵 버튼 */}
-      <div className="bg-white border border-slate-200 rounded-2xl p-4 flex flex-wrap gap-2 justify-center shadow-2xs">
-        <a href={`/traffic/${highway.slug}`} className="bg-slate-900 hover:bg-slate-800 text-white font-bold px-4 py-2 rounded-xl text-xs transition-all">
+      <div className="bg-white border border-slate-200 p-4 flex flex-wrap gap-2 justify-center shadow-2xs">
+        <a href={`/traffic/${highway.slug}`} className="bg-slate-900 hover:bg-slate-800 text-white font-bold px-4 py-2 text-xs transition-all">
           실시간 교통상황 &rarr;
         </a>
-        <a href={`/cctv/${highway.slug}`} className="bg-slate-900 hover:bg-slate-800 text-white font-bold px-4 py-2 rounded-xl text-xs transition-all">
-          실시간 상황판 &rarr;
-        </a>
-        <a href={`#rest-areas-section`} className="bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold px-4 py-2 rounded-xl text-xs transition-all">
+        <a href={`#rest-areas-section`} className="bg-slate-150 hover:bg-slate-200 text-slate-800 font-bold px-4 py-2 text-xs transition-all">
           휴게소 목록
         </a>
-        <a href={`#gas-stations-section`} className="bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold px-4 py-2 rounded-xl text-xs transition-all">
+        <a href={`#gas-stations-section`} className="bg-slate-150 hover:bg-slate-200 text-slate-800 font-bold px-4 py-2 text-xs transition-all">
           알뜰 주유가격
         </a>
       </div>
@@ -125,19 +120,19 @@ export default async function HighwayDetailPage({ params }: Props) {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {serviceAreas.map((area) => (
-            <div key={area.slug} className="p-5 bg-white border border-slate-200 rounded-2xl flex flex-col justify-between space-y-4 shadow-2xs hover:border-slate-300 transition-all">
+            <div key={area.slug} className="p-5 bg-white border border-slate-200 flex flex-col justify-between space-y-4 shadow-2xs hover:border-slate-300 transition-all">
               <div className="space-y-2">
                 <div className="flex justify-between items-start">
                   <div>
                     <h3 className="text-base font-black text-slate-800">{area.name}</h3>
                     <span className="text-[10px] font-bold text-slate-500">{area.locationKm}km 지점 &middot; {area.directionName}</span>
                   </div>
-                  <span className="text-[10px] font-black bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full">{area.direction}</span>
+                  <span className="text-[10px] font-black bg-blue-50 text-blue-700 px-2 py-0.5">{area.direction}</span>
                 </div>
 
                 <div className="flex flex-wrap gap-1">
                   {area.facilities.map((f, idx) => (
-                    <span key={idx} className="text-[10.5px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-medium">
+                    <span key={idx} className="text-[10.5px] bg-slate-100 text-slate-600 px-2 py-0.5 font-medium">
                       {f}
                     </span>
                   ))}
@@ -151,7 +146,7 @@ export default async function HighwayDetailPage({ params }: Props) {
                 </div>
                 <a 
                   href={`/rest-areas/${area.slug}`} 
-                  className="bg-slate-900 text-white hover:bg-slate-800 font-bold px-3 py-1.5 rounded-lg transition-colors shrink-0"
+                  className="bg-slate-900 text-white hover:bg-slate-800 font-bold px-3 py-1.5 transition-colors shrink-0"
                 >
                   상세정보
                 </a>
@@ -162,7 +157,7 @@ export default async function HighwayDetailPage({ params }: Props) {
       </section>
 
       {/* 주유소 & EV 충전소 목록 */}
-      <section id="gas-stations-section" className="bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-2xs space-y-6">
+      <section id="gas-stations-section" className="bg-white border border-slate-200 p-6 md:p-8 shadow-2xs space-y-6">
         <h2 className="text-xl font-black text-slate-900">{highway.name} 주유소 및 전기차 충전기 가격표</h2>
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse text-xs md:text-sm text-slate-700">
@@ -192,7 +187,7 @@ export default async function HighwayDetailPage({ params }: Props) {
                   </td>
                   <td className="py-3.5 px-4 text-center">
                     {area.gasStation.hasEvCharger ? (
-                      <span className="inline-block bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded text-[11px] font-black">
+                      <span className="inline-block bg-emerald-50 text-emerald-700 px-2 py-0.5 text-[11px] font-black">
                         급속 {area.gasStation.evChargersCount}기
                       </span>
                     ) : (
