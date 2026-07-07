@@ -67,10 +67,6 @@ export default async function HighwayTrafficPage({ params }: Props) {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 text-sm text-slate-700">
             <div className="flex items-center gap-2">
-              <span className="font-bold text-slate-400 w-16 shrink-0">구간 연장</span>
-              <span className="font-mono text-slate-800">{road.length || '정보 확인중'}</span>
-            </div>
-            <div className="flex items-center gap-2">
               <span className="font-bold text-slate-400 w-16 shrink-0">도로 유형</span>
               <span className="text-slate-800">
                 {road.type === 'highway' ? '고속도로' : road.type === 'urban' ? '도시고속도로' : road.type === 'national' ? '일반국도' : '대교'}
