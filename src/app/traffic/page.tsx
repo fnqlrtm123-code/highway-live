@@ -229,19 +229,10 @@ const NAVER_TRAFFIC_DATA = {
 };
 
 type MainTab = 'major' | 'highway' | 'urban' | 'national' | 'bridge';
-type HighwayGroup = 'ㄱ~ㄴ' | 'ㄷ~ㅂ' | 'ㅅ~ㅇ' | 'ㅈ~ㅎ';
-type UrbanRegion = '서울' | '경기·인천' | '충청·대전' | '전라·광주' | '경북·대구' | '경남·부산';
-type NationalGroup = '1~20호선' | '21~40호선' | '41~90호선';
-type BridgeRegion = '서울' | '경기·인천' | '경남·부산';
 
 export default function TrafficPage() {
   const [activeTab, setActiveTab] = useState<MainTab>('major');
-  
-  // 하위 필터 선택 상태
-  const [selectedHighwayGroup, setSelectedHighwayGroup] = useState<HighwayGroup>('ㄱ~ㄴ');
-  const [selectedUrbanRegion, setSelectedUrbanRegion] = useState<UrbanRegion>('서울');
-  const [selectedNationalGroup, setSelectedNationalGroup] = useState<NationalGroup>('1~20호선');
-  const [selectedBridgeRegion, setSelectedBridgeRegion] = useState<BridgeRegion>('서울');
+  const [searchTerm, setSearchTerm] = useState('');
 
   // 활성화된 CCTV 플레이어
   const [selectedCctv, setSelectedCctv] = useState<{
@@ -259,10 +250,83 @@ export default function TrafficPage() {
     return { text: '정체', color: 'bg-red-50 text-red-600 border-red-100' };
   };
 
+  // 모든 고속도로 데이터 평탄화
+  const allHighways = useMemo(() => {
+    const list: any[] = [];
+    Object.values(NAVER_TRAFFIC_DATA["고속도로"]).forEach((arr) => {
+      list.push(...arr);
+    });
+    return list.map((r, i) => ({
+      name: r.name,
+      detail: r.detail,
+      baseSpeed: r.baseSpeed,
+      type: 'highway',
+      cctvId: `cctv-gb-0${(i % 3) + 1}`,
+      x: 127.0275 + (i * 0.005),
+      y: 37.5216 - (i * 0.004)
+    }));
+  }, []);
+
+  // 모든 도시고속 데이터 평탄화
+  const allUrban = useMemo(() => {
+    const list: any[] = [];
+    Object.entries(NAVER_TRAFFIC_DATA["도시고속"]).forEach(([region, arr]) => {
+      arr.forEach((r) => {
+        list.push({ ...r, region });
+      });
+    });
+    return list.map((r, i) => ({
+      name: r.name,
+      detail: `${r.region} | ${r.detail}`,
+      baseSpeed: r.baseSpeed,
+      type: 'urban',
+      cctvId: `cctv-yd-0${(i % 2) + 1}`,
+      x: 126.9800 + (i * 0.003),
+      y: 37.5400 - (i * 0.002)
+    }));
+  }, []);
+
+  // 모든 국도 데이터 평탄화
+  const allNational = useMemo(() => {
+    const list: any[] = [];
+    Object.values(NAVER_TRAFFIC_DATA["국도"]).forEach((arr) => {
+      list.push(...arr);
+    });
+    return list.map((r, i) => ({
+      name: r.name,
+      detail: r.detail,
+      baseSpeed: r.baseSpeed,
+      type: 'national',
+      cctvId: `cctv-sh-0${(i % 2) + 1}`,
+      x: 127.1500 + (i * 0.004),
+      y: 36.8000 + (i * 0.003)
+    }));
+  }, []);
+
+  // 모든 대교 데이터 평탄화
+  const allBridge = useMemo(() => {
+    const list: any[] = [];
+    Object.entries(NAVER_TRAFFIC_DATA["대교"]).forEach(([region, arr]) => {
+      arr.forEach((r) => {
+        list.push({ ...r, region });
+      });
+    });
+    return list.map((r, i) => ({
+      name: r.name,
+      detail: `${r.region} | ${r.detail}`,
+      baseSpeed: r.baseSpeed,
+      type: 'bridge',
+      cctvId: `cctv-gb-0${(i % 3) + 1}`,
+      x: 126.9600 + (i * 0.0015),
+      y: 37.5100 - (i * 0.0005)
+    }));
+  }, []);
+
   // 노선 유형별 데이터 가상화 연동
   const currentRoadsList = useMemo(() => {
+    let list: any[] = [];
     if (activeTab === 'major') {
-      return NAVER_TRAFFIC_DATA["주요도로 10"].map(r => ({
+      list = NAVER_TRAFFIC_DATA["주요도로 10"].map(r => ({
         ...r,
         status: getStatus(r.baseSpeed, r.type).text,
         statusStyle: getStatus(r.baseSpeed, r.type).color,
@@ -270,67 +334,42 @@ export default function TrafficPage() {
         x: r.x,
         y: r.y
       }));
-    }
-    
-    if (activeTab === 'highway') {
-      const list = NAVER_TRAFFIC_DATA["고속도로"][selectedHighwayGroup] || [];
-      return list.map((r, i) => ({
-        name: r.name,
-        detail: r.detail,
-        baseSpeed: r.baseSpeed,
+    } else if (activeTab === 'highway') {
+      list = allHighways.map(r => ({
+        ...r,
         status: getStatus(r.baseSpeed, 'highway').text,
         statusStyle: getStatus(r.baseSpeed, 'highway').color,
-        cctvId: `cctv-gb-0${(i % 3) + 1}`,
-        x: 127.0275 + (i * 0.05),
-        y: 37.5216 - (i * 0.04)
       }));
-    }
-
-    if (activeTab === 'urban') {
-      const list = NAVER_TRAFFIC_DATA["도시고속"][selectedUrbanRegion] || [];
-      return list.map((r, i) => ({
-        name: r.name,
-        detail: r.detail,
-        baseSpeed: r.baseSpeed,
+    } else if (activeTab === 'urban') {
+      list = allUrban.map(r => ({
+        ...r,
         status: getStatus(r.baseSpeed, 'urban').text,
         statusStyle: getStatus(r.baseSpeed, 'urban').color,
-        cctvId: `cctv-yd-0${(i % 2) + 1}`,
-        x: 126.9800 + (i * 0.03),
-        y: 37.5400 - (i * 0.02)
       }));
-    }
-
-    if (activeTab === 'national') {
-      const key = selectedNationalGroup.replace('호선', '') as '1~20' | '21~40' | '41~90';
-      const list = NAVER_TRAFFIC_DATA["국도"][key] || [];
-      return list.map((r, i) => ({
-        name: r.name,
-        detail: r.detail,
-        baseSpeed: r.baseSpeed,
+    } else if (activeTab === 'national') {
+      list = allNational.map(r => ({
+        ...r,
         status: getStatus(r.baseSpeed, 'national').text,
         statusStyle: getStatus(r.baseSpeed, 'national').color,
-        cctvId: `cctv-sh-0${(i % 2) + 1}`,
-        x: 127.1500 + (i * 0.04),
-        y: 36.8000 + (i * 0.03)
       }));
-    }
-
-    if (activeTab === 'bridge') {
-      const list = NAVER_TRAFFIC_DATA["대교"][selectedBridgeRegion] || [];
-      return list.map((r, i) => ({
-        name: r.name,
-        detail: r.detail,
-        baseSpeed: r.baseSpeed,
+    } else if (activeTab === 'bridge') {
+      list = allBridge.map(r => ({
+        ...r,
         status: getStatus(r.baseSpeed, 'bridge').text,
         statusStyle: getStatus(r.baseSpeed, 'bridge').color,
-        cctvId: `cctv-gb-0${(i % 3) + 1}`,
-        x: 126.9600 + (i * 0.015),
-        y: 37.5100 - (i * 0.005)
       }));
     }
 
-    return [];
-  }, [activeTab, selectedHighwayGroup, selectedUrbanRegion, selectedNationalGroup, selectedBridgeRegion]);
+    if (searchTerm.trim()) {
+      const term = searchTerm.toLowerCase();
+      list = list.filter(r => 
+        r.name.toLowerCase().includes(term) || 
+        r.detail.toLowerCase().includes(term)
+      );
+    }
+
+    return list;
+  }, [activeTab, allHighways, allUrban, allNational, allBridge, searchTerm]);
 
   return (
     <main className="flex-grow bg-slate-50 pb-24">
@@ -339,7 +378,7 @@ export default function TrafficPage() {
         <div className="mx-auto max-w-[1240px] px-4">
           <h1 className="text-2xl md:text-3xl font-black mt-1.5">실시간 전국 교통정보 & CCTV 상황판</h1>
           <p className="text-xs md:text-sm text-slate-400 mt-2 max-w-xl leading-relaxed">
-            네이버 검색 기준의 실시간 도로 소통 현황을 **누락 없이 100% 모두 수집**하여 고속도로, 도시고속화도로, 일반 국도 및 주요 대교의 실시간 소통 속도와 CCTV 중계를 한곳에 통합 제공합니다.
+            전국 고속도로, 도시고속화도로, 일반 국도 및 주요 대교의 실시간 소통 속도와 CCTV 영상을 한곳에 통합 제공합니다.
           </p>
         </div>
       </section>
@@ -353,164 +392,119 @@ export default function TrafficPage() {
       <section className="max-w-[1240px] mx-auto px-4 mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
         {/* 좌측: 카테고리 탭 및 도로 리스트 */}
-        <div className="lg:col-span-7 bg-white border border-slate-200 rounded-3xl shadow-2xs overflow-hidden flex flex-col min-h-[600px]">
+        <div className="lg:col-span-7 bg-white border border-slate-200 rounded-3xl shadow-2xs overflow-hidden flex flex-col min-h-[650px]">
           
-          {/* 네이버 검색 스타일 카테고리 탭 */}
+          {/* 카테고리 탭 */}
           <div className="grid grid-cols-5 border-b border-slate-200 bg-slate-50">
             <button 
-              onClick={() => { setActiveTab('major'); setSelectedCctv(null); }}
+              onClick={() => { setActiveTab('major'); setSelectedCctv(null); setSearchTerm(''); }}
               className={`py-3.5 text-xs font-black border-r border-slate-200 transition-colors ${activeTab === 'major' ? 'bg-white text-blue-600 border-b-2 border-b-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
             >
               주요도로 10
             </button>
             <button 
-              onClick={() => { setActiveTab('highway'); setSelectedCctv(null); }}
+              onClick={() => { setActiveTab('highway'); setSelectedCctv(null); setSearchTerm(''); }}
               className={`py-3.5 text-xs font-black border-r border-slate-200 transition-colors ${activeTab === 'highway' ? 'bg-white text-blue-600 border-b-2 border-b-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
             >
               고속도로
             </button>
             <button 
-              onClick={() => { setActiveTab('urban'); setSelectedCctv(null); }}
+              onClick={() => { setActiveTab('urban'); setSelectedCctv(null); setSearchTerm(''); }}
               className={`py-3.5 text-xs font-black border-r border-slate-200 transition-colors ${activeTab === 'urban' ? 'bg-white text-blue-600 border-b-2 border-b-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
             >
               도시고속
             </button>
             <button 
-              onClick={() => { setActiveTab('national'); setSelectedCctv(null); }}
+              onClick={() => { setActiveTab('national'); setSelectedCctv(null); setSearchTerm(''); }}
               className={`py-3.5 text-xs font-black border-r border-slate-200 transition-colors ${activeTab === 'national' ? 'bg-white text-blue-600 border-b-2 border-b-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
             >
               국도
             </button>
             <button 
-              onClick={() => { setActiveTab('bridge'); setSelectedCctv(null); }}
+              onClick={() => { setActiveTab('bridge'); setSelectedCctv(null); setSearchTerm(''); }}
               className={`py-3.5 text-xs font-black transition-colors ${activeTab === 'bridge' ? 'bg-white text-blue-600 border-b-2 border-b-blue-600' : 'text-slate-500 hover:text-slate-800'}`}
             >
               대교
             </button>
           </div>
 
-          {/* 하위 그룹 필터링 버튼 (선택된 카테고리에 맞춰 노출) */}
-          <div className="p-4 bg-slate-50/50 border-b border-slate-100 flex flex-wrap gap-1.5 items-center">
-            
-            {/* 고속도로 초성 필터 */}
-            {activeTab === 'highway' && (
-              <>
-                <span className="text-[10px] font-black text-slate-400 mr-2 uppercase">초성 그룹</span>
-                {(['ㄱ~ㄴ', 'ㄷ~ㅂ', 'ㅅ~ㅇ', 'ㅈ~ㅎ'] as HighwayGroup[]).map(group => (
-                  <button 
-                    key={group}
-                    onClick={() => setSelectedHighwayGroup(group)}
-                    className={`px-3 py-1 rounded-lg text-xs font-bold border transition-colors ${selectedHighwayGroup === group ? 'bg-blue-600 border-blue-600 text-white' : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-100'}`}
-                  >
-                    {group}
-                  </button>
-                ))}
-              </>
-            )}
-
-            {/* 도시고속 권역 필터 */}
-            {activeTab === 'urban' && (
-              <>
-                <span className="text-[10px] font-black text-slate-400 mr-2 uppercase">지역 권역</span>
-                {(['서울', '경기·인천', '충청·대전', '전라·광주', '경북·대구', '경남·부산'] as UrbanRegion[]).map(region => (
-                  <button 
-                    key={region}
-                    onClick={() => setSelectedUrbanRegion(region)}
-                    className={`px-3 py-1 rounded-lg text-[11px] font-bold border transition-colors ${selectedUrbanRegion === region ? 'bg-blue-600 border-blue-600 text-white' : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-100'}`}
-                  >
-                    {region}
-                  </button>
-                ))}
-              </>
-            )}
-
-            {/* 국도 노선번호 필터 */}
-            {activeTab === 'national' && (
-              <>
-                <span className="text-[10px] font-black text-slate-400 mr-2 uppercase">국도 노선</span>
-                {(['1~20호선', '21~40호선', '41~90호선'] as NationalGroup[]).map(group => (
-                  <button 
-                    key={group}
-                    onClick={() => setSelectedNationalGroup(group)}
-                    className={`px-3 py-1 rounded-lg text-xs font-bold border transition-colors ${selectedNationalGroup === group ? 'bg-blue-600 border-blue-600 text-white' : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-100'}`}
-                  >
-                    {group}
-                  </button>
-                ))}
-              </>
-            )}
-
-            {/* 대교 권역 필터 */}
-            {activeTab === 'bridge' && (
-              <>
-                <span className="text-[10px] font-black text-slate-400 mr-2 uppercase">다리 권역</span>
-                {(['서울', '경기·인천', '경남·부산'] as BridgeRegion[]).map(region => (
-                  <button 
-                    key={region}
-                    onClick={() => setSelectedBridgeRegion(region)}
-                    className={`px-3 py-1 rounded-lg text-xs font-bold border transition-colors ${selectedBridgeRegion === region ? 'bg-blue-600 border-blue-600 text-white' : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-100'}`}
-                  >
-                    {region}
-                  </button>
-                ))}
-              </>
-            )}
-
-            {activeTab === 'major' && (
-              <span className="text-xs font-bold text-slate-500">수도권 및 주요 고속도로 중 가장 혼잡도가 높은 10대 핵심 도로 현황</span>
+          {/* 검색 바 */}
+          <div className="p-4 border-b border-slate-100 bg-slate-50/50 flex items-center gap-2">
+            <div className="relative flex-1">
+              <input
+                type="text"
+                placeholder="노선명 또는 지역명으로 검색 (예: 경부, 올림픽, 서울)"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-9 pr-4 py-2 text-xs border border-slate-200 rounded-xl bg-white focus:outline-none focus:border-blue-600 font-bold"
+              />
+              <svg className="absolute left-3 top-2.5 w-4 h-4 text-slate-400" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+            {searchTerm && (
+              <button 
+                onClick={() => setSearchTerm('')} 
+                className="text-[11px] font-bold text-slate-400 hover:text-slate-650 bg-slate-150 px-2.5 py-1.5 rounded-lg"
+              >
+                초기화
+              </button>
             )}
           </div>
 
-          {/* 소통 리스트 출력 */}
-          <div className="p-4 flex-grow overflow-y-auto max-h-[500px] space-y-2">
-            {currentRoadsList.map((road, idx) => (
-              <div 
-                key={idx} 
-                className={`p-3.5 rounded-xl border flex justify-between items-center transition-all ${selectedCctv?.name === road.name ? 'bg-blue-50 border-blue-300' : 'bg-white border-slate-100 hover:bg-slate-50'}`}
-              >
-                <div className="space-y-1">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs font-black text-slate-800">{road.name}</span>
-                    <span className={`text-[9px] font-black px-1.5 py-0.5 rounded border ${road.statusStyle}`}>
+          {/* 소통 리스트 (직관적인 2열 그리드 레이아웃) */}
+          <div className="p-4 flex-grow overflow-y-auto max-h-[550px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {currentRoadsList.map((road, idx) => (
+                <div 
+                  key={idx} 
+                  className={`p-4 rounded-2xl border flex flex-col justify-between gap-3 transition-all ${
+                    selectedCctv?.name === road.name 
+                      ? 'bg-blue-50/60 border-blue-400 shadow-sm' 
+                      : 'bg-white border-slate-100 hover:border-slate-300 hover:shadow-xs'
+                  }`}
+                >
+                  <div className="flex justify-between items-start gap-2">
+                    <div className="space-y-1 min-w-0">
+                      <span className="text-[13px] font-black text-slate-800 truncate block">{road.name}</span>
+                      <span className="text-[10px] text-slate-400 block font-medium leading-tight truncate">{road.detail}</span>
+                    </div>
+                    <span className={`text-[9px] font-black px-2 py-0.5 rounded-full border shrink-0 ${road.statusStyle}`}>
                       {road.status}
                     </span>
                   </div>
-                  <span className="text-[10px] text-slate-400 block font-medium">{road.detail}</span>
-                </div>
 
-                <div className="flex items-center gap-4">
-                  <div className="text-right font-mono">
-                    <span className="text-xs font-black text-slate-800">{road.baseSpeed} km/h</span>
-                    <span className="text-[9px] text-slate-400 block">평균 속도</span>
+                  <div className="flex items-center justify-between pt-2 border-t border-slate-100/60">
+                    <div className="font-mono text-left">
+                      <span className="text-[10px] text-slate-400 block leading-none mb-1">평균 속도</span>
+                      <span className="text-xs font-black text-slate-800">{road.baseSpeed} km/h</span>
+                    </div>
+                    <button 
+                      onClick={() => setSelectedCctv({
+                        id: road.cctvId || 'cctv-gb-01',
+                        x: road.x || 127.0275,
+                        y: road.y || 37.5216,
+                        name: road.name
+                      })}
+                      className="bg-blue-600 hover:bg-blue-700 text-white font-bold text-[11px] px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1.5 shadow-2xs"
+                    >
+                      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      </svg>
+                      CCTV
+                    </button>
                   </div>
-                  <button 
-                    onClick={() => setSelectedCctv({
-                      id: road.cctvId || 'cctv-gb-01',
-                      x: road.x || 127.0275,
-                      y: road.y || 37.5216,
-                      name: road.name
-                    })}
-                    className="bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs px-3.5 py-2 rounded-lg transition-colors shadow-2xs"
-                  >
-                    CCTV
-                  </button>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
             {currentRoadsList.length === 0 && (
-              <p className="text-center text-slate-400 text-xs py-8 font-bold">표시할 도로 정보가 없습니다.</p>
+              <p className="text-center text-slate-400 text-xs py-12 font-bold">검색 결과에 맞는 도로 정보가 없습니다.</p>
             )}
           </div>
-
-          <div className="p-3 bg-slate-50 border-t border-slate-100 text-right text-[10px] text-slate-400 font-bold">
-            현재 탭 수집 완료 개수: {currentRoadsList.length}개소
-          </div>
-
         </div>
 
-        {/* 우측: 선택된 CCTV 재생 화면 및 부가 정보 */}
-        <div className="lg:col-span-5 space-y-6">
-          
+        {/* 우측: 선택된 CCTV 재생 화면 */}
+        <div className="lg:col-span-5">
           {selectedCctv ? (
             <div className="bg-slate-900 text-white rounded-3xl overflow-hidden border border-slate-800 shadow-md">
               <div className="p-4 border-b border-slate-800 flex justify-between items-center bg-slate-950">
@@ -528,29 +522,10 @@ export default function TrafficPage() {
               />
             </div>
           ) : (
-            <div className="bg-white border border-slate-200 rounded-3xl p-6 shadow-2xs text-center space-y-4">
-              <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto text-slate-400">
-                <svg className="w-7 h-7 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <div className="space-y-1">
-                <h3 className="text-xs font-black text-slate-800">실시간 도로 CCTV 화면 재생기</h3>
-                <p className="text-[11px] text-slate-400 leading-relaxed max-w-xs mx-auto">
-                  좌측 도로 리스트에서 우측의 [CCTV] 버튼을 클릭하시면 실시간 교통 관제 카메라 화면이 이곳에 연동되어 즉시 재생됩니다.
-                </p>
-              </div>
+            <div className="bg-white border border-slate-200 rounded-3xl p-8 shadow-2xs text-center">
+              <p className="text-xs font-bold text-slate-400">도로 목록에서 [CCTV] 버튼을 클릭하시면 실시간 교통 관제 화면이 이곳에 연동됩니다.</p>
             </div>
           )}
-
-          {/* 안전 운전 안내 */}
-          <div className="bg-slate-900 text-white rounded-3xl p-5 border border-slate-800 space-y-3">
-            <h4 className="text-sm font-black">실시간 교통상황 체크 가이드</h4>
-            <p className="text-xs text-slate-400 leading-relaxed">
-              출발 전 가고자 하는 고속도로 혹은 올림픽대로/강변북로의 도시고속도로 소통 흐름을 미리 확인하시면 예상 도착 시간을 최소 20~30분 이상 지연 없이 단축할 수 있습니다. 빗길이나 안개 낀 날은 평소 속도보다 20% 이상 감속 안전운전하십시오.
-            </p>
-          </div>
-
         </div>
 
       </section>
