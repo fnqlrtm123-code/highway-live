@@ -39,32 +39,25 @@ export default async function HighwayTrafficPage({ params }: Props) {
   return (
     <main className="mx-auto max-w-[1240px] px-4 py-8 flex-grow space-y-10">
 
-      {/* CGV 스타일 히어로 레이아웃 (배경 파란색 제거 및 화이트/그레이 고대비 매칭) */}
-      <div className="bg-white border border-slate-200 p-6 md:p-8 flex flex-col md:flex-row gap-8 items-start">
+      {/* CGV 스타일 히어로 레이아웃 (배경 파란색 완전 제거, 화이트/연한그레이 깔끔한 테두리) */}
+      <div className="bg-white border border-slate-200 p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center md:items-start">
         
-        {/* 좌측: 영화 포스터 스타일의 메인 비주얼 카드 */}
-        <div className="w-full md:w-[220px] shrink-0 aspect-[3/4] bg-slate-100 border border-slate-200 relative overflow-hidden shadow-md">
+        {/* 좌측: 1:1 비율 정사각형 썸네일 이미지 규격 (NO.1 등 텍스트 오버레이 완전 제거) */}
+        <div className="w-[180px] h-[180px] shrink-0 bg-slate-100 border border-slate-200 overflow-hidden shadow-sm">
           <img 
             src="/highway_traffic_1.png" 
-            alt={`${road.name} 전경`}
+            alt={`${road.name} 썸네일`}
             className="w-full h-full object-cover"
           />
-          <div className="absolute top-3 left-3">
-            {road.number ? (
-              <span className="text-[11px] font-black bg-slate-900 text-white px-2 py-0.5 shadow-sm">NO. {road.number}</span>
-            ) : (
-              <span className="text-[11px] font-black bg-slate-600 text-white px-2 py-0.5 shadow-sm">일반</span>
-            )}
-          </div>
         </div>
 
-        {/* 우측: 상세 메타데이터 정보 영역 (CGV 스타일) */}
-        <div className="flex-grow space-y-5">
+        {/* 우측: 상세 메타데이터 정보 영역 */}
+        <div className="flex-grow space-y-5 w-full">
           <div className="space-y-2 border-b border-slate-100 pb-4">
-            <h1 className="text-2xl md:text-3xl font-black tracking-tight text-slate-900">
+            <h1 className="text-2xl md:text-3xl font-black tracking-tight text-slate-900 text-center md:text-left">
               {road.name} 교통상황
             </h1>
-            <p className="text-slate-500 text-xs md:text-sm">
+            <p className="text-slate-550 text-xs md:text-sm text-center md:text-left font-medium">
               {road.detail}
             </p>
           </div>
@@ -95,7 +88,7 @@ export default async function HighwayTrafficPage({ params }: Props) {
           </div>
 
           {/* CGV 예매하기/상세 버튼 스타일의 액션 버튼 그룹 */}
-          <div className="flex flex-wrap gap-3 pt-2">
+          <div className="flex flex-wrap gap-3 pt-2 justify-center md:justify-start">
             <a 
               href="#cctv-section" 
               className="bg-red-600 text-white font-bold text-xs md:text-sm px-6 py-3 hover:bg-red-700 transition-colors shadow-sm"
@@ -115,40 +108,30 @@ export default async function HighwayTrafficPage({ params }: Props) {
       {/* 애드센스 */}
       <AdSense slot="2233445566" />
 
-      {/* CGV 스틸컷 스타일 현장 실사 이미지 갤러리 섹션 (수집된 3장 매핑) */}
+      {/* CGV 스틸컷 스타일 현장 실사 이미지 갤러리 섹션 (썸네일 포함 총 3장이며 각각 중복 없이 다르게 렌더링) */}
       <section className="space-y-4">
         <h3 className="text-lg font-black text-slate-900 border-b pb-2 border-slate-200">
           현장 스틸컷 (실시간 도로 전경)
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="aspect-[16/10] bg-slate-100 border border-slate-200 overflow-hidden relative group">
-            <img 
-              src="/highway_traffic_1.png" 
-              alt="주간 교통 흐름" 
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-            />
-            <div className="absolute bottom-0 inset-x-0 bg-slate-950/60 p-2 text-center">
-              <span className="text-xs text-white font-medium">현장 스틸컷 01 (주간 흐름)</span>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="aspect-[16/10] bg-slate-100 border border-slate-200 overflow-hidden relative group">
             <img 
               src="/highway_traffic_2.png" 
-              alt="야간 교통 흐름" 
+              alt="현장 스틸컷 01" 
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute bottom-0 inset-x-0 bg-slate-950/60 p-2 text-center">
-              <span className="text-xs text-white font-medium">현장 스틸컷 02 (야간 흐름)</span>
+              <span className="text-xs text-white font-medium">현장 스틸컷 01 (도로 흐름)</span>
             </div>
           </div>
           <div className="aspect-[16/10] bg-slate-100 border border-slate-200 overflow-hidden relative group">
             <img 
               src="/highway_traffic_3.png" 
-              alt="CCTV 관제 모니터" 
+              alt="현장 스틸컷 02" 
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute bottom-0 inset-x-0 bg-slate-950/60 p-2 text-center">
-              <span className="text-xs text-white font-medium">현장 스틸컷 03 (CCTV 관제)</span>
+              <span className="text-xs text-white font-medium">현장 스틸컷 02 (CCTV 관제)</span>
             </div>
           </div>
         </div>
