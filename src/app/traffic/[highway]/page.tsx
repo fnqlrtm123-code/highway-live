@@ -39,11 +39,20 @@ export default async function HighwayTrafficPage({ params }: Props) {
   return (
     <main className="mx-auto max-w-[1240px] px-4 py-8 flex-grow space-y-10">
 
-      {/* CGV 스타일 히어로 레이아웃 (배경 파란색 완전 제거, 화이트/연한그레이 깔끔한 테두리, 이미지 제거) */}
-      <div className="bg-white border border-slate-200 p-6 md:p-8 space-y-5">
+      {/* CGV 스타일 히어로 레이아웃 (배경 파란색 완전 제거, 화이트/연한그레이 깔끔한 테두리, 정사각형 썸네일 노출) */}
+      <div className="bg-white border border-slate-200 p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center md:items-start">
         
-        {/* 상세 메타데이터 정보 영역 */}
-        <div className="space-y-5 w-full">
+        {/* 좌측: 1:1 비율 정사각형 썸네일 이미지 규격 (메타정보 제거 및 1:1 크롭 가공됨) */}
+        <div className="w-[180px] h-[180px] shrink-0 bg-slate-100 border border-slate-200 overflow-hidden shadow-xs">
+          <img 
+            src={road.images.thumb} 
+            alt={`${road.name} 썸네일`}
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* 우측: 상세 메타데이터 정보 영역 */}
+        <div className="flex-grow space-y-5 w-full">
           <div className="space-y-2 border-b border-slate-100 pb-4">
             <h1 className="text-2xl md:text-3xl font-black tracking-tight text-slate-900">
               {road.name} 교통상황

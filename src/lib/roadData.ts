@@ -363,7 +363,19 @@ export function getRoadList(): RoadProfile[] {
       s2Index = (s2Index + 1) % poolStill2.length;
     }
 
-    const thumb = `https://images.unsplash.com/${poolThumbnails[idxT]}?auto=format&fit=crop&w=400&h=400&q=80`;
+    let thumb = '/images/thumbnails/default.jpg';
+    if (name.includes("경부고속도로")) {
+      thumb = '/images/thumbnails/gyeongbu.jpg';
+    } else if (name.includes("영동고속도로")) {
+      thumb = '/images/thumbnails/yeongdong.jpg';
+    } else if (name.includes("서해안고속도로")) {
+      thumb = '/images/thumbnails/seohaean.jpg';
+    } else if (name.includes("강변북로")) {
+      thumb = '/images/thumbnails/gangbyeon.jpg';
+    } else if (name.includes("올림픽대로")) {
+      thumb = '/images/thumbnails/olympic.jpg';
+    }
+
     const still1 = `https://images.unsplash.com/${poolStill1[s1Index]}?auto=format&fit=crop&w=800&h=500&q=80`;
     const still2 = `https://images.unsplash.com/${poolStill2[s2Index]}?auto=format&fit=crop&w=800&h=500&q=80`;
 
