@@ -103,61 +103,29 @@ export default async function HighwayTrafficPage({ params }: Props) {
         <div className="space-y-6">
           <div>
             <h2 className="text-xl md:text-2xl font-black text-slate-900 mb-3">
-              {road.name} 교통상황 개요
+              {road.name} 교통 분석 리포트
             </h2>
             <p className="text-slate-650">
               {road.description}
             </p>
           </div>
 
-          <div>
-            <h3 className="text-lg font-bold text-slate-900 mb-2.5">
-              {road.name} 교통상황 확인방법
-            </h3>
-            <p className="text-slate-650">
-              {road.verificationMethod} 한국도로공사의 로드플러스, 서울시 토시교통정보(TOPIS) 등 정밀 관제 센터와의 교차 실시간 데이터 정보망 구축 상태에 기반해 운전자에게 정확한 노선 소통 지도를 제공합니다.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-bold text-slate-900 mb-2.5">
-              {road.name} CCTV 모니터링 안내
-            </h3>
-            <p className="text-slate-650">
-              {road.cctvInfo} 터널 진출입로, 급커브 지점 등 병목이 상시 일어나는 중심 교통 요충지의 카메라 상태 및 강설, 결빙, 짙은 안개 등의 위험 기상 상황을 운전 개시 전 확인하여 돌발적인 추돌 위험 요소를 최소화해 보시기 바랍니다.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-bold text-slate-900 mb-2.5">
-              {road.name} 방향별 주행 가이드 (상행선·하행선)
-            </h3>
-            <p className="text-slate-650">
-              노선 이용 시 이동하시는 방향에 따라 차량 정체가 심화되는 통행 시간대 특성이 다음과 같이 명확히 나뉩니다:
-            </p>
-            <ul className="list-disc list-inside mt-2 space-y-2 text-slate-600 pl-2">
-              <li><strong>상행선 (또는 종점 방향) 주행 안내</strong>: {road.directions.up}</li>
-              <li><strong>하행선 (또는 기점 방향) 주행 안내</strong>: {road.directions.down}</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-bold text-slate-900 mb-2.5">
-              {road.name} 상습 정체 지정체 구간
-            </h3>
-            <p className="text-slate-650">
-              {road.congestedSections} 통행 시에는 급차선 변경 등으로 인한 돌발 충돌을 피하기 위해 비상등 점멸을 통해 후미 차량에 감속 신호를 주시고 정체 차로 진입 속도를 단계적으로 조절하십시오.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-bold text-slate-900 mb-2.5">
-              {road.name} 우회도로 선택 및 우회 기준
-            </h3>
-            <p className="text-slate-650">
-              {road.detourCriteria} 내비게이션 소요 예측을 상호 참고하고 도로변에 위치한 가변 정보판(VMS) 안내 문구 및 노면 표지판 유도 화살표를 확인하여 가장 안전하고 지체가 적은 회선으로 선회하십시오.
-            </p>
-          </div>
+          {road.sections.map((section, idx) => (
+            <div key={idx} className="space-y-2.5">
+              {section.level === 'h2' ? (
+                <h2 className="text-xl font-black text-slate-900 pt-2">
+                  {section.title}
+                </h2>
+              ) : (
+                <h3 className="text-lg font-bold text-slate-900 pt-1">
+                  {section.title}
+                </h3>
+              )}
+              <p className="text-slate-650">
+                {section.content}
+              </p>
+            </div>
+          ))}
 
           <div className="border-t border-slate-100 pt-6">
             <h3 className="text-lg font-bold text-slate-900 mb-4">
