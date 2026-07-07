@@ -235,31 +235,19 @@ export default function TrafficPage() {
   const [activeTab, setActiveTab] = useState<MainTab>('major');
   const [searchTerm, setSearchTerm] = useState('');
 
-  // 실시간 속도 상태 계산 (원활 / 서행 / 정체)
-  const getStatus = (speed: number, type: string) => {
-    const limit = (type === 'urban' || type === 'bridge') ? 50 : 80;
-    if (speed >= limit) return { text: '원활', color: 'bg-emerald-50 text-emerald-600 border-emerald-100' };
-    if (speed >= limit - 30) return { text: '서행', color: 'bg-amber-50 text-amber-600 border-amber-100' };
-    return { text: '정체', color: 'bg-red-50 text-red-600 border-red-100' };
-  };
-
   // 모든 고속도로 데이터 평탄화
   const allHighways = useMemo(() => {
     const list: any[] = [];
     Object.values(NAVER_TRAFFIC_DATA["고속도로"]).forEach((arr) => {
       list.push(...arr);
     });
-    return list.map((r, i) => {
+    return list.map((r) => {
       const matched = highways.find(h => h.name === r.name || r.name.includes(h.name));
       return {
         name: r.name,
         detail: r.detail,
-        baseSpeed: r.baseSpeed,
         type: 'highway',
         slug: matched ? matched.slug : encodeURIComponent(r.name),
-        cctvId: `cctv-gb-0${(i % 3) + 1}`,
-        x: 127.0275 + (i * 0.005),
-        y: 37.5216 - (i * 0.004)
       };
     });
   }, []);
@@ -272,17 +260,13 @@ export default function TrafficPage() {
         list.push({ ...r, region });
       });
     });
-    return list.map((r, i) => {
+    return list.map((r) => {
       const matched = highways.find(h => h.name === r.name || r.name.includes(h.name));
       return {
         name: r.name,
         detail: `${r.region} | ${r.detail}`,
-        baseSpeed: r.baseSpeed,
         type: 'urban',
         slug: matched ? matched.slug : encodeURIComponent(r.name),
-        cctvId: `cctv-yd-0${(i % 2) + 1}`,
-        x: 126.9800 + (i * 0.003),
-        y: 37.5400 - (i * 0.002)
       };
     });
   }, []);
@@ -293,17 +277,13 @@ export default function TrafficPage() {
     Object.values(NAVER_TRAFFIC_DATA["국도"]).forEach((arr) => {
       list.push(...arr);
     });
-    return list.map((r, i) => {
+    return list.map((r) => {
       const matched = highways.find(h => h.name === r.name || r.name.includes(h.name));
       return {
         name: r.name,
         detail: r.detail,
-        baseSpeed: r.baseSpeed,
         type: 'national',
         slug: matched ? matched.slug : encodeURIComponent(r.name),
-        cctvId: `cctv-sh-0${(i % 2) + 1}`,
-        x: 127.1500 + (i * 0.004),
-        y: 36.8000 + (i * 0.003)
       };
     });
   }, []);
@@ -316,17 +296,13 @@ export default function TrafficPage() {
         list.push({ ...r, region });
       });
     });
-    return list.map((r, i) => {
+    return list.map((r) => {
       const matched = highways.find(h => h.name === r.name || r.name.includes(h.name));
       return {
         name: r.name,
         detail: `${r.region} | ${r.detail}`,
-        baseSpeed: r.baseSpeed,
         type: 'bridge',
         slug: matched ? matched.slug : encodeURIComponent(r.name),
-        cctvId: `cctv-gb-0${(i % 3) + 1}`,
-        x: 126.9600 + (i * 0.0015),
-        y: 37.5100 - (i * 0.0005)
       };
     });
   }, []);
@@ -339,38 +315,17 @@ export default function TrafficPage() {
         const matched = highways.find(h => h.name === r.name || r.name.includes(h.name));
         return {
           ...r,
-          status: getStatus(r.baseSpeed, r.type).text,
-          statusStyle: getStatus(r.baseSpeed, r.type).color,
           slug: matched ? matched.slug : encodeURIComponent(r.name),
-          cctvId: r.cctvId,
-          x: r.x,
-          y: r.y
         };
       });
     } else if (activeTab === 'highway') {
-      list = allHighways.map(r => ({
-        ...r,
-        status: getStatus(r.baseSpeed, 'highway').text,
-        statusStyle: getStatus(r.baseSpeed, 'highway').color,
-      }));
+      list = allHighways;
     } else if (activeTab === 'urban') {
-      list = allUrban.map(r => ({
-        ...r,
-        status: getStatus(r.baseSpeed, 'urban').text,
-        statusStyle: getStatus(r.baseSpeed, 'urban').color,
-      }));
+      list = allUrban;
     } else if (activeTab === 'national') {
-      list = allNational.map(r => ({
-        ...r,
-        status: getStatus(r.baseSpeed, 'national').text,
-        statusStyle: getStatus(r.baseSpeed, 'national').color,
-      }));
+      list = allNational;
     } else if (activeTab === 'bridge') {
-      list = allBridge.map(r => ({
-        ...r,
-        status: getStatus(r.baseSpeed, 'bridge').text,
-        statusStyle: getStatus(r.baseSpeed, 'bridge').color,
-      }));
+      list = allBridge;
     }
 
     if (searchTerm.trim()) {
@@ -472,33 +427,24 @@ export default function TrafficPage() {
                 {currentRoadsList.map((road, idx) => (
                   <div 
                     key={idx} 
-                    className="p-4 border flex flex-col justify-between gap-3 bg-white border-slate-100 hover:border-slate-350 hover:shadow-xs transition-all"
+                    className="p-4 border flex flex-col justify-between gap-4 bg-white border-slate-100 hover:border-slate-350 hover:shadow-xs transition-all"
                   >
-                    <div className="flex justify-between items-start gap-2">
-                      <div className="space-y-1 min-w-0">
-                        <a 
-                          href={`/traffic/${road.slug}`}
-                          className="text-[13px] font-black text-slate-800 truncate block hover:text-blue-600 hover:underline"
-                        >
-                          {road.name}
-                        </a>
-                        <span className="text-[10px] text-slate-400 block font-medium leading-tight truncate">{road.detail}</span>
-                      </div>
-                      <span className={`text-[9px] font-black px-2 py-0.5 border shrink-0 ${road.statusStyle}`}>
-                        {road.status}
-                      </span>
-                    </div>
-
-                    <div className="flex items-center justify-between pt-2 border-t border-slate-100/60">
-                      <div className="font-mono text-left">
-                        <span className="text-[10px] text-slate-400 block leading-none mb-1">평균 속도</span>
-                        <span className="text-xs font-black text-slate-800">{road.baseSpeed} km/h</span>
-                      </div>
+                    <div className="space-y-1 min-w-0">
                       <a 
                         href={`/traffic/${road.slug}`}
-                        className="bg-blue-600 hover:bg-blue-700 text-white font-bold text-[11px] px-3.5 py-1.5 transition-colors shadow-2xs"
+                        className="text-[13.5px] font-black text-slate-800 truncate block hover:text-blue-600 hover:underline"
                       >
-                        상세 상황
+                        {road.name}
+                      </a>
+                      <span className="text-[11.5px] text-slate-400 block font-medium leading-tight truncate">{road.detail}</span>
+                    </div>
+
+                    <div className="pt-2 border-t border-slate-100/60">
+                      <a 
+                        href={`/traffic/${road.slug}`}
+                        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-[11px] py-2 transition-colors shadow-2xs block text-center"
+                      >
+                        상세 상황 조회
                       </a>
                     </div>
                   </div>
