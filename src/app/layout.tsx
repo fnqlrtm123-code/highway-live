@@ -41,14 +41,7 @@ export default function RootLayout({
       lang="ko"
       className={`${inter.variable} ${outfit.variable} h-full antialiased`}
     >
-      <head>
-        {/* Google AdSense Script */}
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7184288079549320"
-          crossOrigin="anonymous"
-        ></script>
-      </head>
+      <head />
       <body className="min-h-full flex flex-col bg-slate-50 text-slate-900 font-sans antialiased">
         {/* 글로벌 헤더 */}
         <header className="sticky top-0 z-40 w-full border-b border-slate-200 bg-white/90 backdrop-blur-md">
