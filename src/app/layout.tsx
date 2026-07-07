@@ -76,19 +76,35 @@ export default function RootLayout({
             </a>
 
             {/* 네비게이션 링크 */}
-            <nav className="hidden lg:flex items-center gap-1">
-              <a href="/" className="px-4 py-2 text-[14px] font-bold rounded-lg text-slate-100 hover:text-white hover:bg-white/10 transition-all">교통지도</a>
-              <a href="/work" className="px-4 py-2 text-[14px] font-bold rounded-lg text-slate-300 hover:text-white hover:bg-white/10 transition-all">작업구간 안내</a>
-              <a href="/forecast" className="px-4 py-2 text-[14px] font-bold rounded-lg text-slate-300 hover:text-white hover:bg-white/10 transition-all">교통예보</a>
-              <a href="/broadcast" className="px-4 py-2 text-[14px] font-bold rounded-lg text-slate-300 hover:text-white hover:bg-white/10 transition-all">교통방송</a>
-              <a href="/highways" className="px-4 py-2 text-[14px] font-bold rounded-lg text-slate-300 hover:text-white hover:bg-white/10 transition-all">고속도로 안내</a>
-              <a href="/notice" className="px-4 py-2 text-[14px] font-bold rounded-lg text-slate-300 hover:text-white hover:bg-white/10 transition-all">공지사항</a>
+            <nav className="hidden lg:flex items-center gap-1.5">
+              <a href="/traffic" className="px-4 py-2 text-[14px] font-bold rounded-lg text-slate-300 hover:text-white hover:bg-white/10 transition-all">교통상황·CCTV</a>
+              
+              {/* 고속도로 휴게소 hover dropdown */}
+              <div className="relative group">
+                <button className="px-4 py-2 text-[14px] font-bold rounded-lg text-slate-300 hover:text-white hover:bg-white/10 transition-all flex items-center gap-1.5 cursor-pointer">
+                  고속도로 휴게소
+                  <svg className="w-3.5 h-3.5 text-slate-400 group-hover:text-white transition-colors" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div className="absolute top-full left-0 mt-1 w-52 rounded-xl bg-slate-900 border border-slate-800 shadow-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                  <a href="/rest-areas" className="block px-4 py-2.5 text-[13px] font-bold text-slate-300 hover:bg-white/10 hover:text-white transition-all">
+                    ↔ 고속도로 상행·하행선 방향
+                  </a>
+                  <a href="/food" className="block px-4 py-2.5 text-[13px] font-bold text-slate-300 hover:bg-white/10 hover:text-white transition-all">
+                    🍲 휴게소 상행·하행 맛집
+                  </a>
+                </div>
+              </div>
+
+              <a href="/gas" className="px-4 py-2 text-[14px] font-bold rounded-lg text-slate-300 hover:text-white hover:bg-white/10 transition-all">주유소·전기차 충전소</a>
+              <a href="/toll" className="px-4 py-2 text-[14px] font-bold rounded-lg text-slate-300 hover:text-white hover:bg-white/10 transition-all">고속도로 통행료</a>
             </nav>
 
             {/* 우측 유틸리티 액션 */}
             <div className="flex items-center gap-3">
               <a 
-                href="/cctv" 
+                href="/traffic" 
                 className="flex items-center gap-1.5 rounded-lg bg-blue-600 px-4 py-2 text-xs font-black text-white hover:bg-blue-500 transition-all duration-200 shadow-sm"
               >
                 <span className="relative flex h-1.5 w-1.5">
