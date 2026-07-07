@@ -2,7 +2,6 @@ import { getServiceAreasByHighway } from '@/lib/data';
 import { getRoadList, getRoadBySlug } from '@/lib/roadData';
 import { notFound } from 'next/navigation';
 import AdSense from '@/components/AdSense';
-import CongestionBoard from '@/components/CongestionBoard';
 import type { Metadata } from 'next';
 
 interface Props {
@@ -99,9 +98,6 @@ export default async function HighwayTrafficPage({ params }: Props) {
 
       {/* 애드센스 */}
       <AdSense slot="2233445566" />
-
-      {/* 실시간 고속도로 정체 상황판 */}
-      <CongestionBoard roadName={road.name} />
 
       {/* AEO / GEO 최적화 교통상황 정보 영역 (지정된 소제목 포맷을 엄격히 준수) */}
       <section className="bg-white border border-slate-200 p-6 md:p-8 space-y-8 text-slate-700 text-sm md:text-base leading-relaxed font-sans">
