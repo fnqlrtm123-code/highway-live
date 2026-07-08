@@ -16,8 +16,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const rangeText = road.start && road.end ? `${road.start}~${road.end}` : '주요';
 
   return {
-    title: `${road.name} 교통상황 실시간 확인 | CCTV·정체구간·우회도로`,
-    description: `${road.name} ${rangeText} 구간의 실시간 교통상황, CCTV, 주요 정체구간, 사고·공사 정보와 우회도로 안내를 확인하세요.`,
+    title: `${road.name} 실시간 교통상황 — CCTV·정체·휴게소 목록`,
+    description: `${road.name} ${rangeText} 구간의 실시간 교통상황 확인 방법을 안내합니다. 도로공사 로드플러스, ITS CCTV 평속 분석 및 상행/하행 방향별 휴게소 목록을 정리했습니다.`,
   };
 }
 
@@ -28,7 +28,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function HighwayTrafficPage({ params }: Props) {
+export default async function HighwayTrafficDetailPage({ params }: Props) {
   const { highway: highwaySlug } = await params;
   const road = getRoadBySlug(highwaySlug);
 
@@ -36,185 +36,214 @@ export default async function HighwayTrafficPage({ params }: Props) {
     notFound();
   }
 
-  const serviceAreas = getServiceAreasByHighway(road.slug);
+  // Get service areas for this highway
+  const highwayServiceAreas = getServiceAreasByHighway(road.slug);
+
+  // Group rest areas by direction
+  const upDirectionAreas = highwayServiceAreas.filter(s => s.direction === '상행');
+  const downDirectionAreas = highwayServiceAreas.filter(s => s.direction === '하행');
+  const otherDirectionAreas = highwayServiceAreas.filter(s => s.direction === '양방향');
+
+  // Dynamically obtain direction labels
+  const upLabel = upDirectionAreas[0]?.directionName || '상행선 방향';
+  const downLabel = downDirectionAreas[0]?.directionName || '하행선 방향';
+  const otherLabel = otherDirectionAreas[0]?.directionName || '양방향/기타';
 
   return (
-    <main className="mx-auto max-w-[1240px] px-4 py-8 flex-grow">
-      <article className="space-y-10">
-
-        {/* CGV 스타일 히어로 레이아웃 (배경 파란색 완전 제거, 화이트/연한그레이 깔끔한 테두리, 정사각형 썸네일 노출) */}
-        <div className="bg-white border border-slate-200 p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center md:items-start">
-          
-          {/* 좌측: 1:1 비율 정사각형 썸네일 이미지 규격 (메타정보 제거 및 1:1 크롭 가공됨) */}
-          <div className="w-[180px] h-[180px] shrink-0 bg-slate-100 border border-slate-200 overflow-hidden shadow-xs">
-            <img 
-              src={road.images.thumb} 
-              alt={`${road.name} 썸네일`}
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* 우측: 상세 메타데이터 정보 영역 */}
-          <div className="flex-grow space-y-5 w-full">
-            <div className="space-y-2 border-b border-slate-100 pb-4">
-              <h1 className="text-2xl md:text-3xl font-black tracking-tight text-slate-900">
-                {road.name} 교통상황
-              </h1>
-              <p className="text-slate-500 text-xs md:text-sm font-medium">
-                {road.name} 실시간 교통상황, CCTV, 정체구간, 사고·공사 정보와 우회도로 안내를 확인할 수 있습니다.
-              </p>
-            </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 text-sm text-slate-700">
-            <div className="flex items-center gap-2">
-              <span className="font-bold text-slate-400 w-16 shrink-0">도로 유형</span>
-              <span className="text-slate-800">
-                {road.type === 'highway' ? '고속도로' : road.type === 'urban' ? '도시고속도로' : road.type === 'national' ? '일반국도' : '대교'}
-              </span>
-            </div>
-            {road.start && (
-              <div className="flex items-center gap-2">
-                <span className="font-bold text-slate-400 w-16 shrink-0">기점 (시작)</span>
-                <span className="text-slate-800">{road.start}</span>
-              </div>
-            )}
-            {road.end && (
-              <div className="flex items-center gap-2">
-                <span className="font-bold text-slate-400 w-16 shrink-0">종점 (도착)</span>
-                <span className="text-slate-800">{road.end}</span>
-              </div>
-            )}
-          </div>
-
-          {/* CGV 예매하기/상세 버튼 스타일의 액션 버튼 그룹 */}
-          <div className="flex flex-wrap gap-3 pt-2">
-            <a 
-              href="#cctv-section" 
-              className="bg-red-600 text-white font-bold text-xs md:text-sm px-6 py-3 hover:bg-red-700 transition-colors shadow-sm"
-            >
-              CCTV 실시간 확인
-            </a>
-            <a 
-              href="#detour-section" 
-              className="bg-slate-900 text-white font-bold text-xs md:text-sm px-6 py-3 hover:bg-slate-800 transition-colors shadow-sm"
-            >
-              우회도로 선택 기준
-            </a>
-          </div>
+    <main className="mx-auto max-w-[1000px] px-5 py-10 flex-grow space-y-12 text-slate-700 leading-relaxed text-sm md:text-base font-sans">
+      
+      {/* 브레드크럼 */}
+      <div className="flex justify-between items-center text-xs text-slate-400">
+        <div className="flex gap-1.5 items-center">
+          <a href="/" className="hover:text-blue-600">홈</a>
+          <span>&gt;</span>
+          <a href="/traffic" className="hover:text-blue-600">교통상황·CCTV</a>
+          <span>&gt;</span>
+          <span className="text-slate-650 font-semibold">{road.name}</span>
         </div>
+        <a href="/traffic" className="font-semibold text-slate-500 hover:text-blue-600">&larr; 전체 노선 목록</a>
+      </div>
+
+      {/* 1. 노선 타이틀 & 소개 */}
+      <div className="space-y-4 max-w-4xl">
+        <div className="inline-flex items-center gap-1.5 bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">
+          {road.type === 'highway' ? '고속도로 노선' : road.type === 'urban' ? '도시고속도로' : road.type === 'national' ? '일반국도' : '대교'}
+        </div>
+        <h1 className="text-3xl font-bold text-slate-900 tracking-tight leading-tight">
+          {road.name} 실시간 교통상황 — CCTV · 정체 · 휴게소 안내
+        </h1>
+        <p className="text-slate-500 text-sm md:text-[15px] leading-relaxed">
+          {road.description} 아래 제공되는 실시간 정보 확인 채널을 통해 구간별 주행 평속과 CCTV 라이브 모니터링 정보를 무료로 시청하고, 
+          정체나 기상 악화 시 쉬어갈 수 있는 방향별 휴게소를 확인해보세요.
+        </p>
       </div>
 
       {/* 애드센스 */}
-      <AdSense slot="2233445566" />
+      <AdSense slot="4455662211" />
 
-      {/* AEO / GEO 최적화 교통상황 정보 영역 (지정된 소제목 포맷을 엄격히 준수) */}
-      <section className="bg-white border border-slate-200 p-6 md:p-8 space-y-8 text-slate-700 text-sm md:text-base leading-relaxed font-sans">
+      {/* 2. 실시간 상황 조회 방법 */}
+      <section className="bg-white border border-slate-200/80 rounded-2xl p-6 md:p-8 shadow-[0_2px_12px_rgba(0,0,0,0.02)] space-y-6">
+        <h2 className="text-lg font-semibold text-slate-900 flex items-center gap-2">
+          <span className="w-1.5 h-4 bg-blue-600 rounded-full inline-block"></span>
+          {road.name} 실시간 소통 속도 및 CCTV 확인 채널
+        </h2>
         
-        {/* 개요 소개 */}
-        <p className="text-slate-650">
-          {road.description}
+        <p className="text-slate-500 text-xs md:text-sm">
+          {road.verificationMethod} 주행 중에 교통 흐름이 마비될 경우, 아래에 정리된 휴게소 목록을 참조하여 졸음 예방 및 휴식을 권장합니다.
         </p>
 
-        {/* 1. 교통상황 확인방법 */}
-        <div className="space-y-3 border-t border-slate-100 pt-6">
-          <h2 className="text-lg md:text-xl font-black text-slate-900">
-            {road.name} 실시간 교통상황 확인
-          </h2>
-          <p className="text-slate-650">
-            {road.verificationMethod}
-          </p>
-        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">
+          <div className="border border-slate-100 rounded-xl p-4 bg-slate-50/50">
+            <span className="font-bold text-slate-800 block mb-1">로드플러스 (도로공사)</span>
+            <span className="text-slate-500 text-xs leading-normal block">
+              공식 웹사이트에서 경부선, 영동선 등 고속도로 전 구간의 교통지도 및 2분 간격의 CCTV 상황을 실시간 조회할 수 있습니다.
+            </span>
+          </div>
 
-        {/* 2. CCTV 실시간 확인 */}
-        <div id="cctv-section" className="space-y-3 border-t border-slate-100 pt-6 scroll-mt-6">
-          <h2 className="text-lg md:text-xl font-black text-slate-900">
-            {road.name} CCTV 실시간 보기
-          </h2>
-          <p className="text-slate-650">
-            {road.cctvInfo}
-          </p>
-        </div>
+          <div className="border border-slate-100 rounded-xl p-4 bg-slate-50/50">
+            <span className="font-bold text-slate-800 block mb-1">국가교통정보센터 (ITS)</span>
+            <span className="text-slate-500 text-xs leading-normal block">
+              국토교통부가 수집하는 전국 주요 국도 및 우회 도로의 관제 CCTV 카메라를 통해 강우, 안개, 노면 미끄러짐을 확인 가능합니다.
+            </span>
+          </div>
 
-        {/* 3. 상행선·하행선 방향 정리 */}
-        <div className="space-y-3 border-t border-slate-100 pt-6">
-          <h2 className="text-lg md:text-xl font-black text-slate-900">
-            {road.name} 상행선·하행선 방향 정리
-          </h2>
-          <p className="text-slate-650">
-            {road.directionsText}
-          </p>
-        </div>
+          <div className="border border-slate-100 rounded-xl p-4 bg-slate-50/50">
+            <span className="font-bold text-slate-800 block mb-1">지도 앱 CCTV 레이어</span>
+            <span className="text-slate-500 text-xs leading-normal block">
+              스마트폰 네이버 지도 또는 카카오 맵의 우측 레이어 탭에서 CCTV 기능을 활성화하면, 노선 내에 있는 가상 감시 카메라를 터치해 직접 확인하실 수 있습니다.
+            </span>
+          </div>
 
-        {/* 4. 정체가 자주 발생하는 구간 */}
-        <div className="space-y-3 border-t border-slate-100 pt-6">
-          <h2 className="text-lg md:text-xl font-black text-slate-900">
-            {road.name} 주요 정체구간
-          </h2>
-          <p className="text-slate-650">
-            {road.congestedSections}
-          </p>
-        </div>
-
-        {/* 5. 우회도로 선택 기준 */}
-        <div id="detour-section" className="space-y-3 border-t border-slate-100 pt-6 scroll-mt-6">
-          <h2 className="text-lg md:text-xl font-black text-slate-900">
-            {road.name} 우회도로 선택 기준
-          </h2>
-          <p className="text-slate-650">
-            {road.detourCriteria}
-          </p>
-        </div>
-
-        {/* 6. 자주 묻는 질문 FAQ */}
-        <div className="space-y-4 border-t border-slate-100 pt-6">
-          <h2 className="text-lg md:text-xl font-black text-slate-900">
-            자주 묻는 질문 FAQ
-          </h2>
-          <div className="space-y-4">
-            {road.faqs.map((faq, idx) => (
-              <div key={idx} className="border-b border-slate-50 pb-4 last:border-b-0 last:pb-0">
-                <h4 className="font-bold text-slate-800 text-[15px]">Q{idx + 1}. {faq.q}</h4>
-                <p className="text-slate-600 mt-1">
-                  {faq.a}
-                </p>
-              </div>
-            ))}
+          <div className="border border-slate-100 rounded-xl p-4 bg-slate-50/50">
+            <span className="font-bold text-slate-800 block mb-1">고속도로 교통앱 연동</span>
+            <span className="text-slate-500 text-xs leading-normal block">
+              전방 돌발적인 연쇄 추돌 사고, 도로 공사 통제 구간 및 갓길 가변 차로 사용 상황을 푸시 알림으로 신속하게 접수할 수 있습니다.
+            </span>
           </div>
         </div>
-
       </section>
 
-      {/* 노선 내 휴게소 목록 */}
-      {serviceAreas.length > 0 && (
-        <section className="space-y-4">
-          <h2 className="text-xl font-black text-slate-900 border-b pb-3 border-slate-200">
-            이 노선의 휴게소 목록
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {serviceAreas.map((s) => (
-              <div key={s.slug} className="p-5 bg-white border border-slate-200 flex justify-between items-start">
-                <div className="space-y-1">
-                  <div className="flex items-center gap-1.5">
-                    <h3 className="text-base font-black text-slate-800">{s.name}</h3>
-                    <span className="text-[10px] font-bold bg-slate-100 text-slate-600 px-1.5 py-0.5">{s.directionName}</span>
-                  </div>
-                  <p className="text-xs text-slate-400">
-                    {s.locationKm}km 지점 &middot; 주유소 브랜드: {s.gasStation.brand} (휘발유: {s.gasStation.gasolinePrice}원)
-                  </p>
-                </div>
-                <a 
-                  href={`/rest-areas/${s.slug}`}
-                  className="bg-slate-950 text-white hover:bg-slate-800 font-bold text-xs px-3.5 py-2 transition-colors shrink-0"
-                >
-                  상세정보 &rarr;
-                </a>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
+      {/* 3. 방향별 휴게소 목록 (MustardData 스타일 구현!) */}
+      <section className="space-y-6">
+        <h2 className="text-lg font-semibold text-slate-900 flex items-center gap-2">
+          <span className="w-1.5 h-4 bg-blue-600 rounded-full inline-block"></span>
+          {road.name} 노선 내 쉬어갈 휴게소 목록
+        </h2>
+        <p className="text-slate-500 text-xs md:text-sm">
+          {road.name}에 위치한 총 {highwayServiceAreas.length}개소의 휴게소 목록입니다. 상행선(서울 방면 등)과 하행선(지방 방면 등) 방향에 따라 구분되어 있으므로, 이동하는 방향에 맞춰 목적 휴게소를 미리 확인해보세요.
+        </p>
 
-      </article>
+        <div className="space-y-8 pt-2">
+          
+          {/* 하행선 목록 */}
+          {downDirectionAreas.length > 0 && (
+            <div className="space-y-3 bg-white border border-slate-200/80 rounded-2xl p-5 md:p-6 shadow-[0_2px_12px_rgba(0,0,0,0.01)]">
+              <h3 className="font-bold text-slate-800 border-b border-slate-100 pb-2.5 flex justify-between items-center text-sm md:text-[15px]">
+                <span>{downLabel} ({downDirectionAreas.length}곳)</span>
+                <span className="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-sm">하행선</span>
+              </h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-xs">
+                {downDirectionAreas.map((area) => (
+                  <a
+                    key={area.slug}
+                    href={`/rest-areas/${area.slug}`}
+                    className="bg-slate-50 border border-slate-100/80 hover:border-blue-600 hover:bg-white hover:text-blue-600 px-3 py-2 rounded-xl text-slate-650 transition-all font-medium text-center truncate cursor-pointer"
+                  >
+                    {area.name.replace('휴게소', '')} 휴게소
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* 상행선 목록 */}
+          {upDirectionAreas.length > 0 && (
+            <div className="space-y-3 bg-white border border-slate-200/80 rounded-2xl p-5 md:p-6 shadow-[0_2px_12px_rgba(0,0,0,0.01)]">
+              <h3 className="font-bold text-slate-800 border-b border-slate-100 pb-2.5 flex justify-between items-center text-sm md:text-[15px]">
+                <span>{upLabel} ({upDirectionAreas.length}곳)</span>
+                <span className="text-[10px] font-bold text-red-600 bg-red-50 px-2 py-0.5 rounded-sm">상행선</span>
+              </h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-xs">
+                {upDirectionAreas.map((area) => (
+                  <a
+                    key={area.slug}
+                    href={`/rest-areas/${area.slug}`}
+                    className="bg-slate-50 border border-slate-100/80 hover:border-blue-600 hover:bg-white hover:text-blue-600 px-3 py-2 rounded-xl text-slate-650 transition-all font-medium text-center truncate cursor-pointer"
+                  >
+                    {area.name.replace('휴게소', '')} 휴게소
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* 양방향 및 기타 */}
+          {otherDirectionAreas.length > 0 && (
+            <div className="space-y-3 bg-white border border-slate-200/80 rounded-2xl p-5 md:p-6 shadow-[0_2px_12px_rgba(0,0,0,0.01)]">
+              <h3 className="font-bold text-slate-800 border-b border-slate-100 pb-2.5 flex justify-between items-center text-sm md:text-[15px]">
+                <span>{otherLabel} ({otherDirectionAreas.length}곳)</span>
+                <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-sm">양방향/기타</span>
+              </h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-xs">
+                {otherDirectionAreas.map((area) => (
+                  <a
+                    key={area.slug}
+                    href={`/rest-areas/${area.slug}`}
+                    className="bg-slate-50 border border-slate-100/80 hover:border-blue-600 hover:bg-white hover:text-blue-600 px-3 py-2 rounded-xl text-slate-650 transition-all font-medium text-center truncate cursor-pointer"
+                  >
+                    {area.name.replace('휴게소', '')} 휴게소
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+
+        </div>
+      </section>
+
+      {/* 4. 명절 및 주말 정체 예상 */}
+      <section className="space-y-4">
+        <h2 className="text-lg font-semibold text-slate-900 flex items-center gap-2">
+          <span className="w-1.5 h-4 bg-blue-600 rounded-full inline-block"></span>
+          명절 · 주말 정체 예상 분석
+        </h2>
+        <div className="bg-slate-50 border border-slate-150 rounded-xl p-5 md:p-6 text-slate-650 text-xs md:text-sm space-y-3">
+          <p>
+            {road.name} 노선은 귀성/귀경철 유동량 쏠림 현상이 가장 빠르게 유발되는 대표적인 간선 구간입니다.
+          </p>
+          <ul className="list-disc list-inside space-y-1.5 text-slate-600">
+            <li><span className="font-bold text-slate-700">지정체 발생 구간:</span> {road.congestedSections}</li>
+            <li><span className="font-bold text-slate-700">우회도로 가이드:</span> {road.detourCriteria}</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* 5. 자주 묻는 질문 FAQ */}
+      <section className="space-y-4 border-t border-slate-200 pt-8">
+        <h2 className="text-lg font-semibold text-slate-900 flex items-center gap-2">
+          <span className="w-1.5 h-4 bg-blue-600 rounded-full inline-block"></span>
+          자주 묻는 질문 FAQ
+        </h2>
+        
+        <div className="space-y-4 divide-y divide-slate-100">
+          {road.faqs.map((faq, idx) => (
+            <div key={idx} className="pt-4 first:pt-0">
+              <h4 className="font-bold text-slate-800 text-sm md:text-[15px]">Q{idx + 1}. {faq.q}</h4>
+              <p className="text-slate-500 text-xs md:text-sm mt-1">
+                {faq.a}
+              </p>
+            </div>
+          ))}
+          
+          <div className="pt-4">
+            <h4 className="font-bold text-slate-800 text-sm md:text-[15px]">Q{road.faqs.length + 1}. {road.name} 노면에서 긴급 차량 무상 견인 서비스를 받으려면?</h4>
+            <p className="text-slate-500 text-xs md:text-sm mt-1">
+              한국도로공사가 운영하는 구간 내에서 차량 사고나 갑작스러운 기계 고장으로 본선 차도에 고립되었을 경우, 도로공사 콜센터(1588-2504)에 접수하여 2차 사고의 고위험 영역인 가까운 나들목(IC) 또는 안심 쉼터 영역까지 견인료 지불 없이 100% 무상으로 우선 이동을 지원받을 수 있습니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
     </main>
   );
 }
