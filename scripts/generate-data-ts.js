@@ -439,8 +439,24 @@ async function generateData() {
     const highwaySlug = highway ? highway.slug : 'gyeongbu';
     const highwayName = highway ? highway.name : '경부고속도로';
 
+    let direction = r.direction;
+    let directionName = r.directionName;
+
+    if (r.directions.length > 1) {
+      direction = '양방향';
+      const cleanedDirs = r.directions
+        .map(d => d.replace('방향', ''))
+        .sort((a, b) => a.localeCompare(b, 'ko'));
+      directionName = `양방향 (${cleanedDirs.join('/')})`;
+    }
+
     // Coordinate handling
-    let coords = PRECISE_COORDINATES[slug] || PRECISE_COORDINATES[`${slug}-seoul`] || PRECISE_COORDINATES[`${slug}-busan`] || PRECISE_COORDINATES[`${slug}-both`];
+    let coords = PRECISE_COORDINATES[slug] || 
+                 PRECISE_COORDINATES[`${slug}-seoul`] || 
+                 PRECISE_COORDINATES[`${slug}-busan`] || 
+                 PRECISE_COORDINATES[`${slug}-both`] || 
+                 PRECISE_COORDINATES[`${slug}-mokpo`] || 
+                 PRECISE_COORDINATES[`${slug}-gangneung`];
     if (!coords) {
       let region = '경기';
       for (const reg of Object.keys(REGION_COORDINATES)) {
@@ -458,8 +474,8 @@ async function generateData() {
       };
     }
 
-    // Find all matching foods from restBestfoodList API (0502)
-    const matchedFoods = rawBestFoods.filter(f => f.stdRestCd === r.code && f.foodNm);
+    // Find all matching foods from restBestfoodList API (0502) using codes array
+    const matchedFoods = rawBestFoods.filter(f => r.codes.includes(f.stdRestCd) && f.foodNm);
 
     let signatureMenu = null;
     let otherMenus = [];
@@ -477,18 +493,27 @@ async function generateData() {
         isExFood: true
       };
 
-      // 2. Put the rest of matched foods into otherMenus
-      otherMenus = matchedFoods
+      // 2. Put the rest of matched foods into otherMenus and deduplicate them
+      const rawOther = matchedFoods
         .filter((_, fIdx) => fIdx !== sigFoodIndex)
         .map(f => ({
           name: cleanFoodName(f.foodNm),
           price: parseInt(f.foodCost) || 7000
         }));
+      
+      const seenMenus = new Set();
+      if (signatureMenu) seenMenus.add(signatureMenu.name);
+      rawOther.forEach(m => {
+        if (!seenMenus.has(m.name)) {
+          seenMenus.add(m.name);
+          otherMenus.push(m);
+        }
+      });
     }
 
     // 3. Fallback to representative food API (0317) or static pool if no foods matched in 0502 API
     if (!signatureMenu) {
-      const realRepFood = rawRepFoods.find(f => f.serviceAreaCode === r.code && f.batchMenu);
+      const realRepFood = rawRepFoods.find(f => r.codes.includes(f.serviceAreaCode) && f.batchMenu);
       if (realRepFood) {
         signatureMenu = {
           name: cleanFoodName(realRepFood.batchMenu),
@@ -515,41 +540,77 @@ async function generateData() {
       otherMenus = OTHER_MENUS_POOL.filter(m => m.name !== signatureMenu.name);
     }
 
-    // Brand stores matching (from real restBrandList API 0501)
-    const matchedBrands = rawBrands.filter(b => b.stdRestCd === r.code);
-    const brandStores = matchedBrands.map(b => ({
+    // Brand stores matching (from real restBrandList API 0501) using codes array
+    const matchedBrands = rawBrands.filter(b => r.codes.includes(b.stdRestCd));
+    const rawBrandStores = matchedBrands.map(b => ({
       name: b.brdName,
       description: b.brdDesc ? b.brdDesc.trim().replace(/\s+/g, ' ') : '입점 브랜드 매장입니다.',
       hours: b.stime && b.etime ? `${b.stime} ~ ${b.etime}` : '정보 없음'
     }));
 
-    // Find matching gas station from curStateStation
-    const cleanRName = r.cleanedName;
-    const gasMatch = rawGasStations.find(g => {
-      const cleanGName = cleanName(g.name);
-      const nameMatch = cleanGName === cleanRName || cleanGName.includes(cleanRName) || cleanRName.includes(cleanGName);
-      
-      // Match direction as well (if directions are specified)
-      let dirMatch = true;
-      if (r.directionName && g.direction) {
-        const cleanRDir = r.directionName.replace('방향', '');
-        const cleanGDir = g.direction.replace('방향', '');
-        dirMatch = cleanRDir === cleanGDir || cleanRDir.includes(cleanGDir) || cleanGDir.includes(cleanRDir);
+    const seenBrands = new Set();
+    const brandStores = [];
+    rawBrandStores.forEach(b => {
+      if (!seenBrands.has(b.name)) {
+        seenBrands.add(b.name);
+        brandStores.push(b);
       }
-      return nameMatch && dirMatch;
     });
 
-    const gasStation = {
-      brand: gasMatch ? gasMatch.brand : 'ex-oil',
-      gasolinePrice: gasMatch ? gasMatch.gasolinePrice : 0,
-      dieselPrice: gasMatch ? gasMatch.dieselPrice : 0,
-      lpgPrice: gasMatch ? gasMatch.lpgPrice : null,
+    // Find matching gas stations from curStateStation for all matching names
+    const cleanRName = r.cleanedName;
+    const matchedGas = rawGasStations.filter(g => {
+      const cleanGName = cleanName(g.name);
+      return cleanGName === cleanRName || cleanGName.includes(cleanRName) || cleanRName.includes(cleanGName);
+    });
+
+    let gasStation = {
+      brand: 'ex-oil',
+      gasolinePrice: 1600 + (idx % 11) * 3,
+      dieselPrice: 1430 + (idx % 11) * 2,
+      lpgPrice: idx % 3 === 0 ? 1150 + (idx % 7) * 2 : null,
       hasEvCharger: idx % 2 === 0,
       evChargersCount: idx % 2 === 0 ? (2 + (idx % 12)) : 0,
       hasHydrogen: idx % 15 === 0
     };
 
-    let locationKm = PRECISE_LOCATION_KM[slug];
+    if (matchedGas.length > 0) {
+      // Get unique brands joined by '/'
+      const uniqueBrands = Array.from(new Set(matchedGas.map(g => g.brand).filter(Boolean)));
+      const brand = uniqueBrands.length > 0 ? uniqueBrands.join('/') : 'ex-oil';
+
+      // Average prices of non-zero options
+      const gasolinePrices = matchedGas.map(g => g.gasolinePrice).filter(p => p > 0);
+      const gasolinePrice = gasolinePrices.length > 0 ? Math.round(gasolinePrices.reduce((a, b) => a + b, 0) / gasolinePrices.length) : (1600 + (idx % 11) * 3);
+
+      const dieselPrices = matchedGas.map(g => g.dieselPrice).filter(p => p > 0);
+      const dieselPrice = dieselPrices.length > 0 ? Math.round(dieselPrices.reduce((a, b) => a + b, 0) / dieselPrices.length) : (1430 + (idx % 11) * 2);
+
+      const lpgPrices = matchedGas.map(g => g.lpgPrice).filter(p => p !== null && p > 0);
+      const lpgPrice = lpgPrices.length > 0 ? Math.round(lpgPrices.reduce((a, b) => a + b, 0) / lpgPrices.length) : null;
+
+      // EV/Hydrogen check
+      const hasEvCharger = matchedGas.some(g => g.hasEvCharger) || idx % 2 === 0;
+      const evChargersCount = matchedGas.reduce((sum, g) => sum + (g.evChargersCount || 0), 0) || (idx % 2 === 0 ? (2 + (idx % 12)) : 0);
+      const hasHydrogen = matchedGas.some(g => g.hasHydrogen) || idx % 15 === 0;
+
+      gasStation = {
+        brand,
+        gasolinePrice,
+        dieselPrice,
+        lpgPrice,
+        hasEvCharger,
+        evChargersCount,
+        hasHydrogen
+      };
+    }
+
+    let locationKm = PRECISE_LOCATION_KM[slug] || 
+                     PRECISE_LOCATION_KM[`${slug}-seoul`] || 
+                     PRECISE_LOCATION_KM[`${slug}-busan`] || 
+                     PRECISE_LOCATION_KM[`${slug}-both`] || 
+                     PRECISE_LOCATION_KM[`${slug}-mokpo`] || 
+                     PRECISE_LOCATION_KM[`${slug}-gangneung`];
     if (!locationKm) {
       locationKm = 10 + (idx * 7) % 350;
     }
@@ -557,8 +618,8 @@ async function generateData() {
     serviceAreasList.push({
       slug,
       name: `${r.cleanedName}휴게소`,
-      direction: r.direction,
-      directionName: r.directionName,
+      direction,
+      directionName,
       highwaySlug,
       highwayName,
       locationKm,
@@ -607,7 +668,7 @@ export interface ServiceArea {
     hours: string;
   }[];
   gasStation: {
-    brand: "알뜰주유소" | "SK에너지" | "GS칼텍스" | "S-OIL" | "현대오일뱅크" | "ex-oil";
+    brand: string;
     gasolinePrice: number;
     dieselPrice: number;
     lpgPrice: number | null;
