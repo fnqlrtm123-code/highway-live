@@ -42,7 +42,7 @@ export default function RootLayout({
       className={`${inter.variable} ${outfit.variable} h-full antialiased`}
     >
       <head />
-      <body className="min-h-full flex flex-col bg-slate-50 text-slate-900 font-sans antialiased">
+      <body className="min-h-full flex flex-col bg-white text-slate-900 font-sans antialiased">
 
 
         {/* 2. 글로벌 헤더 (모던 화이트 글래스 테마) */}

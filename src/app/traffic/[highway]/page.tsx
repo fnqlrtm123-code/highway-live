@@ -130,7 +130,7 @@ export default async function HighwayTrafficDetailPage({ params }: Props) {
           {road.type === 'highway' ? '고속도로 노선' : road.type === 'urban' ? '도시고속도로' : road.type === 'national' ? '일반국도' : '대교'}
         </div>
         <h1 className="text-2.5xl md:text-3.5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-          {road.name} 교통상황 실시간 CCTV 확인
+          {road.name} 교통상황
         </h1>
         <p className="text-slate-500 text-sm md:text-[15px] leading-relaxed">
           {road.description} 아래 제공되는 실시간 정보 확인 채널을 통해 구간별 주행 평속과 CCTV 라이브 모니터링 정보를 무료로 시청하고, 
@@ -145,7 +145,7 @@ export default async function HighwayTrafficDetailPage({ params }: Props) {
       <section className="bg-white border border-slate-200/80 rounded-2xl p-6 md:p-8 shadow-[0_2px_12px_rgba(0,0,0,0.02)] space-y-6">
         <h2 className="text-lg font-semibold text-slate-900 flex items-center gap-2">
           <span className="w-1.5 h-4 bg-blue-600 rounded-full inline-block"></span>
-          {road.name} 실시간 소통 속도 및 CCTV 확인 채널
+          {road.name} 교통상황 CCTV 확인 방법
         </h2>
         
         <p className="text-slate-500 text-xs md:text-sm">
@@ -153,28 +153,28 @@ export default async function HighwayTrafficDetailPage({ params }: Props) {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">
-          <div className="border border-slate-100 rounded-xl p-4 bg-slate-50/50">
+          <div className="border border-slate-200 rounded-xl p-4 bg-white">
             <span className="font-bold text-slate-800 block mb-1">로드플러스 (도로공사)</span>
             <span className="text-slate-500 text-xs leading-normal block">
               공식 웹사이트에서 경부선, 영동선 등 고속도로 전 구간의 교통지도 및 2분 간격의 CCTV 상황을 실시간 조회할 수 있습니다.
             </span>
           </div>
 
-          <div className="border border-slate-100 rounded-xl p-4 bg-slate-50/50">
+          <div className="border border-slate-200 rounded-xl p-4 bg-white">
             <span className="font-bold text-slate-800 block mb-1">국가교통정보센터 (ITS)</span>
             <span className="text-slate-500 text-xs leading-normal block">
               국토교통부가 수집하는 전국 주요 국도 및 우회 도로의 관제 CCTV 카메라를 통해 강우, 안개, 노면 미끄러짐을 확인 가능합니다.
             </span>
           </div>
 
-          <div className="border border-slate-100 rounded-xl p-4 bg-slate-50/50">
+          <div className="border border-slate-200 rounded-xl p-4 bg-white">
             <span className="font-bold text-slate-800 block mb-1">지도 앱 CCTV 레이어</span>
             <span className="text-slate-500 text-xs leading-normal block">
               스마트폰 네이버 지도 또는 카카오 맵의 우측 레이어 탭에서 CCTV 기능을 활성화하면, 노선 내에 있는 가상 감시 카메라를 터치해 직접 확인하실 수 있습니다.
             </span>
           </div>
 
-          <div className="border border-slate-100 rounded-xl p-4 bg-slate-50/50">
+          <div className="border border-slate-200 rounded-xl p-4 bg-white">
             <span className="font-bold text-slate-800 block mb-1">고속도로 교통앱 연동</span>
             <span className="text-slate-500 text-xs leading-normal block">
               전방 돌발적인 연쇄 추돌 사고, 도로 공사 통제 구간 및 갓길 가변 차로 사용 상황을 푸시 알림으로 신속하게 접수할 수 있습니다.
@@ -208,7 +208,7 @@ export default async function HighwayTrafficDetailPage({ params }: Props) {
                     <a
                       key={area.slug}
                       href={`/rest-areas/${area.slug}`}
-                      className="bg-slate-50 border border-slate-100/80 hover:border-blue-600 hover:bg-white hover:text-blue-600 px-3 py-2 rounded-xl text-slate-650 transition-all font-medium text-center truncate cursor-pointer"
+                      className="bg-white border border-slate-200 hover:border-blue-600 hover:text-blue-600 px-3 py-2 rounded-xl text-slate-650 transition-all font-medium text-center truncate cursor-pointer"
                     >
                       {area.name.replace('휴게소', '')} 휴게소
                     </a>
@@ -229,7 +229,7 @@ export default async function HighwayTrafficDetailPage({ params }: Props) {
                     <a
                       key={area.slug}
                       href={`/rest-areas/${area.slug}`}
-                      className="bg-slate-50 border border-slate-100/80 hover:border-blue-600 hover:bg-white hover:text-blue-600 px-3 py-2 rounded-xl text-slate-650 transition-all font-medium text-center truncate cursor-pointer"
+                      className="bg-white border border-slate-200 hover:border-blue-600 hover:text-blue-600 px-3 py-2 rounded-xl text-slate-650 transition-all font-medium text-center truncate cursor-pointer"
                     >
                       {area.name.replace('휴게소', '')} 휴게소
                     </a>
@@ -250,7 +250,7 @@ export default async function HighwayTrafficDetailPage({ params }: Props) {
                     <a
                       key={area.slug}
                       href={`/rest-areas/${area.slug}`}
-                      className="bg-slate-50 border border-slate-100/80 hover:border-blue-600 hover:bg-white hover:text-blue-600 px-3 py-2 rounded-xl text-slate-650 transition-all font-medium text-center truncate cursor-pointer"
+                      className="bg-white border border-slate-200 hover:border-blue-600 hover:text-blue-600 px-3 py-2 rounded-xl text-slate-650 transition-all font-medium text-center truncate cursor-pointer"
                     >
                       {area.name.replace('휴게소', '')} 휴게소
                     </a>
@@ -269,7 +269,7 @@ export default async function HighwayTrafficDetailPage({ params }: Props) {
           <span className="w-1.5 h-4 bg-blue-600 rounded-full inline-block"></span>
           명절 · 주말 정체 예상 분석
         </h2>
-        <div className="bg-slate-50 border border-slate-150 rounded-xl p-5 md:p-6 text-slate-650 text-xs md:text-sm space-y-3">
+        <div className="bg-white border border-slate-200 rounded-xl p-5 md:p-6 text-slate-650 text-xs md:text-sm space-y-3">
           <p>
             {road.name} 노선은 귀성/귀경철 유동량 쏠림 현상이 가장 빠르게 유발되는 대표적인 간선 구간입니다.
           </p>
