@@ -133,7 +133,7 @@ export default async function HighwayTrafficDetailPage({ params }: Props) {
           {road.name} 교통상황
         </h1>
         <p className="text-slate-500 text-sm md:text-[15px] leading-relaxed">
-          {road.description} 아래 제공되는 실시간 교통정보 확인 채널을 통해 노선의 구간별 주행 속도와 실시간 CCTV 모니터링 정보를 조회할 수 있습니다. 또한, 정체 발생 시 이용 가능한 방향별 휴게소 정보를 확인해 보시기 바랍니다.
+          {road.description} 실시간 교통정보 확인 채널을 통해 노선의 구간별 주행 속도와 CCTV 모니터링 화면을 직접 조회할 수 있으며, 정체나 돌발 상황 발생 시 이용 가능한 노선 내 방향별 휴게소 정보를 함께 파악할 수 있습니다.
         </p>
       </div>
 
