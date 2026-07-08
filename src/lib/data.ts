@@ -356,7 +356,7 @@ export const serviceAreas: ServiceArea[] = [
     "highwayName": "경부고속도로",
     "locationKm": 10,
     "signatureMenu": {
-      "name": "★옛날돈까스",
+      "name": "옛날돈까스",
       "price": 11500,
       "description": "한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.",
       "isExFood": true
@@ -379,7 +379,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 8000
       },
       {
-        "name": "라면_EX라면",
+        "name": "EX라면",
         "price": 4000
       },
       {
@@ -399,31 +399,31 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7000
       },
       {
-        "name": "★매운돈까스",
+        "name": "매운돈까스",
         "price": 12000
       },
       {
-        "name": "★잔치국수",
+        "name": "잔치국수",
         "price": 7000
       },
       {
-        "name": "★돈비국수",
+        "name": "돈비국수",
         "price": 10500
       },
       {
-        "name": "★국물비빔국수",
+        "name": "국물비빔국수",
         "price": 8000
       },
       {
-        "name": "★돈잔국수",
+        "name": "돈잔국수",
         "price": 9500
       },
       {
-        "name": "★돈모밀국수",
+        "name": "돈모밀국수",
         "price": 10500
       },
       {
-        "name": "★냉모밀",
+        "name": "냉모밀",
         "price": 8000
       },
       {
@@ -439,15 +439,15 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9500
       },
       {
-        "name": "농심가락우동_자장면",
+        "name": "자장면",
         "price": 6500
       },
       {
-        "name": "★치즈돈가스",
+        "name": "치즈돈가스",
         "price": 13500
       },
       {
-        "name": "라면_라면정식(떡라면,공기밥)",
+        "name": "라면정식(떡라면,공기밥)",
         "price": 5900
       },
       {
@@ -487,7 +487,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 12000
       },
       {
-        "name": "라면_떡라면",
+        "name": "떡라면",
         "price": 5000
       },
       {
@@ -551,7 +551,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7000
       },
       {
-        "name": "★(실속상품)돈가스",
+        "name": "(실속) 돈가스",
         "price": 10000
       },
       {
@@ -645,11 +645,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 11000
       },
       {
-        "name": "실속_카레라이스정식",
+        "name": "카레라이스정식",
         "price": 7000
       },
       {
-        "name": "실속_김치볶음밥정식",
+        "name": "김치볶음밥정식",
         "price": 7000
       },
       {
@@ -669,7 +669,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 8000
       },
       {
-        "name": "실속_가락우동",
+        "name": "가락우동",
         "price": 5500
       },
       {
@@ -677,7 +677,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 4000
       },
       {
-        "name": "실속_돈가스정식",
+        "name": "돈가스정식",
         "price": 10000
       },
       {
@@ -1166,11 +1166,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9500
       },
       {
-        "name": "(실속상품)소고기무국",
+        "name": "(실속) 소고기무국",
         "price": 7000
       },
       {
-        "name": "(실속상품)등심돈가스",
+        "name": "(실속) 등심돈가스",
         "price": 10000
       },
       {
@@ -1182,7 +1182,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6000
       },
       {
-        "name": "(실속상품)유부우동",
+        "name": "(실속) 유부우동",
         "price": 5500
       },
       {
@@ -1194,7 +1194,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7500
       },
       {
-        "name": "(실속상품)ex라면",
+        "name": "(실속) ex라면",
         "price": 4000
       },
       {
@@ -1226,7 +1226,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 12000
       },
       {
-        "name": "(실속상품)콩나물황태국",
+        "name": "(실속) 콩나물황태국",
         "price": 7000
       },
       {
@@ -1242,7 +1242,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7500
       },
       {
-        "name": "(실속상품)된장찌개",
+        "name": "(실속) 된장찌개",
         "price": 7000
       },
       {
@@ -1425,7 +1425,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6900
       },
       {
-        "name": "(실속상품)한신즉석우동",
+        "name": "(실속) 한신즉석우동",
         "price": 5500
       },
       {
@@ -1441,7 +1441,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10000
       },
       {
-        "name": "(실속상품)소고기미역국",
+        "name": "(실속) 소고기미역국",
         "price": 7000
       },
       {
@@ -1469,7 +1469,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 11600
       },
       {
-        "name": "(실속상품)돈가스",
+        "name": "(실속) 돈가스",
         "price": 10000
       },
       {
@@ -2405,7 +2405,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 5500
       },
       {
-        "name": "(실속상품)된장찌개",
+        "name": "(실속) 된장찌개",
         "price": 7000
       },
       {
@@ -2421,7 +2421,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 14000
       },
       {
-        "name": "(실속상품)돈가스",
+        "name": "(실속) 돈가스",
         "price": 10000
       },
       {
@@ -2818,7 +2818,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9000
       },
       {
-        "name": "(실속상품)된장찌개",
+        "name": "(실속) 된장찌개",
         "price": 7000
       },
       {
@@ -2826,7 +2826,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9500
       },
       {
-        "name": "(실속상품)바지락표고미역국",
+        "name": "(실속) 바지락표고미역국",
         "price": 7000
       },
       {
@@ -2854,7 +2854,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 5500
       },
       {
-        "name": "(실속상품)EX-라면",
+        "name": "(실속) EX-라면",
         "price": 4000
       },
       {
@@ -2882,7 +2882,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 8000
       },
       {
-        "name": "(실속상품)실속우동",
+        "name": "(실속) 실속우동",
         "price": 5500
       },
       {
@@ -3570,7 +3570,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 8500
       },
       {
-        "name": "(실속상품)콩나물해장국",
+        "name": "(실속) 콩나물해장국",
         "price": 7000
       },
       {
@@ -3590,7 +3590,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10500
       },
       {
-        "name": "(실속상품)등심돈가스",
+        "name": "(실속) 등심돈가스",
         "price": 10000
       },
       {
@@ -3598,7 +3598,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9000
       },
       {
-        "name": "(실속상품)우렁된장찌개",
+        "name": "(실속) 우렁된장찌개",
         "price": 7000
       },
       {
@@ -3638,7 +3638,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 8500
       },
       {
-        "name": "(실속상품)ex라면",
+        "name": "(실속) ex라면",
         "price": 4000
       },
       {
@@ -3698,7 +3698,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 8000
       },
       {
-        "name": "(실속상품)옛날우동",
+        "name": "(실속) 옛날우동",
         "price": 5500
       },
       {
@@ -3973,7 +3973,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3700
       },
       {
-        "name": "(실속상품)듬심돈가스",
+        "name": "(실속) 듬심돈가스",
         "price": 10000
       },
       {
@@ -4064,7 +4064,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9500
       },
       {
-        "name": "(실속상품)콩나물국밥",
+        "name": "(실속) 콩나물국밥",
         "price": 7000
       },
       {
@@ -4084,7 +4084,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 5000
       },
       {
-        "name": "(실속상품)ex라면",
+        "name": "(실속) ex라면",
         "price": 4000
       },
       {
@@ -4104,7 +4104,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 11000
       },
       {
-        "name": "(실속상품)등심돈가스",
+        "name": "(실속) 등심돈가스",
         "price": 10000
       },
       {
@@ -4921,19 +4921,19 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
-        "name": "실속_가락우동",
+        "name": "가락우동",
         "price": 5500
       },
       {
-        "name": "실속_돈가스정식",
+        "name": "돈가스정식",
         "price": 10000
       },
       {
-        "name": "실속_단배추 된장국 정식",
+        "name": "단배추 된장국 정식",
         "price": 7000
       },
       {
-        "name": "실속_카레라이스",
+        "name": "카레라이스",
         "price": 7000
       },
       {
@@ -4953,51 +4953,51 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3700
       },
       {
-        "name": "실속_소떡소떡",
+        "name": "소떡소떡",
         "price": 3700
       },
       {
-        "name": "실속_포크소시지",
+        "name": "포크소시지",
         "price": 3700
       },
       {
-        "name": "실속_우리밀핫도그",
+        "name": "우리밀핫도그",
         "price": 3700
       },
       {
-        "name": "실속_웨스턴핫바(매운맛)",
+        "name": "웨스턴핫바(매운맛)",
         "price": 3700
       },
       {
-        "name": "실속_웨스턴핫바",
+        "name": "웨스턴핫바",
         "price": 3700
       },
       {
-        "name": "실속_통감자",
+        "name": "통감자",
         "price": 3700
       },
       {
-        "name": "실속_옥수수",
+        "name": "옥수수",
         "price": 3700
       },
       {
-        "name": "실속_츄로비츄러스",
+        "name": "츄로비츄러스",
         "price": 3700
       },
       {
-        "name": "실속_신신떡볶이",
+        "name": "신신떡볶이",
         "price": 3700
       },
       {
-        "name": "실속_꼬치어묵",
+        "name": "꼬치어묵",
         "price": 3700
       },
       {
-        "name": "실속_치킨팝콘",
+        "name": "치킨팝콘",
         "price": 3700
       },
       {
-        "name": "실속_바삭어포",
+        "name": "바삭어포",
         "price": 3700
       },
       {
@@ -5090,11 +5090,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7000
       },
       {
-        "name": "실속_카레라이스정식",
+        "name": "카레라이스정식",
         "price": 7000
       },
       {
-        "name": "실속_가락우동",
+        "name": "가락우동",
         "price": 5500
       },
       {
@@ -5490,11 +5490,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10000
       },
       {
-        "name": "(실속상품)차돌된장찌개",
+        "name": "(실속) 차돌된장찌개",
         "price": 7000
       },
       {
-        "name": "(실속상품)로봇우동",
+        "name": "(실속) 로봇우동",
         "price": 5500
       },
       {
@@ -5502,7 +5502,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7000
       },
       {
-        "name": "(실속상품)돈가스",
+        "name": "(실속) 돈가스",
         "price": 10000
       },
       {
@@ -5530,7 +5530,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9500
       },
       {
-        "name": "(실속상품)황태미역국",
+        "name": "(실속) 황태미역국",
         "price": 7000
       },
       {
@@ -5760,15 +5760,15 @@ export const serviceAreas: ServiceArea[] = [
         "price": 4000
       },
       {
-        "name": "할인묶음_국민분식B(얼큰해물라면+추억의간장꼬마김밥)",
+        "name": "국민분식B(얼큰해물라면+추억의간장꼬마김밥)",
         "price": 11000
       },
       {
-        "name": "할인묶음_국민분식A(얼큰해물라면+소풍길충무김밥)",
+        "name": "국민분식A(얼큰해물라면+소풍길충무김밥)",
         "price": 11000
       },
       {
-        "name": "실속_가락우동",
+        "name": "가락우동",
         "price": 5500
       },
       {
@@ -5780,7 +5780,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 8500
       },
       {
-        "name": "실속_분식집케첩돈가스",
+        "name": "분식집케첩돈가스",
         "price": 10000
       }
     ],
@@ -6377,11 +6377,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7900
       },
       {
-        "name": "남산_냉모밀",
+        "name": "냉모밀",
         "price": 9900
       },
       {
-        "name": "남산_쫄면",
+        "name": "쫄면",
         "price": 9900
       },
       {
@@ -6977,7 +6977,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10500
       },
       {
-        "name": "히노아지_냉모밀",
+        "name": "냉모밀",
         "price": 10000
       },
       {
@@ -7084,7 +7084,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9000
       },
       {
-        "name": "(실속상품)옛날돈가스",
+        "name": "(실속) 옛날돈가스",
         "price": 10000
       },
       {
@@ -7100,11 +7100,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6000
       },
       {
-        "name": "(실속상품)유부우동",
+        "name": "(실속) 유부우동",
         "price": 5500
       },
       {
-        "name": "(실속상품)EX라면",
+        "name": "(실속) EX라면",
         "price": 4000
       },
       {
@@ -7140,7 +7140,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6400
       },
       {
-        "name": "(실속상품)김치볶음밥",
+        "name": "(실속) 김치볶음밥",
         "price": 7000
       },
       {
@@ -7772,19 +7772,19 @@ export const serviceAreas: ServiceArea[] = [
         "price": 5700
       },
       {
-        "name": "ICE_얼그레이",
+        "name": "얼그레이",
         "price": 5700
       },
       {
-        "name": "HOT_얼그레이",
+        "name": "얼그레이",
         "price": 5700
       },
       {
-        "name": "HOT_페퍼민트",
+        "name": "페퍼민트",
         "price": 5700
       },
       {
-        "name": "ICE_페퍼민트",
+        "name": "페퍼민트",
         "price": 5700
       },
       {
@@ -7796,27 +7796,27 @@ export const serviceAreas: ServiceArea[] = [
         "price": 5700
       },
       {
-        "name": "ICE_자몽차",
+        "name": "자몽차",
         "price": 5200
       },
       {
-        "name": "HOT_자몽차",
+        "name": "자몽차",
         "price": 5200
       },
       {
-        "name": "ICE_유자차",
+        "name": "유자차",
         "price": 5200
       },
       {
-        "name": "HOT_유자차",
+        "name": "유자차",
         "price": 5200
       },
       {
-        "name": "ICE_납작복숭아아이스티(R)",
+        "name": "납작복숭아아이스티(R)",
         "price": 4700
       },
       {
-        "name": "ICE_납작복숭아아이스티(L)",
+        "name": "납작복숭아아이스티(L)",
         "price": 5200
       },
       {
@@ -7828,7 +7828,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 5700
       },
       {
-        "name": "ICE_귀리미숫가루라떼",
+        "name": "귀리미숫가루라떼",
         "price": 5700
       },
       {
@@ -7836,15 +7836,15 @@ export const serviceAreas: ServiceArea[] = [
         "price": 5700
       },
       {
-        "name": "HOT_초콜릿라떼",
+        "name": "초콜릿라떼",
         "price": 5700
       },
       {
-        "name": "ICE_밤고구마라떼",
+        "name": "밤고구마라떼",
         "price": 5700
       },
       {
-        "name": "HOT_밤고구마라떼",
+        "name": "밤고구마라떼",
         "price": 5700
       },
       {
@@ -7856,7 +7856,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 5700
       },
       {
-        "name": "ICE_딸기달콤라떼",
+        "name": "딸기달콤라떼",
         "price": 5700
       },
       {
@@ -8064,7 +8064,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "(실속상품)시락국",
+        "name": "(실속) 시락국",
         "price": 7000
       },
       {
@@ -8167,7 +8167,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9000
       },
       {
-        "name": "(실속상품)돈가스",
+        "name": "(실속) 돈가스",
         "price": 9900
       },
       {
@@ -8836,11 +8836,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9500
       },
       {
-        "name": "(실속상품)ex-라면",
+        "name": "(실속) ex-라면",
         "price": 4000
       },
       {
-        "name": "(실속상품)소고기미역",
+        "name": "(실속) 소고기미역",
         "price": 7000
       },
       {
@@ -8880,7 +8880,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 13900
       },
       {
-        "name": "(실속상품) 옛날우동",
+        "name": "(실속) 옛날우동",
         "price": 5500
       },
       {
@@ -8896,7 +8896,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 11500
       },
       {
-        "name": "(실속상품)흑돈돈가스",
+        "name": "(실속) 흑돈돈가스",
         "price": 10000
       },
       {
@@ -8920,7 +8920,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 5000
       },
       {
-        "name": "(실속상품)참치김치덮밥",
+        "name": "(실속) 참치김치덮밥",
         "price": 7000
       },
       {
@@ -9010,7 +9010,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9500
       },
       {
-        "name": "(실속상품)ex-라면",
+        "name": "(실속) ex-라면",
         "price": 4000
       },
       {
@@ -9030,7 +9030,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6000
       },
       {
-        "name": "(실속상품)소고기미역국",
+        "name": "(실속) 소고기미역국",
         "price": 7000
       },
       {
@@ -9054,7 +9054,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 12500
       },
       {
-        "name": "(실속상품)옛날우동",
+        "name": "(실속) 옛날우동",
         "price": 5500
       },
       {
@@ -9066,7 +9066,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 12000
       },
       {
-        "name": "(실속상품)흑돈돈가스",
+        "name": "(실속) 흑돈돈가스",
         "price": 10000
       },
       {
@@ -9090,7 +9090,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 5000
       },
       {
-        "name": "(실속상품)참치김치덮밥",
+        "name": "(실속) 참치김치덮밥",
         "price": 7000
       },
       {
@@ -9171,7 +9171,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7000
       },
       {
-        "name": "(실속상품)EX라면",
+        "name": "(실속) EX라면",
         "price": 4000
       },
       {
@@ -9187,7 +9187,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10000
       },
       {
-        "name": "(실속상품)돈가스",
+        "name": "(실속) 돈가스",
         "price": 10000
       },
       {
@@ -9195,11 +9195,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 11000
       },
       {
-        "name": "(실속상품)얼갈이된장국",
+        "name": "(실속) 얼갈이된장국",
         "price": 7000
       },
       {
-        "name": "(실속상품)실속우동",
+        "name": "(실속) 실속우동",
         "price": 5500
       },
       {
@@ -9283,7 +9283,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7000
       },
       {
-        "name": "(실속상품)EX라면",
+        "name": "(실속) EX라면",
         "price": 4000
       },
       {
@@ -9307,15 +9307,15 @@ export const serviceAreas: ServiceArea[] = [
         "price": 11000
       },
       {
-        "name": "(실속상품)돈가스",
+        "name": "(실속) 돈가스",
         "price": 10000
       },
       {
-        "name": "(실속상품)얼갈이된장국",
+        "name": "(실속) 얼갈이된장국",
         "price": 7000
       },
       {
-        "name": "(실속상품)실속우동",
+        "name": "(실속) 실속우동",
         "price": 5500
       },
       {
@@ -9395,11 +9395,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9000
       },
       {
-        "name": "(실속상품)돈가스",
+        "name": "(실속) 돈가스",
         "price": 10000
       },
       {
-        "name": "(실속상품)남원시래기국밥",
+        "name": "(실속) 남원시래기국밥",
         "price": 7000
       },
       {
@@ -9407,7 +9407,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7500
       },
       {
-        "name": "(실속상품)ex-라면",
+        "name": "(실속) ex-라면",
         "price": 4000
       },
       {
@@ -9419,7 +9419,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 11000
       },
       {
-        "name": "(실속상품)우동",
+        "name": "(실속) 우동",
         "price": 5500
       },
       {
@@ -9447,7 +9447,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 11000
       },
       {
-        "name": "(실속상품)어린이돈가스",
+        "name": "(실속) 어린이돈가스",
         "price": 7000
       }
     ],
@@ -9507,7 +9507,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9000
       },
       {
-        "name": "(실속상품)돈가스",
+        "name": "(실속) 돈가스",
         "price": 10000
       },
       {
@@ -9519,11 +9519,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7500
       },
       {
-        "name": "(실속상품)ex-라면",
+        "name": "(실속) ex-라면",
         "price": 4000
       },
       {
-        "name": "(실속상품)남원시래기국밥",
+        "name": "(실속) 남원시래기국밥",
         "price": 7000
       },
       {
@@ -9535,7 +9535,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9500
       },
       {
-        "name": "(실속상품)우동",
+        "name": "(실속) 우동",
         "price": 5500
       },
       {
@@ -9563,7 +9563,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 11000
       },
       {
-        "name": "(실속상품)어린이돈가스",
+        "name": "(실속) 어린이돈가스",
         "price": 7000
       }
     ],
@@ -9855,7 +9855,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6000
       },
       {
-        "name": "(실속상품)어린이돈가스",
+        "name": "(실속) 어린이돈가스",
         "price": 7000
       },
       {
@@ -9924,7 +9924,7 @@ export const serviceAreas: ServiceArea[] = [
     "highwayName": "서해안고속도로",
     "locationKm": 304,
     "signatureMenu": {
-      "name": "(실속상품)수제등심돈가스",
+      "name": "(실속) 수제등심돈가스",
       "price": 9900,
       "description": "등심을 직접 두들겨 육질을 연하게 하여 빵가루를 입혀 바삭하게 튀겨낸 돈까스",
       "isExFood": true
@@ -9955,7 +9955,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 13000
       },
       {
-        "name": "(실속상품)등심돈가스",
+        "name": "(실속) 등심돈가스",
         "price": 10000
       },
       {
@@ -10023,11 +10023,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 13000
       },
       {
-        "name": "★(명품)대지순대국밥(특)",
+        "name": "(명품)대지순대국밥(특)",
         "price": 12000
       },
       {
-        "name": "★(명품)대지순대국밥",
+        "name": "(명품)대지순대국밥",
         "price": 9000
       },
       {
@@ -10127,7 +10127,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 8000
       },
       {
-        "name": "(실속상품)화성웰빙비빔밥",
+        "name": "(실속) 화성웰빙비빔밥",
         "price": 7000
       },
       {
@@ -10139,7 +10139,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6000
       },
       {
-        "name": "(실속상품)어린이돈가스",
+        "name": "(실속) 어린이돈가스",
         "price": 7000
       },
       {
@@ -11241,7 +11241,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
-        "name": "(실속상품)ex-라면",
+        "name": "(실속) ex-라면",
         "price": 4000
       },
       {
@@ -11269,7 +11269,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
-        "name": "(실속상품)실속우동",
+        "name": "(실속) 실속우동",
         "price": 5500
       },
       {
@@ -11277,15 +11277,15 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7500
       },
       {
-        "name": "(실속상품)실속돈까스",
+        "name": "(실속) 실속돈까스",
         "price": 10000
       },
       {
-        "name": "(실속상품)들깨미역국",
+        "name": "(실속) 들깨미역국",
         "price": 7000
       },
       {
-        "name": "(실속상품)순두부찌개",
+        "name": "(실속) 순두부찌개",
         "price": 7000
       },
       {
@@ -11347,11 +11347,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 14000
       },
       {
-        "name": "(실속상품)왕우렁된장국",
+        "name": "(실속) 왕우렁된장국",
         "price": 7000
       },
       {
-        "name": "(실속상품)ex-라면",
+        "name": "(실속) ex-라면",
         "price": 4000
       },
       {
@@ -11359,7 +11359,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 5500
       },
       {
-        "name": "(실속상품)유부우동",
+        "name": "(실속) 유부우동",
         "price": 5500
       },
       {
@@ -11383,7 +11383,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 8500
       },
       {
-        "name": "반듯한식_고기듬뿍수육곰탕",
+        "name": "고기듬뿍수육곰탕",
         "price": 12000
       },
       {
@@ -11435,7 +11435,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 13000
       },
       {
-        "name": "(실속상품)남산바삭돈",
+        "name": "(실속) 남산바삭돈",
         "price": 10000
       },
       {
@@ -11447,11 +11447,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7000
       },
       {
-        "name": "사이드_파김치",
+        "name": "파김치",
         "price": 2500
       },
       {
-        "name": "(실속상품)우렁콩나물해장국",
+        "name": "(실속) 우렁콩나물해장국",
         "price": 7000
       },
       {
@@ -11539,7 +11539,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 5500
       },
       {
-        "name": "(실속상품)순두부찌개",
+        "name": "(실속) 순두부찌개",
         "price": 7000
       },
       {
@@ -11547,7 +11547,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 12000
       },
       {
-        "name": "(실속상품)라면",
+        "name": "(실속) 라면",
         "price": 3500
       },
       {
@@ -11579,11 +11579,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 13500
       },
       {
-        "name": "(실속상품)등심돈가스",
+        "name": "(실속) 등심돈가스",
         "price": 10000
       },
       {
-        "name": "(실속상품)한신즉석우동",
+        "name": "(실속) 한신즉석우동",
         "price": 5500
       },
       {
@@ -12006,7 +12006,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 11000
       },
       {
-        "name": "(실속상품)로스등심돈가스",
+        "name": "(실속) 로스등심돈가스",
         "price": 10000
       },
       {
@@ -12034,7 +12034,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3500
       },
       {
-        "name": "(실속상품)유부우동",
+        "name": "(실속) 유부우동",
         "price": 5500
       },
       {
@@ -12054,7 +12054,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 5000
       },
       {
-        "name": "(실속상품)ex-라면",
+        "name": "(실속) ex-라면",
         "price": 4000
       },
       {
@@ -12139,15 +12139,15 @@ export const serviceAreas: ServiceArea[] = [
         "price": 11500
       },
       {
-        "name": "용우동_유부우동",
+        "name": "유부우동",
         "price": 5500
       },
       {
-        "name": "용우동_꼬치어묵우동",
+        "name": "꼬치어묵우동",
         "price": 7000
       },
       {
-        "name": "용우동_새우튀김우동",
+        "name": "새우튀김우동",
         "price": 7500
       },
       {
@@ -12159,7 +12159,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7000
       },
       {
-        "name": "코바코_불타는눈꽃등심돈가스",
+        "name": "불타는눈꽃등심돈가스",
         "price": 11500
       },
       {
@@ -12296,7 +12296,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 13000
       },
       {
-        "name": "(실속상품)작은돈가스",
+        "name": "(실속) 작은돈가스",
         "price": 7000
       },
       {
@@ -12304,7 +12304,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
-        "name": "(실속상품)유부우동",
+        "name": "(실속) 유부우동",
         "price": 5500
       },
       {
@@ -12312,7 +12312,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 4500
       },
       {
-        "name": "(실속상품)ex-라면",
+        "name": "(실속) ex-라면",
         "price": 4000
       },
       {
@@ -12332,7 +12332,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 12500
       },
       {
-        "name": "(실속상품)콩나물국밥",
+        "name": "(실속) 콩나물국밥",
         "price": 7000
       },
       {
@@ -12340,7 +12340,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10000
       },
       {
-        "name": "(실속상품)등심돈가스",
+        "name": "(실속) 등심돈가스",
         "price": 10000
       },
       {
@@ -12404,11 +12404,11 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
-        "name": "(실속상품)삼채된장찌개",
+        "name": "(실속) 삼채된장찌개",
         "price": 7000
       },
       {
-        "name": "(실속상품)돈가스",
+        "name": "(실속) 돈가스",
         "price": 10000
       },
       {
@@ -12424,11 +12424,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 11000
       },
       {
-        "name": "(실속상품)EX-라면",
+        "name": "(실속) EX-라면",
         "price": 4000
       },
       {
-        "name": "(실속상품)유부우동",
+        "name": "(실속) 유부우동",
         "price": 5500
       },
       {
@@ -12484,7 +12484,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 13000
       },
       {
-        "name": "(실속상품)어린이돈가스",
+        "name": "(실속) 어린이돈가스",
         "price": 7000
       },
       {
@@ -12561,7 +12561,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10000
       },
       {
-        "name": "[실속상품]   들깨미역국",
+        "name": "[실속상품] 들깨미역국",
         "price": 7000
       },
       {
@@ -12589,7 +12589,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 12000
       },
       {
-        "name": "[실속상품]   닭개장",
+        "name": "[실속상품] 닭개장",
         "price": 7000
       },
       {
@@ -12697,11 +12697,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10000
       },
       {
-        "name": "(실속상품)치즈돈까스",
+        "name": "(실속) 치즈돈까스",
         "price": 10000
       },
       {
-        "name": "(실속상품)등심순살돈가스",
+        "name": "(실속) 등심순살돈가스",
         "price": 10000
       },
       {
@@ -12709,11 +12709,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 8500
       },
       {
-        "name": "(실속상품)콩나물김치국밥",
+        "name": "(실속) 콩나물김치국밥",
         "price": 7000
       },
       {
-        "name": "(실속상품)ex라면",
+        "name": "(실속) ex라면",
         "price": 4000
       },
       {
@@ -12737,7 +12737,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 8500
       },
       {
-        "name": "(실속상품)우동",
+        "name": "(실속) 우동",
         "price": 5500
       },
       {
@@ -12757,7 +12757,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 8500
       },
       {
-        "name": "(실속상품)어린이돈가스",
+        "name": "(실속) 어린이돈가스",
         "price": 7000
       },
       {
@@ -12777,7 +12777,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6000
       },
       {
-        "name": "(실속상품)해물된장찌개",
+        "name": "(실속) 해물된장찌개",
         "price": 7000
       },
       {
@@ -12854,11 +12854,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10000
       },
       {
-        "name": "(실속상품)옛날돈가스",
+        "name": "(실속) 옛날돈가스",
         "price": 10000
       },
       {
-        "name": "(실속상품)유부우동",
+        "name": "(실속) 유부우동",
         "price": 5500
       },
       {
@@ -12866,7 +12866,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7000
       },
       {
-        "name": "(실속상품)EX라면",
+        "name": "(실속) EX라면",
         "price": 4000
       },
       {
@@ -12974,7 +12974,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10000
       },
       {
-        "name": "(실속상품)콩나물국밥",
+        "name": "(실속) 콩나물국밥",
         "price": 7000
       },
       {
@@ -12982,11 +12982,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 12000
       },
       {
-        "name": "(실속상품) 옛날 돈가스",
+        "name": "(실속) 옛날 돈가스",
         "price": 10000
       },
       {
-        "name": "(실속상품)유부 우동",
+        "name": "(실속) 유부 우동",
         "price": 5500
       },
       {
@@ -12994,7 +12994,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7000
       },
       {
-        "name": "(실속상품)EX라면",
+        "name": "(실속) EX라면",
         "price": 4000
       },
       {
@@ -13154,7 +13154,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10000
       },
       {
-        "name": "돈가스_실속상품",
+        "name": "실속상품",
         "price": 10000
       },
       {
@@ -13162,11 +13162,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 11000
       },
       {
-        "name": "순두부찌개_실속상품",
+        "name": "실속상품",
         "price": 7000
       },
       {
-        "name": "된장찌개_실속상품",
+        "name": "실속상품",
         "price": 7000
       },
       {
@@ -13222,7 +13222,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7500
       },
       {
-        "name": "유부우동_실속상품",
+        "name": "실속상품",
         "price": 5500
       },
       {
@@ -13361,7 +13361,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10000
       },
       {
-        "name": "(실속상품)자장밥(향미암)",
+        "name": "(실속) 자장밥(향미암)",
         "price": 7000
       },
       {
@@ -13373,7 +13373,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7000
       },
       {
-        "name": "(실속상품)된장찌개(이천한상)",
+        "name": "(실속) 된장찌개(이천한상)",
         "price": 7000
       },
       {
@@ -13401,7 +13401,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7000
       },
       {
-        "name": "(실속상품)EX-라면(라면)",
+        "name": "(실속) EX-라면(라면)",
         "price": 4000
       },
       {
@@ -13461,11 +13461,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 4500
       },
       {
-        "name": "(실속상품)유부우동(향미암)",
+        "name": "(실속) 유부우동(향미암)",
         "price": 5500
       },
       {
-        "name": "(실속상품)콩나물황태해장국(유가네)",
+        "name": "(실속) 콩나물황태해장국(유가네)",
         "price": 7000
       },
       {
@@ -13537,11 +13537,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 11000
       },
       {
-        "name": "(실속상품)돈까스",
+        "name": "(실속) 돈까스",
         "price": 10000
       },
       {
-        "name": "(실속상품)돈까스",
+        "name": "(실속) 돈까스",
         "price": 10000
       }
     ],
@@ -13606,7 +13606,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 8000
       },
       {
-        "name": "(실속상품)장터국밥",
+        "name": "(실속) 장터국밥",
         "price": 7000
       },
       {
@@ -13618,7 +13618,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9500
       },
       {
-        "name": "(실속상품)옛날돈가스",
+        "name": "(실속) 옛날돈가스",
         "price": 10000
       },
       {
@@ -13630,11 +13630,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 5000
       },
       {
-        "name": "(실속상품)EX-라면",
+        "name": "(실속) EX-라면",
         "price": 4000
       },
       {
-        "name": "(실속상품)유부우동",
+        "name": "(실속) 유부우동",
         "price": 5500
       },
       {
@@ -14371,11 +14371,11 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
-        "name": "(실속상품)돈가스",
+        "name": "(실속) 돈가스",
         "price": 10000
       },
       {
-        "name": "(실속상품)고추장찌개",
+        "name": "(실속) 고추장찌개",
         "price": 7000
       },
       {
@@ -14383,7 +14383,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6000
       },
       {
-        "name": "(실속상품)우동",
+        "name": "(실속) 우동",
         "price": 5500
       },
       {
@@ -14407,11 +14407,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10000
       },
       {
-        "name": "(실속상품)엄나무닭개장",
+        "name": "(실속) 엄나무닭개장",
         "price": 7000
       },
       {
-        "name": "(실속상품)ex라면",
+        "name": "(실속) ex라면",
         "price": 4000
       },
       {
@@ -14479,7 +14479,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10000
       },
       {
-        "name": "(실속상품)어린이돈가스",
+        "name": "(실속) 어린이돈가스",
         "price": 7000
       },
       {
@@ -14539,7 +14539,7 @@ export const serviceAreas: ServiceArea[] = [
     "highwayName": "통영대전고속도로",
     "locationKm": 157,
     "signatureMenu": {
-      "name": "(실속상품)ex-라면",
+      "name": "(실속) ex-라면",
       "price": 4000,
       "description": "한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.",
       "isExFood": true
@@ -14574,7 +14574,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 11500
       },
       {
-        "name": "(실속상품)들깨시래기국",
+        "name": "(실속) 들깨시래기국",
         "price": 7000
       },
       {
@@ -14582,7 +14582,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9500
       },
       {
-        "name": "(실속상품)전복내장미역국",
+        "name": "(실속) 전복내장미역국",
         "price": 7000
       },
       {
@@ -15152,15 +15152,15 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9500
       },
       {
-        "name": "(실속상품)EX-라면",
+        "name": "(실속) EX-라면",
         "price": 4000
       },
       {
-        "name": "(실속상품)들깨미역국밥",
+        "name": "(실속) 들깨미역국밥",
         "price": 7000
       },
       {
-        "name": "(실속상품)시래기국밥",
+        "name": "(실속) 시래기국밥",
         "price": 7000
       },
       {
@@ -15176,11 +15176,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 12000
       },
       {
-        "name": "(실속상품)실속우동",
+        "name": "(실속) 실속우동",
         "price": 5500
       },
       {
-        "name": "(실속상품)등심돈가스",
+        "name": "(실속) 등심돈가스",
         "price": 10000
       }
     ],
@@ -15241,7 +15241,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 11000
       },
       {
-        "name": "우리돼지  김치찌개",
+        "name": "우리돼지 김치찌개",
         "price": 10000
       },
       {
@@ -15317,7 +15317,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 1000
       },
       {
-        "name": "(실속상품)실속우동",
+        "name": "(실속) 실속우동",
         "price": 5500
       },
       {
@@ -15582,7 +15582,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 5000
       },
       {
-        "name": "(실속상품)ex라면",
+        "name": "(실속) ex라면",
         "price": 4000
       },
       {
@@ -15630,7 +15630,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7000
       },
       {
-        "name": "(실속상품)우렁된장찌개",
+        "name": "(실속) 우렁된장찌개",
         "price": 7000
       },
       {
@@ -16013,7 +16013,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9500
       },
       {
-        "name": "(실속상품)바지락미역국",
+        "name": "(실속) 바지락미역국",
         "price": 7000
       },
       {
@@ -16021,7 +16021,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9500
       },
       {
-        "name": "(실속상품)유부우동",
+        "name": "(실속) 유부우동",
         "price": 5500
       },
       {
@@ -16029,11 +16029,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7000
       },
       {
-        "name": "(실속상품)ex-라면",
+        "name": "(실속) ex-라면",
         "price": 4000
       },
       {
-        "name": "(실속상품)영산시락국밥",
+        "name": "(실속) 영산시락국밥",
         "price": 7000
       },
       {
@@ -16165,7 +16165,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 11000
       },
       {
-        "name": "(실속상품)남산돈까스",
+        "name": "(실속) 남산돈까스",
         "price": 10000
       },
       {
@@ -16267,14 +16267,14 @@ export const serviceAreas: ServiceArea[] = [
     "highwayName": "중부내륙고속도로",
     "locationKm": 234,
     "signatureMenu": {
-      "name": "(실속상품)콩나물국밥",
+      "name": "(실속) 콩나물국밥",
       "price": 7000,
       "description": "한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.",
       "isExFood": true
     },
     "otherMenus": [
       {
-        "name": "(실속상품)옛날된장찌개",
+        "name": "(실속) 옛날된장찌개",
         "price": 7000
       },
       {
@@ -16318,7 +16318,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 5500
       },
       {
-        "name": "(실속상품)EX-라면",
+        "name": "(실속) EX-라면",
         "price": 4000
       },
       {
@@ -16326,7 +16326,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9500
       },
       {
-        "name": "★순대뚝배기",
+        "name": "순대뚝배기",
         "price": 10000
       },
       {
@@ -16362,7 +16362,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7000
       },
       {
-        "name": "(실속상품)남산돈까스",
+        "name": "(실속) 남산돈까스",
         "price": 10000
       },
       {
@@ -16370,7 +16370,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10000
       },
       {
-        "name": "(실속상품)유부우동",
+        "name": "(실속) 유부우동",
         "price": 5500
       }
     ],
@@ -16478,7 +16478,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9500
       },
       {
-        "name": "★샘밭막국수",
+        "name": "샘밭막국수",
         "price": 9000
       },
       {
@@ -16486,7 +16486,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 13500
       },
       {
-        "name": "(실속상품)우동",
+        "name": "(실속) 우동",
         "price": 5500
       },
       {
@@ -16510,7 +16510,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7000
       },
       {
-        "name": "(실속상품)등심돈가스",
+        "name": "(실속) 등심돈가스",
         "price": 10000
       },
       {
@@ -16632,7 +16632,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 11500
       },
       {
-        "name": "★샘밭막국수",
+        "name": "샘밭막국수",
         "price": 9000
       },
       {
@@ -16879,7 +16879,7 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
-        "name": "(실속상품)된장찌개",
+        "name": "(실속) 된장찌개",
         "price": 7000
       },
       {
@@ -16895,7 +16895,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 8500
       },
       {
-        "name": "(실속상품)순두부찌개",
+        "name": "(실속) 순두부찌개",
         "price": 7000
       },
       {
@@ -16999,7 +16999,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "(실속상품)휴봇라면",
+        "name": "(실속) 휴봇라면",
         "price": 4000
       },
       {
@@ -17047,7 +17047,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 13000
       },
       {
-        "name": "(실속상품)우동",
+        "name": "(실속) 우동",
         "price": 5500
       },
       {
@@ -17071,7 +17071,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 5500
       },
       {
-        "name": "(실속상품)돈까스",
+        "name": "(실속) 돈까스",
         "price": 10000
       }
     ],
@@ -17766,7 +17766,7 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
-        "name": "(실속상품)들깨미역국",
+        "name": "(실속) 들깨미역국",
         "price": 7000
       },
       {
@@ -17774,7 +17774,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10000
       },
       {
-        "name": "(실속상품)등심돈까스",
+        "name": "(실속) 등심돈까스",
         "price": 10000
       },
       {
@@ -17806,7 +17806,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 14000
       },
       {
-        "name": "(실속상품)EX라면",
+        "name": "(실속) EX라면",
         "price": 4000
       },
       {
@@ -17814,7 +17814,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6000
       },
       {
-        "name": "(실속상품)즉석우동",
+        "name": "(실속) 즉석우동",
         "price": 5500
       },
       {
@@ -17842,7 +17842,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 14000
       },
       {
-        "name": "(실속상품)된장찌개",
+        "name": "(실속) 된장찌개",
         "price": 7000
       },
       {
@@ -18414,7 +18414,7 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
-        "name": "(실속상품)콩나물해장국",
+        "name": "(실속) 콩나물해장국",
         "price": 7000
       },
       {
@@ -18482,7 +18482,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 8500
       },
       {
-        "name": "(실속상품)소고기국밥",
+        "name": "(실속) 소고기국밥",
         "price": 7000
       },
       {
@@ -18526,11 +18526,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 8000
       },
       {
-        "name": "(실속상품)돈까스",
+        "name": "(실속) 돈까스",
         "price": 10000
       },
       {
-        "name": "(실속상품)즉석우동",
+        "name": "(실속) 즉석우동",
         "price": 5500
       },
       {
@@ -18640,7 +18640,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 8000
       },
       {
-        "name": "(실속상품)즉석우동",
+        "name": "(실속) 즉석우동",
         "price": 5500
       },
       {
@@ -18652,7 +18652,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 5000
       },
       {
-        "name": "(실속상품)ex-라면",
+        "name": "(실속) ex-라면",
         "price": 4000
       },
       {
@@ -18660,7 +18660,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9500
       },
       {
-        "name": "(실속상품)버섯된장찌개",
+        "name": "(실속) 버섯된장찌개",
         "price": 7000
       },
       {
@@ -18692,7 +18692,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10500
       },
       {
-        "name": "(실속상품)콩나물해장국",
+        "name": "(실속) 콩나물해장국",
         "price": 7000
       },
       {
@@ -18704,7 +18704,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10500
       },
       {
-        "name": "(실속상품)돈가스",
+        "name": "(실속) 돈가스",
         "price": 10000
       },
       {
@@ -18792,7 +18792,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 12000
       },
       {
-        "name": "(실속상품)휴봇우동",
+        "name": "(실속) 휴봇우동",
         "price": 5500
       },
       {
@@ -18800,15 +18800,15 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7000
       },
       {
-        "name": "(실속상품)휴봇라면",
+        "name": "(실속) 휴봇라면",
         "price": 4000
       },
       {
-        "name": "(실속상품)소고기미역국",
+        "name": "(실속) 소고기미역국",
         "price": 7000
       },
       {
-        "name": "(실속상품)돈가스",
+        "name": "(실속) 돈가스",
         "price": 10000
       },
       {
@@ -18881,7 +18881,7 @@ export const serviceAreas: ServiceArea[] = [
     "highwayName": "중앙고속도로",
     "locationKm": 332,
     "signatureMenu": {
-      "name": "얼큰황태순두부_주물솥밥",
+      "name": "주물솥밥",
       "price": 12000,
       "description": "한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.",
       "isExFood": true
@@ -18912,7 +18912,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6000
       },
       {
-        "name": "(실속상품)ex-라면",
+        "name": "(실속) ex-라면",
         "price": 4000
       },
       {
@@ -18972,7 +18972,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7000
       },
       {
-        "name": "(실속상품)콩비지찌개",
+        "name": "(실속) 콩비지찌개",
         "price": 7000
       },
       {
@@ -18980,7 +18980,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 12500
       },
       {
-        "name": "(실속상품)옛날돈까스",
+        "name": "(실속) 옛날돈까스",
         "price": 10000
       },
       {
@@ -19028,7 +19028,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 13000
       },
       {
-        "name": "(실속상품)실속우동",
+        "name": "(실속) 실속우동",
         "price": 5500
       },
       {
@@ -19044,15 +19044,15 @@ export const serviceAreas: ServiceArea[] = [
         "price": 2500
       },
       {
-        "name": "얼큰황태순두부_공기밥",
+        "name": "공기밥",
         "price": 9000
       },
       {
-        "name": "육개장_공기밥",
+        "name": "공기밥",
         "price": 10000
       },
       {
-        "name": "고기곰탕_공기밥",
+        "name": "공기밥",
         "price": 10000
       },
       {
@@ -19604,7 +19604,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9000
       },
       {
-        "name": "(실속상품)쇠고기미역국",
+        "name": "(실속) 쇠고기미역국",
         "price": 7000
       }
     ],
@@ -20062,11 +20062,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10000
       },
       {
-        "name": "(실속상품)된장찌개",
+        "name": "(실속) 된장찌개",
         "price": 7000
       },
       {
-        "name": "(실속상품)돈가스",
+        "name": "(실속) 돈가스",
         "price": 10000
       },
       {
@@ -20106,7 +20106,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7500
       },
       {
-        "name": "(실속상품)ex-라면",
+        "name": "(실속) ex-라면",
         "price": 4000
       },
       {
@@ -20202,7 +20202,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3700
       },
       {
-        "name": "(실속상품)우동",
+        "name": "(실속) 우동",
         "price": 5500
       },
       {
@@ -20651,7 +20651,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 11000
       },
       {
-        "name": "(실속상품)즉석우동",
+        "name": "(실속) 즉석우동",
         "price": 5500
       },
       {
@@ -20671,7 +20671,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9000
       },
       {
-        "name": "(실속상품)등심돈가스",
+        "name": "(실속) 등심돈가스",
         "price": 10000
       },
       {
@@ -20807,11 +20807,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9500
       },
       {
-        "name": "(실속상품)가정식된장찌개",
+        "name": "(실속) 가정식된장찌개",
         "price": 7000
       },
       {
-        "name": "(실속상품)유부우동",
+        "name": "(실속) 유부우동",
         "price": 5500
       },
       {
@@ -20819,7 +20819,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 5500
       },
       {
-        "name": "(실속상품)ex-라면",
+        "name": "(실속) ex-라면",
         "price": 4000
       },
       {
@@ -20903,7 +20903,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 5500
       },
       {
-        "name": "(실속상품)남산등심돈까스",
+        "name": "(실속) 남산등심돈까스",
         "price": 10000
       },
       {
@@ -20927,7 +20927,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 500
       },
       {
-        "name": "(실속상품)달성누룽지미역국",
+        "name": "(실속) 달성누룽지미역국",
         "price": 7000
       },
       {
@@ -21014,15 +21014,15 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
-        "name": "(실속상품)유부우동",
+        "name": "(실속) 유부우동",
         "price": 5500
       },
       {
-        "name": "(실속상품)EX - 라면",
+        "name": "(실속) EX - 라면",
         "price": 4000
       },
       {
-        "name": "(실속상품)가정식된장찌개",
+        "name": "(실속) 가정식된장찌개",
         "price": 7000
       },
       {
@@ -21118,7 +21118,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10000
       },
       {
-        "name": "(실속상품)남산등심돈까스",
+        "name": "(실속) 남산등심돈까스",
         "price": 10000
       },
       {
@@ -21162,7 +21162,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9000
       },
       {
-        "name": "(실속상품)달성누룽지미역국",
+        "name": "(실속) 달성누룽지미역국",
         "price": 7000
       },
       {
@@ -21517,7 +21517,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 5500
       },
       {
-        "name": "(실속상품)ex-라면(4000)",
+        "name": "(실속) ex-라면(4000)",
         "price": 4000
       },
       {
@@ -21589,7 +21589,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9000
       },
       {
-        "name": "(실속상품)우동",
+        "name": "(실속) 우동",
         "price": 5500
       },
       {
@@ -21947,7 +21947,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 13500
       },
       {
-        "name": "(실속상품)버섯된장찌개",
+        "name": "(실속) 버섯된장찌개",
         "price": 7000
       },
       {
@@ -21955,11 +21955,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6000
       },
       {
-        "name": "(실속상품) ex라면",
+        "name": "(실속) ex라면",
         "price": 4000
       },
       {
-        "name": "(실속상품)돈까스",
+        "name": "(실속) 돈까스",
         "price": 10000
       },
       {
@@ -21975,11 +21975,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 8000
       },
       {
-        "name": "(실속상품)우동",
+        "name": "(실속) 우동",
         "price": 5500
       },
       {
-        "name": "(실속상품)돼지김치찌개",
+        "name": "(실속) 돼지김치찌개",
         "price": 7000
       }
     ],
@@ -22076,7 +22076,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 11000
       },
       {
-        "name": "(실속상품)미역국",
+        "name": "(실속) 미역국",
         "price": 6500
       },
       {
@@ -22092,11 +22092,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9000
       },
       {
-        "name": "(실속상품)ex-라면",
+        "name": "(실속) ex-라면",
         "price": 4000
       },
       {
-        "name": "(실속상품)우동",
+        "name": "(실속) 우동",
         "price": 5500
       },
       {
@@ -22742,11 +22742,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6000
       },
       {
-        "name": "(실속상품)EX라면",
+        "name": "(실속) EX라면",
         "price": 4000
       },
       {
-        "name": "(실속상품)등심돈가스",
+        "name": "(실속) 등심돈가스",
         "price": 10000
       },
       {
@@ -22762,7 +22762,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 5000
       },
       {
-        "name": "(실속상품)양짜덮밥",
+        "name": "(실속) 양짜덮밥",
         "price": 7000
       },
       {
@@ -23062,7 +23062,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 11000
       },
       {
-        "name": "(실속상품)옛날돈가스",
+        "name": "(실속) 옛날돈가스",
         "price": 10000
       },
       {
@@ -23094,7 +23094,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
-        "name": "(실속상품)일반라면",
+        "name": "(실속) 일반라면",
         "price": 4000
       },
       {
@@ -23102,7 +23102,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6000
       },
       {
-        "name": "(실속상품)유부우동",
+        "name": "(실속) 유부우동",
         "price": 5500
       },
       {
@@ -24075,7 +24075,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 5500
       },
       {
-        "name": "(실속상품)유부우동",
+        "name": "(실속) 유부우동",
         "price": 5500
       },
       {
@@ -24091,11 +24091,11 @@ export const serviceAreas: ServiceArea[] = [
         "price": 5000
       },
       {
-        "name": "(실속상품)ex-라면",
+        "name": "(실속) ex-라면",
         "price": 4000
       },
       {
-        "name": "(실속상품)김치해장국밥",
+        "name": "(실속) 김치해장국밥",
         "price": 7000
       },
       {
@@ -24107,7 +24107,7 @@ export const serviceAreas: ServiceArea[] = [
         "price": 14000
       },
       {
-        "name": "(실속상품)돈까스",
+        "name": "(실속) 돈까스",
         "price": 10000
       },
       {

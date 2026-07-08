@@ -174,6 +174,16 @@ async function fetchRealBestFoods() {
   return list;
 }
 
+function cleanFoodName(name) {
+  if (!name) return '';
+  return name
+    .replace(/^[a-zA-Z0-9가-힣]+_/, '') // category_ prefix removal
+    .replace(/^★\s*/, '')              // leading star removal
+    .replace(/^\(실속상품\)\s*/, '(실속) ') // unify (실속상품) to (실속)
+    .replace(/\s+/g, ' ')               // double spaces removal
+    .trim();
+}
+
 // Static definitions and dictionaries
 const PRECISE_COORDINATES = {
   'anseong-seoul': { latitude: 37.0125, longitude: 127.1352 },
@@ -451,7 +461,7 @@ async function generateData() {
 
       const sigFood = matchedFoods[sigFoodIndex];
       signatureMenu = {
-        name: sigFood.foodNm,
+        name: cleanFoodName(sigFood.foodNm),
         price: parseInt(sigFood.foodCost) || 9000,
         description: sigFood.etc ? sigFood.etc.trim().replace(/\s+/g, ' ') : '한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.',
         isExFood: true
@@ -461,7 +471,7 @@ async function generateData() {
       otherMenus = matchedFoods
         .filter((_, fIdx) => fIdx !== sigFoodIndex)
         .map(f => ({
-          name: f.foodNm,
+          name: cleanFoodName(f.foodNm),
           price: parseInt(f.foodCost) || 7000
         }));
     }
@@ -471,7 +481,7 @@ async function generateData() {
       const realRepFood = rawRepFoods.find(f => f.serviceAreaCode === r.code && f.batchMenu);
       if (realRepFood) {
         signatureMenu = {
-          name: realRepFood.batchMenu,
+          name: cleanFoodName(realRepFood.batchMenu),
           price: parseInt(realRepFood.salePrice.replace(/[^0-9]/g, '')) || 9000,
           description: '한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.',
           isExFood: true
