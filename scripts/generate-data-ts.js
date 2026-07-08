@@ -1,10 +1,108 @@
 const fs = require('fs');
 const path = require('path');
 
-// 1. Load the real gas stations database
-const realGasStations = require('../src/lib/realGasStations.json');
+// Hangul disassembler for clean English slugs
+function romanize(text) {
+  if (!text) return 'general';
+  const choList = ['g', 'kk', 'n', 'd', 'tt', 'r', 'm', 'b', 'pp', 's', 'ss', '', 'j', 'jj', 'ch', 'k', 't', 'p', 'h'];
+  const jungList = ['a', 'ae', 'ya', 'yae', 'eo', 'e', 'yeo', 'ye', 'o', 'wa', 'wae', 'oe', 'yo', 'u', 'wo', 'we', 'wi', 'yu', 'eu', 'ui', 'i'];
+  const jongList = ['', 'g', 'kk', 'gs', 'n', 'nj', 'nh', 'd', 'l', 'lg', 'lm', 'lb', 'ls', 'lt', 'lp', 'lh', 'm', 'b', 'bs', 's', 'ss', 'ng', 'j', 'ch', 'k', 't', 'p', 'h'];
 
-// 2. Define known coordinates for the main rest areas
+  let result = '';
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    const code = char.charCodeAt(0);
+    if (code >= 0xAC00 && code <= 0xD7A3) {
+      const hangulCode = code - 0xAC00;
+      const jong = hangulCode % 28;
+      const jung = ((hangulCode - jong) / 28) % 21;
+      const cho = parseInt(((hangulCode - jong) / 28) / 21, 10);
+      result += choList[cho] + jungList[jung] + jongList[jong];
+    } else {
+      result += char;
+    }
+  }
+  return result.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '') || 'general';
+}
+
+// Helper to clean rest area name for matching (e.g. "서울만남(부산)휴게소" -> "서울만남")
+function cleanName(name) {
+  if (!name) return '';
+  return name.replace(/\(.*\)/, '').replace(/휴게소$/, '').replace(/주유소$/, '').trim();
+}
+
+// 1. Fetch from curStateStation (Gas Stations API)
+async function fetchGasStations() {
+  console.log('Fetching gas stations from curStateStation API...');
+  const stations = [];
+  for (let page = 1; page <= 3; page++) {
+    const url = `http://data.ex.co.kr/openapi/business/curStateStation?key=test&type=json&numOfRows=99&pageNo=${page}`;
+    try {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+      const data = await response.json();
+      if (data && data.list) {
+        stations.push(...data.list);
+      }
+    } catch (error) {
+      console.error(`Failed to fetch gas stations page ${page}:`, error);
+    }
+  }
+
+  // Clean and map gas stations
+  return stations.map(item => {
+    const cleanPrice = (priceStr) => {
+      if (!priceStr || priceStr === 'X') return 0;
+      return parseInt(priceStr.replace(/[^0-9]/g, ''), 10) || 0;
+    };
+    const mapBrand = (company) => {
+      switch (company) {
+        case 'AD': return '알뜰주유소';
+        case 'SK': return 'SK에너지';
+        case 'GS': return 'GS칼텍스';
+        case 'S': return 'S-OIL';
+        case 'HD': return '현대오일뱅크';
+        default: return 'ex-oil';
+      }
+    };
+    return {
+      name: item.serviceAreaName.replace(/주유소$/, '').trim(),
+      direction: item.direction,
+      routeName: item.routeName,
+      brand: mapBrand(item.oilCompany),
+      gasolinePrice: cleanPrice(item.gasolinePrice),
+      dieselPrice: cleanPrice(item.diselPrice),
+      lpgPrice: item.lpgYn === 'Y' && cleanPrice(item.lpgPrice) > 0 ? cleanPrice(item.lpgPrice) : null,
+      address: item.svarAddr,
+      tel: item.telNo
+    };
+  });
+}
+
+// 2. Fetch from restConvList (0503 API)
+async function fetchRestConvList() {
+  console.log('Fetching convenience facilities from restConvList API (0503)...');
+  const list = [];
+  for (let page = 1; page <= 15; page++) {
+    const url = `http://data.ex.co.kr/openapi/restinfo/restConvList?key=test&type=json&numOfRows=99&pageNo=${page}`;
+    try {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+      const data = await response.json();
+      if (data && data.list) {
+        list.push(...data.list);
+        if (data.list.length < 99) break;
+      } else {
+        break;
+      }
+    } catch (error) {
+      console.error(`Failed to fetch restConvList page ${page}:`, error);
+    }
+  }
+  return list;
+}
+
+// Static definitions and dictionaries
 const PRECISE_COORDINATES = {
   'anseong-seoul': { latitude: 37.0125, longitude: 127.1352 },
   'anseong-busan': { latitude: 37.0142, longitude: 127.1328 },
@@ -31,7 +129,6 @@ const PRECISE_LOCATION_KM = {
   'seosan-mokpo': 242
 };
 
-// 3. Define regional coordinates for fallback
 const REGION_COORDINATES = {
   '서울': { lat: 37.5665, lng: 126.9780 },
   '인천': { lat: 37.4563, lng: 126.7052 },
@@ -51,7 +148,6 @@ const REGION_COORDINATES = {
   '광주': { lat: 35.1595, lng: 126.8526 }
 };
 
-// 4. Detailed mapping of main highways
 const HIGHWAY_MAP = {
   '경부선': { slug: 'gyeongbu', name: '경부고속도로', number: '1', length: '416.1 km', start: '부산', end: '서울', desc: '대한민국의 경제 동맥이자 핵심 종축 고속도로로 서울과 부산을 연결합니다.' },
   '서해안선': { slug: 'seohaean', name: '서해안고속도로', number: '15', length: '336.6 km', start: '목포', end: '서울', desc: '대한민국 서부 해안을 따라 남북을 잇는 중심 도로입니다.' },
@@ -64,8 +160,8 @@ const HIGHWAY_MAP = {
   '호남선지선': { slug: 'honam-branch', name: '호남고속도로지선', number: '251', length: '54.0 km', start: '논산', end: '대전', desc: '논산과 대전을 이어 호남고속도로의 교통을 충청권과 연결합니다.' },
   '호남선의 지선': { slug: 'honam-branch', name: '호남고속도로지선', number: '251', length: '54.0 km', start: '논산', end: '대전', desc: '논산과 대전을 이어 호남고속도로의 교통을 충청권과 연결합니다.' },
   '중부내륙선': { slug: 'jungbunaeryuk', name: '중부내륙고속도로', number: '45', length: '266.3 km', start: '내서', end: '양평', desc: '한반도 내륙의 중심부를 종단하여 경남 창원과 경기도 양평을 연결합니다.' },
-  '중부내륙선의지선': { slug: 'jungbunaeryuk-branch', name: '중부내륙고속도로지선', number: '451', length: '30.0 km', start: '현풍', end: '대구', desc: '중부내륙선과 대구광역시를 연결하는 노선입니다.' },
-  '중부내륙선의 지선': { slug: 'jungbunaeryuk-branch', name: '중부내륙고속도로지선', number: '451', length: '30.0 km', start: '현풍', end: '대구', desc: '중부내륙선과 대구광역시를 연결하는 노선입니다.' },
+  '중부내륙선의지선': { slug: 'jungbunaeryuk-branch', name: '중부내륙고속도로지선', number: '451', length: '30.0 km', start: '현풍', end: '대구', desc: '중부내륙선 and 대구광역시를 연결하는 노선입니다.' },
+  '중부내륙선의 지선': { slug: 'jungbunaeryuk-branch', name: '중부내륙고속도로지선', number: '451', length: '30.0 km', start: '현풍', end: '대구', desc: '중부내륙선 and 대구광역시를 연결하는 노선입니다.' },
   '순천완주선': { slug: 'suncheon-wanju', name: '순천완주고속도로', number: '27', length: '117.8 km', start: '순천', end: '완주', desc: '전남 순천과 전북 완주를 남북으로 신속하게 연결하는 고속도로입니다.' },
   '광주대구선': { slug: 'gwangju-daegu', name: '광주대구고속도로', number: '12', length: '176.8 km', start: '광주', end: '대구', desc: '호남과 영남을 동서로 잇는 최초의 동서 화합 고속도로입니다.' },
   '동해선': { slug: 'donghae', name: '동해고속도로', number: '65', length: '204.0 km', start: '부산', end: '속초', desc: '동해안을 따라 해안 도시들을 남북으로 연결합니다.' },
@@ -93,28 +189,6 @@ const HIGHWAY_MAP = {
   '대구외곽순환선': { slug: 'daegu-outer-circular', name: '대구외곽순환고속도로', number: '700', length: '32.9 km', start: '대구', end: '대구', desc: '대구광역시 외곽 지역을 고리 형태로 둥글게 이어 교통 흐름을 돕습니다.' }
 };
 
-// 5. Slugify helper function
-function slugify(text) {
-  if (!text) return 'general';
-  if (text.includes('(')) {
-    // Remove direction in parenthesis for slug if matching rest area
-    text = text.split('(')[0];
-  }
-  const map = {
-    '경부': 'gyeongbu', '서해안': 'seohaean', '남해': 'namhae', '영동': 'yeongdong', '중부': 'jungbu',
-    '호남': 'honam', '중부내륙': 'jungbunaeryuk', '순천완주': 'suncheon-wanju', '광주대구': 'gwangju-daegu',
-    '동해': 'donghae', '중앙': 'jungang', '서울양양': 'seoul-yangyang', '당진청주': 'dangjin-cheongju',
-    '통영대전': 'tongyeong-daejeon', '평택제천': 'pyeongtaek-jecheon', '밀양울산': 'milyang-ulsan',
-    '새만금포항': 'saemangeum-pohang', '완주장수': 'wanju-jangsu', '무안광주': 'muan-gwangju', '고창담양': 'gochang-damyang'
-  };
-  for (const [k, v] of Object.entries(map)) {
-    if (text.includes(k)) return v;
-  }
-  // Fallback
-  return text.toLowerCase().replace(/[^a-z0-9ㄱ-ㅎㅏ-ㅣ가-힣]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '') || 'general';
-}
-
-// 6. Food menus list (sensible Korean names)
 const SIGNATURE_MENUS = [
   { name: '말죽거리 소고기국밥', price: 9000, description: '가마솥에서 24시간 푹 끓여내어 깊고 구수한 장터식 소고기국밥입니다.' },
   { name: '안성맞춤 한우국밥', price: 9500, description: '안성 한우와 시원한 무를 듬뿍 넣어 개운하고 담백한 맛이 특징입니다.' },
@@ -146,47 +220,94 @@ const OTHER_MENUS_POOL = [
   { name: '시원한 식혜', price: 3000 }
 ];
 
-// 7. Facilities pool (Korean names)
-const FACILITIES_POOL = ['수유실', '샤워실', '수면실', '전기차충전소', '야외전망대', '약국', 'ATM', '반려견놀이터'];
+// Main generation function
+async function generateData() {
+  console.log('Generating comprehensive Korean highways and rest areas data from Public APIs...');
 
-// Generate code
-function generateData() {
-  console.log('Generating comprehensive Korean highways and rest areas data...');
+  // Fetch from APIs
+  const rawGasStations = await fetchGasStations();
+  const rawFacilitiesList = await fetchRestConvList();
 
-  // Group realGasStations by route
-  const routes = {};
-  realGasStations.forEach(g => {
-    const route = g.routeName || '경부선';
-    routes[route] = routes[route] || [];
-    routes[route].push(g);
+  console.log(`Fetched ${rawGasStations.length} gas stations and ${rawFacilitiesList.length} convenience facility entries.`);
+
+  // Group convenience facilities by rest area code stdRestCd
+  const restAreasMap = {};
+  rawFacilitiesList.forEach(item => {
+    const code = item.stdRestCd;
+    if (!code) return;
+
+    if (!restAreasMap[code]) {
+      const rawName = item.stdRestNm || '';
+      // Exclude rest areas with empty name
+      if (!rawName) return;
+
+      // Cleaned name and direction parsing
+      const cleaned = cleanName(rawName);
+      let direction = '양방향';
+      let directionName = '양방향';
+
+      const match = rawName.match(/\((.*?)\)/);
+      if (match) {
+        const dir = match[1];
+        directionName = `${dir}방향`;
+        if (['서울', '인천', '시흥', '대구', '상행', '일산', '판교'].includes(dir)) {
+          direction = '상행';
+        } else if (['부산', '광주', '목포', '순천', '강릉', '울산', '하행', '퇴계원'].includes(dir)) {
+          direction = '하행';
+        }
+      }
+
+      restAreasMap[code] = {
+        code,
+        rawName,
+        cleanedName: cleaned,
+        address: item.svarAddr ? item.svarAddr.trim() : '',
+        routeName: item.routeNm || '경부선',
+        routeCd: item.routeCd || '0010',
+        direction,
+        directionName,
+        facilities: []
+      };
+    }
+
+    if (item.psName && !restAreasMap[code].facilities.includes(item.psName)) {
+      restAreasMap[code].facilities.push(item.psName);
+    }
   });
+
+  const uniqueRestAreas = Object.values(restAreasMap);
+  console.log(`Aggregated into ${uniqueRestAreas.length} unique rest areas.`);
 
   // Map Highways
   const highwaysList = [];
-  Object.keys(routes).forEach(routeName => {
-    const known = HIGHWAY_MAP[routeName];
-    const slug = known ? known.slug : slugify(routeName);
-    const name = known ? known.name : (routeName && routeName.endsWith('선') ? routeName.replace(/선$/, '고속도로') : (routeName || '일반고속도로'));
-    const number = known ? known.number : '0';
-    const length = known ? known.length : '100.0 km';
-    const start = known ? known.start : '기점';
-    const end = known ? known.end : '종점';
-    const description = known ? known.desc : `${name}는 대한민국 주요 지역을 연결하는 안전하고 쾌적한 고속도로 노선입니다.`;
+  const highwaysMapBySlug = {};
 
-    if (!highwaysList.some(h => h.slug === slug)) {
-      highwaysList.push({ slug, name, number, length, start, end, description });
+  uniqueRestAreas.forEach(r => {
+    const route = r.routeName;
+    const known = HIGHWAY_MAP[route];
+    
+    let slug = known ? known.slug : romanize(route);
+    let name = known ? known.name : (route.endsWith('선') ? route.replace(/선$/, '고속도로') : route);
+    let number = known ? known.number : '0';
+    let length = known ? known.length : '100.0 km';
+    let start = known ? known.start : '기점';
+    let end = known ? known.end : '종점';
+    let description = known ? known.desc : `${name}는 대한민국 주요 지역을 연결하는 안전하고 쾌적한 고속도로 노선입니다.`;
+
+    if (!highwaysMapBySlug[slug]) {
+      const hw = { slug, name, number, length, start, end, description };
+      highwaysList.push(hw);
+      highwaysMapBySlug[slug] = hw;
     }
   });
 
   // Map Service Areas
   const serviceAreasList = [];
-  realGasStations.forEach((g, idx) => {
+
+  uniqueRestAreas.forEach((r, idx) => {
     // Generate unique slug
-    const cleanedName = g.name.replace(/\(.*\)/, '').trim(); // e.g. "서울만남(부산)" -> "서울만남"
-    const engBaseSlug = slugify(cleanedName);
-    const dirEng = g.direction === '서울' || g.direction === '인천' || g.direction === '시흥' || g.direction === '대구' ? 'seoul' :
-                   g.direction === '부산' || g.direction === '광주' || g.direction === '목포' || g.direction === '순천' || g.direction === '강릉' || g.direction === '울산' ? 'busan' : 'both';
-    
+    const engBaseSlug = romanize(r.cleanedName);
+    const dirEng = r.direction === '상행' ? 'seoul' : (r.direction === '하행' ? 'busan' : 'both');
     let slug = `${engBaseSlug}-${dirEng}`;
     
     // Ensure uniqueness
@@ -196,15 +317,14 @@ function generateData() {
       slug = `${engBaseSlug}-${dirEng}-${count}`;
     }
 
-    // Determine direction mapping
-    const direction = g.direction === '양방향' ? '양방향' : 
-                      (g.direction === '서울' || g.direction === '인천' || g.direction === '시흥' || g.direction === '대구' ? '상행' : '하행');
-    const directionName = `${g.direction}방향`;
+    const routeName = r.routeName;
+    const highway = highwaysList.find(h => {
+      const known = HIGHWAY_MAP[routeName];
+      return h.slug === (known ? known.slug : romanize(routeName));
+    });
 
-    const activeRouteName = g.routeName || '경부선';
-    const hInfo = HIGHWAY_MAP[activeRouteName];
-    const highwaySlug = hInfo ? hInfo.slug : slugify(activeRouteName);
-    const highwayName = hInfo ? hInfo.name : (activeRouteName.endsWith('선') ? activeRouteName.replace(/선$/, '고속도로') : activeRouteName);
+    const highwaySlug = highway ? highway.slug : 'gyeongbu';
+    const highwayName = highway ? highway.name : '경부고속도로';
 
     // Coordinate handling
     let coords = PRECISE_COORDINATES[slug];
@@ -212,13 +332,12 @@ function generateData() {
       // Find fallback by region
       let region = '경기';
       for (const reg of Object.keys(REGION_COORDINATES)) {
-        if (g.address && g.address.includes(reg)) {
+        if (r.address && r.address.includes(reg)) {
           region = reg;
           break;
         }
       }
       const center = REGION_COORDINATES[region];
-      // Add slight offset based on index to distribute points
       const offsetLat = (Math.sin(idx) * 0.15);
       const offsetLng = (Math.cos(idx) * 0.15);
       coords = {
@@ -230,13 +349,12 @@ function generateData() {
     // Signature menu matching
     let signatureMenu = null;
     for (const menu of SIGNATURE_MENUS) {
-      if (cleanedName.includes(menu.name.substring(0, 2))) {
-        signatureMenu = menu;
+      if (r.cleanedName.includes(menu.name.substring(0, 2))) {
+        signatureMenu = { ...menu, isExFood: true };
         break;
       }
     }
     if (!signatureMenu) {
-      // Pick generic based on index
       signatureMenu = GENERIC_SIGNATURES[idx % GENERIC_SIGNATURES.length];
     }
 
@@ -250,21 +368,31 @@ function generateData() {
       }
     }
 
-    // Facilities
-    const facilities = [];
-    const numFac = 2 + (idx % 4); // 2 to 5 facilities
-    for (let i = 0; i < numFac; i++) {
-      const fac = FACILITIES_POOL[(idx + i) * 3 % FACILITIES_POOL.length];
-      if (!facilities.includes(fac)) {
-        facilities.push(fac);
+    // Find matching gas station from curStateStation
+    const cleanRName = r.cleanedName;
+    const gasMatch = rawGasStations.find(g => {
+      const cleanGName = cleanName(g.name);
+      const nameMatch = cleanGName === cleanRName || cleanGName.includes(cleanRName) || cleanRName.includes(cleanGName);
+      
+      // Match direction as well (if directions are specified)
+      let dirMatch = true;
+      if (r.directionName && g.direction) {
+        const cleanRDir = r.directionName.replace('방향', '');
+        const cleanGDir = g.direction.replace('방향', '');
+        dirMatch = cleanRDir === cleanGDir || cleanRDir.includes(cleanGDir) || cleanGDir.includes(cleanRDir);
       }
-    }
+      return nameMatch && dirMatch;
+    });
 
-    // Gas Station info
-    const brand = g.brand === 'ex-oil' ? '알뜰주유소' : g.brand;
-    const hasEvCharger = idx % 2 === 0;
-    const evChargersCount = hasEvCharger ? (2 + (idx % 12)) : 0;
-    const hasHydrogen = idx % 15 === 0;
+    const gasStation = {
+      brand: gasMatch ? gasMatch.brand : 'ex-oil',
+      gasolinePrice: gasMatch ? gasMatch.gasolinePrice : 0,
+      dieselPrice: gasMatch ? gasMatch.dieselPrice : 0,
+      lpgPrice: gasMatch ? gasMatch.lpgPrice : null,
+      hasEvCharger: idx % 2 === 0,
+      evChargersCount: idx % 2 === 0 ? (2 + (idx % 12)) : 0,
+      hasHydrogen: idx % 15 === 0
+    };
 
     let locationKm = PRECISE_LOCATION_KM[slug];
     if (!locationKm) {
@@ -273,33 +401,22 @@ function generateData() {
 
     serviceAreasList.push({
       slug,
-      name: `${cleanedName}휴게소`,
-      direction,
-      directionName,
+      name: `${r.cleanedName}휴게소`,
+      direction: r.direction,
+      directionName: r.directionName,
       highwaySlug,
       highwayName,
       locationKm,
       signatureMenu,
       otherMenus,
-      gasStation: {
-        brand,
-        gasolinePrice: g.gasolinePrice,
-        dieselPrice: g.dieselPrice,
-        lpgPrice: g.lpgPrice,
-        hasEvCharger,
-        evChargersCount,
-        hasHydrogen
-      },
-      facilities,
+      gasStation,
+      facilities: r.facilities,
       latitude: coords.latitude,
       longitude: coords.longitude
     });
   });
 
-  // Build dynamic content
-  const codeContent = `// Korea Highway and Rest Area Data (Dynamically Generated from realGasStations.json)
-import realGasStations from './realGasStations.json';
-
+  const codeContent = `// Korea Highway and Rest Area Data (Dynamically Generated from curStateStation and 0503 OpenAPI)
 export interface Highway {
   slug: string;
   name: string;

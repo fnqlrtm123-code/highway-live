@@ -61,30 +61,7 @@ export default function RootLayout({
             {/* 네비게이션 링크 */}
             <nav className="hidden lg:flex items-center gap-1">
               <a href="/traffic" className="px-3.5 py-2 text-[13px] font-semibold rounded-lg text-slate-650 hover:text-slate-950 hover:bg-slate-100/50 transition-all">교통상황 · CCTV</a>
-              
-              {/* 고속도로 휴게소 hover dropdown */}
-              <div className="relative group">
-                <button className="px-3.5 py-2 text-[13px] font-semibold rounded-lg text-slate-650 hover:text-slate-950 hover:bg-slate-100/50 transition-all flex items-center gap-1.5 cursor-pointer">
-                  고속도로 휴게소
-                  <svg className="w-3 h-3 text-slate-400 group-hover:text-slate-950 transition-colors" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                <div className="absolute top-full left-0 mt-1 w-48 rounded-xl bg-white border border-slate-200/50 shadow-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 py-1.5">
-                  <a href="/rest-areas" className="block px-4 py-2.5 text-[12.5px] font-medium text-slate-650 hover:bg-slate-50 hover:text-slate-950 transition-all">
-                    상행선 · 하행선 방향
-                  </a>
-                  <a href="/food" className="block px-4 py-2.5 text-[12.5px] font-medium text-slate-650 hover:bg-slate-50 hover:text-slate-950 transition-all">
-                    휴게소 대표 맛집
-                  </a>
-                  <a href="/region" className="block px-4 py-2.5 text-[12.5px] font-medium text-slate-650 hover:bg-slate-50 hover:text-slate-950 transition-all">
-                    지역별 휴게소 찾기
-                  </a>
-                  <a href="/ranking" className="block px-4 py-2.5 text-[12.5px] font-medium text-slate-650 hover:bg-slate-50 hover:text-slate-950 transition-all">
-                    휴게소 추천 랭킹
-                  </a>
-                </div>
-              </div>
+              <a href="/rest-areas" className="px-3.5 py-2 text-[13px] font-semibold rounded-lg text-slate-650 hover:text-slate-950 hover:bg-slate-100/50 transition-all">고속도로 휴게소</a>
 
               <a href="/gas" className="px-3.5 py-2 text-[13px] font-semibold rounded-lg text-slate-650 hover:text-slate-950 hover:bg-slate-100/50 transition-all">주유소 · 충전소</a>
               <a href="/toll" className="px-3.5 py-2 text-[13px] font-semibold rounded-lg text-slate-650 hover:text-slate-950 hover:bg-slate-100/50 transition-all">고속도로 통행료</a>
