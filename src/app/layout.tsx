@@ -79,6 +79,12 @@ export default function RootLayout({
                   <a href="/food" className="block px-4 py-2.5 text-[13px] font-bold text-slate-300 hover:bg-white/10 hover:text-white transition-all">
                     휴게소 상행·하행 맛집
                   </a>
+                  <a href="/region" className="block px-4 py-2.5 text-[13px] font-bold text-slate-300 hover:bg-white/10 hover:text-white transition-all">
+                    지역별 휴게소 찾기
+                  </a>
+                  <a href="/ranking" className="block px-4 py-2.5 text-[13px] font-bold text-slate-300 hover:bg-white/10 hover:text-white transition-all">
+                    휴게소 추천 랭킹
+                  </a>
                 </div>
               </div>
 
@@ -129,9 +135,9 @@ export default function RootLayout({
                 <h4 className="text-sm font-bold text-white uppercase tracking-wider">주요 서비스</h4>
                 <ul className="space-y-2 text-[13px]">
                   <li><a href="/" className="hover:text-white transition-colors">실시간 교통지도</a></li>
-                  <li><a href="/work" className="hover:text-white transition-colors">도로 작업/통제 정보</a></li>
-                  <li><a href="/forecast" className="hover:text-white transition-colors">주말/명절 교통예보</a></li>
-                  <li><a href="/broadcast" className="hover:text-white transition-colors">교통방송 (exTV)</a></li>
+                  <li><a href="/rest-areas" className="hover:text-white transition-colors">전체 휴게소 목록</a></li>
+                  <li><a href="/region" className="hover:text-white transition-colors font-bold text-blue-400">지역별 휴게소 찾기</a></li>
+                  <li><a href="/ranking" className="hover:text-white transition-colors font-bold text-blue-400">휴게소 추천 랭킹</a></li>
                   <li><a href="/highways" className="hover:text-white transition-colors">고속도로 노선안내</a></li>
                 </ul>
               </div>
