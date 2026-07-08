@@ -30,18 +30,6 @@ export default function TrafficIndexPage() {
           대한민국 전국 주요 고속도로, 도시고속도로(간선도로), 국도 및 주요 한강/지방 대교의 실시간 교통 흐름을 분류별로 확인해 보세요. 
           각 노선을 선택하시면 실시간 CCTV 화면 스트리밍, 병목 정체 예상 구간 및 지체 시 빠른 국도 우회 경로 가이드를 제공합니다.
         </p>
-
-        {/* 구글맵 캡쳐 실시간 교통상황 지도 썸네일 (SEO 최적화) */}
-        <div className="pt-2">
-          <img 
-            src="/images/traffic-map.png" 
-            alt="전국 실시간 교통상황 지도" 
-            className="w-full max-w-[800px] h-auto rounded-xl border border-slate-200 shadow-sm"
-          />
-          <span className="text-slate-400 text-xs mt-1.5 block">
-            ※ 실시간 교통 정보망 모니터링 지도 (지체 상황 수집 범례 안내)
-          </span>
-        </div>
       </div>
 
       {/* 애드센스 */}

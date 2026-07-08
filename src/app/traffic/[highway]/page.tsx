@@ -135,18 +135,6 @@ export default async function HighwayTrafficDetailPage({ params }: Props) {
         <p className="text-slate-500 text-sm md:text-[15px] leading-relaxed">
           {road.description} 실시간 교통정보 확인 채널을 통해 노선의 구간별 주행 속도와 CCTV 모니터링 화면을 직접 조회할 수 있으며, 정체나 돌발 상황 발생 시 이용 가능한 노선 내 방향별 휴게소 정보를 함께 파악할 수 있습니다.
         </p>
-
-        {/* 구글맵 캡쳐 실시간 교통상황 지도 썸네일 (SEO 최적화) */}
-        <div className="pt-2">
-          <img 
-            src="/images/traffic-map.png" 
-            alt={`${road.name} 실시간 교통상황 지도`} 
-            className="w-full max-w-[700px] h-auto rounded-xl border border-slate-200 shadow-sm"
-          />
-          <span className="text-slate-400 text-xs mt-1.5 block">
-            ※ 국토교통부 및 주요 지도 API 연계 전국 실시간 도로 교통망 소통 상황
-          </span>
-        </div>
       </div>
 
       {/* 애드센스 */}
