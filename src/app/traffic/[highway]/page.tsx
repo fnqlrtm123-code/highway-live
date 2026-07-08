@@ -101,7 +101,7 @@ export default async function HighwayTrafficDetailPage({ params }: Props) {
           {road.type === 'highway' ? '고속도로 노선' : road.type === 'urban' ? '도시고속도로' : road.type === 'national' ? '일반국도' : '대교'}
         </div>
         <h1 className="text-2.5xl md:text-3.5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-          {road.name} [{lineName}] 교통상황 확인 실시간 CCTV·정체구간·우회도로
+          {road.name} {lineName !== road.name ? `[${lineName}]` : ''} 실시간 교통상황 &amp; CCTV
         </h1>
         <p className="text-slate-500 text-sm md:text-[15px] leading-relaxed">
           {road.description} 아래 제공되는 실시간 정보 확인 채널을 통해 구간별 주행 평속과 CCTV 라이브 모니터링 정보를 무료로 시청하고, 
