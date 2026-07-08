@@ -102,6 +102,54 @@ async function fetchRestConvList() {
   return list;
 }
 
+// 3. Fetch from representFoodServiceArea API
+async function fetchRepresentativeFoods() {
+  console.log('Fetching representative foods from representFoodServiceArea API...');
+  const list = [];
+  for (let page = 1; page <= 5; page++) {
+    const url = `http://data.ex.co.kr/openapi/business/representFoodServiceArea?key=test&type=json&numOfRows=99&pageNo=${page}`;
+    try {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+      const data = await response.json();
+      if (data && data.list) {
+        list.push(...data.list);
+        if (data.list.length < 99) break;
+      } else {
+        break;
+      }
+    } catch (error) {
+      console.error(`Failed to fetch representative foods page ${page}:`, error);
+      break;
+    }
+  }
+  return list;
+}
+
+// 4. Fetch from restBrandList API (0501)
+async function fetchBrands() {
+  console.log('Fetching brands from restBrandList API (0501)...');
+  const list = [];
+  for (let page = 1; page <= 10; page++) {
+    const url = `http://data.ex.co.kr/openapi/restinfo/restBrandList?key=test&type=json&numOfRows=99&pageNo=${page}`;
+    try {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+      const data = await response.json();
+      if (data && data.list) {
+        list.push(...data.list);
+        if (data.list.length < 99) break;
+      } else {
+        break;
+      }
+    } catch (error) {
+      console.error(`Failed to fetch brands page ${page}:`, error);
+      break;
+    }
+  }
+  return list;
+}
+
 // Static definitions and dictionaries
 const PRECISE_COORDINATES = {
   'anseong-seoul': { latitude: 37.0125, longitude: 127.1352 },
@@ -211,13 +259,30 @@ const GENERIC_SIGNATURES = [
 
 const OTHER_MENUS_POOL = [
   { name: '꼬치어묵우동', price: 6500 },
+  { name: '추억의 옛날우동', price: 6000 },
+  { name: 'EX-우동', price: 6000 },
+  { name: '농심가락우동', price: 6500 },
+  { name: '떡라면', price: 5000 },
+  { name: 'ex-라면', price: 4500 },
+  { name: '신라면', price: 5000 },
+  { name: '유부김밥', price: 4000 },
+  { name: '수제 등심돈가스', price: 9500 },
+  { name: '치즈돈가스', price: 10500 },
+  { name: '철판 제육덮밥', price: 8500 },
+  { name: '낙지덮밥', price: 9500 },
+  { name: '전주비빔밥', price: 8500 },
+  { name: '장터 국밥', price: 9000 },
+  { name: '사골 육개장', price: 9000 },
   { name: '바삭바삭 소떡소떡', price: 4000 },
   { name: '명품 호두과자(중)', price: 3000 },
   { name: '버터구이 통감자', price: 4500 },
   { name: '오징어 야채바', price: 4000 },
   { name: '매콤 떡볶이', price: 4500 },
   { name: '바삭한 오징어 튀김', price: 4000 },
-  { name: '시원한 식혜', price: 3000 }
+  { name: '시원한 식혜', price: 3000 },
+  { name: '바삭한 핫도그', price: 4000 },
+  { name: '아메리카노(HOT)', price: 4100 },
+  { name: '아메리카노(ICE)', price: 4500 }
 ];
 
 // Main generation function
@@ -227,8 +292,10 @@ async function generateData() {
   // Fetch from APIs
   const rawGasStations = await fetchGasStations();
   const rawFacilitiesList = await fetchRestConvList();
+  const rawRepFoods = await fetchRepresentativeFoods();
+  const rawBrands = await fetchBrands();
 
-  console.log(`Fetched ${rawGasStations.length} gas stations and ${rawFacilitiesList.length} convenience facility entries.`);
+  console.log(`Fetched ${rawGasStations.length} gas stations, ${rawFacilitiesList.length} convenience facility entries, ${rawRepFoods.length} representative foods, and ${rawBrands.length} brands.`);
 
   // Group convenience facilities by rest area code stdRestCd
   const restAreasMap = {};
@@ -346,27 +413,39 @@ async function generateData() {
       };
     }
 
-    // Signature menu matching
+    // Signature menu matching (Try matching from real representFoodServiceArea API)
+    const realRepFood = rawRepFoods.find(f => f.serviceAreaCode === r.code && f.batchMenu);
     let signatureMenu = null;
-    for (const menu of SIGNATURE_MENUS) {
-      if (r.cleanedName.includes(menu.name.substring(0, 2))) {
-        signatureMenu = { ...menu, isExFood: true };
-        break;
+    if (realRepFood) {
+      signatureMenu = {
+        name: realRepFood.batchMenu,
+        price: parseInt(realRepFood.salePrice.replace(/[^0-9]/g, '')) || 9000,
+        description: '한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.',
+        isExFood: true
+      };
+    } else {
+      // Fallback to static rules
+      for (const menu of SIGNATURE_MENUS) {
+        if (r.cleanedName.includes(menu.name.substring(0, 2))) {
+          signatureMenu = { ...menu, isExFood: true };
+          break;
+        }
       }
-    }
-    if (!signatureMenu) {
-      signatureMenu = GENERIC_SIGNATURES[idx % GENERIC_SIGNATURES.length];
+      if (!signatureMenu) {
+        signatureMenu = GENERIC_SIGNATURES[idx % GENERIC_SIGNATURES.length];
+      }
     }
 
-    // Other menus
-    const otherMenus = [];
-    const numOther = 2 + (idx % 3); // 2 to 4 other menus
-    for (let i = 0; i < numOther; i++) {
-      const menu = OTHER_MENUS_POOL[(idx + i) % OTHER_MENUS_POOL.length];
-      if (!otherMenus.some(m => m.name === menu.name)) {
-        otherMenus.push(menu);
-      }
-    }
+    // Other menus (include all menus in pool, filtering out the signature menu)
+    const otherMenus = OTHER_MENUS_POOL.filter(m => m.name !== signatureMenu.name);
+
+    // Brand stores matching (from real restBrandList API 0501)
+    const matchedBrands = rawBrands.filter(b => b.stdRestCd === r.code);
+    const brandStores = matchedBrands.map(b => ({
+      name: b.brdName,
+      description: b.brdDesc ? b.brdDesc.trim().replace(/\s+/g, ' ') : '입점 브랜드 매장입니다.',
+      hours: b.stime && b.etime ? `${b.stime} ~ ${b.etime}` : '정보 없음'
+    }));
 
     // Find matching gas station from curStateStation
     const cleanRName = r.cleanedName;
@@ -409,6 +488,7 @@ async function generateData() {
       locationKm,
       signatureMenu,
       otherMenus,
+      brandStores,
       gasStation,
       facilities: r.facilities,
       latitude: coords.latitude,
@@ -444,6 +524,11 @@ export interface ServiceArea {
   otherMenus: {
     name: string;
     price: number;
+  }[];
+  brandStores: {
+    name: string;
+    description: string;
+    hours: string;
   }[];
   gasStation: {
     brand: "알뜰주유소" | "SK에너지" | "GS칼텍스" | "S-OIL" | "현대오일뱅크" | "ex-oil";

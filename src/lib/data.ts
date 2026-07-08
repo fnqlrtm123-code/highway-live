@@ -27,6 +27,11 @@ export interface ServiceArea {
     name: string;
     price: number;
   }[];
+  brandStores: {
+    name: string;
+    description: string;
+    hours: string;
+  }[];
   gasStation: {
     brand: "알뜰주유소" | "SK에너지" | "GS칼텍스" | "S-OIL" | "현대오일뱅크" | "ex-oil";
     gasolinePrice: number;
@@ -361,8 +366,112 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "탐앤탐스",
+        "description": "매장 외부에 위치하고 있으며 신선하고 풍부한 맛의 고품격 커피를 제공하고 있습니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "SKT할인, CU포인트 적립 및 사용 가능",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -398,6 +507,62 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -408,6 +573,46 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "[21년 9월 14일 오픈]운전 중에 즐기는 커피한잔의 여유~",
+        "hours": "07:00 ~ 20:00"
+      },
+      {
+        "name": "달콤커피",
+        "description": "[25년 8월 27일 오픈] 고속도로 휴게소에서만 판매하는 '드라이브샷'",
+        "hours": "08:30 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -446,6 +651,70 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
@@ -460,6 +729,43 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "던킨도너츠 기흥휴게소점 입니다",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "파리바게뜨",
+        "description": "기흥휴게소 내부매장에서 판매합니다.",
+        "hours": "08:00 ~ 22:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "기흥휴게소 내부 매장과 외부매장 2개를 운영 하고있습니다",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -496,12 +802,126 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:30 ~ 20:30"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "설 당일 10시까지 영업",
+        "hours": "08:30 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "설 당일 11시까지 영업",
+        "hours": "07:00 ~ 20:30"
+      },
+      {
+        "name": "이마트24",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -544,6 +964,78 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
@@ -554,6 +1046,54 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:30 ~ 19:00"
+      },
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:30 ~ 19:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "06:00 ~ 21:00"
+      },
+      {
+        "name": "JDX",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:30 ~ 19:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:30 ~ 19:00"
+      },
+      {
+        "name": "기타",
+        "description": "공차",
+        "hours": "08:00 ~ 19:00"
       }
     ],
     "gasStation": {
@@ -590,6 +1130,82 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
@@ -602,8 +1218,28 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "도너츠와 커피가 함께하는 공간",
+        "hours": "06:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "커피전문점",
+        "hours": "07:30 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -643,12 +1279,127 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "커피&도너츠 각종 음료 및 간식류 판매",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "BBQ",
+        "description": "BBQ&올떡(간식류 판매)",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "아메리카노 등 다양한 음료 판매중",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "LYNX",
+        "description": "골프의류 판매",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "아메리카노 등 다양한 음료 판매중",
+        "hours": "06:00 ~ 21:00"
       }
     ],
     "gasStation": {
@@ -685,16 +1436,126 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
-        "name": "시원한 식혜",
-        "price": 3000
-      },
-      {
         "name": "꼬치어묵우동",
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "갓 구워낸 커피향이 은은한 번 판매 매장",
+        "hours": "08:30 ~ 20:30"
+      },
+      {
+        "name": "앤티앤스프레즐",
+        "description": "갓 구워낸 빵과 버터의 고소함이 일품인 프레즐 매장",
+        "hours": "08:30 ~ 20:30"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "좋은 원두로 진한 커피향이 일품인 커피명소",
+        "hours": "08:30 ~ 20:30"
+      },
+      {
+        "name": "달콤커피",
+        "description": "브랜드 커피전문점으로 갓 뽑아낸 원두의 향이 일품인 커피매장",
+        "hours": "08:30 ~ 20:30"
       }
     ],
     "gasStation": {
@@ -738,6 +1599,62 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -748,6 +1665,56 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "열린매장 : 오전8시 ~ 오후5시30분",
+        "hours": "08:00 ~ 17:30"
+      },
+      {
+        "name": "엔제리너스",
+        "description": "휴게소 우측 호두과자 방면 / 오전8시 ~ 오후7시20분",
+        "hours": "08:00 ~ 19:20"
+      },
+      {
+        "name": "BBQ올리브돈까스",
+        "description": "1층 매장 내부 BBQ올리브 돈까스",
+        "hours": "08:00 ~ 19:20"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "영업시간 : 오전8시 ~ 오후7시20분",
+        "hours": "08:00 ~ 19:20"
       }
     ],
     "gasStation": {
@@ -784,12 +1751,121 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "달콤커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "용우동(우동코너)",
+        "hours": "08:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -830,6 +1906,70 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
@@ -840,6 +1980,42 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "던킨도너츠 옥산휴게소점입니다",
+        "hours": "07:00 ~ 18:00"
+      },
+      {
+        "name": "할리스커피",
+        "description": "옥산휴게소 할리스커피입니다",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -878,6 +2054,70 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
@@ -892,6 +2132,44 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "단독매장 구성, 휴게소출구부 위치, 비즈니스공간으로 탁월",
+        "hours": "08:30 ~ 20:30"
+      },
+      {
+        "name": "로띠번",
+        "description": "간식매장에 위치한 빵집 로띠번",
+        "hours": "08:30 ~ 20:30"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "휴게소 중앙 내부 위치, 24시간 운영",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "시중보다 저렴한 가격에 유명브랜드 드롭탑의 퀄리티를 결합",
+        "hours": "08:30 ~ 20:30"
       }
     ],
     "gasStation": {
@@ -926,12 +2204,121 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "철저한 위생관리와 맛있는 도넛, 커피류 음료를 제공하고 있습니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "롯데리아",
+        "description": "고속도로 유일한 '롯데리아 DT매장'으로 차에서 내리지 않고 이용하실 수 있습니다. K버거의 원조 롯데리아!",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "철저한 원두 품질관리로 신선하고 고소한 커피와 음료를 제공하고 있습니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -968,6 +2355,82 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
@@ -978,6 +2441,35 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "매장내부 좌측에 위치하고 있습니다.",
+        "hours": "08:00 ~ 19:00"
+      },
+      {
+        "name": "투썸플레이스",
+        "description": "매장 내부 우측에 위치하고 있습니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "달콤커피",
+        "description": "건물 내부 중앙에 위치하고 있습니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -1017,6 +2509,86 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
@@ -1025,12 +2597,38 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
       },
       {
-        "name": "바삭바삭 소떡소떡",
-        "price": 4000
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "도넛, 커피, 음료",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "엔제리너스",
+        "description": "음료, 커피",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "클라이머홀릭",
+        "description": "아웃도어,골프웨어,신발,가방 등",
+        "hours": "09:00 ~ 20:00"
+      },
+      {
+        "name": "이마트24",
+        "description": "담배, 음료, 커피, 간식",
+        "hours": "06:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -1069,12 +2667,116 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
         "name": "시원한 식혜",
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "남녀노소 좋아하는 깊고 진한향의 고급원두 커피를 제공합니다.",
+        "hours": "06:00 ~ 22:00"
+      },
+      {
+        "name": "용우동",
+        "description": "유명 프랜차이즈 체인점 용우동을 옥천휴게소에서 연중무휴 드실수 있습니다.",
+        "hours": "06:00 ~ 22:00"
       }
     ],
     "gasStation": {
@@ -1117,12 +2819,112 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "장소 : 상행매장",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "장소 : 본관동 내부, 하행 화장실 옆",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -1157,6 +2959,66 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -1171,6 +3033,47 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "커피전문점 할리스입니다",
+        "hours": "07:00 ~ 19:00"
+      },
+      {
+        "name": "용우동",
+        "description": "우동매장입니다",
+        "hours": "07:00 ~ 21:00"
+      },
+      {
+        "name": "CU",
+        "description": "CU 24시 편의점 입니다. 21:00~ 익일 07:00 무인편의점",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -1206,12 +3109,121 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "커피전문점 할리스입니다.",
+        "hours": "07:00 ~ 19:00"
+      },
+      {
+        "name": "용우동",
+        "description": "용우동 매장입니다.",
+        "hours": "07:00 ~ 21:00"
+      },
+      {
+        "name": "CU",
+        "description": "CU 24시 편의점 입니다. 21시~ 익일 07시 무인편의점",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -1248,6 +3260,74 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
@@ -1258,6 +3338,33 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "추풍령휴게소 유명브랜드매장 할리스커피입니다. 할인 및 멤버쉽 적립이 가능합니다",
+        "hours": "07:00 ~ 07:00"
       }
     ],
     "gasStation": {
@@ -1296,6 +3403,78 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
@@ -1310,6 +3489,25 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "할리스 커피전문점이 입점하여 있으며 평상시 00시 부터 24시까지 이용합니다.",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -1350,12 +3548,121 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "장소 : 자율식당 옆 / 여자화장실 앞",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "투썸플레이스",
+        "description": "장소 : 종합안내소 측면 / 판매품목 : 커피류, 음료류",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "기타",
+        "description": "k-outlet 골프웨어 판매점, 장소 : 매점동 왼쪽 측면",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -1398,6 +3705,86 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
@@ -1406,8 +3793,28 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "아메리카노 외 커피류",
+        "hours": "07:00 ~ 20:30"
+      },
+      {
+        "name": "투썸플레이스",
+        "description": "아메리카노 외 커피류",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -1448,12 +3855,64 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
-        "name": "시원한 식혜",
-        "price": 3000
-      },
-      {
         "name": "꼬치어묵우동",
         "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
       },
       {
         "name": "바삭바삭 소떡소떡",
@@ -1462,6 +3921,65 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "엔제리너스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "용우동",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "이마트24",
+        "description": "06:00~21:00 유인운영, 21:00~06:00 무인운영",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "기타",
+        "description": "놀부부대찌개",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -1506,8 +4024,107 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "투썸플레이스",
+        "description": "주문마감시각 19시 20분",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -1545,6 +4162,66 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -1555,6 +4232,41 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "탐앤탐스",
+        "description": "커피전문점",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -1591,6 +4303,66 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
@@ -1605,6 +4377,33 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "투썸플레이스",
+        "description": "바쁜 시간속 사람들과 함께 어울려 일상의 휴식이 되는 곳 건천(부산)휴게소 투썸플레이스",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -1639,12 +4438,116 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "클라이머홀릭",
+        "description": "등산 의류 등 제품 판매",
+        "hours": "08:00 ~ 19:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "커피음료",
+        "hours": "08:00 ~ 19:00"
       }
     ],
     "gasStation": {
@@ -1681,6 +4584,78 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
@@ -1691,6 +4666,29 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "파스쿠찌 운영",
+        "hours": "07:00 ~ 18:30"
       }
     ],
     "gasStation": {
@@ -1728,6 +4726,82 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
@@ -1740,8 +4814,28 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "커피전문점",
+        "hours": "08:00 ~ 19:00"
+      },
+      {
+        "name": "CU",
+        "description": "편의점(22시~익일06시 무인운영)",
+        "hours": "06:00 ~ 22:00"
       }
     ],
     "gasStation": {
@@ -1778,12 +4872,151 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "롯데리아",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "뚜레쥬르",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "나뚜루",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "※24시간 운영 : 2곳 운영중(부산방향, 기장방향)",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "크리스피크림",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "공차",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -1821,16 +5054,127 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
-        "name": "시원한 식혜",
-        "price": 3000
-      },
-      {
         "name": "꼬치어묵우동",
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "로띠번(커피번,바닐라번)",
+        "hours": "07:30 ~ 19:30"
+      },
+      {
+        "name": "코바코",
+        "description": "본관 식당가 (다양한 돈가스 종류가 있습니다)",
+        "hours": "07:30 ~ 19:30"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "해썹인증 (커피류만 판매) ,텀블러 할인 (그린캠페인) 300원, 텀블러 세척해드림",
+        "hours": "07:30 ~ 19:30"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "본관 입구",
+        "hours": "07:30 ~ 19:30"
+      },
+      {
+        "name": "CU",
+        "description": "24시간 운영",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -1872,6 +5216,62 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -1882,6 +5282,46 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "매일 신선한 재료와 알맞게 발효된 도우에 그윽한 모카향크림 토핑을 해서 오븐에 갓구워낸 부드럽고 모카향이 가득한 번입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "커피매장",
+        "hours": "08:00 ~ 19:00"
       }
     ],
     "gasStation": {
@@ -1918,12 +5358,121 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "할리스커피, 착즙 외 음료 판매",
+        "hours": "08:00 ~ 19:00"
+      },
+      {
+        "name": "로띠번",
+        "description": "앨리어스커피와 로띠번 판매",
+        "hours": "08:00 ~ 18:00"
+      },
+      {
+        "name": "클라이머홀릭",
+        "description": "의류판매",
+        "hours": "09:00 ~ 18:00"
       }
     ],
     "gasStation": {
@@ -1961,6 +5510,70 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
@@ -1971,6 +5584,42 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "커피전문점",
+        "hours": "07:00 ~ 19:30"
+      },
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:30 ~ 19:30"
       }
     ],
     "gasStation": {
@@ -2009,6 +5658,74 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
@@ -2023,6 +5740,44 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "로띠번",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "평일 08:00~19:00, 주말 09:00~19:00",
+        "hours": "08:00 ~ 19:00"
+      },
+      {
+        "name": "기타",
+        "description": "서녹씨_여수딸기모찌 판매점",
+        "hours": "10:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "고운동 커피",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -2060,12 +5815,117 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "로띠번",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "평일 08:00~19:00, 주말 09:00~19:00",
+        "hours": "08:00 ~ 19:00"
+      },
+      {
+        "name": "기타",
+        "description": "고운동 커피",
+        "hours": "07:30 ~ 19:30"
       }
     ],
     "gasStation": {
@@ -2103,6 +5963,82 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
@@ -2113,6 +6049,30 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "주말 08:00~20:00 운영",
+        "hours": "08:00 ~ 19:00"
+      },
+      {
+        "name": "CU",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:00 ~ 21:00"
       }
     ],
     "gasStation": {
@@ -2146,6 +6106,86 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
@@ -2154,12 +6194,28 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
       },
       {
-        "name": "바삭바삭 소떡소떡",
-        "price": 4000
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "주말 07:30~19:30",
+        "hours": "07:30 ~ 19:00"
+      },
+      {
+        "name": "CU",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:00 ~ 21:00"
       }
     ],
     "gasStation": {
@@ -2193,12 +6249,116 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
         "name": "시원한 식혜",
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "할리스 고유의 로스팅 기법으로 원두 고유의 풍부한 향미를 살리고 있습니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "용우동",
+        "description": "우동 전문 외식브랜드 용우동의 검증된 맛과 감동!",
+        "hours": "06:00 ~ 20:30"
       }
     ],
     "gasStation": {
@@ -2240,12 +6400,112 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "할리스 고유의 로스팅 기법으로 원두 고유의 풍부한 향미를 살리고 있습니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "용우동",
+        "description": "우동 전문 외식브랜드 용우동의 맛과 감동!",
+        "hours": "06:00 ~ 20:30"
       }
     ],
     "gasStation": {
@@ -2283,6 +6543,62 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -2297,6 +6613,52 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "커피전문점 엔제리너스 EX-CAFE 운영",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "할리스커피",
+        "description": "커피전문점 할리스카페 운영",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "커피전문점 드롭탑매장 운영",
+        "hours": "09:00 ~ 22:00"
+      },
+      {
+        "name": "기타",
+        "description": "놀부부대찌개 운영, 대지식당 운영",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -2332,12 +6694,121 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "할리스 커피",
+        "hours": "07:00 ~ 19:00"
+      },
+      {
+        "name": "JDX",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:00 ~ 19:00"
+      },
+      {
+        "name": "기타",
+        "description": "놀부부대찌개, 교동짬뽕, 의류(상설매장) 팜스프링, 디아스토리",
+        "hours": "07:00 ~ 19:00"
       }
     ],
     "gasStation": {
@@ -2373,6 +6844,74 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
@@ -2383,6 +6922,43 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "롯데리아",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "카페베네",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -2418,6 +6994,78 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
@@ -2432,6 +7080,40 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "저희 던킨도너츠 매장에서는 시중과 동일한 할인제도를 시행하고 있습니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "로띠번",
+        "description": "저희 매장에서는 시중과 동일한 할인제도를 시행하고 있습니다. 속살은 부드럽고 겉은 바삭한 오리지널 번",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "저희 매장에서는 시중과 동일한 할인제도를 시행하고 있습니다. 이탈리아 감각을 담은 파스쿠찌",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "CU멤버쉽 적립 · 사용과 SKT 멤버쉽 할인, 포인트 적립 · 사용이 가능합니다.",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -2469,12 +7151,111 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -2511,6 +7292,82 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
@@ -2519,8 +7376,23 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -2555,12 +7427,64 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
-        "name": "시원한 식혜",
-        "price": 3000
-      },
-      {
         "name": "꼬치어묵우동",
         "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
       },
       {
         "name": "바삭바삭 소떡소떡",
@@ -2569,6 +7493,65 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "커피전문점",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "커피전문점",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "투썸플레이스",
+        "description": "커피전문점",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "GS25",
+        "description": "GS25 편의점 24시간 운영(연중무휴)",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "기타",
+        "description": "팬텀(FANTOM) : 골프웨어, 스포츠 캐쥬얼, 멀티 스포츠 웨어, 행사의류 등",
+        "hours": "08:00 ~ 19:30"
       }
     ],
     "gasStation": {
@@ -2614,8 +7597,117 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "탐앤탐스",
+        "description": "탐앤탐스",
+        "hours": "07:30 ~ 19:30"
+      },
+      {
+        "name": "투썸플레이스",
+        "description": "1월 24일 신규오픈",
+        "hours": "07:30 ~ 19:30"
+      },
+      {
+        "name": "GS25",
+        "description": "GS25편의점",
+        "hours": "06:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -2652,6 +7744,66 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -2662,6 +7814,46 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "투썸플레이스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "GS25",
+        "description": "편의점_ 21시부터 다음날 07시 까지 무인 운영 / 할인, 적립 가능",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -2698,6 +7890,70 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
@@ -2712,6 +7968,38 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "투썸플레이스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "GS25",
+        "description": "(유인)07:00 - 21:00 (야간무인운영) 21:00 - 07:00",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -2747,12 +8035,117 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "로띠번,바닐라번 및 로띠번커피 판매",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "탐앤탐스 커피 및 청주오믈렛 판매",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "CU 편의점 24시간 운영중",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -2789,6 +8182,78 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
@@ -2799,6 +8264,39 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "06:30 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "06:30 ~ 20:00"
+      },
+      {
+        "name": "GS25",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "06:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -2835,6 +8333,82 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
@@ -2847,8 +8421,38 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "달콤하고 따듯한 번과 여러가지 음료를 즐기실 수 있습니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "용우동",
+        "description": "우동전문점",
+        "hours": "07:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "CU편의점(24시간)",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "공차",
+        "description": "커피, 버블티 등 음료 전문점입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -2884,12 +8488,126 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "주말 운영시간 연장",
+        "hours": "08:00 ~ 19:00"
+      },
+      {
+        "name": "명동칼국수",
+        "description": "칼국수, 만두 등 칼국수전문점의 맛을 느끼실 수 있습니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "용우동",
+        "description": "고급 우동면을 즐기실 수 있습니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "시중 드롭탑과 동일한 가격으로 다양한 커피음료를 즐기실수 있습니다.",
+        "hours": "08:00 ~ 22:00"
       }
     ],
     "gasStation": {
@@ -2928,16 +8646,116 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
-        "name": "시원한 식혜",
-        "price": 3000
-      },
-      {
         "name": "꼬치어묵우동",
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "바닐라번, 모카번",
+        "hours": "07:40 ~ 19:40"
+      },
+      {
+        "name": "투썸플레이스",
+        "description": "텀플러할인, 모바일쿠폰, 키프트카드할인, 투썸하트할인, SKT우주패스30%할인, SKT청년음료50%할인",
+        "hours": "07:40 ~ 19:40"
       }
     ],
     "gasStation": {
@@ -2976,6 +8794,58 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -2986,6 +8856,61 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "로띠번판매",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "코바코",
+        "description": "돈가스전문점",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "커피류 판매",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "용우동",
+        "description": "우동전문점",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "GS25 유인편의점[ GS25무인편의점 24시간운영중]",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -3021,12 +8946,121 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "로띠번, 바닐라번",
+        "hours": "08:00 ~ 19:40"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "아메리카노 외",
+        "hours": "08:00 ~ 19:40"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "아메리카노 외",
+        "hours": "08:00 ~ 19:40"
       }
     ],
     "gasStation": {
@@ -3067,6 +9101,70 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
@@ -3077,6 +9175,42 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "CU",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -3115,6 +9249,74 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
@@ -3129,6 +9331,44 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "맛있는커피 여러종류의 커피를 맛볼수있는 엔제리너스",
+        "hours": "07:00 ~ 19:00"
+      },
+      {
+        "name": "로띠번",
+        "description": "신메뉴 땅콩빵, 바닐라번, 모카번, 공주알밤빵, 커피와 함께 즐길 수 있음",
+        "hours": "07:00 ~ 19:50"
+      },
+      {
+        "name": "임실치즈피자",
+        "description": "임실요구르트, 치즈류, 구워먹는치즈, 임실치즈조각피자 등 선물류 포장 가능",
+        "hours": "07:30 ~ 07:30"
+      },
+      {
+        "name": "기타",
+        "description": "CU편의점(무인운영시간 1:30~4:30) 냉동만두, 컵밥, 핫바류, 햄버거, 김밥, 빵류, 라면 등 간편식 판매로 야간에도 먹거리를 찾을 수 있음",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -3168,12 +9408,126 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "달콤커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "호도과자/명품땅콩빵/커피콩빵/다양한 핫바류 판매중.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -3210,6 +9564,78 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
@@ -3220,6 +9646,35 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "09:00 ~ 17:00"
+      },
+      {
+        "name": "코바코",
+        "description": "돈가스, 우동 판매",
+        "hours": "08:00 ~ 18:30"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "아메리카노외 커피음료 판매 시중매장과 동일한 할인 혜택 및 가격(음료외 제외)",
+        "hours": "07:30 ~ 19:00"
       }
     ],
     "gasStation": {
@@ -3256,6 +9711,86 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
@@ -3264,12 +9799,33 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
       },
       {
-        "name": "바삭바삭 소떡소떡",
-        "price": 4000
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "제품 소진시까지",
+        "hours": "00:00 ~ 21:00"
+      },
+      {
+        "name": "코바코",
+        "description": "우동 라면 돈가스 판매",
+        "hours": "07:30 ~ 18:30"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "아메리카노외 커피음료 판매 시중매장과 동일한 할인 혜택 및 가격(음료외 제외)",
+        "hours": "07:30 ~ 19:30"
       }
     ],
     "gasStation": {
@@ -3306,12 +9862,111 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
         "name": "시원한 식혜",
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "탐앤탐스",
+        "description": "아메리카노외 커피류 판매",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -3350,12 +10005,107 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "탐앤탐스",
+        "description": "커피 전문점",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -3393,6 +10143,66 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -3407,6 +10217,47 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "로띠번 프랜차이즈 매장 운영중",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "휴게소내 탐앤탐스 프랜차이즈 커피매장 운영중",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "드롭탑 커피전문점",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -3444,12 +10295,122 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "코바코",
+        "description": "돈가스와 우동 판매 운영",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "커피딜라이트(커피전문점)",
+        "description": "옐로펀트 무인 로봇커피 매장",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "달콤커피",
+        "description": "7080 테마공원 바로 옆에 위치하여 옛 추억을 생각하며 커피 한잔의 여유",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "이마트24",
+        "description": "이마트24 편의점, 이마트24 Self 무인 편의점",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -3484,6 +10445,74 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
@@ -3494,6 +10523,38 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "이탈리아 정통 커피 브랜드 정체성을 그대로 살려 특별한 경험을 제공",
+        "hours": "07:00 ~ 20:30"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "천여 가지 다양한 생두 조합과 구백 번 이상의 로스팅 실험 끝에 찾아낸 925번째 가장 완벽한 원두, 커피 본연의 맛과 향에 집중하여 쓴맛은 줄이고 단맛과 다채로운 향을 끌어올린 세상에서 가장 맛있는 드롭탑만의 925 커피",
+        "hours": "07:30 ~ 19:30"
       }
     ],
     "gasStation": {
@@ -3530,6 +10591,78 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
@@ -3544,6 +10677,35 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "탐앤탐스",
+        "description": "탐앤탐스는 신선하고 풍부한 커피의 맛과 향으로 국내 및 세계 커피전문점 시장을 선도하고 있습니다.",
+        "hours": "06:00 ~ 19:00"
+      },
+      {
+        "name": "용우동",
+        "description": "20년 전통의 우동하면 생각나는 브랜드 용우동만의 고유한 우동맛을 맛보실수 있습니다.",
+        "hours": "06:00 ~ 20:40"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "퀄리티 높은 원두로 깊은 맛과 향의 수준 높은 커피를 즐길수 있습니다.",
+        "hours": "06:00 ~ 18:30"
       }
     ],
     "gasStation": {
@@ -3580,12 +10742,131 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "Take Your Time Angel-in-us 당신을 미소 짓게 하는 천사의 커피",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "로띠번",
+        "description": "로띠번 , 크림치즈번 , 호두카야번",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "생두 고유의 맛과 향미를 살리는 - 슬로우 로스팅",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "아시아 최초 큐그레이더를 포함한 글로벌 패널의 찬사를 받은 925블랜드 드롭탑의 시그니처 원두 925 블랜드",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "CU편의점",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -3623,6 +10904,86 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
@@ -3631,8 +10992,28 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "커피 및 도너츠 판매",
+        "hours": "07:30 ~ 19:00"
+      },
+      {
+        "name": "할리스커피",
+        "description": "할리스 커피 판매 중",
+        "hours": "07:30 ~ 19:00"
       }
     ],
     "gasStation": {
@@ -3669,12 +11050,60 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
-        "name": "시원한 식혜",
-        "price": 3000
-      },
-      {
         "name": "꼬치어묵우동",
         "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
       },
       {
         "name": "바삭바삭 소떡소떡",
@@ -3683,6 +11112,55 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "빵류 및 커피류 판매",
+        "hours": "07:00 ~ 20:00"
+      },
+      {
+        "name": "엔제리너스",
+        "description": "커피류 판매",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "커피류 판매",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -3726,8 +11204,112 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "탐앤탐스",
+        "description": "커피전문점",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "커피전문점",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -3764,6 +11346,66 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -3774,6 +11416,51 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "투썸플레이스",
+        "description": "외부매장 '투썸플레이스 신규 오픈'",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "공차",
+        "description": "외부매장 '공차 신규 오픈'",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "GS25",
+        "description": "내부 매장 'GS25 편의점' / 야간 무인 매장 운영(21:00~07:00)",
+        "hours": "07:00 ~ 21:00"
       }
     ],
     "gasStation": {
@@ -3810,6 +11497,70 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
@@ -3824,6 +11575,43 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "투썸플레이스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "공차",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "GS25",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -3860,12 +11648,121 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "중앙계산대 옆 위치",
+        "hours": "07:30 ~ 21:30"
+      },
+      {
+        "name": "로띠번",
+        "description": "휴게소 내부 엔제리너스 옆 위치",
+        "hours": "07:30 ~ 21:30"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "휴게소 전면부 위치",
+        "hours": "07:30 ~ 19:30"
       }
     ],
     "gasStation": {
@@ -3903,6 +11800,74 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
@@ -3913,6 +11878,39 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "중앙계산대 옆 위치",
+        "hours": "07:30 ~ 20:30"
+      },
+      {
+        "name": "로띠번",
+        "description": "휴게소 내부 엔제리너스 옆 위치",
+        "hours": "07:30 ~ 20:30"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "휴게소 전면부 위치",
+        "hours": "07:00 ~ 19:30"
       }
     ],
     "gasStation": {
@@ -3950,6 +11948,82 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
@@ -3962,8 +12036,28 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "파스쿠찌 커피전문점",
+        "hours": "08:10 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "탐앤탐스 커피전문점",
+        "hours": "08:10 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -4005,12 +12099,126 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "매주 금,토,일요일 20시 마감",
+        "hours": "06:00 ~ 19:00"
+      },
+      {
+        "name": "로띠번",
+        "description": "라스트 오더 17시 40분",
+        "hours": "06:00 ~ 18:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "라스트 오더 19시 30분",
+        "hours": "06:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "매주 금,토요일 21시 마감",
+        "hours": "07:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -4051,16 +12259,116 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
-        "name": "시원한 식혜",
-        "price": 3000
-      },
-      {
         "name": "꼬치어묵우동",
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:00 ~ 20:00"
+      },
+      {
+        "name": "이마트24",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:00 ~ 22:00"
       }
     ],
     "gasStation": {
@@ -4102,6 +12410,62 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -4112,6 +12476,46 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "탐앤탐스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:00 ~ 21:00"
+      },
+      {
+        "name": "CU",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -4148,12 +12552,132 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "영산휴개소 내 로띠번에서 연중무휴 따뜻한 번 제공",
+        "hours": "09:00 ~ 20:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "고급 커피 브랜드로 휴게소에서 즐길 수 있는 여유 한잔",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "24시간 연중무휴 편의점",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "공차",
+        "description": "고급 차 브랜드로 휴게소에서 즐길수 있는 차 한잔의 여유",
+        "hours": "06:30 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "101번지 남산돈까스",
+        "hours": "07:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "영산휴게소 내 토스트매장, 삼삼떡볶이&BHC치킨 매장에서 연중무휴 즉석에서 만들어드리는 삼삼떡볶이 및 BHC콜팝치킨 제공",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -4192,6 +12716,70 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
@@ -4202,6 +12790,42 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:30 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -4243,6 +12867,74 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
@@ -4257,6 +12949,34 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "이마트24",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:00 ~ 21:00"
       }
     ],
     "gasStation": {
@@ -4292,12 +13012,121 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "이마트24",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -4333,6 +13162,82 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
@@ -4343,6 +13248,40 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "세븐일레븐",
+        "description": "24시간 편의매장",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "투썸플레이스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "공차",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "스위트- 청주오믈렛, 젤리 및 캔디류 판매",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -4378,6 +13317,82 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
@@ -4386,12 +13401,28 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
       },
       {
-        "name": "바삭바삭 소떡소떡",
-        "price": 4000
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "시중과 동일한 할인/적립 제도 운영",
+        "hours": "07:30 ~ 19:30"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "시중과 동일한 할인.적립 제도 운영",
+        "hours": "07:30 ~ 19:30"
       }
     ],
     "gasStation": {
@@ -4426,12 +13457,116 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
         "name": "시원한 식혜",
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "커피전문점",
+        "hours": "07:20 ~ 19:20"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "커피전문점",
+        "hours": "07:20 ~ 19:20"
       }
     ],
     "gasStation": {
@@ -4473,12 +13608,117 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "탐앤탐스",
+        "description": "커피류 및 차류 판매",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "커피류 및 차류 판매",
+        "hours": "08:00 ~ 21:30"
+      },
+      {
+        "name": "CU",
+        "description": "24시간운영 편의점",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -4516,6 +13756,66 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -4530,6 +13830,47 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "09:00 ~ 20:00"
+      },
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:00 ~ 19:00"
+      },
+      {
+        "name": "CU",
+        "description": "CU 편의점(24시)",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -4569,12 +13910,126 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "휴게소로 진입하면 본관 우측 브랜드 매장에 위치하고 있으며, 해피포인트가 가능하며 각종 음료와 도너츠를 판매하고 있다.",
+        "hours": "07:40 ~ 19:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "고객 화장실 진입로(열린매장 반대편)에 위치하고 있으며 커피류(8종류) 및 각종 음료를(16종류) 판매하고 있다.",
+        "hours": "07:40 ~ 19:30"
+      },
+      {
+        "name": "투썸플레이스",
+        "description": "휴게소 푸드코트(우동 맞은편) 내에 위치하고 있으며, 커피 및 각종 음료를 판매하고 있다.",
+        "hours": "07:40 ~ 19:30"
+      },
+      {
+        "name": "GS25",
+        "description": "본관 1층 GS25오픈! 통신사(KT,LG) 멤버십 포인트 할인, GS포인트 적립가능 24시간 다양한 간편식과 음료, 간편결제 서비스를 제공하고 있습니다.",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -4610,6 +14065,70 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
@@ -4620,6 +14139,38 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "06:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "탐앤탐스 커피 전문점 1,2호점 (1호점 07:00~19:00 마감, 2호점 08:00~22:00마감)",
+        "hours": "08:00 ~ 19:00"
       }
     ],
     "gasStation": {
@@ -4659,6 +14210,78 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
@@ -4673,6 +14296,35 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "일반매장과 동일함",
+        "hours": "09:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "탐앤탐스 1.2호점 (신관,구관) 2군데 운영 일반 로드샵과 동일하게 적용",
+        "hours": "08:00 ~ 21:00"
+      },
+      {
+        "name": "CU",
+        "description": "24시 운영 브랜드편의점",
+        "hours": "12:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -4707,12 +14359,136 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "커피,도넛",
+        "hours": "06:00 ~ 21:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "커피, 차류",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "토스타토스트",
+        "description": "토스트 외",
+        "hours": "06:00 ~ 18:00"
+      },
+      {
+        "name": "기타",
+        "description": "잠바주스 (커피,차류,주스.스무디)",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "맘스터치",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -4748,6 +14524,86 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
@@ -4756,8 +14612,33 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "도넛 & 커피",
+        "hours": "07:00 ~ 21:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "커피, 차류",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "24시간 운영 (야간 셀프계산대)",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -4794,12 +14675,64 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
-        "name": "시원한 식혜",
-        "price": 3000
-      },
-      {
         "name": "꼬치어묵우동",
         "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
       },
       {
         "name": "바삭바삭 소떡소떡",
@@ -4808,6 +14741,50 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:30 ~ 19:30"
+      },
+      {
+        "name": "CU",
+        "description": "유인, 무인 운영",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -4845,8 +14822,103 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -4882,6 +14954,66 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -4892,6 +15024,61 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "신선하고 엄선된 최상의 재료만을 사용하여 국내산 수제 버터필링 기법으로 만든 도우를 발효시켜 그윽한 모카향 크림토핑을 해서 오븐에서 갓 구워낸 부드럽고 후레쉬한 모카향이 가득한 번",
+        "hours": "07:30 ~ 19:30"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "**파스쿠찌(Pascucci)**는 이탈리아 전통 커피 문화를 바탕으로 한 프리미엄 커피 브랜드입니다. 고급 원두와 정통 에스프레소 추출 방식으로 깊고 진한 커피 맛을 선사합니다. 유럽 감성의 세련된 인테리어와 다양한 음료·디저트 메뉴로 고객에게 편안한 휴식 공간을 제공합니다.",
+        "hours": "07:30 ~ 19:30"
+      },
+      {
+        "name": "투썸플레이스",
+        "description": "섬세한 디테일이 만드는 커피 맛의 차이. 이것이 바로 투썸 커피만의 Small Indulgence(작은 사치) 입니다. 거기에, 다양한 커피마다 최적으로 어울리는 색다른 디저트까지 나만의 즐거움을 만날 수 있는 프리미엄 디저트 카페 투썸플레이스입니다",
+        "hours": "07:30 ~ 19:30"
+      },
+      {
+        "name": "CU",
+        "description": "순수 국내 브랜드 CU는 21세기 한국형 편의점을 지향하며 고객의 니즈에 능동적으로 대응하기 위해 BGF 리테일에서 지난 30여 년간 쌓아온 노하우를 바탕으로 만든 새로운 편의점 모델입니다. ‘Fresh & Refresh’라는 모토를 내걸고 새롭고 신선한 상품과 이용자 중심의 서비스를 제공하여 하루를 충전하고 일상의 활력을 얻는 생활 속 쉼터를 지향하고 있습니다",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "기타",
+        "description": "로봇 바리스타가 운영하는 24시간 무인커피 판매시설.다양한 커피 및 음료를 편리하게 이용 할수 있습니다",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -4929,6 +15116,70 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
@@ -4943,6 +15194,38 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "로스팅 후 숙성과정을 거쳐 7~30일 사이에 가장깊고 풍부한 커피 본연의 맛으로 제공합니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "로띠번",
+        "description": "로띠번, 크림치즈번, 커피, 차",
+        "hours": "08:00 ~ 19:30"
       }
     ],
     "gasStation": {
@@ -4977,12 +15260,111 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "이마트24",
+        "description": "06:00~22:00(유인운영), 22:00~06:00(무인운영)",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -5016,6 +15398,78 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
@@ -5026,6 +15480,29 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "아메리카노, 라떼, 카푸치노, 시그니처 라떼(바닐라 딜라이트)",
+        "hours": "07:30 ~ 19:00"
       }
     ],
     "gasStation": {
@@ -5060,6 +15537,78 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
@@ -5072,8 +15621,23 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "이마트24",
+        "description": "PM 22:00~ AM 07:00 까지 무인운영시간입니다.",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -5111,12 +15675,111 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "이마트24",
+        "description": "PM 22:00~ AM 08:00 까지 무인운영시간입니다.",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -5153,16 +15816,111 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
-        "name": "시원한 식혜",
-        "price": 3000
-      },
-      {
         "name": "꼬치어묵우동",
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "커피전문브랜드 매장",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -5204,6 +15962,62 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -5214,6 +16028,41 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:00 ~ 19:00"
       }
     ],
     "gasStation": {
@@ -5250,12 +16099,111 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "커피 본연의 맛을 잘살릴수 있는 기후인 브라질 다스 알마스에서 재배된 스페셜 티 원두를 모든 커피에 사용하여 풍미와 향이 독특한 최상의 커피를 맛 보실 수 있습니다. / 열린매장 내 드롭탑1매장, 휴게소 매장내 드롭탑2매장 위치되어 있습니다.",
+        "hours": "07:00 ~ 19:00"
       }
     ],
     "gasStation": {
@@ -5289,6 +16237,66 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
@@ -5299,6 +16307,42 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 17:00"
+      },
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 17:00"
       }
     ],
     "gasStation": {
@@ -5334,6 +16378,74 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
@@ -5348,6 +16460,29 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "유명브랜드 커피 매장인 엔제리너스를 아침8시 부터 저녁 8시까지 운영하고 있으며 커피 향이 뛰어나 마니아 단골 고객층을 확보하고 있으며 시중과 동일하게 할인제도를 운영하여 판매하고 있습니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -5386,12 +16521,126 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "카라멜라떼,카페아메리카노 등 고품격 커피맛과 편안한 분위기가 있는 커피전문매장입니다.",
+        "hours": "07:00 ~ 19:40"
+      },
+      {
+        "name": "클라이머홀릭",
+        "description": "아웃도어 의류 전문 매장으로 상설매장과 정상매장을 함께 운영하고 있습니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "투썸플레이스",
+        "description": "내 취향이 담긴 커피,내 취향을 담아 섬세하게 만든 나만의 커피가 있습니다",
+        "hours": "07:00 ~ 19:40"
+      },
+      {
+        "name": "한신우동",
+        "description": "얼큰우동,삼진어묵우동,유부우동,유부우동곱빼기,비빔우동 등 한국우동의 맛!",
+        "hours": "07:00 ~ 21:00"
       }
     ],
     "gasStation": {
@@ -5427,6 +16676,82 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
@@ -5437,6 +16762,30 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "투썸플레이스",
+        "description": "커피매장",
+        "hours": "07:00 ~ 20:30"
+      },
+      {
+        "name": "기타",
+        "description": "CU편의점 - 스낵/음료수 및 즉석식품 판매 24시 운영중",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -5473,6 +16822,86 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
@@ -5481,12 +16910,33 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
       },
       {
-        "name": "바삭바삭 소떡소떡",
-        "price": 4000
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "커피와 어울리는 모카, 바닐라 로띠번",
+        "hours": "07:30 ~ 19:30"
+      },
+      {
+        "name": "투썸플레이스",
+        "description": "행복한 공간을 추구하는 커피전문점",
+        "hours": "07:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "CU편의점 - 스낵/음료수 및 즉석식품 판매 24시 운영중",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -5524,12 +16974,112 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
         "name": "시원한 식혜",
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "탐앤탐스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "09:00 ~ 21:00"
+      },
+      {
+        "name": "CU",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 00:00"
       }
     ],
     "gasStation": {
@@ -5569,12 +17119,122 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "탐앤탐스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:00 ~ 19:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "팬텀",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -5608,6 +17268,66 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -5622,6 +17342,42 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:00 ~ 19:00"
+      },
+      {
+        "name": "CU",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -5657,12 +17413,116 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:00 ~ 19:00"
+      },
+      {
+        "name": "CU",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -5698,6 +17558,74 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
@@ -5708,6 +17636,38 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "탐앤탐스",
+        "description": "커피 / 음료",
+        "hours": "09:00 ~ 20:00"
+      },
+      {
+        "name": "토스타토스트",
+        "description": "토스트/십원빵/델리만쥬/땅콩빵/커피/음료",
+        "hours": "09:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -5746,6 +17706,74 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
@@ -5760,6 +17788,25 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "탐앤탐스",
+        "description": "커피 / 음료",
+        "hours": "08:00 ~ 18:50"
       }
     ],
     "gasStation": {
@@ -5799,12 +17846,116 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "용우동",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -5841,6 +17992,86 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
@@ -5849,8 +18080,38 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:30 ~ 19:30"
+      },
+      {
+        "name": "용우동",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:30 ~ 19:30"
+      },
+      {
+        "name": "이마트24",
+        "description": "무인 운영 24시",
+        "hours": "07:30 ~ 19:30"
+      },
+      {
+        "name": "기타",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -5885,12 +18146,64 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
-        "name": "시원한 식혜",
-        "price": 3000
-      },
-      {
         "name": "꼬치어묵우동",
         "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
       },
       {
         "name": "바삭바삭 소떡소떡",
@@ -5899,6 +18212,45 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "탐앤탐스",
+        "description": "매장내 위치",
+        "hours": "07:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -5937,8 +18289,112 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "빵류(번 판매)",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "커피, 음료 판매",
+        "hours": "07:30 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -5978,6 +18434,62 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -5988,6 +18500,51 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "명품맛집(통만두집)",
+        "hours": "11:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -6025,6 +18582,70 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
@@ -6039,6 +18660,38 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "2023.11.27일 오픈",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -6075,12 +18728,126 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "도너츠, 커피류, 음료류 판매",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "할리스커피",
+        "description": "커피전문 판매",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "로띠번",
+        "description": "번(빵류) 판매",
+        "hours": "08:00 ~ 19:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "커피전문 판매",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -6121,6 +18888,78 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
@@ -6131,6 +18970,29 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "커피",
+        "hours": "08:00 ~ 19:30"
       }
     ],
     "gasStation": {
@@ -6166,6 +19028,82 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
@@ -6178,8 +19116,38 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "이 즐거움을 위해 할리스커피는 1998년 국내 최초 에스프레소 커피 전문점의 문을 연 이래 지속적으로 커피 시장을 이끄는 새로운 시도를 해왔습니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "용우동",
+        "description": "27년 전통의 용우동은 ‘고객 없이는 우리도 없다’ 를 실천하고 있습니다.",
+        "hours": "06:00 ~ 21:00"
+      },
+      {
+        "name": "기타",
+        "description": "[클라이머홀릭] 의류(등산,골프웨어), 애견 용품",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "조선대반점",
+        "hours": "10:30 ~ 20:40"
       }
     ],
     "gasStation": {
@@ -6221,12 +19189,122 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:00 ~ 20:00"
+      },
+      {
+        "name": "용우동",
+        "description": "용우동",
+        "hours": "10:00 ~ 18:30"
+      },
+      {
+        "name": "클라이머홀릭",
+        "description": "의류 (등산,골프웨어), 애견 용품",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "평양아바이순대국밥,소미미단팥빵",
+        "hours": "09:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -6268,16 +19346,121 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
-        "name": "시원한 식혜",
-        "price": 3000
-      },
-      {
         "name": "꼬치어묵우동",
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "투썸플레이스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -6318,6 +19501,62 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -6328,6 +19567,46 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "이마트24",
+        "description": "24시간 운영하며, 야간(22~익일06시)에는 무인 판매 운영 중.",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "기타",
+        "description": "\"화서다방\"운영, HOT아메리카노 3,900원",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -6366,12 +19645,116 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "당일 갓 구운 맛있는 모카커피로띠번과 바닐라번을 맛 볼 수 있습니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "달콤커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -6407,6 +19790,70 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
@@ -6417,6 +19864,42 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "커피류 판매",
+        "hours": "07:30 ~ 19:20"
+      },
+      {
+        "name": "CU",
+        "description": "21시~07시 무인운영",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -6451,6 +19934,70 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
@@ -6465,6 +20012,34 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "제빵 프랜차이즈",
+        "hours": "08:00 ~ 19:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "파스쿠찌 커피매장",
+        "hours": "08:00 ~ 19:00"
       }
     ],
     "gasStation": {
@@ -6504,12 +20079,116 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 19:30"
       }
     ],
     "gasStation": {
@@ -6546,6 +20225,82 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
@@ -6556,6 +20311,50 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "세븐일레븐",
+        "description": "(상행/인천방면) 음료,과자,여행용품,편의용품 등",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "투썸플레이스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "달콤커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "토스타토스트",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -6592,6 +20391,86 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
@@ -6600,12 +20479,33 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
       },
       {
-        "name": "바삭바삭 소떡소떡",
-        "price": 4000
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "빵류",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "용우동",
+        "description": "우동류",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "달콤커피",
+        "description": "커피",
+        "hours": "08:00 ~ 19:30"
       }
     ],
     "gasStation": {
@@ -6642,12 +20542,116 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
         "name": "시원한 식혜",
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "커피류",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "용우동",
+        "description": "우동류/짜장면",
+        "hours": "06:00 ~ 19:20"
       }
     ],
     "gasStation": {
@@ -6688,12 +20692,108 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "커피류, 음료류, 차류등",
+        "hours": "07:50 ~ 19:50"
+      },
+      {
+        "name": "로띠번",
+        "description": "로띠번, 커피류, 음료류, 차류등",
+        "hours": "07:50 ~ 19:50"
       }
     ],
     "gasStation": {
@@ -6731,6 +20831,66 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -6745,6 +20905,47 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "엔제리너스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "이마트24",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -6780,12 +20981,111 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -6821,6 +21121,74 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
@@ -6831,6 +21199,38 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "달콤커피",
+        "description": "따뜻하게 커피를 마실수 있는 바다가 보이는 해맞이옥계휴게소 달콤커피(멤버십할인,앱쿠폰적립,기프티콘(메뉴교환권,금액권)사용",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "이마트24",
+        "description": "이마트24 브랜드 편의점 운영(무인편의점은 24시간 운영)멤버십할인,적립,모바일쿠폰,1+1판매",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -6866,6 +21266,78 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
@@ -6880,6 +21352,35 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "달콤한 도넛과 향긋한 커피, 차별화된 음료 등 다양한 제품들로 달콤한 휴식을 즐기실 수 있습니다.",
+        "hours": "07:00 ~ 19:00"
+      },
+      {
+        "name": "할리스커피",
+        "description": "할리스 고유의 로스팅 기법으로 원두 고유의 풍부한 향미를 살리고 있습니다.",
+        "hours": "07:30 ~ 19:30"
+      },
+      {
+        "name": "CU",
+        "description": "CU편의점은 고속도로를 이용하는 고객들에게 다양한 상품과 서비스를 제공합니다. 24시간 운영되며, 즉석식품, 음료, 스낵, 생활용품 등 다양한 제품을 갖추고 있습니다. 고객편의를 위해 셀프계산대와 전자레인지 등을 제공하며 멤버십 적립, 할인혜택도 지원합니다. 또한, 신속한 서비스와 청결한 매장 환경을 유지하고 있어 장거리 여행 중 필요한 물품을 손쉽게 구매할 수 있는 편리한 공간을 제공합니다",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -6916,12 +21417,112 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "CU편의점",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -6959,6 +21560,86 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
@@ -6967,8 +21648,28 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:20 ~ 19:30"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 19:30"
       }
     ],
     "gasStation": {
@@ -7009,12 +21710,64 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
-        "name": "시원한 식혜",
-        "price": 3000
-      },
-      {
         "name": "꼬치어묵우동",
         "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
       },
       {
         "name": "바삭바삭 소떡소떡",
@@ -7023,6 +21776,50 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:30 ~ 19:30"
+      },
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:30 ~ 19:30"
       }
     ],
     "gasStation": {
@@ -7065,8 +21862,117 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "편의점 24시간 운영",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "공차",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -7103,6 +22009,66 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -7113,6 +22079,41 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "커피,음료",
+        "hours": "07:30 ~ 19:30"
       }
     ],
     "gasStation": {
@@ -7148,6 +22149,66 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
@@ -7162,6 +22223,33 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "커피,음료",
+        "hours": "07:30 ~ 19:30"
       }
     ],
     "gasStation": {
@@ -7197,12 +22285,131 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "클라이머홀릭",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -7238,6 +22445,78 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
@@ -7248,6 +22527,29 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "탐앤탐스",
+        "description": "운영시간 : 07시~21시 운영",
+        "hours": "07:00 ~ 21:00"
       }
     ],
     "gasStation": {
@@ -7282,6 +22584,82 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
@@ -7294,10 +22672,19 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
       }
     ],
+    "brandStores": [],
     "gasStation": {
       "brand": "ex-oil",
       "gasolinePrice": 0,
@@ -7329,12 +22716,121 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "맛과 향이 좋은 할리스 커피를 휴게소에서 즐길수 있습니다",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "로띠번",
+        "description": "베이커리 전문점을 휴게소에서 만날수 있습니다. 운전중 간식 타임은 역시 로띠번이 최고~~~",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "프리미엄 커피전문점 ‘CAFE DROPTOP’",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -7372,16 +22868,121 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
-        "name": "시원한 식혜",
-        "price": 3000
-      },
-      {
         "name": "꼬치어묵우동",
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "롯데리아",
+        "description": "햄버거의 중심 패스트푸드 전문점인 롯데리아 운영 중",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "로띠번",
+        "description": "베이커리 전문점을 휴게소에서 만날수 있습니다. 운전 중 간식타임은 역시 로띠번이 최고 ~ 마성떡볶이 매장도 함께 운영하고 있습니다.",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "맛과 향이 좋은 드롭탑 커피를 휴게소에서 즐길 수 있습니다. 통신사 할인 및 텀블러 할인도 가능합니다.",
+        "hours": "08:00 ~ 19:30"
       }
     ],
     "gasStation": {
@@ -7422,6 +23023,62 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -7432,8 +23089,37 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
       }
     ],
+    "brandStores": [],
     "gasStation": {
       "brand": "ex-oil",
       "gasolinePrice": 0,
@@ -7466,14 +23152,107 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
       }
     ],
+    "brandStores": [],
     "gasStation": {
       "brand": "ex-oil",
       "gasolinePrice": 0,
@@ -7504,6 +23283,70 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
@@ -7514,8 +23357,33 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
       }
     ],
+    "brandStores": [],
     "gasStation": {
       "brand": "ex-oil",
       "gasolinePrice": 0,
@@ -7547,6 +23415,74 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
@@ -7561,6 +23497,54 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "코바코",
+        "description": "고메브릿지 식당 내부",
+        "hours": "06:00 ~ 19:40"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "앤티앤스프레즐",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "세븐일레븐",
+        "description": "상행점 : 24시간 운영 / 하행점 : 6시~20시 (주말 22시)",
+        "hours": "08:00 ~ 24:00"
+      },
+      {
+        "name": "투썸플레이스",
+        "description": "투썸(상행) : 8시~24시 / 투썸(하행) : 8시~22시",
+        "hours": "08:00 ~ 22:00"
       }
     ],
     "gasStation": {
@@ -7599,12 +23583,107 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "커피, 음료류 판매",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -7642,6 +23721,82 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
@@ -7652,6 +23807,45 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "모카번, 바닐라번",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "투썸플레이스",
+        "description": "커피류, 음료류 판매",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "CU 편의점",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "공차",
+        "description": "밀크티, 음료류, 커피류 판매",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "스테프 핫도그",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -7687,6 +23881,86 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
@@ -7695,12 +23969,33 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
       },
       {
-        "name": "바삭바삭 소떡소떡",
-        "price": 4000
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "도넛 및 커피 음료류 판매",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "커피, 음료류 판매",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -7735,12 +24030,131 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
         "name": "시원한 식혜",
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "번(바닐라,모카)",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "커피",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "무인 로봇커피 매장 운영(24시간)",
+        "hours": "00:00 ~ 00:00"
+      },
+      {
+        "name": "투썸플레이스",
+        "description": "커피",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "공차",
+        "description": "커피, 밀크티",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -7781,12 +24195,112 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "탐앤탐스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:30 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "오후 20:00 - 오전 07:30 무인운영",
+        "hours": "00:00 ~ 00:00"
       }
     ],
     "gasStation": {
@@ -7822,6 +24336,62 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -7836,6 +24406,42 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "탐앤탐스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:30 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "오후 20:00 - 오전 07:30 무인운영시간",
+        "hours": "00:00 ~ 00:00"
       }
     ],
     "gasStation": {
@@ -7871,12 +24477,131 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "따뜻한 커피번의 구수한 향이 일품인 로띠번",
+        "hours": "09:00 ~ 17:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "기본2샷으로 진한 품미의 아메리카노가 특징인 탐앤탐스 브랜드 커피매장",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "NEPA",
+        "description": "한국토종 대표 아웃도어 브랜드",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "신선함으로 일상을 충전하고 활력을 얻는 공간. 언제 어디서나 만나면 반가운 브랜드, CU가 고객의 하루를 함께합니다",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "기타",
+        "description": "코바코는 음식이 너무 맛있어서 코를 박고 먹는다 라는 말에서 탄생한 브래드명으로 쫄깃하고 오동통한 면발, 깔끔한 국물의 우동전문 브랜드 입니다.",
+        "hours": "07:00 ~ 21:30"
       }
     ],
     "gasStation": {
@@ -7915,6 +24640,74 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
@@ -7925,6 +24718,43 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "투썸플레이스",
+        "description": "차가운 날씨에 따뜻한 커피 한잔",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "기타",
+        "description": "[코바코우동] 차가운 겨울에 더욱생각나는 통통한 면발 뜨듯한 국물이 일품",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -7962,6 +24792,78 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
@@ -7976,6 +24878,40 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "매일 굽는 모카번과 바닐라번",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "코바코",
+        "description": "오동통 우동면에 따끈한 국물 우동전문점",
+        "hours": "07:00 ~ 21:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "진한 커피향의 브랜드 커피매장 탐앤탐스",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "CU 편의점 매장(24시간 운영)",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -8012,12 +24948,126 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "제빵프랜차이즈",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "코바코",
+        "description": "우동전문점",
+        "hours": "07:00 ~ 21:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "커피전문점",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "편의점",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -8053,6 +25103,82 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
@@ -8061,8 +25187,23 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "커피",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -8098,12 +25239,64 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
-        "name": "시원한 식혜",
-        "price": 3000
-      },
-      {
         "name": "꼬치어묵우동",
         "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
       },
       {
         "name": "바삭바삭 소떡소떡",
@@ -8112,6 +25305,50 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "커피",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "편의점",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -8151,8 +25388,122 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "코바코",
+        "description": "코바코 우동만 해당 , 코바코 돈가스매장은 08:00 부터 오픈",
+        "hours": "06:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "달콤커피",
+        "description": "금요일,토요일은 오후 21:00 까지 영업",
+        "hours": "07:00 ~ 19:00"
+      },
+      {
+        "name": "이마트24",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -8189,6 +25540,66 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -8199,6 +25610,51 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "탐앤탐스",
+        "description": "오리지널 스페셜티 커피 전문 브랜드",
+        "hours": "07:00 ~ 18:00"
+      },
+      {
+        "name": "달콤커피",
+        "description": "MZ의 Flex 라이프스타일",
+        "hours": "09:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "23번지 남산돈까스",
+        "hours": "10:00 ~ 20:30"
       }
     ],
     "gasStation": {
@@ -8234,6 +25690,70 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
@@ -8248,8 +25768,29 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
       }
     ],
+    "brandStores": [],
     "gasStation": {
       "brand": "ex-oil",
       "gasolinePrice": 0,
@@ -8280,14 +25821,103 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
       }
     ],
+    "brandStores": [],
     "gasStation": {
       "brand": "ex-oil",
       "gasolinePrice": 0,
@@ -8318,6 +25948,78 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
@@ -8328,6 +26030,44 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "직접 발효시켜 갓 구워내 더 맛있는 바닐라번 / 모카번이 있습니다.",
+        "hours": "09:00 ~ 17:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "달콤커피",
+        "description": "달콤커피 고품질 원두의 바탕으로 맛있는 커피",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "기타",
+        "description": "뉴욕버거 : 휴게소에서도 맛있는 패스트푸드를 즐기실 수 있습니다",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -8367,6 +26107,82 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
@@ -8379,8 +26195,43 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "스낵코너에 위치하고 있으며 바로 구워낸 빵으로 커피와 함께 먹으면 맛있습니다.",
+        "hours": "09:00 ~ 17:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "언제나 센스있게, 이탈리아스럽게 141년 이탈리아의 전통을 이어가며 새로운 감각을 만들어가는 파스쿠찌. 누구나 꿈꿔온 이탈리아를 쉽게 만날 수 있도록 당신 가장 가까운 곳에 이탈리아의 감각 파스쿠찌가 있습니다. 오늘도 자신만의 감각으로 살아가는 당신에게 파스쿠찌는 이탈리아의 정수를 담아 당신의 삶에 세련된 감각을 더합니다. 이탈리아의 신선한 감각으로 레시피한 에스프레소 커피와 젤라또, 티라미수, 그리고 이탈리안 시그니처 메뉴를 통해 이탈리아의 풍미가 담긴 맛과 센스를 전합니다. 일상에서 만나는 이탈리아의 감각 언제나 센스있게, 이탈리아스럽게 SENSE OF ITALY, 파스쿠찌",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "용우동",
+        "description": "우동(용우동)코너로 브랜드이며 쫄깃한 면발과 깊은 육수맛이 일품입니다.",
+        "hours": "08:00 ~ 24:00"
+      },
+      {
+        "name": "달콤커피",
+        "description": "달콤커피 고픔질 원두와 오랜 운영노하우를 바탕으로 품질은 유지하면서도 합리적이 가격체계를 갖춘 달콤커피의 신규브랜드",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "\"뉴욕버거가 곧 대한민국 대표 수제버거입니다.\" 뉴욕버거는 2012년 인천롯데백화점 1호점을 시작으로 11년간 고기패티, 치킨패티, 새우패티 등 자체 생산 제조하여 가맹점에 공급하는 시스템을 바탕으로 고품질의 메뉴와 합리적인 가격을 제공하기 위해 노력하고 있습니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -8420,12 +26271,121 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "아메리카노 등 커피류와 녹차, 스파클링, 스무디, 아이스티, 홍차, 허브티 등을 판매중입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "용우동",
+        "description": "(실속상품)우동, 짜장면",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "클라이머홀릭",
+        "description": "실용성과 가성비가 높고 좋은 원단을 사용하여 보온성과 통풍성이 뛰어난 정통 아웃도어 브랜드 입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -8464,16 +26424,121 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
-        "name": "시원한 식혜",
-        "price": 3000
-      },
-      {
         "name": "꼬치어묵우동",
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "아메리카노 등 커피류와 녹차, 아이스티, 홍차, 허브티, 스무디, 스파클링류 등을 판매중입니다.",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "용우동",
+        "description": "(실속상품)우동, 짜장면",
+        "hours": "08:00 ~ 20:30"
+      },
+      {
+        "name": "클라이머홀릭",
+        "description": "실용성과 가성비가 높고 좋은 원단을 사용하여 보온성과 통풍성이 뛰어난 정통 아웃도어 브랜드 입니다.",
+        "hours": "08:00 ~ 19:30"
       }
     ],
     "gasStation": {
@@ -8516,6 +26581,58 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -8526,8 +26643,37 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
       }
     ],
+    "brandStores": [],
     "gasStation": {
       "brand": "ex-oil",
       "gasolinePrice": 0,
@@ -8563,12 +26709,141 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "하행 1개소",
+        "hours": "06:00 ~ 20:00"
+      },
+      {
+        "name": "롯데리아",
+        "description": "하행 1개소",
+        "hours": "06:00 ~ 24:00"
+      },
+      {
+        "name": "할리스커피",
+        "description": "상/하행 각 1개소",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "로띠번",
+        "description": "꽈배기, 십원빵, 마성김밥",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "ELLEGOLF",
+        "description": "본관 패션매장 2층",
+        "hours": "08:00 ~ 19:00"
+      },
+      {
+        "name": "JDX",
+        "description": "본관 패션매장 2층",
+        "hours": "08:00 ~ 19:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "상/하행 각 1개소",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -8604,6 +26879,70 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
@@ -8614,6 +26953,42 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "옥외매장에 있습니다.",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 19:30"
       }
     ],
     "gasStation": {
@@ -8652,6 +27027,74 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
@@ -8666,6 +27109,34 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "커피 외 아이스티 등 음료 판매",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "할리스커피",
+        "description": "커피 외 아이스티 등 음료 판매",
+        "hours": "08:00 ~ 19:30"
       }
     ],
     "gasStation": {
@@ -8704,12 +27175,111 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "커피, TEA, 번 판매",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -8746,6 +27316,78 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
@@ -8756,6 +27398,25 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "영업시간 안내 [07시~19시]",
+        "hours": "07:00 ~ 19:00"
       }
     ],
     "gasStation": {
@@ -8791,6 +27452,86 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
@@ -8799,12 +27540,23 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
       },
       {
-        "name": "바삭바삭 소떡소떡",
-        "price": 4000
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "커피, 차류(시중과 동일한 서비스 제공)",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -8843,14 +27595,107 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
         "name": "시원한 식혜",
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
       }
     ],
+    "brandStores": [],
     "gasStation": {
       "brand": "ex-oil",
       "gasolinePrice": 0,
@@ -8886,12 +27731,107 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -8929,6 +27869,66 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -8943,6 +27943,47 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "코바코",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:30 ~ 18:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "23.12.13일부터 영업을 할리스에서 파스쿠찌로 리모델링 공사 완료 후 영업을 시작하였습니다.",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "기타",
+        "description": "파스쿠찌커피매장 /주말,공휴일 07시부터~07시30분까지 영업",
+        "hours": "07:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -8977,12 +28018,112 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "탐앤탐스",
+        "description": "아메리카노, 카페라떼, 바닐라라떼, 스무디, 아이스티, 등",
+        "hours": "08:00 ~ 21:00"
+      },
+      {
+        "name": "CU",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -9018,6 +28159,74 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
@@ -9028,6 +28237,33 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -9064,6 +28300,78 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
@@ -9078,6 +28386,30 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "디즈니 골프, 불스원",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -9113,12 +28445,146 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "엔제리너스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 22:00"
+      },
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 22:00"
+      },
+      {
+        "name": "뉴욕핫도그",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 22:00"
+      },
+      {
+        "name": "훼미리마트",
+        "description": "CU",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "JDX",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "NEPA",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "오가다, 임실치즈",
+        "hours": "08:00 ~ 22:00"
       }
     ],
     "gasStation": {
@@ -9153,6 +28619,86 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
@@ -9161,8 +28707,58 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "엔제리너스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 22:00"
+      },
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 22:00"
+      },
+      {
+        "name": "스태프핫도그",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "훼미리마트",
+        "description": "CU",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "JDX",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "NEPA",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "오가다, 임실치즈",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -9196,12 +28792,60 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
-        "name": "시원한 식혜",
-        "price": 3000
-      },
-      {
         "name": "꼬치어묵우동",
         "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
       },
       {
         "name": "바삭바삭 소떡소떡",
@@ -9210,6 +28854,60 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "06:00 ~ 20:00"
+      },
+      {
+        "name": "클라이머홀릭",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "투썸플레이스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 21:00"
+      },
+      {
+        "name": "기타",
+        "description": "돈까스회관",
+        "hours": "05:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -9249,8 +28947,127 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "평일 6시 ~ 21시, 주말 6시 ~ 22시",
+        "hours": "06:00 ~ 21:00"
+      },
+      {
+        "name": "롯데리아",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "평일 8시 ~ 20시, 주말 7시 ~ 22시",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "클라이머홀릭",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "돈까스회관",
+        "hours": "05:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -9286,6 +29103,66 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -9296,6 +29173,66 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:00 ~ 22:00"
+      },
+      {
+        "name": "롯데리아",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "06:00 ~ 02:00"
+      },
+      {
+        "name": "엔제리너스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:00 ~ 22:00"
+      },
+      {
+        "name": "나뚜루",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "JDX",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "09:00 ~ 21:00"
+      },
+      {
+        "name": "기타",
+        "description": "나주곰탕, 백암순대국, 소미미단팥빵(08:00~20:00)",
+        "hours": "07:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -9333,6 +29270,70 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
@@ -9347,6 +29348,53 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "엔제리너스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "스태프핫도그",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "크라제맥스, 정안알밤빵, 아리랑고로케",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -9384,12 +29432,131 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 22:00"
+      },
+      {
+        "name": "카페베네",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 22:00"
+      },
+      {
+        "name": "로티보이",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 22:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 22:00"
+      },
+      {
+        "name": "기타",
+        "description": "우동타임, 공주밤빵, 롤리폴리캔디",
+        "hours": "08:00 ~ 22:00"
       }
     ],
     "gasStation": {
@@ -9427,6 +29594,74 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
@@ -9437,6 +29672,59 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "도넛, 커피, 음료",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "롯데리아",
+        "description": "햄버거, 치킨, 음료, 아이스크림",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "엔제리너스",
+        "description": "커피, 음료",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "할리스커피",
+        "description": "커피, 음료",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "세븐일레븐",
+        "description": "스낵, 음료, 잡화, 아이스크림, 비상상비약등",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "임실치즈피자",
+        "description": "치즈, 피자등",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "발렌키 의류, 잡화매장",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -9473,6 +29761,82 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
@@ -9485,8 +29849,53 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "도넛, 커피, 음료",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "롯데리아",
+        "description": "햄버거, 치킨, 음료, 아이스크림",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "엔제리너스",
+        "description": "커피, 음료등",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "할리스커피",
+        "description": "커피, 음료",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "세븐일레븐",
+        "description": "스낵, 음료, 잡화, 비상상비약, 아이스크림등",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "클라이머홀릭",
+        "description": "의류, 잡화",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "설빙",
+        "description": "설빙, 음료등",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -9523,12 +29932,131 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "도너츠",
+        "hours": "07:00 ~ 22:00"
+      },
+      {
+        "name": "맥도날드",
+        "description": "맥도날드(드라이브스루포함)",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "미니스탑",
+        "description": "편의점",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "커피&음료&푸드",
+        "hours": "07:00 ~ 21:00"
+      },
+      {
+        "name": "기타",
+        "description": "비어드파파 - 슈, 커피,음료",
+        "hours": "07:00 ~ 21:00"
       }
     ],
     "gasStation": {
@@ -9564,16 +30092,136 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
-        "name": "시원한 식혜",
-        "price": 3000
-      },
-      {
         "name": "꼬치어묵우동",
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "뚜레쥬르",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "JDX",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "투썸플레이스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "CU편의점 / 경주빵 / 고구마명가 / 고선생고로케 / 네이쳐팜 / 퀸쥬얼리 / 에어워크&다정다감 / 아띠(생활한복) / 환공어가 / 풍년제과 / 디즈니",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -9613,6 +30261,62 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -9623,6 +30327,66 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "뚜레쥬르",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "클라이머홀릭",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "투썸플레이스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "CU편의점 / 네이쳐팜 / 고선생고로케 / 고구마명가 / 경주빵 / 퀸쥬얼리 / 에어워크&다정다감 / 아띠(생활한복) / 커터앤벅 / 풍년제과",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -9657,12 +30421,107 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "휴게소특수매장(쿠폰/할인 사이즈변경안됨), 할리스포인트적립",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -9698,6 +30557,70 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
@@ -9708,6 +30631,37 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -9740,6 +30694,74 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
@@ -9754,6 +30776,64 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "육해밥",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 21:00"
+      },
+      {
+        "name": "난카츠난우동",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 21:00"
+      },
+      {
+        "name": "스무티킹",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 21:00"
+      },
+      {
+        "name": "카페 에델리아",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 21:00"
+      },
+      {
+        "name": "서울분식",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 21:00"
+      },
+      {
+        "name": "롤리폴리(젤리캔디샵)",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 21:00"
+      },
+      {
+        "name": "위드미편의점",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 21:00"
+      },
+      {
+        "name": "기타",
+        "description": "평창올림픽 기념품",
+        "hours": "08:00 ~ 21:00"
       }
     ],
     "gasStation": {
@@ -9788,12 +30868,121 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "배스킨라빈스",
+        "description": "아이스크림과 커피류를 판매하는 24시간 매장입니다.",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "다양한 커피를 즐길 수 있는 커피전문 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "훼미리마트",
+        "description": "CU로 이름이 바뀌었고 다양한 상품을 갖춘 24시간 편의점입니다.",
+        "hours": "00:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -9827,6 +31016,82 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
@@ -9837,8 +31102,21 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
       }
     ],
+    "brandStores": [],
     "gasStation": {
       "brand": "ex-oil",
       "gasolinePrice": 0,
@@ -9870,6 +31148,82 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
@@ -9878,12 +31232,43 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
       },
       {
-        "name": "바삭바삭 소떡소떡",
-        "price": 4000
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "배스킨라빈스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "엔제리너스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "임실치즈피자",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "편의점 CU",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -9917,12 +31302,126 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
         "name": "시원한 식혜",
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "엔제리너스 단독매장 운영",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "외부 매장내 탐앤탐스 운영",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "용우동",
+        "description": "용우동 브랜드 향미암 운영",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "임실치즈피자",
+        "description": "임실군에서 직접 운영하는 임실치즈피자",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -9960,12 +31459,107 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "이마트24",
+        "description": "21시~ 익일 07시 무인운영",
+        "hours": "07:00 ~ 21:00"
       }
     ],
     "gasStation": {
@@ -9999,6 +31593,66 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -10013,6 +31667,37 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "이마트24",
+        "description": "24시 운영(21시~익일 07시까지 무인운영)",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -10046,12 +31731,116 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 19:00"
+      },
+      {
+        "name": "CU",
+        "description": "7월1일 오픈",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -10087,6 +31876,70 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
@@ -10097,6 +31950,33 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:00 ~ 19:00"
       }
     ],
     "gasStation": {
@@ -10130,6 +32010,78 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
@@ -10144,6 +32096,30 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "브랜드 커피 전문매장(본관 화장실 앞)",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "일프레소, 스트릿츄러스",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -10180,12 +32156,121 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:30 ~ 19:30"
+      },
+      {
+        "name": "기타",
+        "description": "켈리토스트",
+        "hours": "07:30 ~ 19:30"
+      },
+      {
+        "name": "기타",
+        "description": "일프레소커피",
+        "hours": "07:00 ~ 19:30"
       }
     ],
     "gasStation": {
@@ -10222,6 +32307,86 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
@@ -10230,8 +32395,43 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "1층",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "할리스커피",
+        "description": "1,4층",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "로띠번",
+        "description": "1층",
+        "hours": "07:00 ~ 20:00"
+      },
+      {
+        "name": "스트릿츄러스",
+        "description": "4층",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "4층 일프레소 커피, 사과당 베이커리, 설악산단풍빵(소상공인)",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -10267,12 +32467,64 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
-        "name": "시원한 식혜",
-        "price": 3000
-      },
-      {
         "name": "꼬치어묵우동",
         "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
       },
       {
         "name": "바삭바삭 소떡소떡",
@@ -10281,6 +32533,55 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "매장위치 : 건물좌측, 화장실우측",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "로띠번",
+        "description": "매장위치 : 건물내부 우측",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "매장위치 : 건물우측",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -10320,8 +32621,113 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "매장위치 : 건물전면 좌측",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "로띠번",
+        "description": "매장위치 : 건물내부 우측(24시간 운영)",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "매장위치 : 건물전면 우측, 화장실 앞",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -10358,6 +32764,66 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -10368,6 +32834,46 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "편의점 좌측 위치",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "라면 우동 퇴식구 맞은편 위치",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -10402,6 +32908,70 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
@@ -10416,8 +32986,29 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
       }
     ],
+    "brandStores": [],
     "gasStation": {
       "brand": "ex-oil",
       "gasolinePrice": 0,
@@ -10450,12 +33041,136 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "도너츠, 커피",
+        "hours": "07:00 ~ 22:00"
+      },
+      {
+        "name": "롯데리아",
+        "description": "콜라음료류, 햄버거류",
+        "hours": "07:00 ~ 22:00"
+      },
+      {
+        "name": "할리스커피",
+        "description": "아메리카노, 카푸치노외",
+        "hours": "09:30 ~ 21:30"
+      },
+      {
+        "name": "ELLEGOLF",
+        "description": "골프의류",
+        "hours": "09:30 ~ 21:30"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "아메리카노, 카푸치노등",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "세븐일레븐",
+        "description": "음료, 과자",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -10491,6 +33206,78 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
@@ -10501,8 +33288,25 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
       }
     ],
+    "brandStores": [],
     "gasStation": {
       "brand": "ex-oil",
       "gasolinePrice": 0,
@@ -10534,6 +33338,78 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
@@ -10546,8 +33422,28 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "달콤한 로띠번",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "유명브랜드 커피점",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -10584,12 +33480,116 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "달콤커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -10628,16 +33628,116 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
-        "name": "시원한 식혜",
-        "price": 3000
-      },
-      {
         "name": "꼬치어묵우동",
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "달콤커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -10680,6 +33780,62 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -10690,6 +33846,51 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "무인운영시간: 22:30 ~ (익일)06:00",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -10731,12 +33932,126 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "무인운영시간: 22:00 ~ (익일)06:00",
+        "hours": "00:00 ~ 22:00"
+      },
+      {
+        "name": "크리스피크림",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -10778,6 +34093,66 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
@@ -10788,8 +34163,33 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
       }
     ],
+    "brandStores": [],
     "gasStation": {
       "brand": "ex-oil",
       "gasolinePrice": 0,
@@ -10820,6 +34220,74 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
@@ -10834,8 +34302,25 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
       }
     ],
+    "brandStores": [],
     "gasStation": {
       "brand": "ex-oil",
       "gasolinePrice": 0,
@@ -10868,12 +34353,131 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파리바게뜨",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:00 ~ 22:00"
+      },
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "06:00 ~ 22:00"
+      },
+      {
+        "name": "CU",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -10914,6 +34518,82 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
@@ -10924,6 +34604,40 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "클라이머홀릭",
+        "description": "의류매장",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "하이샵(잡화)매장",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -10965,6 +34679,86 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
@@ -10973,12 +34767,28 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
       },
       {
-        "name": "바삭바삭 소떡소떡",
-        "price": 4000
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "이마트24",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -11017,12 +34827,107 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
         "name": "시원한 식혜",
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "휴게소 內 매장 1개소 정상 영업. (드라이브 스루 1개소 영업 중단.)",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -11066,12 +34971,112 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "로띠번/바닐라번",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "세계 3대 커피 브랜드와 비교하여 최고의 평가를 받은 드롭탑",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -11111,6 +35116,66 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -11125,6 +35190,42 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "오븐에서 갓 구워낸 따끈따끈한 로띠번/ 모카의 향을 잃지 않고 모카향 토핑의 크리스피한 빵",
+        "hours": "08:00 ~ 19:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "세계 3대 커피 브랜드와 비교하여 최고의 평가를 받은 드롭탑",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -11164,12 +35265,116 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 19:00"
+      },
+      {
+        "name": "용우동",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -11208,6 +35413,74 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
@@ -11218,6 +35491,38 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 19:00"
+      },
+      {
+        "name": "용우동",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -11256,6 +35561,74 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
@@ -11270,6 +35643,45 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "1F, 2F 2개소 운영",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "1F, 2F 2개소 운영",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "1F, 2F 2개소 운영",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "용우동",
+        "description": "1F 푸드코트",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "기타",
+        "description": "(푸드코트) 풍경마루/연안식당/유천냉면, 용우동/천서리막국수, 북창동순두부/혜화동돈까스, 인더비엣, 신의주찹쌀순대, 이루다제면소, (열린매장) 호두잣과자, 핫츄, 간식탐구, 슈퍼스닭, 신서방떡볶이, 신서방왕만두, 트윗젤, 연돈볼카츠/소미미단팥빵, 만쥬리아/BHC, 노브랜드버거, 엣조잇/마성떡볶이/마성마리김밥, 만쥬리아/인생닭강정, 호두붐붐/행운의동전빵",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -11307,12 +35719,116 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "탐앤탐스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "cu편의점",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -11347,6 +35863,86 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
@@ -11355,8 +35951,38 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "훼미리마트",
+        "description": "CU편의점",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "커피류 및 음료판매",
+        "hours": "07:30 ~ 19:00"
+      },
+      {
+        "name": "기타",
+        "description": "소미미 단팥빵",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -11392,12 +36018,64 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
-        "name": "시원한 식혜",
-        "price": 3000
-      },
-      {
         "name": "꼬치어묵우동",
         "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
       },
       {
         "name": "바삭바삭 소떡소떡",
@@ -11406,6 +36084,55 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "명품 호두과자(중)",
         "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "훼미리마트",
+        "description": "CU편의점",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "커피류 및 음료 판매",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -11446,8 +36173,117 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 19:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "유인편의점(창원) 무인편의점(양평 24시간운영)",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -11485,6 +36321,62 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -11495,6 +36387,46 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "20:00 ~ 08:00 (야간시간 무인운영)",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -11534,6 +36466,70 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
         "name": "명품 호두과자(중)",
         "price": 3000
       },
@@ -11548,6 +36544,38 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "매콤 떡볶이",
         "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "GS25",
+        "description": "20:00 ~ 08:00 (야간시간 무인운영)",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -11587,12 +36615,141 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
         "name": "버터구이 통감자",
         "price": 4500
       },
       {
         "name": "오징어 야채바",
         "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "이마트24",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "스타벅스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "성북당",
+        "description": "십원빵",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "토스타토스트",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "붕어유랑단",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -11630,6 +36787,78 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
         "name": "오징어 야채바",
         "price": 4000
       },
@@ -11640,6 +36869,54 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "바삭한 오징어 튀김",
         "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "롯데리아",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "투썸플레이스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "유인판매 - 07:00~21:00 / 무인판매 - 21:00~07:00",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "성북당",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "토스타토스트",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -11676,6 +36953,82 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
         "name": "매콤 떡볶이",
         "price": 4500
       },
@@ -11688,8 +37041,28 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3000
       },
       {
-        "name": "꼬치어묵우동",
-        "price": 6500
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "투썸플레이스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "07:00~20:00 CU편의점 유인운영, 20:00~07:00 무인운영",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -11726,12 +37099,112 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
         "name": "바삭한 오징어 튀김",
         "price": 4000
       },
       {
         "name": "시원한 식혜",
         "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "투썸플레이스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "07:00~20:00 유인매장 운영, 20:00~07:00 무인 편의점 운영",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -11767,16 +37240,116 @@ export const serviceAreas: ServiceArea[] = [
     },
     "otherMenus": [
       {
-        "name": "시원한 식혜",
-        "price": 3000
-      },
-      {
         "name": "꼬치어묵우동",
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "GS25",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -11817,6 +37390,62 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
         "name": "바삭바삭 소떡소떡",
         "price": 4000
       },
@@ -11827,6 +37456,46 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "버터구이 통감자",
         "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "GS25",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {

@@ -62,6 +62,26 @@ export default async function RestAreaFoodPage({ params }: Props) {
         </ul>
       </div>
 
+      {/* 입점 브랜드 매장 안내 */}
+      {area.brandStores && area.brandStores.length > 0 && (
+        <div className="space-y-4 pt-6 border-t border-slate-100">
+          <h3 className="text-xs font-bold text-slate-400 tracking-wider uppercase">입점 브랜드 매장 안내</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {area.brandStores.map((brand, i) => (
+              <div key={i} className="p-4 rounded-xl border border-slate-100 bg-slate-50/50 space-y-1">
+                <div className="flex justify-between items-center">
+                  <span className="font-semibold text-slate-900 text-sm">{brand.name}</span>
+                  <span className="text-[10px] text-slate-400 font-medium bg-white px-2 py-0.5 rounded border border-slate-100">{brand.hours}</span>
+                </div>
+                <p className="text-xs text-slate-500 leading-relaxed font-normal">
+                  {brand.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }

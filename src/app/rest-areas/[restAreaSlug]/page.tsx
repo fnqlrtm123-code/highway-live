@@ -72,6 +72,28 @@ export default async function RestAreaDashboardPage({ params }: Props) {
             </li>
           ))}
         </ul>
+
+        {/* 입점 브랜드 매장 */}
+        {area.brandStores && area.brandStores.length > 0 && (
+          <div className="mt-8 space-y-3">
+            <h4 className="text-sm font-semibold text-slate-800 flex items-center gap-1.5">
+              ☕ 입점 브랜드 매장 안내
+            </h4>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {area.brandStores.map((brand, i) => (
+                <div key={i} className="p-3.5 bg-slate-50/50 rounded-xl border border-slate-100 space-y-1">
+                  <div className="flex justify-between items-center">
+                    <span className="text-xs font-semibold text-slate-900">{brand.name}</span>
+                    <span className="text-[9px] text-slate-400 bg-white px-1.5 py-0.5 rounded border border-slate-100">{brand.hours}</span>
+                  </div>
+                  <p className="text-[11px] text-slate-500 line-clamp-2 leading-relaxed font-normal">
+                    {brand.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </section>
 
       <AdSense slot="5566778899" />
