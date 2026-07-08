@@ -591,8 +591,8 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1853,
       "lpgPrice": 1186,
       "hasEvCharger": true,
-      "evChargersCount": 2,
-      "hasHydrogen": true
+      "evChargersCount": 6,
+      "hasHydrogen": false
     },
     "facilities": [
       "수유실",
@@ -709,8 +709,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -900,8 +900,8 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 4,
-      "hasHydrogen": false
+      "evChargersCount": 10,
+      "hasHydrogen": true
     },
     "facilities": [
       "수유실",
@@ -1112,9 +1112,9 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1864,
       "dieselPrice": 1853,
       "lpgPrice": 1236,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": false
+      "hasEvCharger": true,
+      "evChargersCount": 6,
+      "hasHydrogen": true
     },
     "facilities": [
       "수면실",
@@ -1295,7 +1295,7 @@ export const serviceAreas: ServiceArea[] = [
       "lpgPrice": 1165,
       "hasEvCharger": true,
       "evChargersCount": 6,
-      "hasHydrogen": false
+      "hasHydrogen": true
     },
     "facilities": [
       "샤워실",
@@ -1537,9 +1537,9 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1839,
       "dieselPrice": 1839,
       "lpgPrice": 1226,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": false
+      "hasEvCharger": true,
+      "evChargersCount": 12,
+      "hasHydrogen": true
     },
     "facilities": [
       "수면실",
@@ -1756,8 +1756,8 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1835,
       "lpgPrice": 1118,
       "hasEvCharger": true,
-      "evChargersCount": 8,
-      "hasHydrogen": false
+      "evChargersCount": 12,
+      "hasHydrogen": true
     },
     "facilities": [
       "수유실",
@@ -2493,8 +2493,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1839,
       "dieselPrice": 1835,
       "lpgPrice": 1123,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -2731,7 +2731,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1882,
       "lpgPrice": 1247,
       "hasEvCharger": true,
-      "evChargersCount": 10,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -2895,9 +2895,9 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1853,
       "dieselPrice": 1842,
       "lpgPrice": 1184,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": false
+      "hasEvCharger": true,
+      "evChargersCount": 12,
+      "hasHydrogen": true
     },
     "facilities": [
       "수면실",
@@ -3148,7 +3148,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1844,
       "lpgPrice": 1175,
       "hasEvCharger": true,
-      "evChargersCount": 12,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -3331,8 +3331,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1859,
       "dieselPrice": 1848,
       "lpgPrice": 1089,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -3515,7 +3515,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1848,
       "lpgPrice": 1089,
       "hasEvCharger": true,
-      "evChargersCount": 2,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -3779,9 +3779,9 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": false
+      "hasEvCharger": true,
+      "evChargersCount": 12,
+      "hasHydrogen": true
     },
     "facilities": [
       "수면실",
@@ -4178,9 +4178,9 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": true
+      "hasEvCharger": true,
+      "evChargersCount": 4,
+      "hasHydrogen": false
     },
     "facilities": [
       "샤워실",
@@ -4276,7 +4276,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1848,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 6,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -4402,8 +4402,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -4527,7 +4527,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 8,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -4661,8 +4661,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -4787,7 +4787,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": 1193,
       "hasEvCharger": true,
-      "evChargersCount": 10,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -5022,9 +5022,9 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1844,
       "dieselPrice": 1833,
       "lpgPrice": 1160,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": false
+      "hasEvCharger": true,
+      "evChargersCount": 12,
+      "hasHydrogen": true
     },
     "facilities": [
       "수면실",
@@ -5310,8 +5310,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": 1199,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -5438,7 +5438,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1899,
       "lpgPrice": 1155,
       "hasEvCharger": true,
-      "evChargersCount": 2,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -5661,8 +5661,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1864,
       "dieselPrice": 1853,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -5789,7 +5789,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1852,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 4,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -5934,8 +5934,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1858,
       "dieselPrice": 1848,
       "lpgPrice": 1208,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -6166,8 +6166,8 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1849,
       "lpgPrice": 1264,
       "hasEvCharger": true,
-      "evChargersCount": 6,
-      "hasHydrogen": false
+      "evChargersCount": 10,
+      "hasHydrogen": true
     },
     "facilities": [
       "수유실",
@@ -6282,8 +6282,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1859,
       "dieselPrice": 1849,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -7022,8 +7022,8 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1838,
       "lpgPrice": 1063,
       "hasEvCharger": true,
-      "evChargersCount": 8,
-      "hasHydrogen": true
+      "evChargersCount": 6,
+      "hasHydrogen": false
     },
     "facilities": [
       "수유실",
@@ -8069,8 +8069,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1864,
       "dieselPrice": 1853,
       "lpgPrice": 1228,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -8287,7 +8287,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1853,
       "lpgPrice": 1149,
       "hasEvCharger": true,
-      "evChargersCount": 10,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -8515,8 +8515,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1864,
       "dieselPrice": 1853,
       "lpgPrice": 1099,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -8899,8 +8899,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -9066,7 +9066,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 2,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -9186,8 +9186,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -9304,7 +9304,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 4,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -9416,8 +9416,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1855,
       "dieselPrice": 1848,
       "lpgPrice": 1199,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -9534,7 +9534,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 6,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -9852,8 +9852,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -10125,8 +10125,8 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 8,
-      "hasHydrogen": false
+      "evChargersCount": 4,
+      "hasHydrogen": true
     },
     "facilities": [
       "수유실",
@@ -10251,8 +10251,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": 1155,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -10480,7 +10480,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 10,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -10575,8 +10575,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": true
     },
     "facilities": [
@@ -10755,8 +10755,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -10962,7 +10962,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1831,
       "lpgPrice": 1239,
       "hasEvCharger": true,
-      "evChargersCount": 2,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -11141,8 +11141,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1864,
       "dieselPrice": 1853,
       "lpgPrice": 1241,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -11270,7 +11270,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 4,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -11465,8 +11465,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -11603,8 +11603,8 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1831,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 6,
-      "hasHydrogen": false
+      "evChargersCount": 8,
+      "hasHydrogen": true
     },
     "facilities": [
       "수유실",
@@ -11748,8 +11748,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -12047,8 +12047,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -12209,7 +12209,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1845,
       "lpgPrice": 1145,
       "hasEvCharger": true,
-      "evChargersCount": 10,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -12336,9 +12336,9 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": false
+      "hasEvCharger": true,
+      "evChargersCount": 10,
+      "hasHydrogen": true
     },
     "facilities": [
       "샤워실",
@@ -12477,7 +12477,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1845,
       "lpgPrice": 1135,
       "hasEvCharger": true,
-      "evChargersCount": 12,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -12624,8 +12624,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -12790,8 +12790,8 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1855,
       "lpgPrice": 1200,
       "hasEvCharger": true,
-      "evChargersCount": 2,
-      "hasHydrogen": true
+      "evChargersCount": 12,
+      "hasHydrogen": false
     },
     "facilities": [
       "수유실",
@@ -12906,8 +12906,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1869,
       "dieselPrice": 1853,
       "lpgPrice": 1200,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -13032,7 +13032,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 4,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -13086,8 +13086,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -13284,8 +13284,8 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 6,
-      "hasHydrogen": false
+      "evChargersCount": 10,
+      "hasHydrogen": true
     },
     "facilities": [
       "수유실",
@@ -13525,8 +13525,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1864,
       "dieselPrice": 1853,
       "lpgPrice": 1216,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -13681,7 +13681,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 8,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -13858,9 +13858,9 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1864,
       "dieselPrice": 1853,
       "lpgPrice": 1216,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": false
+      "hasEvCharger": true,
+      "evChargersCount": 8,
+      "hasHydrogen": true
     },
     "facilities": [
       "수유실",
@@ -14012,8 +14012,8 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 10,
-      "hasHydrogen": false
+      "evChargersCount": 8,
+      "hasHydrogen": true
     },
     "facilities": [
       "수유실",
@@ -14278,8 +14278,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1862,
       "dieselPrice": 1853,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -14576,8 +14576,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -14760,7 +14760,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": 1229,
       "hasEvCharger": true,
-      "evChargersCount": 2,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -14900,9 +14900,9 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": false
+      "hasEvCharger": true,
+      "evChargersCount": 10,
+      "hasHydrogen": true
     },
     "facilities": [
       "수유실",
@@ -15018,7 +15018,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1839,
       "lpgPrice": 1212,
       "hasEvCharger": true,
-      "evChargersCount": 4,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -15150,9 +15150,9 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": true
+      "hasEvCharger": true,
+      "evChargersCount": 4,
+      "hasHydrogen": false
     },
     "facilities": [
       "샤워실",
@@ -15301,7 +15301,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1849,
       "lpgPrice": 1149,
       "hasEvCharger": true,
-      "evChargersCount": 6,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -15445,8 +15445,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1849,
       "dieselPrice": 1862,
       "lpgPrice": 1259,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -15657,8 +15657,8 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 8,
-      "hasHydrogen": false
+      "evChargersCount": 6,
+      "hasHydrogen": true
     },
     "facilities": [
       "수면실",
@@ -15780,8 +15780,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1864,
       "dieselPrice": 1853,
       "lpgPrice": 1140,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -16187,8 +16187,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -16338,7 +16338,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 12,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -16490,8 +16490,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1855,
       "dieselPrice": 1848,
       "lpgPrice": 1219,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -16647,7 +16647,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1848,
       "lpgPrice": 1219,
       "hasEvCharger": true,
-      "evChargersCount": 2,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -16799,8 +16799,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1858,
       "dieselPrice": 1850,
       "lpgPrice": 1219,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -17039,7 +17039,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1850,
       "lpgPrice": 1219,
       "hasEvCharger": true,
-      "evChargersCount": 4,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -17379,8 +17379,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1848,
       "dieselPrice": 1838,
       "lpgPrice": 1223,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -17545,7 +17545,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 6,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -17678,8 +17678,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1839,
       "dieselPrice": 1827,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -17872,7 +17872,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 8,
+      "evChargersCount": 12,
       "hasHydrogen": true
     },
     "facilities": [
@@ -18026,9 +18026,9 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": false
+      "hasEvCharger": true,
+      "evChargersCount": 4,
+      "hasHydrogen": true
     },
     "facilities": [
       "수면실",
@@ -18331,7 +18331,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1838,
       "lpgPrice": 1223,
       "hasEvCharger": true,
-      "evChargersCount": 10,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -18539,8 +18539,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1853,
       "dieselPrice": 1846,
       "lpgPrice": 1228,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -18696,7 +18696,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1846,
       "lpgPrice": 1228,
       "hasEvCharger": true,
-      "evChargersCount": 12,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -18803,9 +18803,9 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": false
+      "hasEvCharger": true,
+      "evChargersCount": 8,
+      "hasHydrogen": true
     },
     "facilities": [
       "수유실",
@@ -19024,7 +19024,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1853,
       "lpgPrice": 1239,
       "hasEvCharger": true,
-      "evChargersCount": 2,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -19145,8 +19145,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1862,
       "dieselPrice": 1853,
       "lpgPrice": 1214,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -19379,8 +19379,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1849,
       "dieselPrice": 1848,
       "lpgPrice": 1172,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -19472,7 +19472,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1832,
       "lpgPrice": 1213,
       "hasEvCharger": true,
-      "evChargersCount": 6,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -19560,8 +19560,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1849,
       "dieselPrice": 1848,
       "lpgPrice": 1172,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -19669,8 +19669,8 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 8,
-      "hasHydrogen": false
+      "evChargersCount": 4,
+      "hasHydrogen": true
     },
     "facilities": [
       "수유실",
@@ -19811,8 +19811,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -20222,8 +20222,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
       "hasHydrogen": true
     },
     "facilities": [
@@ -20380,7 +20380,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 12,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -20517,8 +20517,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1858,
       "dieselPrice": 1848,
       "lpgPrice": 1189,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -20718,7 +20718,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1848,
       "lpgPrice": 1189,
       "hasEvCharger": true,
-      "evChargersCount": 2,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -20932,8 +20932,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1858,
       "dieselPrice": 1846,
       "lpgPrice": 1258,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -21186,7 +21186,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 4,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -21398,8 +21398,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -21592,7 +21592,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 6,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -21712,8 +21712,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -21836,7 +21836,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1833,
       "lpgPrice": 1155,
       "hasEvCharger": true,
-      "evChargersCount": 8,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -21954,8 +21954,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -22080,7 +22080,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1848,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 10,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -22214,8 +22214,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -22337,7 +22337,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1853,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 12,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -22417,8 +22417,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -22528,7 +22528,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1828,
       "lpgPrice": 1167,
       "hasEvCharger": true,
-      "evChargersCount": 2,
+      "evChargersCount": 12,
       "hasHydrogen": true
     },
     "facilities": [
@@ -22659,8 +22659,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -22962,8 +22962,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -23094,7 +23094,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1845,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 6,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -23257,8 +23257,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -23421,7 +23421,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1853,
       "lpgPrice": 1246,
       "hasEvCharger": true,
-      "evChargersCount": 8,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -23578,9 +23578,9 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": false
+      "hasEvCharger": true,
+      "evChargersCount": 12,
+      "hasHydrogen": true
     },
     "facilities": [
       "수유실",
@@ -23679,7 +23679,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 10,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -23828,8 +23828,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1864,
       "dieselPrice": 1853,
       "lpgPrice": 1216,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -23972,7 +23972,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 12,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -24085,8 +24085,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1884,
       "dieselPrice": 1870,
       "lpgPrice": 1185,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -24205,7 +24205,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 2,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -24391,9 +24391,9 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": false
+      "hasEvCharger": true,
+      "evChargersCount": 6,
+      "hasHydrogen": true
     },
     "facilities": [
       "수유실",
@@ -24521,7 +24521,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 4,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -24667,9 +24667,9 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": true
+      "hasEvCharger": true,
+      "evChargersCount": 12,
+      "hasHydrogen": false
     },
     "facilities": [
       "수유실",
@@ -24811,7 +24811,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 6,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -24963,8 +24963,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1864,
       "dieselPrice": 1853,
       "lpgPrice": 1266,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -25105,7 +25105,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1846,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 8,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -25250,8 +25250,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1853,
       "dieselPrice": 1846,
       "lpgPrice": 1228,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -25544,9 +25544,9 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1865,
       "dieselPrice": 1855,
       "lpgPrice": 1195,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": false
+      "hasEvCharger": true,
+      "evChargersCount": 10,
+      "hasHydrogen": true
     },
     "facilities": [
       "수면실",
@@ -25843,8 +25843,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -25998,7 +25998,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 2,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -26139,8 +26139,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1864,
       "dieselPrice": 1853,
       "lpgPrice": 1250,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -26437,8 +26437,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -26579,7 +26579,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 6,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -26712,8 +26712,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -26863,7 +26863,7 @@ export const serviceAreas: ServiceArea[] = [
       "lpgPrice": 1237,
       "hasEvCharger": true,
       "evChargersCount": 8,
-      "hasHydrogen": true
+      "hasHydrogen": false
     },
     "facilities": [
       "샤워실",
@@ -27014,9 +27014,9 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1859,
       "dieselPrice": 1870,
       "lpgPrice": 1169,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": false
+      "hasEvCharger": true,
+      "evChargersCount": 8,
+      "hasHydrogen": true
     },
     "facilities": [
       "샤워실",
@@ -27151,7 +27151,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 10,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -27284,8 +27284,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -27580,9 +27580,9 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": false
+      "hasEvCharger": true,
+      "evChargersCount": 8,
+      "hasHydrogen": true
     },
     "facilities": [
       "수유실",
@@ -27721,7 +27721,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 2,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -27883,9 +27883,9 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1879,
       "dieselPrice": 1869,
       "lpgPrice": 1220,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": false
+      "hasEvCharger": true,
+      "evChargersCount": 6,
+      "hasHydrogen": true
     },
     "facilities": [
       "수유실",
@@ -28035,7 +28035,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 4,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -28194,8 +28194,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1864,
       "dieselPrice": 1853,
       "lpgPrice": 1276,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -28483,8 +28483,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -28645,7 +28645,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1839,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 8,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -28798,8 +28798,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -28957,8 +28957,8 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 10,
-      "hasHydrogen": false
+      "evChargersCount": 8,
+      "hasHydrogen": true
     },
     "facilities": [
       "수유실",
@@ -29113,9 +29113,9 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": true
+      "hasEvCharger": true,
+      "evChargersCount": 8,
+      "hasHydrogen": false
     },
     "facilities": [
       "수유실",
@@ -29251,7 +29251,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 12,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -29396,8 +29396,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -29553,7 +29553,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 2,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -29704,8 +29704,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1864,
       "dieselPrice": 1853,
       "lpgPrice": 1276,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -29840,7 +29840,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 4,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -29967,8 +29967,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -30121,7 +30121,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 6,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -30285,8 +30285,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1855,
       "dieselPrice": 1853,
       "lpgPrice": 1246,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -30441,7 +30441,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1853,
       "lpgPrice": 1261,
       "hasEvCharger": true,
-      "evChargersCount": 8,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -30594,8 +30594,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -30901,8 +30901,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -31048,7 +31048,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1842,
       "lpgPrice": 1154,
       "hasEvCharger": true,
-      "evChargersCount": 12,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -31196,8 +31196,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1853,
       "dieselPrice": 1842,
       "lpgPrice": 1125,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -31341,8 +31341,8 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1847,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 2,
-      "hasHydrogen": true
+      "evChargersCount": 6,
+      "hasHydrogen": false
     },
     "facilities": [
       "수유실",
@@ -31478,8 +31478,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1879,
       "dieselPrice": 1867,
       "lpgPrice": 1199,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -31620,7 +31620,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 4,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -31757,8 +31757,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -32049,8 +32049,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -32191,7 +32191,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 8,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -32331,8 +32331,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1894,
       "dieselPrice": 1899,
       "lpgPrice": 1155,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -32654,8 +32654,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -32979,8 +32979,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -33141,7 +33141,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 2,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -33306,8 +33306,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -33470,7 +33470,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 4,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -33632,9 +33632,9 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": true
+      "hasEvCharger": true,
+      "evChargersCount": 8,
+      "hasHydrogen": false
     },
     "facilities": [
       "수유실",
@@ -33802,7 +33802,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 6,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -33973,8 +33973,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -34136,7 +34136,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 8,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -34301,8 +34301,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -34468,7 +34468,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 10,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -34603,8 +34603,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -34745,7 +34745,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 12,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -34917,8 +34917,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -35068,7 +35068,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 2,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -35200,8 +35200,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -35356,7 +35356,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 4,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -35509,8 +35509,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -35649,7 +35649,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 6,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -35787,8 +35787,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -35932,8 +35932,8 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 8,
-      "hasHydrogen": true
+      "evChargersCount": 6,
+      "hasHydrogen": false
     },
     "facilities": [
       "수유실",
@@ -36068,8 +36068,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -36213,7 +36213,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1848,
       "lpgPrice": 1255,
       "hasEvCharger": true,
-      "evChargersCount": 10,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -36359,8 +36359,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1853,
       "dieselPrice": 1848,
       "lpgPrice": 1255,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -36522,8 +36522,8 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1848,
       "lpgPrice": 1255,
       "hasEvCharger": true,
-      "evChargersCount": 12,
-      "hasHydrogen": false
+      "evChargersCount": 8,
+      "hasHydrogen": true
     },
     "facilities": [
       "수유실",
@@ -36672,8 +36672,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -36820,7 +36820,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 2,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -36966,8 +36966,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -37101,7 +37101,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 4,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -37265,8 +37265,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -37401,7 +37401,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 6,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -37540,8 +37540,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -37688,7 +37688,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 8,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -37836,8 +37836,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1848,
       "dieselPrice": 1848,
       "lpgPrice": 1199,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -37991,7 +37991,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 10,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -38152,9 +38152,9 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1864,
       "dieselPrice": 1853,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": true
+      "hasEvCharger": true,
+      "evChargersCount": 8,
+      "hasHydrogen": false
     },
     "facilities": [
       "수면실",
@@ -38290,7 +38290,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 12,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -38421,8 +38421,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -38582,8 +38582,8 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 2,
-      "hasHydrogen": false
+      "evChargersCount": 6,
+      "hasHydrogen": true
     },
     "facilities": [
       "수면실",
@@ -38742,9 +38742,9 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": false
+      "hasEvCharger": true,
+      "evChargersCount": 4,
+      "hasHydrogen": true
     },
     "facilities": [
       "샤워실",
@@ -38895,7 +38895,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 4,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -39034,8 +39034,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1855,
       "dieselPrice": 1848,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -39334,8 +39334,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -39485,7 +39485,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 8,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -39633,8 +39633,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1864,
       "dieselPrice": 1853,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -39794,7 +39794,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 10,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -39941,8 +39941,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -40097,7 +40097,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 12,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -40247,8 +40247,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -40399,9 +40399,9 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1864,
       "dieselPrice": 1853,
       "lpgPrice": null,
-      "hasEvCharger": true,
-      "evChargersCount": 2,
-      "hasHydrogen": true
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
     },
     "facilities": [
       "수유실",
@@ -40543,8 +40543,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -40694,7 +40694,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1851,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 4,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -40868,8 +40868,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1859,
       "dieselPrice": 1859,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -41037,7 +41037,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1879,
       "lpgPrice": 1219,
       "hasEvCharger": true,
-      "evChargersCount": 6,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -41183,8 +41183,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -41327,7 +41327,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 8,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -41472,8 +41472,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 0,
       "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -41620,7 +41620,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 10,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [

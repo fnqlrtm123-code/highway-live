@@ -351,6 +351,34 @@ async function generateData() {
 
   console.log(`Fetched ${rawGasStations.length} gas stations, ${rawFacilitiesList.length} convenience facility entries, ${rawRepFoods.length} representative foods, ${rawBrands.length} brands, and ${rawBestFoods.length} food court menu items.`);
 
+  // Load real EV/Hydrogen charger CSV data
+  let csvStations = [];
+  try {
+    const csvPath = path.join(__dirname, 'ev_chargers.csv');
+    if (fs.existsSync(csvPath)) {
+      const csvBuf = fs.readFileSync(csvPath);
+      const decoder = new TextDecoder('euc-kr');
+      const csvText = decoder.decode(csvBuf);
+      const csvLines = csvText.split('\n').map(l => l.trim()).filter(l => l.length > 0);
+      
+      for (let i = 1; i < csvLines.length; i++) {
+        const cols = csvLines[i].split(',');
+        if (cols.length < 5) continue;
+        csvStations.push({
+          rawName: cols[0],
+          cleanedName: cleanName(cols[0]),
+          hasEv: cols[3] === 'O',
+          hasHydrogen: cols[4] === 'O'
+        });
+      }
+      console.log(`Loaded ${csvStations.length} EV/Hydrogen entries from CSV.`);
+    } else {
+      console.warn('Warning: ev_chargers.csv not found, using fallbacks.');
+    }
+  } catch (err) {
+    console.error('Failed to parse ev_chargers.csv:', err);
+  }
+
   // Group convenience facilities by rest area code stdRestCd
   const restAreasMap = {};
   rawFacilitiesList.forEach(item => {
@@ -570,14 +598,40 @@ async function generateData() {
       return nameMatch && dirMatch;
     });
 
+    // Find matching EV/Hydrogen status from CSV
+    const rDir = r.rawName.match(/\((.*?)\)/) ? r.rawName.match(/\((.*?)\)/)[0] : '';
+    
+    const evMatch = csvStations.find(csvStation => {
+      const cleanCsvName = csvStation.cleanedName;
+      const csvDir = csvStation.rawName.match(/\((.*?)\)/) ? csvStation.rawName.match(/\((.*?)\)/)[0] : '';
+      
+      const namesMatch = cleanCsvName === cleanRName || cleanCsvName.includes(cleanRName) || cleanRName.includes(cleanCsvName);
+      let dirMatch = true;
+      if (rDir && csvDir) {
+        dirMatch = rDir === csvDir || rDir.includes(csvDir) || csvDir.includes(rDir);
+      }
+      return namesMatch && dirMatch;
+    });
+
+    const hasEvCharger = evMatch ? evMatch.hasEv : true; // Default to true since almost all rest areas have EV chargers
+    const hasHydrogen = evMatch ? evMatch.hasHydrogen : false; // Default to false unless specifically marked
+    
+    // Stable pseudo-random charger count based on a simple hash of the rest area's cleaned name
+    let hash = 0;
+    for (let charIdx = 0; charIdx < r.cleanedName.length; charIdx++) {
+      hash = r.cleanedName.charCodeAt(charIdx) + ((hash << 5) - hash);
+    }
+    const stableRandOffset = Math.abs(hash) % 5; // 0, 1, 2, 3, 4
+    const evChargersCount = hasEvCharger ? (4 + stableRandOffset * 2) : 0; // 4, 6, 8, 10, or 12 chargers
+
     const gasStation = {
       brand: gasMatch ? gasMatch.brand : 'ex-oil',
       gasolinePrice: gasMatch ? gasMatch.gasolinePrice : 0,
       dieselPrice: gasMatch ? gasMatch.dieselPrice : 0,
       lpgPrice: gasMatch ? gasMatch.lpgPrice : null,
-      hasEvCharger: idx % 2 === 0,
-      evChargersCount: idx % 2 === 0 ? (2 + (idx % 12)) : 0,
-      hasHydrogen: idx % 15 === 0
+      hasEvCharger,
+      evChargersCount,
+      hasHydrogen
     };
 
     let locationKm = PRECISE_LOCATION_KM[slug] || 
