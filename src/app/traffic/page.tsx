@@ -125,7 +125,21 @@ export default function TrafficIndexPage() {
         </div>
       </section>
 
-      {/* 3. 명절 연휴 정체 예상 팁 */}
+      {/* 3. 실시간 노선 리스트 (카테고리 탭 분류 컴포넌트) */}
+      <section className="space-y-4">
+        <h2 className="text-[15px] font-bold text-slate-900 flex items-center gap-2">
+          <span className="w-1 h-3.5 bg-blue-600 rounded-full inline-block"></span>
+          노선별 실시간 교통상황 &amp; CCTV 확인
+        </h2>
+        <p className="text-slate-550 text-xs md:text-[12.5px]">
+          아래 리스트에서 원하시는 도로를 선택하시면, 해당 노선 전체 구간별 주행 평속 현황, 연동 CCTV 영상, 그리고 정체 발생 시 활용할 우회도로 가이드를 조회하실 수 있습니다.
+        </p>
+
+        {/* Client-side Tabs & Grid Component */}
+        <TrafficHubClient roads={roadsList} />
+      </section>
+
+      {/* 4. 명절 연휴 정체 예상 팁 */}
       <section className="space-y-4">
         <h2 className="text-[15px] font-bold text-slate-900 flex items-center gap-2">
           <span className="w-1 h-3.5 bg-blue-600 rounded-full inline-block"></span>
@@ -153,20 +167,6 @@ export default function TrafficIndexPage() {
             * 명절 정부 특별교통대책 기간에는 전국 재정 고속도로 및 민자 고속도로의 통행요금이 면제되므로, 출발 전 면제 적용 시간 범위를 꼭 확인하세요.
           </p>
         </div>
-      </section>
-
-      {/* 4. 실시간 노선 리스트 (카테고리 탭 분류 컴포넌트) */}
-      <section className="space-y-4">
-        <h2 className="text-[15px] font-bold text-slate-900 flex items-center gap-2">
-          <span className="w-1 h-3.5 bg-blue-600 rounded-full inline-block"></span>
-          노선별 실시간 교통상황 &amp; CCTV 확인
-        </h2>
-        <p className="text-slate-550 text-xs md:text-[12.5px]">
-          아래 리스트에서 원하시는 도로를 선택하시면, 해당 노선 전체 구간별 주행 평속 현황, 연동 CCTV 영상, 그리고 정체 발생 시 활용할 우회도로 가이드를 조회하실 수 있습니다.
-        </p>
-
-        {/* Client-side Tabs & Grid Component */}
-        <TrafficHubClient roads={roadsList} />
       </section>
 
       {/* 5. 자주 묻는 질문 FAQ */}

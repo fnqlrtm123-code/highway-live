@@ -454,8 +454,9 @@ export function getRoadList(): RoadProfile[] {
       const detourIndex = Math.floor(seededRandom(seed + 6) * 3);
       const faqSetIndex = Math.floor(seededRandom(seed + 7) * 3);
 
+      const rangeText = (start && end) ? `(${start} ~ ${end} 구간) ` : '';
       const descPool = [
-        `${name}(${start || '시작점'} ~ ${end || '도착지'} 구간)의 실시간 교통상황과 CCTV 영상 확인 방법을 상세히 안내해 드립니다. 본 노선은 주요 권역을 연결하는 핵심 도로망으로, 주행 전 실시간 정체 상황을 미리 파악하면 이동 시간을 크게 단축할 수 있습니다.`,
+        `${name}${rangeText}의 실시간 교통상황과 CCTV 영상 확인 방법을 상세히 안내해 드립니다. 본 노선은 주요 권역을 연결하는 핵심 도로망으로, 주행 전 실시간 정체 상황을 미리 파악하면 이동 시간을 크게 단축할 수 있습니다.`,
         `${name} 노선의 실시간 소통 흐름과 구간별 주행 평속, 정체 예상 정보를 제공합니다. 도로 진입 전에 CCTV 화면과 정체 구간 정보를 미리 체크하여 안전하고 원활한 경로를 선택해 보세요.`,
         `${name}(노선 경로: ${detail})의 실시간 교통량 정보와 돌발 사고, 도로 공사로 인한 통제 현황을 상세히 파악할 수 있습니다. 쾌적한 운행을 위한 맞춤형 우회 도로 가이드를 확인해 보시기 바랍니다.`
       ];
