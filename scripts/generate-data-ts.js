@@ -332,19 +332,16 @@ async function generateData() {
 
   console.log(`Fetched ${rawGasStations.length} gas stations, ${rawFacilitiesList.length} convenience facility entries, ${rawRepFoods.length} representative foods, ${rawBrands.length} brands, and ${rawBestFoods.length} food court menu items.`);
 
-  // Group convenience facilities by rest area code stdRestCd
+  // Group convenience facilities by cleaned name + route code to combine directions
   const restAreasMap = {};
   rawFacilitiesList.forEach(item => {
-    const code = item.stdRestCd;
-    if (!code) return;
+    const rawName = item.stdRestNm || '';
+    if (!rawName) return;
 
-    if (!restAreasMap[code]) {
-      const rawName = item.stdRestNm || '';
-      // Exclude rest areas with empty name
-      if (!rawName) return;
+    const cleaned = cleanName(rawName);
+    const key = `${cleaned}_${item.routeCd || '0010'}`;
 
-      // Cleaned name and direction parsing
-      const cleaned = cleanName(rawName);
+    if (!restAreasMap[key]) {
       let direction = '양방향';
       let directionName = '양방향';
 
@@ -359,21 +356,37 @@ async function generateData() {
         }
       }
 
-      restAreasMap[code] = {
-        code,
-        rawName,
+      restAreasMap[key] = {
+        codes: [item.stdRestCd], // Store all direction codes
+        rawNames: [rawName],
         cleanedName: cleaned,
         address: item.svarAddr ? item.svarAddr.trim() : '',
         routeName: item.routeNm || '경부선',
         routeCd: item.routeCd || '0010',
         direction,
         directionName,
+        directions: [directionName],
         facilities: []
       };
+    } else {
+      if (item.stdRestCd && !restAreasMap[key].codes.includes(item.stdRestCd)) {
+        restAreasMap[key].codes.push(item.stdRestCd);
+      }
+      if (rawName && !restAreasMap[key].rawNames.includes(rawName)) {
+        restAreasMap[key].rawNames.push(rawName);
+      }
+      // Add direction
+      const match = rawName.match(/\((.*?)\)/);
+      if (match) {
+        const dirName = `${match[1]}방향`;
+        if (!restAreasMap[key].directions.includes(dirName)) {
+          restAreasMap[key].directions.push(dirName);
+        }
+      }
     }
 
-    if (item.psName && !restAreasMap[code].facilities.includes(item.psName)) {
-      restAreasMap[code].facilities.push(item.psName);
+    if (item.psName && !restAreasMap[key].facilities.includes(item.psName)) {
+      restAreasMap[key].facilities.push(item.psName);
     }
   });
 
@@ -407,16 +420,14 @@ async function generateData() {
   const serviceAreasList = [];
 
   uniqueRestAreas.forEach((r, idx) => {
-    // Generate unique slug
-    const engBaseSlug = romanize(r.cleanedName);
-    const dirEng = r.direction === '상행' ? 'seoul' : (r.direction === '하행' ? 'busan' : 'both');
-    let slug = `${engBaseSlug}-${dirEng}`;
+    // Generate unique slug based on cleanedName
+    let slug = romanize(r.cleanedName);
     
-    // Ensure uniqueness
     let count = 0;
+    let baseSlug = slug;
     while (serviceAreasList.some(s => s.slug === slug)) {
       count++;
-      slug = `${engBaseSlug}-${dirEng}-${count}`;
+      slug = `${baseSlug}-${count}`;
     }
 
     const routeName = r.routeName;
@@ -429,9 +440,8 @@ async function generateData() {
     const highwayName = highway ? highway.name : '경부고속도로';
 
     // Coordinate handling
-    let coords = PRECISE_COORDINATES[slug];
+    let coords = PRECISE_COORDINATES[slug] || PRECISE_COORDINATES[`${slug}-seoul`] || PRECISE_COORDINATES[`${slug}-busan`] || PRECISE_COORDINATES[`${slug}-both`];
     if (!coords) {
-      // Find fallback by region
       let region = '경기';
       for (const reg of Object.keys(REGION_COORDINATES)) {
         if (r.address && r.address.includes(reg)) {
