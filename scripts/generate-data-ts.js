@@ -36,7 +36,7 @@ async function fetchGasStations() {
   console.log('Fetching gas stations from curStateStation API...');
   const stations = [];
   for (let page = 1; page <= 3; page++) {
-    const url = `http://data.ex.co.kr/openapi/business/curStateStation?key=test&type=json&numOfRows=99&pageNo=${page}`;
+    const url = `https://data.ex.co.kr/openapi/business/curStateStation?key=7931111083&type=json&numOfRows=99&pageNo=${page}`;
     try {
       const response = await fetch(url);
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -84,7 +84,7 @@ async function fetchRestConvList() {
   console.log('Fetching convenience facilities from restConvList API (0503)...');
   const list = [];
   for (let page = 1; page <= 15; page++) {
-    const url = `http://data.ex.co.kr/openapi/restinfo/restConvList?key=test&type=json&numOfRows=99&pageNo=${page}`;
+    const url = `http://data.ex.co.kr/openapi/restinfo/restConvList?key=7931111083&type=json&numOfRows=99&pageNo=${page}`;
     try {
       const response = await fetch(url);
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -107,7 +107,7 @@ async function fetchRepresentativeFoods() {
   console.log('Fetching representative foods from representFoodServiceArea API...');
   const list = [];
   for (let page = 1; page <= 5; page++) {
-    const url = `http://data.ex.co.kr/openapi/business/representFoodServiceArea?key=test&type=json&numOfRows=99&pageNo=${page}`;
+    const url = `http://data.ex.co.kr/openapi/business/representFoodServiceArea?key=7931111083&type=json&numOfRows=99&pageNo=${page}`;
     try {
       const response = await fetch(url);
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -131,7 +131,7 @@ async function fetchBrands() {
   console.log('Fetching brands from restBrandList API (0501)...');
   const list = [];
   for (let page = 1; page <= 10; page++) {
-    const url = `http://data.ex.co.kr/openapi/restinfo/restBrandList?key=test&type=json&numOfRows=99&pageNo=${page}`;
+    const url = `http://data.ex.co.kr/openapi/restinfo/restBrandList?key=7931111083&type=json&numOfRows=99&pageNo=${page}`;
     try {
       const response = await fetch(url);
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -155,7 +155,7 @@ async function fetchRealBestFoods() {
   console.log('Fetching real menu lists from restBestfoodList API (0502)...');
   const list = [];
   for (let page = 1; page <= 45; page++) {
-    const url = `https://data.ex.co.kr/openapi/restinfo/restBestfoodList?key=test&type=json&numOfRows=99&pageNo=${page}`;
+    const url = `https://data.ex.co.kr/openapi/restinfo/restBestfoodList?key=7931111083&type=json&numOfRows=99&pageNo=${page}`;
     try {
       const response = await fetch(url);
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
