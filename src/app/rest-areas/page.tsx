@@ -168,61 +168,81 @@ export default function RestAreasPage() {
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {filteredServiceAreas.map((s) => (
-                <div 
-                  key={s.slug} 
-                  className="p-5 border border-slate-100 bg-slate-50/50 hover:bg-white hover:border-blue-500 hover:shadow-xs transition-all duration-300 rounded-xl flex flex-col justify-between space-y-5"
-                >
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h4 className="text-sm md:text-[15px] font-bold text-slate-900 tracking-tight">{s.name}</h4>
-                        <p className="text-[10px] text-slate-400 mt-1 font-semibold">
-                          {s.highwayName} &middot; {s.directionName}
-                        </p>
+              {filteredServiceAreas.map((s) => {
+                const hasGas = s.gasStation && s.gasStation.brand && s.gasStation.brand !== '없음';
+                const gasInfo = hasGas ? `${s.gasStation.brand} 주유소` : '';
+                const chargers = [];
+                if (s.gasStation?.hasEvCharger) chargers.push('전기차 충전소');
+                if (s.gasStation?.hasHydrogen) chargers.push('수소차 충전소');
+                const chargerInfo = chargers.length > 0 ? chargers.join(' 및 ') : '';
+
+                const mainFacilities = s.facilities.slice(0, 2).join(', ');
+                const facilitiesInfo = mainFacilities ? `${mainFacilities} 등의 편의시설` : '';
+
+                const parts = [gasInfo, chargerInfo, facilitiesInfo].filter(Boolean);
+                const restAreaSummary = `${s.highwayName} ${s.directionName}에 위치하며, ${parts.join(', ')}을 편리하게 이용하실 수 있습니다.`;
+
+                return (
+                  <div 
+                    key={s.slug} 
+                    className="p-5 border border-slate-200/60 bg-white hover:border-blue-500 hover:shadow-md transition-all duration-300 rounded-2xl flex flex-col justify-between space-y-5"
+                  >
+                    <div className="space-y-4">
+                      {/* Header */}
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <h4 className="text-sm md:text-[15px] font-extrabold text-slate-900 tracking-tight">{s.name}</h4>
+                          <p className="text-[10px] text-slate-400 mt-1 font-semibold">
+                            {s.highwayName} &middot; {s.directionName}
+                          </p>
+                        </div>
+                        <span className={`text-[9px] font-bold px-2 py-0.5 rounded-md border ${
+                          s.direction === '상행' ? 'bg-blue-50 text-blue-700 border-blue-100/60' :
+                          s.direction === '하행' ? 'bg-red-50 text-red-750 border-red-100/60' : 'bg-slate-50 text-slate-700 border-slate-200/60'
+                        }`}>
+                          {s.directionName}
+                        </span>
                       </div>
-                      <span className={`text-[9px] font-bold px-2 py-0.5 rounded-md border ${
-                        s.direction === '상행' ? 'bg-blue-50 text-blue-700 border-blue-100/60' :
-                        s.direction === '하행' ? 'bg-red-50 text-red-750 border-red-100/60' : 'bg-slate-50 text-slate-700 border-slate-200/60'
-                      }`}>
-                        {s.directionName}
-                      </span>
+
+                      {/* 휴게소 자체 요약 정보 */}
+                      <p className="text-[11.5px] text-slate-500 leading-relaxed font-normal">
+                        {restAreaSummary}
+                      </p>
+
+                      {/* 추천 메뉴 정보 (과도한 강조를 줄이고 정돈된 형태) */}
+                      <div className="bg-slate-50 border border-slate-100 p-3 rounded-xl flex justify-between items-center gap-3">
+                        <div className="flex items-center gap-2 min-w-0">
+                          <span className="text-[8.5px] font-bold text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded-md border border-blue-150/40 shrink-0">추천 메뉴</span>
+                          <span className="text-[11.5px] font-bold text-slate-800 truncate">{s.signatureMenu.name}</span>
+                        </div>
+                        <span className="text-[11px] font-mono font-bold text-slate-700 shrink-0">{s.signatureMenu.price.toLocaleString()}원</span>
+                      </div>
                     </div>
 
-                    {/* 대표 메뉴 정보 */}
-                    <div className="bg-white p-4 border border-slate-100/80 rounded-xl space-y-1.5 shadow-2xs">
-                      <div className="flex justify-between items-center">
-                        <span className="text-[9px] font-bold text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded-md">대표 메뉴</span>
-                        <span className="text-[11px] font-mono font-bold text-slate-800">{s.signatureMenu.price.toLocaleString()}원</span>
+                    {/* 하단 편의시설 칩 및 상세정보 링크 */}
+                    <div className="flex justify-between items-center pt-3 border-t border-slate-100/80">
+                      <div className="flex flex-wrap gap-1 max-w-[220px]">
+                        {s.facilities.slice(0, 3).map((f) => (
+                          <span key={f} className="text-[9.5px] font-bold bg-slate-100/80 text-slate-500 px-2 py-0.5 rounded-md border border-slate-200/40">
+                            {f}
+                          </span>
+                        ))}
+                        {s.facilities.length > 3 && (
+                          <span className="text-[9.5px] font-bold text-slate-400 bg-slate-100/40 px-1.5 py-0.5 rounded-md border border-slate-100/80">
+                            +{s.facilities.length - 3}
+                          </span>
+                        )}
                       </div>
-                      <p className="text-xs font-bold text-slate-800 mt-1">{s.signatureMenu.name}</p>
-                      <p className="text-[10.5px] text-slate-450 leading-normal line-clamp-1 font-semibold">{s.signatureMenu.description}</p>
+                      <a 
+                        href={`/rest-areas/${s.slug}`}
+                        className="bg-slate-900 hover:bg-slate-800 text-white font-bold text-[10.5px] px-3 py-2 rounded-lg transition-all shadow-2xs shrink-0 cursor-pointer"
+                      >
+                        상세 정보 &rarr;
+                      </a>
                     </div>
                   </div>
-
-                  {/* 하단 편의시설 칩 및 상세정보 링크 */}
-                  <div className="flex justify-between items-center pt-3 border-t border-slate-100/80">
-                    <div className="flex flex-wrap gap-1 max-w-[220px]">
-                      {s.facilities.slice(0, 3).map((f) => (
-                        <span key={f} className="text-[9.5px] font-bold bg-slate-100/80 text-slate-500 px-2 py-0.5 rounded-md border border-slate-200/40">
-                          {f}
-                        </span>
-                      ))}
-                      {s.facilities.length > 3 && (
-                        <span className="text-[9.5px] font-bold text-slate-400 bg-slate-100/40 px-1.5 py-0.5 rounded-md border border-slate-100/80">
-                          +{s.facilities.length - 3}
-                        </span>
-                      )}
-                    </div>
-                    <a 
-                      href={`/rest-areas/${s.slug}`}
-                      className="bg-slate-900 hover:bg-slate-800 text-white font-bold text-[10.5px] px-3 py-2 rounded-lg transition-all shadow-2xs shrink-0 cursor-pointer"
-                    >
-                      상세 정보 &rarr;
-                    </a>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           )}
         </section>
