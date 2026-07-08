@@ -348,13 +348,13 @@ export const highways: Highway[] = [
 
 export const serviceAreas: ServiceArea[] = [
   {
-    "slug": "seoulmannam",
+    "slug": "seoulmannam-busan",
     "name": "서울만남휴게소",
     "direction": "하행",
     "directionName": "부산방향",
     "highwaySlug": "gyeongbu",
     "highwayName": "경부고속도로",
-    "locationKm": 10,
+    "locationKm": 410,
     "signatureMenu": {
       "name": "옛날돈까스",
       "price": 11500,
@@ -598,11 +598,11 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "열린매장(간식)"
     ],
-    "latitude": 37.5665,
-    "longitude": 127.128
+    "latitude": 37.4589,
+    "longitude": 127.0392
   },
   {
-    "slug": "jugjeon",
+    "slug": "jugjeon-seoul",
     "name": "죽전휴게소",
     "direction": "상행",
     "directionName": "서울방향",
@@ -703,8 +703,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1603,
-      "dieselPrice": 1432,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
@@ -722,7 +722,7 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5993
   },
   {
-    "slug": "giheung",
+    "slug": "giheung-busan",
     "name": "기흥휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -892,8 +892,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1606,
-      "dieselPrice": 1434,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 4,
@@ -909,10 +909,10 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4559
   },
   {
-    "slug": "anseong",
+    "slug": "anseong-seoul",
     "name": "안성휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (부산/서울)",
+    "direction": "상행",
+    "directionName": "서울방향",
     "highwaySlug": "gyeongbu",
     "highwayName": "경부고속도로",
     "locationKm": 362,
@@ -1078,11 +1078,69 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "(실속)어린이돈가스",
         "price": 7000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:30 ~ 20:30"
       },
       {
-        "name": "안성국밥",
-        "price": 10000
+        "name": "파스쿠찌",
+        "description": "설 당일 10시까지 영업",
+        "hours": "08:30 ~ 20:00"
       },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "설 당일 11시까지 영업",
+        "hours": "07:00 ~ 20:30"
+      },
+      {
+        "name": "이마트24",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 24:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1864,
+      "dieselPrice": 1853,
+      "lpgPrice": 1236,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수면실",
+      "샤워실",
+      "세탁실",
+      "수유실",
+      "쉼터",
+      "ex-화물차라운지",
+      "내고장특산물",
+      "ATM",
+      "편의점",
+      "휴게소의원"
+    ],
+    "latitude": 37.0125,
+    "longitude": 127.1352
+  },
+  {
+    "slug": "anseong-busan",
+    "name": "안성휴게소",
+    "direction": "하행",
+    "directionName": "부산방향",
+    "highwaySlug": "gyeongbu",
+    "highwayName": "경부고속도로",
+    "locationKm": 362,
+    "signatureMenu": {
+      "name": "안성국밥",
+      "price": 10000,
+      "description": "24시간 우려낸 사골국물에 다양한 야채와 갖은 양념으로 끊여내어 옛 장터의 맛을 재현한 안성휴게소 대표메뉴",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "한우소머리국밥",
         "price": 13000
@@ -1116,12 +1174,20 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10000
       },
       {
+        "name": "치즈돈가스",
+        "price": 12500
+      },
+      {
         "name": "자장면",
         "price": 6000
       },
       {
         "name": "(실속) 유부우동",
         "price": 5500
+      },
+      {
+        "name": "어묵우동",
+        "price": 7000
       },
       {
         "name": "새우튀김우동",
@@ -1186,32 +1252,27 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
-        "name": "로띠번",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:30 ~ 20:30"
-      },
-      {
-        "name": "파스쿠찌",
-        "description": "설 당일 10시까지 영업",
-        "hours": "08:30 ~ 20:00"
-      },
-      {
-        "name": "드롭탑(커피전문점)",
-        "description": "설 당일 11시까지 영업",
-        "hours": "07:00 ~ 20:30"
-      },
-      {
-        "name": "이마트24",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "00:00 ~ 24:00"
-      },
-      {
         "name": "할리스커피",
         "description": "입점 브랜드 매장입니다.",
         "hours": "07:30 ~ 19:00"
       },
       {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:30 ~ 19:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "06:00 ~ 21:00"
+      },
+      {
         "name": "JDX",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:30 ~ 19:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
         "description": "입점 브랜드 매장입니다.",
         "hours": "07:30 ~ 19:00"
       },
@@ -1223,37 +1284,31 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1854,
-      "dieselPrice": 1849,
-      "lpgPrice": 1202,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "gasolinePrice": 1833,
+      "dieselPrice": 1824,
+      "lpgPrice": 1165,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
-      "수면실",
       "샤워실",
-      "세탁실",
       "수유실",
-      "쉼터",
-      "ex-화물차라운지",
-      "내고장특산물",
       "ATM",
       "편의점",
-      "휴게소의원",
       "열린매장(간식)"
     ],
-    "latitude": 37.0125,
-    "longitude": 127.1352
+    "latitude": 37.0142,
+    "longitude": 127.1328
   },
   {
-    "slug": "ibjanggeobongpodo",
+    "slug": "ibjanggeobongpodo-seoul",
     "name": "입장거봉포도휴게소",
     "direction": "상행",
     "directionName": "서울방향",
     "highwaySlug": "gyeongbu",
     "highwayName": "경부고속도로",
-    "locationKm": 38,
+    "locationKm": 45,
     "signatureMenu": {
       "name": "흑돼지김치찌개",
       "price": 10000,
@@ -1475,8 +1530,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1839,
       "dieselPrice": 1839,
       "lpgPrice": 1226,
-      "hasEvCharger": true,
-      "evChargersCount": 6,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
       "hasHydrogen": false
     },
     "facilities": [
@@ -1489,11 +1544,11 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "편의점"
     ],
-    "latitude": 37.3003,
-    "longitude": 127.4203
+    "latitude": 37.27,
+    "longitude": 127.5608
   },
   {
-    "slug": "manghyang",
+    "slug": "manghyang-busan",
     "name": "망향휴게소",
     "direction": "하행",
     "directionName": "부산방향",
@@ -1692,8 +1747,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1836,
       "dieselPrice": 1835,
       "lpgPrice": 1118,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -1707,13 +1762,13 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.1728
   },
   {
-    "slug": "cheonansamgeori",
+    "slug": "cheonansamgeori-seoul",
     "name": "천안삼거리휴게소",
     "direction": "상행",
     "directionName": "서울방향",
     "highwaySlug": "gyeongbu",
     "highwayName": "경부고속도로",
-    "locationKm": 52,
+    "locationKm": 59,
     "signatureMenu": {
       "name": "선물용명품호두과자(42개입)",
       "price": 13000,
@@ -2429,8 +2484,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1839,
       "dieselPrice": 1835,
       "lpgPrice": 1123,
-      "hasEvCharger": true,
-      "evChargersCount": 8,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
       "hasHydrogen": false
     },
     "facilities": [
@@ -2443,17 +2498,17 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "기타"
     ],
-    "latitude": 36.3085,
-    "longitude": 127.5285
+    "latitude": 36.4489,
+    "longitude": 127.4976
   },
   {
-    "slug": "cheonanhodu",
+    "slug": "cheonanhodu-busan",
     "name": "천안호두휴게소",
     "direction": "하행",
     "directionName": "부산방향",
     "highwaySlug": "gyeongbu",
     "highwayName": "경부고속도로",
-    "locationKm": 59,
+    "locationKm": 66,
     "signatureMenu": {
       "name": "전주콩나물국밥(2층)",
       "price": 8000,
@@ -2665,8 +2720,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1893,
       "dieselPrice": 1882,
       "lpgPrice": 1247,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -2676,17 +2731,17 @@ export const serviceAreas: ServiceArea[] = [
       "열린매장(간식)",
       "기타"
     ],
-    "latitude": 36.4489,
-    "longitude": 127.4976
+    "latitude": 36.4988,
+    "longitude": 127.3627
   },
   {
-    "slug": "cheongju",
+    "slug": "cheongju-seoul",
     "name": "청주휴게소",
     "direction": "상행",
     "directionName": "서울방향",
     "highwaySlug": "gyeongbu",
     "highwayName": "경부고속도로",
-    "locationKm": 66,
+    "locationKm": 73,
     "signatureMenu": {
       "name": "청주소고기국밥",
       "price": 10000,
@@ -2829,8 +2884,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1853,
       "dieselPrice": 1842,
       "lpgPrice": 1184,
-      "hasEvCharger": true,
-      "evChargersCount": 10,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
       "hasHydrogen": false
     },
     "facilities": [
@@ -2844,17 +2899,17 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "기타"
     ],
-    "latitude": 36.7856,
-    "longitude": 127.4679
+    "latitude": 36.699,
+    "longitude": 127.353
   },
   {
-    "slug": "ogsan",
+    "slug": "ogsan-busan",
     "name": "옥산휴게소",
     "direction": "하행",
     "directionName": "부산방향",
     "highwaySlug": "gyeongbu",
     "highwayName": "경부고속도로",
-    "locationKm": 73,
+    "locationKm": 80,
     "signatureMenu": {
       "name": "치즈돈까스",
       "price": 11000,
@@ -3080,8 +3135,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1854,
       "dieselPrice": 1844,
       "lpgPrice": 1175,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -3093,17 +3148,17 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "기타"
     ],
-    "latitude": 36.699,
-    "longitude": 127.353
+    "latitude": 36.5556,
+    "longitude": 127.3638
   },
   {
-    "slug": "jugam",
+    "slug": "jugam-seoul",
     "name": "죽암휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (부산/서울)",
+    "direction": "상행",
+    "directionName": "서울방향",
     "highwaySlug": "gyeongbu",
     "highwayName": "경부고속도로",
-    "locationKm": 80,
+    "locationKm": 87,
     "signatureMenu": {
       "name": "수제돈가스",
       "price": 12000,
@@ -3234,11 +3289,62 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "만두국",
         "price": 10000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "단독매장 구성, 휴게소출구부 위치, 비즈니스공간으로 탁월",
+        "hours": "08:30 ~ 20:30"
       },
       {
-        "name": "보은대추왕갈비탕",
-        "price": 15000
+        "name": "로띠번",
+        "description": "간식매장에 위치한 빵집 로띠번",
+        "hours": "08:30 ~ 20:30"
       },
+      {
+        "name": "탐앤탐스",
+        "description": "휴게소 중앙 내부 위치, 24시간 운영",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "시중보다 저렴한 가격에 유명브랜드 드롭탑의 퀄리티를 결합",
+        "hours": "08:30 ~ 20:30"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1859,
+      "dieselPrice": 1848,
+      "lpgPrice": 1089,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "경정비",
+      "ATM"
+    ],
+    "latitude": 36.4872,
+    "longitude": 127.4904
+  },
+  {
+    "slug": "jugam-busan",
+    "name": "죽암휴게소",
+    "direction": "하행",
+    "directionName": "부산방향",
+    "highwaySlug": "gyeongbu",
+    "highwayName": "경부고속도로",
+    "locationKm": 94,
+    "signatureMenu": {
+      "name": "보은대추왕갈비탕",
+      "price": 15000,
+      "description": "갈비에서 우러나오는 육즙과 보은 대추를 통하여 우려낸 시원하고 담백한 국물 맛과 오랜시간 정성들여 끓인 갈비의 부드러움이 일품으로 고객들의 피로와 스트레스를 한방에 없애줄 수 있는 건강식품입니다 보은대추왕갈비탕은 죽암휴게소의 대표프리미엄 상품입니다",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "장터능이국밥",
         "price": 10000
@@ -3312,6 +3418,10 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6000
       },
       {
+        "name": "유부우동",
+        "price": 6500
+      },
+      {
         "name": "꼬치어묵우동",
         "price": 7000
       },
@@ -3370,26 +3480,6 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
-        "name": "엔제리너스",
-        "description": "단독매장 구성, 휴게소출구부 위치, 비즈니스공간으로 탁월",
-        "hours": "08:30 ~ 20:30"
-      },
-      {
-        "name": "로띠번",
-        "description": "간식매장에 위치한 빵집 로띠번",
-        "hours": "08:30 ~ 20:30"
-      },
-      {
-        "name": "탐앤탐스",
-        "description": "휴게소 중앙 내부 위치, 24시간 운영",
-        "hours": "00:00 ~ 24:00"
-      },
-      {
-        "name": "드롭탑(커피전문점)",
-        "description": "시중보다 저렴한 가격에 유명브랜드 드롭탑의 퀄리티를 결합",
-        "hours": "08:30 ~ 20:30"
-      },
-      {
         "name": "던킨도너츠",
         "description": "철저한 위생관리와 맛있는 도넛, 커피류 음료를 제공하고 있습니다.",
         "hours": "08:00 ~ 20:00"
@@ -3397,6 +3487,11 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "롯데리아",
         "description": "고속도로 유일한 '롯데리아 DT매장'으로 차에서 내리지 않고 이용하실 수 있습니다. K버거의 원조 롯데리아!",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "철저한 원두 품질관리로 신선하고 고소한 커피와 음료를 제공하고 있습니다.",
         "hours": "08:00 ~ 20:00"
       }
     ],
@@ -3406,28 +3501,27 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1848,
       "lpgPrice": 1089,
       "hasEvCharger": true,
-      "evChargersCount": 12,
+      "evChargersCount": 2,
       "hasHydrogen": false
     },
     "facilities": [
       "수유실",
-      "경정비",
-      "ATM",
       "쉼터",
+      "ATM",
       "편의점",
       "기타"
     ],
-    "latitude": 36.5556,
-    "longitude": 127.3638
+    "latitude": 36.5567,
+    "longitude": 127.6163
   },
   {
-    "slug": "sintanjin",
+    "slug": "sintanjin-seoul",
     "name": "신탄진휴게소",
     "direction": "상행",
     "directionName": "서울방향",
     "highwaySlug": "gyeongbu",
     "highwayName": "경부고속도로",
-    "locationKm": 87,
+    "locationKm": 101,
     "signatureMenu": {
       "name": "도가니 설렁탕",
       "price": 12000,
@@ -3667,8 +3761,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1600,
-      "dieselPrice": 1430,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
@@ -3684,17 +3778,17 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "편의점"
     ],
-    "latitude": 36.2004,
-    "longitude": 127.3852
+    "latitude": 36.4134,
+    "longitude": 127.5206
   },
   {
-    "slug": "ogcheon",
+    "slug": "ogcheon-busan",
     "name": "옥천휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (부산/서울)",
+    "direction": "하행",
+    "directionName": "부산방향",
     "highwaySlug": "gyeongbu",
     "highwayName": "경부고속도로",
-    "locationKm": 94,
+    "locationKm": 108,
     "signatureMenu": {
       "name": "놀부부대찌개",
       "price": 10000,
@@ -3861,11 +3955,66 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "101번지 매운돈까스",
         "price": 13500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "도넛, 커피, 음료",
+        "hours": "08:00 ~ 20:00"
       },
       {
-        "name": "한방닭곰탕",
-        "price": 9000
+        "name": "엔제리너스",
+        "description": "음료, 커피",
+        "hours": "08:00 ~ 20:00"
       },
+      {
+        "name": "클라이머홀릭",
+        "description": "아웃도어,골프웨어,신발,가방 등",
+        "hours": "09:00 ~ 20:00"
+      },
+      {
+        "name": "이마트24",
+        "description": "담배, 음료, 커피, 간식",
+        "hours": "06:00 ~ 24:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1855,
+      "dieselPrice": 1848,
+      "lpgPrice": 1199,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수면실",
+      "수유실",
+      "ex-화물차라운지",
+      "경정비",
+      "ATM",
+      "편의점",
+      "열린매장(간식)"
+    ],
+    "latitude": 36.7858,
+    "longitude": 127.5102
+  },
+  {
+    "slug": "ogcheon-seoul",
+    "name": "옥천휴게소",
+    "direction": "상행",
+    "directionName": "서울방향",
+    "highwaySlug": "gyeongbu",
+    "highwayName": "경부고속도로",
+    "locationKm": 115,
+    "signatureMenu": {
+      "name": "한방닭곰탕",
+      "price": 9000,
+      "description": "1.고속도로 휴게소 유일의 착한음식점 선정된 음식으로 여름철 쇠약해진 몸과 마음을 치료해줄 웰빙음식 입니다. 2.각종 한약제가 들어있어 식욕증진, 노화방지, 장운동원활 및 암세포 성장을 억제하는 효과가 탁월 합니다",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "돼지고기김치찌개",
         "price": 9000
@@ -3903,8 +4052,16 @@ export const serviceAreas: ServiceArea[] = [
         "price": 4000
       },
       {
+        "name": "떡만두라면",
+        "price": 5000
+      },
+      {
         "name": "(실속)우동",
         "price": 5500
+      },
+      {
+        "name": "꼬치어묵우동",
+        "price": 7000
       },
       {
         "name": "치즈돈가스",
@@ -3951,6 +4108,22 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3700
       },
       {
+        "name": "(알뜰간식)소떡소떡",
+        "price": 3700
+      },
+      {
+        "name": "(알뜰간식)바삭어포",
+        "price": 3700
+      },
+      {
+        "name": "(알뜰간식)통감자",
+        "price": 3700
+      },
+      {
+        "name": "(알뜰간식)떡볶이",
+        "price": 3700
+      },
+      {
         "name": "(알뜰간식)옥수수1EA",
         "price": 3700
       },
@@ -3973,26 +4146,6 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
-        "name": "던킨도너츠",
-        "description": "도넛, 커피, 음료",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "엔제리너스",
-        "description": "음료, 커피",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "클라이머홀릭",
-        "description": "아웃도어,골프웨어,신발,가방 등",
-        "hours": "09:00 ~ 20:00"
-      },
-      {
-        "name": "이마트24",
-        "description": "담배, 음료, 커피, 간식",
-        "hours": "06:00 ~ 24:00"
-      },
-      {
         "name": "할리스커피",
         "description": "남녀노소 좋아하는 깊고 진한향의 고급원두 커피를 제공합니다.",
         "hours": "06:00 ~ 22:00"
@@ -4004,36 +4157,33 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소/SK에너지",
-      "gasolinePrice": 1846,
-      "dieselPrice": 1829,
-      "lpgPrice": 1199,
-      "hasEvCharger": true,
-      "evChargersCount": 2,
-      "hasHydrogen": false
+      "brand": "알뜰주유소",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": true
     },
     "facilities": [
-      "수면실",
-      "수유실",
-      "ex-화물차라운지",
-      "경정비",
-      "ATM",
-      "편의점",
-      "열린매장(간식)",
       "샤워실",
-      "내고장특산물"
+      "수유실",
+      "경정비",
+      "내고장특산물",
+      "ATM",
+      "편의점"
     ],
-    "latitude": 36.5567,
-    "longitude": 127.6163
+    "latitude": 36.7347,
+    "longitude": 127.3757
   },
   {
-    "slug": "geumgang",
+    "slug": "geumgang-busan",
     "name": "금강휴게소",
     "direction": "하행",
     "directionName": "부산방향",
     "highwaySlug": "gyeongbu",
     "highwayName": "경부고속도로",
-    "locationKm": 101,
+    "locationKm": 122,
     "signatureMenu": {
       "name": "금강도리뱅뱅정식",
       "price": 12000,
@@ -4107,8 +4257,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1855,
       "dieselPrice": 1848,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -4116,17 +4266,17 @@ export const serviceAreas: ServiceArea[] = [
       "경정비",
       "ATM"
     ],
-    "latitude": 36.7002,
-    "longitude": 127.6258
+    "latitude": 36.594,
+    "longitude": 127.3461
   },
   {
-    "slug": "hwanggan",
+    "slug": "hwanggan-busan",
     "name": "황간휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (부산/서울)",
+    "direction": "하행",
+    "directionName": "부산방향",
     "highwaySlug": "gyeongbu",
     "highwayName": "경부고속도로",
-    "locationKm": 108,
+    "locationKm": 129,
     "signatureMenu": {
       "name": "(실속)돈가스",
       "price": 10000,
@@ -4209,10 +4359,77 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "영동표고버섯소고기덮밥",
         "price": 10000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "커피전문점 할리스입니다",
+        "hours": "07:00 ~ 19:00"
+      },
+      {
+        "name": "용우동",
+        "description": "우동매장입니다",
+        "hours": "07:00 ~ 21:00"
+      },
+      {
+        "name": "CU",
+        "description": "CU 24시 편의점 입니다. 21:00~ 익일 07:00 무인편의점",
+        "hours": "00:00 ~ 24:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "쉼터",
+      "ATM",
+      "편의점"
+    ],
+    "latitude": 36.493,
+    "longitude": 127.4484
+  },
+  {
+    "slug": "hwanggan-seoul",
+    "name": "황간휴게소",
+    "direction": "상행",
+    "directionName": "서울방향",
+    "highwaySlug": "gyeongbu",
+    "highwayName": "경부고속도로",
+    "locationKm": 136,
+    "signatureMenu": {
+      "name": "영표국밥",
+      "price": 7000,
+      "description": "영동의 표고버섯으로 만든 열큰한 영동표고 국밥",
+      "isExFood": true
+    },
+    "otherMenus": [
+      {
+        "name": "돼지고기김치찌개",
+        "price": 9000
+      },
+      {
+        "name": "떡만두라면",
+        "price": 5500
       },
       {
         "name": "EX-라면",
         "price": 4000
+      },
+      {
+        "name": "(실속)돈가스",
+        "price": 10000
+      },
+      {
+        "name": "해물순두부찌개",
+        "price": 9000
       },
       {
         "name": "알뜰)케이크소세지",
@@ -4249,52 +4466,68 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "알뜰)호두과자",
         "price": 2000
+      },
+      {
+        "name": "어묵라면",
+        "price": 5500
+      },
+      {
+        "name": "(실속)우동",
+        "price": 5500
+      },
+      {
+        "name": "꼬치어묵우동",
+        "price": 7000
+      },
+      {
+        "name": "치즈돈까스",
+        "price": 11000
       }
     ],
     "brandStores": [
       {
         "name": "할리스커피",
-        "description": "커피전문점 할리스입니다",
+        "description": "커피전문점 할리스입니다.",
         "hours": "07:00 ~ 19:00"
       },
       {
         "name": "용우동",
-        "description": "우동매장입니다",
+        "description": "용우동 매장입니다.",
         "hours": "07:00 ~ 21:00"
       },
       {
         "name": "CU",
-        "description": "CU 24시 편의점 입니다. 21:00~ 익일 07:00 무인편의점",
+        "description": "CU 24시 편의점 입니다. 21시~ 익일 07시 무인편의점",
         "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1609,
-      "dieselPrice": 1436,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 4,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
       "수유실",
       "쉼터",
+      "내고장특산물",
       "ATM",
-      "편의점",
-      "내고장특산물"
+      "편의점"
     ],
-    "latitude": 36.7858,
-    "longitude": 127.5102
+    "latitude": 36.5246,
+    "longitude": 127.5887
   },
   {
-    "slug": "chupungryeong",
+    "slug": "chupungryeong-busan",
     "name": "추풍령휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (부산/서울)",
+    "direction": "하행",
+    "directionName": "부산방향",
     "highwaySlug": "gyeongbu",
     "highwayName": "경부고속도로",
-    "locationKm": 115,
+    "locationKm": 143,
     "signatureMenu": {
       "name": "돌솥흑돼지불고기정식",
       "price": 10500,
@@ -4393,34 +4626,6 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "짜장",
         "price": 6000
-      },
-      {
-        "name": "고등어양념구이",
-        "price": 11000
-      },
-      {
-        "name": "솥밥흑돼지불고기정식",
-        "price": 11000
-      },
-      {
-        "name": "자장면",
-        "price": 6000
-      },
-      {
-        "name": "떡만두라면",
-        "price": 5000
-      },
-      {
-        "name": "새우튀김우동",
-        "price": 7000
-      },
-      {
-        "name": "솥밥버섯순두부",
-        "price": 9000
-      },
-      {
-        "name": "솥밥비빔밥",
-        "price": 10500
       }
     ],
     "brandStores": [
@@ -4432,12 +4637,12 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1612,
-      "dieselPrice": 1438,
-      "lpgPrice": 1193,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
-      "hasHydrogen": true
+      "hasHydrogen": false
     },
     "facilities": [
       "수면실",
@@ -4446,21 +4651,144 @@ export const serviceAreas: ServiceArea[] = [
       "수유실",
       "쉼터",
       "ex-화물차라운지",
-      "ATM",
+      "ATM"
+    ],
+    "latitude": 36.5985,
+    "longitude": 128.6539
+  },
+  {
+    "slug": "chupungryeong-seoul",
+    "name": "추풍령휴게소",
+    "direction": "상행",
+    "directionName": "서울방향",
+    "highwaySlug": "gyeongbu",
+    "highwayName": "경부고속도로",
+    "locationKm": 150,
+    "signatureMenu": {
+      "name": "(실속)통등심돈가스",
+      "price": 10000,
+      "description": "한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
+      {
+        "name": "얼큰칼제비",
+        "price": 9000
+      },
+      {
+        "name": "고등어양념구이",
+        "price": 11000
+      },
+      {
+        "name": "솥밥흑돼지불고기정식",
+        "price": 11000
+      },
+      {
+        "name": "(실속)된장찌개",
+        "price": 7000
+      },
+      {
+        "name": "흑돼지김치전골",
+        "price": 10000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 11000
+      },
+      {
+        "name": "자장면",
+        "price": 6000
+      },
+      {
+        "name": "(실속)EX-라면",
+        "price": 4000
+      },
+      {
+        "name": "떡만두라면",
+        "price": 5000
+      },
+      {
+        "name": "사골떡만두국",
+        "price": 8500
+      },
+      {
+        "name": "사골칼국수",
+        "price": 8000
+      },
+      {
+        "name": "(실속)우동",
+        "price": 5500
+      },
+      {
+        "name": "새우튀김우동",
+        "price": 7000
+      },
+      {
+        "name": "평양아바이순대국밥",
+        "price": 10000
+      },
+      {
+        "name": "솥밥버섯순두부",
+        "price": 9000
+      },
+      {
+        "name": "솥밥비빔밥",
+        "price": 10500
+      },
+      {
+        "name": "옹알옹알맘마",
+        "price": 1500
+      },
+      {
+        "name": "(실속)어린이돈가스",
+        "price": 7000
+      },
+      {
+        "name": "감자고기만두",
+        "price": 7000
+      },
+      {
+        "name": "감자김치만두",
+        "price": 7000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "할리스 커피전문점이 입점하여 있으며 평상시 00시 부터 24시까지 이용합니다.",
+        "hours": "00:00 ~ 24:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": 1193,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수면실",
+      "샤워실",
+      "세탁실",
+      "수유실",
+      "쉼터",
+      "ex-화물차라운지",
       "경정비",
       "내고장특산물"
     ],
-    "latitude": 36.6735,
-    "longitude": 128.3916
+    "latitude": 36.7129,
+    "longitude": 128.5668
   },
   {
-    "slug": "chilgog",
+    "slug": "chilgog-busan",
     "name": "칠곡휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (부산/서울)",
+    "direction": "하행",
+    "directionName": "부산방향",
     "highwaySlug": "gyeongbu",
     "highwayName": "경부고속도로",
-    "locationKm": 122,
+    "locationKm": 157,
     "signatureMenu": {
       "name": "자율식당",
       "price": 9000,
@@ -4647,11 +4975,64 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "호두과자세트(12000)",
         "price": 12000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "장소 : 자율식당 옆 / 여자화장실 앞",
+        "hours": "08:00 ~ 19:30"
       },
       {
-        "name": "따로국밥정식",
-        "price": 11000
+        "name": "투썸플레이스",
+        "description": "장소 : 종합안내소 측면 / 판매품목 : 커피류, 음료류",
+        "hours": "08:00 ~ 19:30"
       },
+      {
+        "name": "기타",
+        "description": "k-outlet 골프웨어 판매점, 장소 : 매점동 왼쪽 측면",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1844,
+      "dieselPrice": 1833,
+      "lpgPrice": 1160,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수면실",
+      "샤워실",
+      "세탁실",
+      "수유실",
+      "ex-화물차라운지",
+      "내고장특산물",
+      "ATM",
+      "편의점",
+      "열린매장(간식)",
+      "기타"
+    ],
+    "latitude": 36.7015,
+    "longitude": 128.4234
+  },
+  {
+    "slug": "chilgog-seoul",
+    "name": "칠곡휴게소",
+    "direction": "상행",
+    "directionName": "서울방향",
+    "highwaySlug": "gyeongbu",
+    "highwayName": "경부고속도로",
+    "locationKm": 164,
+    "signatureMenu": {
+      "name": "따로국밥정식",
+      "price": 11000,
+      "description": "칠곡(서울)휴게소 자율시당 내 최고의 인기메뉴~ 남녀노소 누구나 즐겨찾는 메뉴로 국물의 진한 맛이 일품입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "등심돈가스정식",
         "price": 11900
@@ -4665,12 +5046,20 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "새우튀김우동",
+        "price": 8000
+      },
+      {
         "name": "가락자장면",
         "price": 7000
       },
       {
         "name": "카레라이스정식",
         "price": 7000
+      },
+      {
+        "name": "가락우동",
+        "price": 5500
       },
       {
         "name": "동인동찜갈비",
@@ -4697,6 +5086,14 @@ export const serviceAreas: ServiceArea[] = [
         "price": 15000
       },
       {
+        "name": "부산어묵우동",
+        "price": 7500
+      },
+      {
+        "name": "유부우동",
+        "price": 6500
+      },
+      {
         "name": "가락짬뽕",
         "price": 8500
       }
@@ -4704,27 +5101,22 @@ export const serviceAreas: ServiceArea[] = [
     "brandStores": [
       {
         "name": "파스쿠찌",
-        "description": "장소 : 자율식당 옆 / 여자화장실 앞",
-        "hours": "08:00 ~ 19:30"
+        "description": "아메리카노 외 커피류",
+        "hours": "07:00 ~ 20:30"
       },
       {
         "name": "투썸플레이스",
-        "description": "장소 : 종합안내소 측면 / 판매품목 : 커피류, 음료류",
-        "hours": "08:00 ~ 19:30"
-      },
-      {
-        "name": "기타",
-        "description": "k-outlet 골프웨어 판매점, 장소 : 매점동 왼쪽 측면",
+        "description": "아메리카노 외 커피류",
         "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1844,
-      "dieselPrice": 1833,
-      "lpgPrice": 1160,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 6,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -4732,25 +5124,23 @@ export const serviceAreas: ServiceArea[] = [
       "샤워실",
       "세탁실",
       "수유실",
+      "세차장",
       "ex-화물차라운지",
       "내고장특산물",
       "ATM",
-      "편의점",
-      "열린매장(간식)",
-      "기타",
-      "세차장"
+      "편의점"
     ],
-    "latitude": 36.5328,
-    "longitude": 128.362
+    "latitude": 36.5747,
+    "longitude": 128.3556
   },
   {
-    "slug": "gyeongsan",
+    "slug": "gyeongsan-seoul",
     "name": "경산휴게소",
     "direction": "상행",
     "directionName": "서울방향",
     "highwaySlug": "gyeongbu",
     "highwayName": "경부고속도로",
-    "locationKm": 129,
+    "locationKm": 171,
     "signatureMenu": {
       "name": "돼지김치찌게",
       "price": 9000,
@@ -4892,8 +5282,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1618,
-      "dieselPrice": 1442,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": 1199,
       "hasEvCharger": false,
       "evChargersCount": 0,
@@ -4910,17 +5300,17 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "편의점"
     ],
-    "latitude": 36.4318,
-    "longitude": 128.4643
+    "latitude": 36.4491,
+    "longitude": 128.4257
   },
   {
-    "slug": "pyeongsa",
+    "slug": "pyeongsa-busan",
     "name": "평사휴게소",
     "direction": "하행",
     "directionName": "부산방향",
     "highwaySlug": "gyeongbu",
     "highwayName": "경부고속도로",
-    "locationKm": 136,
+    "locationKm": 178,
     "signatureMenu": {
       "name": "수제등심돈가스정식",
       "price": 11900,
@@ -5022,7 +5412,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1899,
       "lpgPrice": 1155,
       "hasEvCharger": true,
-      "evChargersCount": 8,
+      "evChargersCount": 2,
       "hasHydrogen": false
     },
     "facilities": [
@@ -5033,28 +5423,24 @@ export const serviceAreas: ServiceArea[] = [
       "ex-화물차라운지",
       "ATM"
     ],
-    "latitude": 36.4634,
-    "longitude": 128.6046
+    "latitude": 36.4402,
+    "longitude": 128.5692
   },
   {
-    "slug": "geoncheon",
+    "slug": "geoncheon-seoul",
     "name": "건천휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (부산/서울)",
+    "direction": "상행",
+    "directionName": "서울방향",
     "highwaySlug": "gyeongbu",
     "highwayName": "경부고속도로",
-    "locationKm": 143,
+    "locationKm": 185,
     "signatureMenu": {
-      "name": "누구나돌솥비빔밥",
-      "price": 11000,
-      "description": "2015년 한국도로공사 휴게소 대표메뉴 평가에서 전국1위를 수상한 EX푸드\"누구나돌솥비빔밥\"입니다. 재료각각의 신선한 맛을 살리고 풍부한 양과 일품인 건천휴게소 대표 메뉴 입니다.",
+      "name": "돼지고기김치찌개",
+      "price": 9500,
+      "description": "국내산 돼지고기와 국내산 100%김치로 조리하여 깊은맛이 일품",
       "isExFood": true
     },
     "otherMenus": [
-      {
-        "name": "돼지고기김치찌개",
-        "price": 9500
-      },
       {
         "name": "왕돈가스",
         "price": 12500
@@ -5234,7 +5620,49 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "로봇계란라면정식",
         "price": 6000
-      },
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "탐앤탐스",
+        "description": "커피전문점",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1864,
+      "dieselPrice": 1853,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "쉼터",
+      "ATM",
+      "편의점",
+      "기타"
+    ],
+    "latitude": 36.5561,
+    "longitude": 128.6543
+  },
+  {
+    "slug": "geoncheon-busan",
+    "name": "건천휴게소",
+    "direction": "하행",
+    "directionName": "부산방향",
+    "highwaySlug": "gyeongbu",
+    "highwayName": "경부고속도로",
+    "locationKm": 192,
+    "signatureMenu": {
+      "name": "누구나돌솥비빔밥",
+      "price": 11000,
+      "description": "2015년 한국도로공사 휴게소 대표메뉴 평가에서 전국1위를 수상한 EX푸드\"누구나돌솥비빔밥\"입니다. 재료각각의 신선한 맛을 살리고 풍부한 양과 일품인 건천휴게소 대표 메뉴 입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "뽀글이돼지찌개정식",
         "price": 9900
@@ -5322,11 +5750,6 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
-        "name": "탐앤탐스",
-        "description": "커피전문점",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
         "name": "투썸플레이스",
         "description": "바쁜 시간속 사람들과 함께 어울려 일상의 휴식이 되는 곳 건천(부산)휴게소 투썸플레이스",
         "hours": "08:00 ~ 20:00"
@@ -5334,31 +5757,29 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
-      "dieselPrice": 1853,
+      "gasolinePrice": 1863,
+      "dieselPrice": 1852,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
       "수유실",
-      "쉼터",
       "ATM",
-      "편의점",
-      "기타"
+      "편의점"
     ],
-    "latitude": 36.5985,
-    "longitude": 128.6539
+    "latitude": 36.6904,
+    "longitude": 128.6026
   },
   {
-    "slug": "gyeongju",
+    "slug": "gyeongju-busan",
     "name": "경주휴게소",
     "direction": "하행",
     "directionName": "부산방향",
     "highwaySlug": "gyeongbu",
     "highwayName": "경부고속도로",
-    "locationKm": 150,
+    "locationKm": 199,
     "signatureMenu": {
       "name": "경주천년한우국밥",
       "price": 11000,
@@ -5484,8 +5905,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1858,
       "dieselPrice": 1848,
       "lpgPrice": 1208,
-      "hasEvCharger": true,
-      "evChargersCount": 10,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
       "hasHydrogen": false
     },
     "facilities": [
@@ -5495,17 +5916,17 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "기타"
     ],
-    "latitude": 36.7129,
-    "longitude": 128.5668
+    "latitude": 36.7195,
+    "longitude": 128.4618
   },
   {
-    "slug": "eonyang",
+    "slug": "eonyang-seoul",
     "name": "언양휴게소",
     "direction": "상행",
     "directionName": "서울방향",
     "highwaySlug": "gyeongbu",
     "highwayName": "경부고속도로",
-    "locationKm": 157,
+    "locationKm": 206,
     "signatureMenu": {
       "name": "묵은지김치찌개",
       "price": 7000,
@@ -5714,8 +6135,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1859,
       "dieselPrice": 1849,
       "lpgPrice": 1264,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -5726,17 +6147,17 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "기타"
     ],
-    "latitude": 35.6644,
-    "longitude": 129.2292
+    "latitude": 35.5795,
+    "longitude": 129.167
   },
   {
-    "slug": "yangsan",
+    "slug": "yangsan-seoul",
     "name": "양산휴게소",
     "direction": "상행",
     "directionName": "서울방향",
     "highwaySlug": "gyeongbu",
     "highwayName": "경부고속도로",
-    "locationKm": 164,
+    "locationKm": 213,
     "signatureMenu": {
       "name": "돌솥비빔밥",
       "price": 10000,
@@ -5830,8 +6251,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1859,
       "dieselPrice": 1849,
       "lpgPrice": null,
-      "hasEvCharger": true,
-      "evChargersCount": 12,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
       "hasHydrogen": false
     },
     "facilities": [
@@ -5841,28 +6262,24 @@ export const serviceAreas: ServiceArea[] = [
       "열린매장(간식)",
       "기타"
     ],
-    "latitude": 35.237,
-    "longitude": 128.5425
+    "latitude": 35.1388,
+    "longitude": 128.5803
   },
   {
-    "slug": "jinyeong",
+    "slug": "jinyeong-busan",
     "name": "진영휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (부산/순천)",
+    "direction": "하행",
+    "directionName": "부산방향",
     "highwaySlug": "namhae",
     "highwayName": "남해고속도로",
-    "locationKm": 171,
+    "locationKm": 220,
     "signatureMenu": {
-      "name": "흑돼지 김치찌개",
+      "name": "진영소국밥",
       "price": 9500,
       "description": "한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.",
       "isExFood": true
     },
     "otherMenus": [
-      {
-        "name": "진영소국밥",
-        "price": 9500
-      },
       {
         "name": "소고기미역국정식",
         "price": 8500
@@ -6518,7 +6935,90 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "냉모밀세트",
         "price": 14500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "롯데리아",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       },
+      {
+        "name": "뚜레쥬르",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "나뚜루",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "※24시간 운영 : 2곳 운영중(부산방향, 기장방향)",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "크리스피크림",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "공차",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "S-OIL",
+      "gasolinePrice": 1868,
+      "dieselPrice": 1838,
+      "lpgPrice": 1063,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
+      "hasHydrogen": true
+    },
+    "facilities": [
+      "수유실",
+      "쉼터",
+      "내고장특산물",
+      "ATM",
+      "편의점",
+      "열린매장(간식)"
+    ],
+    "latitude": 35.0901,
+    "longitude": 128.7156
+  },
+  {
+    "slug": "jinyeong-busan-1",
+    "name": "진영휴게소",
+    "direction": "하행",
+    "directionName": "순천방향",
+    "highwaySlug": "namhae",
+    "highwayName": "남해고속도로",
+    "locationKm": 227,
+    "signatureMenu": {
+      "name": "흑돼지 김치찌개",
+      "price": 9500,
+      "description": "한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "바지락순두부",
         "price": 9500
@@ -6560,6 +7060,14 @@ export const serviceAreas: ServiceArea[] = [
         "price": 4000
       },
       {
+        "name": "떡만두라면",
+        "price": 5500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
         "name": "놀부부대찌개",
         "price": 9500
       },
@@ -6590,6 +7098,10 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "중화볶음밥",
         "price": 8500
+      },
+      {
+        "name": "제육덮밥",
+        "price": 9500
       },
       {
         "name": "스윗소이소스삼겹살덮밥",
@@ -6764,6 +7276,10 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10500
       },
       {
+        "name": "새우버거",
+        "price": 6000
+      },
+      {
         "name": "핫치킨버거",
         "price": 6500
       },
@@ -6786,6 +7302,10 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "초이스치즈버거",
         "price": 6500
+      },
+      {
+        "name": "치킨버거",
+        "price": 6000
       },
       {
         "name": "치킨버거세트",
@@ -7436,6 +7956,10 @@ export const serviceAreas: ServiceArea[] = [
         "price": 4500
       },
       {
+        "name": "새우튀김우동",
+        "price": 7500
+      },
+      {
         "name": "생선가스정식",
         "price": 12000
       },
@@ -7482,49 +8006,9 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
-        "name": "롯데리아",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "뚜레쥬르",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "나뚜루",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
         "name": "로띠번",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "파스쿠찌",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "탐앤탐스",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "CU",
-        "description": "※24시간 운영 : 2곳 운영중(부산방향, 기장방향)",
-        "hours": "00:00 ~ 24:00"
-      },
-      {
-        "name": "크리스피크림",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "공차",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
+        "description": "로띠번(커피번,바닐라번)",
+        "hours": "07:30 ~ 19:30"
       },
       {
         "name": "코바코",
@@ -7532,16 +8016,26 @@ export const serviceAreas: ServiceArea[] = [
         "hours": "07:30 ~ 19:30"
       },
       {
+        "name": "탐앤탐스",
+        "description": "해썹인증 (커피류만 판매) ,텀블러 할인 (그린캠페인) 300원, 텀블러 세척해드림",
+        "hours": "07:30 ~ 19:30"
+      },
+      {
         "name": "드롭탑(커피전문점)",
         "description": "본관 입구",
         "hours": "07:30 ~ 19:30"
+      },
+      {
+        "name": "CU",
+        "description": "24시간 운영",
+        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
-      "brand": "S-OIL/알뜰주유소",
-      "gasolinePrice": 1866,
-      "dieselPrice": 1846,
-      "lpgPrice": 1146,
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1864,
+      "dieselPrice": 1853,
+      "lpgPrice": 1228,
       "hasEvCharger": false,
       "evChargersCount": 0,
       "hasHydrogen": false
@@ -7549,24 +8043,22 @@ export const serviceAreas: ServiceArea[] = [
     "facilities": [
       "수유실",
       "쉼터",
-      "내고장특산물",
+      "경정비",
       "ATM",
       "편의점",
-      "열린매장(간식)",
-      "경정비",
       "기타"
     ],
-    "latitude": 35.1114,
-    "longitude": 128.6126
+    "latitude": 35.1777,
+    "longitude": 128.8297
   },
   {
-    "slug": "munsan",
+    "slug": "munsan-busan",
     "name": "문산휴게소",
     "direction": "하행",
     "directionName": "순천방향",
     "highwaySlug": "namhae",
     "highwayName": "남해고속도로",
-    "locationKm": 178,
+    "locationKm": 234,
     "signatureMenu": {
       "name": "차돌된장찌개",
       "price": 9500,
@@ -7761,7 +8253,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1853,
       "lpgPrice": 1149,
       "hasEvCharger": true,
-      "evChargersCount": 2,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -7771,17 +8263,17 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "기타"
     ],
-    "latitude": 35.1025,
-    "longitude": 128.7561
+    "latitude": 35.321,
+    "longitude": 128.8176
   },
   {
-    "slug": "sacheon",
+    "slug": "sacheon-busan",
     "name": "사천휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (부산/순천)",
+    "direction": "하행",
+    "directionName": "부산방향",
     "highwaySlug": "namhae",
     "highwayName": "남해고속도로",
-    "locationKm": 185,
+    "locationKm": 241,
     "signatureMenu": {
       "name": "산채나물비빔밥",
       "price": 9500,
@@ -7964,54 +8456,6 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "뚝배기불고기솥밥",
         "price": 13000
-      },
-      {
-        "name": "실속건강버섯두부덮밥",
-        "price": 7000
-      },
-      {
-        "name": "옛날등심돈까스",
-        "price": 11000
-      },
-      {
-        "name": "치즈돈까스",
-        "price": 12000
-      },
-      {
-        "name": "(해운대원조)소고기따로국밥",
-        "price": 10000
-      },
-      {
-        "name": "마제소바우동,밥",
-        "price": 9000
-      },
-      {
-        "name": "실속어린이돈가스",
-        "price": 6000
-      },
-      {
-        "name": "연어토핑유부초밥",
-        "price": 5500
-      },
-      {
-        "name": "나주식뼈없는갈비탕솥밥",
-        "price": 12900
-      },
-      {
-        "name": "오마카세모듬10P",
-        "price": 12900
-      },
-      {
-        "name": "어니언타르타르생언어",
-        "price": 7900
-      },
-      {
-        "name": "시그니처6P",
-        "price": 7900
-      },
-      {
-        "name": "냉메밀소바",
-        "price": 8000
       }
     ],
     "brandStores": [
@@ -8046,20 +8490,224 @@ export const serviceAreas: ServiceArea[] = [
       "내고장특산물",
       "ATM",
       "편의점",
-      "열린매장(간식)",
-      "샤워실"
+      "열린매장(간식)"
     ],
-    "latitude": 35.2184,
-    "longitude": 128.8412
+    "latitude": 35.3883,
+    "longitude": 128.6905
   },
   {
-    "slug": "seomjingang",
-    "name": "섬진강휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (부산/순천)",
+    "slug": "sacheon-busan-1",
+    "name": "사천휴게소",
+    "direction": "하행",
+    "directionName": "순천방향",
     "highwaySlug": "namhae",
     "highwayName": "남해고속도로",
-    "locationKm": 192,
+    "locationKm": 248,
+    "signatureMenu": {
+      "name": "실속건강버섯두부덮밥",
+      "price": 7000,
+      "description": "사천휴게소에서 만든 적당히 매콤한 소스와 건강한 두부의 콜라보로 맛있고 가성비가 좋은 식사를 하실수 있습니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
+      {
+        "name": "옛날등심돈까스",
+        "price": 11000
+      },
+      {
+        "name": "옛날제육덮밥",
+        "price": 10500
+      },
+      {
+        "name": "장터육개장",
+        "price": 9500
+      },
+      {
+        "name": "옛날시래기추어탕",
+        "price": 11000
+      },
+      {
+        "name": "치즈돈까스",
+        "price": 12000
+      },
+      {
+        "name": "시골김치찌개",
+        "price": 9500
+      },
+      {
+        "name": "산채나물비빔밥",
+        "price": 9500
+      },
+      {
+        "name": "매콤쭈꾸미덮밥",
+        "price": 11000
+      },
+      {
+        "name": "해물순두부찌개",
+        "price": 9500
+      },
+      {
+        "name": "실속옛날된장찌개",
+        "price": 7000
+      },
+      {
+        "name": "매콤제육구이솥밥",
+        "price": 11900
+      },
+      {
+        "name": "돼지불고기솥밥",
+        "price": 12900
+      },
+      {
+        "name": "(해운대원조)소고기따로국밥",
+        "price": 10000
+      },
+      {
+        "name": "마제소바우동,밥",
+        "price": 9000
+      },
+      {
+        "name": "실속유부우동",
+        "price": 5500
+      },
+      {
+        "name": "실속EX라면",
+        "price": 4000
+      },
+      {
+        "name": "꼬치어묵우동",
+        "price": 7000
+      },
+      {
+        "name": "얼큰진라면",
+        "price": 4500
+      },
+      {
+        "name": "새우튀김우동",
+        "price": 7500
+      },
+      {
+        "name": "얼큰진라면정식",
+        "price": 5500
+      },
+      {
+        "name": "뼈없는순살해장국",
+        "price": 10000
+      },
+      {
+        "name": "차돌된장찌개",
+        "price": 10000
+      },
+      {
+        "name": "실속어린이돈가스",
+        "price": 6000
+      },
+      {
+        "name": "기본유부초밥3P",
+        "price": 3500
+      },
+      {
+        "name": "대왕유부초밥4P",
+        "price": 9500
+      },
+      {
+        "name": "불고기유부초밥2P",
+        "price": 5000
+      },
+      {
+        "name": "새우모둠초밥10P",
+        "price": 12900
+      },
+      {
+        "name": "연어토핑유부초밥",
+        "price": 5500
+      },
+      {
+        "name": "나주식뼈없는갈비탕솥밥",
+        "price": 12900
+      },
+      {
+        "name": "실속옛날돈가스",
+        "price": 10000
+      },
+      {
+        "name": "오마카세모듬10P",
+        "price": 12900
+      },
+      {
+        "name": "연어초밥6P",
+        "price": 7900
+      },
+      {
+        "name": "어니언타르타르생언어",
+        "price": 7900
+      },
+      {
+        "name": "시그니처6P",
+        "price": 7900
+      },
+      {
+        "name": "들깨시래기국밥",
+        "price": 9500
+      },
+      {
+        "name": "뚝배기불고기솥밥",
+        "price": 13000
+      },
+      {
+        "name": "민물장어탕솥밥",
+        "price": 13000
+      },
+      {
+        "name": "강된장고기비빔밥",
+        "price": 10500
+      },
+      {
+        "name": "냉메밀소바",
+        "price": 8000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "커피전문점",
+        "hours": "07:00 ~ 19:30"
+      },
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:30 ~ 19:30"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1864,
+      "dieselPrice": 1853,
+      "lpgPrice": 1099,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "샤워실",
+      "수유실",
+      "쉼터",
+      "내고장특산물",
+      "ATM",
+      "편의점",
+      "열린매장(간식)"
+    ],
+    "latitude": 35.3177,
+    "longitude": 128.5652
+  },
+  {
+    "slug": "seomjingang-busan",
+    "name": "섬진강휴게소",
+    "direction": "하행",
+    "directionName": "부산방향",
+    "highwaySlug": "namhae",
+    "highwayName": "남해고속도로",
+    "locationKm": 255,
     "signatureMenu": {
       "name": "웰빙청매실재첩비빔밥",
       "price": 11000,
@@ -8190,10 +8838,6 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "청매실 담은 제육도시락",
         "price": 8000
-      },
-      {
-        "name": "(실속) 소고기미역국",
-        "price": 7000
       }
     ],
     "brandStores": [
@@ -8215,11 +8859,11 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1612,
-      "dieselPrice": 1438,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": true,
-      "evChargersCount": 4,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
       "hasHydrogen": false
     },
     "facilities": [
@@ -8230,17 +8874,182 @@ export const serviceAreas: ServiceArea[] = [
       "열린매장(간식)",
       "기타"
     ],
-    "latitude": 34.9305,
-    "longitude": 126.5599
+    "latitude": 34.7519,
+    "longitude": 126.3273
   },
   {
-    "slug": "geochang",
+    "slug": "seomjingang-busan-1",
+    "name": "섬진강휴게소",
+    "direction": "하행",
+    "directionName": "순천방향",
+    "highwaySlug": "namhae",
+    "highwayName": "남해고속도로",
+    "locationKm": 262,
+    "signatureMenu": {
+      "name": "재첩국",
+      "price": 10000,
+      "description": "한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
+      {
+        "name": "떡만두라면",
+        "price": 5500
+      },
+      {
+        "name": "유부우동",
+        "price": 6000
+      },
+      {
+        "name": "꼬치어묵우동",
+        "price": 7000
+      },
+      {
+        "name": "웰빙청매실재첩비빔밥",
+        "price": 11000
+      },
+      {
+        "name": "해물순두부찌개",
+        "price": 9500
+      },
+      {
+        "name": "차돌박이된장찌개",
+        "price": 9500
+      },
+      {
+        "name": "(실속) ex-라면",
+        "price": 4000
+      },
+      {
+        "name": "왕돈가스",
+        "price": 11500
+      },
+      {
+        "name": "육개장",
+        "price": 9500
+      },
+      {
+        "name": "흑돈치즈돈가스",
+        "price": 11500
+      },
+      {
+        "name": "얼큰어묵라면",
+        "price": 6000
+      },
+      {
+        "name": "(실속) 소고기미역국",
+        "price": 7000
+      },
+      {
+        "name": "남도시래기국",
+        "price": 9500
+      },
+      {
+        "name": "제육돈가스",
+        "price": 12900
+      },
+      {
+        "name": "제육덮밥",
+        "price": 9500
+      },
+      {
+        "name": "제육돈가스세트",
+        "price": 13900
+      },
+      {
+        "name": "왕돈가스세트",
+        "price": 12500
+      },
+      {
+        "name": "(실속) 옛날우동",
+        "price": 5500
+      },
+      {
+        "name": "(백년가게) 건봉국밥",
+        "price": 10000
+      },
+      {
+        "name": "(백년가게) 새집추어탕",
+        "price": 12000
+      },
+      {
+        "name": "(실속) 흑돈돈가스",
+        "price": 10000
+      },
+      {
+        "name": "닭다리곰탕",
+        "price": 12000
+      },
+      {
+        "name": "흑마늘영양닭죽",
+        "price": 13000
+      },
+      {
+        "name": "흑돈치즈돈가스세트",
+        "price": 12500
+      },
+      {
+        "name": "튀김고기만두(4ea)",
+        "price": 5000
+      },
+      {
+        "name": "튀김김치만두(4ea)",
+        "price": 5000
+      },
+      {
+        "name": "(실속) 참치김치덮밥",
+        "price": 7000
+      },
+      {
+        "name": "청매실 담은 제육도시락",
+        "price": 8000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "로띠번",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "평일 08:00~19:00, 주말 09:00~19:00",
+        "hours": "08:00 ~ 19:00"
+      },
+      {
+        "name": "기타",
+        "description": "고운동 커피",
+        "hours": "07:30 ~ 19:30"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 2,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "버스환승",
+      "ATM",
+      "편의점",
+      "열린매장(간식)",
+      "기타"
+    ],
+    "latitude": 34.6673,
+    "longitude": 126.4437
+  },
+  {
+    "slug": "geochang-seoul",
     "name": "거창휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (광주/대구)",
+    "direction": "상행",
+    "directionName": "대구방향",
     "highwaySlug": "gwangju-daegu",
     "highwayName": "광주대구고속도로",
-    "locationKm": 199,
+    "locationKm": 269,
     "signatureMenu": {
       "name": "돼지김치찌개",
       "price": 9500,
@@ -8335,8 +9144,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1615,
-      "dieselPrice": 1440,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
@@ -8346,17 +9155,133 @@ export const serviceAreas: ServiceArea[] = [
       "수유실",
       "ATM"
     ],
-    "latitude": 35.3818,
-    "longitude": 128.6487
+    "latitude": 35.1418,
+    "longitude": 128.8073
   },
   {
-    "slug": "jirisan",
-    "name": "지리산휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (광주/대구)",
+    "slug": "geochang-busan",
+    "name": "거창휴게소",
+    "direction": "하행",
+    "directionName": "광주방향",
     "highwaySlug": "gwangju-daegu",
     "highwayName": "광주대구고속도로",
-    "locationKm": 206,
+    "locationKm": 276,
+    "signatureMenu": {
+      "name": "돼지김치찌개",
+      "price": 9500,
+      "description": "한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
+      {
+        "name": "공기밥(추가)",
+        "price": 1000
+      },
+      {
+        "name": "유부우동",
+        "price": 6500
+      },
+      {
+        "name": "꼬치어묵우동",
+        "price": 7000
+      },
+      {
+        "name": "왕새우튀김우동",
+        "price": 7000
+      },
+      {
+        "name": "(실속) EX라면",
+        "price": 4000
+      },
+      {
+        "name": "자장면",
+        "price": 6500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 11000
+      },
+      {
+        "name": "왕돈가스",
+        "price": 13000
+      },
+      {
+        "name": "쇠고기육개장",
+        "price": 10000
+      },
+      {
+        "name": "양파뚝배기불고기",
+        "price": 11000
+      },
+      {
+        "name": "(실속) 돈가스",
+        "price": 10000
+      },
+      {
+        "name": "(실속) 얼갈이된장국",
+        "price": 7000
+      },
+      {
+        "name": "(실속) 실속우동",
+        "price": 5500
+      },
+      {
+        "name": "간장찜닭덮밥",
+        "price": 11000
+      },
+      {
+        "name": "흑마늘 독계죽",
+        "price": 11000
+      },
+      {
+        "name": "흑마늘 설렁탕",
+        "price": 12000
+      },
+      {
+        "name": "표고버섯청국장",
+        "price": 9000
+      },
+      {
+        "name": "영유아전용(옹알옹알맘마)",
+        "price": 1500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "주말 07:30~19:30",
+        "hours": "07:30 ~ 19:00"
+      },
+      {
+        "name": "CU",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:00 ~ 21:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "ATM"
+    ],
+    "latitude": 35.2828,
+    "longitude": 128.8358
+  },
+  {
+    "slug": "jirisan-seoul",
+    "name": "지리산휴게소",
+    "direction": "상행",
+    "directionName": "대구방향",
+    "highwaySlug": "gwangju-daegu",
+    "highwayName": "광주대구고속도로",
+    "locationKm": 283,
     "signatureMenu": {
       "name": "흥부골남원추어탕",
       "price": 12000,
@@ -8450,6 +9375,122 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1855,
       "dieselPrice": 1848,
       "lpgPrice": 1199,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "내고장특산물",
+      "ATM",
+      "편의점",
+      "열린매장(간식)",
+      "기타"
+    ],
+    "latitude": 35.9688,
+    "longitude": 127.188
+  },
+  {
+    "slug": "jirisan-busan",
+    "name": "지리산휴게소",
+    "direction": "하행",
+    "directionName": "광주방향",
+    "highwaySlug": "gwangju-daegu",
+    "highwayName": "광주대구고속도로",
+    "locationKm": 290,
+    "signatureMenu": {
+      "name": "흥부골남원추어탕",
+      "price": 12000,
+      "description": "“지친 심신을 달랜다” 흥부골남원추어탕 남원을 대표하는 음식 “추어탕”은 단백질, 칼슘, 무기질이 풍부하여 예로부터 원기를 회복시켜주는 건강식입니다. 매일아침 국내산 미꾸라지를 삶아 무청, 우거지, 된장을 풀어 조리하여 남도 특유의 깊은맛이 일품이며, 담백하여 남녀노소가 즐기기에 부담이 없어 호응도가 좋은 음식입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
+      {
+        "name": "흑돼지불고기,비빔밥세트",
+        "price": 12000
+      },
+      {
+        "name": "산채비빔밥",
+        "price": 9000
+      },
+      {
+        "name": "(실속) 돈가스",
+        "price": 10000
+      },
+      {
+        "name": "흑돼지김치찌개",
+        "price": 10000
+      },
+      {
+        "name": "새우튀김우동",
+        "price": 7500
+      },
+      {
+        "name": "(실속) ex-라면",
+        "price": 4000
+      },
+      {
+        "name": "(실속) 남원시래기국밥",
+        "price": 7000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 11000
+      },
+      {
+        "name": "해물순두부찌개",
+        "price": 9500
+      },
+      {
+        "name": "(실속) 우동",
+        "price": 5500
+      },
+      {
+        "name": "육개장",
+        "price": 10500
+      },
+      {
+        "name": "(명품)추어군만두",
+        "price": 8000
+      },
+      {
+        "name": "왕돈가스",
+        "price": 13000
+      },
+      {
+        "name": "산채비빔밥+열무김치세트",
+        "price": 9500
+      },
+      {
+        "name": "(반찬)열무김치",
+        "price": 1000
+      },
+      {
+        "name": "순살우거지해장국",
+        "price": 11000
+      },
+      {
+        "name": "(실속) 어린이돈가스",
+        "price": 7000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "할리스 고유의 로스팅 기법으로 원두 고유의 풍부한 향미를 살리고 있습니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "용우동",
+        "description": "우동 전문 외식브랜드 용우동의 맛과 감동!",
+        "hours": "06:00 ~ 20:30"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 6,
       "hasHydrogen": false
@@ -8462,17 +9503,17 @@ export const serviceAreas: ServiceArea[] = [
       "열린매장(간식)",
       "기타"
     ],
-    "latitude": 35.8648,
-    "longitude": 127.0036
+    "latitude": 35.936,
+    "longitude": 127.048
   },
   {
-    "slug": "hwaseong",
+    "slug": "hwaseong-seoul",
     "name": "화성휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (목포/서울)",
+    "direction": "상행",
+    "directionName": "서울방향",
     "highwaySlug": "seohaean",
     "highwayName": "서해안고속도로",
-    "locationKm": 213,
+    "locationKm": 297,
     "signatureMenu": {
       "name": "(실속)순두부청국장",
       "price": 7000,
@@ -8739,7 +9780,63 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "감자고기만두",
         "price": 7000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "커피전문점 엔제리너스 EX-CAFE 운영",
+        "hours": "08:00 ~ 20:00"
       },
+      {
+        "name": "할리스커피",
+        "description": "커피전문점 할리스카페 운영",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "커피전문점 드롭탑매장 운영",
+        "hours": "09:00 ~ 22:00"
+      },
+      {
+        "name": "기타",
+        "description": "놀부부대찌개 운영, 대지식당 운영",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "세차장",
+      "내고장특산물",
+      "ATM"
+    ],
+    "latitude": 37.39,
+    "longitude": 127.3702
+  },
+  {
+    "slug": "hwaseong-busan",
+    "name": "화성휴게소",
+    "direction": "하행",
+    "directionName": "목포방향",
+    "highwaySlug": "seohaean",
+    "highwayName": "서해안고속도로",
+    "locationKm": 304,
+    "signatureMenu": {
+      "name": "(실속) 수제등심돈가스",
+      "price": 9900,
+      "description": "등심을 직접 두들겨 육질을 연하게 하여 빵가루를 입혀 바삭하게 튀겨낸 돈까스",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "소고기국밥+솥밥",
         "price": 9500
@@ -8749,8 +9846,16 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9500
       },
       {
-        "name": "(실속) 수제등심돈가스",
-        "price": 9900
+        "name": "돈가스제육덮밥",
+        "price": 11000
+      },
+      {
+        "name": "궁중가마솥비빔밥",
+        "price": 8900
+      },
+      {
+        "name": "(실속)순두부청국장",
+        "price": 7000
       },
       {
         "name": "모둠돈가스",
@@ -8759,6 +9864,10 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "(실속) 등심돈가스",
         "price": 10000
+      },
+      {
+        "name": "놀부부대찌개",
+        "price": 11000
       },
       {
         "name": "4. (실속상품)우동",
@@ -8805,6 +9914,10 @@ export const serviceAreas: ServiceArea[] = [
         "price": 11000
       },
       {
+        "name": "소고기국밥",
+        "price": 8900
+      },
+      {
         "name": "돼지고기김치지개+솥밥",
         "price": 9500
       },
@@ -8833,7 +9946,47 @@ export const serviceAreas: ServiceArea[] = [
         "price": 4000
       },
       {
+        "name": "(알뜰)소떡소떡",
+        "price": 3700
+      },
+      {
+        "name": "(알뜰)어떡어떡",
+        "price": 3700
+      },
+      {
+        "name": "(알뜰)도깨비핫도그",
+        "price": 3700
+      },
+      {
+        "name": "(알뜰)옛날핫도그",
+        "price": 3700
+      },
+      {
+        "name": "(알뜰)수제야채바",
+        "price": 3700
+      },
+      {
+        "name": "(알뜰)두리어묵바",
+        "price": 3700
+      },
+      {
         "name": "(알뜰)케이크소세지",
+        "price": 3700
+      },
+      {
+        "name": "(알뜰)바삭어포",
+        "price": 3700
+      },
+      {
+        "name": "(알뜰)떡볶이",
+        "price": 3700
+      },
+      {
+        "name": "(알뜰)꼬치어묵",
+        "price": 3700
+      },
+      {
+        "name": "(알뜰)통감자",
         "price": 3700
       },
       {
@@ -8847,6 +10000,10 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "(실속)호두과자",
         "price": 3200
+      },
+      {
+        "name": "(알뜰)공주밤빵",
+        "price": 3700
       },
       {
         "name": "(알뜰)수제도넛츠",
@@ -8873,67 +10030,76 @@ export const serviceAreas: ServiceArea[] = [
         "price": 8000
       },
       {
+        "name": "콩국수",
+        "price": 8000
+      },
+      {
         "name": "(실속) 화성웰빙비빔밥",
         "price": 7000
       },
       {
         "name": "웰빙불난버섯찌개",
         "price": 9500
+      },
+      {
+        "name": "유부우동",
+        "price": 6000
+      },
+      {
+        "name": "(실속) 어린이돈가스",
+        "price": 7000
+      },
+      {
+        "name": "부대찌개",
+        "price": 10000
+      },
+      {
+        "name": "왕돈가스",
+        "price": 13000
       }
     ],
     "brandStores": [
       {
-        "name": "엔제리너스",
-        "description": "커피전문점 엔제리너스 EX-CAFE 운영",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
         "name": "할리스커피",
-        "description": "커피전문점 할리스카페 운영",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "드롭탑(커피전문점)",
-        "description": "커피전문점 드롭탑매장 운영",
-        "hours": "09:00 ~ 22:00"
-      },
-      {
-        "name": "기타",
-        "description": "놀부부대찌개 운영, 대지식당 운영",
-        "hours": "08:00 ~ 20:00"
+        "description": "할리스 커피",
+        "hours": "07:00 ~ 19:00"
       },
       {
         "name": "JDX",
         "description": "입점 브랜드 매장입니다.",
         "hours": "07:00 ~ 19:00"
+      },
+      {
+        "name": "기타",
+        "description": "놀부부대찌개, 교동짬뽕, 의류(상설매장) 팜스프링, 디아스토리",
+        "hours": "07:00 ~ 19:00"
       }
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1621,
-      "dieselPrice": 1444,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
       "수유실",
       "세차장",
-      "내고장특산물",
       "ATM"
     ],
-    "latitude": 37.3143,
-    "longitude": 127.4061
+    "latitude": 37.2763,
+    "longitude": 127.4583
   },
   {
-    "slug": "seosan",
+    "slug": "seosan-busan",
     "name": "서산휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (목포/서울)",
+    "direction": "하행",
+    "directionName": "목포방향",
     "highwaySlug": "seohaean",
     "highwayName": "서해안고속도로",
-    "locationKm": 242,
+    "locationKm": 311,
     "signatureMenu": {
       "name": "어리굴젓 백반",
       "price": 11000,
@@ -9016,14 +10182,64 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "열무비빔밥",
         "price": 9000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "롯데리아",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       },
       {
-        "name": "어리굴젓백반",
-        "price": 11000
+        "name": "카페베네",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       },
+      {
+        "name": "탐앤탐스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": 1155,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "ATM",
+      "편의점"
+    ],
+    "latitude": 37.289,
+    "longitude": 127.6016
+  },
+  {
+    "slug": "seosan-seoul",
+    "name": "서산휴게소",
+    "direction": "상행",
+    "directionName": "서울방향",
+    "highwaySlug": "seohaean",
+    "highwayName": "서해안고속도로",
+    "locationKm": 242,
+    "signatureMenu": {
+      "name": "어리굴젓백반",
+      "price": 11000,
+      "description": "대표적인 지역특산물로 어리굴젓에 청양고추, 마늘, 양파로 양념한 감칠맛이 일품인 메뉴",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "(실속)된장찌개",
         "price": 7000
+      },
+      {
+        "name": "어리굴젓수육정식",
+        "price": 13000
       },
       {
         "name": "왕돈까스",
@@ -9039,6 +10255,10 @@ export const serviceAreas: ServiceArea[] = [
       },
       {
         "name": "꼬치어묵우동",
+        "price": 7000
+      },
+      {
+        "name": "왕새우튀김우동",
         "price": 7000
       },
       {
@@ -9086,6 +10306,10 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6500
       },
       {
+        "name": "잔치국수",
+        "price": 7500
+      },
+      {
         "name": "전주비빔밥",
         "price": 9000
       },
@@ -9100,6 +10324,10 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "(실속)우동",
         "price": 5500
+      },
+      {
+        "name": "자장면",
+        "price": 6000
       },
       {
         "name": "이해윤 추어탕",
@@ -9180,21 +10408,6 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
-        "name": "롯데리아",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "카페베네",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "탐앤탐스",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
         "name": "던킨도너츠",
         "description": "저희 던킨도너츠 매장에서는 시중과 동일한 할인제도를 시행하고 있습니다.",
         "hours": "08:00 ~ 20:00"
@@ -9216,33 +10429,33 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1624,
-      "dieselPrice": 1446,
-      "lpgPrice": 1155,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 8,
-      "hasHydrogen": true
+      "evChargersCount": 10,
+      "hasHydrogen": false
     },
     "facilities": [
       "수유실",
-      "ATM",
-      "편의점",
       "쉼터",
       "경정비",
-      "내고장특산물"
+      "내고장특산물",
+      "ATM",
+      "편의점"
     ],
     "latitude": 36.7125,
     "longitude": 126.5428
   },
   {
-    "slug": "daecheon",
+    "slug": "daecheon-seoul",
     "name": "대천휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (목포/서울)",
+    "direction": "상행",
+    "directionName": "서울방향",
     "highwaySlug": "seohaean",
     "highwayName": "서해안고속도로",
-    "locationKm": 227,
+    "locationKm": 325,
     "signatureMenu": {
       "name": "돌솥비빔밥",
       "price": 11000,
@@ -9311,13 +10524,13 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "SK에너지",
-      "gasolinePrice": 1627,
-      "dieselPrice": 1448,
-      "lpgPrice": 1245,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
-      "hasHydrogen": false
+      "hasHydrogen": true
     },
     "facilities": [
       "수유실",
@@ -9326,17 +10539,109 @@ export const serviceAreas: ServiceArea[] = [
       "내고장특산물",
       "ATM"
     ],
-    "latitude": 36.2898,
-    "longitude": 127.5217
+    "latitude": 36.478,
+    "longitude": 127.4633
   },
   {
-    "slug": "gunsan",
-    "name": "군산휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (목포/서울)",
+    "slug": "daecheon-busan",
+    "name": "대천휴게소",
+    "direction": "하행",
+    "directionName": "목포방향",
     "highwaySlug": "seohaean",
     "highwayName": "서해안고속도로",
-    "locationKm": 234,
+    "locationKm": 332,
+    "signatureMenu": {
+      "name": "돌솥비빔밥",
+      "price": 11000,
+      "description": "한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
+      {
+        "name": "돈가스",
+        "price": 10000
+      },
+      {
+        "name": "뚝배기불고기",
+        "price": 10000
+      },
+      {
+        "name": "바우네나주곰탕",
+        "price": 10000
+      },
+      {
+        "name": "전주식비빔밥",
+        "price": 10000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10000
+      },
+      {
+        "name": "꼬치어묵우동",
+        "price": 7500
+      },
+      {
+        "name": "유부우동",
+        "price": 7000
+      },
+      {
+        "name": "치즈라면",
+        "price": 5500
+      },
+      {
+        "name": "떡라면",
+        "price": 5500
+      },
+      {
+        "name": "짬뽕순두부",
+        "price": 9000
+      },
+      {
+        "name": "이해윤추어탕",
+        "price": 11000
+      },
+      {
+        "name": "떡라면(곱배기)",
+        "price": 6500
+      },
+      {
+        "name": "유부우동(곱배기)",
+        "price": 8000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "SK에너지",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": 1245,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "경정비",
+      "ATM"
+    ],
+    "latitude": 36.4857,
+    "longitude": 127.3197
+  },
+  {
+    "slug": "gunsan-seoul",
+    "name": "군산휴게소",
+    "direction": "상행",
+    "directionName": "서울방향",
+    "highwaySlug": "seohaean",
+    "highwayName": "서해안고속도로",
+    "locationKm": 339,
     "signatureMenu": {
       "name": "울외불고기비빔밥",
       "price": 12000,
@@ -9367,7 +10672,74 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "뽀빠이통등심돈가스",
         "price": 10000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "커피전문점",
+        "hours": "08:00 ~ 19:30"
       },
+      {
+        "name": "탐앤탐스",
+        "description": "커피전문점",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "투썸플레이스",
+        "description": "커피전문점",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "GS25",
+        "description": "GS25 편의점 24시간 운영(연중무휴)",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "기타",
+        "description": "팬텀(FANTOM) : 골프웨어, 스포츠 캐쥬얼, 멀티 스포츠 웨어, 행사의류 등",
+        "hours": "08:00 ~ 19:30"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수면실",
+      "샤워실",
+      "세탁실",
+      "수유실",
+      "약국",
+      "쉼터",
+      "ex-화물차라운지",
+      "내고장특산물",
+      "ATM",
+      "기타"
+    ],
+    "latitude": 35.8427,
+    "longitude": 126.9991
+  },
+  {
+    "slug": "gunsan-busan",
+    "name": "군산휴게소",
+    "direction": "하행",
+    "directionName": "목포방향",
+    "highwaySlug": "seohaean",
+    "highwayName": "서해안고속도로",
+    "locationKm": 346,
+    "signatureMenu": {
+      "name": "옥구우거지국밥",
+      "price": 10000,
+      "description": "한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "차돌박이된장찌개",
         "price": 9000
@@ -9399,10 +10771,6 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "라면매장-콩나물해장라면",
         "price": 5500
-      },
-      {
-        "name": "옥구우거지국밥",
-        "price": 10000
       },
       {
         "name": "해장아욱국밥(실속상품)",
@@ -9523,29 +10891,19 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
-        "name": "파스쿠찌",
-        "description": "커피전문점",
-        "hours": "08:00 ~ 19:30"
-      },
-      {
         "name": "탐앤탐스",
-        "description": "커피전문점",
-        "hours": "08:00 ~ 19:30"
+        "description": "탐앤탐스",
+        "hours": "07:30 ~ 19:30"
       },
       {
         "name": "투썸플레이스",
-        "description": "커피전문점",
-        "hours": "08:00 ~ 19:30"
+        "description": "1월 24일 신규오픈",
+        "hours": "07:30 ~ 19:30"
       },
       {
         "name": "GS25",
-        "description": "GS25 편의점 24시간 운영(연중무휴)",
-        "hours": "00:00 ~ 24:00"
-      },
-      {
-        "name": "기타",
-        "description": "팬텀(FANTOM) : 골프웨어, 스포츠 캐쥬얼, 멀티 스포츠 웨어, 행사의류 등",
-        "hours": "08:00 ~ 19:30"
+        "description": "GS25편의점",
+        "hours": "06:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -9554,33 +10912,27 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1831,
       "lpgPrice": 1239,
       "hasEvCharger": true,
-      "evChargersCount": 10,
+      "evChargersCount": 2,
       "hasHydrogen": false
     },
     "facilities": [
-      "수면실",
       "샤워실",
-      "세탁실",
       "수유실",
-      "약국",
-      "쉼터",
-      "ex-화물차라운지",
-      "내고장특산물",
       "ATM",
-      "기타",
-      "편의점"
+      "편의점",
+      "기타"
     ],
-    "latitude": 35.9069,
-    "longitude": 127.2731
+    "latitude": 37.2986,
+    "longitude": 127.4223
   },
   {
-    "slug": "gochanggoindol",
+    "slug": "gochanggoindol-busan",
     "name": "고창고인돌휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (목포/서울)",
+    "direction": "하행",
+    "directionName": "목포방향",
     "highwaySlug": "seohaean",
     "highwayName": "서해안고속도로",
-    "locationKm": 241,
+    "locationKm": 353,
     "signatureMenu": {
       "name": "고창장어탕",
       "price": 12000,
@@ -9719,6 +11071,81 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "떡라면곱배기",
         "price": 6500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "투썸플레이스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "GS25",
+        "description": "편의점_ 21시부터 다음날 07시 까지 무인 운영 / 할인, 적립 가능",
+        "hours": "00:00 ~ 24:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1864,
+      "dieselPrice": 1853,
+      "lpgPrice": 1241,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "내고장특산물",
+      "ATM",
+      "편의점",
+      "열린매장(간식)"
+    ],
+    "latitude": 35.6811,
+    "longitude": 127.1931
+  },
+  {
+    "slug": "gochanggoindol-seoul",
+    "name": "고창고인돌휴게소",
+    "direction": "상행",
+    "directionName": "서울방향",
+    "highwaySlug": "seohaean",
+    "highwayName": "서해안고속도로",
+    "locationKm": 10,
+    "signatureMenu": {
+      "name": "옛날돈까스",
+      "price": 12000,
+      "description": "한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
+      {
+        "name": "치즈돈까스",
+        "price": 13000
+      },
+      {
+        "name": "떡라면",
+        "price": 5500
+      },
+      {
+        "name": "꼬치어묵우동",
+        "price": 7500
+      },
+      {
+        "name": "얼큰우동",
+        "price": 7000
+      },
+      {
+        "name": "유부우동",
+        "price": 6500
+      },
+      {
+        "name": "북어해장라면",
+        "price": 6000
+      },
+      {
+        "name": "부대라면",
+        "price": 6500
       },
       {
         "name": "(실속) ex-라면",
@@ -9729,7 +11156,15 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9000
       },
       {
+        "name": "소고기우거지해장국",
+        "price": 10000
+      },
+      {
         "name": "고창복분자돼지구이덮밥",
+        "price": 12000
+      },
+      {
+        "name": "뚝배기불고기",
         "price": 12000
       },
       {
@@ -9769,41 +11204,40 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "투썸플레이스",
         "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
+        "hours": "08:00 ~ 19:30"
       },
       {
         "name": "GS25",
-        "description": "편의점_ 21시부터 다음날 07시 까지 무인 운영 / 할인, 적립 가능",
+        "description": "(유인)07:00 - 21:00 (야간무인운영) 21:00 - 07:00",
         "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
-      "dieselPrice": 1853,
-      "lpgPrice": 1241,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
       "수유실",
       "내고장특산물",
       "ATM",
-      "편의점",
-      "열린매장(간식)"
+      "편의점"
     ],
-    "latitude": 35.9742,
-    "longitude": 127.146
+    "latitude": 35.7848,
+    "longitude": 127.2927
   },
   {
-    "slug": "hampyeongcheonji",
+    "slug": "hampyeongcheonji-seoul",
     "name": "함평천지휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (목포/서울)",
+    "direction": "상행",
+    "directionName": "서울방향",
     "highwaySlug": "seohaean",
     "highwayName": "서해안고속도로",
-    "locationKm": 248,
+    "locationKm": 17,
     "signatureMenu": {
       "name": "투뿔한우장터국밥",
       "price": 11000,
@@ -9954,14 +11388,62 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "아삭열무냉메밀면(비)",
         "price": 9500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "로띠번,바닐라번 및 로띠번커피 판매",
+        "hours": "08:00 ~ 20:00"
       },
+      {
+        "name": "탐앤탐스",
+        "description": "탐앤탐스 커피 및 청주오믈렛 판매",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "CU 편의점 24시간 운영중",
+        "hours": "00:00 ~ 24:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "약국",
+      "내고장특산물",
+      "편의점",
+      "기타"
+    ],
+    "latitude": 37.5143,
+    "longitude": 127.6296
+  },
+  {
+    "slug": "hampyeongcheonji-busan",
+    "name": "함평천지휴게소",
+    "direction": "하행",
+    "directionName": "목포방향",
+    "highwaySlug": "seohaean",
+    "highwayName": "서해안고속도로",
+    "locationKm": 24,
+    "signatureMenu": {
+      "name": "바우네맑은 나주곰탕",
+      "price": 12000,
+      "description": "한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "콩나물해장라면",
         "price": 5500
-      },
-      {
-        "name": "바우네맑은 나주곰탕",
-        "price": 12000
       },
       {
         "name": "(실속) 순두부찌개",
@@ -9990,6 +11472,14 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "참치김치찌개",
         "price": 10000
+      },
+      {
+        "name": "남산왕돈까스",
+        "price": 13500
+      },
+      {
+        "name": "남산치즈돈까스",
+        "price": 14000
       },
       {
         "name": "남산매운왕돈까스",
@@ -10039,18 +11529,8 @@ export const serviceAreas: ServiceArea[] = [
     "brandStores": [
       {
         "name": "로띠번",
-        "description": "로띠번,바닐라번 및 로띠번커피 판매",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "탐앤탐스",
-        "description": "탐앤탐스 커피 및 청주오믈렛 판매",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "CU",
-        "description": "CU 편의점 24시간 운영중",
-        "hours": "00:00 ~ 24:00"
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "06:30 ~ 20:00"
       },
       {
         "name": "드롭탑(커피전문점)",
@@ -10069,29 +11549,27 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1831,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 12,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
       "수유실",
-      "약국",
-      "내고장특산물",
-      "편의점",
-      "기타",
       "ATM",
-      "열린매장(간식)"
+      "편의점",
+      "열린매장(간식)",
+      "기타"
     ],
-    "latitude": 37.4932,
-    "longitude": 127.391
+    "latitude": 34.9641,
+    "longitude": 126.4385
   },
   {
-    "slug": "igsanmireugsaji",
+    "slug": "igsanmireugsaji-both",
     "name": "익산미륵사지휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (순천/천안)",
+    "directionName": "천안방향",
     "highwaySlug": "honam",
     "highwayName": "호남고속도로",
-    "locationKm": 255,
+    "locationKm": 31,
     "signatureMenu": {
       "name": "실속콩나물황태해장국",
       "price": 7000,
@@ -10186,50 +11664,6 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "통큰돈가스",
         "price": 15000
-      },
-      {
-        "name": "실속우렁된장찌개",
-        "price": 7000
-      },
-      {
-        "name": "실속)콩나물황태해장국",
-        "price": 7000
-      },
-      {
-        "name": "등심돈가스",
-        "price": 11000
-      },
-      {
-        "name": "고등어구이정식",
-        "price": 12000
-      },
-      {
-        "name": "김치볶음밥",
-        "price": 9000
-      },
-      {
-        "name": "어묵우동",
-        "price": 7000
-      },
-      {
-        "name": "EX라면",
-        "price": 4000
-      },
-      {
-        "name": "배홍동비빔면",
-        "price": 5500
-      },
-      {
-        "name": "맛동순두부",
-        "price": 10000
-      },
-      {
-        "name": "한방순두부",
-        "price": 11000
-      },
-      {
-        "name": "하얀순두부찌개",
-        "price": 10000
       }
     ],
     "brandStores": [
@@ -10252,10 +11686,148 @@ export const serviceAreas: ServiceArea[] = [
         "name": "공차",
         "description": "커피, 버블티 등 음료 전문점입니다.",
         "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "내고장특산물",
+      "ATM",
+      "기타"
+    ],
+    "latitude": 35.8836,
+    "longitude": 127.0103
+  },
+  {
+    "slug": "igsanmireugsaji-busan",
+    "name": "익산미륵사지휴게소",
+    "direction": "하행",
+    "directionName": "순천방향",
+    "highwaySlug": "honam",
+    "highwayName": "호남고속도로",
+    "locationKm": 38,
+    "signatureMenu": {
+      "name": "실속우렁된장찌개",
+      "price": 7000,
+      "description": "그 어느 메뉴보다 저렴하고 알차며 실속적인 메뉴!",
+      "isExFood": true
+    },
+    "otherMenus": [
+      {
+        "name": "양파제육불고기",
+        "price": 10000
+      },
+      {
+        "name": "통큰김치찌개",
+        "price": 10000
+      },
+      {
+        "name": "실속)콩나물황태해장국",
+        "price": 7000
+      },
+      {
+        "name": "등심돈가스",
+        "price": 11000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 12000
+      },
+      {
+        "name": "고등어구이정식",
+        "price": 12000
+      },
+      {
+        "name": "김치볶음밥",
+        "price": 9000
+      },
+      {
+        "name": "새우볶음밥",
+        "price": 9000
+      },
+      {
+        "name": "실속우동",
+        "price": 5500
+      },
+      {
+        "name": "어묵우동",
+        "price": 7000
+      },
+      {
+        "name": "EX라면",
+        "price": 4000
+      },
+      {
+        "name": "배홍동비빔면",
+        "price": 5500
+      },
+      {
+        "name": "명동칼국수",
+        "price": 9000
+      },
+      {
+        "name": "명동얼큰칼국수",
+        "price": 9000
+      },
+      {
+        "name": "명동칼만두",
+        "price": 12000
+      },
+      {
+        "name": "명동왕만두",
+        "price": 6000
+      },
+      {
+        "name": "떡만두국",
+        "price": 9000
+      },
+      {
+        "name": "잔치국수",
+        "price": 7000
+      },
+      {
+        "name": "짜장면",
+        "price": 6000
+      },
+      {
+        "name": "전주식비빔밥",
+        "price": 10000
+      },
+      {
+        "name": "맛동순두부",
+        "price": 10000
+      },
+      {
+        "name": "한방순두부",
+        "price": 11000
+      },
+      {
+        "name": "하얀순두부찌개",
+        "price": 10000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "주말 운영시간 연장",
+        "hours": "08:00 ~ 19:00"
       },
       {
         "name": "명동칼국수",
         "description": "칼국수, 만두 등 칼국수전문점의 맛을 느끼실 수 있습니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "용우동",
+        "description": "고급 우동면을 즐기실 수 있습니다.",
         "hours": "08:00 ~ 20:00"
       },
       {
@@ -10269,31 +11841,30 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1864,
       "dieselPrice": 1853,
       "lpgPrice": 1125,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
-      "수유실",
-      "내고장특산물",
-      "ATM",
-      "기타",
       "수면실",
       "샤워실",
       "세탁실",
-      "ex-화물차라운지"
+      "수유실",
+      "ex-화물차라운지",
+      "내고장특산물",
+      "ATM"
     ],
-    "latitude": 35.76,
-    "longitude": 127.0124
+    "latitude": 35.7404,
+    "longitude": 127.0236
   },
   {
-    "slug": "jeongeubnogdujanggun",
+    "slug": "jeongeubnogdujanggun-both",
     "name": "정읍녹두장군휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (순천/천안)",
+    "directionName": "천안방향",
     "highwaySlug": "honam",
     "highwayName": "호남고속도로",
-    "locationKm": 262,
+    "locationKm": 45,
     "signatureMenu": {
       "name": "제육덮밥",
       "price": 10000,
@@ -10400,14 +11971,55 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "귀리쌀누룽지탕면",
         "price": 6500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "바닐라번, 모카번",
+        "hours": "07:40 ~ 19:40"
       },
+      {
+        "name": "투썸플레이스",
+        "description": "텀플러할인, 모바일쿠폰, 키프트카드할인, 투썸하트할인, SKT우주패스30%할인, SKT청년음료50%할인",
+        "hours": "07:40 ~ 19:40"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "내고장특산물",
+      "기타"
+    ],
+    "latitude": 35.6742,
+    "longitude": 127.1513
+  },
+  {
+    "slug": "jeongeubnogdujanggun-busan",
+    "name": "정읍녹두장군휴게소",
+    "direction": "하행",
+    "directionName": "순천방향",
+    "highwaySlug": "honam",
+    "highwayName": "호남고속도로",
+    "locationKm": 52,
+    "signatureMenu": {
+      "name": "정읍신가네귀리떡갈비정식",
+      "price": 13000,
+      "description": "정읍시 특산품 귀리를 활용한 귀리떡갈비를 쌈에 싸먹는 정읍시 대표 메뉴정식! 단풍미락귀리떡갈비정식",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "돼지김치찌개",
         "price": 8500
-      },
-      {
-        "name": "정읍신가네귀리떡갈비정식",
-        "price": 13000
       },
       {
         "name": "해물순두부찌개",
@@ -10498,6 +12110,10 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10000
       },
       {
+        "name": "귀리쌀누룽지탕면",
+        "price": 6500
+      },
+      {
         "name": "꼬치어묵우동(곱배기)",
         "price": 8000
       }
@@ -10505,13 +12121,8 @@ export const serviceAreas: ServiceArea[] = [
     "brandStores": [
       {
         "name": "로띠번",
-        "description": "바닐라번, 모카번",
-        "hours": "07:40 ~ 19:40"
-      },
-      {
-        "name": "투썸플레이스",
-        "description": "텀플러할인, 모바일쿠폰, 키프트카드할인, 투썸하트할인, SKT우주패스30%할인, SKT청년음료50%할인",
-        "hours": "07:40 ~ 19:40"
+        "description": "로띠번판매",
+        "hours": "08:00 ~ 20:00"
       },
       {
         "name": "코바코",
@@ -10536,31 +12147,30 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1852,
-      "dieselPrice": 1839,
+      "gasolinePrice": 1855,
+      "dieselPrice": 1845,
       "lpgPrice": 1145,
       "hasEvCharger": true,
-      "evChargersCount": 2,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
       "수유실",
-      "내고장특산물",
-      "기타",
       "쉼터",
-      "ATM"
+      "ATM",
+      "기타"
     ],
-    "latitude": 35.6754,
-    "longitude": 127.1288
+    "latitude": 35.746,
+    "longitude": 127.276
   },
   {
-    "slug": "baegyangsa",
+    "slug": "baegyangsa-both",
     "name": "백양사휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (순천/천안)",
+    "directionName": "천안방향",
     "highwaySlug": "honam",
     "highwayName": "호남고속도로",
-    "locationKm": 269,
+    "locationKm": 59,
     "signatureMenu": {
       "name": "삼채애호박찌개",
       "price": 10000,
@@ -10643,11 +12253,63 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "셀프라면",
         "price": 4000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "로띠번, 바닐라번",
+        "hours": "08:00 ~ 19:40"
       },
       {
-        "name": "불고기비빔밥",
-        "price": 9500
+        "name": "탐앤탐스",
+        "description": "아메리카노 외",
+        "hours": "08:00 ~ 19:40"
       },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "아메리카노 외",
+        "hours": "08:00 ~ 19:40"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "샤워실",
+      "수유실",
+      "약국",
+      "쉼터",
+      "내고장특산물",
+      "ATM",
+      "편의점",
+      "열린매장(간식)",
+      "기타"
+    ],
+    "latitude": 37.4792,
+    "longitude": 127.6533
+  },
+  {
+    "slug": "baegyangsa-busan",
+    "name": "백양사휴게소",
+    "direction": "하행",
+    "directionName": "순천방향",
+    "highwaySlug": "honam",
+    "highwayName": "호남고속도로",
+    "locationKm": 66,
+    "signatureMenu": {
+      "name": "불고기비빔밥",
+      "price": 9500,
+      "description": "불고기비빔밥",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "(실속) 삼채된장찌개",
         "price": 7000
@@ -10671,6 +12333,10 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "(실속) EX-라면",
         "price": 4000
+      },
+      {
+        "name": "(실속) 유부우동",
+        "price": 5500
       },
       {
         "name": "소고기국밥",
@@ -10735,21 +12401,6 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
-        "name": "로띠번",
-        "description": "로띠번, 바닐라번",
-        "hours": "08:00 ~ 19:40"
-      },
-      {
-        "name": "탐앤탐스",
-        "description": "아메리카노 외",
-        "hours": "08:00 ~ 19:40"
-      },
-      {
-        "name": "드롭탑(커피전문점)",
-        "description": "아메리카노 외",
-        "hours": "08:00 ~ 19:40"
-      },
-      {
         "name": "할리스커피",
         "description": "입점 브랜드 매장입니다.",
         "hours": "00:00 ~ 24:00"
@@ -10762,17 +12413,15 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1858,
-      "dieselPrice": 1843,
-      "lpgPrice": 1118,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "gasolinePrice": 1855,
+      "dieselPrice": 1845,
+      "lpgPrice": 1135,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
-      "샤워실",
       "수유실",
-      "약국",
       "쉼터",
       "내고장특산물",
       "ATM",
@@ -10780,17 +12429,17 @@ export const serviceAreas: ServiceArea[] = [
       "열린매장(간식)",
       "기타"
     ],
-    "latitude": 37.3173,
-    "longitude": 127.6331
+    "latitude": 37.5627,
+    "longitude": 127.5362
   },
   {
-    "slug": "gogseong",
+    "slug": "gogseong-both",
     "name": "곡성휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (순천/천안)",
+    "directionName": "천안방향",
     "highwaySlug": "honam",
     "highwayName": "호남고속도로",
-    "locationKm": 276,
+    "locationKm": 73,
     "signatureMenu": {
       "name": "양푼이제육비빔밥",
       "price": 10000,
@@ -10885,11 +12534,67 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "흑돼지장조림도시락",
         "price": 8000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "맛있는커피 여러종류의 커피를 맛볼수있는 엔제리너스",
+        "hours": "07:00 ~ 19:00"
       },
       {
-        "name": "입맛없을땐 짜글이",
-        "price": 10000
+        "name": "로띠번",
+        "description": "신메뉴 땅콩빵, 바닐라번, 모카번, 공주알밤빵, 커피와 함께 즐길 수 있음",
+        "hours": "07:00 ~ 19:50"
       },
+      {
+        "name": "임실치즈피자",
+        "description": "임실요구르트, 치즈류, 구워먹는치즈, 임실치즈조각피자 등 선물류 포장 가능",
+        "hours": "07:30 ~ 07:30"
+      },
+      {
+        "name": "기타",
+        "description": "CU편의점(무인운영시간 1:30~4:30) 냉동만두, 컵밥, 핫바류, 햄버거, 김밥, 빵류, 라면 등 간편식 판매로 야간에도 먹거리를 찾을 수 있음",
+        "hours": "00:00 ~ 24:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "샤워실",
+      "수유실",
+      "약국",
+      "쉼터",
+      "ATM",
+      "편의점",
+      "열린매장(간식)",
+      "기타"
+    ],
+    "latitude": 34.9116,
+    "longitude": 126.3472
+  },
+  {
+    "slug": "gogseong-busan",
+    "name": "곡성휴게소",
+    "direction": "하행",
+    "directionName": "순천방향",
+    "highwaySlug": "honam",
+    "highwayName": "호남고속도로",
+    "locationKm": 80,
+    "signatureMenu": {
+      "name": "입맛없을땐 짜글이",
+      "price": 10000,
+      "description": "한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "흑돼지 김치찌개",
         "price": 9000
@@ -10997,24 +12702,9 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
-        "name": "엔제리너스",
-        "description": "맛있는커피 여러종류의 커피를 맛볼수있는 엔제리너스",
-        "hours": "07:00 ~ 19:00"
-      },
-      {
         "name": "로띠번",
-        "description": "신메뉴 땅콩빵, 바닐라번, 모카번, 공주알밤빵, 커피와 함께 즐길 수 있음",
-        "hours": "07:00 ~ 19:50"
-      },
-      {
-        "name": "임실치즈피자",
-        "description": "임실요구르트, 치즈류, 구워먹는치즈, 임실치즈조각피자 등 선물류 포장 가능",
-        "hours": "07:30 ~ 07:30"
-      },
-      {
-        "name": "기타",
-        "description": "CU편의점(무인운영시간 1:30~4:30) 냉동만두, 컵밥, 핫바류, 햄버거, 김밥, 빵류, 라면 등 간편식 판매로 야간에도 먹거리를 찾을 수 있음",
-        "hours": "00:00 ~ 24:00"
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       },
       {
         "name": "파스쿠찌",
@@ -11025,38 +12715,40 @@ export const serviceAreas: ServiceArea[] = [
         "name": "달콤커피",
         "description": "입점 브랜드 매장입니다.",
         "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "호도과자/명품땅콩빵/커피콩빵/다양한 핫바류 판매중.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1882,
-      "dieselPrice": 1863,
-      "lpgPrice": 1198,
+      "gasolinePrice": 1869,
+      "dieselPrice": 1855,
+      "lpgPrice": 1200,
       "hasEvCharger": true,
-      "evChargersCount": 4,
-      "hasHydrogen": false
+      "evChargersCount": 2,
+      "hasHydrogen": true
     },
     "facilities": [
-      "샤워실",
       "수유실",
-      "약국",
       "쉼터",
       "ATM",
       "편의점",
-      "열린매장(간식)",
-      "기타"
+      "열린매장(간식)"
     ],
-    "latitude": 34.8606,
-    "longitude": 126.6062
+    "latitude": 34.7704,
+    "longitude": 126.32
   },
   {
-    "slug": "juam",
+    "slug": "juam-busan",
     "name": "주암휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (순천/천안)",
+    "direction": "하행",
+    "directionName": "순천방향",
     "highwaySlug": "honam",
     "highwayName": "호남고속도로",
-    "locationKm": 283,
+    "locationKm": 87,
     "signatureMenu": {
       "name": "(코바코)치즈돈가스",
       "price": 12000,
@@ -11127,10 +12819,66 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "녹차밥도시락",
         "price": 7000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "09:00 ~ 17:00"
       },
+      {
+        "name": "코바코",
+        "description": "돈가스, 우동 판매",
+        "hours": "08:00 ~ 18:30"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "아메리카노외 커피음료 판매 시중매장과 동일한 할인 혜택 및 가격(음료외 제외)",
+        "hours": "07:30 ~ 19:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1869,
+      "dieselPrice": 1853,
+      "lpgPrice": 1200,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "쉼터",
+      "ATM",
+      "편의점",
+      "기타"
+    ],
+    "latitude": 34.6712,
+    "longitude": 126.4242
+  },
+  {
+    "slug": "juam-both",
+    "name": "주암휴게소",
+    "direction": "양방향",
+    "directionName": "천안방향",
+    "highwaySlug": "honam",
+    "highwayName": "호남고속도로",
+    "locationKm": 94,
+    "signatureMenu": {
+      "name": "돼지짜글이",
+      "price": 11000,
+      "description": "한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "차돌박이된장찌개",
         "price": 9500
+      },
+      {
+        "name": "순두부찌개",
+        "price": 10000
       },
       {
         "name": "(실속) 콩나물국밥",
@@ -11153,12 +12901,28 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7000
       },
       {
+        "name": "(실속) EX라면",
+        "price": 4000
+      },
+      {
         "name": "제육볶음",
         "price": 13000
       },
       {
+        "name": "우거지사골곰국",
+        "price": 10000
+      },
+      {
         "name": "제육볶음+치즈돈가스 반반",
         "price": 13000
+      },
+      {
+        "name": "치즈돈가스+우동 세트",
+        "price": 16000
+      },
+      {
+        "name": "건봉국밥",
+        "price": 10000
       },
       {
         "name": "옛날돈가스+사이다",
@@ -11175,32 +12939,36 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "뚝불고기",
         "price": 13000
+      },
+      {
+        "name": "녹차밥도시락",
+        "price": 7000
       }
     ],
     "brandStores": [
       {
         "name": "로띠번",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "09:00 ~ 17:00"
+        "description": "제품 소진시까지",
+        "hours": "00:00 ~ 21:00"
       },
       {
         "name": "코바코",
-        "description": "돈가스, 우동 판매",
-        "hours": "08:00 ~ 18:30"
+        "description": "우동 라면 돈가스 판매",
+        "hours": "07:30 ~ 18:30"
       },
       {
         "name": "탐앤탐스",
         "description": "아메리카노외 커피음료 판매 시중매장과 동일한 할인 혜택 및 가격(음료외 제외)",
-        "hours": "07:30 ~ 19:00"
+        "hours": "07:30 ~ 19:30"
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1872,
-      "dieselPrice": 1859,
-      "lpgPrice": 1200,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -11208,20 +12976,19 @@ export const serviceAreas: ServiceArea[] = [
       "쉼터",
       "ATM",
       "편의점",
-      "기타",
       "열린매장(간식)"
     ],
-    "latitude": 34.9607,
-    "longitude": 126.5029
+    "latitude": 34.7052,
+    "longitude": 126.5639
   },
   {
-    "slug": "suncheon",
+    "slug": "suncheon-busan",
     "name": "순천휴게소",
     "direction": "하행",
     "directionName": "순천방향",
     "highwaySlug": "honam",
     "highwayName": "호남고속도로",
-    "locationKm": 290,
+    "locationKm": 101,
     "signatureMenu": {
       "name": "육개장",
       "price": 9000,
@@ -11251,11 +13018,11 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "ex-oil",
-      "gasolinePrice": 1621,
-      "dieselPrice": 1444,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": true,
-      "evChargersCount": 6,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
       "hasHydrogen": false
     },
     "facilities": [
@@ -11263,17 +13030,17 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "기타"
     ],
-    "latitude": 34.9279,
-    "longitude": 126.3629
+    "latitude": 34.8412,
+    "longitude": 126.6108
   },
   {
-    "slug": "hanamdeurim",
+    "slug": "hanamdeurim-both",
     "name": "하남드림휴게소",
     "direction": "양방향",
     "directionName": "양방향",
     "highwaySlug": "jungbu",
     "highwayName": "중부고속도로",
-    "locationKm": 297,
+    "locationKm": 108,
     "signatureMenu": {
       "name": "마방장터국밥",
       "price": 9500,
@@ -11446,12 +13213,12 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1624,
-      "dieselPrice": 1446,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -11462,17 +13229,17 @@ export const serviceAreas: ServiceArea[] = [
       "열린매장(간식)",
       "기타"
     ],
-    "latitude": 37.39,
-    "longitude": 127.3702
+    "latitude": 37.5518,
+    "longitude": 127.5771
   },
   {
-    "slug": "icheonssal",
+    "slug": "icheonssal-both",
     "name": "이천쌀휴게소",
     "direction": "양방향",
     "directionName": "하남방향",
     "highwaySlug": "jungbu",
     "highwayName": "중부고속도로",
-    "locationKm": 304,
+    "locationKm": 115,
     "signatureMenu": {
       "name": "한상돌솥비빔밥(이천한상)",
       "price": 11000,
@@ -11688,11 +13455,11 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1853,
-      "dieselPrice": 1836,
-      "lpgPrice": 1182,
-      "hasEvCharger": true,
-      "evChargersCount": 8,
+      "gasolinePrice": 1864,
+      "dieselPrice": 1853,
+      "lpgPrice": 1216,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
       "hasHydrogen": false
     },
     "facilities": [
@@ -11703,17 +13470,17 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "기타"
     ],
-    "latitude": 37.2763,
-    "longitude": 127.4583
+    "latitude": 37.5378,
+    "longitude": 127.4339
   },
   {
-    "slug": "icheon",
+    "slug": "icheon-both",
     "name": "이천휴게소",
     "direction": "양방향",
     "directionName": "남이방향",
     "highwaySlug": "jungbu",
     "highwayName": "중부고속도로",
-    "locationKm": 311,
+    "locationKm": 122,
     "signatureMenu": {
       "name": "오모리 흑돼지김치찌개",
       "price": 10000,
@@ -11841,12 +13608,12 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1853,
-      "dieselPrice": 1836,
-      "lpgPrice": 1182,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -11854,17 +13621,17 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "기타"
     ],
-    "latitude": 37.289,
-    "longitude": 127.6016
+    "latitude": 37.4098,
+    "longitude": 127.3684
   },
   {
-    "slug": "eumseong",
+    "slug": "eumseong-both",
     "name": "음성휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (남이/하남)",
+    "directionName": "하남방향",
     "highwaySlug": "jungbu",
     "highwayName": "중부고속도로",
-    "locationKm": 318,
+    "locationKm": 129,
     "signatureMenu": {
       "name": "해물순두부찌개",
       "price": 8500,
@@ -12003,22 +13770,81 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "로제떡볶이",
         "price": 5000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "이탈리아 정통 커피 브랜드 정체성을 그대로 살려 특별한 경험을 제공",
+        "hours": "07:00 ~ 20:30"
       },
       {
-        "name": "한우우거지국밥",
-        "price": 9500
-      },
+        "name": "드롭탑(커피전문점)",
+        "description": "천여 가지 다양한 생두 조합과 구백 번 이상의 로스팅 실험 끝에 찾아낸 925번째 가장 완벽한 원두, 커피 본연의 맛과 향에 집중하여 쓴맛은 줄이고 단맛과 다채로운 향을 끌어올린 세상에서 가장 맛있는 드롭탑만의 925 커피",
+        "hours": "07:30 ~ 19:30"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1864,
+      "dieselPrice": 1853,
+      "lpgPrice": 1216,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "ex-화물차라운지",
+      "ATM",
+      "편의점",
+      "기타"
+    ],
+    "latitude": 36.5089,
+    "longitude": 127.412
+  },
+  {
+    "slug": "eumseong-both-1",
+    "name": "음성휴게소",
+    "direction": "양방향",
+    "directionName": "남이방향",
+    "highwaySlug": "jungbu",
+    "highwayName": "중부고속도로",
+    "locationKm": 136,
+    "signatureMenu": {
+      "name": "한우우거지국밥",
+      "price": 9500,
+      "description": "한우사태고기와 사골을 혼합하여 진하게 육수를 우러내며 우거지를 두번 볶아낸 구수하고 담백한 보양 음식입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "용대리황태해장국",
         "price": 10000
+      },
+      {
+        "name": "음성표고된장찌개",
+        "price": 7000
       },
       {
         "name": "음성청결고추장비빔밥",
         "price": 7000
       },
       {
+        "name": "돈가스제육덮밥",
+        "price": 11000
+      },
+      {
+        "name": "등심돈가스",
+        "price": 10000
+      },
+      {
         "name": "부산어묵우동",
         "price": 7000
+      },
+      {
+        "name": "유부우동",
+        "price": 6000
       },
       {
         "name": "야채튀김우동",
@@ -12053,8 +13879,36 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10000
       },
       {
+        "name": "이정동냉채묵밥",
+        "price": 10000
+      },
+      {
+        "name": "한돈김치찌개",
+        "price": 9000
+      },
+      {
+        "name": "야채김밥",
+        "price": 5000
+      },
+      {
+        "name": "실속우동",
+        "price": 5500
+      },
+      {
+        "name": "충무김밥",
+        "price": 5500
+      },
+      {
         "name": "참치마요주먹밥",
         "price": 5000
+      },
+      {
+        "name": "치즈김밥",
+        "price": 5500
+      },
+      {
+        "name": "참치김밥",
+        "price": 5500
       },
       {
         "name": "임자탕",
@@ -12067,16 +13921,6 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
-        "name": "파스쿠찌",
-        "description": "이탈리아 정통 커피 브랜드 정체성을 그대로 살려 특별한 경험을 제공",
-        "hours": "07:00 ~ 20:30"
-      },
-      {
-        "name": "드롭탑(커피전문점)",
-        "description": "천여 가지 다양한 생두 조합과 구백 번 이상의 로스팅 실험 끝에 찾아낸 925번째 가장 완벽한 원두, 커피 본연의 맛과 향에 집중하여 쓴맛은 줄이고 단맛과 다채로운 향을 끌어올린 세상에서 가장 맛있는 드롭탑만의 925 커피",
-        "hours": "07:30 ~ 19:30"
-      },
-      {
         "name": "탐앤탐스",
         "description": "탐앤탐스는 신선하고 풍부한 커피의 맛과 향으로 국내 및 세계 커피전문점 시장을 선도하고 있습니다.",
         "hours": "06:00 ~ 19:00"
@@ -12085,36 +13929,40 @@ export const serviceAreas: ServiceArea[] = [
         "name": "용우동",
         "description": "20년 전통의 우동하면 생각나는 브랜드 용우동만의 고유한 우동맛을 맛보실수 있습니다.",
         "hours": "06:00 ~ 20:40"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "퀄리티 높은 원두로 깊은 맛과 향의 수준 높은 커피를 즐길수 있습니다.",
+        "hours": "06:00 ~ 18:30"
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1859,
-      "dieselPrice": 1848,
-      "lpgPrice": 1173,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
       "수유실",
-      "ex-화물차라운지",
+      "약국",
       "ATM",
       "편의점",
-      "기타",
-      "약국"
+      "기타"
     ],
-    "latitude": 36.6399,
-    "longitude": 127.6397
+    "latitude": 36.5025,
+    "longitude": 127.5557
   },
   {
-    "slug": "ochang",
+    "slug": "ochang-both",
     "name": "오창휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (남이/하남)",
+    "directionName": "하남방향",
     "highwaySlug": "jungbu",
     "highwayName": "중부고속도로",
-    "locationKm": 325,
+    "locationKm": 143,
     "signatureMenu": {
       "name": "설렁탕",
       "price": 11000,
@@ -12325,14 +14173,73 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "들기름막국수",
         "price": 9500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "Take Your Time Angel-in-us 당신을 미소 짓게 하는 천사의 커피",
+        "hours": "08:00 ~ 20:00"
       },
+      {
+        "name": "로띠번",
+        "description": "로띠번 , 크림치즈번 , 호두카야번",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "생두 고유의 맛과 향미를 살리는 - 슬로우 로스팅",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "아시아 최초 큐그레이더를 포함한 글로벌 패널의 찬사를 받은 925블랜드 드롭탑의 시그니처 원두 925 블랜드",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "CU편의점",
+        "hours": "00:00 ~ 24:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1862,
+      "dieselPrice": 1853,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "쉼터",
+      "ATM",
+      "편의점",
+      "열린매장(간식)",
+      "기타"
+    ],
+    "latitude": 36.62,
+    "longitude": 127.6387
+  },
+  {
+    "slug": "ochang-both-1",
+    "name": "오창휴게소",
+    "direction": "양방향",
+    "directionName": "남이방향",
+    "highwaySlug": "jungbu",
+    "highwayName": "중부고속도로",
+    "locationKm": 150,
+    "signatureMenu": {
+      "name": "해물순두부",
+      "price": 9500,
+      "description": "비법소스로 맛을 낸 해물순두부",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "(실속) 돈가스",
         "price": 10000
-      },
-      {
-        "name": "해물순두부",
-        "price": 9500
       },
       {
         "name": "(실속) 고추장찌개",
@@ -12344,6 +14251,10 @@ export const serviceAreas: ServiceArea[] = [
       },
       {
         "name": "(실속) 우동",
+        "price": 5500
+      },
+      {
+        "name": "콩나물해장라면",
         "price": 5500
       },
       {
@@ -12369,6 +14280,18 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "(실속) ex라면",
         "price": 4000
+      },
+      {
+        "name": "꼬치어묵라면",
+        "price": 5500
+      },
+      {
+        "name": "꼬치어묵우동",
+        "price": 7000
+      },
+      {
+        "name": "야채튀김우동",
+        "price": 7000
       },
       {
         "name": "(금강설렁탕)머릿고기설렁탕",
@@ -12445,31 +14368,6 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
-        "name": "엔제리너스",
-        "description": "Take Your Time Angel-in-us 당신을 미소 짓게 하는 천사의 커피",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "로띠번",
-        "description": "로띠번 , 크림치즈번 , 호두카야번",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "파스쿠찌",
-        "description": "생두 고유의 맛과 향미를 살리는 - 슬로우 로스팅",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "드롭탑(커피전문점)",
-        "description": "아시아 최초 큐그레이더를 포함한 글로벌 패널의 찬사를 받은 925블랜드 드롭탑의 시그니처 원두 925 블랜드",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "CU",
-        "description": "CU편의점",
-        "hours": "00:00 ~ 24:00"
-      },
-      {
         "name": "던킨도너츠",
         "description": "커피 및 도너츠 판매",
         "hours": "07:30 ~ 19:00"
@@ -12481,33 +14379,32 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1858,
-      "dieselPrice": 1848,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": true
+      "hasEvCharger": true,
+      "evChargersCount": 12,
+      "hasHydrogen": false
     },
     "facilities": [
       "수유실",
-      "쉼터",
       "ATM",
       "편의점",
       "열린매장(간식)",
       "기타"
     ],
-    "latitude": 36.7648,
-    "longitude": 127.5685
+    "latitude": 36.7533,
+    "longitude": 127.5847
   },
   {
-    "slug": "geumsaninsamraendeu",
+    "slug": "geumsaninsamraendeu-both",
     "name": "금산인삼랜드휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (대전/통영)",
+    "directionName": "대전방향",
     "highwaySlug": "tongyeong-daejeon",
     "highwayName": "통영대전고속도로",
-    "locationKm": 332,
+    "locationKm": 157,
     "signatureMenu": {
       "name": "(실속) ex-라면",
       "price": 4000,
@@ -12582,11 +14479,62 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "황태해장국",
         "price": 8000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "빵류 및 커피류 판매",
+        "hours": "07:00 ~ 20:00"
       },
       {
-        "name": "인삼가마솥비빔밥",
-        "price": 10000
+        "name": "엔제리너스",
+        "description": "커피류 판매",
+        "hours": "08:00 ~ 20:00"
       },
+      {
+        "name": "탐앤탐스",
+        "description": "커피류 판매",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "쉼터",
+      "내고장특산물",
+      "버스환승",
+      "ATM",
+      "편의점",
+      "열린매장(간식)",
+      "기타"
+    ],
+    "latitude": 36.4931,
+    "longitude": 127.3381
+  },
+  {
+    "slug": "geumsaninsamraendeu-both-1",
+    "name": "금산인삼랜드휴게소",
+    "direction": "양방향",
+    "directionName": "통영방향",
+    "highwaySlug": "tongyeong-daejeon",
+    "highwayName": "통영대전고속도로",
+    "locationKm": 164,
+    "signatureMenu": {
+      "name": "인삼가마솥비빔밥",
+      "price": 10000,
+      "description": "한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "인삼흑돼지돈까스",
         "price": 10000
@@ -12680,6 +14628,10 @@ export const serviceAreas: ServiceArea[] = [
         "price": 5500
       },
       {
+        "name": "실속우동",
+        "price": 5500
+      },
+      {
         "name": "자장면",
         "price": 6500
       },
@@ -12718,18 +14670,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
-        "name": "던킨도너츠",
-        "description": "빵류 및 커피류 판매",
-        "hours": "07:00 ~ 20:00"
-      },
-      {
-        "name": "엔제리너스",
-        "description": "커피류 판매",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
         "name": "탐앤탐스",
-        "description": "커피류 판매",
+        "description": "커피전문점",
         "hours": "08:00 ~ 20:00"
       },
       {
@@ -12740,34 +14682,31 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1859,
-      "dieselPrice": 1859,
-      "lpgPrice": 1189,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": 1229,
       "hasEvCharger": true,
-      "evChargersCount": 12,
+      "evChargersCount": 2,
       "hasHydrogen": false
     },
     "facilities": [
       "수유실",
-      "쉼터",
-      "내고장특산물",
       "버스환승",
       "ATM",
       "편의점",
-      "열린매장(간식)",
-      "기타"
+      "열린매장(간식)"
     ],
-    "latitude": 36.4857,
-    "longitude": 127.3197
+    "latitude": 36.3885,
+    "longitude": 127.2394
   },
   {
-    "slug": "deogyusan",
+    "slug": "deogyusan-both",
     "name": "덕유산휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (대전/통영)",
+    "directionName": "대전방향",
     "highwaySlug": "tongyeong-daejeon",
     "highwayName": "통영대전고속도로",
-    "locationKm": 339,
+    "locationKm": 171,
     "signatureMenu": {
       "name": "무진장제육&돈까스",
       "price": 14000,
@@ -12862,38 +14801,6 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "떡라면(곱빼기)",
         "price": 6500
-      },
-      {
-        "name": "사과돈가스",
-        "price": 13500
-      },
-      {
-        "name": "소고기우거지해장국",
-        "price": 10000
-      },
-      {
-        "name": "돼지고기김치찌개",
-        "price": 9000
-      },
-      {
-        "name": "옛날돈가스",
-        "price": 12000
-      },
-      {
-        "name": "나주식국밥",
-        "price": 7000
-      },
-      {
-        "name": "짜장면",
-        "price": 8000
-      },
-      {
-        "name": "짜장밥",
-        "price": 9000
-      },
-      {
-        "name": "마늘라면",
-        "price": 7000
       }
     ],
     "brandStores": [
@@ -12914,10 +14821,10 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1849,
-      "dieselPrice": 1839,
-      "lpgPrice": 1212,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
       "hasHydrogen": false
@@ -12927,20 +14834,135 @@ export const serviceAreas: ServiceArea[] = [
       "내고장특산물",
       "ATM",
       "편의점",
-      "열린매장(간식)",
-      "기타"
+      "열린매장(간식)"
     ],
-    "latitude": 37.4323,
-    "longitude": 127.3694
+    "latitude": 37.3123,
+    "longitude": 127.4079
   },
   {
-    "slug": "sancheong",
-    "name": "산청휴게소",
+    "slug": "deogyusan-both-1",
+    "name": "덕유산휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (대전/통영)",
+    "directionName": "통영방향",
     "highwaySlug": "tongyeong-daejeon",
     "highwayName": "통영대전고속도로",
-    "locationKm": 346,
+    "locationKm": 178,
+    "signatureMenu": {
+      "name": "사과돈가스",
+      "price": 13500,
+      "description": "한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
+      {
+        "name": "실속우동",
+        "price": 5500
+      },
+      {
+        "name": "부대라면",
+        "price": 6500
+      },
+      {
+        "name": "소고기우거지해장국",
+        "price": 10000
+      },
+      {
+        "name": "돼지고기김치찌개",
+        "price": 9000
+      },
+      {
+        "name": "옛날돈가스",
+        "price": 12000
+      },
+      {
+        "name": "얼큰우동",
+        "price": 6500
+      },
+      {
+        "name": "꼬치어묵우동",
+        "price": 7000
+      },
+      {
+        "name": "나주식국밥",
+        "price": 7000
+      },
+      {
+        "name": "추어탕",
+        "price": 11000
+      },
+      {
+        "name": "차돌된장찌개",
+        "price": 9500
+      },
+      {
+        "name": "실속라면",
+        "price": 3500
+      },
+      {
+        "name": "유부우동",
+        "price": 6000
+      },
+      {
+        "name": "짜장면",
+        "price": 8000
+      },
+      {
+        "name": "짜장밥",
+        "price": 9000
+      },
+      {
+        "name": "마늘라면",
+        "price": 7000
+      },
+      {
+        "name": "들깨미역국",
+        "price": 7000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "투썸플레이스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "공차",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "GS25",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1849,
+      "dieselPrice": 1839,
+      "lpgPrice": 1212,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "내고장특산물",
+      "ATM",
+      "편의점",
+      "기타"
+    ],
+    "latitude": 36.2026,
+    "longitude": 127.4103
+  },
+  {
+    "slug": "sancheong-both",
+    "name": "산청휴게소",
+    "direction": "양방향",
+    "directionName": "대전방향",
+    "highwaySlug": "tongyeong-daejeon",
+    "highwayName": "통영대전고속도로",
+    "locationKm": 185,
     "signatureMenu": {
       "name": "흑돼지소라찜",
       "price": 14000,
@@ -13027,50 +15049,6 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "(실속) 등심돈가스",
         "price": 10000
-      },
-      {
-        "name": "한방우불고기",
-        "price": 13000
-      },
-      {
-        "name": "우리돼지 김치찌개",
-        "price": 10000
-      },
-      {
-        "name": "EX-라면(실속상품)",
-        "price": 4000
-      },
-      {
-        "name": "들깨미역국밥(실속상품)",
-        "price": 7000
-      },
-      {
-        "name": "애호박돼지찌개",
-        "price": 11000
-      },
-      {
-        "name": "돌솥더덕비빔밥",
-        "price": 12000
-      },
-      {
-        "name": "우거지국밥(실속상품)",
-        "price": 7000
-      },
-      {
-        "name": "공기밥",
-        "price": 1000
-      },
-      {
-        "name": "계란 장조림",
-        "price": 2000
-      },
-      {
-        "name": "계란말이",
-        "price": 3000
-      },
-      {
-        "name": "산청흑돼지불고기",
-        "price": 3500
       }
     ],
     "brandStores": [
@@ -13091,12 +15069,161 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": true
+    },
+    "facilities": [
+      "샤워실",
+      "수유실",
+      "쉼터",
+      "내고장특산물",
+      "ATM",
+      "기타"
+    ],
+    "latitude": 35.1801,
+    "longitude": 128.8308
+  },
+  {
+    "slug": "sancheong-both-1",
+    "name": "산청휴게소",
+    "direction": "양방향",
+    "directionName": "통영방향",
+    "highwaySlug": "tongyeong-daejeon",
+    "highwayName": "통영대전고속도로",
+    "locationKm": 192,
+    "signatureMenu": {
+      "name": "한방우불고기",
+      "price": 13000,
+      "description": "한방 우(牛) 불고기는 한방재료와 소불고기로 만들어 맛과 영양가가 최고이며 누구나 맛있게 먹을 수 있는 한방음식입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
+      {
+        "name": "등심돈가스",
+        "price": 11000
+      },
+      {
+        "name": "우리돼지 김치찌개",
+        "price": 10000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 11000
+      },
+      {
+        "name": "떡만두라면",
+        "price": 5500
+      },
+      {
+        "name": "해물짬뽕라면",
+        "price": 6000
+      },
+      {
+        "name": "농심새우튀김우동",
+        "price": 7500
+      },
+      {
+        "name": "농심가락우동",
+        "price": 7000
+      },
+      {
+        "name": "농심유부우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-라면(실속상품)",
+        "price": 4000
+      },
+      {
+        "name": "들깨미역국밥(실속상품)",
+        "price": 7000
+      },
+      {
+        "name": "애호박돼지찌개",
+        "price": 11000
+      },
+      {
+        "name": "돌솥더덕비빔밥",
+        "price": 12000
+      },
+      {
+        "name": "흑돼지소라찜",
+        "price": 14000
+      },
+      {
+        "name": "더덕산채비빔밥",
+        "price": 11000
+      },
+      {
+        "name": "치즈돈가스+사이다세트",
+        "price": 12000
+      },
+      {
+        "name": "등심돈가스+사이다세트",
+        "price": 12000
+      },
+      {
+        "name": "버섯들깨탕",
+        "price": 9500
+      },
+      {
+        "name": "우거지국밥(실속상품)",
+        "price": 7000
+      },
+      {
+        "name": "감자수제비",
+        "price": 7500
+      },
+      {
+        "name": "공기밥",
+        "price": 1000
+      },
+      {
+        "name": "(실속) 실속우동",
+        "price": 5500
+      },
+      {
+        "name": "계란 장조림",
+        "price": 2000
+      },
+      {
+        "name": "계란말이",
+        "price": 3000
+      },
+      {
+        "name": "산청흑돼지불고기",
+        "price": 3500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "중앙계산대 옆 위치",
+        "hours": "07:30 ~ 20:30"
+      },
+      {
+        "name": "로띠번",
+        "description": "휴게소 내부 엔제리너스 옆 위치",
+        "hours": "07:30 ~ 20:30"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "휴게소 전면부 위치",
+        "hours": "07:00 ~ 19:30"
+      }
+    ],
+    "gasStation": {
       "brand": "알뜰주유소",
       "gasolinePrice": 1859,
       "dieselPrice": 1849,
       "lpgPrice": 1149,
       "hasEvCharger": true,
-      "evChargersCount": 2,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -13107,17 +15234,17 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "기타"
     ],
-    "latitude": 35.1231,
-    "longitude": 128.5965
+    "latitude": 35.3232,
+    "longitude": 128.8161
   },
   {
-    "slug": "chungju",
+    "slug": "chungju-both",
     "name": "충주휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (양평/창원)",
+    "directionName": "양평방향",
     "highwaySlug": "jungbunaeryuk",
     "highwayName": "중부내륙고속도로",
-    "locationKm": 353,
+    "locationKm": 199,
     "signatureMenu": {
       "name": "새뱅이해물순두부",
       "price": 9500,
@@ -13220,11 +15347,59 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "사과함박스테이크",
         "price": 11000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "파스쿠찌 커피전문점",
+        "hours": "08:10 ~ 20:00"
       },
       {
-        "name": "충주(실속)사과돈가스",
-        "price": 10000
-      },
+        "name": "탐앤탐스",
+        "description": "탐앤탐스 커피전문점",
+        "hours": "08:10 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1849,
+      "dieselPrice": 1862,
+      "lpgPrice": 1259,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수면실",
+      "샤워실",
+      "세탁실",
+      "수유실",
+      "쉼터",
+      "ex-화물차라운지",
+      "내고장특산물",
+      "ATM",
+      "편의점",
+      "기타"
+    ],
+    "latitude": 36.7871,
+    "longitude": 127.4851
+  },
+  {
+    "slug": "chungju-both-1",
+    "name": "충주휴게소",
+    "direction": "양방향",
+    "directionName": "창원방향",
+    "highwaySlug": "jungbunaeryuk",
+    "highwayName": "중부내륙고속도로",
+    "locationKm": 206,
+    "signatureMenu": {
+      "name": "충주(실속)사과돈가스",
+      "price": 10000,
+      "description": "충주사과돈가스 \\10,000원",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "버섯장터국밥",
         "price": 12000
@@ -13256,6 +15431,22 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "어묵우동정식",
         "price": 10000
+      },
+      {
+        "name": "실속우동",
+        "price": 5500
+      },
+      {
+        "name": "잔치국수",
+        "price": 6000
+      },
+      {
+        "name": "떡만두라면정식",
+        "price": 8000
+      },
+      {
+        "name": "떡만두라면",
+        "price": 5000
       },
       {
         "name": "(실속) ex라면",
@@ -13330,6 +15521,10 @@ export const serviceAreas: ServiceArea[] = [
         "price": 1000
       },
       {
+        "name": "유부우동",
+        "price": 6000
+      },
+      {
         "name": "새우볶음밥",
         "price": 9000
       },
@@ -13356,16 +15551,6 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
-        "name": "파스쿠찌",
-        "description": "파스쿠찌 커피전문점",
-        "hours": "08:10 ~ 20:00"
-      },
-      {
-        "name": "탐앤탐스",
-        "description": "탐앤탐스 커피전문점",
-        "hours": "08:10 ~ 20:00"
-      },
-      {
         "name": "던킨도너츠",
         "description": "매주 금,토,일요일 20시 마감",
         "hours": "06:00 ~ 19:00"
@@ -13376,18 +15561,23 @@ export const serviceAreas: ServiceArea[] = [
         "hours": "06:00 ~ 18:00"
       },
       {
+        "name": "파스쿠찌",
+        "description": "라스트 오더 19시 30분",
+        "hours": "06:00 ~ 20:00"
+      },
+      {
         "name": "드롭탑(커피전문점)",
         "description": "매주 금,토요일 21시 마감",
         "hours": "07:00 ~ 20:00"
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1857,
-      "dieselPrice": 1861,
-      "lpgPrice": 1250,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -13399,20 +15589,19 @@ export const serviceAreas: ServiceArea[] = [
       "ex-화물차라운지",
       "내고장특산물",
       "ATM",
-      "편의점",
-      "기타"
+      "편의점"
     ],
-    "latitude": 36.4941,
-    "longitude": 127.5348
+    "latitude": 36.7143,
+    "longitude": 127.361
   },
   {
-    "slug": "seonsan",
+    "slug": "seonsan-both",
     "name": "선산휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (양평/창원)",
+    "directionName": "양평방향",
     "highwaySlug": "jungbunaeryuk",
     "highwayName": "중부내륙고속도로",
-    "locationKm": 10,
+    "locationKm": 213,
     "signatureMenu": {
       "name": "묵은지 김치찌개",
       "price": 9000,
@@ -13503,7 +15692,144 @@ export const serviceAreas: ServiceArea[] = [
         "name": "이마트24",
         "description": "입점 브랜드 매장입니다.",
         "hours": "07:00 ~ 22:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1864,
+      "dieselPrice": 1853,
+      "lpgPrice": 1140,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "내고장특산물",
+      "버스환승",
+      "ATM",
+      "편의점",
+      "휴게소의원"
+    ],
+    "latitude": 36.5094,
+    "longitude": 128.3712
+  },
+  {
+    "slug": "seonsan-both-1",
+    "name": "선산휴게소",
+    "direction": "양방향",
+    "directionName": "창원방향",
+    "highwaySlug": "jungbunaeryuk",
+    "highwayName": "중부내륙고속도로",
+    "locationKm": 220,
+    "signatureMenu": {
+      "name": "가마솥 소고기국밥",
+      "price": 9000,
+      "description": "전통 가마솥 방식으로 깊고 얼큰하게 끓여낸 소고기국밥입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
       },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
       {
         "name": "탐앤탐스",
         "description": "입점 브랜드 매장입니다.",
@@ -13516,12 +15842,12 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
-      "dieselPrice": 1853,
-      "lpgPrice": 1140,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 4,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -13529,21 +15855,19 @@ export const serviceAreas: ServiceArea[] = [
       "내고장특산물",
       "버스환승",
       "ATM",
-      "편의점",
-      "휴게소의원",
       "열린매장(간식)"
     ],
-    "latitude": 36.5366,
-    "longitude": 128.6503
+    "latitude": 36.4269,
+    "longitude": 128.489
   },
   {
-    "slug": "yeongsan",
+    "slug": "yeongsan-both",
     "name": "영산휴게소",
     "direction": "양방향",
     "directionName": "창원방향",
     "highwaySlug": "jungbunaeryuk",
     "highwayName": "중부내륙고속도로",
-    "locationKm": 17,
+    "locationKm": 227,
     "signatureMenu": {
       "name": "투뿔한우장터국밥",
       "price": 11000,
@@ -13776,10 +16100,10 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1869,
-      "dieselPrice": 1859,
-      "lpgPrice": 1219,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
       "hasHydrogen": false
@@ -13793,17 +16117,17 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "편의점"
     ],
-    "latitude": 35.3388,
-    "longitude": 128.8038
+    "latitude": 35.1438,
+    "longitude": 128.809
   },
   {
-    "slug": "chilseo",
+    "slug": "chilseo-both",
     "name": "칠서휴게소",
     "direction": "양방향",
     "directionName": "양평방향",
     "highwaySlug": "jungbunaeryuk",
     "highwayName": "중부내륙고속도로",
-    "locationKm": 24,
+    "locationKm": 234,
     "signatureMenu": {
       "name": "(실속) 콩나물국밥",
       "price": 7000,
@@ -13926,11 +16250,11 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1624,
-      "dieselPrice": 1446,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 6,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -13945,17 +16269,17 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "열린매장(간식)"
     ],
-    "latitude": 35.3863,
-    "longitude": 128.6681
+    "latitude": 35.2853,
+    "longitude": 128.835
   },
   {
-    "slug": "gangreung",
+    "slug": "gangreung-busan",
     "name": "강릉휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (강릉/인천)",
+    "direction": "하행",
+    "directionName": "강릉방향",
     "highwaySlug": "yeongdong",
     "highwayName": "영동고속도로",
-    "locationKm": 31,
+    "locationKm": 241,
     "signatureMenu": {
       "name": "매콤제육덮밥[제순]",
       "price": 9900,
@@ -14062,14 +16386,68 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "두부김치찌개",
         "price": 9500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       },
+      {
+        "name": "이마트24",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:00 ~ 21:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1855,
+      "dieselPrice": 1848,
+      "lpgPrice": 1219,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "쉼터",
+      "ATM",
+      "편의점"
+    ],
+    "latitude": 37.8971,
+    "longitude": 128.9134
+  },
+  {
+    "slug": "gangreung-seoul",
+    "name": "강릉휴게소",
+    "direction": "상행",
+    "directionName": "인천방향",
+    "highwaySlug": "yeongdong",
+    "highwayName": "영동고속도로",
+    "locationKm": 248,
+    "signatureMenu": {
+      "name": "오뎅꼬치우동",
+      "price": 7500,
+      "description": "한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "초당몽글순두부",
         "price": 7000
       },
       {
+        "name": "EX-라면",
+        "price": 4000
+      },
+      {
         "name": "떡라면",
         "price": 4500
+      },
+      {
+        "name": "떡만두라면",
+        "price": 5500
       },
       {
         "name": "[실속]등심돈가스",
@@ -14078,6 +16456,18 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "새우튀김우동",
         "price": 8000
+      },
+      {
+        "name": "유부우동",
+        "price": 6500
+      },
+      {
+        "name": "짜장면",
+        "price": 7000
+      },
+      {
+        "name": "대파육개장",
+        "price": 10000
       },
       {
         "name": "맑은순두부",
@@ -14104,8 +16494,32 @@ export const serviceAreas: ServiceArea[] = [
         "price": 11500
       },
       {
+        "name": "샘밭막국수",
+        "price": 9000
+      },
+      {
+        "name": "충무김밥",
+        "price": 5500
+      },
+      {
         "name": "실속우동",
         "price": 5500
+      },
+      {
+        "name": "강원나물밥",
+        "price": 9000
+      },
+      {
+        "name": "순대국",
+        "price": 10000
+      },
+      {
+        "name": "얼큰순대국",
+        "price": 11000
+      },
+      {
+        "name": "두부김치찌개",
+        "price": 9500
       },
       {
         "name": "뼈해장국",
@@ -14118,21 +16532,25 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "남산 왕돈까스",
         "price": 13500
+      },
+      {
+        "name": "남산 치즈돈까스",
+        "price": 14000
       }
     ],
     "brandStores": [
       {
         "name": "엔제리너스",
         "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
         "hours": "08:00 ~ 20:00"
       },
       {
         "name": "이마트24",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "07:00 ~ 21:00"
-      },
-      {
-        "name": "할리스커피",
         "description": "입점 브랜드 매장입니다.",
         "hours": "08:00 ~ 20:00"
       }
@@ -14142,28 +16560,27 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1855,
       "dieselPrice": 1848,
       "lpgPrice": 1219,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 2,
       "hasHydrogen": false
     },
     "facilities": [
       "수유실",
-      "쉼터",
+      "내고장특산물",
       "ATM",
-      "편의점",
-      "내고장특산물"
+      "편의점"
     ],
-    "latitude": 37.8112,
-    "longitude": 128.7383
+    "latitude": 37.8618,
+    "longitude": 128.774
   },
   {
-    "slug": "pyeongchang",
+    "slug": "pyeongchang-seoul",
     "name": "평창휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (강릉/인천)",
+    "direction": "상행",
+    "directionName": "인천방향",
     "highwaySlug": "yeongdong",
     "highwayName": "영동고속도로",
-    "locationKm": 38,
+    "locationKm": 255,
     "signatureMenu": {
       "name": "평창食소고기국밥",
       "price": 10000,
@@ -14266,10 +16683,70 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "즉석국물매콤떡볶이",
         "price": 7000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "세븐일레븐",
+        "description": "24시간 편의매장",
+        "hours": "00:00 ~ 24:00"
       },
+      {
+        "name": "투썸플레이스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "공차",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "스위트- 청주오믈렛, 젤리 및 캔디류 판매",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1858,
+      "dieselPrice": 1850,
+      "lpgPrice": 1219,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "내고장특산물",
+      "버스환승",
+      "ATM"
+    ],
+    "latitude": 37.7254,
+    "longitude": 128.7283
+  },
+  {
+    "slug": "pyeongchang-busan",
+    "name": "평창휴게소",
+    "direction": "하행",
+    "directionName": "강릉방향",
+    "highwaySlug": "yeongdong",
+    "highwayName": "영동고속도로",
+    "locationKm": 262,
+    "signatureMenu": {
+      "name": "돌솥불고기비빔밥",
+      "price": 10500,
+      "description": "호주산 불고기비빔밥입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "(실속) 된장찌개",
         "price": 7000
+      },
+      {
+        "name": "돼지고기김치찌개",
+        "price": 10000
       },
       {
         "name": "소고기국밥",
@@ -14282,10 +16759,6 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "(실속) 순두부찌개",
         "price": 7000
-      },
-      {
-        "name": "돌솥불고기비빔밥",
-        "price": 10500
       },
       {
         "name": "옛날돈가스",
@@ -14302,6 +16775,10 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "왕새우튀김우동",
         "price": 8000
+      },
+      {
+        "name": "유부우동",
+        "price": 6500
       },
       {
         "name": "꼬치어묵우동",
@@ -14458,26 +16935,6 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
-        "name": "세븐일레븐",
-        "description": "24시간 편의매장",
-        "hours": "00:00 ~ 24:00"
-      },
-      {
-        "name": "투썸플레이스",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "공차",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "기타",
-        "description": "스위트- 청주오믈렛, 젤리 및 캔디류 판매",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
         "name": "던킨도너츠",
         "description": "시중과 동일한 할인/적립 제도 운영",
         "hours": "07:30 ~ 19:30"
@@ -14494,26 +16951,24 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1850,
       "lpgPrice": 1219,
       "hasEvCharger": true,
-      "evChargersCount": 8,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
       "수유실",
-      "내고장특산물",
-      "버스환승",
       "ATM"
     ],
-    "latitude": 37.668,
-    "longitude": 128.7516
+    "latitude": 37.6133,
+    "longitude": 128.8184
   },
   {
-    "slug": "hoengseong",
+    "slug": "hoengseong-busan",
     "name": "횡성휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (강릉/인천)",
+    "direction": "하행",
+    "directionName": "강릉방향",
     "highwaySlug": "yeongdong",
     "highwayName": "영동고속도로",
-    "locationKm": 142,
+    "locationKm": 269,
     "signatureMenu": {
       "name": "횡성한우국밥",
       "price": 10000,
@@ -14816,14 +17271,65 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "얼큰우거지설렁탕",
         "price": 14000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "커피전문점",
+        "hours": "07:20 ~ 19:20"
       },
       {
-        "name": "한우국밥",
-        "price": 10000
+        "name": "탐앤탐스",
+        "description": "커피전문점",
+        "hours": "07:20 ~ 19:20"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1848,
+      "dieselPrice": 1838,
+      "lpgPrice": 1223,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "버스환승",
+      "ATM",
+      "편의점",
+      "기타"
+    ],
+    "latitude": 37.6285,
+    "longitude": 128.9615
+  },
+  {
+    "slug": "hoengseong-seoul",
+    "name": "횡성휴게소",
+    "direction": "상행",
+    "directionName": "인천방향",
+    "highwaySlug": "yeongdong",
+    "highwayName": "영동고속도로",
+    "locationKm": 142,
+    "signatureMenu": {
+      "name": "한우국밥",
+      "price": 10000,
+      "description": "한우국밥은 예전 시골장터에서 맛볼 수 있는 한우뼈와 한우로 우려낸 진한 육수와 파, 무우 들의 시원함을 동시에 느낄수 있는 횡성휴게소의 대표적 메뉴입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
+      {
+        "name": "치즈돈가스",
+        "price": 11000
       },
       {
         "name": "왕등심돈가스",
         "price": 13000
+      },
+      {
+        "name": "유부우동",
+        "price": 6500
       },
       {
         "name": "떡만두라면",
@@ -14842,12 +17348,24 @@ export const serviceAreas: ServiceArea[] = [
         "price": 7000
       },
       {
+        "name": "돼지고기김치찌개",
+        "price": 9000
+      },
+      {
         "name": "꼬치어묵우동",
         "price": 7500
       },
       {
         "name": "새우튀김우동",
         "price": 8000
+      },
+      {
+        "name": "강원나물밥",
+        "price": 10000
+      },
+      {
+        "name": "제육돈가스",
+        "price": 12000
       },
       {
         "name": "제육덮밥",
@@ -14864,6 +17382,10 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "두툼돈까스김밥",
         "price": 6000
+      },
+      {
+        "name": "떡볶이",
+        "price": 5500
       },
       {
         "name": "치즈떡볶이",
@@ -14894,6 +17416,10 @@ export const serviceAreas: ServiceArea[] = [
         "price": 11000
       },
       {
+        "name": "짜장면",
+        "price": 7000
+      },
+      {
         "name": "떡만두라면정식",
         "price": 6000
       },
@@ -14908,14 +17434,9 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
-        "name": "엔제리너스",
-        "description": "커피전문점",
-        "hours": "07:20 ~ 19:20"
-      },
-      {
         "name": "탐앤탐스",
-        "description": "커피전문점",
-        "hours": "07:20 ~ 19:20"
+        "description": "커피류 및 차류 판매",
+        "hours": "08:00 ~ 20:00"
       },
       {
         "name": "드롭탑(커피전문점)",
@@ -14930,32 +17451,32 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1848,
-      "dieselPrice": 1838,
-      "lpgPrice": 1223,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
       "수유실",
+      "내고장특산물",
       "버스환승",
       "ATM",
       "편의점",
-      "기타",
-      "내고장특산물"
+      "기타"
     ],
     "latitude": 37.4628,
     "longitude": 127.9715
   },
   {
-    "slug": "munmag",
+    "slug": "munmag-seoul",
     "name": "문막휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (강릉/인천)",
+    "direction": "상행",
+    "directionName": "인천방향",
     "highwaySlug": "yeongdong",
     "highwayName": "영동고속도로",
-    "locationKm": 52,
+    "locationKm": 283,
     "signatureMenu": {
       "name": "치악산큰송이갈비탕",
       "price": 11000,
@@ -15042,11 +17563,62 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "등심돈까스",
         "price": 12000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "09:00 ~ 20:00"
       },
       {
-        "name": "문막장터국밥",
-        "price": 10000
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:00 ~ 19:00"
       },
+      {
+        "name": "CU",
+        "description": "CU 편의점(24시)",
+        "hours": "00:00 ~ 24:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1839,
+      "dieselPrice": 1827,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수면실",
+      "샤워실",
+      "세탁실",
+      "수유실",
+      "ex-화물차라운지",
+      "내고장특산물",
+      "ATM",
+      "편의점"
+    ],
+    "latitude": 37.8808,
+    "longitude": 128.9525
+  },
+  {
+    "slug": "munmag-busan",
+    "name": "문막휴게소",
+    "direction": "하행",
+    "directionName": "강릉방향",
+    "highwaySlug": "yeongdong",
+    "highwayName": "영동고속도로",
+    "locationKm": 290,
+    "signatureMenu": {
+      "name": "문막장터국밥",
+      "price": 10000,
+      "description": "문막(강릉방향)휴게소의 베스트메뉴이자, 한국인의 입맛에 딱 맞는 얼큰하고 매콤한 장터국밥 입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "(실속) 들깨미역국",
         "price": 7000
@@ -15182,21 +17754,6 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
-        "name": "엔제리너스",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "09:00 ~ 20:00"
-      },
-      {
-        "name": "로띠번",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "07:00 ~ 19:00"
-      },
-      {
-        "name": "CU",
-        "description": "CU 편의점(24시)",
-        "hours": "00:00 ~ 24:00"
-      },
-      {
         "name": "던킨도너츠",
         "description": "휴게소로 진입하면 본관 우측 브랜드 매장에 위치하고 있으며, 해피포인트가 가능하며 각종 음료와 도너츠를 판매하고 있다.",
         "hours": "07:40 ~ 19:00"
@@ -15219,36 +17776,30 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1839,
-      "dieselPrice": 1827,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 10,
-      "hasHydrogen": false
+      "evChargersCount": 8,
+      "hasHydrogen": true
     },
     "facilities": [
-      "수면실",
-      "샤워실",
-      "세탁실",
       "수유실",
-      "ex-화물차라운지",
-      "내고장특산물",
-      "ATM",
-      "편의점",
       "쉼터",
+      "ATM",
       "기타"
     ],
-    "latitude": 37.6736,
-    "longitude": 129.004
+    "latitude": 37.8859,
+    "longitude": 128.8088
   },
   {
-    "slug": "yeoju",
+    "slug": "yeoju-busan",
     "name": "여주휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (강릉/인천)",
+    "direction": "하행",
+    "directionName": "강릉방향",
     "highwaySlug": "yeongdong",
     "highwayName": "영동고속도로",
-    "locationKm": 59,
+    "locationKm": 297,
     "signatureMenu": {
       "name": "실속돈가스",
       "price": 10000,
@@ -15363,13 +17914,59 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "남산치즈돈까스",
         "price": 14000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "06:00 ~ 20:00"
       },
+      {
+        "name": "탐앤탐스",
+        "description": "탐앤탐스 커피 전문점 1,2호점 (1호점 07:00~19:00 마감, 2호점 08:00~22:00마감)",
+        "hours": "08:00 ~ 19:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수면실",
+      "샤워실",
+      "세탁실",
+      "수유실",
+      "ex-화물차라운지",
+      "내고장특산물",
+      "ATM",
+      "편의점"
+    ],
+    "latitude": 37.4297,
+    "longitude": 127.3691
+  },
+  {
+    "slug": "yeoju-seoul",
+    "name": "여주휴게소",
+    "direction": "상행",
+    "directionName": "인천방향",
+    "highwaySlug": "yeongdong",
+    "highwayName": "영동고속도로",
+    "locationKm": 304,
+    "signatureMenu": {
+      "name": "한식)매운돼지갈비찜",
+      "price": 12000,
+      "description": "2019년 ex-food 선정 메뉴입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "왕등심돈가스",
-        "price": 12000
-      },
-      {
-        "name": "한식)매운돼지갈비찜",
         "price": 12000
       },
       {
@@ -15620,13 +18217,13 @@ export const serviceAreas: ServiceArea[] = [
     "brandStores": [
       {
         "name": "파스쿠찌",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "06:00 ~ 20:00"
+        "description": "일반매장과 동일함",
+        "hours": "09:00 ~ 20:00"
       },
       {
         "name": "탐앤탐스",
-        "description": "탐앤탐스 커피 전문점 1,2호점 (1호점 07:00~19:00 마감, 2호점 08:00~22:00마감)",
-        "hours": "08:00 ~ 19:00"
+        "description": "탐앤탐스 1.2호점 (신관,구관) 2군데 운영 일반 로드샵과 동일하게 적용",
+        "hours": "08:00 ~ 21:00"
       },
       {
         "name": "CU",
@@ -15639,32 +18236,26 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1848,
       "dieselPrice": 1838,
       "lpgPrice": 1223,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
-      "수면실",
-      "샤워실",
-      "세탁실",
       "수유실",
-      "ex-화물차라운지",
-      "내고장특산물",
-      "ATM",
-      "편의점",
-      "쉼터"
+      "쉼터",
+      "ATM"
     ],
-    "latitude": 37.4792,
-    "longitude": 127.6533
+    "latitude": 37.2969,
+    "longitude": 127.4243
   },
   {
-    "slug": "yongin",
+    "slug": "yongin-busan",
     "name": "용인휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (강릉/인천)",
+    "direction": "하행",
+    "directionName": "강릉방향",
     "highwaySlug": "yeongdong",
     "highwayName": "영동고속도로",
-    "locationKm": 66,
+    "locationKm": 311,
     "signatureMenu": {
       "name": "돌솥비빔밥",
       "price": 10500,
@@ -15819,11 +18410,68 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "한신)얼큰해장냉우동",
         "price": 8000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "커피,도넛",
+        "hours": "06:00 ~ 21:00"
       },
       {
-        "name": "소고기등심국밥",
-        "price": 9500
+        "name": "파스쿠찌",
+        "description": "커피, 차류",
+        "hours": "08:00 ~ 20:00"
       },
+      {
+        "name": "CU",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "토스타토스트",
+        "description": "토스트 외",
+        "hours": "06:00 ~ 18:00"
+      },
+      {
+        "name": "기타",
+        "description": "잠바주스 (커피,차류,주스.스무디)",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1853,
+      "dieselPrice": 1846,
+      "lpgPrice": 1228,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "쉼터",
+      "ATM",
+      "편의점"
+    ],
+    "latitude": 37.2716,
+    "longitude": 127.5659
+  },
+  {
+    "slug": "yongin-seoul",
+    "name": "용인휴게소",
+    "direction": "상행",
+    "directionName": "인천방향",
+    "highwaySlug": "yeongdong",
+    "highwayName": "영동고속도로",
+    "locationKm": 318,
+    "signatureMenu": {
+      "name": "소고기등심국밥",
+      "price": 9500,
+      "description": "얼큰한 국물과 푸짐한 양에 마음까지 따뜻해지는 소고기 국밥. 고객님들께 추천드립니다. ^^",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "콩고기더덕돌솥비빔밥",
         "price": 10500
@@ -15835,6 +18483,10 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "얼큰삼진어묵우동",
         "price": 8000
+      },
+      {
+        "name": "(실속) 즉석우동",
+        "price": 5500
       },
       {
         "name": "자장면",
@@ -15885,6 +18537,10 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10500
       },
       {
+        "name": "(실속) 콩나물해장국",
+        "price": 7000
+      },
+      {
         "name": "불낙뚝배기정식",
         "price": 11000
       },
@@ -15924,8 +18580,8 @@ export const serviceAreas: ServiceArea[] = [
     "brandStores": [
       {
         "name": "던킨도너츠",
-        "description": "커피,도넛",
-        "hours": "06:00 ~ 21:00"
+        "description": "도넛 & 커피",
+        "hours": "07:00 ~ 21:00"
       },
       {
         "name": "파스쿠찌",
@@ -15934,18 +18590,8 @@ export const serviceAreas: ServiceArea[] = [
       },
       {
         "name": "CU",
-        "description": "입점 브랜드 매장입니다.",
+        "description": "24시간 운영 (야간 셀프계산대)",
         "hours": "00:00 ~ 24:00"
-      },
-      {
-        "name": "토스타토스트",
-        "description": "토스트 외",
-        "hours": "06:00 ~ 18:00"
-      },
-      {
-        "name": "기타",
-        "description": "잠바주스 (커피,차류,주스.스무디)",
-        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
@@ -15958,24 +18604,23 @@ export const serviceAreas: ServiceArea[] = [
       "hasHydrogen": false
     },
     "facilities": [
-      "수유실",
-      "쉼터",
-      "ATM",
-      "편의점",
       "샤워실",
-      "세차장"
+      "수유실",
+      "세차장",
+      "ATM",
+      "편의점"
     ],
-    "latitude": 37.5627,
-    "longitude": 127.5362
+    "latitude": 37.377,
+    "longitude": 127.6637
   },
   {
-    "slug": "chuncheon",
+    "slug": "chuncheon-busan",
     "name": "춘천휴게소",
     "direction": "하행",
     "directionName": "부산방향",
     "highwaySlug": "jungang",
     "highwayName": "중앙고속도로",
-    "locationKm": 73,
+    "locationKm": 325,
     "signatureMenu": {
       "name": "계란라면정식(공기밥포함)",
       "price": 6000,
@@ -16058,8 +18703,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1612,
-      "dieselPrice": 1438,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
@@ -16069,17 +18714,17 @@ export const serviceAreas: ServiceArea[] = [
       "수유실",
       "쉼터"
     ],
-    "latitude": 37.8473,
-    "longitude": 128.7603
+    "latitude": 37.8543,
+    "longitude": 128.9855
   },
   {
-    "slug": "hongcheongang",
+    "slug": "hongcheongang-both",
     "name": "홍천강휴게소",
     "direction": "양방향",
     "directionName": "춘천방향",
     "highwaySlug": "jungang",
     "highwayName": "중앙고속도로",
-    "locationKm": 80,
+    "locationKm": 332,
     "signatureMenu": {
       "name": "주물솥밥",
       "price": 12000,
@@ -16277,12 +18922,12 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1857,
-      "dieselPrice": 1850,
-      "lpgPrice": 1250,
+      "gasolinePrice": 1864,
+      "dieselPrice": 1853,
+      "lpgPrice": 1239,
       "hasEvCharger": true,
       "evChargersCount": 2,
-      "hasHydrogen": true
+      "hasHydrogen": false
     },
     "facilities": [
       "수유실",
@@ -16290,28 +18935,24 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "편의점"
     ],
-    "latitude": 37.7061,
-    "longitude": 128.7331
+    "latitude": 37.8993,
+    "longitude": 128.8489
   },
   {
-    "slug": "chiag",
+    "slug": "chiag-busan",
     "name": "치악휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (부산/춘천)",
+    "direction": "하행",
+    "directionName": "부산방향",
     "highwaySlug": "jungang",
     "highwayName": "중앙고속도로",
-    "locationKm": 87,
+    "locationKm": 339,
     "signatureMenu": {
-      "name": "우동따로 알밥따로",
-      "price": 9000,
-      "description": "얼큰한 우동국물과 씹을 때 톡톡 터지는 식감이 매우 좋음",
+      "name": "등심돈가스",
+      "price": 12000,
+      "description": "한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.",
       "isExFood": true
     },
     "otherMenus": [
-      {
-        "name": "등심돈가스",
-        "price": 12000
-      },
       {
         "name": "꼬치어묵우동",
         "price": 6500
@@ -16371,7 +19012,70 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "제육볶음",
         "price": 11000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "신선하고 엄선된 최상의 재료만을 사용하여 국내산 수제 버터필링 기법으로 만든 도우를 발효시켜 그윽한 모카향 크림토핑을 해서 오븐에서 갓 구워낸 부드럽고 후레쉬한 모카향이 가득한 번",
+        "hours": "07:30 ~ 19:30"
       },
+      {
+        "name": "파스쿠찌",
+        "description": "파스쿠찌(Pascucci)는 이탈리아 전통 커피 문화를 바탕으로 한 프리미엄 커피 브랜드입니다. 고급 원두와 정통 에스프레소 추출 방식으로 깊고 진한 커피 맛을 선사합니다. 유럽 감성의 세련된 인테리어와 다양한 음료·디저트 메뉴로 고객에게 편안한 휴식 공간을 제공합니다.",
+        "hours": "07:30 ~ 19:30"
+      },
+      {
+        "name": "투썸플레이스",
+        "description": "섬세한 디테일이 만드는 커피 맛의 차이. 이것이 바로 투썸 커피만의 Small Indulgence(작은 사치) 입니다. 거기에, 다양한 커피마다 최적으로 어울리는 색다른 디저트까지 나만의 즐거움을 만날 수 있는 프리미엄 디저트 카페 투썸플레이스입니다",
+        "hours": "07:30 ~ 19:30"
+      },
+      {
+        "name": "CU",
+        "description": "순수 국내 브랜드 CU는 21세기 한국형 편의점을 지향하며 고객의 니즈에 능동적으로 대응하기 위해 BGF 리테일에서 지난 30여 년간 쌓아온 노하우를 바탕으로 만든 새로운 편의점 모델입니다. ‘Fresh & Refresh’라는 모토를 내걸고 새롭고 신선한 상품과 이용자 중심의 서비스를 제공하여 하루를 충전하고 일상의 활력을 얻는 생활 속 쉼터를 지향하고 있습니다",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "기타",
+        "description": "로봇 바리스타가 운영하는 24시간 무인커피 판매시설.다양한 커피 및 음료를 편리하게 이용 할수 있습니다",
+        "hours": "00:00 ~ 24:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1862,
+      "dieselPrice": 1853,
+      "lpgPrice": 1214,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "쉼터",
+      "내고장특산물",
+      "편의점",
+      "열린매장(간식)",
+      "기타"
+    ],
+    "latitude": 37.8087,
+    "longitude": 128.7372
+  },
+  {
+    "slug": "chiag-both",
+    "name": "치악휴게소",
+    "direction": "양방향",
+    "directionName": "춘천방향",
+    "highwaySlug": "jungang",
+    "highwayName": "중앙고속도로",
+    "locationKm": 346,
+    "signatureMenu": {
+      "name": "우동따로 알밥따로",
+      "price": 9000,
+      "description": "얼큰한 우동국물과 씹을 때 톡톡 터지는 식감이 매우 좋음",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "치악산큰송이뽕잎밥",
         "price": 9500
@@ -16393,8 +19097,16 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9500
       },
       {
+        "name": "등심돈가스",
+        "price": 10000
+      },
+      {
         "name": "치악산큰송이 제육덮밥",
         "price": 7000
+      },
+      {
+        "name": "봉화산설렁탕",
+        "price": 11000
       },
       {
         "name": "봉화산우거지설렁탕",
@@ -16419,6 +19131,10 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "유부우동",
         "price": 5500
+      },
+      {
+        "name": "꼬치어묵우동",
+        "price": 7500
       },
       {
         "name": "김치찌개",
@@ -16463,34 +19179,14 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
-        "name": "로띠번",
-        "description": "신선하고 엄선된 최상의 재료만을 사용하여 국내산 수제 버터필링 기법으로 만든 도우를 발효시켜 그윽한 모카향 크림토핑을 해서 오븐에서 갓 구워낸 부드럽고 후레쉬한 모카향이 가득한 번",
-        "hours": "07:30 ~ 19:30"
-      },
-      {
-        "name": "파스쿠찌",
-        "description": "파스쿠찌(Pascucci)는 이탈리아 전통 커피 문화를 바탕으로 한 프리미엄 커피 브랜드입니다. 고급 원두와 정통 에스프레소 추출 방식으로 깊고 진한 커피 맛을 선사합니다. 유럽 감성의 세련된 인테리어와 다양한 음료·디저트 메뉴로 고객에게 편안한 휴식 공간을 제공합니다.",
-        "hours": "07:30 ~ 19:30"
-      },
-      {
-        "name": "투썸플레이스",
-        "description": "섬세한 디테일이 만드는 커피 맛의 차이. 이것이 바로 투썸 커피만의 Small Indulgence(작은 사치) 입니다. 거기에, 다양한 커피마다 최적으로 어울리는 색다른 디저트까지 나만의 즐거움을 만날 수 있는 프리미엄 디저트 카페 투썸플레이스입니다",
-        "hours": "07:30 ~ 19:30"
-      },
-      {
-        "name": "CU",
-        "description": "순수 국내 브랜드 CU는 21세기 한국형 편의점을 지향하며 고객의 니즈에 능동적으로 대응하기 위해 BGF 리테일에서 지난 30여 년간 쌓아온 노하우를 바탕으로 만든 새로운 편의점 모델입니다. ‘Fresh & Refresh’라는 모토를 내걸고 새롭고 신선한 상품과 이용자 중심의 서비스를 제공하여 하루를 충전하고 일상의 활력을 얻는 생활 속 쉼터를 지향하고 있습니다",
-        "hours": "00:00 ~ 24:00"
-      },
-      {
-        "name": "기타",
-        "description": "로봇 바리스타가 운영하는 24시간 무인커피 판매시설.다양한 커피 및 음료를 편리하게 이용 할수 있습니다",
-        "hours": "00:00 ~ 24:00"
-      },
-      {
         "name": "할리스커피",
         "description": "로스팅 후 숙성과정을 거쳐 7~30일 사이에 가장깊고 풍부한 커피 본연의 맛으로 제공합니다.",
         "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "로띠번",
+        "description": "로띠번, 크림치즈번, 커피, 차",
+        "hours": "08:00 ~ 19:30"
       }
     ],
     "gasStation": {
@@ -16498,30 +19194,26 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1862,
       "dieselPrice": 1853,
       "lpgPrice": 1214,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
       "수유실",
-      "쉼터",
       "내고장특산물",
-      "편의점",
-      "열린매장(간식)",
-      "기타",
       "ATM"
     ],
-    "latitude": 37.6069,
-    "longitude": 128.8373
+    "latitude": 37.6658,
+    "longitude": 128.7531
   },
   {
-    "slug": "danyangpalgyeong",
+    "slug": "danyangpalgyeong-both",
     "name": "단양팔경휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (부산/춘천)",
+    "directionName": "춘천방향",
     "highwaySlug": "jungang",
     "highwayName": "중앙고속도로",
-    "locationKm": 94,
+    "locationKm": 353,
     "signatureMenu": {
       "name": "마늘 왕 돈가스",
       "price": 11000,
@@ -16572,11 +19264,46 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "황태해장국",
         "price": 8000
-      },
+      }
+    ],
+    "brandStores": [
       {
-        "name": "새뱅이해물순두부찌개",
-        "price": 9000
-      },
+        "name": "이마트24",
+        "description": "06:00~22:00(유인운영), 22:00~06:00(무인운영)",
+        "hours": "00:00 ~ 24:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1849,
+      "dieselPrice": 1848,
+      "lpgPrice": 1172,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "ATM"
+    ],
+    "latitude": 37.2639,
+    "longitude": 127.5243
+  },
+  {
+    "slug": "danyangpalgyeong-busan",
+    "name": "단양팔경휴게소",
+    "direction": "하행",
+    "directionName": "부산방향",
+    "highwaySlug": "jungang",
+    "highwayName": "중앙고속도로",
+    "locationKm": 10,
+    "signatureMenu": {
+      "name": "새뱅이해물순두부찌개",
+      "price": 9000,
+      "description": "충청도 특유의 민물새우인 새뱅이와 액젓과 각종 조미료를 사용하여 만든 특제 양념을 곁들인 순두부찌개",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "소고기국밥",
         "price": 9000
@@ -16618,6 +19345,10 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6000
       },
       {
+        "name": "금강설렁탕",
+        "price": 11000
+      },
+      {
         "name": "금강살코기설렁탕",
         "price": 11000
       },
@@ -16628,11 +19359,6 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
-        "name": "이마트24",
-        "description": "06:00~22:00(유인운영), 22:00~06:00(무인운영)",
-        "hours": "00:00 ~ 24:00"
-      },
-      {
         "name": "할리스커피",
         "description": "아메리카노, 라떼, 카푸치노, 시그니처 라떼(바닐라 딜라이트)",
         "hours": "07:30 ~ 19:00"
@@ -16640,29 +19366,29 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1843,
-      "dieselPrice": 1840,
-      "lpgPrice": 1193,
+      "gasolinePrice": 1837,
+      "dieselPrice": 1832,
+      "lpgPrice": 1213,
       "hasEvCharger": true,
-      "evChargersCount": 4,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
       "수유실",
-      "ATM",
-      "내고장특산물"
+      "내고장특산물",
+      "ATM"
     ],
-    "latitude": 37.3029,
-    "longitude": 127.6193
+    "latitude": 37.3378,
+    "longitude": 127.6476
   },
   {
-    "slug": "andong",
+    "slug": "andong-busan",
     "name": "안동휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (부산/춘천)",
+    "direction": "하행",
+    "directionName": "부산방향",
     "highwaySlug": "jungang",
     "highwayName": "중앙고속도로",
-    "locationKm": 101,
+    "locationKm": 17,
     "signatureMenu": {
       "name": "이동삼안동간고등어정식",
       "price": 12000,
@@ -16717,14 +19443,81 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "(실속) 쇠고기미역국",
         "price": 7000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "이마트24",
+        "description": "PM 22:00~ AM 07:00 까지 무인운영시간입니다.",
+        "hours": "00:00 ~ 24:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1849,
+      "dieselPrice": 1848,
+      "lpgPrice": 1172,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "쉼터",
+      "내고장특산물",
+      "ATM",
+      "편의점",
+      "기타"
+    ],
+    "latitude": 36.6438,
+    "longitude": 128.6394
+  },
+  {
+    "slug": "andong-both",
+    "name": "안동휴게소",
+    "direction": "양방향",
+    "directionName": "춘천방향",
+    "highwaySlug": "jungang",
+    "highwayName": "중앙고속도로",
+    "locationKm": 24,
+    "signatureMenu": {
+      "name": "이동삼안동간고등어정식",
+      "price": 12000,
+      "description": "예로 부터 안동간고등어가 유명해진 이유가있다. 안동은 바다가 먼 산간지방이다 보니 생선을 구해 먹기가 어려웠다고 한다. 그러면서 소금간을 해서 저장을 할 수 밖에 없었는데 자연스럽게 고등어 간을 잘하게 되었고 간잽이라는 명칭까지 생기면서 전문 간잽이로 이동삼씨가 유명해진걸로 알려져 있다. 지금은 고인이 되셨지만 그 명맥을 이어 이동삼안동간고등어라는 브랜드로 자리잡고 유통이 되고 있다. 예전 자반고등어처럼 간이 쎄지 않으며 적절한 간조절과 초벌없이 화덕에 고온으로 갓 구워낸 고등어와 따뜻한 흰쌀밥과 먹었을때 그 풍미가 더한다.",
+      "isExFood": true
+    },
+    "otherMenus": [
+      {
+        "name": "대왕돈가스",
+        "price": 11000
       },
       {
         "name": "등심 돈가스",
         "price": 9500
       },
       {
+        "name": "유부우동",
+        "price": 5500
+      },
+      {
         "name": "어묵우동",
         "price": 6000
+      },
+      {
+        "name": "부대찌개",
+        "price": 9000
+      },
+      {
+        "name": "나드리 쫄면",
+        "price": 8000
+      },
+      {
+        "name": "나드리 간쫄면",
+        "price": 8000
+      },
+      {
+        "name": "그냥라면",
+        "price": 3500
       },
       {
         "name": "차돌된장찌개",
@@ -16762,38 +19555,37 @@ export const serviceAreas: ServiceArea[] = [
     "brandStores": [
       {
         "name": "이마트24",
-        "description": "PM 22:00~ AM 07:00 까지 무인운영시간입니다.",
+        "description": "PM 22:00~ AM 08:00 까지 무인운영시간입니다.",
         "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1849,
-      "dieselPrice": 1848,
-      "lpgPrice": 1172,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
       "수유실",
       "쉼터",
-      "내고장특산물",
       "ATM",
       "편의점",
       "기타"
     ],
-    "latitude": 36.6011,
-    "longitude": 128.6535
+    "latitude": 36.7252,
+    "longitude": 128.5208
   },
   {
-    "slug": "gunwi",
+    "slug": "gunwi-busan",
     "name": "군위휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (부산/춘천)",
+    "direction": "하행",
+    "directionName": "부산방향",
     "highwaySlug": "jungang",
     "highwayName": "중앙고속도로",
-    "locationKm": 108,
+    "locationKm": 31,
     "signatureMenu": {
       "name": "대구 파육개장",
       "price": 10000,
@@ -16900,26 +19692,6 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "삼양추어탕",
         "price": 10000
-      },
-      {
-        "name": "간고등어구이정식",
-        "price": 12000
-      },
-      {
-        "name": "시골 비빔밥",
-        "price": 9000
-      },
-      {
-        "name": "표고버섯 된장찌개",
-        "price": 9500
-      },
-      {
-        "name": "EX 라면",
-        "price": 4000
-      },
-      {
-        "name": "점보 유부우동",
-        "price": 7500
       }
     ],
     "brandStores": [
@@ -16931,11 +19703,11 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1627,
-      "dieselPrice": 1448,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": true,
-      "evChargersCount": 6,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
       "hasHydrogen": false
     },
     "facilities": [
@@ -16944,20 +19716,161 @@ export const serviceAreas: ServiceArea[] = [
       "내고장특산물",
       "ATM",
       "편의점",
+      "열린매장(간식)"
+    ],
+    "latitude": 35.9645,
+    "longitude": 128.4841
+  },
+  {
+    "slug": "gunwi-both",
+    "name": "군위휴게소",
+    "direction": "양방향",
+    "directionName": "춘천방향",
+    "highwaySlug": "jungang",
+    "highwayName": "중앙고속도로",
+    "locationKm": 38,
+    "signatureMenu": {
+      "name": "간고등어구이정식",
+      "price": 12000,
+      "description": "그릴에 노릇하게 구운 간고등어구이 정식",
+      "isExFood": true
+    },
+    "otherMenus": [
+      {
+        "name": "대구 파육개장",
+        "price": 10000
+      },
+      {
+        "name": "의성마늘 돈가스",
+        "price": 10000
+      },
+      {
+        "name": "시골 비빔밥",
+        "price": 9000
+      },
+      {
+        "name": "표고버섯 된장찌개",
+        "price": 9500
+      },
+      {
+        "name": "맑은 순두부",
+        "price": 7000
+      },
+      {
+        "name": "의성마늘라면",
+        "price": 5000
+      },
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "짜장면",
+        "price": 6500
+      },
+      {
+        "name": "유부우동",
+        "price": 5500
+      },
+      {
+        "name": "돌솥비빔밥",
+        "price": 10000
+      },
+      {
+        "name": "오모가리 김치찌개",
+        "price": 9500
+      },
+      {
+        "name": "의성마늘 왕돈가스",
+        "price": 11000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 9000
+      },
+      {
+        "name": "EX 라면",
+        "price": 4000
+      },
+      {
+        "name": "충무김밥",
+        "price": 5500
+      },
+      {
+        "name": "짬뽕",
+        "price": 7500
+      },
+      {
+        "name": "매운짬뽕",
+        "price": 8000
+      },
+      {
+        "name": "당면짬뽕밥",
+        "price": 8500
+      },
+      {
+        "name": "제비원 된장국",
+        "price": 7000
+      },
+      {
+        "name": "의성마늘라면 콤보세트",
+        "price": 7500
+      },
+      {
+        "name": "냉모밀",
+        "price": 7500
+      },
+      {
+        "name": "의성마늘 하프돈가스",
+        "price": 7000
+      },
+      {
+        "name": "매콤숙주라면",
+        "price": 6000
+      },
+      {
+        "name": "삼양추어탕",
+        "price": 10000
+      },
+      {
+        "name": "점보 유부우동",
+        "price": 7500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:00 ~ 19:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "ATM",
+      "편의점",
       "열린매장(간식)",
       "기타"
     ],
-    "latitude": 36.0091,
-    "longitude": 128.6602
+    "latitude": 36.5278,
+    "longitude": 128.3636
   },
   {
-    "slug": "donghae",
+    "slug": "donghae-both",
     "name": "동해휴게소",
     "direction": "양방향",
     "directionName": "삼척방향",
     "highwaySlug": "donghae",
     "highwayName": "동해고속도로",
-    "locationKm": 115,
+    "locationKm": 45,
     "signatureMenu": {
       "name": "가배만쥬,강릉 단오빵",
       "price": 12000,
@@ -17198,29 +20111,29 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1859,
-      "dieselPrice": 1854,
-      "lpgPrice": 1229,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
-      "hasHydrogen": false
+      "hasHydrogen": true
     },
     "facilities": [
       "수유실",
       "편의점"
     ],
-    "latitude": 37.8758,
-    "longitude": 128.7916
+    "latitude": 37.6062,
+    "longitude": 128.8399
   },
   {
-    "slug": "jangyu",
+    "slug": "jangyu-both",
     "name": "장유휴게소",
     "direction": "양방향",
     "directionName": "서부산방향",
     "highwaySlug": "namhae-branch-2",
     "highwayName": "남해제2지선고속도로",
-    "locationKm": 122,
+    "locationKm": 52,
     "signatureMenu": {
       "name": "통영해물순두부찌개",
       "price": 8500,
@@ -17354,12 +20267,12 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1849,
-      "dieselPrice": 1839,
-      "lpgPrice": 1217,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 8,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -17368,17 +20281,17 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "휴게소의원"
     ],
-    "latitude": 35.2343,
-    "longitude": 128.5426
+    "latitude": 35.1292,
+    "longitude": 128.7955
   },
   {
-    "slug": "beolgog",
+    "slug": "beolgog-both",
     "name": "벌곡휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (논산/대전)",
+    "directionName": "대전방향",
     "highwaySlug": "honam-branch",
     "highwayName": "호남고속도로지선",
-    "locationKm": 129,
+    "locationKm": 59,
     "signatureMenu": {
       "name": "떡라면",
       "price": 6000,
@@ -17481,11 +20394,51 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "콩나물라면세트(유부초밥)",
         "price": 8500
-      },
+      }
+    ],
+    "brandStores": [
       {
-        "name": "남도시래기국밥",
-        "price": 9000
-      },
+        "name": "엔제리너스",
+        "description": "유명브랜드 커피 매장인 엔제리너스를 아침8시 부터 저녁 8시까지 운영하고 있으며 커피 향이 뛰어나 마니아 단골 고객층을 확보하고 있으며 시중과 동일하게 할인제도를 운영하여 판매하고 있습니다.",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1858,
+      "dieselPrice": 1848,
+      "lpgPrice": 1189,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수면실",
+      "샤워실",
+      "세탁실",
+      "수유실",
+      "ex-화물차라운지",
+      "ATM",
+      "편의점"
+    ],
+    "latitude": 36.3781,
+    "longitude": 127.5319
+  },
+  {
+    "slug": "beolgog-both-1",
+    "name": "벌곡휴게소",
+    "direction": "양방향",
+    "directionName": "논산방향",
+    "highwaySlug": "honam-branch",
+    "highwayName": "호남고속도로지선",
+    "locationKm": 66,
+    "signatureMenu": {
+      "name": "남도시래기국밥",
+      "price": 9000,
+      "description": "자극적이지 않고 심심한듯 ... 속이 든든해지는 구수한 웰빙식품",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "벌곡닭갈비",
         "price": 13000
@@ -17495,7 +20448,23 @@ export const serviceAreas: ServiceArea[] = [
         "price": 11000
       },
       {
+        "name": "해물순두부찌개",
+        "price": 9500
+      },
+      {
         "name": "자장면",
+        "price": 6500
+      },
+      {
+        "name": "ex라면",
+        "price": 4000
+      },
+      {
+        "name": "떡라면",
+        "price": 6000
+      },
+      {
+        "name": "라면정식",
         "price": 6500
       },
       {
@@ -17543,6 +20512,10 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10000
       },
       {
+        "name": "남산왕돈까스",
+        "price": 13500
+      },
+      {
         "name": "남산매운돈까스",
         "price": 13500
       },
@@ -17552,6 +20525,10 @@ export const serviceAreas: ServiceArea[] = [
       },
       {
         "name": "곱빼기유부우동",
+        "price": 7000
+      },
+      {
+        "name": "김치우동",
         "price": 7000
       },
       {
@@ -17569,6 +20546,10 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "얼큰우동",
         "price": 6500
+      },
+      {
+        "name": "유부우동",
+        "price": 6000
       },
       {
         "name": "떡라면반반만두세트",
@@ -17601,11 +20582,6 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
-        "name": "엔제리너스",
-        "description": "유명브랜드 커피 매장인 엔제리너스를 아침8시 부터 저녁 8시까지 운영하고 있으며 커피 향이 뛰어나 마니아 단골 고객층을 확보하고 있으며 시중과 동일하게 할인제도를 운영하여 판매하고 있습니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
         "name": "파스쿠찌",
         "description": "카라멜라떼,카페아메리카노 등 고품격 커피맛과 편안한 분위기가 있는 커피전문매장입니다.",
         "hours": "07:00 ~ 19:40"
@@ -17631,31 +20607,27 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1858,
       "dieselPrice": 1848,
       "lpgPrice": 1189,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 2,
       "hasHydrogen": false
     },
     "facilities": [
-      "수면실",
-      "샤워실",
-      "세탁실",
       "수유실",
-      "ex-화물차라운지",
+      "쉼터",
       "ATM",
-      "편의점",
-      "쉼터"
+      "편의점"
     ],
-    "latitude": 36.2221,
-    "longitude": 127.3068
+    "latitude": 36.4894,
+    "longitude": 127.4408
   },
   {
-    "slug": "hyeonpung",
+    "slug": "hyeonpung-seoul",
     "name": "현풍휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (대구/창원)",
+    "direction": "상행",
+    "directionName": "대구방향",
     "highwaySlug": "jungbunaeryuk-branch",
     "highwayName": "중부내륙고속도로지선",
-    "locationKm": 136,
+    "locationKm": 73,
     "signatureMenu": {
       "name": "창녕양파제육&된장찌개",
       "price": 10000,
@@ -17830,14 +20802,65 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "완도전복갈아넣은어묵라면",
         "price": 7500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "투썸플레이스",
+        "description": "커피매장",
+        "hours": "07:00 ~ 20:30"
       },
       {
-        "name": "옛날식돼지고기김치찌개",
-        "price": 9500
+        "name": "기타",
+        "description": "CU편의점 - 스낵/음료수 및 즉석식품 판매 24시 운영중",
+        "hours": "00:00 ~ 24:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1858,
+      "dieselPrice": 1846,
+      "lpgPrice": 1258,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "ATM",
+      "편의점",
+      "열린매장(간식)",
+      "기타"
+    ],
+    "latitude": 35.9936,
+    "longitude": 128.5148
+  },
+  {
+    "slug": "hyeonpung-both",
+    "name": "현풍휴게소",
+    "direction": "양방향",
+    "directionName": "창원방향",
+    "highwaySlug": "jungbunaeryuk-branch",
+    "highwayName": "중부내륙고속도로지선",
+    "locationKm": 80,
+    "signatureMenu": {
+      "name": "옛날식돼지고기김치찌개",
+      "price": 9500,
+      "description": "옛날 시골할머니집 놀러가서 먹었던 돼지고기를 듬뿍넣어 만든 얼큰한 김치찌개",
+      "isExFood": true
+    },
+    "otherMenus": [
+      {
+        "name": "(실속) 유부우동",
+        "price": 5500
       },
       {
         "name": "(실속) EX - 라면",
         "price": 4000
+      },
+      {
+        "name": "(실속) 가정식된장찌개",
+        "price": 7000
       },
       {
         "name": "떡교자만두라면",
@@ -17848,11 +20871,35 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10000
       },
       {
+        "name": "(알뜰간식)찐옥수수2P",
+        "price": 3700
+      },
+      {
         "name": "(알뜰간식)해물바",
         "price": 3700
       },
       {
+        "name": "(알뜰간식)바삭어포",
+        "price": 3700
+      },
+      {
+        "name": "(알뜰간식)통감자",
+        "price": 3700
+      },
+      {
+        "name": "(알뜰간식)소떡소떡",
+        "price": 3700
+      },
+      {
+        "name": "(알뜰간식)꼬치어묵",
+        "price": 3700
+      },
+      {
         "name": "(알뜰간식)떡볶이",
+        "price": 3700
+      },
+      {
+        "name": "(알뜰간식)핫도그",
         "price": 3700
       },
       {
@@ -17862,6 +20909,10 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "(알뜰간식)물떡꼬치",
         "price": 3700
+      },
+      {
+        "name": "(알뜰간식)호두과자",
+        "price": 3500
       },
       {
         "name": "꼬꼬 치밥마요&우동세트",
@@ -17904,6 +20955,14 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10000
       },
       {
+        "name": "(실속) 남산등심돈까스",
+        "price": 10000
+      },
+      {
+        "name": "반반돈가스",
+        "price": 12000
+      },
+      {
         "name": "현풍모듬돈가스정식",
         "price": 15000
       },
@@ -17920,6 +20979,10 @@ export const serviceAreas: ServiceArea[] = [
         "price": 3500
       },
       {
+        "name": "꼬꼬치밥마요(추가반찬)",
+        "price": 5500
+      },
+      {
         "name": "(알뜰간식)후라이드닭고치",
         "price": 3700
       },
@@ -17930,6 +20993,18 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "(알뜰간식)델리만쥬",
         "price": 3700
+      },
+      {
+        "name": "고소한국산콩순두부찌개",
+        "price": 9000
+      },
+      {
+        "name": "(실속) 달성누룽지미역국",
+        "price": 7000
+      },
+      {
+        "name": "투뿔한우장터국밥",
+        "price": 11000
       },
       {
         "name": "창녕양파등심돈가스",
@@ -17948,55 +21023,79 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10000
       },
       {
+        "name": "살얼음동동메밀국수＆돈가스",
+        "price": 11000
+      },
+      {
+        "name": "살얼음동동메밀국수＆떡갈비",
+        "price": 10000
+      },
+      {
+        "name": "완도전복슬라이스순두부찌개",
+        "price": 7000
+      },
+      {
+        "name": "완도전복갈아넣은어묵맵우동",
+        "price": 8000
+      },
+      {
+        "name": "완도전복갈아넣은어묵우동",
+        "price": 7500
+      },
+      {
+        "name": "완도전복갈아넣은어묵라면",
+        "price": 7500
+      },
+      {
         "name": "돈까스라면정식",
         "price": 10000
       }
     ],
     "brandStores": [
       {
+        "name": "로띠번",
+        "description": "커피와 어울리는 모카, 바닐라 로띠번",
+        "hours": "07:30 ~ 19:30"
+      },
+      {
         "name": "투썸플레이스",
-        "description": "커피매장",
-        "hours": "07:00 ~ 20:30"
+        "description": "행복한 공간을 추구하는 커피전문점",
+        "hours": "07:00 ~ 20:00"
       },
       {
         "name": "기타",
         "description": "CU편의점 - 스낵/음료수 및 즉석식품 판매 24시 운영중",
         "hours": "00:00 ~ 24:00"
-      },
-      {
-        "name": "로띠번",
-        "description": "커피와 어울리는 모카, 바닐라 로띠번",
-        "hours": "07:30 ~ 19:30"
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1854,
-      "dieselPrice": 1843,
-      "lpgPrice": 1238,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 10,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
       "수유실",
+      "내고장특산물",
       "ATM",
       "편의점",
       "열린매장(간식)",
-      "기타",
-      "내고장특산물"
+      "기타"
     ],
-    "latitude": 35.7364,
-    "longitude": 128.6674
+    "latitude": 35.8645,
+    "longitude": 128.4515
   },
   {
-    "slug": "dongmyeong",
+    "slug": "dongmyeong-busan",
     "name": "동명휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (부산/춘천)",
+    "direction": "하행",
+    "directionName": "부산방향",
     "highwaySlug": "jungang",
     "highwayName": "중앙고속도로",
-    "locationKm": 143,
+    "locationKm": 87,
     "signatureMenu": {
       "name": "해물순두부찌개",
       "price": 9000,
@@ -18167,10 +21266,56 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "김치말이냉국수",
         "price": 7500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "탐앤탐스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "09:00 ~ 21:00"
       },
       {
-        "name": "돌솥비빔밥 된장찌개",
-        "price": 11000
+        "name": "CU",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 00:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "ATM",
+      "편의점",
+      "열린매장(간식)"
+    ],
+    "latitude": 36.4463,
+    "longitude": 128.4302
+  },
+  {
+    "slug": "dongmyeong-both",
+    "name": "동명휴게소",
+    "direction": "양방향",
+    "directionName": "춘천방향",
+    "highwaySlug": "jungang",
+    "highwayName": "중앙고속도로",
+    "locationKm": 94,
+    "signatureMenu": {
+      "name": "돌솥비빔밥 된장찌개",
+      "price": 11000,
+      "description": "따끈한 돌솥비빔밥과 얼큰하고 짭조름한 된장찌개가 한상차림으로 구성된 메뉴 입니다. 드신 고개님들의 반응이 매우 좋은 메뉴 입니다. 강추 합니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
+      {
+        "name": "치즈돈가스",
+        "price": 10500
       },
       {
         "name": "뚝배기불고기",
@@ -18181,6 +21326,10 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9500
       },
       {
+        "name": "해물순두부찌개",
+        "price": 9000
+      },
+      {
         "name": "(실속)된장찌개",
         "price": 7000
       },
@@ -18189,8 +21338,20 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10000
       },
       {
+        "name": "유부우동",
+        "price": 6000
+      },
+      {
         "name": "어묵우동",
         "price": 7500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "충무김밥",
+        "price": 5500
       },
       {
         "name": "(실속) ex-라면(4000)",
@@ -18215,6 +21376,10 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "우동/충무세트",
         "price": 8500
+      },
+      {
+        "name": "돈가스우동세트",
+        "price": 11000
       },
       {
         "name": "콩불고기된장정식(비건푸드한상)",
@@ -18273,6 +21438,10 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10000
       },
       {
+        "name": "대왕돈가스",
+        "price": 12000
+      },
+      {
         "name": "쫄면군만두세트(매운맛)",
         "price": 11000
       },
@@ -18285,17 +21454,17 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "탐앤탐스",
         "description": "입점 브랜드 매장입니다.",
-        "hours": "09:00 ~ 21:00"
-      },
-      {
-        "name": "CU",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "00:00 ~ 00:00"
+        "hours": "07:00 ~ 19:00"
       },
       {
         "name": "드롭탑(커피전문점)",
         "description": "입점 브랜드 매장입니다.",
         "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 24:00"
       },
       {
         "name": "팬텀",
@@ -18305,30 +21474,28 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1609,
-      "dieselPrice": 1436,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
       "수유실",
-      "ATM",
-      "편의점",
-      "열린매장(간식)"
+      "ATM"
     ],
-    "latitude": 36.5588,
-    "longitude": 128.6546
+    "latitude": 36.4425,
+    "longitude": 128.574
   },
   {
-    "slug": "hongseong",
+    "slug": "hongseong-seoul",
     "name": "홍성휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (목포/서울)",
+    "direction": "상행",
+    "directionName": "서울방향",
     "highwaySlug": "seohaean",
     "highwayName": "서해안고속도로",
-    "locationKm": 150,
+    "locationKm": 101,
     "signatureMenu": {
       "name": "소고기국밥",
       "price": 10000,
@@ -18411,14 +21578,112 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "꼬치어묵우동 곱배기",
         "price": 8000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:00 ~ 19:00"
       },
+      {
+        "name": "CU",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 24:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "쉼터",
+      "ATM",
+      "편의점"
+    ],
+    "latitude": 37.3992,
+    "longitude": 127.6676
+  },
+  {
+    "slug": "hongseong-busan",
+    "name": "홍성휴게소",
+    "direction": "하행",
+    "directionName": "목포방향",
+    "highwaySlug": "seohaean",
+    "highwayName": "서해안고속도로",
+    "locationKm": 108,
+    "signatureMenu": {
+      "name": "소고기국밥",
+      "price": 10000,
+      "description": "한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "돼지고김치찌개",
         "price": 9000
       },
       {
+        "name": "(실속)된장찌개",
+        "price": 7000
+      },
+      {
+        "name": "제육덮밥",
+        "price": 9000
+      },
+      {
+        "name": "통등심돈가스",
+        "price": 10000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 11000
+      },
+      {
+        "name": "(실속)유부우동",
+        "price": 5500
+      },
+      {
+        "name": "꼬치어묵우동",
+        "price": 7000
+      },
+      {
+        "name": "EX-라면",
+        "price": 4000
+      },
+      {
+        "name": "떡만두라면",
+        "price": 5500
+      },
+      {
         "name": "짜장면",
         "price": 6000
+      },
+      {
+        "name": "어묵라면",
+        "price": 5000
+      },
+      {
+        "name": "야채튀김우동",
+        "price": 7000
+      },
+      {
+        "name": "돌솥비빔밥",
+        "price": 9000
+      },
+      {
+        "name": "해물순두부찌개",
+        "price": 9000
+      },
+      {
+        "name": "불고기비빔밥",
+        "price": 10000
       },
       {
         "name": "햄부대찌개",
@@ -18427,6 +21692,14 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "햄치즈부대찌개",
         "price": 10500
+      },
+      {
+        "name": "(실속)북어미역국",
+        "price": 7000
+      },
+      {
+        "name": "꼬치어묵우동 곱배기",
+        "price": 8000
       }
     ],
     "brandStores": [
@@ -18443,11 +21716,11 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1848,
-      "dieselPrice": 1841,
+      "gasolinePrice": 1837,
+      "dieselPrice": 1833,
       "lpgPrice": 1155,
       "hasEvCharger": true,
-      "evChargersCount": 12,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -18456,17 +21729,17 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "편의점"
     ],
-    "latitude": 37.5299,
-    "longitude": 127.6133
+    "latitude": 36.4681,
+    "longitude": 127.4774
   },
   {
-    "slug": "yeongcheon",
+    "slug": "yeongcheon-seoul",
     "name": "영천휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (대구/포항)",
+    "direction": "상행",
+    "directionName": "대구방향",
     "highwaySlug": "saemangeum-pohang-daegu-pohang",
     "highwayName": "새만금포항고속도로(대구포항)",
-    "locationKm": 157,
+    "locationKm": 115,
     "signatureMenu": {
       "name": "영천돼지고기 짜글이",
       "price": 9000,
@@ -18545,11 +21818,56 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "(실속) 돼지김치찌개",
         "price": 7000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "탐앤탐스",
+        "description": "커피 / 음료",
+        "hours": "09:00 ~ 20:00"
       },
       {
-        "name": "돼지김치찌개",
-        "price": 9000
-      },
+        "name": "토스타토스트",
+        "description": "토스트/십원빵/델리만쥬/땅콩빵/커피/음료",
+        "hours": "09:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수면실",
+      "샤워실",
+      "수유실",
+      "ex-화물차라운지",
+      "내고장특산물",
+      "편의점",
+      "기타"
+    ],
+    "latitude": 36.7178,
+    "longitude": 128.4567
+  },
+  {
+    "slug": "yeongcheon-both",
+    "name": "영천휴게소",
+    "direction": "양방향",
+    "directionName": "포항방향",
+    "highwaySlug": "saemangeum-pohang-daegu-pohang",
+    "highwayName": "새만금포항고속도로(대구포항)",
+    "locationKm": 122,
+    "signatureMenu": {
+      "name": "돼지김치찌개",
+      "price": 9000,
+      "description": "묵은지와 돼지고기가 어울리는 얼큰한 김치찌개",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "차돌박이된장찌개",
         "price": 9000
@@ -18559,12 +21877,40 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10000
       },
       {
+        "name": "치즈돈가스",
+        "price": 11500
+      },
+      {
         "name": "김치콩나물라면",
         "price": 5500
       },
       {
+        "name": "떡만두라면",
+        "price": 6000
+      },
+      {
+        "name": "유부우동",
+        "price": 6000
+      },
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "야채튀김우동",
+        "price": 6500
+      },
+      {
+        "name": "삼송꾼만두",
+        "price": 8000
+      },
+      {
         "name": "바우네나주곰탕",
         "price": 9500
+      },
+      {
+        "name": "남원애추어탕",
+        "price": 11000
       },
       {
         "name": "(실속) 미역국",
@@ -18587,8 +21933,16 @@ export const serviceAreas: ServiceArea[] = [
         "price": 4000
       },
       {
+        "name": "(실속) 우동",
+        "price": 5500
+      },
+      {
         "name": "옹알옹알맘마(식당메뉴주문시 적용가)",
         "price": 1500
+      },
+      {
+        "name": "왕돈가스",
+        "price": 13500
       },
       {
         "name": "마늘떡갈비",
@@ -18599,45 +21953,39 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "탐앤탐스",
         "description": "커피 / 음료",
-        "hours": "09:00 ~ 20:00"
-      },
-      {
-        "name": "토스타토스트",
-        "description": "토스트/십원빵/델리만쥬/땅콩빵/커피/음료",
-        "hours": "09:00 ~ 20:00"
+        "hours": "08:00 ~ 18:50"
       }
     ],
     "gasStation": {
       "brand": "알뜰주유소",
       "gasolinePrice": 1858,
       "dieselPrice": 1848,
-      "lpgPrice": 1226,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
       "수면실",
       "샤워실",
+      "세탁실",
       "수유실",
       "ex-화물차라운지",
-      "내고장특산물",
+      "ATM",
       "편의점",
-      "기타",
-      "세탁실",
-      "ATM"
+      "기타"
     ],
-    "latitude": 36.7187,
-    "longitude": 128.4592
+    "latitude": 36.6115,
+    "longitude": 128.3599
   },
   {
-    "slug": "seocheon",
+    "slug": "seocheon-seoul",
     "name": "서천휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (목포/서울)",
+    "direction": "상행",
+    "directionName": "서울방향",
     "highwaySlug": "seohaean",
     "highwayName": "서해안고속도로",
-    "locationKm": 164,
+    "locationKm": 129,
     "signatureMenu": {
       "name": "(실속)돈가스",
       "price": 10000,
@@ -18728,11 +22076,54 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "소고기스지국밥",
         "price": 12000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "용우동",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
       },
       {
-        "name": "된장찌개",
-        "price": 7000
-      },
+        "name": "드롭탑(커피전문점)",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "ATM",
+      "편의점",
+      "열린매장(간식)",
+      "기타"
+    ],
+    "latitude": 36.2469,
+    "longitude": 127.2759
+  },
+  {
+    "slug": "seocheon-busan",
+    "name": "서천휴게소",
+    "direction": "하행",
+    "directionName": "목포방향",
+    "highwaySlug": "seohaean",
+    "highwayName": "서해안고속도로",
+    "locationKm": 136,
+    "signatureMenu": {
+      "name": "된장찌개",
+      "price": 7000,
+      "description": "실속메뉴로 저렴한 가격으로 드실수있는 식사메뉴 입니다",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "등심돈가스",
         "price": 10000
@@ -18800,17 +22191,12 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
-        "name": "용우동",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "드롭탑(커피전문점)",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
         "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:30 ~ 19:30"
+      },
+      {
+        "name": "용우동",
         "description": "입점 브랜드 매장입니다.",
         "hours": "07:30 ~ 19:30"
       },
@@ -18829,29 +22215,27 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1864,
       "dieselPrice": 1853,
-      "lpgPrice": 1228,
+      "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 2,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
       "수유실",
       "ATM",
-      "편의점",
-      "열린매장(간식)",
-      "기타"
+      "편의점"
     ],
-    "latitude": 36.3885,
-    "longitude": 127.2394
+    "latitude": 36.2031,
+    "longitude": 127.4129
   },
   {
-    "slug": "gujeong",
+    "slug": "gujeong-both",
     "name": "구정휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (삼척/속초)",
+    "directionName": "삼척방향",
     "highwaySlug": "donghae",
     "highwayName": "동해고속도로",
-    "locationKm": 171,
+    "locationKm": 143,
     "signatureMenu": {
       "name": "육개장",
       "price": 11000,
@@ -18898,10 +22282,597 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "김치찌개",
         "price": 11000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "탐앤탐스",
+        "description": "매장내 위치",
+        "hours": "07:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "ATM",
+      "편의점"
+    ],
+    "latitude": 37.6961,
+    "longitude": 129.0153
+  },
+  {
+    "slug": "mungyeong-both",
+    "name": "문경휴게소",
+    "direction": "양방향",
+    "directionName": "양평방향",
+    "highwaySlug": "jungbunaeryuk",
+    "highwayName": "중부내륙고속도로",
+    "locationKm": 150,
+    "signatureMenu": {
+      "name": "오미자제육볶음",
+      "price": 11000,
+      "description": "한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
+      {
+        "name": "소고기국밥",
+        "price": 9500
       },
       {
-        "name": "황태해장국",
+        "name": "순두부찌개",
+        "price": 9500
+      },
+      {
+        "name": "실속 된장찌개",
+        "price": 7000
+      },
+      {
+        "name": "모듬가스",
+        "price": 13000
+      },
+      {
+        "name": "짜장면",
+        "price": 6500
+      },
+      {
+        "name": "김치우동나베",
+        "price": 7500
+      },
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "유부우동",
+        "price": 6000
+      },
+      {
+        "name": "떡만두라면",
+        "price": 6000
+      },
+      {
+        "name": "ex라면",
+        "price": 4000
+      },
+      {
+        "name": "얼큰돼지김치찌개",
+        "price": 9000
+      },
+      {
+        "name": "흑돼지치즈돈가스",
+        "price": 11000
+      },
+      {
+        "name": "흑돼지돈가스",
+        "price": 10000
+      },
+      {
+        "name": "더덕비빔밥",
+        "price": 9500
+      },
+      {
+        "name": "꼬치어묵라면",
+        "price": 6000
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "빵류(번 판매)",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "커피, 음료 판매",
+        "hours": "07:30 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1839,
+      "dieselPrice": 1828,
+      "lpgPrice": 1167,
+      "hasEvCharger": true,
+      "evChargersCount": 2,
+      "hasHydrogen": true
+    },
+    "facilities": [
+      "수면실",
+      "샤워실",
+      "세탁실",
+      "수유실",
+      "쉼터",
+      "ex-화물차라운지",
+      "내고장특산물",
+      "ATM"
+    ],
+    "latitude": 36.6631,
+    "longitude": 128.6277
+  },
+  {
+    "slug": "hampyeongnabi-busan",
+    "name": "함평나비휴게소",
+    "direction": "하행",
+    "directionName": "광주방향",
+    "highwaySlug": "muan-gwangju",
+    "highwayName": "무안광주고속도로",
+    "locationKm": 157,
+    "signatureMenu": {
+      "name": "양짜덮밥(실속상품)",
+      "price": 7000,
+      "description": "저렴한 가격과 쉽게 구할수 있는 식재료로서 원기회복에도 매우 좋고 혈당치를 낮춰주는 우리나라 음식의 대표적인 양념채소중 하나로 지방을 녹여주고 지방합성효소를 억제하는 성분을 가지고 있는 함평군의 특산물인 양파를 활용하여 개발한 음식으로 양파의 효능인 다이어트효과, 생리통완화 및 혈관질환예방, 불면증완화, 콜레스테롤완화, 체력보강등에 도움이 되는 식재료이다. 또한 자장소스의 느끼한 맛을 양파의 매운맛과 단맛으로 배가 되는 누구나 즐길수 있는 음식이다.",
+      "isExFood": true
+    },
+    "otherMenus": [
+      {
+        "name": "등심돈가스(실속상품)",
+        "price": 10000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 11500
+      },
+      {
+        "name": "자장면",
+        "price": 6000
+      },
+      {
+        "name": "꼬치어묵우동",
+        "price": 7000
+      },
+      {
+        "name": "ex라면(실속상품)",
+        "price": 4000
+      },
+      {
+        "name": "만두라면",
+        "price": 4500
+      },
+      {
+        "name": "콩나물김치라면",
+        "price": 5000
+      },
+      {
+        "name": "만두국",
+        "price": 9000
+      },
+      {
+        "name": "군만두",
+        "price": 8500
+      },
+      {
+        "name": "우동(실속상품)",
+        "price": 5500
+      },
+      {
+        "name": "등심돈가스+사이다",
+        "price": 11000
+      },
+      {
+        "name": "치즈돈가스+사이다",
+        "price": 12500
+      },
+      {
+        "name": "뚝배기불고기",
+        "price": 11000
+      },
+      {
+        "name": "한솥김치찌개",
+        "price": 10000
+      },
+      {
+        "name": "냄비김치우동",
+        "price": 8000
+      },
+      {
+        "name": "대파육개장",
+        "price": 11000
+      },
+      {
+        "name": "공기밥",
+        "price": 1000
+      },
+      {
+        "name": "나비스도시락",
+        "price": 7000
+      },
+      {
+        "name": "왕돈가스",
         "price": 12000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "명품맛집(통만두집)",
+        "hours": "11:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "쉼터",
+      "ATM",
+      "편의점",
+      "열린매장(간식)",
+      "기타"
+    ],
+    "latitude": 34.9659,
+    "longitude": 126.4556
+  },
+  {
+    "slug": "hampyeongnabi-both",
+    "name": "함평나비휴게소",
+    "direction": "양방향",
+    "directionName": "무안방향",
+    "highwaySlug": "muan-gwangju",
+    "highwayName": "무안광주고속도로",
+    "locationKm": 164,
+    "signatureMenu": {
+      "name": "가마솥김치찌개",
+      "price": 10000,
+      "description": "한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
+      {
+        "name": "자장면",
+        "price": 6000
+      },
+      {
+        "name": "(실속) EX라면",
+        "price": 4000
+      },
+      {
+        "name": "(실속) 등심돈가스",
+        "price": 10000
+      },
+      {
+        "name": "콩나물김치라면",
+        "price": 5000
+      },
+      {
+        "name": "꼬치어묵우동",
+        "price": 7000
+      },
+      {
+        "name": "계란떡라면",
+        "price": 5000
+      },
+      {
+        "name": "(실속) 양짜덮밥",
+        "price": 7000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 11500
+      },
+      {
+        "name": "냄비김치우동",
+        "price": 8000
+      },
+      {
+        "name": "군만두",
+        "price": 8500
+      },
+      {
+        "name": "만두국",
+        "price": 9000
+      },
+      {
+        "name": "실속우동",
+        "price": 5500
+      },
+      {
+        "name": "육개장",
+        "price": 11000
+      },
+      {
+        "name": "낙돼불패",
+        "price": 13000
+      },
+      {
+        "name": "왕돈가스",
+        "price": 12000
+      },
+      {
+        "name": "청국장찌개+비빔밥",
+        "price": 12000
+      },
+      {
+        "name": "낙돼도시락",
+        "price": 7000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "2023.11.27일 오픈",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1864,
+      "dieselPrice": 1853,
+      "lpgPrice": 1261,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "쉼터",
+      "ATM",
+      "편의점",
+      "기타"
+    ],
+    "latitude": 34.8909,
+    "longitude": 126.3329
+  },
+  {
+    "slug": "mungyeong-both-1",
+    "name": "문경휴게소",
+    "direction": "양방향",
+    "directionName": "창원방향",
+    "highwaySlug": "jungbunaeryuk",
+    "highwayName": "중부내륙고속도로",
+    "locationKm": 171,
+    "signatureMenu": {
+      "name": "문경약돌돼지김치찌개",
+      "price": 9500,
+      "description": "국내산 '문경약돌돼지'와 국내산 김치를 사용해서 만든 문경휴게소 대표 메뉴입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
+      {
+        "name": "신)자장면",
+        "price": 7000
+      },
+      {
+        "name": "ex라면",
+        "price": 4000
+      },
+      {
+        "name": "(나드리)쫄면",
+        "price": 8000
+      },
+      {
+        "name": "얼큰해장순두부라면",
+        "price": 6500
+      },
+      {
+        "name": "순우동",
+        "price": 5500
+      },
+      {
+        "name": "실속)된장찌개",
+        "price": 7000
+      },
+      {
+        "name": "실속)들깨미역국",
+        "price": 7000
+      },
+      {
+        "name": "매콤고추장돼지불고기",
+        "price": 10000
+      },
+      {
+        "name": "곤드레새싹비빔밥",
+        "price": 9000
+      },
+      {
+        "name": "소고기우거지국밥",
+        "price": 9500
+      },
+      {
+        "name": "문경오미자등심돈가스",
+        "price": 10000
+      },
+      {
+        "name": "(신)자장면+볶음밥 소형",
+        "price": 10500
+      },
+      {
+        "name": "(신)귀신짬뽕+볶음밥소형",
+        "price": 12500
+      },
+      {
+        "name": "당면짬뽕밥",
+        "price": 9000
+      },
+      {
+        "name": "(신)귀신짬뽕",
+        "price": 9000
+      },
+      {
+        "name": "야채볶음밥",
+        "price": 7500
+      },
+      {
+        "name": "공기밥추가",
+        "price": 1000
+      },
+      {
+        "name": "꼬치어묵우동",
+        "price": 7000
+      },
+      {
+        "name": "유부우동충무김밥세트",
+        "price": 11000
+      },
+      {
+        "name": "충무김밥(우동)",
+        "price": 5500
+      },
+      {
+        "name": "농심잔치국수",
+        "price": 6000
+      },
+      {
+        "name": "유부우동",
+        "price": 6000
+      },
+      {
+        "name": "어묵라면",
+        "price": 5500
+      },
+      {
+        "name": "충무김밥",
+        "price": 5500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "명인/고기만두 8ea",
+        "price": 6000
+      },
+      {
+        "name": "(나드리)간쫄면",
+        "price": 8000
+      },
+      {
+        "name": "(나드리)쫄면미니돈가스SET",
+        "price": 13500
+      },
+      {
+        "name": "(나드리)간쫄면미니돈가스SET",
+        "price": 13500
+      },
+      {
+        "name": "문경오미자치즈돈가스",
+        "price": 11000
+      },
+      {
+        "name": "떡라면충무김밥세트",
+        "price": 10000
+      },
+      {
+        "name": "문경오미자왕돈가스",
+        "price": 12000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "도너츠, 커피류, 음료류 판매",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "할리스커피",
+        "description": "커피전문 판매",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "로띠번",
+        "description": "번(빵류) 판매",
+        "hours": "08:00 ~ 19:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "커피전문 판매",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수면실",
+      "샤워실",
+      "세탁실",
+      "수유실",
+      "쉼터",
+      "ex-화물차라운지",
+      "내고장특산물",
+      "ATM",
+      "기타"
+    ],
+    "latitude": 36.507,
+    "longitude": 128.3724
+  },
+  {
+    "slug": "gujeong-both-1",
+    "name": "구정휴게소",
+    "direction": "양방향",
+    "directionName": "속초방향",
+    "highwaySlug": "donghae",
+    "highwayName": "동해고속도로",
+    "locationKm": 178,
+    "signatureMenu": {
+      "name": "황태해장국",
+      "price": 12000,
+      "description": "강릉 지역에서 황태를 찢어서 육수에 조개, 버섯,콩나물,두부,무 등을 넣어 끊인 해장국",
+      "isExFood": true
+    },
+    "otherMenus": [
+      {
+        "name": "육개장",
+        "price": 11000
       },
       {
         "name": "소내장탕",
@@ -18986,11 +22957,6 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
-        "name": "탐앤탐스",
-        "description": "매장내 위치",
-        "hours": "07:00 ~ 20:00"
-      },
-      {
         "name": "드롭탑(커피전문점)",
         "description": "커피",
         "hours": "08:00 ~ 19:30"
@@ -18998,445 +22964,30 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1856,
-      "dieselPrice": 1850,
+      "gasolinePrice": 1855,
+      "dieselPrice": 1845,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": false
-    },
-    "facilities": [
-      "수유실",
-      "ATM",
-      "편의점",
-      "기타"
-    ],
-    "latitude": 37.6503,
-    "longitude": 128.7656
-  },
-  {
-    "slug": "mungyeong",
-    "name": "문경휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (양평/창원)",
-    "highwaySlug": "jungbunaeryuk",
-    "highwayName": "중부내륙고속도로",
-    "locationKm": 178,
-    "signatureMenu": {
-      "name": "오미자제육볶음",
-      "price": 11000,
-      "description": "한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.",
-      "isExFood": true
-    },
-    "otherMenus": [
-      {
-        "name": "소고기국밥",
-        "price": 9500
-      },
-      {
-        "name": "순두부찌개",
-        "price": 9500
-      },
-      {
-        "name": "실속 된장찌개",
-        "price": 7000
-      },
-      {
-        "name": "모듬가스",
-        "price": 13000
-      },
-      {
-        "name": "짜장면",
-        "price": 6500
-      },
-      {
-        "name": "김치우동나베",
-        "price": 7500
-      },
-      {
-        "name": "꼬치어묵우동",
-        "price": 6500
-      },
-      {
-        "name": "유부우동",
-        "price": 6000
-      },
-      {
-        "name": "떡만두라면",
-        "price": 6000
-      },
-      {
-        "name": "ex라면",
-        "price": 4000
-      },
-      {
-        "name": "얼큰돼지김치찌개",
-        "price": 9000
-      },
-      {
-        "name": "흑돼지치즈돈가스",
-        "price": 11000
-      },
-      {
-        "name": "흑돼지돈가스",
-        "price": 10000
-      },
-      {
-        "name": "더덕비빔밥",
-        "price": 9500
-      },
-      {
-        "name": "꼬치어묵라면",
-        "price": 6000
-      },
-      {
-        "name": "떡라면",
-        "price": 5000
-      },
-      {
-        "name": "문경약돌돼지김치찌개",
-        "price": 9500
-      },
-      {
-        "name": "신)자장면",
-        "price": 7000
-      },
-      {
-        "name": "(나드리)쫄면",
-        "price": 8000
-      },
-      {
-        "name": "얼큰해장순두부라면",
-        "price": 6500
-      },
-      {
-        "name": "순우동",
-        "price": 5500
-      },
-      {
-        "name": "실속)된장찌개",
-        "price": 7000
-      },
-      {
-        "name": "실속)들깨미역국",
-        "price": 7000
-      },
-      {
-        "name": "매콤고추장돼지불고기",
-        "price": 10000
-      },
-      {
-        "name": "곤드레새싹비빔밥",
-        "price": 9000
-      },
-      {
-        "name": "소고기우거지국밥",
-        "price": 9500
-      },
-      {
-        "name": "문경오미자등심돈가스",
-        "price": 10000
-      },
-      {
-        "name": "(신)자장면+볶음밥 소형",
-        "price": 10500
-      },
-      {
-        "name": "(신)귀신짬뽕+볶음밥소형",
-        "price": 12500
-      },
-      {
-        "name": "당면짬뽕밥",
-        "price": 9000
-      },
-      {
-        "name": "(신)귀신짬뽕",
-        "price": 9000
-      },
-      {
-        "name": "야채볶음밥",
-        "price": 7500
-      },
-      {
-        "name": "공기밥추가",
-        "price": 1000
-      },
-      {
-        "name": "유부우동충무김밥세트",
-        "price": 11000
-      },
-      {
-        "name": "충무김밥(우동)",
-        "price": 5500
-      },
-      {
-        "name": "농심잔치국수",
-        "price": 6000
-      },
-      {
-        "name": "어묵라면",
-        "price": 5500
-      },
-      {
-        "name": "충무김밥",
-        "price": 5500
-      },
-      {
-        "name": "명인/고기만두 8ea",
-        "price": 6000
-      },
-      {
-        "name": "(나드리)간쫄면",
-        "price": 8000
-      },
-      {
-        "name": "(나드리)쫄면미니돈가스SET",
-        "price": 13500
-      },
-      {
-        "name": "(나드리)간쫄면미니돈가스SET",
-        "price": 13500
-      },
-      {
-        "name": "문경오미자치즈돈가스",
-        "price": 11000
-      },
-      {
-        "name": "떡라면충무김밥세트",
-        "price": 10000
-      },
-      {
-        "name": "문경오미자왕돈가스",
-        "price": 12000
-      }
-    ],
-    "brandStores": [
-      {
-        "name": "로띠번",
-        "description": "빵류(번 판매)",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "탐앤탐스",
-        "description": "커피, 음료 판매",
-        "hours": "07:30 ~ 20:00"
-      },
-      {
-        "name": "던킨도너츠",
-        "description": "도너츠, 커피류, 음료류 판매",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "할리스커피",
-        "description": "커피전문 판매",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "드롭탑(커피전문점)",
-        "description": "커피전문 판매",
-        "hours": "08:00 ~ 20:00"
-      }
-    ],
-    "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1847,
-      "dieselPrice": 1836,
-      "lpgPrice": 1204,
       "hasEvCharger": true,
-      "evChargersCount": 4,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
-      "수면실",
-      "샤워실",
-      "세탁실",
       "수유실",
-      "쉼터",
-      "ex-화물차라운지",
-      "내고장특산물",
-      "ATM",
-      "기타"
-    ],
-    "latitude": 36.4282,
-    "longitude": 128.5314
-  },
-  {
-    "slug": "hampyeongnabi",
-    "name": "함평나비휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (광주/무안)",
-    "highwaySlug": "muan-gwangju",
-    "highwayName": "무안광주고속도로",
-    "locationKm": 185,
-    "signatureMenu": {
-      "name": "양짜덮밥(실속상품)",
-      "price": 7000,
-      "description": "저렴한 가격과 쉽게 구할수 있는 식재료로서 원기회복에도 매우 좋고 혈당치를 낮춰주는 우리나라 음식의 대표적인 양념채소중 하나로 지방을 녹여주고 지방합성효소를 억제하는 성분을 가지고 있는 함평군의 특산물인 양파를 활용하여 개발한 음식으로 양파의 효능인 다이어트효과, 생리통완화 및 혈관질환예방, 불면증완화, 콜레스테롤완화, 체력보강등에 도움이 되는 식재료이다. 또한 자장소스의 느끼한 맛을 양파의 매운맛과 단맛으로 배가 되는 누구나 즐길수 있는 음식이다.",
-      "isExFood": true
-    },
-    "otherMenus": [
-      {
-        "name": "등심돈가스(실속상품)",
-        "price": 10000
-      },
-      {
-        "name": "치즈돈가스",
-        "price": 11500
-      },
-      {
-        "name": "자장면",
-        "price": 6000
-      },
-      {
-        "name": "꼬치어묵우동",
-        "price": 7000
-      },
-      {
-        "name": "ex라면(실속상품)",
-        "price": 4000
-      },
-      {
-        "name": "만두라면",
-        "price": 4500
-      },
-      {
-        "name": "콩나물김치라면",
-        "price": 5000
-      },
-      {
-        "name": "만두국",
-        "price": 9000
-      },
-      {
-        "name": "군만두",
-        "price": 8500
-      },
-      {
-        "name": "우동(실속상품)",
-        "price": 5500
-      },
-      {
-        "name": "등심돈가스+사이다",
-        "price": 11000
-      },
-      {
-        "name": "치즈돈가스+사이다",
-        "price": 12500
-      },
-      {
-        "name": "뚝배기불고기",
-        "price": 11000
-      },
-      {
-        "name": "한솥김치찌개",
-        "price": 10000
-      },
-      {
-        "name": "냄비김치우동",
-        "price": 8000
-      },
-      {
-        "name": "대파육개장",
-        "price": 11000
-      },
-      {
-        "name": "공기밥",
-        "price": 1000
-      },
-      {
-        "name": "나비스도시락",
-        "price": 7000
-      },
-      {
-        "name": "왕돈가스",
-        "price": 12000
-      },
-      {
-        "name": "(실속) EX라면",
-        "price": 4000
-      },
-      {
-        "name": "(실속) 등심돈가스",
-        "price": 10000
-      },
-      {
-        "name": "계란떡라면",
-        "price": 5000
-      },
-      {
-        "name": "(실속) 양짜덮밥",
-        "price": 7000
-      },
-      {
-        "name": "가마솥김치찌개",
-        "price": 10000
-      },
-      {
-        "name": "실속우동",
-        "price": 5500
-      },
-      {
-        "name": "육개장",
-        "price": 11000
-      },
-      {
-        "name": "낙돼불패",
-        "price": 13000
-      },
-      {
-        "name": "청국장찌개+비빔밥",
-        "price": 12000
-      },
-      {
-        "name": "낙돼도시락",
-        "price": 7000
-      }
-    ],
-    "brandStores": [
-      {
-        "name": "로띠번",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "드롭탑(커피전문점)",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "기타",
-        "description": "명품맛집(통만두집)",
-        "hours": "11:00 ~ 20:00"
-      }
-    ],
-    "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
-      "dieselPrice": 1853,
-      "lpgPrice": 1261,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": true
-    },
-    "facilities": [
-      "수유실",
-      "쉼터",
       "ATM",
       "편의점",
-      "열린매장(간식)",
       "기타"
     ],
-    "latitude": 34.7579,
-    "longitude": 126.6012
+    "latitude": 37.6024,
+    "longitude": 128.8621
   },
   {
-    "slug": "namseongjuchamoe",
+    "slug": "namseongjuchamoe-both",
     "name": "남성주참외휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (양평/창원)",
+    "directionName": "창원방향",
     "highwaySlug": "jungbunaeryuk",
     "highwayName": "중부내륙고속도로",
-    "locationKm": 192,
+    "locationKm": 185,
     "signatureMenu": {
       "name": "돼지고기김치찌개",
       "price": 9500,
@@ -19555,10 +23106,87 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "우거지꽁치찌개",
         "price": 9000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "이 즐거움을 위해 할리스커피는 1998년 국내 최초 에스프레소 커피 전문점의 문을 연 이래 지속적으로 커피 시장을 이끄는 새로운 시도를 해왔습니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "용우동",
+        "description": "27년 전통의 용우동은 ‘고객 없이는 우리도 없다’ 를 실천하고 있습니다.",
+        "hours": "06:00 ~ 21:00"
+      },
+      {
+        "name": "기타",
+        "description": "[클라이머홀릭] 의류(등산,골프웨어), 애견 용품",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수면실",
+      "샤워실",
+      "세탁실",
+      "수유실",
+      "쉼터",
+      "ex-화물차라운지",
+      "내고장특산물",
+      "ATM",
+      "편의점",
+      "기타"
+    ],
+    "latitude": 36.4836,
+    "longitude": 128.6238
+  },
+  {
+    "slug": "namseongjuchamoe-both-1",
+    "name": "남성주참외휴게소",
+    "direction": "양방향",
+    "directionName": "양평방향",
+    "highwaySlug": "jungbunaeryuk",
+    "highwayName": "중부내륙고속도로",
+    "locationKm": 192,
+    "signatureMenu": {
+      "name": "돼지고기김치찌개",
+      "price": 9500,
+      "description": "얼큰하고 매콤한 대한민국 대표메뉴 김치전골",
+      "isExFood": true
+    },
+    "otherMenus": [
+      {
+        "name": "해물순두부찌개",
+        "price": 9000
+      },
+      {
+        "name": "(실속)된장찌개",
+        "price": 7000
       },
       {
         "name": "(실속)등심돈까스",
         "price": 10000
+      },
+      {
+        "name": "(실속)용우동",
+        "price": 5500
+      },
+      {
+        "name": "EX-라면",
+        "price": 4000
+      },
+      {
+        "name": "떡라면",
+        "price": 4500
       },
       {
         "name": "곰탕)(백)진한사골곰탕",
@@ -19581,8 +23209,24 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9000
       },
       {
+        "name": "성주장터국밥",
+        "price": 9000
+      },
+      {
+        "name": "흑돼지제육덮밥",
+        "price": 9500
+      },
+      {
         "name": "평양아바이순대국밥",
         "price": 10000
+      },
+      {
+        "name": "화덕고등어구이정식",
+        "price": 11000
+      },
+      {
+        "name": "(실속)황태들깨미역국",
+        "price": 7000
       },
       {
         "name": "(실속)양푼이비빔밥",
@@ -19605,6 +23249,18 @@ export const serviceAreas: ServiceArea[] = [
         "price": 10000
       },
       {
+        "name": "(실속)어린이돈가스",
+        "price": 7000
+      },
+      {
+        "name": "고추장화덕삼겹구이",
+        "price": 12000
+      },
+      {
+        "name": "우거지꽁치찌개",
+        "price": 9000
+      },
+      {
         "name": "황태해장라면",
         "price": 6500
       }
@@ -19612,32 +23268,32 @@ export const serviceAreas: ServiceArea[] = [
     "brandStores": [
       {
         "name": "할리스커피",
-        "description": "이 즐거움을 위해 할리스커피는 1998년 국내 최초 에스프레소 커피 전문점의 문을 연 이래 지속적으로 커피 시장을 이끄는 새로운 시도를 해왔습니다.",
-        "hours": "08:00 ~ 20:00"
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:00 ~ 20:00"
       },
       {
         "name": "용우동",
-        "description": "27년 전통의 용우동은 ‘고객 없이는 우리도 없다’ 를 실천하고 있습니다.",
-        "hours": "06:00 ~ 21:00"
-      },
-      {
-        "name": "기타",
-        "description": "[클라이머홀릭] 의류(등산,골프웨어), 애견 용품",
-        "hours": "08:00 ~ 20:00"
+        "description": "용우동",
+        "hours": "10:00 ~ 18:30"
       },
       {
         "name": "클라이머홀릭",
         "description": "의류 (등산,골프웨어), 애견 용품",
         "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "평양아바이순대국밥,소미미단팥빵",
+        "hours": "09:00 ~ 20:00"
       }
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1856,
-      "dieselPrice": 1851,
+      "gasolinePrice": 1855,
+      "dieselPrice": 1853,
       "lpgPrice": 1246,
       "hasEvCharger": true,
-      "evChargersCount": 6,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -19652,11 +23308,11 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "기타"
     ],
-    "latitude": 36.6609,
-    "longitude": 128.6292
+    "latitude": 36.6255,
+    "longitude": 128.6472
   },
   {
-    "slug": "sogrisan",
+    "slug": "sogrisan-both",
     "name": "속리산휴게소",
     "direction": "양방향",
     "directionName": "청주방향",
@@ -19789,10 +23445,10 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1829,
-      "dieselPrice": 1819,
-      "lpgPrice": 1214,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
       "hasHydrogen": false
@@ -19804,11 +23460,11 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "편의점"
     ],
-    "latitude": 36.7871,
-    "longitude": 127.4851
+    "latitude": 36.7831,
+    "longitude": 127.5246
   },
   {
-    "slug": "hwaseo",
+    "slug": "hwaseo-both",
     "name": "화서휴게소",
     "direction": "양방향",
     "directionName": "영덕방향",
@@ -19888,12 +23544,12 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1879,
-      "dieselPrice": 1869,
-      "lpgPrice": 1249,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 8,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -19905,14 +23561,14 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "편의점"
     ],
-    "latitude": 36.6531,
-    "longitude": 128.3769
+    "latitude": 36.6842,
+    "longitude": 128.4017
   },
   {
-    "slug": "jinanmaisan",
+    "slug": "jinanmaisan-both",
     "name": "진안마이산휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (익산/장수)",
+    "directionName": "익산방향",
     "highwaySlug": "wanju-jangsu",
     "highwayName": "완주장수고속도로",
     "locationKm": 213,
@@ -20022,14 +23678,56 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "한신 냉우동",
         "price": 7000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "당일 갓 구운 맛있는 모카커피로띠번과 바닐라번을 맛 볼 수 있습니다.",
+        "hours": "08:00 ~ 20:00"
       },
+      {
+        "name": "달콤커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1864,
+      "dieselPrice": 1853,
+      "lpgPrice": 1216,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "편의점",
+      "휴게소의원",
+      "기타"
+    ],
+    "latitude": 35.7952,
+    "longitude": 127.0008
+  },
+  {
+    "slug": "jinanmaisan-both-1",
+    "name": "진안마이산휴게소",
+    "direction": "양방향",
+    "directionName": "장수방향",
+    "highwaySlug": "wanju-jangsu",
+    "highwayName": "완주장수고속도로",
+    "locationKm": 220,
+    "signatureMenu": {
+      "name": "진안콩순두부짬뽕",
+      "price": 8500,
+      "description": "한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
       {
         "name": "흑돼지 제육덮밥",
         "price": 9500
-      },
-      {
-        "name": "진안콩순두부짬뽕",
-        "price": 8500
       },
       {
         "name": "흑돼지김치찌개",
@@ -20072,6 +23770,14 @@ export const serviceAreas: ServiceArea[] = [
         "price": 6000
       },
       {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "해장라면정식",
+        "price": 6000
+      },
+      {
         "name": "새우튀김우동",
         "price": 7500
       },
@@ -20100,6 +23806,10 @@ export const serviceAreas: ServiceArea[] = [
         "price": 12000
       },
       {
+        "name": "흑돼지등심돈가스",
+        "price": 12000
+      },
+      {
         "name": "꼬치어묵우동(곱빼기)",
         "price": 8000
       },
@@ -20114,16 +23824,6 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
-        "name": "로띠번",
-        "description": "당일 갓 구운 맛있는 모카커피로띠번과 바닐라번을 맛 볼 수 있습니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "달콤커피",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
         "name": "드롭탑(커피전문점)",
         "description": "커피류 판매",
         "hours": "07:30 ~ 19:20"
@@ -20135,33 +23835,30 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
-      "dieselPrice": 1853,
-      "lpgPrice": 1231,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
       "수유실",
-      "편의점",
-      "휴게소의원",
-      "기타",
       "쉼터",
       "내고장특산물"
     ],
-    "latitude": 35.7576,
-    "longitude": 127.0136
+    "latitude": 35.6847,
+    "longitude": 127.0929
   },
   {
-    "slug": "goseonggongryongnara",
+    "slug": "goseonggongryongnara-both",
     "name": "고성공룡나라휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (대전/통영)",
+    "directionName": "통영방향",
     "highwaySlug": "tongyeong-daejeon",
     "highwayName": "통영대전고속도로",
-    "locationKm": 220,
+    "locationKm": 227,
     "signatureMenu": {
       "name": "흑돼지김치찌개",
       "price": 9500,
@@ -20236,46 +23933,6 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "해장라면",
         "price": 5500
-      },
-      {
-        "name": "소세지라면",
-        "price": 5500
-      },
-      {
-        "name": "EX라면",
-        "price": 4000
-      },
-      {
-        "name": "갈비만두",
-        "price": 5500
-      },
-      {
-        "name": "매콤제육덮밥",
-        "price": 9500
-      },
-      {
-        "name": "유부우동",
-        "price": 5500
-      },
-      {
-        "name": "만두품은자장면",
-        "price": 5500
-      },
-      {
-        "name": "콩나물해장국밥",
-        "price": 7000
-      },
-      {
-        "name": "흑돼지소라찜",
-        "price": 14000
-      },
-      {
-        "name": "해물순두부찌개",
-        "price": 9500
-      },
-      {
-        "name": "실속남산돈까스",
-        "price": 10000
       }
     ],
     "brandStores": [
@@ -20294,9 +23951,9 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1884,
       "dieselPrice": 1870,
-      "lpgPrice": 1213,
-      "hasEvCharger": true,
-      "evChargersCount": 10,
+      "lpgPrice": 1185,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
       "hasHydrogen": false
     },
     "facilities": [
@@ -20309,17 +23966,131 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "편의점"
     ],
-    "latitude": 35.0892,
-    "longitude": 128.6759
+    "latitude": 35.1166,
+    "longitude": 128.7801
   },
   {
-    "slug": "deogpyeong",
+    "slug": "goseonggongryongnara-both-1",
+    "name": "고성공룡나라휴게소",
+    "direction": "양방향",
+    "directionName": "대전방향",
+    "highwaySlug": "tongyeong-daejeon",
+    "highwayName": "통영대전고속도로",
+    "locationKm": 234,
+    "signatureMenu": {
+      "name": "흑돼지김치찌개",
+      "price": 9500,
+      "description": "한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
+      {
+        "name": "남산치즈돈까스",
+        "price": 14000
+      },
+      {
+        "name": "우렁된장찌개",
+        "price": 9000
+      },
+      {
+        "name": "해장라면",
+        "price": 5000
+      },
+      {
+        "name": "소세지라면",
+        "price": 5500
+      },
+      {
+        "name": "육개장",
+        "price": 10000
+      },
+      {
+        "name": "남산왕돈까스",
+        "price": 13500
+      },
+      {
+        "name": "EX라면",
+        "price": 4000
+      },
+      {
+        "name": "갈비만두",
+        "price": 5500
+      },
+      {
+        "name": "매콤제육덮밥",
+        "price": 9500
+      },
+      {
+        "name": "유부우동",
+        "price": 5500
+      },
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "만두품은자장면",
+        "price": 5500
+      },
+      {
+        "name": "콩나물해장국밥",
+        "price": 7000
+      },
+      {
+        "name": "흑돼지소라찜",
+        "price": 14000
+      },
+      {
+        "name": "해물순두부찌개",
+        "price": 9500
+      },
+      {
+        "name": "바우네나주곰탕",
+        "price": 12000
+      },
+      {
+        "name": "실속남산돈까스",
+        "price": 10000
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 19:30"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 2,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "쉼터",
+      "ATM",
+      "편의점"
+    ],
+    "latitude": 36.3584,
+    "longitude": 127.5343
+  },
+  {
+    "slug": "deogpyeong-both",
     "name": "덕평휴게소",
     "direction": "양방향",
     "directionName": "양방향",
     "highwaySlug": "yeongdong",
     "highwayName": "영동고속도로",
-    "locationKm": 227,
+    "locationKm": 241,
     "signatureMenu": {
       "name": "특)덕평소고기국밥",
       "price": 13000,
@@ -20481,10 +24252,10 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "SK에너지",
-      "gasolinePrice": 2078,
-      "dieselPrice": 2069,
-      "lpgPrice": 1217,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
       "hasHydrogen": false
@@ -20496,17 +24267,17 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "기타"
     ],
-    "latitude": 37.3193,
-    "longitude": 127.6348
+    "latitude": 37.5441,
+    "longitude": 127.5925
   },
   {
-    "slug": "cheongtong",
+    "slug": "cheongtong-seoul",
     "name": "청통휴게소",
     "direction": "상행",
     "directionName": "대구방향",
     "highwaySlug": "saemangeum-pohang-daegu-pohang",
     "highwayName": "새만금포항고속도로(대구포항)",
-    "locationKm": 234,
+    "locationKm": 248,
     "signatureMenu": {
       "name": "유부우동",
       "price": 6000,
@@ -20609,12 +24380,12 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1615,
-      "dieselPrice": 1440,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 12,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -20624,21 +24395,21 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "기타"
     ],
-    "latitude": 36.623,
-    "longitude": 128.6481
+    "latitude": 36.7089,
+    "longitude": 128.436
   },
   {
-    "slug": "wachon",
+    "slug": "wachon-both",
     "name": "와촌휴게소",
     "direction": "양방향",
     "directionName": "포항방향",
     "highwaySlug": "saemangeum-pohang-daegu-pohang",
     "highwayName": "새만금포항고속도로(대구포항)",
-    "locationKm": 241,
+    "locationKm": 255,
     "signatureMenu": {
-      "name": "해물 순두부찌개",
-      "price": 8000,
-      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
+      "name": "가마솥 소고기국밥",
+      "price": 9000,
+      "description": "전통 가마솥 방식으로 깊고 얼큰하게 끓여낸 소고기국밥입니다."
     },
     "otherMenus": [
       {
@@ -20756,12 +24527,12 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1618,
-      "dieselPrice": 1442,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
-      "hasHydrogen": false
+      "hasHydrogen": true
     },
     "facilities": [
       "수유실",
@@ -20770,328 +24541,16 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "기타"
     ],
-    "latitude": 36.7213,
-    "longitude": 128.543
+    "latitude": 36.5893,
+    "longitude": 128.3562
   },
   {
-    "slug": "goesan",
+    "slug": "goesan-both",
     "name": "괴산휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (양평/창원)",
+    "directionName": "양평방향",
     "highwaySlug": "jungbunaeryuk",
     "highwayName": "중부내륙고속도로",
-    "locationKm": 248,
-    "signatureMenu": {
-      "name": "추억의 옛날 우동",
-      "price": 6000,
-      "description": "두툼한 오뎅과 쑥갓, 유부를 듬뿍 얹어 포장마차 감성을 살린 우동입니다."
-    },
-    "otherMenus": [
-      {
-        "name": "꼬치어묵우동",
-        "price": 6500
-      },
-      {
-        "name": "추억의 옛날우동",
-        "price": 6000
-      },
-      {
-        "name": "EX-우동",
-        "price": 6000
-      },
-      {
-        "name": "농심가락우동",
-        "price": 6500
-      },
-      {
-        "name": "떡라면",
-        "price": 5000
-      },
-      {
-        "name": "ex-라면",
-        "price": 4500
-      },
-      {
-        "name": "신라면",
-        "price": 5000
-      },
-      {
-        "name": "유부김밥",
-        "price": 4000
-      },
-      {
-        "name": "수제 등심돈가스",
-        "price": 9500
-      },
-      {
-        "name": "치즈돈가스",
-        "price": 10500
-      },
-      {
-        "name": "철판 제육덮밥",
-        "price": 8500
-      },
-      {
-        "name": "낙지덮밥",
-        "price": 9500
-      },
-      {
-        "name": "전주비빔밥",
-        "price": 8500
-      },
-      {
-        "name": "장터 국밥",
-        "price": 9000
-      },
-      {
-        "name": "사골 육개장",
-        "price": 9000
-      },
-      {
-        "name": "바삭바삭 소떡소떡",
-        "price": 4000
-      },
-      {
-        "name": "명품 호두과자(중)",
-        "price": 3000
-      },
-      {
-        "name": "버터구이 통감자",
-        "price": 4500
-      },
-      {
-        "name": "오징어 야채바",
-        "price": 4000
-      },
-      {
-        "name": "매콤 떡볶이",
-        "price": 4500
-      },
-      {
-        "name": "바삭한 오징어 튀김",
-        "price": 4000
-      },
-      {
-        "name": "시원한 식혜",
-        "price": 3000
-      },
-      {
-        "name": "바삭한 핫도그",
-        "price": 4000
-      },
-      {
-        "name": "아메리카노(HOT)",
-        "price": 4100
-      },
-      {
-        "name": "아메리카노(ICE)",
-        "price": 4500
-      }
-    ],
-    "brandStores": [
-      {
-        "name": "엔제리너스",
-        "description": "커피류, 음료류, 차류등",
-        "hours": "07:50 ~ 19:50"
-      },
-      {
-        "name": "로띠번",
-        "description": "로띠번, 커피류, 음료류, 차류등",
-        "hours": "07:50 ~ 19:50"
-      },
-      {
-        "name": "던킨도너츠",
-        "description": "달콤한 도넛과 향긋한 커피, 차별화된 음료 등 다양한 제품들로 달콤한 휴식을 즐기실 수 있습니다.",
-        "hours": "07:00 ~ 19:00"
-      },
-      {
-        "name": "할리스커피",
-        "description": "할리스 고유의 로스팅 기법으로 원두 고유의 풍부한 향미를 살리고 있습니다.",
-        "hours": "07:30 ~ 19:30"
-      },
-      {
-        "name": "CU",
-        "description": "CU편의점은 고속도로를 이용하는 고객들에게 다양한 상품과 서비스를 제공합니다. 24시간 운영되며, 즉석식품, 음료, 스낵, 생활용품 등 다양한 제품을 갖추고 있습니다. 고객편의를 위해 셀프계산대와 전자레인지 등을 제공하며 멤버십 적립, 할인혜택도 지원합니다. 또한, 신속한 서비스와 청결한 매장 환경을 유지하고 있어 장거리 여행 중 필요한 물품을 손쉽게 구매할 수 있는 편리한 공간을 제공합니다",
-        "hours": "00:00 ~ 24:00"
-      }
-    ],
-    "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
-      "dieselPrice": 1853,
-      "lpgPrice": 1271,
-      "hasEvCharger": true,
-      "evChargersCount": 2,
-      "hasHydrogen": false
-    },
-    "facilities": [
-      "수유실",
-      "내고장특산물",
-      "ATM",
-      "편의점",
-      "열린매장(간식)",
-      "기타"
-    ],
-    "latitude": 36.7472,
-    "longitude": 127.3877
-  },
-  {
-    "slug": "wonju",
-    "name": "원주휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (부산/춘천)",
-    "highwaySlug": "jungang",
-    "highwayName": "중앙고속도로",
-    "locationKm": 255,
-    "signatureMenu": {
-      "name": "가마솥 소고기국밥",
-      "price": 9000,
-      "description": "전통 가마솥 방식으로 깊고 얼큰하게 끓여낸 소고기국밥입니다."
-    },
-    "otherMenus": [
-      {
-        "name": "꼬치어묵우동",
-        "price": 6500
-      },
-      {
-        "name": "추억의 옛날우동",
-        "price": 6000
-      },
-      {
-        "name": "EX-우동",
-        "price": 6000
-      },
-      {
-        "name": "농심가락우동",
-        "price": 6500
-      },
-      {
-        "name": "떡라면",
-        "price": 5000
-      },
-      {
-        "name": "ex-라면",
-        "price": 4500
-      },
-      {
-        "name": "신라면",
-        "price": 5000
-      },
-      {
-        "name": "유부김밥",
-        "price": 4000
-      },
-      {
-        "name": "수제 등심돈가스",
-        "price": 9500
-      },
-      {
-        "name": "치즈돈가스",
-        "price": 10500
-      },
-      {
-        "name": "철판 제육덮밥",
-        "price": 8500
-      },
-      {
-        "name": "낙지덮밥",
-        "price": 9500
-      },
-      {
-        "name": "전주비빔밥",
-        "price": 8500
-      },
-      {
-        "name": "장터 국밥",
-        "price": 9000
-      },
-      {
-        "name": "사골 육개장",
-        "price": 9000
-      },
-      {
-        "name": "바삭바삭 소떡소떡",
-        "price": 4000
-      },
-      {
-        "name": "명품 호두과자(중)",
-        "price": 3000
-      },
-      {
-        "name": "버터구이 통감자",
-        "price": 4500
-      },
-      {
-        "name": "오징어 야채바",
-        "price": 4000
-      },
-      {
-        "name": "매콤 떡볶이",
-        "price": 4500
-      },
-      {
-        "name": "바삭한 오징어 튀김",
-        "price": 4000
-      },
-      {
-        "name": "시원한 식혜",
-        "price": 3000
-      },
-      {
-        "name": "바삭한 핫도그",
-        "price": 4000
-      },
-      {
-        "name": "아메리카노(HOT)",
-        "price": 4100
-      },
-      {
-        "name": "아메리카노(ICE)",
-        "price": 4500
-      }
-    ],
-    "brandStores": [
-      {
-        "name": "던킨도너츠",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "엔제리너스",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "이마트24",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      }
-    ],
-    "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1861,
-      "dieselPrice": 1850,
-      "lpgPrice": 1266,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": false
-    },
-    "facilities": [
-      "수유실",
-      "ATM",
-      "편의점",
-      "기타"
-    ],
-    "latitude": 37.7254,
-    "longitude": 128.7283
-  },
-  {
-    "slug": "oggye",
-    "name": "옥계휴게소",
-    "direction": "양방향",
-    "directionName": "속초방향",
-    "highwaySlug": "donghae",
-    "highwayName": "동해고속도로",
     "locationKm": 262,
     "signatureMenu": {
       "name": "수제 등심돈가스",
@@ -21198,41 +24657,43 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
-        "name": "달콤커피",
-        "description": "따뜻하게 커피를 마실수 있는 바다가 보이는 해맞이옥계휴게소 달콤커피(멤버십할인,앱쿠폰적립,기프티콘(메뉴교환권,금액권)사용",
-        "hours": "08:00 ~ 20:00"
+        "name": "엔제리너스",
+        "description": "커피류, 음료류, 차류등",
+        "hours": "07:50 ~ 19:50"
       },
       {
-        "name": "이마트24",
-        "description": "이마트24 브랜드 편의점 운영(무인편의점은 24시간 운영)멤버십할인,적립,모바일쿠폰,1+1판매",
-        "hours": "00:00 ~ 24:00"
+        "name": "로띠번",
+        "description": "로띠번, 커피류, 음료류, 차류등",
+        "hours": "07:50 ~ 19:50"
       }
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1853,
-      "dieselPrice": 1846,
-      "lpgPrice": 1228,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 4,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
       "수유실",
+      "내고장특산물",
       "ATM",
       "편의점",
-      "열린매장(간식)"
+      "열린매장(간식)",
+      "기타"
     ],
-    "latitude": 37.6133,
-    "longitude": 128.8184
+    "latitude": 36.5186,
+    "longitude": 127.3978
   },
   {
-    "slug": "gimcheon",
-    "name": "김천휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (부산/서울)",
-    "highwaySlug": "gyeongbu",
-    "highwayName": "경부고속도로",
+    "slug": "wonju-busan",
+    "name": "원주휴게소",
+    "direction": "하행",
+    "directionName": "부산방향",
+    "highwaySlug": "jungang",
+    "highwayName": "중앙고속도로",
     "locationKm": 269,
     "signatureMenu": {
       "name": "가마솥 비빔밥",
@@ -21343,6 +24804,588 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
+        "name": "던킨도너츠",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "엔제리너스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "이마트24",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1864,
+      "dieselPrice": 1853,
+      "lpgPrice": 1266,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "ATM",
+      "편의점",
+      "기타"
+    ],
+    "latitude": 37.6104,
+    "longitude": 128.9261
+  },
+  {
+    "slug": "wonju-both",
+    "name": "원주휴게소",
+    "direction": "양방향",
+    "directionName": "춘천방향",
+    "highwaySlug": "jungang",
+    "highwayName": "중앙고속도로",
+    "locationKm": 276,
+    "signatureMenu": {
+      "name": "해물 순두부찌개",
+      "price": 8000,
+      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1857,
+      "dieselPrice": 1846,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "ATM",
+      "편의점",
+      "기타"
+    ],
+    "latitude": 37.7176,
+    "longitude": 129.022
+  },
+  {
+    "slug": "oggye-both",
+    "name": "옥계휴게소",
+    "direction": "양방향",
+    "directionName": "속초방향",
+    "highwaySlug": "donghae",
+    "highwayName": "동해고속도로",
+    "locationKm": 283,
+    "signatureMenu": {
+      "name": "추억의 옛날 우동",
+      "price": 6000,
+      "description": "두툼한 오뎅과 쑥갓, 유부를 듬뿍 얹어 포장마차 감성을 살린 우동입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "달콤커피",
+        "description": "따뜻하게 커피를 마실수 있는 바다가 보이는 해맞이옥계휴게소 달콤커피(멤버십할인,앱쿠폰적립,기프티콘(메뉴교환권,금액권)사용",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "이마트24",
+        "description": "이마트24 브랜드 편의점 운영(무인편의점은 24시간 운영)멤버십할인,적립,모바일쿠폰,1+1판매",
+        "hours": "00:00 ~ 24:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1853,
+      "dieselPrice": 1846,
+      "lpgPrice": 1228,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "ATM",
+      "편의점",
+      "열린매장(간식)"
+    ],
+    "latitude": 37.8562,
+    "longitude": 128.9837
+  },
+  {
+    "slug": "goesan-both-1",
+    "name": "괴산휴게소",
+    "direction": "양방향",
+    "directionName": "창원방향",
+    "highwaySlug": "jungbunaeryuk",
+    "highwayName": "중부내륙고속도로",
+    "locationKm": 290,
+    "signatureMenu": {
+      "name": "가마솥 소고기국밥",
+      "price": 9000,
+      "description": "전통 가마솥 방식으로 깊고 얼큰하게 끓여낸 소고기국밥입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "달콤한 도넛과 향긋한 커피, 차별화된 음료 등 다양한 제품들로 달콤한 휴식을 즐기실 수 있습니다.",
+        "hours": "07:00 ~ 19:00"
+      },
+      {
+        "name": "할리스커피",
+        "description": "할리스 고유의 로스팅 기법으로 원두 고유의 풍부한 향미를 살리고 있습니다.",
+        "hours": "07:30 ~ 19:30"
+      },
+      {
+        "name": "CU",
+        "description": "CU편의점은 고속도로를 이용하는 고객들에게 다양한 상품과 서비스를 제공합니다. 24시간 운영되며, 즉석식품, 음료, 스낵, 생활용품 등 다양한 제품을 갖추고 있습니다. 고객편의를 위해 셀프계산대와 전자레인지 등을 제공하며 멤버십 적립, 할인혜택도 지원합니다. 또한, 신속한 서비스와 청결한 매장 환경을 유지하고 있어 장거리 여행 중 필요한 물품을 손쉽게 구매할 수 있는 편리한 공간을 제공합니다",
+        "hours": "00:00 ~ 24:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "내고장특산물",
+      "ATM",
+      "열린매장(간식)",
+      "기타"
+    ],
+    "latitude": 36.7842,
+    "longitude": 127.46
+  },
+  {
+    "slug": "gimcheon-seoul",
+    "name": "김천휴게소",
+    "direction": "상행",
+    "directionName": "서울방향",
+    "highwaySlug": "gyeongbu",
+    "highwayName": "경부고속도로",
+    "locationKm": 297,
+    "signatureMenu": {
+      "name": "수제 등심돈가스",
+      "price": 9500,
+      "description": "바삭바삭한 식감과 두툼한 육즙이 일품인 대표 돈가스입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
         "name": "파스쿠찌",
         "description": "입점 브랜드 매장입니다.",
         "hours": "08:00 ~ 20:00"
@@ -21370,21 +25413,21 @@ export const serviceAreas: ServiceArea[] = [
       "ex-화물차라운지",
       "ATM"
     ],
-    "latitude": 36.4527,
-    "longitude": 128.5911
+    "latitude": 36.6305,
+    "longitude": 128.3658
   },
   {
-    "slug": "yesan",
+    "slug": "yesan-both",
     "name": "예산휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (당진/대전)",
+    "directionName": "대전방향",
     "highwaySlug": "seosanyeongdeogseon",
     "highwayName": "서산영덕고속도로",
-    "locationKm": 276,
+    "locationKm": 304,
     "signatureMenu": {
-      "name": "해물 순두부찌개",
-      "price": 8000,
-      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
+      "name": "가마솥 비빔밥",
+      "price": 8500,
+      "description": "신선한 오색 나물과 볶은 소고기를 얹어 쓱쓱 비벼 먹는 한식 대표 메뉴입니다."
     },
     "otherMenus": [
       {
@@ -21498,25 +25541,15 @@ export const serviceAreas: ServiceArea[] = [
         "name": "파스쿠찌",
         "description": "입점 브랜드 매장입니다.",
         "hours": "08:00 ~ 19:30"
-      },
-      {
-        "name": "던킨도너츠",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "07:30 ~ 19:30"
-      },
-      {
-        "name": "할리스커피",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "07:30 ~ 19:30"
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1843,
-      "dieselPrice": 1841,
-      "lpgPrice": 1220,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 6,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -21530,17 +25563,165 @@ export const serviceAreas: ServiceArea[] = [
       "열린매장(간식)",
       "기타"
     ],
-    "latitude": 36.3557,
-    "longitude": 127.5344
+    "latitude": 36.2622,
+    "longitude": 127.2631
   },
   {
-    "slug": "gongju",
-    "name": "공주휴게소",
+    "slug": "yesan-both-1",
+    "name": "예산휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (당진/대전)",
+    "directionName": "당진방향",
     "highwaySlug": "seosanyeongdeogseon",
     "highwayName": "서산영덕고속도로",
-    "locationKm": 283,
+    "locationKm": 311,
+    "signatureMenu": {
+      "name": "해물 순두부찌개",
+      "price": 8000,
+      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:30 ~ 19:30"
+      },
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:30 ~ 19:30"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수면실",
+      "샤워실",
+      "세탁실",
+      "수유실",
+      "ex-화물차라운지",
+      "ATM",
+      "편의점"
+    ],
+    "latitude": 36.2006,
+    "longitude": 127.3931
+  },
+  {
+    "slug": "gongju-both",
+    "name": "공주휴게소",
+    "direction": "양방향",
+    "directionName": "대전방향",
+    "highwaySlug": "seosanyeongdeogseon",
+    "highwayName": "서산영덕고속도로",
+    "locationKm": 318,
     "signatureMenu": {
       "name": "추억의 옛날 우동",
       "price": 6000,
@@ -21663,30 +25844,15 @@ export const serviceAreas: ServiceArea[] = [
         "name": "공차",
         "description": "입점 브랜드 매장입니다.",
         "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "로띠번",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "탐앤탐스",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "클라이머홀릭",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1843,
-      "dieselPrice": 1841,
-      "lpgPrice": 1248,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 2,
       "hasHydrogen": false
     },
     "facilities": [
@@ -21696,17 +25862,17 @@ export const serviceAreas: ServiceArea[] = [
       "열린매장(간식)",
       "기타"
     ],
-    "latitude": 36.4794,
-    "longitude": 127.461
+    "latitude": 36.2767,
+    "longitude": 127.5152
   },
   {
-    "slug": "buyeobaegje",
+    "slug": "buyeobaegje-both",
     "name": "부여백제휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (공주/서천)",
+    "directionName": "공주방향",
     "highwaySlug": "seocheon-gongju",
     "highwayName": "서천공주고속도로",
-    "locationKm": 290,
+    "locationKm": 325,
     "signatureMenu": {
       "name": "가마솥 소고기국밥",
       "price": 9000,
@@ -21826,9 +25992,9 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1864,
       "dieselPrice": 1853,
       "lpgPrice": 1250,
-      "hasEvCharger": true,
-      "evChargersCount": 8,
-      "hasHydrogen": true
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
     },
     "facilities": [
       "수유실",
@@ -21836,17 +26002,17 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "열린매장(간식)"
     ],
-    "latitude": 36.4845,
-    "longitude": 127.3173
+    "latitude": 36.4206,
+    "longitude": 127.5171
   },
   {
-    "slug": "moggam",
-    "name": "목감휴게소",
-    "direction": "상행",
-    "directionName": "서울방향",
-    "highwaySlug": "seohaean",
-    "highwayName": "서해안고속도로",
-    "locationKm": 297,
+    "slug": "buyeobaegje-both-1",
+    "name": "부여백제휴게소",
+    "direction": "양방향",
+    "directionName": "서천방향",
+    "highwaySlug": "seocheon-gongju",
+    "highwayName": "서천공주고속도로",
+    "locationKm": 332,
     "signatureMenu": {
       "name": "수제 등심돈가스",
       "price": 9500,
@@ -21952,36 +26118,37 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
-        "name": "탐앤탐스",
-        "description": "운영시간 : 07시~21시 운영",
-        "hours": "07:00 ~ 21:00"
+        "name": "드롭탑(커피전문점)",
+        "description": "커피,음료",
+        "hours": "07:30 ~ 19:30"
       }
     ],
     "gasStation": {
-      "brand": "ex-oil",
-      "gasolinePrice": 1609,
-      "dieselPrice": 1436,
-      "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1864,
+      "dieselPrice": 1853,
+      "lpgPrice": 1250,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
       "수유실",
       "ATM",
-      "편의점"
+      "편의점",
+      "열린매장(간식)"
     ],
-    "latitude": 37.4297,
-    "longitude": 127.3691
+    "latitude": 36.4999,
+    "longitude": 127.3971
   },
   {
-    "slug": "uiwang",
-    "name": "의왕휴게소",
-    "direction": "상행",
-    "directionName": "일산방향",
-    "highwaySlug": "capital-circular-1",
-    "highwayName": "수도권제1순환고속도로",
-    "locationKm": 304,
+    "slug": "gongju-both-1",
+    "name": "공주휴게소",
+    "direction": "양방향",
+    "directionName": "당진방향",
+    "highwaySlug": "seosanyeongdeogseon",
+    "highwayName": "서산영덕고속도로",
+    "locationKm": 339,
     "signatureMenu": {
       "name": "가마솥 비빔밥",
       "price": 8500,
@@ -22089,30 +26256,329 @@ export const serviceAreas: ServiceArea[] = [
         "price": 4500
       }
     ],
-    "brandStores": [],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "클라이머홀릭",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 24:00"
+      }
+    ],
     "gasStation": {
-      "brand": "현대오일뱅크",
-      "gasolinePrice": 1865,
-      "dieselPrice": 1855,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "ATM",
+      "편의점",
+      "열린매장(간식)"
+    ],
+    "latitude": 36.4418,
+    "longitude": 127.2655
+  },
+  {
+    "slug": "moggam-seoul",
+    "name": "목감휴게소",
+    "direction": "상행",
+    "directionName": "서울방향",
+    "highwaySlug": "seohaean",
+    "highwayName": "서해안고속도로",
+    "locationKm": 346,
+    "signatureMenu": {
+      "name": "해물 순두부찌개",
+      "price": 8000,
+      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "탐앤탐스",
+        "description": "운영시간 : 07시~21시 운영",
+        "hours": "07:00 ~ 21:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 10,
+      "evChargersCount": 6,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "ATM",
+      "편의점"
+    ],
+    "latitude": 37.363,
+    "longitude": 127.3771
+  },
+  {
+    "slug": "uiwang-seoul",
+    "name": "의왕휴게소",
+    "direction": "상행",
+    "directionName": "일산방향",
+    "highwaySlug": "capital-circular-1",
+    "highwayName": "수도권제1순환고속도로",
+    "locationKm": 353,
+    "signatureMenu": {
+      "name": "추억의 옛날 우동",
+      "price": 6000,
+      "description": "두툼한 오뎅과 쑥갓, 유부를 듬뿍 얹어 포장마차 감성을 살린 우동입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
       "hasHydrogen": false
     },
     "facilities": [
       "편의점"
     ],
-    "latitude": 37.2969,
-    "longitude": 127.4243
+    "latitude": 37.2676,
+    "longitude": 127.4847
   },
   {
-    "slug": "anseongmajchum",
+    "slug": "anseongmajchum-both",
     "name": "안성맞춤휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (제천/평택)",
+    "directionName": "평택방향",
     "highwaySlug": "pyeongtaek-jecheon",
     "highwayName": "평택제천고속도로",
-    "locationKm": 311,
+    "locationKm": 10,
     "signatureMenu": {
       "name": "안성맞춤 한우국밥",
       "price": 9500,
@@ -22236,18 +26702,165 @@ export const serviceAreas: ServiceArea[] = [
         "name": "드롭탑(커피전문점)",
         "description": "프리미엄 커피전문점 ‘CAFE DROPTOP’",
         "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1859,
+      "dieselPrice": 1849,
+      "lpgPrice": 1237,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
+      "hasHydrogen": true
+    },
+    "facilities": [
+      "샤워실",
+      "수유실",
+      "ATM",
+      "편의점",
+      "기타"
+    ],
+    "latitude": 37.3066,
+    "longitude": 127.6232
+  },
+  {
+    "slug": "anseongmajchum-both-1",
+    "name": "안성맞춤휴게소",
+    "direction": "양방향",
+    "directionName": "제천방향",
+    "highwaySlug": "pyeongtaek-jecheon",
+    "highwayName": "평택제천고속도로",
+    "locationKm": 17,
+    "signatureMenu": {
+      "name": "안성맞춤 한우국밥",
+      "price": 9500,
+      "description": "안성 한우와 시원한 무를 듬뿍 넣어 개운하고 담백한 맛이 특징입니다.",
+      "isExFood": true
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
       },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
       {
         "name": "롯데리아",
         "description": "햄버거의 중심 패스트푸드 전문점인 롯데리아 운영 중",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "로띠번",
+        "description": "베이커리 전문점을 휴게소에서 만날수 있습니다. 운전 중 간식타임은 역시 로띠번이 최고 ~ 마성떡볶이 매장도 함께 운영하고 있습니다.",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "맛과 향이 좋은 드롭탑 커피를 휴게소에서 즐길 수 있습니다. 통신사 할인 및 텀블러 할인도 가능합니다.",
         "hours": "08:00 ~ 19:30"
       }
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1854,
-      "dieselPrice": 1849,
-      "lpgPrice": 1202,
+      "gasolinePrice": 1859,
+      "dieselPrice": 1870,
+      "lpgPrice": 1169,
       "hasEvCharger": false,
       "evChargersCount": 0,
       "hasHydrogen": false
@@ -22259,17 +26872,281 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "기타"
     ],
-    "latitude": 37.2716,
-    "longitude": 127.5659
+    "latitude": 37.4441,
+    "longitude": 127.6652
   },
   {
-    "slug": "seohanamhaengbogdeurimswimteo",
+    "slug": "seohanamhaengbogdeurimswimteo-both",
     "name": "서하남행복드림쉼터휴게소",
     "direction": "양방향",
     "directionName": "양방향",
     "highwaySlug": "capital-circular-1",
     "highwayName": "수도권제1순환고속도로",
-    "locationKm": 318,
+    "locationKm": 24,
+    "signatureMenu": {
+      "name": "가마솥 비빔밥",
+      "price": 8500,
+      "description": "신선한 오색 나물과 볶은 소고기를 얹어 쓱쓱 비벼 먹는 한식 대표 메뉴입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "ATM",
+      "편의점",
+      "기타"
+    ],
+    "latitude": 37.5538,
+    "longitude": 127.5722
+  },
+  {
+    "slug": "yangyang-both",
+    "name": "양양휴게소",
+    "direction": "양방향",
+    "directionName": "속초방향",
+    "highwaySlug": "donghae",
+    "highwayName": "동해고속도로",
+    "locationKm": 31,
+    "signatureMenu": {
+      "name": "해물 순두부찌개",
+      "price": 8000,
+      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "편의점"
+    ],
+    "latitude": 37.8728,
+    "longitude": 128.7873
+  },
+  {
+    "slug": "yangyang-both-1",
+    "name": "양양휴게소",
+    "direction": "양방향",
+    "directionName": "동해방향",
+    "highwaySlug": "donghae",
+    "highwayName": "동해고속도로",
+    "locationKm": 38,
     "signatureMenu": {
       "name": "추억의 옛날 우동",
       "price": 6000,
@@ -22379,161 +27256,28 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [],
     "gasStation": {
-      "brand": "S-OIL",
-      "gasolinePrice": 1869,
-      "dieselPrice": 1859,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
-      "ATM",
-      "편의점",
-      "기타"
-    ],
-    "latitude": 37.377,
-    "longitude": 127.6637
-  },
-  {
-    "slug": "yangyang",
-    "name": "양양휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (동해/속초)",
-    "highwaySlug": "donghae",
-    "highwayName": "동해고속도로",
-    "locationKm": 325,
-    "signatureMenu": {
-      "name": "가마솥 소고기국밥",
-      "price": 9000,
-      "description": "전통 가마솥 방식으로 깊고 얼큰하게 끓여낸 소고기국밥입니다."
-    },
-    "otherMenus": [
-      {
-        "name": "꼬치어묵우동",
-        "price": 6500
-      },
-      {
-        "name": "추억의 옛날우동",
-        "price": 6000
-      },
-      {
-        "name": "EX-우동",
-        "price": 6000
-      },
-      {
-        "name": "농심가락우동",
-        "price": 6500
-      },
-      {
-        "name": "떡라면",
-        "price": 5000
-      },
-      {
-        "name": "ex-라면",
-        "price": 4500
-      },
-      {
-        "name": "신라면",
-        "price": 5000
-      },
-      {
-        "name": "유부김밥",
-        "price": 4000
-      },
-      {
-        "name": "수제 등심돈가스",
-        "price": 9500
-      },
-      {
-        "name": "치즈돈가스",
-        "price": 10500
-      },
-      {
-        "name": "철판 제육덮밥",
-        "price": 8500
-      },
-      {
-        "name": "낙지덮밥",
-        "price": 9500
-      },
-      {
-        "name": "전주비빔밥",
-        "price": 8500
-      },
-      {
-        "name": "장터 국밥",
-        "price": 9000
-      },
-      {
-        "name": "사골 육개장",
-        "price": 9000
-      },
-      {
-        "name": "바삭바삭 소떡소떡",
-        "price": 4000
-      },
-      {
-        "name": "명품 호두과자(중)",
-        "price": 3000
-      },
-      {
-        "name": "버터구이 통감자",
-        "price": 4500
-      },
-      {
-        "name": "오징어 야채바",
-        "price": 4000
-      },
-      {
-        "name": "매콤 떡볶이",
-        "price": 4500
-      },
-      {
-        "name": "바삭한 오징어 튀김",
-        "price": 4000
-      },
-      {
-        "name": "시원한 식혜",
-        "price": 3000
-      },
-      {
-        "name": "바삭한 핫도그",
-        "price": 4000
-      },
-      {
-        "name": "아메리카노(HOT)",
-        "price": 4100
-      },
-      {
-        "name": "아메리카노(ICE)",
-        "price": 4500
-      }
-    ],
-    "brandStores": [],
-    "gasStation": {
-      "brand": "ex-oil",
-      "gasolinePrice": 1621,
-      "dieselPrice": 1444,
-      "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": false
-    },
-    "facilities": [
       "편의점"
     ],
-    "latitude": 37.8543,
-    "longitude": 128.9855
+    "latitude": 37.7425,
+    "longitude": 128.7263
   },
   {
-    "slug": "haengdamdo",
+    "slug": "haengdamdo-both",
     "name": "행담도휴게소",
     "direction": "양방향",
     "directionName": "양방향",
     "highwaySlug": "seohaean",
     "highwayName": "서해안고속도로",
-    "locationKm": 332,
+    "locationKm": 45,
     "signatureMenu": {
       "name": "행담도 바지락칼국수",
       "price": 8000,
@@ -22675,12 +27419,12 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "현대오일뱅크",
-      "gasolinePrice": 1959,
-      "dieselPrice": 1949,
-      "lpgPrice": 1218,
-      "hasEvCharger": true,
-      "evChargersCount": 2,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
       "hasHydrogen": false
     },
     "facilities": [
@@ -22692,17 +27436,155 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "기타"
     ],
-    "latitude": 36.4979,
-    "longitude": 127.3574
+    "latitude": 36.2194,
+    "longitude": 127.3114
   },
   {
-    "slug": "haman",
+    "slug": "gimcheon-busan",
+    "name": "김천휴게소",
+    "direction": "하행",
+    "directionName": "부산방향",
+    "highwaySlug": "gyeongbu",
+    "highwayName": "경부고속도로",
+    "locationKm": 52,
+    "signatureMenu": {
+      "name": "수제 등심돈가스",
+      "price": 9500,
+      "description": "바삭바삭한 식감과 두툼한 육즙이 일품인 대표 돈가스입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "커피, 음료류 판매",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 2,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수면실",
+      "샤워실",
+      "세탁실",
+      "수유실",
+      "ex-화물차라운지",
+      "ATM"
+    ],
+    "latitude": 36.4437,
+    "longitude": 128.5763
+  },
+  {
+    "slug": "haman-busan",
     "name": "함안휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (부산/순천)",
+    "direction": "하행",
+    "directionName": "부산방향",
     "highwaySlug": "namhae",
     "highwayName": "남해고속도로",
-    "locationKm": 339,
+    "locationKm": 59,
     "signatureMenu": {
       "name": "가마솥 비빔밥",
       "price": 8500,
@@ -22835,23 +27717,13 @@ export const serviceAreas: ServiceArea[] = [
         "name": "기타",
         "description": "스테프 핫도그",
         "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "파스쿠찌",
-        "description": "커피",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "드롭탑(커피전문점)",
-        "description": "무인 로봇커피 매장 운영(24시간)",
-        "hours": "00:00 ~ 00:00"
       }
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1872,
-      "dieselPrice": 1861,
-      "lpgPrice": 1248,
+      "gasolinePrice": 1879,
+      "dieselPrice": 1869,
+      "lpgPrice": 1220,
       "hasEvCharger": false,
       "evChargersCount": 0,
       "hasHydrogen": false
@@ -22860,21 +27732,19 @@ export const serviceAreas: ServiceArea[] = [
       "수유실",
       "ex-화물차라운지",
       "내고장특산물",
-      "ATM",
-      "편의점",
-      "열린매장(간식)"
+      "ATM"
     ],
-    "latitude": 35.2952,
-    "longitude": 128.5537
+    "latitude": 35.2264,
+    "longitude": 128.842
   },
   {
-    "slug": "jinju",
+    "slug": "jinju-busan",
     "name": "진주휴게소",
     "direction": "하행",
     "directionName": "부산방향",
     "highwaySlug": "namhae",
     "highwayName": "남해고속도로",
-    "locationKm": 346,
+    "locationKm": 66,
     "signatureMenu": {
       "name": "해물 순두부찌개",
       "price": 8000,
@@ -23001,8 +27871,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1630,
-      "dieselPrice": 1450,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 4,
@@ -23013,21 +27883,182 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "편의점"
     ],
-    "latitude": 35.1523,
-    "longitude": 128.5696
+    "latitude": 35.3577,
+    "longitude": 128.7833
   },
   {
-    "slug": "seoyeoju",
-    "name": "서여주휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (양평/창원)",
-    "highwaySlug": "jungbunaeryuk",
-    "highwayName": "중부내륙고속도로",
-    "locationKm": 353,
+    "slug": "haman-busan-1",
+    "name": "함안휴게소",
+    "direction": "하행",
+    "directionName": "순천방향",
+    "highwaySlug": "namhae",
+    "highwayName": "남해고속도로",
+    "locationKm": 73,
     "signatureMenu": {
       "name": "추억의 옛날 우동",
       "price": 6000,
       "description": "두툼한 오뎅과 쑥갓, 유부를 듬뿍 얹어 포장마차 감성을 살린 우동입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "번(바닐라,모카)",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "커피",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "무인 로봇커피 매장 운영(24시간)",
+        "hours": "00:00 ~ 00:00"
+      },
+      {
+        "name": "투썸플레이스",
+        "description": "커피",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "공차",
+        "description": "커피, 밀크티",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1864,
+      "dieselPrice": 1853,
+      "lpgPrice": 1276,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "내고장특산물",
+      "ATM",
+      "편의점",
+      "열린매장(간식)"
+    ],
+    "latitude": 35.3792,
+    "longitude": 128.6411
+  },
+  {
+    "slug": "seoyeoju-both",
+    "name": "서여주휴게소",
+    "direction": "양방향",
+    "directionName": "양평방향",
+    "highwaySlug": "jungbunaeryuk",
+    "highwayName": "중부내륙고속도로",
+    "locationKm": 80,
+    "signatureMenu": {
+      "name": "가마솥 소고기국밥",
+      "price": 9000,
+      "description": "전통 가마솥 방식으로 깊고 얼큰하게 끓여낸 소고기국밥입니다."
     },
     "otherMenus": [
       {
@@ -23145,9 +28176,150 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1848,
-      "dieselPrice": 1838,
-      "lpgPrice": 1223,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "ATM",
+      "편의점",
+      "기타"
+    ],
+    "latitude": 37.4467,
+    "longitude": 127.372
+  },
+  {
+    "slug": "seoyeoju-both-1",
+    "name": "서여주휴게소",
+    "direction": "양방향",
+    "directionName": "창원방향",
+    "highwaySlug": "jungbunaeryuk",
+    "highwayName": "중부내륙고속도로",
+    "locationKm": 87,
+    "signatureMenu": {
+      "name": "수제 등심돈가스",
+      "price": 9500,
+      "description": "바삭바삭한 식감과 두툼한 육즙이 일품인 대표 돈가스입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "탐앤탐스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:30 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "오후 20:00 - 오전 07:30 무인운영시간",
+        "hours": "00:00 ~ 00:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
       "hasHydrogen": false
@@ -23158,21 +28330,21 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "기타"
     ],
-    "latitude": 37.2639,
-    "longitude": 127.5243
+    "latitude": 37.3084,
+    "longitude": 127.4115
   },
   {
-    "slug": "iseo",
+    "slug": "iseo-busan",
     "name": "이서휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (순천/천안)",
+    "direction": "하행",
+    "directionName": "순천방향",
     "highwaySlug": "honam",
     "highwayName": "호남고속도로",
-    "locationKm": 10,
+    "locationKm": 94,
     "signatureMenu": {
-      "name": "가마솥 소고기국밥",
-      "price": 9000,
-      "description": "전통 가마솥 방식으로 깊고 얼큰하게 끓여낸 소고기국밥입니다."
+      "name": "가마솥 비빔밥",
+      "price": 8500,
+      "description": "신선한 오색 나물과 볶은 소고기를 얹어 쓱쓱 비벼 먹는 한식 대표 메뉴입니다."
     },
     "otherMenus": [
       {
@@ -23301,20 +28473,15 @@ export const serviceAreas: ServiceArea[] = [
         "name": "기타",
         "description": "코바코는 음식이 너무 맛있어서 코를 박고 먹는다 라는 말에서 탄생한 브래드명으로 쫄깃하고 오동통한 면발, 깔끔한 국물의 우동전문 브랜드 입니다.",
         "hours": "07:00 ~ 21:30"
-      },
-      {
-        "name": "투썸플레이스",
-        "description": "차가운 날씨에 따뜻한 커피 한잔",
-        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1850,
-      "dieselPrice": 1844,
+      "gasolinePrice": 1845,
+      "dieselPrice": 1839,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 6,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -23326,17 +28493,480 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "기타"
     ],
-    "latitude": 37.4905,
-    "longitude": 127.1073
+    "latitude": 37.4197,
+    "longitude": 127.009
   },
   {
-    "slug": "osu",
+    "slug": "iseo-both",
+    "name": "이서휴게소",
+    "direction": "양방향",
+    "directionName": "천안방향",
+    "highwaySlug": "honam",
+    "highwayName": "호남고속도로",
+    "locationKm": 101,
+    "signatureMenu": {
+      "name": "해물 순두부찌개",
+      "price": 8000,
+      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "투썸플레이스",
+        "description": "차가운 날씨에 따뜻한 커피 한잔",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "기타",
+        "description": "[코바코우동] 차가운 겨울에 더욱생각나는 통통한 면발 뜨듯한 국물이 일품",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "쉼터",
+      "ex-화물차라운지",
+      "ATM",
+      "편의점",
+      "기타"
+    ],
+    "latitude": 37.5133,
+    "longitude": 127.1182
+  },
+  {
+    "slug": "osu-both",
     "name": "오수휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (순천/완주)",
+    "directionName": "완주방향",
     "highwaySlug": "suncheon-wanju",
     "highwayName": "순천완주고속도로",
-    "locationKm": 17,
+    "locationKm": 108,
+    "signatureMenu": {
+      "name": "추억의 옛날 우동",
+      "price": 6000,
+      "description": "두툼한 오뎅과 쑥갓, 유부를 듬뿍 얹어 포장마차 감성을 살린 우동입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "매일 굽는 모카번과 바닐라번",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "코바코",
+        "description": "오동통 우동면에 따끈한 국물 우동전문점",
+        "hours": "07:00 ~ 21:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "진한 커피향의 브랜드 커피매장 탐앤탐스",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "CU 편의점 매장(24시간 운영)",
+        "hours": "00:00 ~ 24:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "쉼터",
+      "ex-화물차라운지",
+      "ATM",
+      "기타"
+    ],
+    "latitude": 35.9134,
+    "longitude": 127.2686
+  },
+  {
+    "slug": "osu-busan",
+    "name": "오수휴게소",
+    "direction": "하행",
+    "directionName": "순천방향",
+    "highwaySlug": "suncheon-wanju",
+    "highwayName": "순천완주고속도로",
+    "locationKm": 115,
+    "signatureMenu": {
+      "name": "가마솥 소고기국밥",
+      "price": 9000,
+      "description": "전통 가마솥 방식으로 깊고 얼큰하게 끓여낸 소고기국밥입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "제빵프랜차이즈",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "코바코",
+        "description": "우동전문점",
+        "hours": "07:00 ~ 21:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "커피전문점",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "편의점",
+        "hours": "00:00 ~ 24:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": true
+    },
+    "facilities": [
+      "수유실",
+      "ex-화물차라운지",
+      "내고장특산물",
+      "ATM"
+    ],
+    "latitude": 35.9739,
+    "longitude": 127.138
+  },
+  {
+    "slug": "hwangjeon-busan",
+    "name": "황전휴게소",
+    "direction": "하행",
+    "directionName": "순천방향",
+    "highwaySlug": "suncheon-wanju",
+    "highwayName": "순천완주고속도로",
+    "locationKm": 122,
     "signatureMenu": {
       "name": "수제 등심돈가스",
       "price": 9500,
@@ -23442,54 +29072,37 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
-        "name": "로띠번",
-        "description": "매일 굽는 모카번과 바닐라번",
+        "name": "파스쿠찌",
+        "description": "커피",
         "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "코바코",
-        "description": "오동통 우동면에 따끈한 국물 우동전문점",
-        "hours": "07:00 ~ 21:00"
-      },
-      {
-        "name": "탐앤탐스",
-        "description": "진한 커피향의 브랜드 커피매장 탐앤탐스",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "CU",
-        "description": "CU 편의점 매장(24시간 운영)",
-        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1847,
-      "dieselPrice": 1843,
-      "lpgPrice": 1219,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
       "수유실",
       "쉼터",
-      "ex-화물차라운지",
       "ATM",
-      "기타",
-      "내고장특산물"
+      "기타"
     ],
-    "latitude": 35.892,
-    "longitude": 127.2818
+    "latitude": 34.8886,
+    "longitude": 126.3316
   },
   {
-    "slug": "hwangjeon",
+    "slug": "hwangjeon-both",
     "name": "황전휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (순천/완주)",
+    "directionName": "완주방향",
     "highwaySlug": "suncheon-wanju",
     "highwayName": "순천완주고속도로",
-    "locationKm": 24,
+    "locationKm": 129,
     "signatureMenu": {
       "name": "가마솥 비빔밥",
       "price": 8500,
@@ -23610,12 +29223,12 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1849,
-      "dieselPrice": 1832,
-      "lpgPrice": 1238,
-      "hasEvCharger": true,
-      "evChargersCount": 8,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
       "hasHydrogen": false
     },
     "facilities": [
@@ -23624,17 +29237,17 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "기타"
     ],
-    "latitude": 34.9653,
-    "longitude": 126.4781
+    "latitude": 34.7448,
+    "longitude": 126.3309
   },
   {
-    "slug": "guri",
+    "slug": "guri-seoul",
     "name": "구리휴게소",
     "direction": "상행",
     "directionName": "일산방향",
     "highwaySlug": "capital-circular-1",
     "highwayName": "수도권제1순환고속도로",
-    "locationKm": 31,
+    "locationKm": 136,
     "signatureMenu": {
       "name": "해물 순두부찌개",
       "price": 8000,
@@ -23765,12 +29378,12 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
-      "dieselPrice": 1853,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 2,
       "hasHydrogen": false
     },
     "facilities": [
@@ -23780,17 +29393,17 @@ export const serviceAreas: ServiceArea[] = [
       "열린매장(간식)",
       "기타"
     ],
-    "latitude": 37.5072,
-    "longitude": 127.401
+    "latitude": 37.2642,
+    "longitude": 127.507
   },
   {
-    "slug": "tongdosa",
+    "slug": "tongdosa-busan",
     "name": "통도사휴게소",
     "direction": "하행",
     "directionName": "부산방향",
     "highwaySlug": "gyeongbu",
     "highwayName": "경부고속도로",
-    "locationKm": 38,
+    "locationKm": 143,
     "signatureMenu": {
       "name": "추억의 옛날 우동",
       "price": 6000,
@@ -23920,8 +29533,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1864,
       "dieselPrice": 1853,
       "lpgPrice": 1276,
-      "hasEvCharger": true,
-      "evChargersCount": 10,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
       "hasHydrogen": false
     },
     "facilities": [
@@ -23930,17 +29543,17 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "편의점"
     ],
-    "latitude": 35.1901,
-    "longitude": 128.5505
+    "latitude": 35.148,
+    "longitude": 128.8123
   },
   {
-    "slug": "sinpung",
+    "slug": "sinpung-both",
     "name": "신풍휴게소",
     "direction": "양방향",
     "directionName": "당진방향",
     "highwaySlug": "seosanyeongdeogseon",
     "highwayName": "서산영덕고속도로",
-    "locationKm": 45,
+    "locationKm": 150,
     "signatureMenu": {
       "name": "가마솥 소고기국밥",
       "price": 9000,
@@ -24051,27 +29664,27 @@ export const serviceAreas: ServiceArea[] = [
     "brandStores": [],
     "gasStation": {
       "brand": "ex-oil",
-      "gasolinePrice": 1618,
-      "dieselPrice": 1442,
-      "lpgPrice": 1150,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
-      "hasHydrogen": true
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
+      "hasHydrogen": false
     },
     "facilities": [
       "기타"
     ],
-    "latitude": 36.2048,
-    "longitude": 127.3484
+    "latitude": 36.4024,
+    "longitude": 127.5252
   },
   {
-    "slug": "myeoncheon",
+    "slug": "myeoncheon-both",
     "name": "면천휴게소",
     "direction": "양방향",
     "directionName": "당진방향",
     "highwaySlug": "seosanyeongdeogseon",
     "highwayName": "서산영덕고속도로",
-    "locationKm": 52,
+    "locationKm": 157,
     "signatureMenu": {
       "name": "수제 등심돈가스",
       "price": 9500,
@@ -24178,27 +29791,27 @@ export const serviceAreas: ServiceArea[] = [
     "brandStores": [],
     "gasStation": {
       "brand": "ex-oil",
-      "gasolinePrice": 1621,
-      "dieselPrice": 1444,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": true,
-      "evChargersCount": 12,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
       "hasHydrogen": false
     },
     "facilities": [
       "기타"
     ],
-    "latitude": 36.2413,
-    "longitude": 127.4875
+    "latitude": 36.4969,
+    "longitude": 127.4168
   },
   {
-    "slug": "seongju",
+    "slug": "seongju-both",
     "name": "성주휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (양평/창원)",
+    "directionName": "창원방향",
     "highwaySlug": "jungbunaeryuk",
     "highwayName": "중부내륙고속도로",
-    "locationKm": 59,
+    "locationKm": 164,
     "signatureMenu": {
       "name": "가마솥 비빔밥",
       "price": 8500,
@@ -24326,17 +29939,176 @@ export const serviceAreas: ServiceArea[] = [
         "name": "기타",
         "description": "뉴욕버거 : 휴게소에서도 맛있는 패스트푸드를 즐기실 수 있습니다",
         "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수면실",
+      "샤워실",
+      "세탁실",
+      "수유실",
+      "쉼터",
+      "ex-화물차라운지",
+      "ATM",
+      "편의점"
+    ],
+    "latitude": 36.6823,
+    "longitude": 128.3998
+  },
+  {
+    "slug": "seongju-both-1",
+    "name": "성주휴게소",
+    "direction": "양방향",
+    "directionName": "양평방향",
+    "highwaySlug": "jungbunaeryuk",
+    "highwayName": "중부내륙고속도로",
+    "locationKm": 171,
+    "signatureMenu": {
+      "name": "해물 순두부찌개",
+      "price": 8000,
+      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "스낵코너에 위치하고 있으며 바로 구워낸 빵으로 커피와 함께 먹으면 맛있습니다.",
+        "hours": "09:00 ~ 17:00"
+      },
+      {
+        "name": "파스쿠찌",
+        "description": "언제나 센스있게, 이탈리아스럽게 141년 이탈리아의 전통을 이어가며 새로운 감각을 만들어가는 파스쿠찌. 누구나 꿈꿔온 이탈리아를 쉽게 만날 수 있도록 당신 가장 가까운 곳에 이탈리아의 감각 파스쿠찌가 있습니다. 오늘도 자신만의 감각으로 살아가는 당신에게 파스쿠찌는 이탈리아의 정수를 담아 당신의 삶에 세련된 감각을 더합니다. 이탈리아의 신선한 감각으로 레시피한 에스프레소 커피와 젤라또, 티라미수, 그리고 이탈리안 시그니처 메뉴를 통해 이탈리아의 풍미가 담긴 맛과 센스를 전합니다. 일상에서 만나는 이탈리아의 감각 언제나 센스있게, 이탈리아스럽게 SENSE OF ITALY, 파스쿠찌",
+        "hours": "08:00 ~ 20:00"
       },
       {
         "name": "용우동",
         "description": "우동(용우동)코너로 브랜드이며 쫄깃한 면발과 깊은 육수맛이 일품입니다.",
         "hours": "08:00 ~ 24:00"
+      },
+      {
+        "name": "달콤커피",
+        "description": "달콤커피 고픔질 원두와 오랜 운영노하우를 바탕으로 품질은 유지하면서도 합리적이 가격체계를 갖춘 달콤커피의 신규브랜드",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "\"뉴욕버거가 곧 대한민국 대표 수제버거입니다.\" 뉴욕버거는 2012년 인천롯데백화점 1호점을 시작으로 11년간 고기패티, 치킨패티, 새우패티 등 자체 생산 제조하여 가맹점에 공급하는 시스템을 바탕으로 고품질의 메뉴와 합리적인 가격을 제공하기 위해 노력하고 있습니다.",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1856,
-      "dieselPrice": 1851,
+      "gasolinePrice": 1855,
+      "dieselPrice": 1853,
       "lpgPrice": 1246,
       "hasEvCharger": false,
       "evChargersCount": 0,
@@ -24352,21 +30124,21 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "편의점"
     ],
-    "latitude": 36.6037,
-    "longitude": 128.653
+    "latitude": 36.5444,
+    "longitude": 128.359
   },
   {
-    "slug": "boseongnogcha",
+    "slug": "boseongnogcha-busan",
     "name": "보성녹차휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (순천/영암)",
+    "direction": "하행",
+    "directionName": "순천방향",
     "highwaySlug": "namhae-yeongam-suncheon",
     "highwayName": "남해고속도로(영암순천)",
-    "locationKm": 66,
+    "locationKm": 178,
     "signatureMenu": {
-      "name": "해물 순두부찌개",
-      "price": 8000,
-      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
+      "name": "추억의 옛날 우동",
+      "price": 6000,
+      "description": "두툼한 오뎅과 쑥갓, 유부를 듬뿍 얹어 포장마차 감성을 살린 우동입니다."
     },
     "otherMenus": [
       {
@@ -24493,7 +30265,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1853,
       "lpgPrice": 1261,
       "hasEvCharger": true,
-      "evChargersCount": 2,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -24505,21 +30277,21 @@ export const serviceAreas: ServiceArea[] = [
       "열린매장(간식)",
       "기타"
     ],
-    "latitude": 34.9551,
-    "longitude": 126.5192
+    "latitude": 34.6756,
+    "longitude": 126.4103
   },
   {
-    "slug": "ogcheonmannam",
-    "name": "옥천만남휴게소",
+    "slug": "boseongnogcha-both",
+    "name": "보성녹차휴게소",
     "direction": "양방향",
-    "directionName": "양방향",
-    "highwaySlug": "gyeongbu",
-    "highwayName": "경부고속도로",
-    "locationKm": 73,
+    "directionName": "영암방향",
+    "highwaySlug": "namhae-yeongam-suncheon",
+    "highwayName": "남해고속도로(영암순천)",
+    "locationKm": 185,
     "signatureMenu": {
-      "name": "추억의 옛날 우동",
-      "price": 6000,
-      "description": "두툼한 오뎅과 쑥갓, 유부를 듬뿍 얹어 포장마차 감성을 살린 우동입니다."
+      "name": "가마솥 소고기국밥",
+      "price": 9000,
+      "description": "전통 가마솥 방식으로 깊고 얼큰하게 끓여낸 소고기국밥입니다."
     },
     "otherMenus": [
       {
@@ -24623,14 +30395,163 @@ export const serviceAreas: ServiceArea[] = [
         "price": 4500
       }
     ],
-    "brandStores": [],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "아메리카노 등 커피류와 녹차, 아이스티, 홍차, 허브티, 스무디, 스파클링류 등을 판매중입니다.",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "용우동",
+        "description": "(실속상품)우동, 짜장면",
+        "hours": "08:00 ~ 20:30"
+      },
+      {
+        "name": "클라이머홀릭",
+        "description": "실용성과 가성비가 높고 좋은 원단을 사용하여 보온성과 통풍성이 뛰어난 정통 아웃도어 브랜드 입니다.",
+        "hours": "08:00 ~ 19:30"
+      }
+    ],
     "gasStation": {
-      "brand": "알뜰주유소/SK에너지",
-      "gasolinePrice": 1846,
-      "dieselPrice": 1829,
-      "lpgPrice": 1199,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "샤워실",
+      "수유실",
+      "내고장특산물",
+      "ATM",
+      "편의점",
+      "열린매장(간식)",
+      "기타"
+    ],
+    "latitude": 34.6959,
+    "longitude": 126.5527
+  },
+  {
+    "slug": "ogcheonmannam-both",
+    "name": "옥천만남휴게소",
+    "direction": "양방향",
+    "directionName": "양방향",
+    "highwaySlug": "gyeongbu",
+    "highwayName": "경부고속도로",
+    "locationKm": 192,
+    "signatureMenu": {
+      "name": "수제 등심돈가스",
+      "price": 9500,
+      "description": "바삭바삭한 식감과 두툼한 육즙이 일품인 대표 돈가스입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -24641,21 +30562,21 @@ export const serviceAreas: ServiceArea[] = [
       "경정비",
       "휴게소의원"
     ],
-    "latitude": 36.7597,
-    "longitude": 127.4031
+    "latitude": 36.6478,
+    "longitude": 127.6393
   },
   {
-    "slug": "majang",
+    "slug": "majang-both",
     "name": "마장휴게소",
     "direction": "양방향",
     "directionName": "양방향",
     "highwaySlug": "jungbu",
     "highwayName": "중부고속도로",
-    "locationKm": 80,
+    "locationKm": 199,
     "signatureMenu": {
-      "name": "가마솥 소고기국밥",
-      "price": 9000,
-      "description": "전통 가마솥 방식으로 깊고 얼큰하게 끓여낸 소고기국밥입니다."
+      "name": "가마솥 비빔밥",
+      "price": 8500,
+      "description": "신선한 오색 나물과 볶은 소고기를 얹어 쓱쓱 비벼 먹는 한식 대표 메뉴입니다."
     },
     "otherMenus": [
       {
@@ -24797,12 +30718,12 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "SK에너지",
-      "gasolinePrice": 2029,
-      "dieselPrice": 2019,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": true,
-      "evChargersCount": 4,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
       "hasHydrogen": false
     },
     "facilities": [
@@ -24811,21 +30732,21 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "기타"
     ],
-    "latitude": 37.4072,
-    "longitude": 127.3684
+    "latitude": 37.5454,
+    "longitude": 127.5902
   },
   {
-    "slug": "geumwang",
+    "slug": "geumwang-both",
     "name": "금왕휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (제천/평택)",
+    "directionName": "평택방향",
     "highwaySlug": "pyeongtaek-jecheon",
     "highwayName": "평택제천고속도로",
-    "locationKm": 87,
+    "locationKm": 206,
     "signatureMenu": {
-      "name": "수제 등심돈가스",
-      "price": 9500,
-      "description": "바삭바삭한 식감과 두툼한 육즙이 일품인 대표 돈가스입니다."
+      "name": "해물 순두부찌개",
+      "price": 8000,
+      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
     },
     "otherMenus": [
       {
@@ -24859,6 +30780,10 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "유부김밥",
         "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
       },
       {
         "name": "치즈돈가스",
@@ -24941,7 +30866,155 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1853,
       "dieselPrice": 1842,
-      "lpgPrice": 1140,
+      "lpgPrice": 1154,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "쉼터",
+      "내고장특산물",
+      "ATM",
+      "편의점",
+      "열린매장(간식)",
+      "기타"
+    ],
+    "latitude": 36.7688,
+    "longitude": 127.4178
+  },
+  {
+    "slug": "geumwang-both-1",
+    "name": "금왕휴게소",
+    "direction": "양방향",
+    "directionName": "제천방향",
+    "highwaySlug": "pyeongtaek-jecheon",
+    "highwayName": "평택제천고속도로",
+    "locationKm": 213,
+    "signatureMenu": {
+      "name": "추억의 옛날 우동",
+      "price": 6000,
+      "description": "두툼한 오뎅과 쑥갓, 유부를 듬뿍 얹어 포장마차 감성을 살린 우동입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "커피 외 아이스티 등 음료 판매",
+        "hours": "08:00 ~ 19:30"
+      },
+      {
+        "name": "할리스커피",
+        "description": "커피 외 아이스티 등 음료 판매",
+        "hours": "08:00 ~ 19:30"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1853,
+      "dieselPrice": 1842,
+      "lpgPrice": 1125,
       "hasEvCharger": false,
       "evChargersCount": 0,
       "hasHydrogen": false
@@ -24955,21 +31028,21 @@ export const serviceAreas: ServiceArea[] = [
       "열린매장(간식)",
       "기타"
     ],
-    "latitude": 36.5075,
-    "longitude": 127.4143
+    "latitude": 36.6478,
+    "longitude": 127.3401
   },
   {
-    "slug": "gangcheonsan",
+    "slug": "gangcheonsan-seoul",
     "name": "강천산휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (광주/대구)",
+    "direction": "상행",
+    "directionName": "대구방향",
     "highwaySlug": "gwangju-daegu",
     "highwayName": "광주대구고속도로",
-    "locationKm": 94,
+    "locationKm": 220,
     "signatureMenu": {
-      "name": "가마솥 비빔밥",
-      "price": 8500,
-      "description": "신선한 오색 나물과 볶은 소고기를 얹어 쓱쓱 비벼 먹는 한식 대표 메뉴입니다."
+      "name": "가마솥 소고기국밥",
+      "price": 9000,
+      "description": "전통 가마솥 방식으로 깊고 얼큰하게 끓여낸 소고기국밥입니다."
     },
     "otherMenus": [
       {
@@ -25086,28 +31159,306 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1847,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 6,
-      "hasHydrogen": false
+      "evChargersCount": 2,
+      "hasHydrogen": true
     },
     "facilities": [
       "수유실",
       "내고장특산물",
       "편의점",
       "열린매장(간식)",
-      "기타",
-      "ATM"
+      "기타"
     ],
-    "latitude": 37.2803,
-    "longitude": 127.5867
+    "latitude": 37.2936,
+    "longitude": 127.4285
   },
   {
-    "slug": "cheondeungsan",
+    "slug": "cheondeungsan-both",
     "name": "천등산휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (제천/평택)",
+    "directionName": "제천방향",
     "highwaySlug": "pyeongtaek-jecheon",
     "highwayName": "평택제천고속도로",
-    "locationKm": 101,
+    "locationKm": 227,
+    "signatureMenu": {
+      "name": "수제 등심돈가스",
+      "price": 9500,
+      "description": "바삭바삭한 식감과 두툼한 육즙이 일품인 대표 돈가스입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "영업시간 안내 [07시~19시]",
+        "hours": "07:00 ~ 19:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1879,
+      "dieselPrice": 1867,
+      "lpgPrice": 1199,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "쉼터",
+      "내고장특산물",
+      "ATM"
+    ],
+    "latitude": 36.4967,
+    "longitude": 127.5423
+  },
+  {
+    "slug": "cheondeungsan-both-1",
+    "name": "천등산휴게소",
+    "direction": "양방향",
+    "directionName": "평택방향",
+    "highwaySlug": "pyeongtaek-jecheon",
+    "highwayName": "평택제천고속도로",
+    "locationKm": 234,
+    "signatureMenu": {
+      "name": "가마솥 비빔밥",
+      "price": 8500,
+      "description": "신선한 오색 나물과 볶은 소고기를 얹어 쓱쓱 비벼 먹는 한식 대표 메뉴입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "커피, 차류(시중과 동일한 서비스 제공)",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "쉼터",
+      "내고장특산물",
+      "ATM",
+      "편의점",
+      "열린매장(간식)",
+      "기타"
+    ],
+    "latitude": 36.6056,
+    "longitude": 127.6363
+  },
+  {
+    "slug": "gimpohaengbogdeurimswimteo-both",
+    "name": "김포행복드림쉼터휴게소",
+    "direction": "양방향",
+    "directionName": "양방향",
+    "highwaySlug": "capital-circular-1",
+    "highwayName": "수도권제1순환고속도로",
+    "locationKm": 241,
     "signatureMenu": {
       "name": "해물 순두부찌개",
       "price": 8000,
@@ -25215,42 +31566,31 @@ export const serviceAreas: ServiceArea[] = [
         "price": 4500
       }
     ],
-    "brandStores": [
-      {
-        "name": "파스쿠찌",
-        "description": "영업시간 안내 [07시~19시]",
-        "hours": "07:00 ~ 19:00"
-      }
-    ],
+    "brandStores": [],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1879,
-      "dieselPrice": 1867,
-      "lpgPrice": 1199,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
       "hasHydrogen": false
     },
     "facilities": [
-      "수유실",
-      "쉼터",
-      "내고장특산물",
       "ATM",
-      "편의점",
-      "열린매장(간식)",
-      "기타"
+      "편의점"
     ],
-    "latitude": 36.6226,
-    "longitude": 127.639
+    "latitude": 37.6728,
+    "longitude": 127.0838
   },
   {
-    "slug": "gimpohaengbogdeurimswimteo",
-    "name": "김포행복드림쉼터휴게소",
-    "direction": "양방향",
-    "directionName": "양방향",
-    "highwaySlug": "capital-circular-1",
-    "highwayName": "수도권제1순환고속도로",
-    "locationKm": 108,
+    "slug": "gangcheonsan-busan",
+    "name": "강천산휴게소",
+    "direction": "하행",
+    "directionName": "광주방향",
+    "highwaySlug": "gwangju-daegu",
+    "highwayName": "광주대구고속도로",
+    "locationKm": 248,
     "signatureMenu": {
       "name": "추억의 옛날 우동",
       "price": 6000,
@@ -25358,31 +31698,41 @@ export const serviceAreas: ServiceArea[] = [
         "price": 4500
       }
     ],
-    "brandStores": [],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
     "gasStation": {
       "brand": "ex-oil",
-      "gasolinePrice": 1612,
-      "dieselPrice": 1438,
-      "lpgPrice": 1154,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 8,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
+      "수유실",
+      "내고장특산물",
       "ATM",
-      "편의점"
+      "편의점",
+      "열린매장(간식)",
+      "기타"
     ],
-    "latitude": 37.6842,
-    "longitude": 127.0709
+    "latitude": 36.0176,
+    "longitude": 128.5691
   },
   {
-    "slug": "oedong",
+    "slug": "oedong-both",
     "name": "외동휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (부산/포항)",
+    "directionName": "포항방향",
     "highwaySlug": "donghae-ulsan-pohang",
     "highwayName": "동해고속도로(울산포항)",
-    "locationKm": 115,
+    "locationKm": 255,
     "signatureMenu": {
       "name": "가마솥 소고기국밥",
       "price": 9000,
@@ -25505,22 +31855,12 @@ export const serviceAreas: ServiceArea[] = [
         "name": "기타",
         "description": "파스쿠찌커피매장 /주말,공휴일 07시부터~07시30분까지 영업",
         "hours": "07:00 ~ 20:00"
-      },
-      {
-        "name": "탐앤탐스",
-        "description": "아메리카노, 카페라떼, 바닐라라떼, 스무디, 아이스티, 등",
-        "hours": "08:00 ~ 21:00"
-      },
-      {
-        "name": "CU",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
-      "dieselPrice": 1853,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
@@ -25529,21 +31869,19 @@ export const serviceAreas: ServiceArea[] = [
     "facilities": [
       "수유실",
       "편의점",
-      "열린매장(간식)",
-      "쉼터",
-      "ATM"
+      "열린매장(간식)"
     ],
-    "latitude": 36.7178,
-    "longitude": 128.4567
+    "latitude": 36.628,
+    "longitude": 128.3649
   },
   {
-    "slug": "nongong",
-    "name": "논공휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (광주/대구)",
-    "highwaySlug": "gwangju-daegu",
-    "highwayName": "광주대구고속도로",
-    "locationKm": 122,
+    "slug": "oedong-busan",
+    "name": "외동휴게소",
+    "direction": "하행",
+    "directionName": "부산방향",
+    "highwaySlug": "donghae-ulsan-pohang",
+    "highwayName": "동해고속도로(울산포항)",
+    "locationKm": 262,
     "signatureMenu": {
       "name": "수제 등심돈가스",
       "price": 9500,
@@ -25649,6 +31987,292 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
+        "name": "탐앤탐스",
+        "description": "아메리카노, 카페라떼, 바닐라라떼, 스무디, 아이스티, 등",
+        "hours": "08:00 ~ 21:00"
+      },
+      {
+        "name": "CU",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 24:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "쉼터",
+      "ATM",
+      "편의점"
+    ],
+    "latitude": 37.3235,
+    "longitude": 127.3985
+  },
+  {
+    "slug": "nongong-seoul",
+    "name": "논공휴게소",
+    "direction": "상행",
+    "directionName": "대구방향",
+    "highwaySlug": "gwangju-daegu",
+    "highwayName": "광주대구고속도로",
+    "locationKm": 269,
+    "signatureMenu": {
+      "name": "가마솥 비빔밥",
+      "price": 8500,
+      "description": "신선한 오색 나물과 볶은 소고기를 얹어 쓱쓱 비벼 먹는 한식 대표 메뉴입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1894,
+      "dieselPrice": 1899,
+      "lpgPrice": 1155,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "내고장특산물",
+      "ATM",
+      "편의점",
+      "기타"
+    ],
+    "latitude": 35.7215,
+    "longitude": 128.6127
+  },
+  {
+    "slug": "nongong-busan",
+    "name": "논공휴게소",
+    "direction": "하행",
+    "directionName": "광주방향",
+    "highwaySlug": "gwangju-daegu",
+    "highwayName": "광주대구고속도로",
+    "locationKm": 276,
+    "signatureMenu": {
+      "name": "해물 순두부찌개",
+      "price": 8000,
+      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
         "name": "파스쿠찌",
         "description": "입점 브랜드 매장입니다.",
         "hours": "08:00 ~ 20:00"
@@ -25660,36 +32284,35 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1894,
-      "dieselPrice": 1896,
-      "lpgPrice": 1155,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
       "수유실",
-      "내고장특산물",
       "ATM",
       "편의점",
       "기타"
     ],
-    "latitude": 35.9066,
-    "longitude": 128.4557
+    "latitude": 35.7998,
+    "longitude": 128.7334
   },
   {
-    "slug": "gapyeong",
+    "slug": "gapyeong-seoul",
     "name": "가평휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (서울/춘천)",
+    "direction": "상행",
+    "directionName": "서울방향",
     "highwaySlug": "seoul-yangyang",
     "highwayName": "서울양양고속도로",
-    "locationKm": 129,
+    "locationKm": 283,
     "signatureMenu": {
-      "name": "가마솥 비빔밥",
-      "price": 8500,
-      "description": "신선한 오색 나물과 볶은 소고기를 얹어 쓱쓱 비벼 먹는 한식 대표 메뉴입니다."
+      "name": "추억의 옛날 우동",
+      "price": 6000,
+      "description": "두툼한 오뎅과 쑥갓, 유부를 듬뿍 얹어 포장마차 감성을 살린 우동입니다."
     },
     "otherMenus": [
       {
@@ -25833,18 +32456,13 @@ export const serviceAreas: ServiceArea[] = [
         "name": "기타",
         "description": "오가다, 임실치즈",
         "hours": "08:00 ~ 22:00"
-      },
-      {
-        "name": "스태프핫도그",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
       "brand": "ex-oil",
-      "gasolinePrice": 1621,
-      "dieselPrice": 1444,
-      "lpgPrice": 1160,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
       "hasHydrogen": false
@@ -25854,21 +32472,21 @@ export const serviceAreas: ServiceArea[] = [
       "내고장특산물",
       "ATM"
     ],
-    "latitude": 37.3103,
-    "longitude": 127.4097
+    "latitude": 37.4863,
+    "longitude": 127.6496
   },
   {
-    "slug": "osan",
-    "name": "오산휴게소",
+    "slug": "gapyeong-both",
+    "name": "가평휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (동탄/봉담)",
-    "highwaySlug": "pyeongtaegpajuseon",
-    "highwayName": "평택파주고속도로",
-    "locationKm": 136,
+    "directionName": "춘천방향",
+    "highwaySlug": "seoul-yangyang",
+    "highwayName": "서울양양고속도로",
+    "locationKm": 290,
     "signatureMenu": {
-      "name": "해물 순두부찌개",
-      "price": 8000,
-      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
+      "name": "가마솥 소고기국밥",
+      "price": 9000,
+      "description": "전통 가마솥 방식으로 깊고 얼큰하게 끓여낸 소고기국밥입니다."
     },
     "otherMenus": [
       {
@@ -25976,6 +32594,175 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "던킨도너츠",
         "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "엔제리너스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 22:00"
+      },
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 22:00"
+      },
+      {
+        "name": "스태프핫도그",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "훼미리마트",
+        "description": "CU",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "JDX",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "NEPA",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "오가다, 임실치즈",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "내고장특산물",
+      "ATM"
+    ],
+    "latitude": 37.5635,
+    "longitude": 127.5282
+  },
+  {
+    "slug": "osan-both",
+    "name": "오산휴게소",
+    "direction": "양방향",
+    "directionName": "봉담방향",
+    "highwaySlug": "pyeongtaegpajuseon",
+    "highwayName": "평택파주고속도로",
+    "locationKm": 297,
+    "signatureMenu": {
+      "name": "수제 등심돈가스",
+      "price": 9500,
+      "description": "바삭바삭한 식감과 두툼한 육즙이 일품인 대표 돈가스입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "입점 브랜드 매장입니다.",
         "hours": "06:00 ~ 20:00"
       },
       {
@@ -25992,6 +32779,146 @@ export const serviceAreas: ServiceArea[] = [
         "name": "기타",
         "description": "돈까스회관",
         "hours": "05:00 ~ 24:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "ATM",
+      "편의점",
+      "기타"
+    ],
+    "latitude": 37.503,
+    "longitude": 127.3977
+  },
+  {
+    "slug": "osan-both-1",
+    "name": "오산휴게소",
+    "direction": "양방향",
+    "directionName": "동탄방향",
+    "highwaySlug": "pyeongtaegpajuseon",
+    "highwayName": "평택파주고속도로",
+    "locationKm": 304,
+    "signatureMenu": {
+      "name": "가마솥 비빔밥",
+      "price": 8500,
+      "description": "신선한 오색 나물과 볶은 소고기를 얹어 쓱쓱 비벼 먹는 한식 대표 메뉴입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "던킨도너츠",
+        "description": "평일 6시 ~ 21시, 주말 6시 ~ 22시",
+        "hours": "06:00 ~ 21:00"
       },
       {
         "name": "롯데리아",
@@ -26002,15 +32929,25 @@ export const serviceAreas: ServiceArea[] = [
         "name": "파스쿠찌",
         "description": "평일 8시 ~ 20시, 주말 7시 ~ 22시",
         "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "클라이머홀릭",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "돈까스회관",
+        "hours": "05:00 ~ 24:00"
       }
     ],
     "gasStation": {
       "brand": "ex-oil",
-      "gasolinePrice": 1624,
-      "dieselPrice": 1446,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 12,
+      "evChargersCount": 2,
       "hasHydrogen": false
     },
     "facilities": [
@@ -26019,21 +32956,21 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "기타"
     ],
-    "latitude": 37.2665,
-    "longitude": 127.5467
+    "latitude": 37.3606,
+    "longitude": 127.3781
   },
   {
-    "slug": "songsanpodo",
+    "slug": "songsanpodo-both",
     "name": "송산포도휴게소",
     "direction": "양방향",
     "directionName": "양방향",
     "highwaySlug": "pyeongtaegsiheungseon",
     "highwayName": "평택시흥고속도로",
-    "locationKm": 143,
+    "locationKm": 311,
     "signatureMenu": {
-      "name": "추억의 옛날 우동",
-      "price": 6000,
-      "description": "두툼한 오뎅과 쑥갓, 유부를 듬뿍 얹어 포장마차 감성을 살린 우동입니다."
+      "name": "해물 순두부찌개",
+      "price": 8000,
+      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
     },
     "otherMenus": [
       {
@@ -26171,8 +33108,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "ex-oil",
-      "gasolinePrice": 1627,
-      "dieselPrice": 1448,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
@@ -26186,21 +33123,21 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "기타"
     ],
-    "latitude": 37.3581,
-    "longitude": 127.6576
+    "latitude": 37.267,
+    "longitude": 127.4873
   },
   {
-    "slug": "jeonganalbam",
+    "slug": "jeonganalbam-both",
     "name": "정안알밤휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (논산/천안)",
+    "directionName": "천안방향",
     "highwaySlug": "nonsancheonanseon-honamseon",
     "highwayName": "논산천안선,호남고속도로",
-    "locationKm": 150,
+    "locationKm": 318,
     "signatureMenu": {
-      "name": "가마솥 소고기국밥",
-      "price": 9000,
-      "description": "전통 가마솥 방식으로 깊고 얼큰하게 끓여낸 소고기국밥입니다."
+      "name": "추억의 옛날 우동",
+      "price": 6000,
+      "description": "두툼한 오뎅과 쑥갓, 유부를 듬뿍 얹어 포장마차 감성을 살린 우동입니다."
     },
     "otherMenus": [
       {
@@ -26329,6 +33266,148 @@ export const serviceAreas: ServiceArea[] = [
         "name": "기타",
         "description": "크라제맥스, 정안알밤빵, 아리랑고로케",
         "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "쉼터",
+      "경정비",
+      "버스환승",
+      "ATM",
+      "기타"
+    ],
+    "latitude": 36.245,
+    "longitude": 127.4913
+  },
+  {
+    "slug": "jeonganalbam-both-1",
+    "name": "정안알밤휴게소",
+    "direction": "양방향",
+    "directionName": "논산방향",
+    "highwaySlug": "nonsancheonanseon-honamseon",
+    "highwayName": "논산천안선,호남고속도로",
+    "locationKm": 325,
+    "signatureMenu": {
+      "name": "가마솥 소고기국밥",
+      "price": 9000,
+      "description": "전통 가마솥 방식으로 깊고 얼큰하게 끓여낸 소고기국밥입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 22:00"
       },
       {
         "name": "카페베네",
@@ -26344,15 +33423,20 @@ export const serviceAreas: ServiceArea[] = [
         "name": "드롭탑(커피전문점)",
         "description": "입점 브랜드 매장입니다.",
         "hours": "08:00 ~ 22:00"
+      },
+      {
+        "name": "기타",
+        "description": "우동타임, 공주밤빵, 롤리폴리캔디",
+        "hours": "08:00 ~ 22:00"
       }
     ],
     "gasStation": {
       "brand": "ex-oil",
-      "gasolinePrice": 1630,
-      "dieselPrice": 1450,
-      "lpgPrice": 1152,
-      "hasEvCharger": true,
-      "evChargersCount": 2,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
       "hasHydrogen": true
     },
     "facilities": [
@@ -26363,17 +33447,17 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "기타"
     ],
-    "latitude": 36.4375,
-    "longitude": 127.5066
+    "latitude": 36.3833,
+    "longitude": 127.5308
   },
   {
-    "slug": "iin",
+    "slug": "iin-both",
     "name": "이인휴게소",
     "direction": "양방향",
     "directionName": "천안방향",
     "highwaySlug": "nonsancheonanseon-honamseon",
     "highwayName": "논산천안선,호남고속도로",
-    "locationKm": 157,
+    "locationKm": 332,
     "signatureMenu": {
       "name": "수제 등심돈가스",
       "price": 9500,
@@ -26516,11 +33600,11 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "ex-oil",
-      "gasolinePrice": 1600,
-      "dieselPrice": 1430,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -26530,17 +33614,17 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "기타"
     ],
-    "latitude": 36.5002,
-    "longitude": 127.3772
+    "latitude": 36.4913,
+    "longitude": 127.4359
   },
   {
-    "slug": "tancheon",
+    "slug": "tancheon-both",
     "name": "탄천휴게소",
     "direction": "양방향",
     "directionName": "논산방향",
     "highwaySlug": "nonsancheonanseon-honamseon",
     "highwayName": "논산천안선,호남고속도로",
-    "locationKm": 164,
+    "locationKm": 339,
     "signatureMenu": {
       "name": "가마솥 비빔밥",
       "price": 8500,
@@ -26687,11 +33771,11 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "ex-oil",
-      "gasolinePrice": 1603,
-      "dieselPrice": 1432,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": true,
-      "evChargersCount": 4,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
       "hasHydrogen": false
     },
     "facilities": [
@@ -26701,17 +33785,17 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "기타"
     ],
-    "latitude": 36.4252,
-    "longitude": 127.2545
+    "latitude": 36.4698,
+    "longitude": 127.2937
   },
   {
-    "slug": "yangju",
+    "slug": "yangju-seoul",
     "name": "양주휴게소",
     "direction": "상행",
     "directionName": "일산방향",
     "highwaySlug": "capital-circular-1",
     "highwayName": "수도권제1순환고속도로",
-    "locationKm": 171,
+    "locationKm": 346,
     "signatureMenu": {
       "name": "해물 순두부찌개",
       "price": 8000,
@@ -26847,12 +33931,12 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
-      "dieselPrice": 1853,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
@@ -26861,17 +33945,17 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "기타"
     ],
-    "latitude": 37.4975,
-    "longitude": 126.8448
+    "latitude": 37.5546,
+    "longitude": 126.8285
   },
   {
-    "slug": "cheongdosaemaeul",
+    "slug": "cheongdosaemaeul-seoul",
     "name": "청도새마을휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (대구/부산)",
+    "direction": "상행",
+    "directionName": "대구방향",
     "highwaySlug": "jungang",
     "highwayName": "중앙고속도로",
-    "locationKm": 178,
+    "locationKm": 353,
     "signatureMenu": {
       "name": "추억의 옛날 우동",
       "price": 6000,
@@ -27009,20 +34093,15 @@ export const serviceAreas: ServiceArea[] = [
         "name": "기타",
         "description": "CU편의점 / 경주빵 / 고구마명가 / 고선생고로케 / 네이쳐팜 / 퀸쥬얼리 / 에어워크&다정다감 / 아띠(생활한복) / 환공어가 / 풍년제과 / 디즈니",
         "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "클라이머홀릭",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
       "brand": "ex-oil",
-      "gasolinePrice": 1609,
-      "dieselPrice": 1436,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": true,
-      "evChargersCount": 6,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
       "hasHydrogen": false
     },
     "facilities": [
@@ -27031,17 +34110,17 @@ export const serviceAreas: ServiceArea[] = [
       "수유실",
       "약국"
     ],
-    "latitude": 36.4266,
-    "longitude": 128.4917
+    "latitude": 36.4437,
+    "longitude": 128.4349
   },
   {
-    "slug": "jangan",
-    "name": "장안휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (부산/울산)",
-    "highwaySlug": "donghae",
-    "highwayName": "동해고속도로",
-    "locationKm": 185,
+    "slug": "cheongdosaemaeul-busan",
+    "name": "청도새마을휴게소",
+    "direction": "하행",
+    "directionName": "부산방향",
+    "highwaySlug": "jungang",
+    "highwayName": "중앙고속도로",
+    "locationKm": 10,
     "signatureMenu": {
       "name": "가마솥 소고기국밥",
       "price": 9000,
@@ -27151,37 +34230,61 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
-        "name": "할리스커피",
-        "description": "휴게소특수매장(쿠폰/할인 사이즈변경안됨), 할리스포인트적립",
+        "name": "뚜레쥬르",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "클라이머홀릭",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "투썸플레이스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "CU편의점 / 네이쳐팜 / 고선생고로케 / 고구마명가 / 경주빵 / 퀸쥬얼리 / 에어워크&다정다감 / 아띠(생활한복) / 커터앤벅 / 풍년제과",
         "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
       "brand": "ex-oil",
-      "gasolinePrice": 1612,
-      "dieselPrice": 1438,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
-      "수유실",
-      "쉼터",
-      "내고장특산물",
-      "ATM"
+      "샤워실",
+      "세탁실",
+      "수유실"
     ],
-    "latitude": 35.0872,
-    "longitude": 129.1938
+    "latitude": 36.445,
+    "longitude": 128.5787
   },
   {
-    "slug": "yeongjongdaegyo",
-    "name": "영종대교휴게소",
-    "direction": "양방향",
-    "directionName": "양방향",
-    "highwaySlug": "incheongugjegonghangseon",
-    "highwayName": "인천국제공항고속도로",
-    "locationKm": 192,
+    "slug": "jangan-busan",
+    "name": "장안휴게소",
+    "direction": "하행",
+    "directionName": "부산방향",
+    "highwaySlug": "donghae",
+    "highwayName": "동해고속도로",
+    "locationKm": 17,
     "signatureMenu": {
       "name": "수제 등심돈가스",
       "price": 9500,
@@ -27219,6 +34322,283 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "유부김밥",
         "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "휴게소특수매장(쿠폰/할인 사이즈변경안됨), 할리스포인트적립",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "쉼터",
+      "내고장특산물",
+      "ATM"
+    ],
+    "latitude": 35.1703,
+    "longitude": 129.2253
+  },
+  {
+    "slug": "jangan-busan-1",
+    "name": "장안휴게소",
+    "direction": "하행",
+    "directionName": "울산방향",
+    "highwaySlug": "donghae",
+    "highwayName": "동해고속도로",
+    "locationKm": 24,
+    "signatureMenu": {
+      "name": "가마솥 비빔밥",
+      "price": 8500,
+      "description": "신선한 오색 나물과 볶은 소고기를 얹어 쓱쓱 비벼 먹는 한식 대표 메뉴입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "ATM"
+    ],
+    "latitude": 35.3006,
+    "longitude": 129.1643
+  },
+  {
+    "slug": "yeongjongdaegyo-both",
+    "name": "영종대교휴게소",
+    "direction": "양방향",
+    "directionName": "양방향",
+    "highwaySlug": "incheongugjegonghangseon",
+    "highwayName": "인천국제공항고속도로",
+    "locationKm": 31,
+    "signatureMenu": {
+      "name": "해물 순두부찌개",
+      "price": 8000,
+      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
       },
       {
         "name": "치즈돈가스",
@@ -27329,11 +34709,11 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "ex-oil",
-      "gasolinePrice": 1615,
-      "dieselPrice": 1440,
-      "lpgPrice": 1150,
-      "hasEvCharger": true,
-      "evChargersCount": 8,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
       "hasHydrogen": false
     },
     "facilities": [
@@ -27341,21 +34721,21 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "기타"
     ],
-    "latitude": 37.5058,
-    "longitude": 126.8468
+    "latitude": 37.5963,
+    "longitude": 126.6513
   },
   {
-    "slug": "yangpyeong",
+    "slug": "yangpyeong-busan",
     "name": "양평휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (광주/원주)",
+    "direction": "하행",
+    "directionName": "광주방향",
     "highwaySlug": "jungang",
     "highwayName": "중앙고속도로",
-    "locationKm": 199,
+    "locationKm": 38,
     "signatureMenu": {
-      "name": "가마솥 비빔밥",
-      "price": 8500,
-      "description": "신선한 오색 나물과 볶은 소고기를 얹어 쓱쓱 비벼 먹는 한식 대표 메뉴입니다."
+      "name": "추억의 옛날 우동",
+      "price": 6000,
+      "description": "두툼한 오뎅과 쑥갓, 유부를 듬뿍 얹어 포장마차 감성을 살린 우동입니다."
     },
     "otherMenus": [
       {
@@ -27478,8 +34858,140 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "ex-oil",
-      "gasolinePrice": 1618,
-      "dieselPrice": 1442,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 2,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "ATM"
+    ],
+    "latitude": 37.4441,
+    "longitude": 127.3714
+  },
+  {
+    "slug": "yangpyeong-both",
+    "name": "양평휴게소",
+    "direction": "양방향",
+    "directionName": "원주방향",
+    "highwaySlug": "jungang",
+    "highwayName": "중앙고속도로",
+    "locationKm": 45,
+    "signatureMenu": {
+      "name": "가마솥 소고기국밥",
+      "price": 9000,
+      "description": "전통 가마솥 방식으로 깊고 얼큰하게 끓여낸 소고기국밥입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
@@ -27489,21 +35001,175 @@ export const serviceAreas: ServiceArea[] = [
       "수유실",
       "ATM"
     ],
-    "latitude": 37.5597,
-    "longitude": 127.5532
+    "latitude": 37.3066,
+    "longitude": 127.4134
   },
   {
-    "slug": "gwangju",
+    "slug": "gwangju-busan",
     "name": "광주휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (광주/원주)",
+    "direction": "하행",
+    "directionName": "광주방향",
     "highwaySlug": "jungang",
     "highwayName": "중앙고속도로",
-    "locationKm": 206,
+    "locationKm": 52,
     "signatureMenu": {
-      "name": "해물 순두부찌개",
-      "price": 8000,
-      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
+      "name": "수제 등심돈가스",
+      "price": 9500,
+      "description": "바삭바삭한 식감과 두툼한 육즙이 일품인 대표 돈가스입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "배스킨라빈스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "엔제리너스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "탐앤탐스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "임실치즈피자",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "기타",
+        "description": "편의점 CU",
+        "hours": "00:00 ~ 24:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "ATM"
+    ],
+    "latitude": 37.2676,
+    "longitude": 127.5519
+  },
+  {
+    "slug": "gwangju-both",
+    "name": "광주휴게소",
+    "direction": "양방향",
+    "directionName": "원주방향",
+    "highwaySlug": "jungang",
+    "highwayName": "중앙고속도로",
+    "locationKm": 59,
+    "signatureMenu": {
+      "name": "가마솥 비빔밥",
+      "price": 8500,
+      "description": "신선한 오색 나물과 볶은 소고기를 얹어 쓱쓱 비벼 먹는 한식 대표 메뉴입니다."
     },
     "otherMenus": [
       {
@@ -27609,64 +35275,54 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
-        "name": "배스킨라빈스",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
         "name": "엔제리너스",
-        "description": "입점 브랜드 매장입니다.",
+        "description": "엔제리너스 단독매장 운영",
         "hours": "08:00 ~ 20:00"
       },
       {
         "name": "탐앤탐스",
-        "description": "입점 브랜드 매장입니다.",
+        "description": "외부 매장내 탐앤탐스 운영",
         "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "임실치즈피자",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "기타",
-        "description": "편의점 CU",
-        "hours": "00:00 ~ 24:00"
       },
       {
         "name": "용우동",
         "description": "용우동 브랜드 향미암 운영",
         "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "임실치즈피자",
+        "description": "임실군에서 직접 운영하는 임실치즈피자",
+        "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
       "brand": "ex-oil",
-      "gasolinePrice": 1621,
-      "dieselPrice": 1444,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": true,
-      "evChargersCount": 10,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
       "hasHydrogen": false
     },
     "facilities": [
       "수유실",
       "ATM"
     ],
-    "latitude": 37.522,
-    "longitude": 127.4144
+    "latitude": 37.3631,
+    "longitude": 127.6595
   },
   {
-    "slug": "uiseong",
+    "slug": "uiseong-both",
     "name": "의성휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (영덕/청주)",
+    "directionName": "청주방향",
     "highwaySlug": "seosanyeongdeogseon",
     "highwayName": "서산영덕고속도로",
-    "locationKm": 213,
+    "locationKm": 66,
     "signatureMenu": {
-      "name": "추억의 옛날 우동",
-      "price": 6000,
-      "description": "두툼한 오뎅과 쑥갓, 유부를 듬뿍 얹어 포장마차 감성을 살린 우동입니다."
+      "name": "해물 순두부찌개",
+      "price": 8000,
+      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
     },
     "otherMenus": [
       {
@@ -27778,10 +35434,148 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1849,
-      "dieselPrice": 1848,
-      "lpgPrice": 1159,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "ATM"
+    ],
+    "latitude": 36.6674,
+    "longitude": 128.6246
+  },
+  {
+    "slug": "uiseong-both-1",
+    "name": "의성휴게소",
+    "direction": "양방향",
+    "directionName": "영덕방향",
+    "highwaySlug": "seosanyeongdeogseon",
+    "highwayName": "서산영덕고속도로",
+    "locationKm": 73,
+    "signatureMenu": {
+      "name": "추억의 옛날 우동",
+      "price": 6000,
+      "description": "두툼한 오뎅과 쑥갓, 유부를 듬뿍 얹어 포장마차 감성을 살린 우동입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "이마트24",
+        "description": "24시 운영(21시~익일 07시까지 무인운영)",
+        "hours": "00:00 ~ 24:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
       "hasHydrogen": false
@@ -27790,17 +35584,17 @@ export const serviceAreas: ServiceArea[] = [
       "수유실",
       "ATM"
     ],
-    "latitude": 36.547,
-    "longitude": 128.3584
+    "latitude": 36.7255,
+    "longitude": 128.493
   },
   {
-    "slug": "cheongsong",
+    "slug": "cheongsong-both",
     "name": "청송휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (영덕/청주)",
+    "directionName": "청주방향",
     "highwaySlug": "seosanyeongdeogseon",
     "highwayName": "서산영덕고속도로",
-    "locationKm": 220,
+    "locationKm": 80,
     "signatureMenu": {
       "name": "가마솥 소고기국밥",
       "price": 9000,
@@ -27921,13 +35715,13 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1865,
-      "dieselPrice": 1831,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 12,
-      "hasHydrogen": false
+      "evChargersCount": 8,
+      "hasHydrogen": true
     },
     "facilities": [
       "수유실",
@@ -27935,17 +35729,17 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "열린매장(간식)"
     ],
-    "latitude": 36.4365,
-    "longitude": 128.4505
+    "latitude": 36.6462,
+    "longitude": 128.373
   },
   {
-    "slug": "hongcheon",
-    "name": "홍천휴게소",
+    "slug": "cheongsong-both-1",
+    "name": "청송휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (서울/양양)",
-    "highwaySlug": "seoul-yangyang",
-    "highwayName": "서울양양고속도로",
-    "locationKm": 227,
+    "directionName": "영덕방향",
+    "highwaySlug": "seosanyeongdeogseon",
+    "highwayName": "서산영덕고속도로",
+    "locationKm": 87,
     "signatureMenu": {
       "name": "수제 등심돈가스",
       "price": 9500,
@@ -28051,6 +35845,144 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [
       {
+        "name": "드롭탑(커피전문점)",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:00 ~ 19:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "열린매장(간식)"
+    ],
+    "latitude": 36.5023,
+    "longitude": 128.3749
+  },
+  {
+    "slug": "hongcheon-seoul",
+    "name": "홍천휴게소",
+    "direction": "상행",
+    "directionName": "서울방향",
+    "highwaySlug": "seoul-yangyang",
+    "highwayName": "서울양양고속도로",
+    "locationKm": 94,
+    "signatureMenu": {
+      "name": "가마솥 비빔밥",
+      "price": 8500,
+      "description": "신선한 오색 나물과 볶은 소고기를 얹어 쓱쓱 비벼 먹는 한식 대표 메뉴입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
         "name": "할리스커피",
         "description": "브랜드 커피 전문매장(본관 화장실 앞)",
         "hours": "08:00 ~ 20:00"
@@ -28063,9 +35995,155 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1857,
-      "dieselPrice": 1850,
-      "lpgPrice": 1250,
+      "gasolinePrice": 1853,
+      "dieselPrice": 1848,
+      "lpgPrice": 1255,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "내고장특산물",
+      "ATM",
+      "편의점",
+      "열린매장(간식)"
+    ],
+    "latitude": 37.4167,
+    "longitude": 126.9694
+  },
+  {
+    "slug": "hongcheon-both",
+    "name": "홍천휴게소",
+    "direction": "양방향",
+    "directionName": "양양방향",
+    "highwaySlug": "seoul-yangyang",
+    "highwayName": "서울양양고속도로",
+    "locationKm": 101,
+    "signatureMenu": {
+      "name": "해물 순두부찌개",
+      "price": 8000,
+      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "07:30 ~ 19:30"
+      },
+      {
+        "name": "기타",
+        "description": "켈리토스트",
+        "hours": "07:30 ~ 19:30"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1853,
+      "dieselPrice": 1848,
+      "lpgPrice": 1255,
       "hasEvCharger": false,
       "evChargersCount": 0,
       "hasHydrogen": false
@@ -28077,21 +36155,21 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "열린매장(간식)"
     ],
-    "latitude": 37.4448,
-    "longitude": 127.0656
+    "latitude": 37.4783,
+    "longitude": 127.0994
   },
   {
-    "slug": "naerincheon",
+    "slug": "naerincheon-both",
     "name": "내린천휴게소",
     "direction": "양방향",
     "directionName": "양방향",
     "highwaySlug": "seoul-yangyang",
     "highwayName": "서울양양고속도로",
-    "locationKm": 234,
+    "locationKm": 108,
     "signatureMenu": {
-      "name": "가마솥 비빔밥",
-      "price": 8500,
-      "description": "신선한 오색 나물과 볶은 소고기를 얹어 쓱쓱 비벼 먹는 한식 대표 메뉴입니다."
+      "name": "추억의 옛날 우동",
+      "price": 6000,
+      "description": "두툼한 오뎅과 쑥갓, 유부를 듬뿍 얹어 포장마차 감성을 살린 우동입니다."
     },
     "otherMenus": [
       {
@@ -28228,7 +36306,7 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1848,
       "lpgPrice": 1255,
       "hasEvCharger": true,
-      "evChargersCount": 2,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
@@ -28237,21 +36315,21 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "편의점"
     ],
-    "latitude": 37.5745,
-    "longitude": 127.1278
+    "latitude": 37.621,
+    "longitude": 127.1178
   },
   {
-    "slug": "nagdongganguiseong",
+    "slug": "nagdongganguiseong-both",
     "name": "낙동강의성휴게소",
     "direction": "양방향",
     "directionName": "영천방향",
     "highwaySlug": "sangjuyeongcheonseon",
     "highwayName": "상주영천고속도로",
-    "locationKm": 241,
+    "locationKm": 115,
     "signatureMenu": {
-      "name": "해물 순두부찌개",
-      "price": 8000,
-      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
+      "name": "가마솥 소고기국밥",
+      "price": 9000,
+      "description": "전통 가마솥 방식으로 깊고 얼큰하게 끓여낸 소고기국밥입니다."
     },
     "otherMenus": [
       {
@@ -28373,10 +36451,10 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1849,
-      "dieselPrice": 1848,
-      "lpgPrice": 1159,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
       "hasHydrogen": false
@@ -28387,21 +36465,21 @@ export const serviceAreas: ServiceArea[] = [
       "쉼터",
       "ATM"
     ],
-    "latitude": 37.5441,
-    "longitude": 127.5925
+    "latitude": 37.5608,
+    "longitude": 127.548
   },
   {
-    "slug": "nagdongganggumi",
+    "slug": "nagdongganggumi-both",
     "name": "낙동강구미휴게소",
     "direction": "양방향",
     "directionName": "상주방향",
     "highwaySlug": "sangjuyeongcheonseon",
     "highwayName": "상주영천고속도로",
-    "locationKm": 248,
+    "locationKm": 122,
     "signatureMenu": {
-      "name": "추억의 옛날 우동",
-      "price": 6000,
-      "description": "두툼한 오뎅과 쑥갓, 유부를 듬뿍 얹어 포장마차 감성을 살린 우동입니다."
+      "name": "수제 등심돈가스",
+      "price": 9500,
+      "description": "바삭바삭한 식감과 두툼한 육즙이 일품인 대표 돈가스입니다."
     },
     "otherMenus": [
       {
@@ -28435,10 +36513,6 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "유부김밥",
         "price": 4000
-      },
-      {
-        "name": "수제 등심돈가스",
-        "price": 9500
       },
       {
         "name": "치즈돈가스",
@@ -28524,11 +36598,11 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "ex-oil",
-      "gasolinePrice": 1606,
-      "dieselPrice": 1434,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 4,
+      "evChargersCount": 2,
       "hasHydrogen": false
     },
     "facilities": [
@@ -28538,21 +36612,21 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "기타"
     ],
-    "latitude": 37.5467,
-    "longitude": 127.4487
+    "latitude": 37.5182,
+    "longitude": 127.4106
   },
   {
-    "slug": "gunwiyeongcheon",
+    "slug": "gunwiyeongcheon-both",
     "name": "군위영천휴게소",
     "direction": "양방향",
     "directionName": "영천방향",
     "highwaySlug": "sangjuyeongcheonseon",
     "highwayName": "상주영천고속도로",
-    "locationKm": 255,
+    "locationKm": 129,
     "signatureMenu": {
-      "name": "가마솥 소고기국밥",
-      "price": 9000,
-      "description": "전통 가마솥 방식으로 깊고 얼큰하게 끓여낸 소고기국밥입니다."
+      "name": "가마솥 비빔밥",
+      "price": 8500,
+      "description": "신선한 오색 나물과 볶은 소고기를 얹어 쓱쓱 비벼 먹는 한식 대표 메뉴입니다."
     },
     "otherMenus": [
       {
@@ -28669,34 +36743,34 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1858,
-      "dieselPrice": 1848,
-      "lpgPrice": 1226,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
-      "hasHydrogen": true
+      "hasHydrogen": false
     },
     "facilities": [
       "샤워실",
       "수유실",
       "ATM"
     ],
-    "latitude": 37.4271,
-    "longitude": 127.3689
+    "latitude": 37.3796,
+    "longitude": 127.3723
   },
   {
-    "slug": "samgugyusagunwi",
+    "slug": "samgugyusagunwi-both",
     "name": "삼국유사군위휴게소",
     "direction": "양방향",
     "directionName": "상주방향",
     "highwaySlug": "sangjuyeongcheonseon",
     "highwayName": "상주영천고속도로",
-    "locationKm": 262,
+    "locationKm": 136,
     "signatureMenu": {
-      "name": "수제 등심돈가스",
-      "price": 9500,
-      "description": "바삭바삭한 식감과 두툼한 육즙이 일품인 대표 돈가스입니다."
+      "name": "해물 순두부찌개",
+      "price": 8000,
+      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
     },
     "otherMenus": [
       {
@@ -28730,6 +36804,10 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "유부김밥",
         "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
       },
       {
         "name": "치즈돈가스",
@@ -28798,12 +36876,12 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "brandStores": [],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1612,
-      "dieselPrice": 1438,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 6,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -28811,21 +36889,21 @@ export const serviceAreas: ServiceArea[] = [
       "수유실",
       "ATM"
     ],
-    "latitude": 37.2952,
-    "longitude": 127.4264
+    "latitude": 37.2724,
+    "longitude": 127.4682
   },
   {
-    "slug": "siheunghaneul",
+    "slug": "siheunghaneul-both",
     "name": "시흥하늘휴게소",
     "direction": "양방향",
     "directionName": "양방향",
     "highwaySlug": "capital-circular-1",
     "highwayName": "수도권제1순환고속도로",
-    "locationKm": 269,
+    "locationKm": 143,
     "signatureMenu": {
-      "name": "가마솥 비빔밥",
-      "price": 8500,
-      "description": "신선한 오색 나물과 볶은 소고기를 얹어 쓱쓱 비벼 먹는 한식 대표 메뉴입니다."
+      "name": "추억의 옛날 우동",
+      "price": 6000,
+      "description": "두툼한 오뎅과 쑥갓, 유부를 듬뿍 얹어 포장마차 감성을 살린 우동입니다."
     },
     "otherMenus": [
       {
@@ -28962,10 +37040,10 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "SK에너지",
-      "gasolinePrice": 1919,
-      "dieselPrice": 1894,
-      "lpgPrice": 1189,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
       "hasHydrogen": false
@@ -28976,21 +37054,21 @@ export const serviceAreas: ServiceArea[] = [
       "버스환승",
       "ATM"
     ],
-    "latitude": 37.4251,
-    "longitude": 127.0281
+    "latitude": 37.4479,
+    "longitude": 127.0699
   },
   {
-    "slug": "teseuteu",
+    "slug": "teseuteu-both",
     "name": "테스트휴게소",
     "direction": "양방향",
     "directionName": "양방향",
     "highwaySlug": "gyeongbu",
     "highwayName": "경부고속도로",
-    "locationKm": 276,
+    "locationKm": 150,
     "signatureMenu": {
-      "name": "해물 순두부찌개",
-      "price": 8000,
-      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
+      "name": "가마솥 소고기국밥",
+      "price": 9000,
+      "description": "전통 가마솥 방식으로 깊고 얼큰하게 끓여낸 소고기국밥입니다."
     },
     "otherMenus": [
       {
@@ -29097,32 +37175,174 @@ export const serviceAreas: ServiceArea[] = [
     "brandStores": [],
     "gasStation": {
       "brand": "ex-oil",
-      "gasolinePrice": 1618,
-      "dieselPrice": 1442,
-      "lpgPrice": 1160,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 8,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
       "수면실",
       "편의점"
     ],
-    "latitude": 37.5323,
-    "longitude": 127.124
+    "latitude": 37.5798,
+    "longitude": 127.1274
   },
   {
-    "slug": "gimhaegeumgwangaya",
+    "slug": "gimhaegeumgwangaya-both",
     "name": "김해금관가야휴게소",
     "direction": "양방향",
     "directionName": "양방향",
     "highwaySlug": "busan-outer-circular",
     "highwayName": "부산외곽순환고속도로",
-    "locationKm": 283,
+    "locationKm": 157,
     "signatureMenu": {
-      "name": "추억의 옛날 우동",
-      "price": 6000,
-      "description": "두툼한 오뎅과 쑥갓, 유부를 듬뿍 얹어 포장마차 감성을 살린 우동입니다."
+      "name": "수제 등심돈가스",
+      "price": 9500,
+      "description": "바삭바삭한 식감과 두툼한 육즙이 일품인 대표 돈가스입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "달콤한 로띠번",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "유명브랜드 커피점",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "쉼터",
+      "ATM",
+      "편의점",
+      "기타"
+    ],
+    "latitude": 35.3712,
+    "longitude": 128.7621
+  },
+  {
+    "slug": "hamyang-both",
+    "name": "함양휴게소",
+    "direction": "양방향",
+    "directionName": "대전방향",
+    "highwaySlug": "tongyeong-daejeon",
+    "highwayName": "통영대전고속도로",
+    "locationKm": 164,
+    "signatureMenu": {
+      "name": "가마솥 비빔밥",
+      "price": 8500,
+      "description": "신선한 오색 나물과 볶은 소고기를 얹어 쓱쓱 비벼 먹는 한식 대표 메뉴입니다."
     },
     "otherMenus": [
       {
@@ -29229,46 +37449,48 @@ export const serviceAreas: ServiceArea[] = [
     "brandStores": [
       {
         "name": "로띠번",
-        "description": "달콤한 로띠번",
+        "description": "입점 브랜드 매장입니다.",
         "hours": "08:00 ~ 20:00"
       },
       {
-        "name": "드롭탑(커피전문점)",
-        "description": "유명브랜드 커피점",
+        "name": "달콤커피",
+        "description": "입점 브랜드 매장입니다.",
         "hours": "08:00 ~ 20:00"
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1853,
-      "dieselPrice": 1844,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
       "hasHydrogen": false
     },
     "facilities": [
       "수유실",
       "쉼터",
+      "내고장특산물",
       "ATM",
       "편의점",
+      "열린매장(간식)",
       "기타"
     ],
-    "latitude": 35.3427,
-    "longitude": 128.8002
+    "latitude": 35.3686,
+    "longitude": 128.6183
   },
   {
-    "slug": "hamyang",
+    "slug": "hamyang-both-1",
     "name": "함양휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (대전/통영)",
+    "directionName": "통영방향",
     "highwaySlug": "tongyeong-daejeon",
     "highwayName": "통영대전고속도로",
-    "locationKm": 290,
+    "locationKm": 171,
     "signatureMenu": {
-      "name": "가마솥 소고기국밥",
-      "price": 9000,
-      "description": "전통 가마솥 방식으로 깊고 얼큰하게 끓여낸 소고기국밥입니다."
+      "name": "해물 순두부찌개",
+      "price": 8000,
+      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
     },
     "otherMenus": [
       {
@@ -29389,8 +37611,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1848,
       "dieselPrice": 1848,
       "lpgPrice": 1199,
-      "hasEvCharger": true,
-      "evChargersCount": 10,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
       "hasHydrogen": false
     },
     "facilities": [
@@ -29402,17 +37624,334 @@ export const serviceAreas: ServiceArea[] = [
       "열린매장(간식)",
       "기타"
     ],
-    "latitude": 35.3853,
-    "longitude": 128.6628
+    "latitude": 35.2463,
+    "longitude": 128.5427
   },
   {
-    "slug": "maesong",
+    "slug": "maesong-seoul",
     "name": "매송휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (목포/서울)",
+    "direction": "상행",
+    "directionName": "서울방향",
     "highwaySlug": "seohaean",
     "highwayName": "서해안고속도로",
-    "locationKm": 297,
+    "locationKm": 178,
+    "signatureMenu": {
+      "name": "추억의 옛날 우동",
+      "price": 6000,
+      "description": "두툼한 오뎅과 쑥갓, 유부를 듬뿍 얹어 포장마차 감성을 살린 우동입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "무인운영시간: 22:30 ~ (익일)06:00",
+        "hours": "00:00 ~ 24:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수면실",
+      "샤워실",
+      "세탁실",
+      "수유실",
+      "세차장",
+      "쉼터",
+      "ex-화물차라운지",
+      "ATM",
+      "편의점",
+      "열린매장(간식)"
+    ],
+    "latitude": 37.2921,
+    "longitude": 127.4307
+  },
+  {
+    "slug": "maesong-busan",
+    "name": "매송휴게소",
+    "direction": "하행",
+    "directionName": "목포방향",
+    "highwaySlug": "seohaean",
+    "highwayName": "서해안고속도로",
+    "locationKm": 185,
+    "signatureMenu": {
+      "name": "가마솥 소고기국밥",
+      "price": 9000,
+      "description": "전통 가마솥 방식으로 깊고 얼큰하게 끓여낸 소고기국밥입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "무인운영시간: 22:00 ~ (익일)06:00",
+        "hours": "00:00 ~ 22:00"
+      },
+      {
+        "name": "크리스피크림",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "알뜰주유소",
+      "gasolinePrice": 1864,
+      "dieselPrice": 1853,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": true
+    },
+    "facilities": [
+      "수면실",
+      "샤워실",
+      "세탁실",
+      "수유실",
+      "세차장",
+      "쉼터",
+      "ex-화물차라운지",
+      "ATM",
+      "편의점",
+      "열린매장(간식)"
+    ],
+    "latitude": 37.2743,
+    "longitude": 127.5734
+  },
+  {
+    "slug": "gunjahaengbogdeurimswimteo-both",
+    "name": "군자행복드림쉼터휴게소",
+    "direction": "양방향",
+    "directionName": "양방향",
+    "highwaySlug": "capital-circular-1",
+    "highwayName": "수도권제1순환고속도로",
+    "locationKm": 192,
     "signatureMenu": {
       "name": "수제 등심돈가스",
       "price": 9500,
@@ -29516,60 +38055,30 @@ export const serviceAreas: ServiceArea[] = [
         "price": 4500
       }
     ],
-    "brandStores": [
-      {
-        "name": "할리스커피",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "드롭탑(커피전문점)",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "CU",
-        "description": "무인운영시간: 22:30 ~ (익일)06:00",
-        "hours": "00:00 ~ 24:00"
-      },
-      {
-        "name": "크리스피크림",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      }
-    ],
+    "brandStores": [],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
-      "dieselPrice": 1853,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
       "hasHydrogen": false
     },
     "facilities": [
-      "수면실",
-      "샤워실",
-      "세탁실",
-      "수유실",
-      "세차장",
-      "쉼터",
-      "ex-화물차라운지",
-      "ATM",
-      "편의점",
-      "열린매장(간식)"
+      "편의점"
     ],
-    "latitude": 37.4683,
-    "longitude": 127.3785
+    "latitude": 37.3848,
+    "longitude": 127.6655
   },
   {
-    "slug": "gunjahaengbogdeurimswimteo",
-    "name": "군자행복드림쉼터휴게소",
+    "slug": "gurinamyangjuhaengbogdeurimswimteo-both",
+    "name": "구리남양주행복드림쉼터휴게소",
     "direction": "양방향",
     "directionName": "양방향",
     "highwaySlug": "capital-circular-1",
     "highwayName": "수도권제1순환고속도로",
-    "locationKm": 304,
+    "locationKm": 199,
     "signatureMenu": {
       "name": "가마솥 비빔밥",
       "price": 8500,
@@ -29680,139 +38189,8 @@ export const serviceAreas: ServiceArea[] = [
     "brandStores": [],
     "gasStation": {
       "brand": "ex-oil",
-      "gasolinePrice": 1630,
-      "dieselPrice": 1450,
-      "lpgPrice": null,
-      "hasEvCharger": true,
-      "evChargersCount": 12,
-      "hasHydrogen": false
-    },
-    "facilities": [
-      "편의점"
-    ],
-    "latitude": 37.3256,
-    "longitude": 127.3969
-  },
-  {
-    "slug": "gurinamyangjuhaengbogdeurimswimteo",
-    "name": "구리남양주행복드림쉼터휴게소",
-    "direction": "양방향",
-    "directionName": "양방향",
-    "highwaySlug": "capital-circular-1",
-    "highwayName": "수도권제1순환고속도로",
-    "locationKm": 311,
-    "signatureMenu": {
-      "name": "해물 순두부찌개",
-      "price": 8000,
-      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
-    },
-    "otherMenus": [
-      {
-        "name": "꼬치어묵우동",
-        "price": 6500
-      },
-      {
-        "name": "추억의 옛날우동",
-        "price": 6000
-      },
-      {
-        "name": "EX-우동",
-        "price": 6000
-      },
-      {
-        "name": "농심가락우동",
-        "price": 6500
-      },
-      {
-        "name": "떡라면",
-        "price": 5000
-      },
-      {
-        "name": "ex-라면",
-        "price": 4500
-      },
-      {
-        "name": "신라면",
-        "price": 5000
-      },
-      {
-        "name": "유부김밥",
-        "price": 4000
-      },
-      {
-        "name": "수제 등심돈가스",
-        "price": 9500
-      },
-      {
-        "name": "치즈돈가스",
-        "price": 10500
-      },
-      {
-        "name": "철판 제육덮밥",
-        "price": 8500
-      },
-      {
-        "name": "낙지덮밥",
-        "price": 9500
-      },
-      {
-        "name": "전주비빔밥",
-        "price": 8500
-      },
-      {
-        "name": "장터 국밥",
-        "price": 9000
-      },
-      {
-        "name": "사골 육개장",
-        "price": 9000
-      },
-      {
-        "name": "바삭바삭 소떡소떡",
-        "price": 4000
-      },
-      {
-        "name": "명품 호두과자(중)",
-        "price": 3000
-      },
-      {
-        "name": "버터구이 통감자",
-        "price": 4500
-      },
-      {
-        "name": "오징어 야채바",
-        "price": 4000
-      },
-      {
-        "name": "매콤 떡볶이",
-        "price": 4500
-      },
-      {
-        "name": "바삭한 오징어 튀김",
-        "price": 4000
-      },
-      {
-        "name": "시원한 식혜",
-        "price": 3000
-      },
-      {
-        "name": "바삭한 핫도그",
-        "price": 4000
-      },
-      {
-        "name": "아메리카노(HOT)",
-        "price": 4100
-      },
-      {
-        "name": "아메리카노(ICE)",
-        "price": 4500
-      }
-    ],
-    "brandStores": [],
-    "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
-      "dieselPrice": 1853,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
@@ -29823,21 +38201,21 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "기타"
     ],
-    "latitude": 37.4167,
-    "longitude": 126.9866
+    "latitude": 37.6747,
+    "longitude": 127.0819
   },
   {
-    "slug": "pyeongtaeg",
+    "slug": "pyeongtaeg-both",
     "name": "평택휴게소",
     "direction": "양방향",
     "directionName": "양방향",
     "highwaySlug": "pyeongtaek-jecheon",
     "highwayName": "평택제천고속도로",
-    "locationKm": 318,
+    "locationKm": 206,
     "signatureMenu": {
-      "name": "추억의 옛날 우동",
-      "price": 6000,
-      "description": "두툼한 오뎅과 쑥갓, 유부를 듬뿍 얹어 포장마차 감성을 살린 우동입니다."
+      "name": "해물 순두부찌개",
+      "price": 8000,
+      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
     },
     "otherMenus": [
       {
@@ -29969,10 +38347,10 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "SK에너지",
-      "gasolinePrice": 1858,
-      "dieselPrice": 1837,
-      "lpgPrice": 1210,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 2,
       "hasHydrogen": false
@@ -29988,21 +38366,21 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "편의점"
     ],
-    "latitude": 37.3401,
-    "longitude": 127.649
+    "latitude": 37.5597,
+    "longitude": 127.4834
   },
   {
-    "slug": "jangheungjeongnamjin",
+    "slug": "jangheungjeongnamjin-both",
     "name": "장흥정남진휴게소",
     "direction": "양방향",
     "directionName": "양방향",
     "highwaySlug": "namhae-yeongam-suncheon",
     "highwayName": "남해고속도로(영암순천)",
-    "locationKm": 325,
+    "locationKm": 213,
     "signatureMenu": {
-      "name": "가마솥 소고기국밥",
-      "price": 9000,
-      "description": "전통 가마솥 방식으로 깊고 얼큰하게 끓여낸 소고기국밥입니다."
+      "name": "추억의 옛날 우동",
+      "price": 6000,
+      "description": "두툼한 오뎅과 쑥갓, 유부를 듬뿍 얹어 포장마차 감성을 살린 우동입니다."
     },
     "otherMenus": [
       {
@@ -30129,9 +38507,9 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1849,
-      "dieselPrice": 1849,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
@@ -30149,17 +38527,165 @@ export const serviceAreas: ServiceArea[] = [
       "열린매장(간식)",
       "기타"
     ],
-    "latitude": 35.2498,
-    "longitude": 129.2082
+    "latitude": 35.2291,
+    "longitude": 128.934
   },
   {
-    "slug": "ulju",
+    "slug": "ulju-both",
     "name": "울주휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (울산/함양)",
+    "directionName": "함양방향",
     "highwaySlug": "milyang-ulsan",
     "highwayName": "밀양울산고속도로",
-    "locationKm": 332,
+    "locationKm": 220,
+    "signatureMenu": {
+      "name": "가마솥 소고기국밥",
+      "price": 9000,
+      "description": "전통 가마솥 방식으로 깊고 얼큰하게 끓여낸 소고기국밥입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "엔제리너스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "이마트24",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 24:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수면실",
+      "샤워실",
+      "세탁실",
+      "수유실",
+      "ex-화물차라운지",
+      "ATM",
+      "편의점"
+    ],
+    "latitude": 35.4465,
+    "longitude": 129.1932
+  },
+  {
+    "slug": "ulju-busan",
+    "name": "울주휴게소",
+    "direction": "하행",
+    "directionName": "울산방향",
+    "highwaySlug": "milyang-ulsan",
+    "highwayName": "밀양울산고속도로",
+    "locationKm": 227,
     "signatureMenu": {
       "name": "수제 등심돈가스",
       "price": 9500,
@@ -30266,13 +38792,8 @@ export const serviceAreas: ServiceArea[] = [
     "brandStores": [
       {
         "name": "엔제리너스",
-        "description": "입점 브랜드 매장입니다.",
+        "description": "휴게소 內 매장 1개소 정상 영업. (드라이브 스루 1개소 영업 중단.)",
         "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "이마트24",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
@@ -30280,8 +38801,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1855,
       "dieselPrice": 1848,
       "lpgPrice": null,
-      "hasEvCharger": true,
-      "evChargersCount": 4,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
       "hasHydrogen": false
     },
     "facilities": [
@@ -30294,17 +38815,17 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "열린매장(간식)"
     ],
-    "latitude": 35.6884,
-    "longitude": 129.324
+    "latitude": 35.3895,
+    "longitude": 129.3253
   },
   {
-    "slug": "munuicheongnamdae",
+    "slug": "munuicheongnamdae-both",
     "name": "문의청남대휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (영덕/청주)",
+    "directionName": "청주방향",
     "highwaySlug": "seosanyeongdeogseon",
     "highwayName": "서산영덕고속도로",
-    "locationKm": 339,
+    "locationKm": 234,
     "signatureMenu": {
       "name": "가마솥 비빔밥",
       "price": 8500,
@@ -30425,9 +38946,158 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1840,
-      "dieselPrice": 1829,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수면실",
+      "샤워실",
+      "세탁실",
+      "수유실",
+      "쉼터",
+      "ex-화물차라운지",
+      "ATM",
+      "편의점"
+    ],
+    "latitude": 36.5682,
+    "longitude": 127.6229
+  },
+  {
+    "slug": "munuicheongnamdae-both-1",
+    "name": "문의청남대휴게소",
+    "direction": "양방향",
+    "directionName": "영덕방향",
+    "highwaySlug": "seosanyeongdeogseon",
+    "highwayName": "서산영덕고속도로",
+    "locationKm": 241,
+    "signatureMenu": {
+      "name": "해물 순두부찌개",
+      "price": 8000,
+      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "오븐에서 갓 구워낸 따끈따끈한 로띠번/ 모카의 향을 잃지 않고 모카향 토핑의 크리스피한 빵",
+        "hours": "08:00 ~ 19:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "세계 3대 커피 브랜드와 비교하여 최고의 평가를 받은 드롭탑",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
@@ -30443,21 +39113,169 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "편의점"
     ],
-    "latitude": 36.7286,
-    "longitude": 127.3707
+    "latitude": 36.712,
+    "longitude": 127.6197
   },
   {
-    "slug": "buangoryeocheongja",
+    "slug": "buangoryeocheongja-seoul",
     "name": "부안고려청자휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (목포/서울)",
+    "direction": "상행",
+    "directionName": "서울방향",
     "highwaySlug": "seohaean",
     "highwayName": "서해안고속도로",
-    "locationKm": 346,
+    "locationKm": 248,
     "signatureMenu": {
-      "name": "해물 순두부찌개",
-      "price": 8000,
-      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
+      "name": "추억의 옛날 우동",
+      "price": 6000,
+      "description": "두툼한 오뎅과 쑥갓, 유부를 듬뿍 얹어 포장마차 감성을 살린 우동입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "할리스커피",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 19:00"
+      },
+      {
+        "name": "용우동",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수면실",
+      "샤워실",
+      "세탁실",
+      "수유실",
+      "ex-화물차라운지",
+      "ATM",
+      "편의점"
+    ],
+    "latitude": 35.974,
+    "longitude": 127.1553
+  },
+  {
+    "slug": "buangoryeocheongja-busan",
+    "name": "부안고려청자휴게소",
+    "direction": "하행",
+    "directionName": "목포방향",
+    "highwaySlug": "seohaean",
+    "highwayName": "서해안고속도로",
+    "locationKm": 255,
+    "signatureMenu": {
+      "name": "가마솥 소고기국밥",
+      "price": 9000,
+      "description": "전통 가마솥 방식으로 깊고 얼큰하게 끓여낸 소고기국밥입니다."
     },
     "otherMenus": [
       {
@@ -30578,8 +39396,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1864,
       "dieselPrice": 1853,
       "lpgPrice": null,
-      "hasEvCharger": true,
-      "evChargersCount": 6,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
       "hasHydrogen": false
     },
     "facilities": [
@@ -30591,21 +39409,21 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "편의점"
     ],
-    "latitude": 35.7734,
-    "longitude": 127.0068
+    "latitude": 35.9113,
+    "longitude": 127.0259
   },
   {
-    "slug": "ansan",
+    "slug": "ansan-both",
     "name": "안산휴게소",
     "direction": "양방향",
     "directionName": "양방향",
     "highwaySlug": "yeongdong",
     "highwayName": "영동고속도로",
-    "locationKm": 353,
+    "locationKm": 262,
     "signatureMenu": {
-      "name": "추억의 옛날 우동",
-      "price": 6000,
-      "description": "두툼한 오뎅과 쑥갓, 유부를 듬뿍 얹어 포장마차 감성을 살린 우동입니다."
+      "name": "수제 등심돈가스",
+      "price": 9500,
+      "description": "바삭바삭한 식감과 두툼한 육즙이 일품인 대표 돈가스입니다."
     },
     "otherMenus": [
       {
@@ -30639,10 +39457,6 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "유부김밥",
         "price": 4000
-      },
-      {
-        "name": "수제 등심돈가스",
-        "price": 9500
       },
       {
         "name": "치즈돈가스",
@@ -30737,12 +39551,12 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "SK에너지",
-      "gasolinePrice": 1867,
-      "dieselPrice": 1857,
-      "lpgPrice": 1241,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -30753,21 +39567,21 @@ export const serviceAreas: ServiceArea[] = [
       "ATM",
       "편의점"
     ],
-    "latitude": 37.2676,
-    "longitude": 127.4847
+    "latitude": 37.3581,
+    "longitude": 127.379
   },
   {
-    "slug": "seobusan",
+    "slug": "seobusan-busan",
     "name": "서부산휴게소",
     "direction": "하행",
     "directionName": "순천방향",
     "highwaySlug": "namhae-branch-2",
     "highwayName": "남해제2지선고속도로",
-    "locationKm": 10,
+    "locationKm": 269,
     "signatureMenu": {
-      "name": "가마솥 소고기국밥",
-      "price": 9000,
-      "description": "전통 가마솥 방식으로 깊고 얼큰하게 끓여낸 소고기국밥입니다."
+      "name": "가마솥 비빔밥",
+      "price": 8500,
+      "description": "신선한 오색 나물과 볶은 소고기를 얹어 쓱쓱 비벼 먹는 한식 대표 메뉴입니다."
     },
     "otherMenus": [
       {
@@ -30884,34 +39698,34 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "SK에너지",
-      "gasolinePrice": 1896,
-      "dieselPrice": 1854,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
-      "hasEvCharger": true,
-      "evChargersCount": 8,
-      "hasHydrogen": true
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
     },
     "facilities": [
       "수유실",
       "ATM",
       "편의점"
     ],
-    "latitude": 35.0724,
-    "longitude": 129.1805
+    "latitude": 35.0323,
+    "longitude": 129.0472
   },
   {
-    "slug": "chunhyang",
+    "slug": "chunhyang-busan",
     "name": "춘향휴게소",
-    "direction": "양방향",
-    "directionName": "양방향 (순천/완주)",
+    "direction": "하행",
+    "directionName": "순천방향",
     "highwaySlug": "suncheon-wanju",
     "highwayName": "순천완주고속도로",
-    "locationKm": 17,
+    "locationKm": 276,
     "signatureMenu": {
-      "name": "수제 등심돈가스",
-      "price": 9500,
-      "description": "바삭바삭한 식감과 두툼한 육즙이 일품인 대표 돈가스입니다."
+      "name": "해물 순두부찌개",
+      "price": 8000,
+      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
     },
     "otherMenus": [
       {
@@ -30945,6 +39759,10 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "유부김밥",
         "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
       },
       {
         "name": "치즈돈가스",
@@ -31034,9 +39852,159 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1849,
-      "dieselPrice": 1838,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 12,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "ATM",
+      "편의점",
+      "열린매장(간식)"
+    ],
+    "latitude": 35.7207,
+    "longitude": 127.2566
+  },
+  {
+    "slug": "chunhyang-both",
+    "name": "춘향휴게소",
+    "direction": "양방향",
+    "directionName": "완주방향",
+    "highwaySlug": "suncheon-wanju",
+    "highwayName": "순천완주고속도로",
+    "locationKm": 283,
+    "signatureMenu": {
+      "name": "추억의 옛날 우동",
+      "price": 6000,
+      "description": "두툼한 오뎅과 쑥갓, 유부를 듬뿍 얹어 포장마차 감성을 살린 우동입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "훼미리마트",
+        "description": "CU편의점",
+        "hours": "00:00 ~ 24:00"
+      },
+      {
+        "name": "드롭탑(커피전문점)",
+        "description": "커피류 및 음료 판매",
+        "hours": "08:00 ~ 20:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
@@ -31044,27 +40012,26 @@ export const serviceAreas: ServiceArea[] = [
     },
     "facilities": [
       "수유실",
-      "ATM",
+      "쉼터",
       "편의점",
       "열린매장(간식)",
-      "쉼터",
       "기타"
     ],
-    "latitude": 35.8545,
-    "longitude": 127.2949
+    "latitude": 35.8597,
+    "longitude": 127.2937
   },
   {
-    "slug": "namhangang",
+    "slug": "namhangang-both",
     "name": "남한강휴게소",
     "direction": "양방향",
     "directionName": "양방향",
     "highwaySlug": "jungbunaeryuk",
     "highwayName": "중부내륙고속도로",
-    "locationKm": 24,
+    "locationKm": 290,
     "signatureMenu": {
-      "name": "가마솥 비빔밥",
-      "price": 8500,
-      "description": "신선한 오색 나물과 볶은 소고기를 얹어 쓱쓱 비벼 먹는 한식 대표 메뉴입니다."
+      "name": "가마솥 소고기국밥",
+      "price": 9000,
+      "description": "전통 가마솥 방식으로 깊고 얼큰하게 끓여낸 소고기국밥입니다."
     },
     "otherMenus": [
       {
@@ -31191,8 +40158,8 @@ export const serviceAreas: ServiceArea[] = [
       "dieselPrice": 1853,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 10,
-      "hasHydrogen": false
+      "evChargersCount": 2,
+      "hasHydrogen": true
     },
     "facilities": [
       "수유실",
@@ -31202,21 +40169,166 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "열린매장(간식)"
     ],
-    "latitude": 37.5538,
-    "longitude": 127.5722
+    "latitude": 37.5556,
+    "longitude": 127.5672
   },
   {
-    "slug": "milyangyeongnamru",
+    "slug": "milyangyeongnamru-both",
     "name": "밀양영남루휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (울산/함양)",
+    "directionName": "함양방향",
     "highwaySlug": "milyang-ulsan",
     "highwayName": "밀양울산고속도로",
-    "locationKm": 31,
+    "locationKm": 297,
     "signatureMenu": {
-      "name": "해물 순두부찌개",
-      "price": 8000,
-      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
+      "name": "수제 등심돈가스",
+      "price": 9500,
+      "description": "바삭바삭한 식감과 두툼한 육즙이 일품인 대표 돈가스입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "로띠번",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "20:00 ~ 08:00 (야간시간 무인운영)",
+        "hours": "00:00 ~ 24:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수면실",
+      "샤워실",
+      "세탁실",
+      "수유실",
+      "쉼터",
+      "ex-화물차라운지",
+      "편의점",
+      "열린매장(간식)"
+    ],
+    "latitude": 35.356,
+    "longitude": 128.5996
+  },
+  {
+    "slug": "milyangyeongnamru-busan",
+    "name": "밀양영남루휴게소",
+    "direction": "하행",
+    "directionName": "울산방향",
+    "highwaySlug": "milyang-ulsan",
+    "highwayName": "밀양울산고속도로",
+    "locationKm": 304,
+    "signatureMenu": {
+      "name": "가마솥 비빔밥",
+      "price": 8500,
+      "description": "신선한 오색 나물과 볶은 소고기를 얹어 쓱쓱 비벼 먹는 한식 대표 메뉴입니다."
     },
     "otherMenus": [
       {
@@ -31327,11 +40439,6 @@ export const serviceAreas: ServiceArea[] = [
         "hours": "08:00 ~ 20:00"
       },
       {
-        "name": "CU",
-        "description": "20:00 ~ 08:00 (야간시간 무인운영)",
-        "hours": "00:00 ~ 24:00"
-      },
-      {
         "name": "GS25",
         "description": "20:00 ~ 08:00 (야간시간 무인운영)",
         "hours": "00:00 ~ 24:00"
@@ -31342,8 +40449,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1854,
       "dieselPrice": 1851,
       "lpgPrice": null,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 4,
       "hasHydrogen": false
     },
     "facilities": [
@@ -31356,21 +40463,21 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "열린매장(간식)"
     ],
-    "latitude": 35.3593,
-    "longitude": 128.6038
+    "latitude": 35.2237,
+    "longitude": 128.5432
   },
   {
-    "slug": "cheoin",
+    "slug": "cheoin-both",
     "name": "처인휴게소",
     "direction": "양방향",
     "directionName": "양방향",
     "highwaySlug": "sejongpocheonseon",
     "highwayName": "세종포천고속도로",
-    "locationKm": 38,
+    "locationKm": 311,
     "signatureMenu": {
-      "name": "추억의 옛날 우동",
-      "price": 6000,
-      "description": "두툼한 오뎅과 쑥갓, 유부를 듬뿍 얹어 포장마차 감성을 살린 우동입니다."
+      "name": "해물 순두부찌개",
+      "price": 8000,
+      "description": "얼큰한 국물에 몽글몽글한 순두부와 해물이 조화를 이루는 찌개입니다."
     },
     "otherMenus": [
       {
@@ -31516,8 +40623,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1859,
       "dieselPrice": 1859,
       "lpgPrice": null,
-      "hasEvCharger": true,
-      "evChargersCount": 12,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
       "hasHydrogen": false
     },
     "facilities": [
@@ -31528,21 +40635,21 @@ export const serviceAreas: ServiceArea[] = [
       "열린매장(간식)",
       "기타"
     ],
-    "latitude": 37.4045,
-    "longitude": 127.3686
+    "latitude": 37.2803,
+    "longitude": 127.4499
   },
   {
-    "slug": "gosamhosu",
+    "slug": "gosamhosu-both",
     "name": "고삼호수휴게소",
     "direction": "양방향",
     "directionName": "양방향",
     "highwaySlug": "sejongpocheonseon",
     "highwayName": "세종포천고속도로",
-    "locationKm": 45,
+    "locationKm": 318,
     "signatureMenu": {
-      "name": "가마솥 소고기국밥",
-      "price": 9000,
-      "description": "전통 가마솥 방식으로 깊고 얼큰하게 끓여낸 소고기국밥입니다."
+      "name": "추억의 옛날 우동",
+      "price": 6000,
+      "description": "두툼한 오뎅과 쑥갓, 유부를 듬뿍 얹어 포장마차 감성을 살린 우동입니다."
     },
     "otherMenus": [
       {
@@ -31683,8 +40790,8 @@ export const serviceAreas: ServiceArea[] = [
       "gasolinePrice": 1859,
       "dieselPrice": 1879,
       "lpgPrice": 1219,
-      "hasEvCharger": false,
-      "evChargersCount": 0,
+      "hasEvCharger": true,
+      "evChargersCount": 6,
       "hasHydrogen": false
     },
     "facilities": [
@@ -31694,163 +40801,21 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "열린매장(간식)"
     ],
-    "latitude": 37.2828,
-    "longitude": 127.4452
+    "latitude": 37.2841,
+    "longitude": 127.5937
   },
   {
-    "slug": "yeongdeog",
+    "slug": "yeongdeog-both",
     "name": "영덕휴게소",
     "direction": "양방향",
     "directionName": "영덕방향",
     "highwaySlug": "donghae",
     "highwayName": "동해고속도로",
-    "locationKm": 52,
+    "locationKm": 325,
     "signatureMenu": {
-      "name": "수제 등심돈가스",
-      "price": 9500,
-      "description": "바삭바삭한 식감과 두툼한 육즙이 일품인 대표 돈가스입니다."
-    },
-    "otherMenus": [
-      {
-        "name": "꼬치어묵우동",
-        "price": 6500
-      },
-      {
-        "name": "추억의 옛날우동",
-        "price": 6000
-      },
-      {
-        "name": "EX-우동",
-        "price": 6000
-      },
-      {
-        "name": "농심가락우동",
-        "price": 6500
-      },
-      {
-        "name": "떡라면",
-        "price": 5000
-      },
-      {
-        "name": "ex-라면",
-        "price": 4500
-      },
-      {
-        "name": "신라면",
-        "price": 5000
-      },
-      {
-        "name": "유부김밥",
-        "price": 4000
-      },
-      {
-        "name": "치즈돈가스",
-        "price": 10500
-      },
-      {
-        "name": "철판 제육덮밥",
-        "price": 8500
-      },
-      {
-        "name": "낙지덮밥",
-        "price": 9500
-      },
-      {
-        "name": "전주비빔밥",
-        "price": 8500
-      },
-      {
-        "name": "장터 국밥",
-        "price": 9000
-      },
-      {
-        "name": "사골 육개장",
-        "price": 9000
-      },
-      {
-        "name": "바삭바삭 소떡소떡",
-        "price": 4000
-      },
-      {
-        "name": "명품 호두과자(중)",
-        "price": 3000
-      },
-      {
-        "name": "버터구이 통감자",
-        "price": 4500
-      },
-      {
-        "name": "오징어 야채바",
-        "price": 4000
-      },
-      {
-        "name": "매콤 떡볶이",
-        "price": 4500
-      },
-      {
-        "name": "바삭한 오징어 튀김",
-        "price": 4000
-      },
-      {
-        "name": "시원한 식혜",
-        "price": 3000
-      },
-      {
-        "name": "바삭한 핫도그",
-        "price": 4000
-      },
-      {
-        "name": "아메리카노(HOT)",
-        "price": 4100
-      },
-      {
-        "name": "아메리카노(ICE)",
-        "price": 4500
-      }
-    ],
-    "brandStores": [
-      {
-        "name": "투썸플레이스",
-        "description": "입점 브랜드 매장입니다.",
-        "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "CU",
-        "description": "07:00~20:00 CU편의점 유인운영, 20:00~07:00 무인운영",
-        "hours": "00:00 ~ 24:00"
-      }
-    ],
-    "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1859,
-      "dieselPrice": 1859,
-      "lpgPrice": null,
-      "hasEvCharger": true,
-      "evChargersCount": 2,
-      "hasHydrogen": false
-    },
-    "facilities": [
-      "수유실",
-      "ex-화물차라운지",
-      "ATM",
-      "편의점",
-      "열린매장(간식)"
-    ],
-    "latitude": 36.4437,
-    "longitude": 128.5763
-  },
-  {
-    "slug": "pohang",
-    "name": "포항휴게소",
-    "direction": "양방향",
-    "directionName": "포항방향",
-    "highwaySlug": "donghae",
-    "highwayName": "동해고속도로",
-    "locationKm": 59,
-    "signatureMenu": {
-      "name": "가마솥 비빔밥",
-      "price": 8500,
-      "description": "신선한 오색 나물과 볶은 소고기를 얹어 쓱쓱 비벼 먹는 한식 대표 메뉴입니다."
+      "name": "가마솥 소고기국밥",
+      "price": 9000,
+      "description": "전통 가마솥 방식으로 깊고 얼큰하게 끓여낸 소고기국밥입니다."
     },
     "otherMenus": [
       {
@@ -31962,14 +40927,14 @@ export const serviceAreas: ServiceArea[] = [
       },
       {
         "name": "CU",
-        "description": "07:00~20:00 유인매장 운영, 20:00~07:00 무인 편의점 운영",
+        "description": "07:00~20:00 CU편의점 유인운영, 20:00~07:00 무인운영",
         "hours": "00:00 ~ 24:00"
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1859,
-      "dieselPrice": 1859,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": false,
       "evChargersCount": 0,
@@ -31978,20 +40943,308 @@ export const serviceAreas: ServiceArea[] = [
     "facilities": [
       "수유실",
       "ex-화물차라운지",
+      "ATM",
       "편의점",
       "열린매장(간식)"
     ],
-    "latitude": 36.5641,
-    "longitude": 128.6551
+    "latitude": 36.5694,
+    "longitude": 128.6555
   },
   {
-    "slug": "gimje",
+    "slug": "pohang-both",
+    "name": "포항휴게소",
+    "direction": "양방향",
+    "directionName": "포항방향",
+    "highwaySlug": "donghae",
+    "highwayName": "동해고속도로",
+    "locationKm": 332,
+    "signatureMenu": {
+      "name": "수제 등심돈가스",
+      "price": 9500,
+      "description": "바삭바삭한 식감과 두툼한 육즙이 일품인 대표 돈가스입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "투썸플레이스",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "CU",
+        "description": "07:00~20:00 유인매장 운영, 20:00~07:00 무인 편의점 운영",
+        "hours": "00:00 ~ 24:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": true,
+      "evChargersCount": 8,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "ex-화물차라운지",
+      "편의점",
+      "열린매장(간식)"
+    ],
+    "latitude": 36.6985,
+    "longitude": 128.5921
+  },
+  {
+    "slug": "gimje-both",
     "name": "김제휴게소",
     "direction": "양방향",
-    "directionName": "양방향 (새만금/전주)",
+    "directionName": "전주방향",
     "highwaySlug": "gyeongbu",
     "highwayName": "경부고속도로",
-    "locationKm": 66,
+    "locationKm": 339,
+    "signatureMenu": {
+      "name": "가마솥 비빔밥",
+      "price": 8500,
+      "description": "신선한 오색 나물과 볶은 소고기를 얹어 쓱쓱 비벼 먹는 한식 대표 메뉴입니다."
+    },
+    "otherMenus": [
+      {
+        "name": "꼬치어묵우동",
+        "price": 6500
+      },
+      {
+        "name": "추억의 옛날우동",
+        "price": 6000
+      },
+      {
+        "name": "EX-우동",
+        "price": 6000
+      },
+      {
+        "name": "농심가락우동",
+        "price": 6500
+      },
+      {
+        "name": "떡라면",
+        "price": 5000
+      },
+      {
+        "name": "ex-라면",
+        "price": 4500
+      },
+      {
+        "name": "신라면",
+        "price": 5000
+      },
+      {
+        "name": "유부김밥",
+        "price": 4000
+      },
+      {
+        "name": "수제 등심돈가스",
+        "price": 9500
+      },
+      {
+        "name": "치즈돈가스",
+        "price": 10500
+      },
+      {
+        "name": "철판 제육덮밥",
+        "price": 8500
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 9500
+      },
+      {
+        "name": "전주비빔밥",
+        "price": 8500
+      },
+      {
+        "name": "장터 국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 육개장",
+        "price": 9000
+      },
+      {
+        "name": "바삭바삭 소떡소떡",
+        "price": 4000
+      },
+      {
+        "name": "명품 호두과자(중)",
+        "price": 3000
+      },
+      {
+        "name": "버터구이 통감자",
+        "price": 4500
+      },
+      {
+        "name": "오징어 야채바",
+        "price": 4000
+      },
+      {
+        "name": "매콤 떡볶이",
+        "price": 4500
+      },
+      {
+        "name": "바삭한 오징어 튀김",
+        "price": 4000
+      },
+      {
+        "name": "시원한 식혜",
+        "price": 3000
+      },
+      {
+        "name": "바삭한 핫도그",
+        "price": 4000
+      },
+      {
+        "name": "아메리카노(HOT)",
+        "price": 4100
+      },
+      {
+        "name": "아메리카노(ICE)",
+        "price": 4500
+      }
+    ],
+    "brandStores": [
+      {
+        "name": "파스쿠찌",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "08:00 ~ 20:00"
+      },
+      {
+        "name": "GS25",
+        "description": "입점 브랜드 매장입니다.",
+        "hours": "00:00 ~ 24:00"
+      }
+    ],
+    "gasStation": {
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
+      "hasEvCharger": false,
+      "evChargersCount": 0,
+      "hasHydrogen": false
+    },
+    "facilities": [
+      "수유실",
+      "ex-화물차라운지",
+      "ATM",
+      "편의점",
+      "열린매장(간식)"
+    ],
+    "latitude": 35.9632,
+    "longitude": 127.0917
+  },
+  {
+    "slug": "gimje-both-1",
+    "name": "김제휴게소",
+    "direction": "양방향",
+    "directionName": "새만금방향",
+    "highwaySlug": "gyeongbu",
+    "highwayName": "경부고속도로",
+    "locationKm": 346,
     "signatureMenu": {
       "name": "해물 순두부찌개",
       "price": 8000,
@@ -32112,12 +41365,12 @@ export const serviceAreas: ServiceArea[] = [
       }
     ],
     "gasStation": {
-      "brand": "알뜰주유소",
-      "gasolinePrice": 1849,
-      "dieselPrice": 1839,
+      "brand": "ex-oil",
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
-      "evChargersCount": 4,
+      "evChargersCount": 10,
       "hasHydrogen": false
     },
     "facilities": [
@@ -32127,8 +41380,8 @@ export const serviceAreas: ServiceArea[] = [
       "편의점",
       "열린매장(간식)"
     ],
-    "latitude": 35.9436,
-    "longitude": 127.2388
+    "latitude": 35.8519,
+    "longitude": 127.0006
   }
 ];
 

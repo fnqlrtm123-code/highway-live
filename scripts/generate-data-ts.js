@@ -189,6 +189,7 @@ const PRECISE_COORDINATES = {
   'anseong-seoul': { latitude: 37.0125, longitude: 127.1352 },
   'anseong-busan': { latitude: 37.0142, longitude: 127.1328 },
   'seoul-manman-busan': { latitude: 37.4589, longitude: 127.0392 },
+  'seoulmannam-busan': { latitude: 37.4589, longitude: 127.0392 },
   'manghyang-busan': { latitude: 36.8524, longitude: 127.1728 },
   'jukjeon-seoul': { latitude: 37.3325, longitude: 127.1028 },
   'hoengseong-seoul': { latitude: 37.4628, longitude: 127.9715 },
@@ -202,6 +203,7 @@ const PRECISE_LOCATION_KM = {
   'anseong-seoul': 362,
   'anseong-busan': 362,
   'seoul-manman-busan': 410,
+  'seoulmannam-busan': 410,
   'manghyang-busan': 340,
   'jukjeon-seoul': 398,
   'hoengseong-seoul': 142,
@@ -332,16 +334,19 @@ async function generateData() {
 
   console.log(`Fetched ${rawGasStations.length} gas stations, ${rawFacilitiesList.length} convenience facility entries, ${rawRepFoods.length} representative foods, ${rawBrands.length} brands, and ${rawBestFoods.length} food court menu items.`);
 
-  // Group convenience facilities by cleaned name + route code to combine directions
+  // Group convenience facilities by rest area code stdRestCd
   const restAreasMap = {};
   rawFacilitiesList.forEach(item => {
-    const rawName = item.stdRestNm || '';
-    if (!rawName) return;
+    const code = item.stdRestCd;
+    if (!code) return;
 
-    const cleaned = cleanName(rawName);
-    const key = `${cleaned}_${item.routeCd || '0010'}`;
+    if (!restAreasMap[code]) {
+      const rawName = item.stdRestNm || '';
+      // Exclude rest areas with empty name
+      if (!rawName) return;
 
-    if (!restAreasMap[key]) {
+      // Cleaned name and direction parsing
+      const cleaned = cleanName(rawName);
       let direction = '양방향';
       let directionName = '양방향';
 
@@ -356,37 +361,21 @@ async function generateData() {
         }
       }
 
-      restAreasMap[key] = {
-        codes: [item.stdRestCd], // Store all direction codes
-        rawNames: [rawName],
+      restAreasMap[code] = {
+        code,
+        rawName,
         cleanedName: cleaned,
         address: item.svarAddr ? item.svarAddr.trim() : '',
         routeName: item.routeNm || '경부선',
         routeCd: item.routeCd || '0010',
         direction,
         directionName,
-        directions: [directionName],
         facilities: []
       };
-    } else {
-      if (item.stdRestCd && !restAreasMap[key].codes.includes(item.stdRestCd)) {
-        restAreasMap[key].codes.push(item.stdRestCd);
-      }
-      if (rawName && !restAreasMap[key].rawNames.includes(rawName)) {
-        restAreasMap[key].rawNames.push(rawName);
-      }
-      // Add direction
-      const match = rawName.match(/\((.*?)\)/);
-      if (match) {
-        const dirName = `${match[1]}방향`;
-        if (!restAreasMap[key].directions.includes(dirName)) {
-          restAreasMap[key].directions.push(dirName);
-        }
-      }
     }
 
-    if (item.psName && !restAreasMap[key].facilities.includes(item.psName)) {
-      restAreasMap[key].facilities.push(item.psName);
+    if (item.psName && !restAreasMap[code].facilities.includes(item.psName)) {
+      restAreasMap[code].facilities.push(item.psName);
     }
   });
 
@@ -420,14 +409,16 @@ async function generateData() {
   const serviceAreasList = [];
 
   uniqueRestAreas.forEach((r, idx) => {
-    // Generate unique slug based on cleanedName
-    let slug = romanize(r.cleanedName);
+    // Generate unique slug
+    const engBaseSlug = romanize(r.cleanedName);
+    const dirEng = r.direction === '상행' ? 'seoul' : (r.direction === '하행' ? 'busan' : 'both');
+    let slug = `${engBaseSlug}-${dirEng}`;
     
+    // Ensure uniqueness
     let count = 0;
-    let baseSlug = slug;
     while (serviceAreasList.some(s => s.slug === slug)) {
       count++;
-      slug = `${baseSlug}-${count}`;
+      slug = `${engBaseSlug}-${dirEng}-${count}`;
     }
 
     const routeName = r.routeName;
@@ -438,17 +429,6 @@ async function generateData() {
 
     const highwaySlug = highway ? highway.slug : 'gyeongbu';
     const highwayName = highway ? highway.name : '경부고속도로';
-
-    let direction = r.direction;
-    let directionName = r.directionName;
-
-    if (r.directions.length > 1) {
-      direction = '양방향';
-      const cleanedDirs = r.directions
-        .map(d => d.replace('방향', ''))
-        .sort((a, b) => a.localeCompare(b, 'ko'));
-      directionName = `양방향 (${cleanedDirs.join('/')})`;
-    }
 
     // Coordinate handling
     let coords = PRECISE_COORDINATES[slug] || 
@@ -474,8 +454,8 @@ async function generateData() {
       };
     }
 
-    // Find all matching foods from restBestfoodList API (0502) using codes array
-    const matchedFoods = rawBestFoods.filter(f => r.codes.includes(f.stdRestCd) && f.foodNm);
+    // Find all matching foods from restBestfoodList API (0502)
+    const matchedFoods = rawBestFoods.filter(f => f.stdRestCd === r.code && f.foodNm);
 
     let signatureMenu = null;
     let otherMenus = [];
@@ -513,7 +493,7 @@ async function generateData() {
 
     // 3. Fallback to representative food API (0317) or static pool if no foods matched in 0502 API
     if (!signatureMenu) {
-      const realRepFood = rawRepFoods.find(f => r.codes.includes(f.serviceAreaCode) && f.batchMenu);
+      const realRepFood = rawRepFoods.find(f => f.serviceAreaCode === r.code && f.batchMenu);
       if (realRepFood) {
         signatureMenu = {
           name: cleanFoodName(realRepFood.batchMenu),
@@ -540,8 +520,8 @@ async function generateData() {
       otherMenus = OTHER_MENUS_POOL.filter(m => m.name !== signatureMenu.name);
     }
 
-    // Brand stores matching (from real restBrandList API 0501) using codes array
-    const matchedBrands = rawBrands.filter(b => r.codes.includes(b.stdRestCd));
+    // Brand stores matching (from real restBrandList API 0501)
+    const matchedBrands = rawBrands.filter(b => b.stdRestCd === r.code);
     const rawBrandStores = matchedBrands.map(b => ({
       name: b.brdName,
       description: b.brdDesc ? b.brdDesc.trim().replace(/\s+/g, ' ').replace(/\*\*/g, '') : '입점 브랜드 매장입니다.',
@@ -557,53 +537,31 @@ async function generateData() {
       }
     });
 
-    // Find matching gas stations from curStateStation for all matching names
+    // Find matching gas station from curStateStation
     const cleanRName = r.cleanedName;
-    const matchedGas = rawGasStations.filter(g => {
+    const gasMatch = rawGasStations.find(g => {
       const cleanGName = cleanName(g.name);
-      return cleanGName === cleanRName || cleanGName.includes(cleanRName) || cleanRName.includes(cleanGName);
+      const nameMatch = cleanGName === cleanRName || cleanGName.includes(cleanRName) || cleanRName.includes(cleanGName);
+      
+      // Match direction as well (if directions are specified)
+      let dirMatch = true;
+      if (r.directionName && g.direction) {
+        const cleanRDir = r.directionName.replace('방향', '');
+        const cleanGDir = g.direction.replace('방향', '');
+        dirMatch = cleanRDir === cleanGDir || cleanRDir.includes(cleanGDir) || cleanGDir.includes(cleanRDir);
+      }
+      return nameMatch && dirMatch;
     });
 
-    let gasStation = {
-      brand: 'ex-oil',
-      gasolinePrice: 1600 + (idx % 11) * 3,
-      dieselPrice: 1430 + (idx % 11) * 2,
-      lpgPrice: idx % 3 === 0 ? 1150 + (idx % 7) * 2 : null,
+    const gasStation = {
+      brand: gasMatch ? gasMatch.brand : 'ex-oil',
+      gasolinePrice: gasMatch ? gasMatch.gasolinePrice : 0,
+      dieselPrice: gasMatch ? gasMatch.dieselPrice : 0,
+      lpgPrice: gasMatch ? gasMatch.lpgPrice : null,
       hasEvCharger: idx % 2 === 0,
       evChargersCount: idx % 2 === 0 ? (2 + (idx % 12)) : 0,
       hasHydrogen: idx % 15 === 0
     };
-
-    if (matchedGas.length > 0) {
-      // Get unique brands joined by '/'
-      const uniqueBrands = Array.from(new Set(matchedGas.map(g => g.brand).filter(Boolean)));
-      const brand = uniqueBrands.length > 0 ? uniqueBrands.join('/') : 'ex-oil';
-
-      // Average prices of non-zero options
-      const gasolinePrices = matchedGas.map(g => g.gasolinePrice).filter(p => p > 0);
-      const gasolinePrice = gasolinePrices.length > 0 ? Math.round(gasolinePrices.reduce((a, b) => a + b, 0) / gasolinePrices.length) : (1600 + (idx % 11) * 3);
-
-      const dieselPrices = matchedGas.map(g => g.dieselPrice).filter(p => p > 0);
-      const dieselPrice = dieselPrices.length > 0 ? Math.round(dieselPrices.reduce((a, b) => a + b, 0) / dieselPrices.length) : (1430 + (idx % 11) * 2);
-
-      const lpgPrices = matchedGas.map(g => g.lpgPrice).filter(p => p !== null && p > 0);
-      const lpgPrice = lpgPrices.length > 0 ? Math.round(lpgPrices.reduce((a, b) => a + b, 0) / lpgPrices.length) : null;
-
-      // EV/Hydrogen check
-      const hasEvCharger = matchedGas.some(g => g.hasEvCharger) || idx % 2 === 0;
-      const evChargersCount = matchedGas.reduce((sum, g) => sum + (g.evChargersCount || 0), 0) || (idx % 2 === 0 ? (2 + (idx % 12)) : 0);
-      const hasHydrogen = matchedGas.some(g => g.hasHydrogen) || idx % 15 === 0;
-
-      gasStation = {
-        brand,
-        gasolinePrice,
-        dieselPrice,
-        lpgPrice,
-        hasEvCharger,
-        evChargersCount,
-        hasHydrogen
-      };
-    }
 
     let locationKm = PRECISE_LOCATION_KM[slug] || 
                      PRECISE_LOCATION_KM[`${slug}-seoul`] || 
@@ -618,8 +576,8 @@ async function generateData() {
     serviceAreasList.push({
       slug,
       name: `${r.cleanedName}휴게소`,
-      direction,
-      directionName,
+      direction: r.direction,
+      directionName: r.directionName,
       highwaySlug,
       highwayName,
       locationKm,
