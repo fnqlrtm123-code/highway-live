@@ -2,6 +2,7 @@ import { getServiceAreaBySlug, serviceAreas } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import AdSense from '@/components/AdSense';
 import type { Metadata } from 'next';
+import Breadcrumb from '@/components/Breadcrumb';
 
 interface Props {
   children: React.ReactNode;
@@ -47,10 +48,11 @@ export default async function RestAreaLayout({ children, params }: Props) {
   return (
     <main className="mx-auto max-w-[1200px] px-5 py-10 flex-grow">
       
-      {/* 뒤로가기 링크 */}
-      <a href="/" className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-900 transition-colors mb-6">
-        &larr; 고속도로 상황판 홈으로 돌아가기
-      </a>
+      {/* 브레드크럼 */}
+      <Breadcrumb items={[
+        { name: '고속도로 휴게소', href: '/rest-areas' },
+        { name: `${area.name} (${area.directionName})`, href: `/rest-areas/${restAreaSlug}` }
+      ]} />
 
       {/* 상단 애드센스 광고 */}
       <AdSense slot="4455667788" />

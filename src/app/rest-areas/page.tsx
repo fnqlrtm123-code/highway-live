@@ -4,6 +4,7 @@ import { useState, useMemo } from 'react';
 import { serviceAreas, highways } from '@/lib/data';
 import AdSense from '@/components/AdSense';
 import HubHeader from '@/components/HubHeader';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function RestAreasPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -60,6 +61,8 @@ export default function RestAreasPage() {
       <HubHeader />
       <main className="mx-auto max-w-[1200px] px-4 py-12 flex-grow space-y-10 text-slate-800 font-sans">
         
+        <Breadcrumb items={[{ name: '고속도로 휴게소', href: '/rest-areas' }]} />
+
         {/* 타이틀 및 헤더 */}
         <div className="space-y-3.5 text-center md:text-left">
           <div className="inline-flex items-center gap-1.5 bg-blue-50 text-blue-650 px-3 py-1 rounded-full text-xs font-bold">
