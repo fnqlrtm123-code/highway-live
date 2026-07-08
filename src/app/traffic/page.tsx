@@ -44,47 +44,73 @@ export default function TrafficIndexPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
           
-          <div className="space-y-2">
-            <h3 className="font-bold text-slate-900 flex items-center gap-2 text-xs md:text-[13.5px]">
-              <span className="bg-blue-650 text-white text-[10px] w-5 h-5 rounded-lg flex items-center justify-center font-bold">1</span>
+          <a
+            href="https://www.roadplus.co.kr"
+            target="_self"
+            className="block bg-white border border-slate-200 rounded-xl p-4 pr-10 hover:border-blue-600 hover:shadow-sm transition-all relative group text-left cursor-pointer"
+          >
+            <h3 className="font-bold text-slate-850 flex items-center gap-2 text-xs md:text-[13.5px] mb-1 group-hover:text-blue-600 transition-colors">
+              <span className="bg-blue-650 text-white text-[10px] w-5 h-5 rounded-lg flex items-center justify-center font-bold group-hover:bg-blue-600 transition-colors">1</span>
               로드플러스 (한국도로공사)
             </h3>
             <p className="text-[12px] text-slate-550 leading-relaxed">
-              한국도로공사가 직접 운영하는 공식 사이트(<a href="http://www.roadplus.co.kr" target="_blank" rel="noopener noreferrer" className="text-blue-650 font-semibold hover:underline">www.roadplus.co.kr</a>)입니다. 
-              전국 고속도로의 현시간 소통 상황을 반영한 종합 교통지도, 구간별 실시간 CCTV 영상, 교통 속보 및 예보 방송을 제공합니다.
+              한국도로공사가 직접 운영하는 공식 사이트입니다. 전국 고속도로의 현시간 소통 상황을 반영한 종합 교통지도, 구간별 실시간 CCTV 영상, 교통 속보 및 예보 방송을 제공합니다.
             </p>
-          </div>
+            <svg className="w-4 h-4 text-slate-400 group-hover:text-blue-600 transition-colors absolute right-4 top-1/2 -translate-y-1/2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
 
-          <div className="space-y-2">
-            <h3 className="font-bold text-slate-900 flex items-center gap-2 text-xs md:text-[13.5px]">
-              <span className="bg-blue-650 text-white text-[10px] w-5 h-5 rounded-lg flex items-center justify-center font-bold">2</span>
+          <a
+            href="https://www.its.go.kr"
+            target="_self"
+            className="block bg-white border border-slate-200 rounded-xl p-4 pr-10 hover:border-blue-600 hover:shadow-sm transition-all relative group text-left cursor-pointer"
+          >
+            <h3 className="font-bold text-slate-850 flex items-center gap-2 text-xs md:text-[13.5px] mb-1 group-hover:text-blue-600 transition-colors">
+              <span className="bg-blue-650 text-white text-[10px] w-5 h-5 rounded-lg flex items-center justify-center font-bold group-hover:bg-blue-600 transition-colors">2</span>
               국가교통정보센터 (ITS)
             </h3>
             <p className="text-[12px] text-slate-550 leading-relaxed">
-              국토교통부가 직접 구축하여 운영하는 공공 포털(<a href="http://www.its.go.kr" target="_blank" rel="noopener noreferrer" className="text-blue-650 font-semibold hover:underline">www.its.go.kr</a>)입니다. 
-              고속도로뿐만 아니라 국도의 실시간 평균 주행 속도 정보와 전국 노면 상황 CCTV 영상을 무료로 광범위하게 수집할 수 있습니다.
+              국토교통부가 직접 구축하여 운영하는 공공 포털입니다. 고속도로뿐만 아니라 국도의 실시간 평균 주행 속도 정보와 전국 노면 상황 CCTV 영상을 무료로 광범위하게 수집할 수 있습니다.
             </p>
-          </div>
+            <svg className="w-4 h-4 text-slate-400 group-hover:text-blue-600 transition-colors absolute right-4 top-1/2 -translate-y-1/2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
 
-          <div className="space-y-2">
-            <h3 className="font-bold text-slate-900 flex items-center gap-2 text-xs md:text-[13.5px]">
-              <span className="bg-blue-650 text-white text-[10px] w-5 h-5 rounded-lg flex items-center justify-center font-bold">3</span>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.ex.roadinfo"
+            target="_self"
+            className="block bg-white border border-slate-200 rounded-xl p-4 pr-10 hover:border-blue-600 hover:shadow-sm transition-all relative group text-left cursor-pointer"
+          >
+            <h3 className="font-bold text-slate-850 flex items-center gap-2 text-xs md:text-[13.5px] mb-1 group-hover:text-blue-600 transition-colors">
+              <span className="bg-blue-650 text-white text-[10px] w-5 h-5 rounded-lg flex items-center justify-center font-bold group-hover:bg-blue-600 transition-colors">3</span>
               고속도로교통정보 앱
             </h3>
             <p className="text-[12px] text-slate-550 leading-relaxed">
               한국도로공사 공식 모바일 어플리케이션입니다. 스마트폰 화면에서 노선별 실시간 지도, 돌발 사고 현황, 공사 통제 구간 및 졸음쉼터/임시주유소/충전소 위치 정보를 편리하게 제공합니다.
             </p>
-          </div>
+            <svg className="w-4 h-4 text-slate-400 group-hover:text-blue-600 transition-colors absolute right-4 top-1/2 -translate-y-1/2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
 
-          <div className="space-y-2">
-            <h3 className="font-bold text-slate-900 flex items-center gap-2 text-xs md:text-[13.5px]">
-              <span className="bg-blue-650 text-white text-[10px] w-5 h-5 rounded-lg flex items-center justify-center font-bold">4</span>
+          <a
+            href="https://map.naver.com"
+            target="_self"
+            className="block bg-white border border-slate-200 rounded-xl p-4 pr-10 hover:border-blue-600 hover:shadow-sm transition-all relative group text-left cursor-pointer"
+          >
+            <h3 className="font-bold text-slate-850 flex items-center gap-2 text-xs md:text-[13.5px] mb-1 group-hover:text-blue-600 transition-colors">
+              <span className="bg-blue-650 text-white text-[10px] w-5 h-5 rounded-lg flex items-center justify-center font-bold group-hover:bg-blue-600 transition-colors">4</span>
               네이버 및 카카오 지도
             </h3>
             <p className="text-[12px] text-slate-550 leading-relaxed">
               국내 대표 지도 플랫폼의 레이어 필터에서 &apos;CCTV&apos; 및 &apos;교통상황&apos;을 활성화하면, 노선 위에 초록/노랑/빨강 색상으로 직관적인 주행 평속 정체 현황을 관측하고 주요 교차로 영상을 즉시 팝업해 볼 수 있습니다.
             </p>
-          </div>
+            <svg className="w-4 h-4 text-slate-400 group-hover:text-blue-600 transition-colors absolute right-4 top-1/2 -translate-y-1/2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
 
           <div className="space-y-2 md:col-span-2">
             <h3 className="font-bold text-slate-900 flex items-center gap-2 text-xs md:text-[13.5px]">

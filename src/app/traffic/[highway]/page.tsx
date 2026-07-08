@@ -151,34 +151,62 @@ export default async function HighwayTrafficDetailPage({ params }: Props) {
           {road.verificationMethod} 주행 중 교통량이 급증하거나 정체가 길어질 시에는 아래에 정리된 노선 내 휴게소를 방문하여 충분한 휴식을 취하시기 바랍니다.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs md:text-sm">
-          <div className="space-y-1">
-            <span className="font-bold text-slate-800 block">로드플러스 (도로공사)</span>
-            <span className="text-slate-500 leading-relaxed block">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">
+          <a
+            href="https://www.roadplus.co.kr"
+            target="_self"
+            className="block bg-white border border-slate-200 rounded-xl p-4 pr-10 hover:border-blue-600 hover:shadow-sm transition-all relative group text-left cursor-pointer"
+          >
+            <span className="font-bold text-slate-800 block mb-1 group-hover:text-blue-600 transition-colors">로드플러스 (도로공사)</span>
+            <span className="text-slate-550 text-xs leading-normal block">
               공식 웹사이트에서 경부선, 영동선 등 고속도로 전 구간의 교통지도 및 2분 간격의 CCTV 상황을 실시간 조회할 수 있습니다.
             </span>
-          </div>
+            <svg className="w-4 h-4 text-slate-400 group-hover:text-blue-600 transition-colors absolute right-4 top-1/2 -translate-y-1/2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
 
-          <div className="space-y-1">
-            <span className="font-bold text-slate-800 block">국가교통정보센터 (ITS)</span>
-            <span className="text-slate-550 leading-relaxed block">
+          <a
+            href="https://www.its.go.kr"
+            target="_self"
+            className="block bg-white border border-slate-200 rounded-xl p-4 pr-10 hover:border-blue-600 hover:shadow-sm transition-all relative group text-left cursor-pointer"
+          >
+            <span className="font-bold text-slate-800 block mb-1 group-hover:text-blue-600 transition-colors">국가교통정보센터 (ITS)</span>
+            <span className="text-slate-550 text-xs leading-normal block">
               국토교통부가 수집하는 전국 주요 국도 및 우회 도로의 관제 CCTV 카메라를 통해 강우, 안개, 노면 미끄러짐을 확인 가능합니다.
             </span>
-          </div>
+            <svg className="w-4 h-4 text-slate-400 group-hover:text-blue-600 transition-colors absolute right-4 top-1/2 -translate-y-1/2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
 
-          <div className="space-y-1">
-            <span className="font-bold text-slate-800 block">지도 앱 CCTV 레이어</span>
-            <span className="text-slate-550 leading-relaxed block">
+          <a
+            href="https://map.naver.com"
+            target="_self"
+            className="block bg-white border border-slate-200 rounded-xl p-4 pr-10 hover:border-blue-600 hover:shadow-sm transition-all relative group text-left cursor-pointer"
+          >
+            <span className="font-bold text-slate-800 block mb-1 group-hover:text-blue-600 transition-colors">지도 앱 CCTV 레이어</span>
+            <span className="text-slate-550 text-xs leading-normal block">
               스마트폰 네이버 지도 또는 카카오 맵의 우측 레이어 탭에서 CCTV 기능을 활성화하면, 노선 내에 있는 가상 감시 카메라를 터치해 직접 확인하실 수 있습니다.
             </span>
-          </div>
+            <svg className="w-4 h-4 text-slate-400 group-hover:text-blue-600 transition-colors absolute right-4 top-1/2 -translate-y-1/2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
 
-          <div className="space-y-1">
-            <span className="font-bold text-slate-800 block">고속도로 교통앱 연동</span>
-            <span className="text-slate-550 leading-relaxed block">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.ex.roadinfo"
+            target="_self"
+            className="block bg-white border border-slate-200 rounded-xl p-4 pr-10 hover:border-blue-600 hover:shadow-sm transition-all relative group text-left cursor-pointer"
+          >
+            <span className="font-bold text-slate-800 block mb-1 group-hover:text-blue-600 transition-colors">고속도로 교통앱 연동</span>
+            <span className="text-slate-550 text-xs leading-normal block">
               전방 돌발적인 연쇄 추돌 사고, 도로 공사 통제 구간 및 갓길 가변 차로 사용 상황을 푸시 알림으로 신속하게 접수할 수 있습니다.
             </span>
-          </div>
+            <svg className="w-4 h-4 text-slate-400 group-hover:text-blue-600 transition-colors absolute right-4 top-1/2 -translate-y-1/2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
         </div>
       </section>
 
