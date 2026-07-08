@@ -150,6 +150,30 @@ async function fetchBrands() {
   return list;
 }
 
+// 5. Fetch from restBestfoodList API (0502)
+async function fetchRealBestFoods() {
+  console.log('Fetching real menu lists from restBestfoodList API (0502)...');
+  const list = [];
+  for (let page = 1; page <= 45; page++) {
+    const url = `https://data.ex.co.kr/openapi/restinfo/restBestfoodList?key=test&type=json&numOfRows=99&pageNo=${page}`;
+    try {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+      const data = await response.json();
+      if (data && data.list && data.list.length > 0) {
+        list.push(...data.list);
+        if (data.list.length < 99) break;
+      } else {
+        break;
+      }
+    } catch (error) {
+      console.error(`Failed to fetch restBestfoodList page ${page}:`, error);
+      break;
+    }
+  }
+  return list;
+}
+
 // Static definitions and dictionaries
 const PRECISE_COORDINATES = {
   'anseong-seoul': { latitude: 37.0125, longitude: 127.1352 },
@@ -294,8 +318,9 @@ async function generateData() {
   const rawFacilitiesList = await fetchRestConvList();
   const rawRepFoods = await fetchRepresentativeFoods();
   const rawBrands = await fetchBrands();
+  const rawBestFoods = await fetchRealBestFoods();
 
-  console.log(`Fetched ${rawGasStations.length} gas stations, ${rawFacilitiesList.length} convenience facility entries, ${rawRepFoods.length} representative foods, and ${rawBrands.length} brands.`);
+  console.log(`Fetched ${rawGasStations.length} gas stations, ${rawFacilitiesList.length} convenience facility entries, ${rawRepFoods.length} representative foods, ${rawBrands.length} brands, and ${rawBestFoods.length} food court menu items.`);
 
   // Group convenience facilities by rest area code stdRestCd
   const restAreasMap = {};
@@ -413,31 +438,62 @@ async function generateData() {
       };
     }
 
-    // Signature menu matching (Try matching from real representFoodServiceArea API)
-    const realRepFood = rawRepFoods.find(f => f.serviceAreaCode === r.code && f.batchMenu);
+    // Find all matching foods from restBestfoodList API (0502)
+    const matchedFoods = rawBestFoods.filter(f => f.stdRestCd === r.code && f.foodNm);
+
     let signatureMenu = null;
-    if (realRepFood) {
+    let otherMenus = [];
+
+    if (matchedFoods.length > 0) {
+      // 1. Try to find recommended or best food first
+      let sigFoodIndex = matchedFoods.findIndex(f => f.recommendyn === 'Y' || f.bestfoodyn === 'Y' || f.premiumyn === 'Y');
+      if (sigFoodIndex === -1) sigFoodIndex = 0; // Default to first item if none are specifically marked
+
+      const sigFood = matchedFoods[sigFoodIndex];
       signatureMenu = {
-        name: realRepFood.batchMenu,
-        price: parseInt(realRepFood.salePrice.replace(/[^0-9]/g, '')) || 9000,
-        description: '한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.',
+        name: sigFood.foodNm,
+        price: parseInt(sigFood.foodCost) || 9000,
+        description: sigFood.etc ? sigFood.etc.trim().replace(/\s+/g, ' ') : '한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.',
         isExFood: true
       };
-    } else {
-      // Fallback to static rules
-      for (const menu of SIGNATURE_MENUS) {
-        if (r.cleanedName.includes(menu.name.substring(0, 2))) {
-          signatureMenu = { ...menu, isExFood: true };
-          break;
+
+      // 2. Put the rest of matched foods into otherMenus
+      otherMenus = matchedFoods
+        .filter((_, fIdx) => fIdx !== sigFoodIndex)
+        .map(f => ({
+          name: f.foodNm,
+          price: parseInt(f.foodCost) || 7000
+        }));
+    }
+
+    // 3. Fallback to representative food API (0317) or static pool if no foods matched in 0502 API
+    if (!signatureMenu) {
+      const realRepFood = rawRepFoods.find(f => f.serviceAreaCode === r.code && f.batchMenu);
+      if (realRepFood) {
+        signatureMenu = {
+          name: realRepFood.batchMenu,
+          price: parseInt(realRepFood.salePrice.replace(/[^0-9]/g, '')) || 9000,
+          description: '한국도로공사 공식 인증을 받은 이 휴게소의 대표 시그니처 음식입니다.',
+          isExFood: true
+        };
+      } else {
+        // Fallback to static rules
+        for (const menu of SIGNATURE_MENUS) {
+          if (r.cleanedName.includes(menu.name.substring(0, 2))) {
+            signatureMenu = { ...menu, isExFood: true };
+            break;
+          }
         }
-      }
-      if (!signatureMenu) {
-        signatureMenu = GENERIC_SIGNATURES[idx % GENERIC_SIGNATURES.length];
+        if (!signatureMenu) {
+          signatureMenu = GENERIC_SIGNATURES[idx % GENERIC_SIGNATURES.length];
+        }
       }
     }
 
-    // Other menus (include all menus in pool, filtering out the signature menu)
-    const otherMenus = OTHER_MENUS_POOL.filter(m => m.name !== signatureMenu.name);
+    if (otherMenus.length === 0) {
+      // Fallback: populate from standard other menus pool if API returned nothing
+      otherMenus = OTHER_MENUS_POOL.filter(m => m.name !== signatureMenu.name);
+    }
 
     // Brand stores matching (from real restBrandList API 0501)
     const matchedBrands = rawBrands.filter(b => b.stdRestCd === r.code);
