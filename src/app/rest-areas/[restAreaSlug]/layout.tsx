@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import AdSense from '@/components/AdSense';
 import type { Metadata } from 'next';
 import Breadcrumb from '@/components/Breadcrumb';
+import { getRestAreaThumbnail } from '@/lib/imageHelper';
 
 interface Props {
   children: React.ReactNode;
@@ -56,6 +57,22 @@ export default async function RestAreaLayout({ children, params }: Props) {
 
       {/* 상단 애드센스 광고 */}
       <AdSense slot="4455667788" />
+
+      {/* 휴게소 전경 배너 이미지 */}
+      <div className="relative h-64 md:h-80 w-full overflow-hidden bg-slate-100 rounded-2xl mb-8 border border-slate-200 shadow-sm">
+        <img 
+          src={getRestAreaThumbnail(area.highwaySlug)} 
+          alt={`${area.name} 전경`} 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/65 to-transparent pointer-events-none" />
+        <span className={`absolute top-4 right-4 text-xs font-bold px-3 py-1 rounded-md border shadow-md ${
+          area.direction === '상행' ? 'bg-blue-600 text-white border-blue-500' :
+          area.direction === '하행' ? 'bg-rose-600 text-white border-rose-500' : 'bg-slate-600 text-white border-slate-500'
+        }`}>
+          {area.directionName}
+        </span>
+      </div>
 
       {/* 휴게소 상세 헤더 - 깔끔하고 읽기 편한 아티클 스타일 */}
       <div className="border-b border-slate-200 pb-6 mb-8 space-y-3">

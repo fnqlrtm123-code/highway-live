@@ -6,6 +6,7 @@ import {
 import { notFound } from 'next/navigation';
 import AdSense from '@/components/AdSense';
 import type { Metadata } from 'next';
+import { getRestAreaThumbnail } from '@/lib/imageHelper';
 
 interface Props {
   params: Promise<{ highway: string }>;
@@ -120,36 +121,53 @@ export default async function HighwayDetailPage({ params }: Props) {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {serviceAreas.map((area) => (
-            <div key={area.slug} className="p-5 bg-white border border-slate-200 flex flex-col justify-between space-y-4 shadow-2xs hover:border-slate-300 transition-all">
-              <div className="space-y-2">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <h3 className="text-base font-black text-slate-800">{area.name}</h3>
-                    <span className="text-[10px] font-bold text-slate-500">{area.locationKm}km 지점 &middot; {area.directionName}</span>
-                  </div>
-                  <span className="text-[10px] font-black bg-blue-50 text-blue-700 px-2 py-0.5">{area.direction}</span>
-                </div>
-
-                <div className="flex flex-wrap gap-1">
-                  {area.facilities.map((f, idx) => (
-                    <span key={idx} className="text-[10.5px] bg-slate-100 text-slate-600 px-2 py-0.5 font-medium">
-                      {f}
-                    </span>
-                  ))}
-                </div>
+            <div key={area.slug} className="overflow-hidden bg-white border border-slate-200 flex flex-col justify-between shadow-2xs hover:border-slate-350 transition-all rounded-2xl">
+              {/* Thumbnail Image */}
+              <div className="relative h-40 w-full overflow-hidden bg-slate-100">
+                <img 
+                  src={getRestAreaThumbnail(area.highwaySlug)} 
+                  alt={`${area.name} 전경`} 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <span className={`absolute top-3 right-3 text-[9px] font-bold px-2 py-0.5 rounded-md border shadow-xs ${
+                  area.direction === '상행' ? 'bg-blue-600 text-white border-blue-500' :
+                  area.direction === '하행' ? 'bg-rose-600 text-white border-rose-500' : 'bg-slate-600 text-white border-slate-500'
+                }`}>
+                  {area.directionName}
+                </span>
               </div>
 
-              <div className="flex justify-between items-center border-t border-slate-100 pt-3 text-xs">
-                <div className="space-y-0.5">
-                  <span className="text-[10px] text-slate-400 block">대표 메뉴</span>
-                  <span className="font-bold text-slate-700">{area.signatureMenu.name} ({area.signatureMenu.price.toLocaleString()}원)</span>
+              <div className="p-5 flex-grow flex flex-col justify-between space-y-4">
+                <div className="space-y-2">
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <h3 className="text-base font-black text-slate-800">{area.name}</h3>
+                      <span className="text-[10px] font-bold text-slate-500">{area.locationKm}km 지점 &middot; {area.directionName}</span>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-1">
+                    {area.facilities.map((f, idx) => (
+                      <span key={idx} className="text-[10.5px] bg-slate-100 text-slate-650 px-2 py-0.5 font-bold rounded-md border border-slate-200/40">
+                        {f}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-                <a 
-                  href={`/rest-areas/${area.slug}`} 
-                  className="bg-slate-900 text-white hover:bg-slate-800 font-bold px-3 py-1.5 transition-colors shrink-0"
-                >
-                  상세정보
-                </a>
+
+                <div className="flex justify-between items-center border-t border-slate-100 pt-3 text-xs">
+                  <div className="space-y-0.5">
+                    <span className="text-[10px] text-slate-400 block font-semibold">대표 메뉴</span>
+                    <span className="font-bold text-slate-700">{area.signatureMenu.name} ({area.signatureMenu.price.toLocaleString()}원)</span>
+                  </div>
+                  <a 
+                    href={`/rest-areas/${area.slug}`} 
+                    className="bg-slate-900 text-white hover:bg-slate-800 font-bold px-3 py-2 rounded-lg transition-colors shrink-0 cursor-pointer"
+                  >
+                    상세정보 &rarr;
+                  </a>
+                </div>
               </div>
             </div>
           ))}
