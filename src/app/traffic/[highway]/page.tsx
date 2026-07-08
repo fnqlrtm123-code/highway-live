@@ -80,8 +80,37 @@ export default async function HighwayTrafficDetailPage({ params }: Props) {
   };
   const lineName = getLineName(road.name);
 
+  // FAQ Schema JSON-LD
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      ...road.faqs.map((faq) => ({
+        "@type": "Question",
+        "name": faq.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.a,
+        },
+      })),
+      {
+        "@type": "Question",
+        "name": `${road.name} 노면에서 긴급 차량 무상 견인 서비스를 받으려면?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "한국도로공사가 운영하는 구간 내에서 차량 사고나 갑작스러운 기계 고장으로 본선 차도에 고립되었을 경우, 도로공사 콜센터(1588-2504)에 접수하여 2차 사고의 고위험 영역인 가까운 나들목(IC) 또는 안심 쉼터 영역까지 견인료 지불 없이 100% 무상으로 우선 이동을 지원받을 수 있습니다.",
+        },
+      },
+    ],
+  };
+
   return (
     <main className="mx-auto max-w-[1000px] px-5 py-10 flex-grow space-y-12 text-slate-700 leading-relaxed text-sm md:text-base font-sans">
+      {/* FAQ Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       
       {/* 브레드크럼 */}
       <div className="flex justify-between items-center text-xs text-slate-400">
@@ -101,7 +130,7 @@ export default async function HighwayTrafficDetailPage({ params }: Props) {
           {road.type === 'highway' ? '고속도로 노선' : road.type === 'urban' ? '도시고속도로' : road.type === 'national' ? '일반국도' : '대교'}
         </div>
         <h1 className="text-2.5xl md:text-3.5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-          {road.name} {lineName !== road.name ? `[${lineName}]` : ''} 실시간 교통상황 &amp; CCTV
+          {road.name} 교통상황 실시간 CCTV 확인
         </h1>
         <p className="text-slate-500 text-sm md:text-[15px] leading-relaxed">
           {road.description} 아래 제공되는 실시간 정보 확인 채널을 통해 구간별 주행 평속과 CCTV 라이브 모니터링 정보를 무료로 시청하고, 
