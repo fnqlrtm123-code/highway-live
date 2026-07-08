@@ -19,12 +19,19 @@ export default function FoodIndexPage() {
   return (
     <>
       <HubHeader />
-      <main className="mx-auto max-w-[1240px] px-4 py-12 flex-grow space-y-10">
+      <main className="mx-auto max-w-[1240px] px-4 py-12 flex-grow space-y-10 text-slate-800 font-sans">
       
       {/* 소개 타이틀 */}
-      <div className="space-y-2 text-center md:text-left">
-        <h1 className="text-3xl font-black text-slate-900 tracking-tight">고속도로 휴게소 대표 맛집 메뉴</h1>
-        <p className="text-slate-500 text-sm max-w-2xl leading-relaxed">
+      <div className="space-y-3.5 text-center md:text-left">
+        <div className="inline-flex items-center gap-1.5 bg-amber-50 text-amber-850 px-3 py-1 rounded-full text-xs font-bold">
+          <span className="relative flex h-1.5 w-1.5">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-amber-500"></span>
+          </span>
+          전국 고속도로 미식 가이드
+        </div>
+        <h1 className="text-2.5xl md:text-3.5xl font-extrabold text-slate-900 tracking-tight">고속도로 휴게소 대표 맛집 메뉴</h1>
+        <p className="text-slate-500 text-xs md:text-[13.5px] max-w-2xl leading-relaxed font-medium">
           한국도로공사에서 공식 인증한 ex-food 대표 메뉴부터 휴게소마다 소문난 실시간 시그니처 밥상 가격표를 확인하세요.
         </p>
       </div>
@@ -32,28 +39,29 @@ export default function FoodIndexPage() {
       <AdSense slot="2233445566" />
 
       {/* 전국 휴게소 맛집 리스트 */}
-      <section className="bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-2xs space-y-6">
-        <h2 className="text-xl font-black text-slate-900 border-b pb-4 border-slate-100">
+      <section className="bg-white border border-slate-200/60 rounded-2xl p-6 md:p-8 shadow-xs space-y-6">
+        <h2 className="text-[15px] font-bold text-slate-900 border-b pb-4 border-slate-100 flex items-center gap-2">
+          <span className="w-1 h-3.5 bg-amber-500 rounded-full inline-block"></span>
           휴게소별 시그니처 대표 메뉴판
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {popularMenus.map((item, idx) => (
-            <div key={idx} className="p-5 border border-slate-100 bg-slate-50/50 hover:bg-slate-50 transition-all rounded-2xl flex justify-between items-start gap-4">
+            <div key={idx} className="p-5 border border-slate-100 bg-slate-50/50 hover:bg-white hover:border-blue-500 hover:shadow-xs transition-all rounded-xl flex justify-between items-start gap-4">
               <div className="space-y-2">
-                <div className="space-y-0.5">
-                  <a href={`/rest-areas/${item.restAreaSlug}`} className="text-xs font-bold text-blue-600 hover:underline">
+                <div className="space-y-1">
+                  <a href={`/rest-areas/${item.restAreaSlug}`} className="inline-block text-[11px] font-bold text-blue-650 hover:underline cursor-pointer">
                     {item.restAreaName} &rarr;
                   </a>
-                  <h3 className="text-[16px] font-black text-slate-800">{item.menu.name}</h3>
+                  <h3 className="text-xs md:text-[14.5px] font-bold text-slate-800">{item.menu.name}</h3>
                 </div>
-                <p className="text-xs text-slate-500 leading-relaxed font-medium">
+                <p className="text-[11.5px] text-slate-450 leading-relaxed font-semibold">
                   {item.menu.description}
                 </p>
               </div>
               <div className="text-right shrink-0 space-y-2">
-                <span className="font-mono font-black text-slate-900 block text-[15px]">{item.menu.price.toLocaleString()}원</span>
+                <span className="font-mono font-extrabold text-slate-900 block text-xs md:text-[13px]">{item.menu.price.toLocaleString()}원</span>
                 {item.menu.isExFood && (
-                  <span className="inline-block bg-amber-100 text-amber-800 text-[10px] font-black px-2 py-0.5 rounded">
+                  <span className="inline-block bg-amber-50 text-amber-800 text-[9px] font-bold px-2 py-0.5 rounded-md">
                     ex-food 인증
                   </span>
                 )}

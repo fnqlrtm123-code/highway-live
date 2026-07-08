@@ -70,12 +70,14 @@ export default function Home() {
   const upBoundRestAreas = currentHighwayRestAreas.filter(s => s.direction === '상행');
   const downBoundRestAreas = currentHighwayRestAreas.filter(s => s.direction === '하행');
 
-  // 주유소 최저가 목록 추출
+  // 주유소 최저가 목록 추출 (0원 제외 필터 추가)
   const cheapestGasoline = [...serviceAreas]
+    .filter(s => s.gasStation.gasolinePrice > 0)
     .sort((a, b) => a.gasStation.gasolinePrice - b.gasStation.gasolinePrice)
     .slice(0, 3);
 
   const cheapestDiesel = [...serviceAreas]
+    .filter(s => s.gasStation.dieselPrice > 0)
     .sort((a, b) => a.gasStation.dieselPrice - b.gasStation.dieselPrice)
     .slice(0, 3);
 
@@ -85,22 +87,29 @@ export default function Home() {
     .slice(0, 3);
 
   return (
-    <main className="flex-grow bg-slate-50 pb-24">
+    <main className="flex-grow bg-[#f8fafc] pb-24 font-sans text-slate-800">
       {/* 1. 상단 문제 해결형 통합 검색창 */}
-      <section className="bg-slate-950 text-white py-12 border-b border-slate-800">
+      <section className="bg-gradient-to-b from-blue-50/60 via-slate-50/20 to-[#f8fafc] py-16 border-b border-slate-200/50">
         <div className="mx-auto max-w-[1240px] px-4 text-center space-y-6">
-          <div className="space-y-2">
-            <h1 className="text-2xl md:text-3.5xl font-black tracking-tight leading-tight">
+          <div className="space-y-3">
+            <div className="inline-flex items-center gap-1.5 bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-[10.5px] font-bold">
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-blue-600"></span>
+              </span>
+              실시간 고속도로 종합 정보 안내
+            </div>
+            <h1 className="text-3xl md:text-[40px] font-extrabold text-slate-900 tracking-tight leading-tight">
               고속도로 실시간 편의정보 포털
             </h1>
-            <p className="text-xs md:text-sm text-slate-400 max-w-xl mx-auto leading-relaxed">
+            <p className="text-xs md:text-[13.5px] text-slate-500 max-w-xl mx-auto leading-relaxed font-medium">
               지금 막히는 노선 상황, 방향별 휴게소 맛집(EX-FOOD), 알뜰주유소 가격 및 전기차 충전기 수량을 한눈에 쉽게 확인해 드립니다.
             </p>
           </div>
 
           {/* 실전용 통합 검색 입력창 */}
           <div className="max-w-xl mx-auto relative">
-            <div className="relative flex items-center bg-white rounded-2xl border border-slate-800 shadow-lg overflow-hidden">
+            <div className="relative flex items-center bg-white rounded-2xl border border-slate-200/80 shadow-md shadow-slate-100/30 overflow-hidden focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-500 transition-all">
               <svg className="h-5 w-5 text-slate-400 ml-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
@@ -115,10 +124,10 @@ export default function Home() {
 
             {/* 통합 검색 결과 표시 */}
             {searchQuery.trim().length > 0 && (
-              <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-slate-200 rounded-2xl shadow-xl z-50 text-left text-slate-800 overflow-hidden max-h-[320px] overflow-y-auto">
+              <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-slate-200/80 rounded-2xl shadow-xl z-50 text-left text-slate-800 overflow-hidden max-h-[320px] overflow-y-auto">
                 {filteredHighways.length > 0 && (
                   <div className="p-3 border-b border-slate-100">
-                    <span className="text-[10px] font-black text-slate-400 px-2 block mb-1">고속도로 노선 바로가기</span>
+                    <span className="text-[10px] font-bold text-slate-400 px-2 block mb-1">고속도로 노선 바로가기</span>
                     {filteredHighways.map(h => (
                       <a key={h.slug} href={`/traffic/${h.slug}`} className="block px-2 py-1.5 rounded-lg hover:bg-slate-50 text-xs font-bold text-slate-800">
                         {h.name} (소통상황 & CCTV)
@@ -128,7 +137,7 @@ export default function Home() {
                 )}
                 {filteredRestAreas.length > 0 && (
                   <div className="p-3">
-                    <span className="text-[10px] font-black text-slate-400 px-2 block mb-1">휴게소 & 맛집 바로가기</span>
+                    <span className="text-[10px] font-bold text-slate-400 px-2 block mb-1">휴게소 & 맛집 바로가기</span>
                     {filteredRestAreas.map(s => (
                       <a key={s.slug} href={`/rest-areas/${s.slug}`} className="block px-2 py-1.5 rounded-lg hover:bg-slate-50 text-xs font-bold text-slate-800 flex justify-between">
                         <span>{s.name} ({s.directionName})</span>
@@ -152,7 +161,7 @@ export default function Home() {
       </div>
 
       {/* 2. 메인 4대 카테고리 구성 영역 */}
-      <div className="max-w-[1240px] mx-auto px-4 mt-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div className="max-w-[1240px] mx-auto px-4 mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
         {/* ==========================================
             좌측: [1] 교통상황·CCTV + [4] 고속도로 통행료
@@ -160,60 +169,63 @@ export default function Home() {
         <section className="lg:col-span-6 space-y-8">
           
           {/* [Pillar 1] 교통상황·CCTV */}
-          <div className="bg-white border border-slate-200 rounded-3xl p-5 shadow-2xs space-y-5">
-            <div className="flex justify-between items-center border-b pb-3 border-slate-100">
+          <div className="bg-white border border-slate-200/60 rounded-2xl p-6 shadow-xs space-y-5">
+            <div className="flex justify-between items-center border-b pb-3.5 border-slate-100">
               <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-ping"></span>
-                <h2 className="text-[15px] font-black text-slate-800">교통상황 · CCTV 조회</h2>
+                <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                <h2 className="text-[15px] font-bold text-slate-900">교통상황 &middot; CCTV 조회</h2>
               </div>
-              <a href="/traffic" className="text-[11px] font-bold text-blue-600 hover:underline">노선 전체보기 &rarr;</a>
+              <a href="/traffic" className="text-[11px] font-bold text-blue-600 hover:text-blue-700">노선 전체보기 &rarr;</a>
             </div>
 
             {/* 주요 도시 간 소요 시간 현황 */}
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-3.5">
               {travelTimes.slice(0, 4).map((t, idx) => (
-                <div key={idx} className="p-3.5 bg-slate-50 border border-slate-100 rounded-xl flex flex-col justify-between space-y-2">
+                <div key={idx} className="p-4 bg-slate-50/50 border border-slate-100/80 rounded-xl flex flex-col justify-between space-y-2">
                   <div className="flex justify-between items-center">
-                    <span className="text-xs font-black text-slate-700">{t.from} &rarr; {t.to}</span>
+                    <span className="text-xs font-bold text-slate-700">{t.from} &rarr; {t.to}</span>
                     <span className={`text-[9.5px] font-bold px-2 py-0.5 rounded ${
-                      t.status === 'smooth' ? 'bg-emerald-50 text-emerald-600' :
-                      t.status === 'slow' ? 'bg-amber-50 text-amber-600' : 'bg-red-50 text-red-500'
+                      t.status === 'smooth' ? 'bg-emerald-50 text-emerald-700 border border-emerald-100/50' :
+                      t.status === 'slow' ? 'bg-amber-50 text-amber-700 border border-amber-100/50' : 
+                      'bg-red-50 text-red-700 border border-red-100/50'
                     }`}>
                       {t.status === 'smooth' ? '원활' : t.status === 'slow' ? '서행' : '정체'}
                     </span>
                   </div>
                   <div>
-                    <span className="text-lg font-black text-slate-900 font-mono">{Math.floor(t.currentTimeMin / 60)}시간 {t.currentTimeMin % 60}분</span>
-                    <p className="text-[9.5px] text-slate-400 font-mono">정체 소요 {t.currentTimeMin - t.normalTimeMin}분 추가 지연</p>
+                    <span className="text-lg font-extrabold text-slate-900 font-mono">{Math.floor(t.currentTimeMin / 60)}시간 {t.currentTimeMin % 60}분</span>
+                    <p className="text-[9.5px] text-slate-400 font-mono mt-0.5">정체 소요 {t.currentTimeMin - t.normalTimeMin}분 추가 지연</p>
                   </div>
                 </div>
               ))}
             </div>
 
             {/* 실시간 주요 CCTV 포인트 */}
-            <div className="space-y-2">
-              <span className="text-[10px] font-black text-slate-400 block uppercase tracking-wider">주요 정체 발생지역 CCTV</span>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+            <div className="space-y-2.5">
+              <span className="text-[10px] font-bold text-slate-400 block uppercase tracking-wider">주요 정체 발생지역 CCTV</span>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
                 {cctvPoints.slice(0, 4).map(c => (
                   <button 
                     key={c.id}
                     onClick={() => setActiveCctv(c)}
-                    className="p-2.5 bg-slate-900 text-white rounded-xl text-left flex justify-between items-center hover:bg-slate-800 transition-colors"
+                    className="p-3 bg-slate-50 hover:bg-slate-100/75 border border-slate-200/50 text-slate-800 rounded-xl text-left flex justify-between items-center transition-colors cursor-pointer"
                   >
                     <div>
-                      <span className="text-xs font-black block">{c.name}</span>
-                      <span className="text-[9.5px] text-slate-400 font-mono">{c.highwayName} &bull; {c.direction}</span>
+                      <span className="text-xs font-bold block text-slate-800">{c.name}</span>
+                      <span className="text-[9.5px] text-slate-400 font-semibold font-mono">{c.highwayName} &bull; {c.direction}</span>
                     </div>
-                    <span className="text-[10.5px] font-black font-mono text-red-400">{c.currentSpeed} km/h</span>
+                    <span className="text-[10.5px] font-extrabold font-mono text-red-550">{c.currentSpeed} km/h</span>
                   </button>
                 ))}
               </div>
-            </div>            {/* CCTV 모달 플레이어 연계 */}
+            </div>
+
+            {/* CCTV 모달 플레이어 연계 */}
             {activeCctv && (
-              <div className="bg-slate-950 text-white rounded-2xl overflow-hidden border border-slate-800 mt-4">
+              <div className="bg-slate-950 text-white rounded-xl overflow-hidden border border-slate-800 mt-4 shadow-lg">
                 <div className="p-3 bg-slate-900 flex justify-between items-center text-xs">
                   <span className="font-bold">CCTV 모니터링: {activeCctv.name} ({activeCctv.direction})</span>
-                  <button onClick={() => setActiveCctv(null)} className="text-slate-400 hover:text-white font-bold">&times; 닫기</button>
+                  <button onClick={() => setActiveCctv(null)} className="text-slate-400 hover:text-white font-bold cursor-pointer">&times; 닫기</button>
                 </div>
                 <CctvPlayer 
                   cctvId={activeCctv.id}
@@ -226,18 +238,18 @@ export default function Home() {
           </div>
 
           {/* [Pillar 4] 고속도로 통행료 계산기 */}
-          <div className="bg-white border border-slate-200 rounded-3xl p-5 shadow-2xs space-y-4">
+          <div className="bg-white border border-slate-200/60 rounded-2xl p-6 shadow-xs space-y-4">
             <div>
-              <h2 className="text-[15px] font-black text-slate-800">고속도로 통행료 계산기</h2>
+              <h2 className="text-[15px] font-bold text-slate-900">고속도로 통행료 계산기</h2>
             </div>
             
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-2 gap-3.5">
               <div>
-                <label className="text-[10px] font-bold text-slate-400 block mb-1">출발 도시</label>
+                <label className="text-[10px] font-bold text-slate-400 block mb-1.5">출발 도시</label>
                 <select 
                   value={tollFrom}
                   onChange={(e) => { setTollFrom(e.target.value); calculateToll(e.target.value, tollTo); }}
-                  className="w-full px-2.5 py-1.5 text-xs rounded-lg border border-slate-200 bg-slate-50 font-bold"
+                  className="w-full px-3 py-2 text-xs rounded-xl border border-slate-200 bg-slate-50 font-bold focus:outline-none focus:border-blue-500 cursor-pointer"
                 >
                   <option value="서울">서울</option>
                   <option value="부산">부산</option>
@@ -247,11 +259,11 @@ export default function Home() {
                 </select>
               </div>
               <div>
-                <label className="text-[10px] font-bold text-slate-400 block mb-1">도착 도시</label>
+                <label className="text-[10px] font-bold text-slate-400 block mb-1.5">도착 도시</label>
                 <select 
                   value={tollTo}
                   onChange={(e) => { setTollTo(e.target.value); calculateToll(tollFrom, e.target.value); }}
-                  className="w-full px-2.5 py-1.5 text-xs rounded-lg border border-slate-200 bg-slate-50 font-bold"
+                  className="w-full px-3 py-2 text-xs rounded-xl border border-slate-200 bg-slate-50 font-bold focus:outline-none focus:border-blue-500 cursor-pointer"
                 >
                   <option value="부산">부산</option>
                   <option value="서울">서울</option>
@@ -284,18 +296,18 @@ export default function Home() {
         <section className="lg:col-span-6 space-y-8">
           
           {/* [Pillar 2] 고속도로 휴게소 (상행선·하행선 리스트 및 맛집) */}
-          <div className="bg-white border border-slate-200 rounded-3xl p-5 shadow-2xs space-y-5">
+          <div className="bg-white border border-slate-200/60 rounded-2xl p-6 shadow-xs space-y-5">
             <div>
-              <h2 className="text-[15px] font-black text-slate-800">고속도로 휴게소 (상행선 &middot; 하행선 방향별 조회)</h2>
+              <h2 className="text-[15px] font-bold text-slate-900">고속도로 휴게소 (방향별 조회)</h2>
             </div>
 
             {/* 고속도로 노선 셀렉트 */}
             <div>
-              <label className="text-[10px] font-bold text-slate-400 block mb-1">고속도로 노선 선택</label>
+              <label className="text-[10px] font-bold text-slate-400 block mb-1.5">고속도로 노선 선택</label>
               <select 
                 value={selectedRestHighway}
                 onChange={(e) => setSelectedRestHighway(e.target.value)}
-                className="w-full px-2.5 py-2 text-xs rounded-lg border border-slate-200 bg-slate-50 font-black text-slate-700"
+                className="w-full px-3 py-2.5 text-xs rounded-xl border border-slate-200 bg-slate-50 font-bold text-slate-700 focus:outline-none focus:border-blue-500 cursor-pointer"
               >
                 <option value="경부고속도로">경부고속도로</option>
                 <option value="서해안고속도로">서해안고속도로</option>
@@ -307,17 +319,17 @@ export default function Home() {
             </div>
 
             {/* 편의시설 검색 필터 */}
-            <div className="space-y-1">
+            <div className="space-y-1.5">
               <span className="text-[10px] font-bold text-slate-400 block">핵심 편의시설 빠른 필터</span>
-              <div className="flex flex-wrap gap-1">
+              <div className="flex flex-wrap gap-1.5">
                 {['전체', '수유실', '샤워실', '수면실', '반려견놀이터'].map(fac => (
                   <button 
                     key={fac}
                     onClick={() => setSelectedRestFacility(fac)}
-                    className={`px-3 py-1 rounded-lg text-xs font-bold border transition-colors ${
+                    className={`px-3 py-1.5 rounded-lg text-xs font-bold border transition-colors cursor-pointer ${
                       selectedRestFacility === fac 
-                        ? 'bg-blue-600 border-blue-600 text-white' 
-                        : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
+                        ? 'bg-blue-600 border-blue-600 text-white shadow-sm shadow-blue-500/10' 
+                        : 'bg-slate-50 border-slate-200/70 text-slate-650 hover:bg-slate-100'
                     }`}
                   >
                     {fac}
@@ -331,8 +343,8 @@ export default function Home() {
               
               {/* 상행선 방향 */}
               <div className="space-y-2">
-                <span className="text-xs font-black text-slate-700 border-b pb-1 block border-slate-100 flex items-center gap-1.5">
-                  상행선 방향 ({selectedRestHighway === '경부고속도로' ? '서울방향' : '상행선'})
+                <span className="text-xs font-extrabold text-slate-800 border-b pb-1.5 block border-slate-100 flex items-center gap-1.5">
+                  상행선 ({selectedRestHighway === '경부고속도로' ? '서울방향' : '상행선'})
                 </span>
                 <div className="space-y-1.5 max-h-[220px] overflow-y-auto pr-1">
                   {upBoundRestAreas
@@ -341,10 +353,10 @@ export default function Home() {
                       <button 
                         key={s.slug} 
                         onClick={() => setSelectedRestArea(s)}
-                        className={`w-full p-2.5 rounded-lg border text-left text-xs font-bold transition-all flex justify-between ${
+                        className={`w-full p-2.5 rounded-xl border text-left text-xs font-bold transition-all flex justify-between cursor-pointer ${
                           selectedRestArea?.slug === s.slug 
-                            ? 'bg-blue-50 border-blue-300 text-blue-700' 
-                            : 'bg-white border-slate-100 hover:bg-slate-50 text-slate-800'
+                            ? 'bg-blue-50 border-blue-300 text-blue-750' 
+                            : 'bg-slate-50/50 border-slate-100 hover:bg-slate-100/50 text-slate-850'
                         }`}
                       >
                         <span>{s.name}</span>
@@ -359,8 +371,8 @@ export default function Home() {
 
               {/* 하행선 방향 */}
               <div className="space-y-2">
-                <span className="text-xs font-black text-slate-700 border-b pb-1 block border-slate-100 flex items-center gap-1.5">
-                  하행선 방향 ({selectedRestHighway === '경부고속도로' ? '부산방향' : '하행선'})
+                <span className="text-xs font-extrabold text-slate-800 border-b pb-1.5 block border-slate-100 flex items-center gap-1.5">
+                  하행선 ({selectedRestHighway === '경부고속도로' ? '부산방향' : '하행선'})
                 </span>
                 <div className="space-y-1.5 max-h-[220px] overflow-y-auto pr-1">
                   {downBoundRestAreas
@@ -369,10 +381,10 @@ export default function Home() {
                       <button 
                         key={s.slug} 
                         onClick={() => setSelectedRestArea(s)}
-                        className={`w-full p-2.5 rounded-lg border text-left text-xs font-bold transition-all flex justify-between ${
+                        className={`w-full p-2.5 rounded-xl border text-left text-xs font-bold transition-all flex justify-between cursor-pointer ${
                           selectedRestArea?.slug === s.slug 
-                            ? 'bg-blue-50 border-blue-300 text-blue-700' 
-                            : 'bg-white border-slate-100 hover:bg-slate-50 text-slate-800'
+                            ? 'bg-blue-50 border-blue-300 text-blue-750' 
+                            : 'bg-slate-50/50 border-slate-100 hover:bg-slate-100/50 text-slate-855'
                         }`}
                       >
                         <span>{s.name}</span>
@@ -389,33 +401,33 @@ export default function Home() {
 
             {/* 휴게소 디테일 팝업 노출 */}
             {selectedRestArea && (
-              <div className="bg-slate-900 text-white p-4 rounded-2xl space-y-3 mt-4 border border-slate-800">
+              <div className="bg-slate-900 text-white p-4.5 rounded-xl space-y-3.5 mt-4 border border-slate-800 shadow-md">
                 <div className="flex justify-between items-start">
                   <div>
-                    <h4 className="text-sm font-black">{selectedRestArea.name} ({selectedRestArea.directionName})</h4>
+                    <h4 className="text-sm font-bold">{selectedRestArea.name} ({selectedRestArea.directionName})</h4>
                     <span className="text-[10px] text-slate-400 block font-mono mt-0.5">{selectedRestArea.highwayName} &bull; Km {selectedRestArea.locationKm}</span>
                   </div>
-                  <button onClick={() => setSelectedRestArea(null)} className="text-slate-400 hover:text-white text-xs font-bold">&times; 닫기</button>
+                  <button onClick={() => setSelectedRestArea(null)} className="text-slate-400 hover:text-white text-xs font-bold cursor-pointer">&times; 닫기</button>
                 </div>
 
                 <div className="grid grid-cols-2 gap-2 text-[11px] border-t border-b border-slate-800 py-2.5 my-2">
-                  <p>휘발유: <strong className="text-blue-400">{selectedRestArea.gasStation.gasolinePrice.toLocaleString()}원</strong></p>
-                  <p>경유: <strong className="text-blue-400">{selectedRestArea.gasStation.dieselPrice.toLocaleString()}원</strong></p>
+                  <p>휘발유: <strong className="text-blue-450">{selectedRestArea.gasStation.gasolinePrice.toLocaleString()}원</strong></p>
+                  <p>경유: <strong className="text-blue-455">{selectedRestArea.gasStation.dieselPrice.toLocaleString()}원</strong></p>
                   <p className="col-span-2">전기차 충전기: <strong className="text-emerald-400">{selectedRestArea.gasStation.hasEvCharger ? `${selectedRestArea.gasStation.evChargersCount}기 설치` : '없음'}</strong></p>
                 </div>
 
                 <div className="space-y-1">
-                  <span className="text-[10px] font-black text-slate-400 block">식당가 대표 추천메뉴</span>
+                  <span className="text-[10px] font-bold text-slate-400 block">식당가 대표 추천메뉴</span>
                   <div className="flex justify-between items-center bg-slate-950 p-2.5 rounded-lg border border-slate-850">
-                    <span className="text-xs font-bold text-slate-300">{selectedRestArea.signatureMenu.name}</span>
-                    <span className="text-xs font-bold text-blue-400">{selectedRestArea.signatureMenu.price.toLocaleString()}원</span>
+                    <span className="text-xs font-bold text-slate-350">{selectedRestArea.signatureMenu.name}</span>
+                    <span className="text-xs font-bold text-blue-450">{selectedRestArea.signatureMenu.price.toLocaleString()}원</span>
                   </div>
                   <p className="text-[10px] text-slate-500">{selectedRestArea.signatureMenu.description}</p>
                 </div>
 
                 <a 
                   href={`/rest-areas/${selectedRestArea.slug}`}
-                  className="block w-full bg-blue-600 hover:bg-blue-500 text-white text-center font-bold text-xs py-2 rounded-lg transition-colors"
+                  className="block w-full bg-blue-650 hover:bg-blue-600 text-white text-center font-bold text-xs py-2.5 rounded-lg transition-colors"
                 >
                   휴게소 전체 맛집 및 편의시설 자세히보기 &rarr;
                 </a>
@@ -425,33 +437,33 @@ export default function Home() {
           </div>
 
           {/* [Pillar 3] 고속도로 주유소 전기차 충전소 */}
-          <div className="bg-white border border-slate-200 rounded-3xl p-5 shadow-2xs space-y-4">
+          <div className="bg-white border border-slate-200/60 rounded-2xl p-6 shadow-xs space-y-4">
             <div>
-              <h2 className="text-[15px] font-black text-slate-800">주유소 유가 비교 · 전기차 충전소</h2>
+              <h2 className="text-[15px] font-bold text-slate-900">주유소 유가 비교 &middot; 전기차 충전소</h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* 휘발유 최저가 랭킹 */}
-              <div className="space-y-2 bg-slate-50 p-3.5 border border-slate-100 rounded-2xl">
-                <span className="text-[10px] font-black text-slate-400 block uppercase tracking-wider">휘발유 최저가 TOP 3</span>
-                <div className="space-y-1.5">
+              <div className="space-y-2.5 bg-slate-50/50 p-4 border border-slate-100/80 rounded-xl">
+                <span className="text-[10px] font-bold text-slate-400 block uppercase tracking-wider">휘발유 최저가 TOP 3</span>
+                <div className="space-y-2">
                   {cheapestGasoline.map((g, idx) => (
                     <div key={idx} className="flex justify-between items-center text-xs font-bold text-slate-700">
                       <span>{idx+1}. {g.name}</span>
-                      <span className="font-mono text-blue-600">{g.gasStation.gasolinePrice.toLocaleString()}원</span>
+                      <span className="font-mono text-blue-650">{g.gasStation.gasolinePrice.toLocaleString()}원</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               {/* 경유 최저가 랭킹 */}
-              <div className="space-y-2 bg-slate-50 p-3.5 border border-slate-100 rounded-2xl">
-                <span className="text-[10px] font-black text-slate-400 block uppercase tracking-wider">경유 최저가 TOP 3</span>
-                <div className="space-y-1.5">
+              <div className="space-y-2.5 bg-slate-50/50 p-4 border border-slate-100/80 rounded-xl">
+                <span className="text-[10px] font-bold text-slate-400 block uppercase tracking-wider">경유 최저가 TOP 3</span>
+                <div className="space-y-2">
                   {cheapestDiesel.map((d, idx) => (
                     <div key={idx} className="flex justify-between items-center text-xs font-bold text-slate-700">
                       <span>{idx+1}. {d.name}</span>
-                      <span className="font-mono text-blue-600">{d.gasStation.dieselPrice.toLocaleString()}원</span>
+                      <span className="font-mono text-blue-650">{d.gasStation.dieselPrice.toLocaleString()}원</span>
                     </div>
                   ))}
                 </div>
@@ -459,9 +471,9 @@ export default function Home() {
             </div>
 
             {/* 전기차 충전소 순위 */}
-            <div className="p-3.5 bg-slate-900 text-white rounded-2xl space-y-2">
-              <span className="text-[10px] font-black text-slate-400 block uppercase tracking-wider">전기차(EV) 최다 충전소 보유 휴게소</span>
-              <div className="space-y-1.5">
+            <div className="p-4 bg-slate-900 text-white rounded-xl space-y-2.5">
+              <span className="text-[10px] font-bold text-slate-400 block uppercase tracking-wider">전기차(EV) 최다 충전소 보유 휴게소</span>
+              <div className="space-y-2">
                 {topEvAreas.map((e, idx) => (
                   <div key={idx} className="flex justify-between items-center text-xs font-bold">
                     <span>{idx+1}. {e.name} ({e.directionName})</span>

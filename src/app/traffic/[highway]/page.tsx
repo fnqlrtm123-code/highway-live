@@ -15,9 +15,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const rangeText = road.start && road.end ? `${road.start}~${road.end}` : '주요';
 
+  const getLineName = (name: string) => {
+    if (name.includes("고속도로")) {
+      const match = name.match(/^(.+?)고속도로(\(.+?\))?$/);
+      if (match) {
+        return `${match[1]}선${match[2] || ""}`;
+      }
+      return name.replace("고속도로", "선");
+    }
+    if (name.startsWith("국도") && name.endsWith("호선")) {
+      return name.replace("국도", "");
+    }
+    return name;
+  };
+
+  const lineName = getLineName(road.name);
+
   return {
-    title: `${road.name} 실시간 교통상황 — CCTV·정체·휴게소 목록`,
-    description: `${road.name} ${rangeText} 구간의 실시간 교통상황 확인 방법을 안내합니다. 도로공사 로드플러스, ITS CCTV 평속 분석 및 상행/하행 방향별 휴게소 목록을 정리했습니다.`,
+    title: `${road.name} [${lineName}] 교통상황 확인 실시간 CCTV·정체구간·우회도로`,
+    description: `${road.name} [${lineName}] ${rangeText} 구간의 실시간 교통상황 확인 방법을 안내합니다. 도로공사 로드플러스, ITS CCTV 평속 분석, 실시간 CCTV 영상, 정체 구간 및 우회도로 정보를 모아놓았습니다.`,
   };
 }
 
@@ -49,6 +65,21 @@ export default async function HighwayTrafficDetailPage({ params }: Props) {
   const downLabel = downDirectionAreas[0]?.directionName || '하행선 방향';
   const otherLabel = otherDirectionAreas[0]?.directionName || '양방향/기타';
 
+  const getLineName = (name: string) => {
+    if (name.includes("고속도로")) {
+      const match = name.match(/^(.+?)고속도로(\(.+?\))?$/);
+      if (match) {
+        return `${match[1]}선${match[2] || ""}`;
+      }
+      return name.replace("고속도로", "선");
+    }
+    if (name.startsWith("국도") && name.endsWith("호선")) {
+      return name.replace("국도", "");
+    }
+    return name;
+  };
+  const lineName = getLineName(road.name);
+
   return (
     <main className="mx-auto max-w-[1000px] px-5 py-10 flex-grow space-y-12 text-slate-700 leading-relaxed text-sm md:text-base font-sans">
       
@@ -69,8 +100,8 @@ export default async function HighwayTrafficDetailPage({ params }: Props) {
         <div className="inline-flex items-center gap-1.5 bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">
           {road.type === 'highway' ? '고속도로 노선' : road.type === 'urban' ? '도시고속도로' : road.type === 'national' ? '일반국도' : '대교'}
         </div>
-        <h1 className="text-3xl font-bold text-slate-900 tracking-tight leading-tight">
-          {road.name} 실시간 교통상황 — CCTV · 정체 · 휴게소 안내
+        <h1 className="text-2.5xl md:text-3.5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+          {road.name} [{lineName}] 교통상황 확인 실시간 CCTV·정체구간·우회도로
         </h1>
         <p className="text-slate-500 text-sm md:text-[15px] leading-relaxed">
           {road.description} 아래 제공되는 실시간 정보 확인 채널을 통해 구간별 주행 평속과 CCTV 라이브 모니터링 정보를 무료로 시청하고, 
@@ -123,83 +154,85 @@ export default async function HighwayTrafficDetailPage({ params }: Props) {
         </div>
       </section>
 
-      {/* 3. 방향별 휴게소 목록 (MustardData 스타일 구현!) */}
-      <section className="space-y-6">
-        <h2 className="text-lg font-semibold text-slate-900 flex items-center gap-2">
-          <span className="w-1.5 h-4 bg-blue-600 rounded-full inline-block"></span>
-          {road.name} 노선 내 쉬어갈 휴게소 목록
-        </h2>
-        <p className="text-slate-500 text-xs md:text-sm">
-          {road.name}에 위치한 총 {highwayServiceAreas.length}개소의 휴게소 목록입니다. 상행선(서울 방면 등)과 하행선(지방 방면 등) 방향에 따라 구분되어 있으므로, 이동하는 방향에 맞춰 목적 휴게소를 미리 확인해보세요.
-        </p>
+      {/* 3. 방향별 휴게소 목록 */}
+      {highwayServiceAreas.length > 0 && (
+        <section className="space-y-6">
+          <h2 className="text-lg font-semibold text-slate-900 flex items-center gap-2">
+            <span className="w-1.5 h-4 bg-blue-600 rounded-full inline-block"></span>
+            {road.name} 노선 내 쉬어갈 휴게소 목록
+          </h2>
+          <p className="text-slate-500 text-xs md:text-sm">
+            {road.name}에 위치한 총 {highwayServiceAreas.length}개소의 휴게소 목록입니다. 상행선(서울 방면 등)과 하행선(지방 방면 등) 방향에 따라 구분되어 있으므로, 이동하는 방향에 맞춰 목적 휴게소를 미리 확인해보세요.
+          </p>
 
-        <div className="space-y-8 pt-2">
-          
-          {/* 하행선 목록 */}
-          {downDirectionAreas.length > 0 && (
-            <div className="space-y-3 bg-white border border-slate-200/80 rounded-2xl p-5 md:p-6 shadow-[0_2px_12px_rgba(0,0,0,0.01)]">
-              <h3 className="font-bold text-slate-800 border-b border-slate-100 pb-2.5 flex justify-between items-center text-sm md:text-[15px]">
-                <span>{downLabel} ({downDirectionAreas.length}곳)</span>
-                <span className="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-sm">하행선</span>
-              </h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-xs">
-                {downDirectionAreas.map((area) => (
-                  <a
-                    key={area.slug}
-                    href={`/rest-areas/${area.slug}`}
-                    className="bg-slate-50 border border-slate-100/80 hover:border-blue-600 hover:bg-white hover:text-blue-600 px-3 py-2 rounded-xl text-slate-650 transition-all font-medium text-center truncate cursor-pointer"
-                  >
-                    {area.name.replace('휴게소', '')} 휴게소
-                  </a>
-                ))}
+          <div className="space-y-8 pt-2">
+            
+            {/* 하행선 목록 */}
+            {downDirectionAreas.length > 0 && (
+              <div className="space-y-3 bg-white border border-slate-200/80 rounded-2xl p-5 md:p-6 shadow-[0_2px_12px_rgba(0,0,0,0.01)]">
+                <h3 className="font-bold text-slate-800 border-b border-slate-100 pb-2.5 flex justify-between items-center text-sm md:text-[15px]">
+                  <span>{downLabel} ({downDirectionAreas.length}곳)</span>
+                  <span className="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-sm">하행선</span>
+                </h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-xs">
+                  {downDirectionAreas.map((area) => (
+                    <a
+                      key={area.slug}
+                      href={`/rest-areas/${area.slug}`}
+                      className="bg-slate-50 border border-slate-100/80 hover:border-blue-600 hover:bg-white hover:text-blue-600 px-3 py-2 rounded-xl text-slate-650 transition-all font-medium text-center truncate cursor-pointer"
+                    >
+                      {area.name.replace('휴게소', '')} 휴게소
+                    </a>
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
+            )}
 
-          {/* 상행선 목록 */}
-          {upDirectionAreas.length > 0 && (
-            <div className="space-y-3 bg-white border border-slate-200/80 rounded-2xl p-5 md:p-6 shadow-[0_2px_12px_rgba(0,0,0,0.01)]">
-              <h3 className="font-bold text-slate-800 border-b border-slate-100 pb-2.5 flex justify-between items-center text-sm md:text-[15px]">
-                <span>{upLabel} ({upDirectionAreas.length}곳)</span>
-                <span className="text-[10px] font-bold text-red-600 bg-red-50 px-2 py-0.5 rounded-sm">상행선</span>
-              </h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-xs">
-                {upDirectionAreas.map((area) => (
-                  <a
-                    key={area.slug}
-                    href={`/rest-areas/${area.slug}`}
-                    className="bg-slate-50 border border-slate-100/80 hover:border-blue-600 hover:bg-white hover:text-blue-600 px-3 py-2 rounded-xl text-slate-650 transition-all font-medium text-center truncate cursor-pointer"
-                  >
-                    {area.name.replace('휴게소', '')} 휴게소
-                  </a>
-                ))}
+            {/* 상행선 목록 */}
+            {upDirectionAreas.length > 0 && (
+              <div className="space-y-3 bg-white border border-slate-200/80 rounded-2xl p-5 md:p-6 shadow-[0_2px_12px_rgba(0,0,0,0.01)]">
+                <h3 className="font-bold text-slate-800 border-b border-slate-100 pb-2.5 flex justify-between items-center text-sm md:text-[15px]">
+                  <span>{upLabel} ({upDirectionAreas.length}곳)</span>
+                  <span className="text-[10px] font-bold text-red-600 bg-red-50 px-2 py-0.5 rounded-sm">상행선</span>
+                </h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-xs">
+                  {upDirectionAreas.map((area) => (
+                    <a
+                      key={area.slug}
+                      href={`/rest-areas/${area.slug}`}
+                      className="bg-slate-50 border border-slate-100/80 hover:border-blue-600 hover:bg-white hover:text-blue-600 px-3 py-2 rounded-xl text-slate-650 transition-all font-medium text-center truncate cursor-pointer"
+                    >
+                      {area.name.replace('휴게소', '')} 휴게소
+                    </a>
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
+            )}
 
-          {/* 양방향 및 기타 */}
-          {otherDirectionAreas.length > 0 && (
-            <div className="space-y-3 bg-white border border-slate-200/80 rounded-2xl p-5 md:p-6 shadow-[0_2px_12px_rgba(0,0,0,0.01)]">
-              <h3 className="font-bold text-slate-800 border-b border-slate-100 pb-2.5 flex justify-between items-center text-sm md:text-[15px]">
-                <span>{otherLabel} ({otherDirectionAreas.length}곳)</span>
-                <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-sm">양방향/기타</span>
-              </h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-xs">
-                {otherDirectionAreas.map((area) => (
-                  <a
-                    key={area.slug}
-                    href={`/rest-areas/${area.slug}`}
-                    className="bg-slate-50 border border-slate-100/80 hover:border-blue-600 hover:bg-white hover:text-blue-600 px-3 py-2 rounded-xl text-slate-650 transition-all font-medium text-center truncate cursor-pointer"
-                  >
-                    {area.name.replace('휴게소', '')} 휴게소
-                  </a>
-                ))}
+            {/* 양방향 및 기타 */}
+            {otherDirectionAreas.length > 0 && (
+              <div className="space-y-3 bg-white border border-slate-200/80 rounded-2xl p-5 md:p-6 shadow-[0_2px_12px_rgba(0,0,0,0.01)]">
+                <h3 className="font-bold text-slate-800 border-b border-slate-100 pb-2.5 flex justify-between items-center text-sm md:text-[15px]">
+                  <span>{otherLabel} ({otherDirectionAreas.length}곳)</span>
+                  <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-sm">양방향/기타</span>
+                </h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-xs">
+                  {otherDirectionAreas.map((area) => (
+                    <a
+                      key={area.slug}
+                      href={`/rest-areas/${area.slug}`}
+                      className="bg-slate-50 border border-slate-100/80 hover:border-blue-600 hover:bg-white hover:text-blue-600 px-3 py-2 rounded-xl text-slate-650 transition-all font-medium text-center truncate cursor-pointer"
+                    >
+                      {area.name.replace('휴게소', '')} 휴게소
+                    </a>
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
+            )}
 
-        </div>
-      </section>
+          </div>
+        </section>
+      )}
 
       {/* 4. 명절 및 주말 정체 예상 */}
       <section className="space-y-4">

@@ -45,58 +45,56 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-slate-50 text-slate-900 font-sans antialiased">
 
 
-        {/* 2. 글로벌 헤더 (Roadplus 다크 네이비 테마) */}
-        <header className="sticky top-0 z-40 w-full border-b border-slate-800 bg-slate-950 text-white">
+        {/* 2. 글로벌 헤더 (모던 화이트 글래스 테마) */}
+        <header className="sticky top-0 z-40 w-full border-b border-slate-200/60 bg-white/80 backdrop-blur-md text-slate-950">
           <div className="mx-auto flex h-16 max-w-[1240px] items-center justify-between px-4">
             {/* 로고 */}
             <a href="/" className="flex items-center gap-2.5 group">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 text-white shadow-md shadow-blue-500/20 group-hover:scale-105 transition-all duration-300">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-600 text-white shadow-sm shadow-blue-500/10 group-hover:scale-105 transition-all duration-300">
                 <svg className="h-5.5 w-5.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                 </svg>
               </div>
-              <div className="flex flex-col">
-                <span className="text-[17px] font-black tracking-tight text-white leading-none">고속도로 교통정보</span>
-              </div>
+              <span className="text-base font-extrabold tracking-tight text-slate-900 leading-none">하이웨이 라이브</span>
             </a>
 
             {/* 네비게이션 링크 */}
-            <nav className="hidden lg:flex items-center gap-1.5">
-              <a href="/traffic" className="px-4 py-2 text-[14px] font-bold rounded-lg text-slate-300 hover:text-white hover:bg-white/10 transition-all">교통상황·CCTV</a>
+            <nav className="hidden lg:flex items-center gap-1">
+              <a href="/traffic" className="px-3.5 py-2 text-[13px] font-semibold rounded-lg text-slate-650 hover:text-slate-950 hover:bg-slate-100/50 transition-all">교통상황 · CCTV</a>
               
               {/* 고속도로 휴게소 hover dropdown */}
               <div className="relative group">
-                <button className="px-4 py-2 text-[14px] font-bold rounded-lg text-slate-300 hover:text-white hover:bg-white/10 transition-all flex items-center gap-1.5 cursor-pointer">
+                <button className="px-3.5 py-2 text-[13px] font-semibold rounded-lg text-slate-650 hover:text-slate-950 hover:bg-slate-100/50 transition-all flex items-center gap-1.5 cursor-pointer">
                   고속도로 휴게소
-                  <svg className="w-3.5 h-3.5 text-slate-400 group-hover:text-white transition-colors" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                  <svg className="w-3 h-3 text-slate-400 group-hover:text-slate-950 transition-colors" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <div className="absolute top-full left-0 mt-1 w-52 rounded-xl bg-slate-900 border border-slate-800 shadow-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
-                  <a href="/rest-areas" className="block px-4 py-2.5 text-[13px] font-bold text-slate-300 hover:bg-white/10 hover:text-white transition-all">
-                    상행선·하행선 방향
+                <div className="absolute top-full left-0 mt-1 w-48 rounded-xl bg-white border border-slate-200/50 shadow-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 py-1.5">
+                  <a href="/rest-areas" className="block px-4 py-2.5 text-[12.5px] font-medium text-slate-650 hover:bg-slate-50 hover:text-slate-950 transition-all">
+                    상행선 · 하행선 방향
                   </a>
-                  <a href="/food" className="block px-4 py-2.5 text-[13px] font-bold text-slate-300 hover:bg-white/10 hover:text-white transition-all">
-                    휴게소 상행·하행 맛집
+                  <a href="/food" className="block px-4 py-2.5 text-[12.5px] font-medium text-slate-650 hover:bg-slate-50 hover:text-slate-950 transition-all">
+                    휴게소 대표 맛집
                   </a>
-                  <a href="/region" className="block px-4 py-2.5 text-[13px] font-bold text-slate-300 hover:bg-white/10 hover:text-white transition-all">
+                  <a href="/region" className="block px-4 py-2.5 text-[12.5px] font-medium text-slate-650 hover:bg-slate-50 hover:text-slate-950 transition-all">
                     지역별 휴게소 찾기
                   </a>
-                  <a href="/ranking" className="block px-4 py-2.5 text-[13px] font-bold text-slate-300 hover:bg-white/10 hover:text-white transition-all">
+                  <a href="/ranking" className="block px-4 py-2.5 text-[12.5px] font-medium text-slate-650 hover:bg-slate-50 hover:text-slate-950 transition-all">
                     휴게소 추천 랭킹
                   </a>
                 </div>
               </div>
 
-              <a href="/gas" className="px-4 py-2 text-[14px] font-bold rounded-lg text-slate-300 hover:text-white hover:bg-white/10 transition-all">주유소·전기차 충전소</a>
-              <a href="/toll" className="px-4 py-2 text-[14px] font-bold rounded-lg text-slate-300 hover:text-white hover:bg-white/10 transition-all">고속도로 통행료</a>
+              <a href="/gas" className="px-3.5 py-2 text-[13px] font-semibold rounded-lg text-slate-650 hover:text-slate-950 hover:bg-slate-100/50 transition-all">주유소 · 충전소</a>
+              <a href="/toll" className="px-3.5 py-2 text-[13px] font-semibold rounded-lg text-slate-650 hover:text-slate-950 hover:bg-slate-100/50 transition-all">고속도로 통행료</a>
             </nav>
 
             {/* 우측 유틸리티 액션 */}
             <div className="flex items-center gap-3">
               <a 
                 href="/traffic" 
-                className="flex items-center gap-1.5 rounded-lg bg-blue-600 px-4 py-2 text-xs font-black text-white hover:bg-blue-500 transition-all duration-200 shadow-sm"
+                className="flex items-center gap-1.5 rounded-xl bg-blue-600 px-3.5 py-2 text-xs font-bold text-white hover:bg-blue-500 transition-all duration-200 shadow-xs"
               >
                 <span className="relative flex h-1.5 w-1.5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
@@ -113,50 +111,48 @@ export default function RootLayout({
           {children}
         </div>
 
-        {/* 글로벌 푸터 */}
-        <footer className="w-full border-t border-slate-800 bg-slate-950 text-slate-400 py-12">
+        {/* 글로벌 푸터 (깔끔하고 정돈된 라이트 회색 테마) */}
+        <footer className="w-full border-t border-slate-200/60 bg-slate-50 text-slate-500 py-16">
           <div className="mx-auto max-w-[1240px] px-4">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
               <div className="md:col-span-6 space-y-4">
                 <div className="flex items-center gap-2">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-white font-black text-sm">R</div>
-                  <span className="text-base font-black text-white tracking-tight">고속도로 교통정보 (로드플러스 라이브)</span>
+                  <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-blue-600 text-white font-extrabold text-xs">H</div>
+                  <span className="text-[15px] font-bold text-slate-800 tracking-tight">하이웨이 라이브</span>
                 </div>
-                <p className="text-[13px] leading-relaxed text-slate-400 max-w-md">
-                  로드플러스 라이브는 한국도로공사의 공공데이터 및 실시간 API 피드를 바탕으로 전국 고속도로 소통상황, 실시간 CCTV 영상, 작업구간, 교통예보, 교통방송을 가장 정확하고 아름답게 시각화하여 제공합니다.
+                <p className="text-[12.5px] leading-relaxed text-slate-500 max-w-md font-medium font-sans">
+                  하이웨이 라이브는 국토교통부 및 한국도로공사의 공공데이터 API를 실시간으로 가공하여 전국 고속도로 소통상황, 실시간 CCTV 영상, 방향별 휴게소 정보 및 실시간 주유소 유가 비교 정보를 직관적으로 시각화하여 제공합니다.
                 </p>
-                <div className="text-[12px] text-slate-500 space-y-1 font-mono">
-                  <p>제공기관: 국토교통부, 한국도로공사 &middot; 운영관리: 로드플러스 라이브</p>
-                  <p>이메일 문의: support@roadplus-live.kr &middot; 주소: 서울특별시 서초구 반포대로 1</p>
+                <div className="text-[11.5px] text-slate-400 space-y-1 font-sans">
+                  <p>제공기관: 국토교통부, 한국도로공사 &middot; 운영: 하이웨이 라이브</p>
+                  <p>이메일: support@highway-live.co.kr</p>
                 </div>
               </div>
 
-              <div className="md:col-span-3 space-y-3">
-                <h4 className="text-sm font-bold text-white uppercase tracking-wider">주요 서비스</h4>
-                <ul className="space-y-2 text-[13px]">
-                  <li><a href="/" className="hover:text-white transition-colors">실시간 교통지도</a></li>
-                  <li><a href="/rest-areas" className="hover:text-white transition-colors">전체 휴게소 목록</a></li>
-                  <li><a href="/region" className="hover:text-white transition-colors font-bold text-blue-400">지역별 휴게소 찾기</a></li>
-                  <li><a href="/ranking" className="hover:text-white transition-colors font-bold text-blue-400">휴게소 추천 랭킹</a></li>
-                  <li><a href="/highways" className="hover:text-white transition-colors">고속도로 노선안내</a></li>
+              <div className="md:col-span-3 space-y-3.5">
+                <h4 className="text-xs font-bold text-slate-800 uppercase tracking-wider">주요 서비스</h4>
+                <ul className="space-y-2 text-[12.5px] font-medium text-slate-500">
+                  <li><a href="/traffic" className="hover:text-slate-900 transition-colors">실시간 교통지도 &amp; CCTV</a></li>
+                  <li><a href="/rest-areas" className="hover:text-slate-900 transition-colors">전체 휴게소 목록</a></li>
+                  <li><a href="/region" className="hover:text-slate-900 transition-colors">지역별 휴게소 찾기</a></li>
+                  <li><a href="/ranking" className="hover:text-slate-900 transition-colors">휴게소 추천 랭킹</a></li>
                 </ul>
               </div>
 
-              <div className="md:col-span-3 space-y-3">
-                <h4 className="text-sm font-bold text-white uppercase tracking-wider">고객 정책</h4>
-                <ul className="space-y-2 text-[13px]">
-                  <li><a href="/notice" className="hover:text-white transition-colors font-bold text-slate-300">공지사항 및 FAQ</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">개인정보처리방침</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">이용약관</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">사이트맵</a></li>
+              <div className="md:col-span-3 space-y-3.5">
+                <h4 className="text-xs font-bold text-slate-800 uppercase tracking-wider font-sans">고객 정책</h4>
+                <ul className="space-y-2 text-[12.5px] font-medium text-slate-500">
+                  <li><a href="/notice" className="hover:text-slate-900 transition-colors">공지사항 및 FAQ</a></li>
+                  <li><a href="#" className="hover:text-slate-900 transition-colors">개인정보처리방침</a></li>
+                  <li><a href="#" className="hover:text-slate-900 transition-colors">이용약관</a></li>
                 </ul>
               </div>
             </div>
 
-            <div className="mt-10 border-t border-slate-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-[12.5px] text-slate-500">
-              <p>&copy; {new Date().getFullYear()} 로드플러스 라이브. All rights reserved.</p>
-              <p className="max-w-md text-[11px] text-right md:text-right text-slate-600 leading-tight">
-                본 서비스에 등록된 교통정보 및 CCTV 영상 정보는 공공 API 데이터를 실시간으로 수집·가공한 것이며, 실제 도로 현장 상황 및 도로공사 통제 상황에 따라 오차가 있을 수 있으므로 안전 운전에 참고하시기 바랍니다.
+            <div className="mt-12 border-t border-slate-200/50 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[11.5px] text-slate-400">
+              <p>&copy; {new Date().getFullYear()} 하이웨이 라이브. All rights reserved.</p>
+              <p className="max-w-md text-center md:text-right text-[10.5px] text-slate-450 leading-relaxed font-sans">
+                본 서비스에 등록된 교통 및 유가 정보는 공공 API 데이터를 바탕으로 실시간으로 가공된 정보이며 현장 상황과 일부 다를 수 있으므로 안전 운행의 참고용으로 활용하시기 바랍니다.
               </p>
             </div>
           </div>
