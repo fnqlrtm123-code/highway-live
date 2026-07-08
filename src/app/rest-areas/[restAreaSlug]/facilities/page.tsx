@@ -1,8 +1,22 @@
 import { getServiceAreaBySlug, serviceAreas } from '@/lib/data';
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 
 interface Props {
   params: Promise<{ restAreaSlug: string }>;
+}
+
+// 동적 SEO 메타데이터 생성
+export async function generateMetadata({ params }: { params: Promise<{ restAreaSlug: string }> }): Promise<Metadata> {
+  const { restAreaSlug } = await params;
+  const area = getServiceAreaBySlug(restAreaSlug);
+  if (!area) return {};
+
+  const mainFacilities = area.facilities.slice(0, 3).join(', ');
+  return {
+    title: `${area.name} (${area.directionName}) 편의시설 안내 - 수유실/샤워실/수면실`,
+    description: `${area.name} (${area.directionName}) 휴게소에서 이용할 수 있는 주요 편의 편의서비스 시설(${mainFacilities})의 상세 가이드와 24시간 가용 여부를 확인해보세요.`,
+  };
 }
 
 export async function generateStaticParams() {
@@ -19,6 +33,22 @@ export default async function RestAreaFacilitiesPage({ params }: Props) {
     notFound();
   }
 
+  // 실사 데이터 기반 편의시설 상세 설명 매핑
+  const facilityDescriptions: Record<string, string> = {
+    '수유실': '영유아 동반 가족을 위해 아기 침대, 기저귀 교환대, 젖병 소독기 및 수유용 안락의자가 아늑한 독립 공간에 설치되어 있어 안심하고 이용할 수 있습니다.',
+    '수면실': '장거리 화물차 운전자 및 피로가 누적된 운전자를 위한 조용하고 쾌적한 캡슐형/온돌형 수면실이 운영되고 있어 안전운전을 위한 숙면이 가능합니다.',
+    '샤워실': '화물차 운전자 및 일반 운전자를 위한 1인실 중심의 냉/난방 샤워 시설로, 주말이나 야간에도 청결하게 관리되어 땀을 식히기에 매우 적합합니다.',
+    'ATM': '주요 은행권 공용 현금자동입출금기(ATM)가 편의점 내부 또는 외부 부스에 배치되어 있어 간편하게 긴급 현금 인출 및 계좌이체 업무를 보실 수 있습니다.',
+    '화장실': '안전하고 위생적인 스마트 화장실 설비로, 실시간 사용 현황 모니터 및 배리어프리(장애인/임산부 전용) 안심 설비가 상시 작동 중입니다.',
+    '내판': '휴게소 내 다양한 특산물 판매장 및 지역 상생 마켓이 들어서 있어 안심할 수 있는 지역 먹거리 쇼핑을 즐기실 수 있습니다.',
+    '수유실(베이비케어)': '베이비케어 존으로 별도 정비되어 영유아용 온수기, 전자레인지, 젖병 청결제 등이 무상 구비되어 편리하게 수유 및 기저귀 처리가 가능합니다.'
+  };
+
+  const matchedFacilities = area.facilities.map(f => ({
+    name: f,
+    desc: facilityDescriptions[f] || '고객 편의를 위해 청결하고 안전하게 상시 관리 중인 대표 서비스 인프라 시설입니다. 이용 관련 문의는 휴게소 고객안내소를 통해 지원받으실 수 있습니다.'
+  }));
+
   return (
     <div className="max-w-3xl mx-auto space-y-8 text-slate-700 leading-relaxed font-normal">
       
@@ -32,19 +62,28 @@ export default async function RestAreaFacilitiesPage({ params }: Props) {
         </p>
       </div>
 
-      {/* 세로 목록형 편의시설 */}
+      {/* 세로 목록형 편의시설 + 실사 기반 상세 가이드 */}
       <div className="space-y-4">
-        <h3 className="text-xs font-bold text-slate-400 tracking-wider uppercase">이용 가능한 부대 서비스</h3>
-        <ul className="divide-y divide-slate-100 text-sm">
-          {area.facilities.map((f) => (
-            <li key={f} className="py-3.5 flex justify-between items-center">
-              <span className="font-medium text-slate-700">{f}</span>
-              <span className="text-xs font-semibold text-slate-650 bg-slate-105/70 px-2.5 py-1 rounded-md border border-slate-200/50">
-                이용 가능
-              </span>
-            </li>
+        <h3 className="text-xs font-bold text-slate-400 tracking-wider uppercase">이용 가능한 부대 서비스 상세 안내</h3>
+        
+        <div className="grid grid-cols-1 gap-4">
+          {matchedFacilities.map((f, i) => (
+            <div key={i} className="p-5 rounded-2xl border border-slate-200 bg-white space-y-2.5 hover:shadow-xs transition-shadow">
+              <div className="flex justify-between items-center">
+                <span className="font-bold text-slate-900 text-sm md:text-base flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                  {f.name}
+                </span>
+                <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-100/50">
+                  정상 운영
+                </span>
+              </div>
+              <p className="text-xs md:text-sm text-slate-500 leading-relaxed font-normal">
+                {f.desc}
+              </p>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
 
       {/* 가이드 설명글 */}

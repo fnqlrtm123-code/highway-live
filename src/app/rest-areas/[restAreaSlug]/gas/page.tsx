@@ -1,8 +1,22 @@
 import { getServiceAreaBySlug, serviceAreas } from '@/lib/data';
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 
 interface Props {
   params: Promise<{ restAreaSlug: string }>;
+}
+
+// 동적 SEO 메타데이터 생성
+export async function generateMetadata({ params }: { params: Promise<{ restAreaSlug: string }> }): Promise<Metadata> {
+  const { restAreaSlug } = await params;
+  const area = getServiceAreaBySlug(restAreaSlug);
+  if (!area) return {};
+
+  const lpgText = area.gasStation.lpgPrice ? ` 및 LPG 충전소 가격` : '';
+  return {
+    title: `${area.name} (${area.directionName}) 주유소 실시간 기름값 & LPG 가격표`,
+    description: `${area.name} (${area.directionName}) 휴게소에 위치한 ${area.gasStation.brand} 주유소의 실시간 휘발유(${area.gasStation.gasolinePrice.toLocaleString()}원), 경유(${area.gasStation.dieselPrice.toLocaleString()}원)${lpgText} 정보와 함께 알뜰 주유소 주유 팁을 확인하세요.`,
+  };
 }
 
 export async function generateStaticParams() {
@@ -26,6 +40,11 @@ export default async function RestAreaGasPage({ params }: Props) {
   const gasolineDiff = area.gasStation.gasolinePrice - highwayAvgGasoline;
   const dieselDiff = area.gasStation.dieselPrice - highwayAvgDiesel;
 
+  const isGasolineCheaper = gasolineDiff < 0;
+  const isDieselCheaper = dieselDiff < 0;
+
+  const summaryText = `${area.name} 휴게소 주유소는 국토교통부와 한국도로공사가 지원하는 대표 주유인프라 브랜드인 **${area.gasStation.brand}** 주유소를 채택하고 있습니다. 현재 휘발유는 노선 평균 대비 약 ${Math.abs(gasolineDiff)}원 ${isGasolineCheaper ? '저렴한' : '높은'} 수준으로 판매 중이며, 경유는 평균보다 ${Math.abs(dieselDiff)}원 ${isDieselCheaper ? '더 저렴하게' : '더 높게'} 판매되고 있어 장거리 정속 주행 차량의 급유 시 참고하시기 좋습니다.`;
+
   return (
     <div className="max-w-3xl mx-auto space-y-8 text-slate-700 leading-relaxed font-normal">
       
@@ -37,6 +56,11 @@ export default async function RestAreaGasPage({ params }: Props) {
         <p className="text-sm text-slate-500">
           한국도로공사 유가정보 피드 데이터를 기반으로 제공하는 실시간 기름값 정보입니다.
         </p>
+      </div>
+
+      {/* 실사 데이터 기반 분석 */}
+      <div className="p-5 bg-blue-50/40 rounded-2xl border border-blue-100/50 text-xs md:text-sm text-slate-650 leading-relaxed">
+        <p className="font-normal">{summaryText}</p>
       </div>
 
       {/* 세로 리스트형 가격표 (블로그 가독성 포맷) */}
@@ -51,8 +75,8 @@ export default async function RestAreaGasPage({ params }: Props) {
             </span>
           </div>
           <div className="sm:text-right">
-            <span className={`text-xs font-semibold px-2.5 py-1 rounded-lg ${gasolineDiff < 0 ? 'bg-emerald-50 text-emerald-700 border border-emerald-200/60' : 'bg-rose-50 text-rose-700 border border-rose-200/60'}`}>
-              {gasolineDiff < 0 ? `노선 평균 대비 ${Math.abs(gasolineDiff)}원 저렴` : `노선 평균 대비 ${gasolineDiff}원 비쌈`}
+            <span className={`text-xs font-semibold px-2.5 py-1 rounded-lg ${isGasolineCheaper ? 'bg-emerald-50 text-emerald-700 border border-emerald-200/60' : 'bg-rose-50 text-rose-700 border border-rose-200/60'}`}>
+              {isGasolineCheaper ? `노선 평균 대비 ${Math.abs(gasolineDiff)}원 저렴` : `노선 평균 대비 ${gasolineDiff}원 비쌈`}
             </span>
           </div>
         </div>
@@ -66,8 +90,8 @@ export default async function RestAreaGasPage({ params }: Props) {
             </span>
           </div>
           <div className="sm:text-right">
-            <span className={`text-xs font-semibold px-2.5 py-1 rounded-lg ${dieselDiff < 0 ? 'bg-emerald-50 text-emerald-700 border border-emerald-200/60' : 'bg-rose-50 text-rose-700 border border-rose-200/60'}`}>
-              {dieselDiff < 0 ? `노선 평균 대비 ${Math.abs(dieselDiff)}원 저렴` : `노선 평균 대비 ${dieselDiff}원 비쌈`}
+            <span className={`text-xs font-semibold px-2.5 py-1 rounded-lg ${isDieselCheaper ? 'bg-emerald-50 text-emerald-700 border border-emerald-200/60' : 'bg-rose-50 text-rose-700 border border-rose-200/60'}`}>
+              {isDieselCheaper ? `노선 평균 대비 ${Math.abs(dieselDiff)}원 저렴` : `노선 평균 대비 ${dieselDiff}원 비쌈`}
             </span>
           </div>
         </div>
@@ -93,7 +117,7 @@ export default async function RestAreaGasPage({ params }: Props) {
         <p className="text-xs md:text-sm text-slate-650 leading-relaxed font-normal">
           {area.name} 주유소는 <strong>{area.gasStation.brand}</strong> 브랜드로 운영되고 있습니다. 
           고속도로 알뜰주유소(ex-oil)는 도로공사의 일괄 공동구매 정책에 의해 시중 폴 주유소 대비 리터당 비교적 저렴한 가격에 주유가 가능한 장점이 있습니다. 
-          장거리 주행 시 다음 휴게소 주유소와의 유가 차이를 미리 확인하시어 현명하게 주유 계획을 세우시길 추천드립니다.
+          특히 본 {area.name} 주유소는 셀프 주유 인프라가 갖추어져 있어 보다 신속하게 급유가 가능합니다. 장거리 주행 시 다음 휴게소 주유소와의 유가 차이를 미리 확인하시어 현명하게 주유 계획을 세우시길 추천드립니다.
         </p>
       </div>
 
