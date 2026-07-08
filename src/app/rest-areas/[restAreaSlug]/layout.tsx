@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import AdSense from '@/components/AdSense';
 import type { Metadata } from 'next';
 import Breadcrumb from '@/components/Breadcrumb';
-import { getRestAreaThumbnail } from '@/lib/imageHelper';
+import { getRestAreaImage } from '@/lib/imageHelper';
 
 interface Props {
   children: React.ReactNode;
@@ -61,7 +61,7 @@ export default async function RestAreaLayout({ children, params }: Props) {
       {/* 휴게소 전경 배너 이미지 */}
       <div className="relative h-64 md:h-80 w-full overflow-hidden bg-slate-100 rounded-2xl mb-8 border border-slate-200 shadow-sm">
         <img 
-          src={getRestAreaThumbnail(area.highwaySlug)} 
+          src={getRestAreaImage(area.slug, area.highwaySlug)} 
           alt={`${area.name} 전경`} 
           className="w-full h-full object-cover"
         />

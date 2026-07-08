@@ -6,7 +6,7 @@ import {
 import { notFound } from 'next/navigation';
 import AdSense from '@/components/AdSense';
 import type { Metadata } from 'next';
-import { getRestAreaThumbnail } from '@/lib/imageHelper';
+import { getRestAreaImage } from '@/lib/imageHelper';
 
 interface Props {
   params: Promise<{ highway: string }>;
@@ -125,7 +125,7 @@ export default async function HighwayDetailPage({ params }: Props) {
               {/* Thumbnail Image */}
               <div className="relative h-40 w-full overflow-hidden bg-slate-100">
                 <img 
-                  src={getRestAreaThumbnail(area.highwaySlug)} 
+                  src={getRestAreaImage(area.slug, area.highwaySlug)} 
                   alt={`${area.name} 전경`} 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   loading="lazy"

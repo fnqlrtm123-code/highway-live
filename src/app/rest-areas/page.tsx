@@ -5,7 +5,7 @@ import { serviceAreas, highways } from '@/lib/data';
 import AdSense from '@/components/AdSense';
 import HubHeader from '@/components/HubHeader';
 import Breadcrumb from '@/components/Breadcrumb';
-import { getRestAreaThumbnail } from '@/lib/imageHelper';
+import { getRestAreaImage } from '@/lib/imageHelper';
 
 export default function RestAreasPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -194,7 +194,7 @@ export default function RestAreasPage() {
                     {/* Thumbnail Image */}
                     <div className="relative h-44 w-full overflow-hidden bg-slate-100">
                       <img 
-                        src={getRestAreaThumbnail(s.highwaySlug)} 
+                        src={getRestAreaImage(s.slug, s.highwaySlug)} 
                         alt={`${s.name} 전경`} 
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                         loading="lazy"
