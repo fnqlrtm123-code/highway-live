@@ -37,7 +37,7 @@ export default async function RestAreaFoodPage({ params }: Props) {
         <div className="flex items-center gap-2">
           <span className="text-base font-bold text-slate-900">{area.signatureMenu.name}</span>
           {area.signatureMenu.isExFood && (
-            <span className="text-[9px] font-bold bg-amber-500 text-white px-2 py-0.5 rounded">EX-FOOD 인증</span>
+            <span className="text-[9px] font-bold bg-amber-500 text-white px-2 py-0.5 rounded">대표 음식</span>
           )}
         </div>
         <p className="text-xs md:text-sm text-slate-600 leading-relaxed font-normal">

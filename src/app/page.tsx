@@ -103,7 +103,7 @@ export default function Home() {
               고속도로 실시간 편의정보 포털
             </h1>
             <p className="text-xs md:text-[13.5px] text-slate-500 max-w-xl mx-auto leading-relaxed font-medium">
-              지금 막히는 노선 상황, 방향별 휴게소 맛집(EX-FOOD), 알뜰주유소 가격 및 전기차 충전기 수량을 한눈에 쉽게 확인해 드립니다.
+              지금 막히는 노선 상황, 방향별 휴게소 맛집(대표 음식), 알뜰주유소 가격 및 전기차 충전기 수량을 한눈에 쉽게 확인해 드립니다.
             </p>
           </div>
 

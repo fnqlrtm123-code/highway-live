@@ -18,12 +18,12 @@ export const metadata: Metadata = {
     default: "하이웨이 라이브 - 전국 고속도로 실시간 CCTV · 휴게소 맛집 · 주유소 가격",
     template: "%s | 하이웨이 라이브"
   },
-  description: "전국 고속도로의 실시간 교통상황 CCTV 영상, 노선별 상·하행 휴게소 대표 맛집(EX-FOOD), 알뜰주유소 실시간 유가 정보 및 전기차 충전기 현황을 한눈에 제공하는 필수 교통 가이드입니다.",
+  description: "전국 고속도로의 실시간 교통상황 CCTV 영상, 노선별 상·하행 휴게소 대표 음식, 알뜰주유소 실시간 유가 정보 및 전기차 충전기 현황을 한눈에 제공하는 필수 교통 가이드입니다.",
   keywords: ["고속도로 cctv", "실시간 교통상황", "휴게소 맛집", "휴게소 주유소 기름값", "전국 고속도로 지도", "상행 하행 맛집", "전기차 충전소", "알뜰주유소 최저가"],
   metadataBase: new URL("https://highway.mrbrisbaneinsouth.kr"), // Placeholder production domain
   openGraph: {
     title: "하이웨이 라이브 - 실시간 고속도로 CCTV & 휴게소 맛집 정보",
-    description: "전국 고속도로의 실시간 교통상황 CCTV 영상, 노선별 상·하행 휴게소 대표 맛집(EX-FOOD), 알뜰주유소 실시간 유가 정보 및 전기차 충전기 현황을 제공합니다.",
+    description: "전국 고속도로의 실시간 교통상황 CCTV 영상, 노선별 상·하행 휴게소 대표 음식, 알뜰주유소 실시간 유가 정보 및 전기차 충전기 현황을 제공합니다.",
     url: "https://highway.mrbrisbaneinsouth.kr",
     siteName: "하이웨이 라이브",
     locale: "ko_KR",

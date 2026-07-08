@@ -71,7 +71,7 @@ export default async function RestAreaLayout({ children, params }: Props) {
         
         <p className="text-slate-600 text-sm md:text-[15px] leading-relaxed max-w-4xl font-normal">
           {area.highwayName} 노선에 있는 {area.name}({area.directionName}) 휴게소의 실시간 편의 정보 포털 가이드입니다. 
-          도로공사 지정 대표 맛집 메뉴(EX-FOOD)부터 알뜰주유소 실시간 기름값 가격표, 전기차 충전 설비 및 다양한 고객 편의시설 정보를 모아서 자세하게 전해드립니다.
+          도로공사 지정 대표 음식부터 알뜰주유소 실시간 기름값 가격표, 전기차 충전 설비 및 다양한 고객 편의시설 정보를 모아서 자세하게 전해드립니다.
         </p>
       </div>
 

@@ -26,7 +26,7 @@ export default function HubHeader() {
     {
       id: 'rest-food',
       parentId: 'rest-areas',
-      name: '휴게소 맛집 (EX-FOOD)',
+      name: '휴게소 맛집 (대표 음식)',
       href: '/food',
       badge: '시그니처'
     },

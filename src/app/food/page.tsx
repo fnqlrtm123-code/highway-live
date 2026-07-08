@@ -5,11 +5,11 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: '고속도로 휴게소 맛집 및 인기메뉴 랭킹 - 실시간 대표 음식 가이드',
-  description: '전국 고속도로 휴게소별 대표 메뉴(ex-food), 맛집 가격표, 아이와 먹기 좋은 영양 간식 목록을 모아 최적의 휴식 식사 계획을 지원합니다.',
+  description: '전국 고속도로 휴게소별 대표 음식, 맛집 가격표, 아이와 먹기 좋은 영양 간식 목록을 모아 최적의 휴식 식사 계획을 지원합니다.',
 };
 
 export default function FoodIndexPage() {
-  // EX-FOOD 인증이나 평점이 좋은 메뉴들만 따로 요약 필터링
+  // 대표 음식이나 평점이 좋은 메뉴들만 따로 요약 필터링
   const popularMenus = serviceAreas.map(s => ({
     restAreaName: s.name,
     restAreaSlug: s.slug,
@@ -32,7 +32,7 @@ export default function FoodIndexPage() {
         </div>
         <h1 className="text-2.5xl md:text-3.5xl font-extrabold text-slate-900 tracking-tight">고속도로 휴게소 대표 맛집 메뉴</h1>
         <p className="text-slate-500 text-xs md:text-[13.5px] max-w-2xl leading-relaxed font-medium">
-          한국도로공사에서 공식 인증한 ex-food 대표 메뉴부터 휴게소마다 소문난 실시간 시그니처 밥상 가격표를 확인하세요.
+          한국도로공사에서 공식 인증한 대표 음식부터 휴게소마다 소문난 실시간 시그니처 밥상 가격표를 확인하세요.
         </p>
       </div>
 
@@ -62,7 +62,7 @@ export default function FoodIndexPage() {
                 <span className="font-mono font-extrabold text-slate-900 block text-xs md:text-[13px]">{item.menu.price.toLocaleString()}원</span>
                 {item.menu.isExFood && (
                   <span className="inline-block bg-amber-50 text-amber-800 text-[9px] font-bold px-2 py-0.5 rounded-md">
-                    ex-food 인증
+                    대표 음식
                   </span>
                 )}
               </div>
@@ -71,7 +71,7 @@ export default function FoodIndexPage() {
         </div>
       </section>
 
-    </main>
+      </main>
     </>
   );
 }

@@ -72,7 +72,7 @@ export default function RestAreasPage() {
             전국 고속도로 휴게소 맛집 &amp; 편의시설 가이드
           </h1>
           <p className="text-slate-500 text-xs md:text-[13.5px] leading-relaxed max-w-3xl font-medium">
-            전국 고속도로 노선별 상·하행 휴게소의 시그니처 대표 음식(EX-FOOD) 정보, 수유실/샤워실/수면실 등의 특수 편의시설 설치 현황 및 브랜드 주유소 정보를 직관적인 검색 필터로 빠르고 신속하게 안내합니다.
+            전국 고속도로 노선별 상·하행 휴게소의 대표 음식 정보, 수유실/샤워실/수면실 등의 특수 편의시설 설치 현황 및 브랜드 주유소 정보를 직관적인 검색 필터로 빠르고 신속하게 안내합니다.
           </p>
         </div>
 
@@ -238,9 +238,9 @@ export default function RestAreasPage() {
           
           <div className="space-y-5 text-xs md:text-sm text-slate-500 leading-relaxed font-semibold">
             <div className="space-y-1">
-              <h4 className="font-bold text-slate-800 text-xs md:text-[13px]">Q. 한국도로공사의 EX-FOOD 인증 메뉴는 무엇인가요?</h4>
+              <h4 className="font-bold text-slate-800 text-xs md:text-[13px]">Q. 한국도로공사가 지정한 휴게소 대표 음식은 무엇인가요?</h4>
               <p className="text-[12.5px] font-semibold text-slate-500 leading-relaxed">
-                EX-FOOD는 매년 한국도로공사가 전국 휴게소 음식의 품질과 가격 조화를 평가하여 엄선한 대표 음식 브랜드입니다. 외부 요리 전문가와 고객들의 실시간 블라인드 평가를 종합하여 공인 평가단의 엄밀한 위생 및 맛 검증을 통과한 고품질 요리입니다.
+                대표 음식은 한국도로공사가 전국 휴게소 음식의 품질과 가격 조화를 평가하여 엄선한 공식 대표 메뉴입니다. 외부 요리 전문가와 고객들의 실시간 블라인드 평가를 종합하여 공인 평가단의 엄밀한 위생 및 맛 검증을 통과한 맛있는 요리입니다.
               </p>
             </div>
 
