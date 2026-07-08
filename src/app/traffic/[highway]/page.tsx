@@ -133,8 +133,7 @@ export default async function HighwayTrafficDetailPage({ params }: Props) {
           {road.name} 교통상황
         </h1>
         <p className="text-slate-500 text-sm md:text-[15px] leading-relaxed">
-          {road.description} 아래 제공되는 실시간 정보 확인 채널을 통해 구간별 주행 평속과 CCTV 라이브 모니터링 정보를 무료로 시청하고, 
-          정체나 기상 악화 시 쉬어갈 수 있는 방향별 휴게소를 확인해보세요.
+          {road.description} 아래 제공되는 실시간 교통정보 확인 채널을 통해 노선의 구간별 주행 속도와 실시간 CCTV 모니터링 정보를 조회할 수 있습니다. 또한, 정체 발생 시 이용 가능한 방향별 휴게소 정보를 확인해 보시기 바랍니다.
         </p>
       </div>
 
@@ -149,7 +148,7 @@ export default async function HighwayTrafficDetailPage({ params }: Props) {
         </h2>
         
         <p className="text-slate-500 text-xs md:text-sm">
-          {road.verificationMethod} 주행 중에 교통 흐름이 마비될 경우, 아래에 정리된 휴게소 목록을 참조하여 졸음 예방 및 휴식을 권장합니다.
+          {road.verificationMethod} 주행 중 교통량이 급증하거나 정체가 길어질 시에는 아래에 정리된 노선 내 휴게소를 방문하여 충분한 휴식을 취하시기 바랍니다.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">
