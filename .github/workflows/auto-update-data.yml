@@ -1,0 +1,39 @@
+name: Auto Update Highway Data
+
+on:
+  schedule:
+    # 매일 한국 시간 오전 2시 (UTC 17:00)에 실행
+    - cron: '0 17 * * *'
+  workflow_dispatch: # GitHub 웹 UI에서 수동 실행 허용
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # repo에 커밋 및 푸시하기 위한 쓰기 권한 설정
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run Data Collection Script
+        run: node scripts/generate-data-ts.js
+
+      - name: Commit and Push if Data Changed
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/lib/data.ts
+          
+          # 변경사항이 있는지 확인 후 커밋
+          if ! git diff --cached --quiet; then
+            git commit -m "data: automatically update highway rest areas and gas prices from Public OpenAPI"
+            git push origin main
+          else
+            echo "No changes in highway rest area data."
+          fi

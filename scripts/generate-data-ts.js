@@ -544,7 +544,7 @@ async function generateData() {
     const matchedBrands = rawBrands.filter(b => r.codes.includes(b.stdRestCd));
     const rawBrandStores = matchedBrands.map(b => ({
       name: b.brdName,
-      description: b.brdDesc ? b.brdDesc.trim().replace(/\s+/g, ' ') : '입점 브랜드 매장입니다.',
+      description: b.brdDesc ? b.brdDesc.trim().replace(/\s+/g, ' ').replace(/\*\*/g, '') : '입점 브랜드 매장입니다.',
       hours: b.stime && b.etime ? `${b.stime} ~ ${b.etime}` : '정보 없음'
     }));
 

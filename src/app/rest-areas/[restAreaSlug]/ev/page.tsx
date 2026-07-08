@@ -40,7 +40,7 @@ export default async function RestAreaEvPage({ params }: Props) {
   const evCount = area.gasStation.evChargersCount;
 
   const evText = hasEv
-    ? `현재 ${area.name} 휴게소는 친환경 전기차 운전자를 위해 총 **${evCount}대**의 전기차 급속/초급속 충전기를 안정적으로 운영하고 있습니다. 주로 환경부 및 주요 충전 서비스사와 제휴하여 100kW급 급속 충전기와 300kW 이상의 초급속 충전 시설을 배치하여 단시간 내 효율적인 배터리 보충을 지원합니다.`
+    ? `현재 ${area.name} 휴게소는 친환경 전기차 운전자를 위해 총 ${evCount}대의 전기차 급속/초급속 충전기를 안정적으로 운영하고 있습니다. 주로 환경부 및 주요 충전 서비스사와 제휴하여 100kW급 급속 충전기와 300kW 이상의 초급속 충전 시설을 배치하여 단시간 내 효율적인 배터리 보충을 지원합니다.`
     : `현재 ${area.name} 휴게소에는 공식 전기차 충전 인프라가 배정되어 있지 않습니다. 전기차 소유주께서는 인근의 다른 거점 휴게소 전기차 충전소를 사전에 확인해 주시기 바랍니다.`;
 
   const hydrogenText = hasHydrogen

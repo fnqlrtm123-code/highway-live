@@ -43,7 +43,7 @@ export default async function RestAreaGasPage({ params }: Props) {
   const isGasolineCheaper = gasolineDiff < 0;
   const isDieselCheaper = dieselDiff < 0;
 
-  const summaryText = `${area.name} 휴게소 주유소는 국토교통부와 한국도로공사가 지원하는 대표 주유인프라 브랜드인 **${area.gasStation.brand}** 주유소를 채택하고 있습니다. 현재 휘발유는 노선 평균 대비 약 ${Math.abs(gasolineDiff)}원 ${isGasolineCheaper ? '저렴한' : '높은'} 수준으로 판매 중이며, 경유는 평균보다 ${Math.abs(dieselDiff)}원 ${isDieselCheaper ? '더 저렴하게' : '더 높게'} 판매되고 있어 장거리 정속 주행 차량의 급유 시 참고하시기 좋습니다.`;
+  const summaryText = `${area.name} 휴게소 주유소는 국토교통부와 한국도로공사가 지원하는 대표 주유인프라 브랜드인 ${area.gasStation.brand} 주유소를 채택하고 있습니다. 현재 휘발유는 노선 평균 대비 약 ${Math.abs(gasolineDiff)}원 ${isGasolineCheaper ? '저렴한' : '높은'} 수준으로 판매 중이며, 경유는 평균보다 ${Math.abs(dieselDiff)}원 ${isDieselCheaper ? '더 저렴하게' : '더 높게'} 판매되고 있어 장거리 정속 주행 차량의 급유 시 참고하시기 좋습니다.`;
 
   return (
     <div className="max-w-3xl mx-auto space-y-8 text-slate-700 leading-relaxed font-normal">
