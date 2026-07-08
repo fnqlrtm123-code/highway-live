@@ -45,41 +45,43 @@ export default async function RestAreaLayout({ children, params }: Props) {
   ];
 
   return (
-    <main className="mx-auto max-w-[1240px] px-4 py-12 flex-grow">
+    <main className="mx-auto max-w-[1200px] px-5 py-10 flex-grow">
       
       {/* 뒤로가기 링크 */}
-      <a href="/" className="inline-flex items-center gap-1 text-xs font-bold text-slate-500 hover:text-slate-900 transition-colors mb-6">
+      <a href="/" className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-900 transition-colors mb-6">
         &larr; 고속도로 상황판 홈으로 돌아가기
       </a>
 
       {/* 상단 애드센스 광고 */}
       <AdSense slot="4455667788" />
 
-      {/* 휴게소 상세 헤더 - 블로그 아티클 헤더 스타일 */}
-      <div className="border-b border-slate-200 pb-8 mb-8 space-y-4">
-        <div className="flex flex-wrap items-center gap-2 text-xs font-bold text-slate-500">
-          <span className="bg-slate-100 text-slate-700 px-2.5 py-1 rounded">휴게소 안내</span>
+      {/* 휴게소 상세 헤더 - 깔끔하고 읽기 편한 아티클 스타일 */}
+      <div className="border-b border-slate-200 pb-6 mb-8 space-y-3">
+        <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-slate-500">
+          <span className="bg-slate-100 text-slate-650 px-2.5 py-1 rounded-md border border-slate-200">휴게소 안내</span>
           <span>&middot;</span>
           <span>{area.highwayName}</span>
           <span>&middot;</span>
           <span>{area.locationKm}km 지점</span>
         </div>
-        <h1 className="text-3xl md:text-4xl font-black tracking-tight text-slate-950">
-          {area.name} <span className="text-slate-500 font-extrabold text-2xl md:text-3xl">({area.directionName})</span>
+        
+        <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">
+          {area.name} <span className="text-slate-400 font-semibold text-xl md:text-2xl">({area.directionName})</span>
         </h1>
-        <p className="text-slate-600 text-sm md:text-base leading-relaxed max-w-4xl">
+        
+        <p className="text-slate-600 text-sm md:text-[15px] leading-relaxed max-w-4xl font-normal">
           {area.highwayName} 노선에 있는 {area.name}({area.directionName}) 휴게소의 실시간 편의 정보 포털 가이드입니다. 
           도로공사 지정 대표 맛집 메뉴(EX-FOOD)부터 알뜰주유소 실시간 기름값 가격표, 전기차 충전 설비 및 다양한 고객 편의시설 정보를 모아서 자세하게 전해드립니다.
         </p>
       </div>
 
       {/* 탭 네비게이션 */}
-      <div className="flex border-b border-slate-200 mb-8 overflow-x-auto gap-2 scrollbar-none">
+      <div className="flex border-b border-slate-200 mb-8 overflow-x-auto gap-1 scrollbar-none">
         {tabs.map((tab) => (
           <a
             key={tab.name}
             href={tab.href}
-            className="px-5 py-3 text-[14px] font-bold text-slate-600 hover:text-slate-950 border-b-2 border-transparent hover:border-slate-950 whitespace-nowrap transition-all"
+            className="px-5 py-3 text-[13.5px] font-semibold text-slate-500 hover:text-slate-900 border-b-2 border-transparent hover:border-slate-800 whitespace-nowrap transition-all"
           >
             {tab.name}
           </a>
