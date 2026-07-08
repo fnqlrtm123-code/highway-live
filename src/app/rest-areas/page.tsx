@@ -15,15 +15,44 @@ export default function RestAreasPage() {
       const matchesSearch = s.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                             s.highwayName.toLowerCase().includes(searchQuery.toLowerCase()) ||
                             s.signatureMenu.name.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesHighway = selectedHighway === 'all' || s.highwayName.includes(selectedHighway);
+      const matchesHighway = selectedHighway === 'all' || s.highwaySlug === selectedHighway;
       return matchesSearch && matchesHighway;
     });
   }, [searchQuery, selectedHighway]);
 
-  // 고속도로 리스트 정렬 및 전체 추가
-  const highwayFilterList = useMemo(() => {
-    const list = highways.map(h => ({ slug: h.slug, name: h.name.replace('고속도로', '') }));
-    return [{ slug: 'all', name: '전체 노선' }, ...list];
+  // 고속도로 리스트 그룹화
+  const groupedHighways = useMemo(() => {
+    const mainSlugs = ['gyeongbu', 'seohaean', 'yeongdong', 'namhae', 'jungbu', 'honam', 'jungang', 'jungbunaeryuk', 'seoul-yangyang'];
+    const branchAndCircularSlugs = [
+      'capital-circular-1', 'capital-circular-2', 'busan-outer-circular', 
+      'daegu-outer-circular', 'daejeon-southern-circular', 'namhae-branch-2', 
+      'honam-branch', 'jungbunaeryuk-branch', 'jungang-branch'
+    ];
+
+    const mainList: { slug: string; name: string }[] = [];
+    const branchList: { slug: string; name: string }[] = [];
+    const generalList: { slug: string; name: string }[] = [];
+
+    highways.forEach(h => {
+      const item = { slug: h.slug, name: h.name.replace('고속도로', '') };
+      if (mainSlugs.includes(h.slug)) {
+        mainList.push(item);
+      } else if (branchAndCircularSlugs.includes(h.slug)) {
+        branchList.push(item);
+      } else {
+        generalList.push(item);
+      }
+    });
+
+    mainList.sort((a, b) => a.name.localeCompare(b.name, 'ko'));
+    branchList.sort((a, b) => a.name.localeCompare(b.name, 'ko'));
+    generalList.sort((a, b) => a.name.localeCompare(b.name, 'ko'));
+
+    return [
+      { key: 'main', label: '주요 간선 노선', items: mainList },
+      { key: 'branch', label: '순환선 및 지선', items: branchList },
+      { key: 'general', label: '일반 노선', items: generalList }
+    ];
   }, []);
 
   return (
@@ -51,8 +80,8 @@ export default function RestAreasPage() {
         <AdSense slot="4455667788" />
 
         {/* 실시간 필터 & 검색 대시보드 */}
-        <section className="bg-white border border-slate-200/60 rounded-2xl p-6 shadow-xs space-y-6">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <section className="bg-white border border-slate-200/60 rounded-2xl p-6 md:p-8 shadow-xs space-y-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b pb-4 border-slate-100">
             <h2 className="text-[15px] font-bold text-slate-900 flex items-center gap-2">
               <span className="w-1 h-3.5 bg-blue-600 rounded-full inline-block"></span>
               조건별 휴게소 간편 검색
@@ -73,24 +102,47 @@ export default function RestAreasPage() {
             </div>
           </div>
 
-          {/* 노선 빠른 선택 칩 그룹 */}
-          <div className="flex flex-wrap gap-1.5 py-1 max-h-36 overflow-y-auto pr-1">
-            {highwayFilterList.map((h) => {
-              const isSelected = selectedHighway === h.slug || (h.slug !== 'all' && selectedHighway.includes(h.slug));
-              return (
-                <button
-                  key={h.slug}
-                  onClick={() => setSelectedHighway(h.slug === 'all' ? 'all' : h.slug)}
-                  className={`px-3 py-1.5 rounded-xl text-[10.5px] font-bold transition-all cursor-pointer ${
-                    isSelected
-                      ? 'bg-blue-600 border-blue-600 text-white shadow-xs shadow-blue-500/10'
-                      : 'bg-slate-50 hover:bg-slate-100 border border-slate-200/50 text-slate-500'
-                  }`}
-                >
-                  {h.name}
-                </button>
-              );
-            })}
+          {/* 노선 빠른 선택 칩 그룹 (가독성 좋게 분류) */}
+          <div className="space-y-5">
+            <div className="flex items-center gap-3">
+              <span className="text-[11px] font-extrabold text-slate-400 uppercase tracking-wider min-w-[70px]">전체 선택</span>
+              <button
+                onClick={() => setSelectedHighway('all')}
+                className={`px-3.5 py-1.5 rounded-xl text-[10.5px] font-bold transition-all cursor-pointer ${
+                  selectedHighway === 'all'
+                    ? 'bg-blue-600 border-blue-600 text-white shadow-xs shadow-blue-500/10'
+                    : 'bg-slate-50 hover:bg-slate-100 border border-slate-200/50 text-slate-500'
+                }`}
+              >
+                전체 노선
+              </button>
+            </div>
+
+            {groupedHighways.map((group) => (
+              <div key={group.key} className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-3 border-t border-slate-100/70 pt-3">
+                <span className="text-[11px] font-extrabold text-slate-400 uppercase tracking-wider min-w-[70px] pt-1.5">
+                  {group.label}
+                </span>
+                <div className="flex flex-wrap gap-1.5">
+                  {group.items.map((h) => {
+                    const isSelected = selectedHighway === h.slug;
+                    return (
+                      <button
+                        key={h.slug}
+                        onClick={() => setSelectedHighway(h.slug)}
+                        className={`px-3 py-1.5 rounded-xl text-[10.5px] font-bold transition-all cursor-pointer ${
+                          isSelected
+                            ? 'bg-blue-600 border-blue-600 text-white shadow-xs shadow-blue-500/10'
+                            : 'bg-slate-50 hover:bg-slate-100 border border-slate-200/50 text-slate-500'
+                        }`}
+                      >
+                        {h.name}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
