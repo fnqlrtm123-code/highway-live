@@ -129,7 +129,7 @@ export default function Home() {
                   <div className="p-3 border-b border-slate-100">
                     <span className="text-[10px] font-bold text-slate-400 px-2 block mb-1">고속도로 노선 바로가기</span>
                     {filteredHighways.map(h => (
-                      <a key={h.slug} href={`/traffic/${h.slug}`} className="block px-2 py-1.5 rounded-lg hover:bg-slate-50 text-xs font-bold text-slate-800">
+                      <a key={h.slug} href={`/traffic/${h.name.replace(/[^a-zA-Z0-9가-힣]+/g, '-').replace(/^-|-$/g, '')}`} className="block px-2 py-1.5 rounded-lg hover:bg-slate-50 text-xs font-bold text-slate-800">
                         {h.name} (소통상황 & CCTV)
                       </a>
                     ))}

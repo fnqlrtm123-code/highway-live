@@ -281,81 +281,10 @@ export function getRoadList(): RoadProfile[] {
     let matchedHighway = highways.find(h => h.name === name);
     const detailsHighway = matchedHighway || highways.find(h => name.includes(h.name));
     
-    let slug = '';
-    if (matchedHighway) {
-      slug = matchedHighway.slug;
-    } else if (type === 'highway') {
-      const partialMatch = [...highways]
-        .sort((a, b) => b.name.length - a.name.length)
-        .find(h => name.includes(h.name));
-
-      if (partialMatch) {
-        const extra = name.replace(partialMatch.name, '').replace(/[^a-zA-Z0-9가-힣]+/g, '-').replace(/^-|-$/g, '');
-        if (extra) {
-          let extraSlug = extra
-            .replace(/부산/g, 'busan')
-            .replace(/대구/g, 'daegu')
-            .replace(/삼락/g, 'samrak')
-            .replace(/대동/g, 'daedong')
-            .replace(/춘천/g, 'chuncheon')
-            .replace(/금호/g, 'geumho')
-            .replace(/양산/g, 'yangsan')
-            .replace(/순천/g, 'suncheon')
-            .replace(/영암/g, 'yeongam')
-            .replace(/지선/g, 'branch')
-            .replace(/학산/g, 'haksan')
-            .replace(/해룡/g, 'haeryong')
-            .replace(/신항/g, 'sinhang')
-            .replace(/초정/g, 'chojung')
-            .replace(/냉정/g, 'naengjeong')
-            .replace(/사상/g, 'sasang')
-            .replace(/산인/g, 'sanin')
-            .replace(/창원/g, 'changwon')
-            .replace(/연수/g, 'yeonsu')
-            .replace(/송도/g, 'songdo')
-            .replace(/안양/g, 'anyang')
-            .replace(/성남/g, 'seongnam')
-            .replace(/인천대교/g, 'incheon-bridge')
-            .replace(/공항/g, 'airport')
-            .replace(/신월/g, 'sinwol')
-            .replace(/인천/g, 'incheon')
-            .replace(/옥포/g, 'okpo')
-            .replace(/대덕/g, 'daedeok')
-            .replace(/고창/g, 'gochang')
-            .replace(/담양/g, 'damyang')
-            .replace(/동탄/g, 'dongtan')
-            .replace(/봉담/g, 'bongdam')
-            .replace(/송산/g, 'songsan')
-            .replace(/양주/g, 'yangju')
-            .replace(/소흘/g, 'soheul')
-            .replace(/김포/g, 'gimpo')
-            .replace(/파주/g, 'paju')
-            .replace(/포천/g, 'pocheon')
-            .replace(/화도/g, 'hwado')
-            .replace(/양평/g, 'yangpyeong')
-            .replace(/화성/g, 'hwaseong')
-            .replace(/광주/g, 'gwangju')
-            .replace(/옥산/g, 'oksan')
-            .replace(/오창/g, 'ochang')
-            .replace(/평택/g, 'pyeongtaek')
-            .replace(/부여/g, 'buyeo')
-            .replace(/안중/g, 'anjung')
-            .toLowerCase();
-          
-          extraSlug = extraSlug.replace(/[^a-z0-9\-가-힣]+/g, '').replace(/^-|-$/g, '').replace(/-+/g, '-');
-          slug = `${partialMatch.slug}-${extraSlug}`;
-        } else {
-          slug = partialMatch.slug;
-        }
-      }
-    }
-
-    if (!slug) {
-      slug = name
-        .replace(/[^a-zA-Z0-9가-힣]+/g, '-')
-        .replace(/^-|-$/g, '')
-        .toLowerCase();
-    }
+    // Always use Korean for slug
+    const slug = name
+      .replace(/[^a-zA-Z0-9가-힣]+/g, '-')
+      .replace(/^-|-$/g, '');
 
     let length = detailsHighway?.length || '';
     let start = detailsHighway?.start || '';
@@ -758,6 +687,13 @@ export function getRoadBySlug(slug: string): RoadProfile | undefined {
   let found = roads.find(r => r.slug === slug || r.slug === decodedSlug);
   if (found) return found;
 
-  found = roads.find(r => r.name === decodedSlug || r.name.replace(/[^a-zA-Z0-9가-힣]/g, '-').toLowerCase() === slug);
+  // Support fallback for old English slugs
+  const matchingHighway = highways.find(h => h.slug === slug || h.slug === decodedSlug);
+  if (matchingHighway) {
+    const foundByName = roads.find(r => r.name === matchingHighway.name);
+    if (foundByName) return foundByName;
+  }
+
+  found = roads.find(r => r.name === decodedSlug || r.name.replace(/[^a-zA-Z0-9가-힣]+/g, '-').replace(/^-|-$/g, '').toLowerCase() === slug);
   return found;
 }

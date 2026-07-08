@@ -101,7 +101,7 @@ export default async function HolidayDetailPage({ params }: Props) {
           {highways.map(h => (
             <a 
               key={h.slug}
-              href={`/traffic/${h.slug}`}
+              href={`/traffic/${h.name.replace(/[^a-zA-Z0-9가-힣]+/g, '-').replace(/^-|-$/g, '')}`}
               className="p-5 border border-slate-100 rounded-xl bg-slate-50 hover:bg-slate-50/50 hover:border-blue-600 transition-all text-left flex justify-between items-center text-xs"
             >
               <div>

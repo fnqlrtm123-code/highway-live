@@ -56,7 +56,7 @@ export default function HighwaysIndexPage() {
                 노선 상세정보
               </a>
               <a 
-                href={`/traffic/${h.slug}`} 
+                href={`/traffic/${h.name.replace(/[^a-zA-Z0-9가-힣]+/g, '-').replace(/^-|-$/g, '')}`} 
                 className="bg-blue-50 hover:bg-blue-100 text-blue-600 text-center py-2 px-4 rounded-lg font-bold transition-colors"
               >
                 교통상황
