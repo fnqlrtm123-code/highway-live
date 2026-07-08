@@ -30,13 +30,25 @@ export default function TrafficIndexPage() {
           대한민국 전국 주요 고속도로, 도시고속도로(간선도로), 국도 및 주요 한강/지방 대교의 실시간 교통 흐름을 분류별로 확인해 보세요. 
           각 노선을 선택하시면 실시간 CCTV 화면 스트리밍, 병목 정체 예상 구간 및 지체 시 빠른 국도 우회 경로 가이드를 제공합니다.
         </p>
+
+        {/* 구글맵 캡쳐 실시간 교통상황 지도 썸네일 (SEO 최적화) */}
+        <div className="pt-2">
+          <img 
+            src="/images/traffic-map.png" 
+            alt="전국 실시간 교통상황 지도" 
+            className="w-full max-w-[800px] h-auto rounded-xl border border-slate-200 shadow-sm"
+          />
+          <span className="text-slate-400 text-xs mt-1.5 block">
+            ※ 실시간 교통 정보망 모니터링 지도 (지체 상황 수집 범례 안내)
+          </span>
+        </div>
       </div>
 
       {/* 애드센스 */}
       <AdSense slot="3344551122" />
 
       {/* 2. 교통상황 핵심 조회 채널 소개 */}
-      <section className="bg-white border border-slate-200/60 rounded-2xl p-6 md:p-8 shadow-xs space-y-6">
+      <section className="space-y-6">
         <h2 className="text-[15px] font-bold text-slate-900 flex items-center gap-2">
           <span className="w-1 h-3.5 bg-blue-600 rounded-full inline-block"></span>
           실시간 고속도로 상황 확인 채널 TOP 5
@@ -44,54 +56,54 @@ export default function TrafficIndexPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
           
-          <div className="space-y-2 border border-slate-100 bg-slate-50/50 rounded-xl p-5 hover:bg-slate-55 transition-colors">
+          <div className="space-y-2">
             <h3 className="font-bold text-slate-900 flex items-center gap-2 text-xs md:text-[13.5px]">
               <span className="bg-blue-650 text-white text-[10px] w-5 h-5 rounded-lg flex items-center justify-center font-bold">1</span>
               로드플러스 (한국도로공사)
             </h3>
-            <p className="text-[12px] text-slate-500 leading-relaxed">
+            <p className="text-[12px] text-slate-550 leading-relaxed">
               한국도로공사가 직접 운영하는 공식 사이트(<a href="http://www.roadplus.co.kr" target="_blank" rel="noopener noreferrer" className="text-blue-650 font-semibold hover:underline">www.roadplus.co.kr</a>)입니다. 
               전국 고속도로의 현시간 소통 상황을 반영한 종합 교통지도, 구간별 실시간 CCTV 영상, 교통 속보 및 예보 방송을 제공합니다.
             </p>
           </div>
 
-          <div className="space-y-2 border border-slate-100 bg-slate-50/50 rounded-xl p-5 hover:bg-slate-55 transition-colors">
+          <div className="space-y-2">
             <h3 className="font-bold text-slate-900 flex items-center gap-2 text-xs md:text-[13.5px]">
               <span className="bg-blue-650 text-white text-[10px] w-5 h-5 rounded-lg flex items-center justify-center font-bold">2</span>
               국가교통정보센터 (ITS)
             </h3>
-            <p className="text-[12px] text-slate-500 leading-relaxed">
+            <p className="text-[12px] text-slate-550 leading-relaxed">
               국토교통부가 직접 구축하여 운영하는 공공 포털(<a href="http://www.its.go.kr" target="_blank" rel="noopener noreferrer" className="text-blue-650 font-semibold hover:underline">www.its.go.kr</a>)입니다. 
               고속도로뿐만 아니라 국도의 실시간 평균 주행 속도 정보와 전국 노면 상황 CCTV 영상을 무료로 광범위하게 수집할 수 있습니다.
             </p>
           </div>
 
-          <div className="space-y-2 border border-slate-100 bg-slate-50/50 rounded-xl p-5 hover:bg-slate-55 transition-colors">
+          <div className="space-y-2">
             <h3 className="font-bold text-slate-900 flex items-center gap-2 text-xs md:text-[13.5px]">
               <span className="bg-blue-650 text-white text-[10px] w-5 h-5 rounded-lg flex items-center justify-center font-bold">3</span>
               고속도로교통정보 앱
             </h3>
-            <p className="text-[12px] text-slate-500 leading-relaxed">
+            <p className="text-[12px] text-slate-550 leading-relaxed">
               한국도로공사 공식 모바일 어플리케이션입니다. 스마트폰 화면에서 노선별 실시간 지도, 돌발 사고 현황, 공사 통제 구간 및 졸음쉼터/임시주유소/충전소 위치 정보를 편리하게 제공합니다.
             </p>
           </div>
 
-          <div className="space-y-2 border border-slate-100 bg-slate-50/50 rounded-xl p-5 hover:bg-slate-55 transition-colors">
+          <div className="space-y-2">
             <h3 className="font-bold text-slate-900 flex items-center gap-2 text-xs md:text-[13.5px]">
               <span className="bg-blue-650 text-white text-[10px] w-5 h-5 rounded-lg flex items-center justify-center font-bold">4</span>
               네이버 및 카카오 지도
             </h3>
-            <p className="text-[12px] text-slate-500 leading-relaxed">
+            <p className="text-[12px] text-slate-550 leading-relaxed">
               국내 대표 지도 플랫폼의 레이어 필터에서 &apos;CCTV&apos; 및 &apos;교통상황&apos;을 활성화하면, 노선 위에 초록/노랑/빨강 색상으로 직관적인 주행 평속 정체 현황을 관측하고 주요 교차로 영상을 즉시 팝업해 볼 수 있습니다.
             </p>
           </div>
 
-          <div className="space-y-2 border border-slate-100 bg-slate-50/50 rounded-xl p-5 hover:bg-slate-55 transition-colors md:col-span-2">
+          <div className="space-y-2 md:col-span-2">
             <h3 className="font-bold text-slate-900 flex items-center gap-2 text-xs md:text-[13.5px]">
               <span className="bg-blue-650 text-white text-[10px] w-5 h-5 rounded-lg flex items-center justify-center font-bold">5</span>
               도로공사 콜센터 (1588-2504)
             </h3>
-            <p className="text-[12px] text-slate-500 leading-relaxed">
+            <p className="text-[12px] text-slate-550 leading-relaxed">
               인터넷이나 스마트폰 조작이 어려운 주행 환경에서는 도로공사 대표 번호로 즉시 전화해 상담원을 통해 주요 체증 노선의 소통 상황과 정체 시 우회할 국도 경로를 간편하게 음성 안내를 받을 수 있습니다.
             </p>
           </div>
@@ -105,7 +117,7 @@ export default function TrafficIndexPage() {
           <span className="w-1 h-3.5 bg-blue-600 rounded-full inline-block"></span>
           명절 &middot; 휴가 연휴 고속도로 정체 예상 시간대
         </h2>
-        <div className="bg-slate-50 border border-slate-200/60 rounded-2xl p-5 md:p-6 text-slate-650 space-y-3.5">
+        <div className="text-slate-650 space-y-3.5">
           <p className="text-[12.5px] leading-relaxed">
             설날이나 추석 명절 연휴 및 여름철 극성수기 휴가철에는 전국 도로 통행량이 평소 대비 2배 이상 급증하며 특정 시간대에 강한 정체 현상이 누적됩니다.
           </p>

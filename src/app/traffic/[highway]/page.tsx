@@ -135,13 +135,25 @@ export default async function HighwayTrafficDetailPage({ params }: Props) {
         <p className="text-slate-500 text-sm md:text-[15px] leading-relaxed">
           {road.description} 실시간 교통정보 확인 채널을 통해 노선의 구간별 주행 속도와 CCTV 모니터링 화면을 직접 조회할 수 있으며, 정체나 돌발 상황 발생 시 이용 가능한 노선 내 방향별 휴게소 정보를 함께 파악할 수 있습니다.
         </p>
+
+        {/* 구글맵 캡쳐 실시간 교통상황 지도 썸네일 (SEO 최적화) */}
+        <div className="pt-2">
+          <img 
+            src="/images/traffic-map.png" 
+            alt={`${road.name} 실시간 교통상황 지도`} 
+            className="w-full max-w-[700px] h-auto rounded-xl border border-slate-200 shadow-sm"
+          />
+          <span className="text-slate-400 text-xs mt-1.5 block">
+            ※ 국토교통부 및 주요 지도 API 연계 전국 실시간 도로 교통망 소통 상황
+          </span>
+        </div>
       </div>
 
       {/* 애드센스 */}
       <AdSense slot="4455662211" />
 
       {/* 2. 실시간 상황 조회 방법 */}
-      <section className="bg-white border border-slate-200/80 rounded-2xl p-6 md:p-8 shadow-[0_2px_12px_rgba(0,0,0,0.02)] space-y-6">
+      <section className="space-y-6">
         <h2 className="text-lg font-semibold text-slate-900 flex items-center gap-2">
           <span className="w-1.5 h-4 bg-blue-600 rounded-full inline-block"></span>
           {road.name} 교통상황 CCTV 확인 방법
@@ -151,31 +163,31 @@ export default async function HighwayTrafficDetailPage({ params }: Props) {
           {road.verificationMethod} 주행 중 교통량이 급증하거나 정체가 길어질 시에는 아래에 정리된 노선 내 휴게소를 방문하여 충분한 휴식을 취하시기 바랍니다.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">
-          <div className="border border-slate-200 rounded-xl p-4 bg-white">
-            <span className="font-bold text-slate-800 block mb-1">로드플러스 (도로공사)</span>
-            <span className="text-slate-500 text-xs leading-normal block">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs md:text-sm">
+          <div className="space-y-1">
+            <span className="font-bold text-slate-800 block">로드플러스 (도로공사)</span>
+            <span className="text-slate-500 leading-relaxed block">
               공식 웹사이트에서 경부선, 영동선 등 고속도로 전 구간의 교통지도 및 2분 간격의 CCTV 상황을 실시간 조회할 수 있습니다.
             </span>
           </div>
 
-          <div className="border border-slate-200 rounded-xl p-4 bg-white">
-            <span className="font-bold text-slate-800 block mb-1">국가교통정보센터 (ITS)</span>
-            <span className="text-slate-500 text-xs leading-normal block">
+          <div className="space-y-1">
+            <span className="font-bold text-slate-800 block">국가교통정보센터 (ITS)</span>
+            <span className="text-slate-550 leading-relaxed block">
               국토교통부가 수집하는 전국 주요 국도 및 우회 도로의 관제 CCTV 카메라를 통해 강우, 안개, 노면 미끄러짐을 확인 가능합니다.
             </span>
           </div>
 
-          <div className="border border-slate-200 rounded-xl p-4 bg-white">
-            <span className="font-bold text-slate-800 block mb-1">지도 앱 CCTV 레이어</span>
-            <span className="text-slate-500 text-xs leading-normal block">
+          <div className="space-y-1">
+            <span className="font-bold text-slate-800 block">지도 앱 CCTV 레이어</span>
+            <span className="text-slate-550 leading-relaxed block">
               스마트폰 네이버 지도 또는 카카오 맵의 우측 레이어 탭에서 CCTV 기능을 활성화하면, 노선 내에 있는 가상 감시 카메라를 터치해 직접 확인하실 수 있습니다.
             </span>
           </div>
 
-          <div className="border border-slate-200 rounded-xl p-4 bg-white">
-            <span className="font-bold text-slate-800 block mb-1">고속도로 교통앱 연동</span>
-            <span className="text-slate-500 text-xs leading-normal block">
+          <div className="space-y-1">
+            <span className="font-bold text-slate-800 block">고속도로 교통앱 연동</span>
+            <span className="text-slate-550 leading-relaxed block">
               전방 돌발적인 연쇄 추돌 사고, 도로 공사 통제 구간 및 갓길 가변 차로 사용 상황을 푸시 알림으로 신속하게 접수할 수 있습니다.
             </span>
           </div>
@@ -197,7 +209,7 @@ export default async function HighwayTrafficDetailPage({ params }: Props) {
             
             {/* 하행선 목록 */}
             {downDirectionAreas.length > 0 && (
-              <div className="space-y-3 bg-white border border-slate-200/80 rounded-2xl p-5 md:p-6 shadow-[0_2px_12px_rgba(0,0,0,0.01)]">
+              <div className="space-y-3">
                 <h3 className="font-bold text-slate-800 border-b border-slate-100 pb-2.5 flex justify-between items-center text-sm md:text-[15px]">
                   <span>{downLabel} ({downDirectionAreas.length}곳)</span>
                   <span className="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-sm">하행선</span>
@@ -218,7 +230,7 @@ export default async function HighwayTrafficDetailPage({ params }: Props) {
 
             {/* 상행선 목록 */}
             {upDirectionAreas.length > 0 && (
-              <div className="space-y-3 bg-white border border-slate-200/80 rounded-2xl p-5 md:p-6 shadow-[0_2px_12px_rgba(0,0,0,0.01)]">
+              <div className="space-y-3">
                 <h3 className="font-bold text-slate-800 border-b border-slate-100 pb-2.5 flex justify-between items-center text-sm md:text-[15px]">
                   <span>{upLabel} ({upDirectionAreas.length}곳)</span>
                   <span className="text-[10px] font-bold text-red-600 bg-red-50 px-2 py-0.5 rounded-sm">상행선</span>
@@ -239,7 +251,7 @@ export default async function HighwayTrafficDetailPage({ params }: Props) {
 
             {/* 양방향 및 기타 */}
             {otherDirectionAreas.length > 0 && (
-              <div className="space-y-3 bg-white border border-slate-200/80 rounded-2xl p-5 md:p-6 shadow-[0_2px_12px_rgba(0,0,0,0.01)]">
+              <div className="space-y-3">
                 <h3 className="font-bold text-slate-800 border-b border-slate-100 pb-2.5 flex justify-between items-center text-sm md:text-[15px]">
                   <span>{otherLabel} ({otherDirectionAreas.length}곳)</span>
                   <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-sm">양방향/기타</span>
@@ -268,7 +280,7 @@ export default async function HighwayTrafficDetailPage({ params }: Props) {
           <span className="w-1.5 h-4 bg-blue-600 rounded-full inline-block"></span>
           명절 · 주말 정체 예상 분석
         </h2>
-        <div className="bg-white border border-slate-200 rounded-xl p-5 md:p-6 text-slate-650 text-xs md:text-sm space-y-3">
+        <div className="text-slate-650 text-xs md:text-sm space-y-3">
           <p>
             {road.name} 노선은 귀성/귀경철 유동량 쏠림 현상이 가장 빠르게 유발되는 대표적인 간선 구간입니다.
           </p>
