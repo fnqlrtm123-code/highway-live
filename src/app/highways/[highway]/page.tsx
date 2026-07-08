@@ -6,7 +6,6 @@ import {
 import { notFound } from 'next/navigation';
 import AdSense from '@/components/AdSense';
 import type { Metadata } from 'next';
-import { getRestAreaImage } from '@/lib/imageHelper';
 
 interface Props {
   params: Promise<{ highway: string }>;
@@ -122,29 +121,19 @@ export default async function HighwayDetailPage({ params }: Props) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {serviceAreas.map((area) => (
             <div key={area.slug} className="overflow-hidden bg-white border border-slate-200 flex flex-col justify-between shadow-2xs hover:border-slate-350 transition-all rounded-2xl">
-              {/* Thumbnail Image */}
-              <div className="relative h-40 w-full overflow-hidden bg-slate-100">
-                <img 
-                  src={getRestAreaImage(area.slug, area.highwaySlug)} 
-                  alt={`${area.name} 전경`} 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-                <span className={`absolute top-3 right-3 text-[9px] font-bold px-2 py-0.5 rounded-md border shadow-xs ${
-                  area.direction === '상행' ? 'bg-blue-600 text-white border-blue-500' :
-                  area.direction === '하행' ? 'bg-rose-600 text-white border-rose-500' : 'bg-slate-600 text-white border-slate-500'
-                }`}>
-                  {area.directionName}
-                </span>
-              </div>
-
               <div className="p-5 flex-grow flex flex-col justify-between space-y-4">
                 <div className="space-y-2">
-                  <div className="flex justify-between items-start">
+                  <div className="flex justify-between items-start gap-3">
                     <div>
                       <h3 className="text-base font-black text-slate-800">{area.name}</h3>
-                      <span className="text-[10px] font-bold text-slate-500">{area.locationKm}km 지점 &middot; {area.directionName}</span>
+                      <span className="text-[10px] font-bold text-slate-500">{area.locationKm}km 지점</span>
                     </div>
+                    <span className={`text-[9px] font-bold px-2 py-0.5 rounded-md border shadow-xs shrink-0 ${
+                      area.direction === '상행' ? 'bg-blue-600 text-white border-blue-500' :
+                      area.direction === '하행' ? 'bg-rose-600 text-white border-rose-500' : 'bg-slate-600 text-white border-slate-500'
+                    }`}>
+                      {area.directionName}
+                    </span>
                   </div>
 
                   <div className="flex flex-wrap gap-1">

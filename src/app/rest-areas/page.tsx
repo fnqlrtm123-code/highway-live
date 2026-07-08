@@ -5,7 +5,6 @@ import { serviceAreas, highways } from '@/lib/data';
 import AdSense from '@/components/AdSense';
 import HubHeader from '@/components/HubHeader';
 import Breadcrumb from '@/components/Breadcrumb';
-import { getRestAreaImage } from '@/lib/imageHelper';
 
 export default function RestAreasPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -191,30 +190,22 @@ export default function RestAreasPage() {
                     key={s.slug} 
                     className="overflow-hidden border border-slate-200/60 bg-white hover:border-blue-500 hover:shadow-md transition-all duration-300 rounded-2xl flex flex-col justify-between"
                   >
-                    {/* Thumbnail Image */}
-                    <div className="relative h-44 w-full overflow-hidden bg-slate-100">
-                      <img 
-                        src={getRestAreaImage(s.slug, s.highwaySlug)} 
-                        alt={`${s.name} 전경`} 
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                        loading="lazy"
-                      />
-                      <span className={`absolute top-3 right-3 text-[9px] font-bold px-2 py-0.5 rounded-md border shadow-xs ${
-                        s.direction === '상행' ? 'bg-blue-600 text-white border-blue-500' :
-                        s.direction === '하행' ? 'bg-rose-600 text-white border-rose-500' : 'bg-slate-600 text-white border-slate-500'
-                      }`}>
-                        {s.directionName}
-                      </span>
-                    </div>
-
                     <div className="p-5 flex-grow flex flex-col justify-between space-y-4">
                       <div className="space-y-3">
                         {/* Header */}
-                        <div>
-                          <h4 className="text-sm md:text-[15px] font-extrabold text-slate-900 tracking-tight">{s.name}</h4>
-                          <p className="text-[10px] text-slate-400 mt-1 font-semibold">
-                            {s.highwayName} &middot; {s.locationKm}km 지점
-                          </p>
+                        <div className="flex items-center justify-between gap-3">
+                          <div>
+                            <h4 className="text-sm md:text-[15px] font-extrabold text-slate-900 tracking-tight">{s.name}</h4>
+                            <p className="text-[10px] text-slate-400 mt-1 font-semibold">
+                              {s.highwayName} &middot; {s.locationKm}km 지점
+                            </p>
+                          </div>
+                          <span className={`text-[9px] font-bold px-2 py-0.5 rounded-md border shadow-xs shrink-0 ${
+                            s.direction === '상행' ? 'bg-blue-600 text-white border-blue-500' :
+                            s.direction === '하행' ? 'bg-rose-600 text-white border-rose-500' : 'bg-slate-600 text-white border-slate-500'
+                          }`}>
+                            {s.directionName}
+                          </span>
                         </div>
 
                         {/* 휴게소 자체 요약 정보 */}

@@ -31,6 +31,23 @@ function cleanName(name) {
   return name.replace(/\(.*\)/, '').replace(/휴게소$/, '').replace(/주유소$/, '').trim();
 }
 
+function getRestAreaThumbnail(highwaySlug) {
+  switch (highwaySlug) {
+    case 'gyeongbu':
+      return '/images/thumbnails/gyeongbu.jpg';
+    case 'seohaean':
+      return '/images/thumbnails/seohaean.jpg';
+    case 'yeongdong':
+      return '/images/thumbnails/yeongdong.jpg';
+    case 'namhae':
+      return '/images/thumbnails/gangbyeon.jpg';
+    case 'jungbu':
+      return '/images/thumbnails/olympic.jpg';
+    default:
+      return '/images/thumbnails/default.jpg';
+  }
+}
+
 // 1. Fetch from curStateStation (Gas Stations API)
 async function fetchGasStations() {
   console.log('Fetching gas stations from curStateStation API...');
@@ -573,9 +590,22 @@ async function generateData() {
       locationKm = 10 + (idx * 7) % 350;
     }
 
+    // Check if a specific photo exists in public/images/rest-areas/
+    const imageExtensions = ['jpg', 'jpeg', 'png', 'webp'];
+    let image = getRestAreaThumbnail(highwaySlug);
+    
+    for (const ext of imageExtensions) {
+      const imgPath = path.join(__dirname, '..', 'public', 'images', 'rest-areas', `${slug}.${ext}`);
+      if (fs.existsSync(imgPath)) {
+        image = `/images/rest-areas/${slug}.${ext}`;
+        break;
+      }
+    }
+
     serviceAreasList.push({
       slug,
       name: `${r.cleanedName}휴게소`,
+      image,
       direction: r.direction,
       directionName: r.directionName,
       highwaySlug,
@@ -605,6 +635,7 @@ export interface Highway {
 export interface ServiceArea {
   slug: string;
   name: string;
+  image: string;
   direction: "상행" | "하행" | "양방향";
   directionName: string;
   highwaySlug: string;
