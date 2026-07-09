@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react';
 import AdSense from '@/components/AdSense';
 import HubHeader from '@/components/HubHeader';
+import { TOLLS_DATA } from '@/lib/tolls-data';
 
 // 한국 주요 도시 정보 및 좌표 (Haversine 공식 적용용)
 interface City {
@@ -74,15 +75,30 @@ export default function TollIndexPage() {
   // 통행료 요금 계산 결과 도출
   const calculationResult = useMemo(() => {
     if (startCity === endCity) {
-      return { dist: 0, time: '0분', toll: 0, hasError: true };
+      return { dist: 0, time: '0분', toll: 0, lightCarToll: 0, isOfficial: false, hasError: true };
     }
 
     const routeKey = `${startCity}-${endCity}`;
-    const known = KNOWN_ROUTES[routeKey];
+    const officialRoute = TOLLS_DATA[routeKey];
     const selectedClass = VEHICLE_CLASSES.find(c => c.id === vehicleId) || VEHICLE_CLASSES[0];
 
+    // 1. 공공데이터 API 수집 정보가 매칭되는 경우 우선 사용
+    if (officialRoute) {
+      const toll = officialRoute.tolls[vehicleId] || officialRoute.tolls['1'];
+      const lightCarToll = officialRoute.tolls['6'] || Math.round(toll * 0.5);
+      return {
+        dist: officialRoute.dist,
+        time: officialRoute.time,
+        toll: toll,
+        lightCarToll: lightCarToll,
+        isOfficial: true,
+        hasError: false
+      };
+    }
+
+    // 2. 고정된 노선 사전값(KNOWN_ROUTES) 확인
+    const known = KNOWN_ROUTES[routeKey];
     if (known) {
-      // 1종 기본 요금에서 차종 가중치 계산
       const baseToll = known.toll;
       let calculatedToll = baseToll;
       if (vehicleId !== '1') {
@@ -92,11 +108,13 @@ export default function TollIndexPage() {
         dist: known.dist,
         time: known.time,
         toll: calculatedToll,
+        lightCarToll: Math.round((calculatedToll * 0.5) / 100) * 100,
+        isOfficial: false,
         hasError: false
       };
     }
 
-    // 미등록 노선은 Haversine 공식을 기반으로 계산
+    // 3. 미등록 노선은 Haversine 공식을 기반으로 계산 (폴백)
     const cityA = CITIES.find(c => c.name === startCity)!;
     const cityB = CITIES.find(c => c.name === endCity)!;
 
@@ -128,6 +146,8 @@ export default function TollIndexPage() {
       dist: estimatedDist,
       time: timeText,
       toll: finalToll,
+      lightCarToll: Math.round((finalToll * 0.5) / 100) * 100,
+      isOfficial: false,
       hasError: false
     };
   }, [startCity, endCity, vehicleId]);
@@ -226,13 +246,20 @@ export default function TollIndexPage() {
             {/* 데코 그리드 패턴 */}
             <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
 
-            <div className="space-y-6 relative z-10">
+             <div className="space-y-6 relative z-10">
               <div className="flex justify-between items-center">
                 <span className="text-xs font-black tracking-wider text-slate-400 uppercase">Highway Cost Estimation</span>
-                <span className="flex items-center gap-1.5 bg-emerald-500/20 text-emerald-400 px-2.5 py-0.5 rounded-full text-[10px] font-black border border-emerald-500/10">
-                  <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-ping"></span>
-                  계산 완료
-                </span>
+                <div className="flex gap-2">
+                  {calculationResult.isOfficial && (
+                    <span className="flex items-center gap-1 bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded-full text-[10px] font-black border border-blue-500/10">
+                      공공데이터 API 실시간 연동
+                    </span>
+                  )}
+                  <span className="flex items-center gap-1.5 bg-emerald-500/20 text-emerald-400 px-2.5 py-0.5 rounded-full text-[10px] font-black border border-emerald-500/10">
+                    <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-ping"></span>
+                    계산 완료
+                  </span>
+                </div>
               </div>
 
               {calculationResult.hasError ? (
@@ -265,14 +292,18 @@ export default function TollIndexPage() {
                   </div>
 
                   {/* 할인 비교 가격 */}
-                  <div className="grid grid-cols-2 gap-4 text-xs">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
                     <div className="bg-white/5 p-3 rounded-xl border border-white/5">
                       <span className="text-[10px] text-slate-400 font-bold block">일반 요금 (현금)</span>
-                      <span className="font-mono font-black text-slate-200 mt-1 block">{(calculationResult.toll + 200).toLocaleString()}원</span>
+                      <span className="font-mono font-black text-slate-200 mt-1 block">{(calculationResult.toll + (calculationResult.isOfficial ? 0 : 200)).toLocaleString()}원</span>
                     </div>
                     <div className="bg-blue-600/10 p-3 rounded-xl border border-blue-500/10">
-                      <span className="text-[10px] text-blue-400 font-bold block">하이패스 (5% 기본할인)</span>
+                      <span className="text-[10px] text-blue-400 font-bold block">하이패스 (기본할인)</span>
                       <span className="font-mono font-black text-blue-400 mt-1 block">{Math.round(calculationResult.toll * 0.95 / 10) * 10}원</span>
+                    </div>
+                    <div className="bg-emerald-600/10 p-3 rounded-xl border border-emerald-500/10">
+                      <span className="text-[10px] text-emerald-400 font-bold block">경차 할인 (50% 감면)</span>
+                      <span className="font-mono font-black text-emerald-400 mt-1 block">{calculationResult.lightCarToll.toLocaleString()}원</span>
                     </div>
                   </div>
                 </div>
@@ -280,7 +311,11 @@ export default function TollIndexPage() {
             </div>
 
             <div className="text-[10.5px] text-slate-500 leading-relaxed pt-4 border-t border-slate-800 relative z-10">
-              * 표시된 거리는 대략적인 고속도로 선형 보정 거리를 반영한 예상 수치입니다. 실제 이용 진출입 영업소(IC/JC) 위치 및 하이패스 정기 할인(주말/출퇴근) 적용 여부에 따라 실제 수수 요금과 소폭의 차이가 발생할 수 있습니다.
+              {calculationResult.isOfficial ? (
+                <span>* 본 통행료 정보는 한국도로공사 공공데이터 API를 연동하여 전국 영업소 간 규정 통행요금을 실시간으로 조회한 결과입니다. 하이패스 정기 할인(출퇴근 및 주말 할인 등) 적용 여부에 따라 실제 수수 요금과 소폭의 차이가 발생할 수 있습니다.</span>
+              ) : (
+                <span>* 표시된 거리는 대략적인 고속도로 선형 보정 거리를 반영한 예상 수치입니다. 실제 이용 진출입 영업소(IC/JC) 위치 및 하이패스 정기 할인(주말/출퇴근) 적용 여부에 따라 실제 수수 요금과 소폭의 차이가 발생할 수 있습니다.</span>
+              )}
             </div>
           </div>
 
