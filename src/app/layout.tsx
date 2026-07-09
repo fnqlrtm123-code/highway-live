@@ -26,10 +26,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   verification: {
-    google: "JyJRp5nIpMXkqus5LHoa1TpiwkTWxkeWn3g_D7j739E",
+    google: "여기에_고속도로_구글_인증키를_넣으세요",
     other: {
-      "msvalidate.01": "72FE2EED9E2A787ABAD7AC2E77CB6992",
-      "naver-site-verification": "1e33c0ce1d7ba9913442f8a4cc06ed97f2611834",
+      "naver-site-verification": "여기에_고속도로_네이버_인증키를_넣으세요",
     },
   },
   openGraph: {
