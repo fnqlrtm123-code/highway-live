@@ -15,7 +15,9 @@ export async function generateMetadata({ params }: { params: Promise<{ restAreaS
   const hydrogenText = area.gasStation.hasHydrogen ? ' 및 수소 충전소 가능 여부' : '';
   const chargerCountText = area.gasStation.hasEvCharger ? `, 충전기 대수: ${area.gasStation.evChargersCount}대` : '';
   return {
-    title: `${area.name} (${area.directionName}) 전기차 충전소 위치 & 수소차 충전기 현황`,
+    title: {
+      absolute: `${area.name} (${area.directionName}) 전기차 충전소 가격 운영 시간`
+    },
     description: `${area.name} (${area.directionName}) 휴게소의 전기차(EV) 급속/완속 충전소 상세 위치${chargerCountText}${hydrogenText} 정보와 충전 표준 규격을 실시간으로 확인해보세요.`,
   };
 }
@@ -84,6 +86,18 @@ export default async function EvDetailPage({ params }: Props) {
               <span className="font-mono font-semibold text-slate-850">{evCount}대 운영 중</span>
             </li>
             <li className="py-3 flex justify-between">
+              <span className="text-slate-500 font-semibold">충전 요금 (회원 기준)</span>
+              <span className="font-semibold text-slate-850">급속 324.4원 / 초급속 347.2원 (1kWh당)</span>
+            </li>
+            <li className="py-3 flex justify-between">
+              <span className="text-slate-500 font-semibold">충전 요금 (비회원 기준)</span>
+              <span className="font-semibold text-slate-850">최대 430원 / kWh (로밍 요금 포함)</span>
+            </li>
+            <li className="py-3 flex justify-between">
+              <span className="text-slate-500 font-semibold">운영 시간</span>
+              <span className="font-semibold text-emerald-700">24시간 연중무휴 (정기 점검 제외)</span>
+            </li>
+            <li className="py-3 flex justify-between">
               <span className="text-slate-500 font-semibold">충전 속도 규격</span>
               <span className="font-medium text-slate-650">급속 (100kW) ~ 초급속 (300kW 이상) 지원</span>
             </li>
@@ -99,6 +113,14 @@ export default async function EvDetailPage({ params }: Props) {
               <span className={`font-semibold ${hasHydrogen ? 'text-emerald-700' : 'text-slate-400'}`}>
                 {hasHydrogen ? '이용 가능 (정상 운영)' : '미운영'}
               </span>
+            </li>
+            <li className="py-3 flex justify-between">
+              <span className="text-slate-500 font-semibold">수소 연료 가격</span>
+              <span className="font-semibold text-slate-850">{hasHydrogen ? '9,900원 / kg' : '미운영'}</span>
+            </li>
+            <li className="py-3 flex justify-between">
+              <span className="text-slate-500 font-semibold">수소 충전소 운영 시간</span>
+              <span className="font-semibold text-slate-850">{hasHydrogen ? '08:00 ~ 22:00 (연중무휴)' : '미운영'}</span>
             </li>
             <li className="py-3 flex justify-between">
               <span className="text-slate-500 font-semibold">충전 압력 규격</span>
