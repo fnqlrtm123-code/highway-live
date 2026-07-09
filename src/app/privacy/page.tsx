@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "개인정보처리방침 | 로드플러스",
+  title: "개인정보처리방침",
   description: "로드플러스 고속도로 정보 포털의 개인정보처리방침을 안내합니다. 본 사이트는 별도의 개인정보를 직접 수집하지 않습니다.",
   alternates: {
     canonical: "/privacy",

@@ -13,8 +13,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!area) return {};
 
   return {
-    title: `${area.name} 휴게소 (${area.directionName}) 맛집 메뉴·주유소 가격·편의시설`,
-    description: `${area.name} 휴게소 (${area.directionName})의 시그니처 대표 메뉴인 ${area.signatureMenu.name} 정보를 비롯해 실시간 주유소 가격, 전기차/수소차 충전 현황 및 입점 브랜드 정보를 한눈에 제공합니다.`,
+    title: `${area.name} 휴게소 (${area.directionName}) 맛집 메뉴 주유소 가격 편의시설`,
+    description: `${area.name} 휴게소 (${area.directionName})의 시그니처 대표 메뉴인 ${area.signatureMenu.name} 정보를 비롯해 실시간 주유소 가격, 전기차 수소차 충전 현황 및 입점 브랜드 정보를 한눈에 제공합니다.`,
     keywords: [
       `${area.name} 휴게소`,
       `${area.name} 맛집`,

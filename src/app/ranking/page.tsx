@@ -3,7 +3,7 @@ import AdSense from '@/components/AdSense';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '고속도로 휴게소 랭킹 - 맛집, 편의시설, 브랜드 입점 순위',
+  title: '고속도로 휴게소 랭킹 맛집 편의시설 브랜드 입점 순위',
   description: '전국 고속도로 휴게소 데이터 분석을 통해 메뉴가 가장 다양한 맛집 휴게소, 편의시설이 우수한 휴게소, 브랜드 입점 수 및 가성비 돈가스 순위를 확인해보세요.',
 };
 
