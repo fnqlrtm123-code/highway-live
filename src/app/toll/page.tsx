@@ -72,6 +72,12 @@ export default function TollIndexPage() {
   const [endCity, setEndCity] = useState('부산');
   const [vehicleId, setVehicleId] = useState('1');
 
+  // 출발지와 도착지 교환
+  const handleSwap = () => {
+    setStartCity(endCity);
+    setEndCity(startCity);
+  };
+
   // 통행료 요금 계산 결과 도출
   const calculationResult = useMemo(() => {
     if (startCity === endCity) {
@@ -168,22 +174,22 @@ export default function TollIndexPage() {
           <h1 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">
             전국 고속도로 통행료 실시간 계산기
           </h1>
-          <p className="text-slate-500 text-sm max-w-3xl leading-relaxed">
-            전국 주요 도시 간 고속도로 예상 요금 및 차종별(1종 승용차부터 5종 특수화물차까지) 상세 요금을 실시간으로 조회하고 스마트한 여정을 준비하세요. 하이패스 할인제도 및 통행료 미납 조회 가이드도 하단에서 바로 확인할 수 있습니다.
+          <p className="text-slate-500 text-sm max-w-3xl leading-relaxed font-medium">
+            전국 주요 도시 간 고속도로 예상 요금 및 차종별 상세 요금을 실시간으로 조회하세요. 불필요한 컨테이너들을 줄이고 모바일과 PC 모두에서 최적화된 화면으로 직관적인 정보를 제공합니다.
           </p>
         </div>
 
         <AdSense slot="1122334455" />
 
-        {/* 실시간 요금 계산기 대시보드 */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          
-          {/* 입력 폼 필드 (왼쪽 5열) */}
-          <div className="lg:col-span-5 bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-xs flex flex-col justify-between space-y-6">
-            <div className="space-y-5">
-              <h2 className="text-lg font-black text-slate-900 border-b pb-3 border-slate-100 flex items-center gap-2">
+        {/* 실시간 요금 계산기 대시보드 - 단일 컨테이너화 */}
+        <div className="bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-xs">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:divide-x lg:divide-slate-200">
+            
+            {/* 입력 폼 필드 (왼쪽 5열) */}
+            <div className="lg:col-span-5 space-y-5 lg:pr-8">
+              <h2 className="text-lg font-black text-slate-900 flex items-center gap-2">
                 <span className="w-1.5 h-4 bg-blue-600 rounded-full inline-block"></span>
-                출발지 &middot; 도착지 설정
+                출발지 · 도착지 설정
               </h2>
               
               {/* 출발지 선택 */}
@@ -198,6 +204,20 @@ export default function TollIndexPage() {
                     <option key={c.name} value={c.name}>{c.name}</option>
                   ))}
                 </select>
+              </div>
+
+              {/* 출발/도착지 스왑 버튼 */}
+              <div className="flex justify-center -my-2.5 relative z-10">
+                <button 
+                  onClick={handleSwap}
+                  type="button"
+                  className="w-8 h-8 rounded-full bg-white border border-slate-200 shadow-sm flex items-center justify-center hover:bg-slate-50 active:scale-95 transition-all text-slate-500 cursor-pointer"
+                  title="출발지/도착지 전환"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 7.5L7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5" />
+                  </svg>
+                </button>
               </div>
 
               {/* 도착지 선택 */}
@@ -227,211 +247,206 @@ export default function TollIndexPage() {
                   ))}
                 </select>
               </div>
+
+              {/* 선택 차량 요약 */}
+              <div className="bg-slate-50 p-4 rounded-xl border border-slate-100 text-xs space-y-1">
+                <span className="font-black text-slate-700 block">
+                  {VEHICLE_CLASSES.find(c => c.id === vehicleId)?.name} 기준 상세 정보
+                </span>
+                <p className="text-slate-500 font-medium leading-relaxed">
+                  {VEHICLE_CLASSES.find(c => c.id === vehicleId)?.description}
+                </p>
+              </div>
             </div>
 
-            {/* 선택 차량 요약 */}
-            <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-xs space-y-1">
-              <span className="font-black text-slate-700 block">
-                {VEHICLE_CLASSES.find(c => c.id === vehicleId)?.name} 기준 상세 정보
-              </span>
-              <p className="text-slate-400 font-medium leading-relaxed">
-                {VEHICLE_CLASSES.find(c => c.id === vehicleId)?.description}
-              </p>
-            </div>
-          </div>
-
-          {/* 계산 결과 화면 (오른쪽 7열) */}
-          <div className="lg:col-span-7 bg-slate-950 text-white rounded-3xl p-6 md:p-8 shadow-md flex flex-col justify-between space-y-8 relative overflow-hidden">
-            
-            {/* 데코 그리드 패턴 */}
-            <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
-
-             <div className="space-y-6 relative z-10">
-              <div className="flex justify-between items-center">
-                <span className="text-xs font-black tracking-wider text-slate-400 uppercase">Highway Cost Estimation</span>
-                <div className="flex gap-2">
-                  {calculationResult.isOfficial && (
-                    <span className="flex items-center gap-1 bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded-full text-[10px] font-black border border-blue-500/10">
-                      공공데이터 API 실시간 연동
+            {/* 계산 결과 화면 (오른쪽 7열) */}
+            <div className="lg:col-span-7 space-y-6 pt-6 lg:pt-0 lg:pl-8 flex flex-col justify-between">
+              
+              <div className="space-y-5">
+                <div className="flex justify-between items-center">
+                  <h2 className="text-lg font-black text-slate-900 flex items-center gap-2">
+                    <span className="w-1.5 h-4 bg-emerald-600 rounded-full inline-block"></span>
+                    계산 결과 요약
+                  </h2>
+                  <div className="flex gap-1.5">
+                    {calculationResult.isOfficial && (
+                      <span className="flex items-center gap-1 bg-blue-50 text-blue-700 px-2.5 py-0.5 rounded-full text-[10px] font-black border border-blue-100">
+                        공공데이터 API 실시간 연동
+                      </span>
+                    )}
+                    <span className="flex items-center gap-1.5 bg-emerald-50 text-emerald-700 px-2.5 py-0.5 rounded-full text-[10px] font-black border border-emerald-100">
+                      <span className="w-1 h-1 bg-emerald-500 rounded-full animate-ping"></span>
+                      정상 조회됨
                     </span>
-                  )}
-                  <span className="flex items-center gap-1.5 bg-emerald-500/20 text-emerald-400 px-2.5 py-0.5 rounded-full text-[10px] font-black border border-emerald-500/10">
-                    <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-ping"></span>
-                    계산 완료
-                  </span>
+                  </div>
                 </div>
+
+                {calculationResult.hasError ? (
+                  <div className="py-12 text-center text-slate-400 text-sm font-bold bg-slate-50 rounded-2xl border border-slate-100">
+                    출발지와 도착지가 같습니다. 다른 경로를 설정해주세요.
+                  </div>
+                ) : (
+                  <div className="space-y-6">
+                    {/* 통행 요금 대형 표시 */}
+                    <div className="bg-slate-50 border border-slate-100 rounded-2xl p-5 md:p-6 flex flex-col justify-center">
+                      <span className="text-xs text-slate-400 font-bold block mb-1">예상 통행 요금</span>
+                      <div className="flex items-baseline gap-1">
+                        <span className="font-mono text-4xl md:text-5xl font-black text-blue-600 tracking-tight">
+                          {calculationResult.toll.toLocaleString()}
+                        </span>
+                        <span className="text-lg font-black text-slate-600">원</span>
+                      </div>
+                    </div>
+
+                    {/* 세부 수치 그리드 */}
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="bg-slate-50/50 border border-slate-100 rounded-2xl p-4">
+                        <span className="text-[11px] text-slate-400 font-bold block mb-0.5">예상 주행 거리</span>
+                        <span className="text-lg font-mono font-black text-slate-800">{calculationResult.dist} km</span>
+                      </div>
+                      <div className="bg-slate-50/50 border border-slate-100 rounded-2xl p-4">
+                        <span className="text-[11px] text-slate-400 font-bold block mb-0.5">예상 소요 시간</span>
+                        <span className="text-lg font-black text-slate-800">{calculationResult.time}</span>
+                      </div>
+                    </div>
+
+                    {/* 할인 비교 가격 */}
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                      <div className="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                        <span className="text-[10px] text-slate-400 font-bold block">일반 요금 (현금)</span>
+                        <span className="font-mono font-black text-slate-700 mt-1 block">{(calculationResult.toll + (calculationResult.isOfficial ? 0 : 200)).toLocaleString()}원</span>
+                      </div>
+                      <div className="bg-blue-50/50 p-3 rounded-xl border border-blue-100/50">
+                        <span className="text-[10px] text-blue-600 font-bold block">하이패스 (기본할인)</span>
+                        <span className="font-mono font-black text-blue-600 mt-1 block">{Math.round(calculationResult.toll * 0.95 / 10) * 10}원</span>
+                      </div>
+                      <div className="bg-emerald-50/50 p-3 rounded-xl border border-emerald-100/50">
+                        <span className="text-[10px] text-emerald-600 font-bold block">경차 할인 (50% 감면)</span>
+                        <span className="font-mono font-black text-emerald-600 mt-1 block">{calculationResult.lightCarToll.toLocaleString()}원</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
 
-              {calculationResult.hasError ? (
-                <div className="py-12 text-center text-slate-400 text-sm font-bold">
-                  출발지와 도착지가 같습니다. 다른 경로를 설정해주세요.
-                </div>
-              ) : (
-                <div className="space-y-6">
-                  {/* 대형 금액 */}
-                  <div className="space-y-1.5">
-                    <span className="text-xs text-slate-400 font-bold block">통행 요금</span>
-                    <div className="flex items-baseline gap-2">
-                      <span className="font-mono text-4xl md:text-5xl font-black text-blue-400 tracking-tight">
-                        {calculationResult.toll.toLocaleString()}
-                      </span>
-                      <span className="text-lg font-black text-slate-300">원</span>
-                    </div>
-                  </div>
-
-                  {/* 세부 수치 그리드 */}
-                  <div className="grid grid-cols-2 gap-6 border-t border-b border-slate-800 py-5">
-                    <div>
-                      <span className="text-[11px] text-slate-500 font-bold block">예상 주행 거리</span>
-                      <span className="text-lg font-mono font-black text-white">{calculationResult.dist} km</span>
-                    </div>
-                    <div>
-                      <span className="text-[11px] text-slate-500 font-bold block">예상 소요 시간</span>
-                      <span className="text-lg font-black text-white">{calculationResult.time}</span>
-                    </div>
-                  </div>
-
-                  {/* 할인 비교 가격 */}
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
-                    <div className="bg-white/5 p-3 rounded-xl border border-white/5">
-                      <span className="text-[10px] text-slate-400 font-bold block">일반 요금 (현금)</span>
-                      <span className="font-mono font-black text-slate-200 mt-1 block">{(calculationResult.toll + (calculationResult.isOfficial ? 0 : 200)).toLocaleString()}원</span>
-                    </div>
-                    <div className="bg-blue-600/10 p-3 rounded-xl border border-blue-500/10">
-                      <span className="text-[10px] text-blue-400 font-bold block">하이패스 (기본할인)</span>
-                      <span className="font-mono font-black text-blue-400 mt-1 block">{Math.round(calculationResult.toll * 0.95 / 10) * 10}원</span>
-                    </div>
-                    <div className="bg-emerald-600/10 p-3 rounded-xl border border-emerald-500/10">
-                      <span className="text-[10px] text-emerald-400 font-bold block">경차 할인 (50% 감면)</span>
-                      <span className="font-mono font-black text-emerald-400 mt-1 block">{calculationResult.lightCarToll.toLocaleString()}원</span>
-                    </div>
-                  </div>
-                </div>
-              )}
+              <div className="text-[11px] text-slate-400 leading-relaxed pt-4 border-t border-slate-100 mt-4">
+                {calculationResult.isOfficial ? (
+                  <span>* 본 통행료 정보는 한국도로공사 공공데이터 API를 연동하여 전국 영업소 간 규정 통행요금을 실시간으로 조회한 결과입니다. 하이패스 정기 할인(출퇴근 및 주말 할인 등) 적용 여부에 따라 실제 수수 요금과 소폭의 차이가 발생할 수 있습니다.</span>
+                ) : (
+                  <span>* 표시된 거리는 대략적인 고속도로 선형 보정 거리를 반영한 예상 수치입니다. 실제 이용 진출입 영업소(IC/JC) 위치 및 하이패스 정기 할인(주말/출퇴근) 적용 여부에 따라 실제 수수 요금과 소폭의 차이가 발생할 수 있습니다.</span>
+                )}
+              </div>
             </div>
 
-            <div className="text-[10.5px] text-slate-500 leading-relaxed pt-4 border-t border-slate-800 relative z-10">
-              {calculationResult.isOfficial ? (
-                <span>* 본 통행료 정보는 한국도로공사 공공데이터 API를 연동하여 전국 영업소 간 규정 통행요금을 실시간으로 조회한 결과입니다. 하이패스 정기 할인(출퇴근 및 주말 할인 등) 적용 여부에 따라 실제 수수 요금과 소폭의 차이가 발생할 수 있습니다.</span>
-              ) : (
-                <span>* 표시된 거리는 대략적인 고속도로 선형 보정 거리를 반영한 예상 수치입니다. 실제 이용 진출입 영업소(IC/JC) 위치 및 하이패스 정기 할인(주말/출퇴근) 적용 여부에 따라 실제 수수 요금과 소폭의 차이가 발생할 수 있습니다.</span>
-              )}
-            </div>
           </div>
-
         </div>
 
-        {/* 차종별 고속도로 요금 및 구분 기준 */}
-        <section className="bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-2xs space-y-6">
-          <h2 className="text-xl font-black text-slate-900 border-b pb-4 border-slate-100 flex items-center gap-2">
-            <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
-            </svg>
-            차종별 고속도로 구분 기준표
-          </h2>
-          <p className="text-xs text-slate-500 leading-relaxed font-medium">
-            대한민국의 모든 유료 도로는 자동차관리법 및 한국도로공사의 영업 규정에 의거하여 아래 표와 같이 총 5가지의 차종 및 면제 차종으로 분류되어 요금이 부과됩니다.
-          </p>
-
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-xs border-collapse">
-              <thead>
-                <tr className="bg-slate-50 border-b border-slate-100 text-slate-500">
-                  <th className="py-3.5 px-4 font-black w-24">구분</th>
-                  <th className="py-3.5 px-4 font-black">차종 설명</th>
-                  <th className="py-3.5 px-4 font-black">대표 차량 종류</th>
-                  <th className="py-3.5 px-4 font-black text-right">요금 가중치</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-100 font-medium text-slate-700">
-                {VEHICLE_CLASSES.map((v) => (
-                  <tr key={v.id} className="hover:bg-slate-50/50 transition-colors">
-                    <td className="py-4 px-4 font-black text-slate-950">{v.name}</td>
-                    <td className="py-4 px-4">{v.description}</td>
-                    <td className="py-4 px-4 text-slate-400 font-bold">{v.examples}</td>
-                    <td className="py-4 px-4 text-right font-mono font-black text-blue-600">{(v.baseRate * 100).toFixed(0)}%</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        {/* 하이패스 할인제도 및 면제 가이드 */}
-        <section className="bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-2xs space-y-6">
-          <h2 className="text-xl font-black text-slate-900 border-b pb-4 border-slate-100 flex items-center gap-2">
-            <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
-            </svg>
-            하이패스 요금 할인제도 핵심 요약
-          </h2>
+        {/* 통합 가이드 & 정보 섹션 - 여러 박스로 나누지 않고 플랫하고 가독성 좋은 디자인 */}
+        <div className="border-t border-slate-200 pt-12 space-y-16">
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-slate-50 border border-slate-100 p-5 rounded-2xl space-y-2">
-              <span className="bg-blue-100 text-blue-800 text-[10px] font-black px-2 py-0.5 rounded-full inline-block">
-                출퇴근 할인
-              </span>
-              <h3 className="text-sm font-black text-slate-800">평일 출퇴근 시간대 20%~50% 할인</h3>
-              <p className="text-[11.5px] text-slate-400 leading-relaxed">
-                주말/공휴일을 제외한 평일 출근(05시~09시), 퇴근(18시~22시) 시 하이패스 차로 진입/출차 차량에 대해 차종 구분 없이 요금을 할인합니다.
+          {/* 하이패스 할인제도 및 면제 가이드 */}
+          <section className="space-y-6">
+            <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
+              <span className="w-1 bg-blue-600 h-5 rounded-full inline-block"></span>
+              하이패스 요금 할인제도 핵심 요약
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="space-y-2">
+                <span className="bg-blue-50 text-blue-700 text-[10px] font-black px-2 py-0.5 rounded-full inline-block">
+                  출퇴근 할인
+                </span>
+                <h3 className="text-sm font-black text-slate-800">평일 출퇴근 시간대 20%~50% 할인</h3>
+                <p className="text-[12px] text-slate-500 leading-relaxed font-medium">
+                  주말/공휴일을 제외한 평일 출근(05시~09시), 퇴근(18시~22시) 시 하이패스 차로 진입/출차 차량에 대해 차종 구분 없이 요금을 할인합니다.
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                <span className="bg-emerald-50 text-emerald-700 text-[10px] font-black px-2 py-0.5 rounded-full inline-block">
+                  친환경차 할인
+                </span>
+                <h3 className="text-sm font-black text-slate-800">전기 &middot; 수소차 통행료 50% 할인</h3>
+                <p className="text-[12px] text-slate-500 leading-relaxed font-medium">
+                  전기자동차 및 수소전기자동차 전용 하이패스 단말기를 부착하여 운행할 경우, 전국의 모든 민자 및 재정 고속도로 통행료 of 50%를 상시 감면받을 수 있습니다.
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                <span className="bg-purple-50 text-purple-700 text-[10px] font-black px-2 py-0.5 rounded-full inline-block">
+                  경차 할인
+                </span>
+                <h3 className="text-sm font-black text-slate-800">배기량 1000cc 미만 경차 50% 할인</h3>
+                <p className="text-[12px] text-slate-500 leading-relaxed font-medium">
+                  레이, 모닝, 캐스퍼 등의 경형 승용차는 일반 1종 요금 대비 50%를 감면받는 특례 요율(6종) 혜택을 자동으로 24시간 상시 적용받습니다.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* 차종별 고속도로 요금 및 구분 기준 */}
+          <section className="space-y-6">
+            <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
+              <span className="w-1 bg-blue-600 h-5 rounded-full inline-block"></span>
+              차종별 고속도로 구분 기준표
+            </h2>
+            <div className="overflow-x-auto border border-slate-100 rounded-2xl bg-white shadow-2xs">
+              <table className="w-full text-left text-xs border-collapse">
+                <thead>
+                  <tr className="bg-slate-50 border-b border-slate-100 text-slate-500">
+                    <th className="py-3 px-4 font-black w-24">구분</th>
+                    <th className="py-3 px-4 font-black">차종 설명</th>
+                    <th className="py-3 px-4 font-black">대표 차량 종류</th>
+                    <th className="py-3 px-4 font-black text-right">요금 가중치</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100 font-medium text-slate-600">
+                  {VEHICLE_CLASSES.map((v) => (
+                    <tr key={v.id} className="hover:bg-slate-50/50 transition-colors">
+                      <td className="py-3.5 px-4 font-black text-slate-900">{v.name}</td>
+                      <td className="py-3.5 px-4">{v.description}</td>
+                      <td className="py-3.5 px-4 text-slate-400 font-bold">{v.examples}</td>
+                      <td className="py-3.5 px-4 text-right font-mono font-black text-blue-600">{(v.baseRate * 100).toFixed(0)}%</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          {/* 미납 통행료 조회 및 납부 방법 */}
+          <section className="bg-slate-50 border border-slate-100 rounded-3xl p-6 md:p-8 space-y-6">
+            <div className="space-y-2">
+              <h3 className="text-lg font-black flex items-center gap-2 text-slate-900">
+                <span className="w-1.5 h-4 bg-blue-600 rounded-full inline-block"></span>
+                고속도로 미납 통행료 간편 조회 및 납부 방법
+              </h3>
+              <p className="text-slate-500 text-xs md:text-sm leading-relaxed font-medium">
+                하이패스 카드 잔액 부족이나 단말기 미인식 등으로 통행료를 납부하지 못한 채 톨게이트를 통과한 경우, 당황하여 톨게이트 부근에서 급정거할 경우 대형 사고 위험이 매우 큽니다. 안전하게 통과한 후 아래 수단으로 납부하세요.
               </p>
             </div>
 
-            <div className="bg-slate-50 border border-slate-100 p-5 rounded-2xl space-y-2">
-              <span className="bg-emerald-100 text-emerald-800 text-[10px] font-black px-2 py-0.5 rounded-full inline-block">
-                친환경차 할인
-              </span>
-              <h3 className="text-sm font-black text-slate-800">전기 &middot; 수소차 통행료 50% 할인</h3>
-              <p className="text-[11.5px] text-slate-400 leading-relaxed">
-                전기자동차 및 수소전기자동차 전용 하이패스 단말기를 부착하여 운행할 경우, 전국의 모든 민자 및 재정 고속도로 통행료의 50%를 상시 감면받을 수 있습니다.
-              </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-slate-700 font-medium">
+              <div className="space-y-2.5">
+                <h4 className="font-black text-slate-900 text-[13.5px]">1. 미납금 조회 방법</h4>
+                <ul className="space-y-1.5 list-disc pl-4 text-slate-500 leading-relaxed font-medium">
+                  <li>한국도로공사 하이패스 서비스 홈페이지 및 모바일 앱</li>
+                  <li>전용 콜센터 (1588-2504 / 24시간 연중무휴)</li>
+                  <li>전국의 고속도로 모든 영업소 사무실 또는 휴게소 종합 안내소</li>
+                </ul>
+              </div>
+              
+              <div className="space-y-2.5">
+                <h4 className="font-black text-slate-900 text-[13.5px]">2. 편리한 납부 수단</h4>
+                <ul className="space-y-1.5 list-disc pl-4 text-slate-500 leading-relaxed font-medium">
+                  <li>영업소 차로에서 직접 정산 또는 수납원에게 신용카드 납부</li>
+                  <li>GS25, CU, 이마트24 등 전국 제휴 편의점 무인 단말기 수납</li>
+                  <li>네이버페이, 카카오페이 등 간편결제를 이용한 간편 스마트 납부</li>
+                </ul>
+              </div>
             </div>
+          </section>
 
-            <div className="bg-slate-50 border border-slate-100 p-5 rounded-2xl space-y-2">
-              <span className="bg-purple-100 text-purple-800 text-[10px] font-black px-2 py-0.5 rounded-full inline-block">
-                경차 할인
-              </span>
-              <h3 className="text-sm font-black text-slate-800">배기량 1000cc 미만 경차 50% 할인</h3>
-              <p className="text-[11.5px] text-slate-400 leading-relaxed">
-                레이, 모닝, 캐스퍼 등의 경형 승용차는 일반 1종 요금 대비 50%를 감면받는 특례 요율(6종) 혜택을 자동으로 24시간 상시 적용받습니다.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* 미납 통행료 조회 및 납부 방법 */}
-        <section className="bg-slate-900 text-white rounded-3xl p-6 md:p-8 space-y-6">
-          <div className="space-y-2">
-            <h3 className="text-lg font-black flex items-center gap-2 text-white">
-              <span className="w-1.5 h-4 bg-blue-500 rounded-full inline-block"></span>
-              고속도로 미납 통행료 간편 조회 및 납부 방법
-            </h3>
-            <p className="text-slate-400 text-xs md:text-sm leading-relaxed">
-              하이패스 카드 잔액 부족이나 단말기 미인식 등으로 통행료를 납부하지 못한 채 톨게이트를 통과한 경우, 당황하여 톨게이트 부근에서 급정거할 경우 대형 사고 위험이 매우 큽니다.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-slate-300">
-            <div className="space-y-2.5">
-              <h4 className="font-bold text-white text-[13.5px]">1. 미납금 조회 방법</h4>
-              <ul className="space-y-1.5 list-disc pl-4 text-slate-400 leading-relaxed">
-                <li>한국도로공사 하이패스 서비스 홈페이지 및 모바일 앱</li>
-                <li>전용 콜센터 (1588-2504 / 24시간 연중무휴)</li>
-                <li>전국의 고속도로 모든 영업소 사무실 또는 휴게소 종합 안내소</li>
-              </ul>
-            </div>
-            
-            <div className="space-y-2.5">
-              <h4 className="font-bold text-white text-[13.5px]">2. 편리한 납부 수단</h4>
-              <ul className="space-y-1.5 list-disc pl-4 text-slate-400 leading-relaxed">
-                <li>영업소 차로에서 직접 정산 또는 수납원에게 신용카드 납부</li>
-                <li>GS25, CU, 이마트24 등 전국 제휴 편의점 무인 단말기 수납</li>
-                <li>네이버페이, 카카오페이 등 간편결제를 이용한 간편 스마트 납부</li>
-              </ul>
-            </div>
-          </div>
-        </section>
+        </div>
 
       </main>
     </>
