@@ -135,9 +135,6 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
-
-        {/* 애드센스 하단 고정형 스마트 앵커 배너 */}
-        <AdSense slot="9876543210" type="sticky-bottom" />
       </body>
     </html>
   );
