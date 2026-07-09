@@ -50,6 +50,19 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
+        <Script
+          id="adsense-config"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (window.adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-1647402852124552",
+                enable_page_level_ads: true,
+                overlays: { bottom: true }
+              });
+            `,
+          }}
+        />
 
 
         {/* 2. 글로벌 헤더 (모던 화이트 글래스 테마) */}
