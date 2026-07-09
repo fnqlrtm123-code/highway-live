@@ -161,7 +161,7 @@ export default function HomeClient() {
       </div>
 
       {/* 2. 메인 4대 카테고리 구성 영역 */}
-      <div className="max-w-[1240px] mx-auto px-4 mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div className="max-w-[1240px] mx-auto px-4 mt-6 md:mt-10 grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 items-start">
         
         {/* ==========================================
             좌측: [1] 교통상황·CCTV + [4] 고속도로 통행료
@@ -169,7 +169,7 @@ export default function HomeClient() {
         <section className="lg:col-span-6 space-y-8">
           
           {/* [Pillar 1] 교통상황·CCTV */}
-          <div className="bg-white border border-slate-200/60 rounded-2xl p-6 shadow-xs space-y-5">
+          <div className="bg-white border border-slate-200/60 rounded-2xl p-5 md:p-6 shadow-xs space-y-5">
             <div className="flex justify-between items-center border-b pb-3.5 border-slate-100">
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
@@ -179,9 +179,9 @@ export default function HomeClient() {
             </div>
 
             {/* 주요 도시 간 소요 시간 현황 */}
-            <div className="grid grid-cols-2 gap-3.5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
               {travelTimes.slice(0, 4).map((t, idx) => (
-                <div key={idx} className="p-4 bg-slate-50/50 border border-slate-100/80 rounded-xl flex flex-col justify-between space-y-2">
+                <div key={idx} className="p-4 bg-slate-50/50 border border-slate-100/80 rounded-xl flex flex-col justify-between space-y-2.5 transition-all hover:border-slate-200">
                   <div className="flex justify-between items-center">
                     <span className="text-xs font-bold text-slate-700">{t.from} &rarr; {t.to}</span>
                     <span className={`text-[9.5px] font-bold px-2 py-0.5 rounded ${
@@ -201,14 +201,14 @@ export default function HomeClient() {
             </div>
 
             {/* 실시간 주요 CCTV 포인트 */}
-            <div className="space-y-2.5">
+            <div className="space-y-3">
               <span className="text-[10px] font-bold text-slate-400 block uppercase tracking-wider">주요 정체 발생지역 CCTV</span>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 {cctvPoints.slice(0, 4).map(c => (
                   <button 
                     key={c.id}
                     onClick={() => setActiveCctv(c)}
-                    className="p-3 bg-slate-50 hover:bg-slate-100/75 border border-slate-200/50 text-slate-800 rounded-xl text-left flex justify-between items-center transition-colors cursor-pointer"
+                    className="p-3 bg-slate-50 hover:bg-slate-100/75 border border-slate-200/50 text-slate-800 rounded-xl text-left flex justify-between items-center transition-all cursor-pointer hover:border-slate-300"
                   >
                     <div>
                       <span className="text-xs font-bold block text-slate-800">{c.name}</span>
@@ -238,7 +238,7 @@ export default function HomeClient() {
           </div>
 
           {/* [Pillar 4] 고속도로 통행료 계산기 */}
-          <div className="bg-white border border-slate-200/60 rounded-2xl p-6 shadow-xs space-y-4">
+          <div className="bg-white border border-slate-200/60 rounded-2xl p-5 md:p-6 shadow-xs space-y-4">
             <div>
               <h2 className="text-[15px] font-bold text-slate-900">고속도로 통행료 계산기</h2>
             </div>
@@ -296,7 +296,7 @@ export default function HomeClient() {
         <section className="lg:col-span-6 space-y-8">
           
           {/* [Pillar 2] 고속도로 휴게소 (상행선·하행선 리스트 및 맛집) */}
-          <div className="bg-white border border-slate-200/60 rounded-2xl p-6 shadow-xs space-y-5">
+          <div className="bg-white border border-slate-200/60 rounded-2xl p-5 md:p-6 shadow-xs space-y-5">
             <div>
               <h2 className="text-[15px] font-bold text-slate-900">고속도로 휴게소 (방향별 조회)</h2>
             </div>
@@ -339,14 +339,14 @@ export default function HomeClient() {
             </div>
 
             {/* 상행선 / 하행선 리스트 (구분 중요!) */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               
               {/* 상행선 방향 */}
               <div className="space-y-2">
                 <span className="text-xs font-extrabold text-slate-800 border-b pb-1.5 block border-slate-100 flex items-center gap-1.5">
                   상행선 ({selectedRestHighway === '경부고속도로' ? '서울방향' : '상행선'})
                 </span>
-                <div className="space-y-1.5 max-h-[220px] overflow-y-auto pr-1">
+                <div className="space-y-1.5 max-h-[220px] overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-slate-200">
                   {upBoundRestAreas
                     .filter(s => selectedRestFacility === '전체' || s.facilities.includes(selectedRestFacility))
                     .map(s => (
@@ -374,7 +374,7 @@ export default function HomeClient() {
                 <span className="text-xs font-extrabold text-slate-800 border-b pb-1.5 block border-slate-100 flex items-center gap-1.5">
                   하행선 ({selectedRestHighway === '경부고속도로' ? '부산방향' : '하행선'})
                 </span>
-                <div className="space-y-1.5 max-h-[220px] overflow-y-auto pr-1">
+                <div className="space-y-1.5 max-h-[220px] overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-slate-200">
                   {downBoundRestAreas
                     .filter(s => selectedRestFacility === '전체' || s.facilities.includes(selectedRestFacility))
                     .map(s => (
@@ -437,12 +437,12 @@ export default function HomeClient() {
           </div>
 
           {/* [Pillar 3] 고속도로 주유소 전기차 충전소 */}
-          <div className="bg-white border border-slate-200/60 rounded-2xl p-6 shadow-xs space-y-4">
+          <div className="bg-white border border-slate-200/60 rounded-2xl p-5 md:p-6 shadow-xs space-y-4">
             <div>
               <h2 className="text-[15px] font-bold text-slate-900">주유소 유가 비교 &middot; 전기차 충전소</h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* 휘발유 최저가 랭킹 */}
               <div className="space-y-2.5 bg-slate-50/50 p-4 border border-slate-100/80 rounded-xl">
                 <span className="text-[10px] font-bold text-slate-400 block uppercase tracking-wider">휘발유 최저가 TOP 3</span>
@@ -489,8 +489,8 @@ export default function HomeClient() {
       </div>
 
       {/* 4. 자주 묻는 질문 FAQ (메인 하단) */}
-      <section className="max-w-[1240px] mx-auto px-4 mt-12">
-        <div className="bg-white border border-slate-200/60 rounded-2xl p-6 md:p-8 shadow-xs space-y-6">
+      <section className="max-w-[1240px] mx-auto px-4 mt-10 md:mt-14 mb-4">
+        <div className="bg-white border border-slate-200/60 rounded-2xl p-5 md:p-8 shadow-xs space-y-6">
           <div className="border-b pb-4 border-slate-100">
             <h2 className="text-lg font-bold text-slate-900 flex items-center gap-2">
               <span className="w-1.5 h-4 bg-blue-600 rounded-full inline-block"></span>
