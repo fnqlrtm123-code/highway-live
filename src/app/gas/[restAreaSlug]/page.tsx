@@ -25,7 +25,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function RestAreaGasPage({ params }: Props) {
+export default async function GasDetailPage({ params }: Props) {
   const { restAreaSlug } = await params;
   const area = getServiceAreaBySlug(restAreaSlug);
 
@@ -120,6 +120,36 @@ export default async function RestAreaGasPage({ params }: Props) {
           특히 본 {area.name} 주유소는 셀프 주유 인프라가 갖추어져 있어 보다 신속하게 급유가 가능합니다. 장거리 주행 시 다음 휴게소 주유소와의 유가 차이를 미리 확인하시어 현명하게 주유 계획을 세우시길 추천드립니다.
         </p>
       </div>
+
+      {/* 인근 주유소 목록 */}
+      <section className="space-y-4 pt-4 border-t border-slate-200">
+        <h2 className="text-lg font-semibold text-slate-900">
+          ⛽ 동일 노선 인근 주유소 안내
+        </h2>
+        <p className="text-xs md:text-sm text-slate-500">
+          현재 주행 노선 상에서 가깝거나 이어서 방문할 수 있는 인근의 다른 휴게소 주유소 목록입니다.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
+          {serviceAreas
+            .filter((s) => s.highwaySlug === area.highwaySlug && s.slug !== area.slug)
+            .slice(0, 3)
+            .map((s) => (
+              <a 
+                key={s.slug}
+                href={`/gas/${s.slug}`}
+                className="block p-4 border border-slate-200 bg-white rounded-2xl hover:border-slate-800 hover:bg-slate-50 transition-all text-left shadow-2xs"
+              >
+                <div className="flex justify-between items-center mb-1">
+                  <span className="text-sm font-semibold text-slate-800">{s.name}</span>
+                  <span className="text-[10px] font-medium bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded border border-slate-200">{s.directionName}</span>
+                </div>
+                <div className="text-[11px] text-slate-400 mt-2 flex justify-between">
+                  <span>휘발유: {s.gasStation.gasolinePrice.toLocaleString()}원</span>
+                </div>
+              </a>
+            ))}
+        </div>
+      </section>
 
     </div>
   );

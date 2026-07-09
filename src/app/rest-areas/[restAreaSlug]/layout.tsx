@@ -40,8 +40,6 @@ export default async function RestAreaLayout({ children, params }: Props) {
   const tabs = [
     { name: '종합 정보', href: `/rest-areas/${restAreaSlug}` },
     { name: '음식·맛집', href: `/rest-areas/${restAreaSlug}/food` },
-    { name: '주유소 가격', href: `/rest-areas/${restAreaSlug}/gas` },
-    { name: '전기차 충전', href: `/rest-areas/${restAreaSlug}/ev` },
     { name: '편의시설', href: `/rest-areas/${restAreaSlug}/facilities` },
   ];
 
@@ -71,9 +69,9 @@ export default async function RestAreaLayout({ children, params }: Props) {
           {area.name} <span className="text-slate-400 font-semibold text-xl md:text-2xl">({area.directionName})</span>
         </h1>
         
-        <p className="text-slate-600 text-sm md:text-[15px] leading-relaxed max-w-4xl font-normal">
+        <p className="text-slate-650 text-sm md:text-[15px] leading-relaxed max-w-4xl font-normal">
           {area.highwayName} 노선에 있는 {area.name}({area.directionName}) 휴게소의 실시간 편의 정보 포털 가이드입니다. 
-          도로공사 지정 대표 음식부터 알뜰주유소 실시간 기름값 가격표, 전기차 충전 설비 및 다양한 고객 편의시설 정보를 모아서 자세하게 전해드립니다.
+          도로공사 지정 대표 음식(맛집) 정보부터 수유실, 샤워실, 수면실 등 운전자와 동승자를 위한 다양한 고객 편의시설 정보를 상세하게 안내해 드립니다.
         </p>
       </div>
 

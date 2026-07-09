@@ -313,7 +313,7 @@ export default function GasIndexPage() {
                           {price ? `${price.toLocaleString()}원` : '정보 없음'}
                         </span>
                         <a 
-                          href={`/rest-areas/${station.slug}/gas`}
+                          href={`/gas/${station.slug}`}
                           className="bg-slate-900 hover:bg-slate-800 text-white text-[10.5px] font-bold px-2.5 py-1.5 rounded-lg transition-colors"
                         >
                           가격 추이 &rarr;
