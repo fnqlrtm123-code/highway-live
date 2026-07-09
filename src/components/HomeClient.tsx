@@ -506,10 +506,10 @@ export default function HomeClient() {
               <div className="pt-4 first:pt-0 space-y-1.5">
                 <h3 className="font-bold text-slate-850 text-xs md:text-sm flex items-start gap-1.5 leading-snug">
                   <span className="text-blue-600 font-extrabold shrink-0">Q.</span>
-                  고속도로 실시간 CCTV 화면은 얼마나 자주 갱신되나요?
+                  고속도로 실시간 CCTV 화면은 어디서 확인하나요?
                 </h3>
                 <p className="text-slate-500 text-[11.5px] md:text-xs leading-relaxed pl-4 font-medium">
-                  로드플러스의 CCTV 영상은 국토교통부 및 한국도로공사의 공공 API 피드를 연동하여 실시간 스트리밍 형태로 송출됩니다. 네트워크 품질이나 도로공사 서버 상태에 따라 5~10초 내외의 지연이나 로딩이 있을 수 있습니다.
+                  로드플러스 사이트에서는 직접 CCTV 비디오 스트리밍을 송출하지 않습니다. 전국 고속도로 및 국도의 구체적인 실시간 CCTV 라이브 화면은 국토교통부 국가교통정보센터(ITS) 홈페이지, 한국도로공사 로드플러스 공식 사이트, 혹은 네이버 지도 및 카카오맵 어플리케이션의 교통 레이어를 활성화하여 간편하게 시청하실 수 있습니다.
                 </p>
               </div>
 
