@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import AdSense from "@/components/AdSense";
+import Script from "next/script";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -43,6 +44,12 @@ export default function RootLayout({
     >
       <head />
       <body className="min-h-full flex flex-col bg-white text-slate-900 font-sans antialiased">
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1647402852124552"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
 
 
         {/* 2. 글로벌 헤더 (모던 화이트 글래스 테마) */}

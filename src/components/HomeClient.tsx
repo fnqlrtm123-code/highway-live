@@ -157,7 +157,7 @@ export default function HomeClient() {
 
       {/* 애드센스 */}
       <div className="max-w-[1000px] mx-auto px-4 mt-8">
-        <AdSense slot="1122334455" />
+        <AdSense slot="3342272844" />
       </div>
 
       {/* 2. 메인 4대 섹션 영역 (세로열로 배치하여 컨테이너 없이 직관적으로 구성) */}
@@ -389,6 +389,8 @@ export default function HomeClient() {
 
         <hr className="border-slate-100" />
 
+        <AdSense slot="3342272844" />
+
         {/* [섹션 3] 주유소 유가 비교 & 전기차 충전소 */}
         <section className="space-y-6">
           <div className="border-b pb-3.5 border-slate-100">
@@ -507,6 +509,8 @@ export default function HomeClient() {
         </section>
 
         <hr className="border-slate-100" />
+
+        <AdSense slot="3342272844" />
 
         {/* [섹션 5] 자주 묻는 질문 FAQ */}
         <section className="space-y-6 pb-8">
