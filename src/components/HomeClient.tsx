@@ -576,6 +576,58 @@ export default function HomeClient() {
         </section>
       </div>
 
+      {/* FAQ Structured Data (JSON-LD) for Search Engine Rich Snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "고속도로 실시간 CCTV 화면은 어디서 확인하나요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "전국 고속도로 및 국도의 구체적인 실시간 CCTV 라이브 화면은 국토교통부 국가교통정보센터(ITS) 홈페이지, 한국도로공사 로드플러스 공식 사이트, 혹은 네이버 지도 및 카카오맵 어플리케이션의 교통 레이어를 활성화하여 간편하게 시청하실 수 있습니다."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "알뜰주유소와 일반 휴게소 주유소의 유가 정보는 실시간인가요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "네, 한국석유공사 오피넷(Opinet) 및 도로공사 주유소 실시간 유가 API를 기반으로 휘발유, 경유 가격을 매 시각 갱신하여 비교합니다. 단, 주유소별 가격 신고 시점에 따라 실제 현장 고시 가격과 몇 원 단위의 소폭의 차이가 있을 수 있습니다."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "휴게소 전기차(EV) 충전소의 사용 현황도 조회가 가능한가요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "각 휴게소별 전기차 급속 및 초급속 충전기 개수가 등록되어 제공됩니다. 충전소의 현재 대기 대수나 점검 상태 등 실시간 가동 상태 정보는 공공 API 응답 기준에 따라 차례대로 업데이트 중입니다."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "고속도로 통행료 계산 요금과 실제 통행료가 다를 수 있나요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "요금 계산기는 1종 승용차 기준 거리비례식(기본요금 + 주행거리 요금)으로 연산됩니다. 하이패스 할인(출퇴근 할인 등), 주말 할증, 혹은 민자 고속도로 터널·교량 별도 요금이 부과되는 특수 구간에서는 실제 고지되는 통행료와 소폭 편차가 있을 수 있습니다."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "휴게소 맛집 메뉴와 수유실/샤워실 등의 편의시설은 최신인가요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "네, 도로공사에서 제공하는 전국 고속도로 휴게소의 대표 음식 및 편의시설 표준 마스터 데이터를 연산하여 실시간 수준으로 가공 제공하고 있습니다. 휴게소 내부 인테리어 공사나 식당 교체 등으로 일시적으로 변경되는 부분도 점진적으로 업데이트하고 있습니다."
+                }
+              }
+            ]
+          })
+        }}
+      />
     </main>
   );
 }

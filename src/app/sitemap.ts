@@ -18,6 +18,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ranking",
     "/privacy",
     "/terms",
+    "/facilities",
+    "/notice",
+    "/forecast",
+    "/broadcast",
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
@@ -34,7 +38,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  // 3. 고속도로 휴게소 개별 맛집/편의시설 상세 페이지
+  // 3. 고속도로 노선 일반 상세 페이지
+  const highwayPages = roads.map((road) => ({
+    url: `${baseUrl}/highways/${encodeURIComponent(road.slug)}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.6,
+  }));
+
+  // 4. 고속도로 휴게소 개별 맛집/편의시설 상세 페이지
   const restAreaPages = serviceAreas.map((area) => ({
     url: `${baseUrl}/rest-areas/${encodeURIComponent(area.slug)}`,
     lastModified: new Date(),
@@ -42,5 +54,38 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...roadPages, ...restAreaPages];
+  // 5. 주유소 상세 페이지
+  const gasPages = serviceAreas.map((area) => ({
+    url: `${baseUrl}/gas/${encodeURIComponent(area.slug)}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.6,
+  }));
+
+  // 6. 전기차 충전 상세 페이지
+  const evPages = serviceAreas.map((area) => ({
+    url: `${baseUrl}/ev/${encodeURIComponent(area.slug)}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.6,
+  }));
+
+  // 7. 편의시설 카테고리 상세 페이지
+  const facilitySlugs = ['baby-room', 'shower', 'sleep', 'dog', 'pharmacy', 'atm'];
+  const facilityPages = facilitySlugs.map((slug) => ({
+    url: `${baseUrl}/facilities/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.5,
+  }));
+
+  return [
+    ...staticPages,
+    ...roadPages,
+    ...highwayPages,
+    ...restAreaPages,
+    ...gasPages,
+    ...evPages,
+    ...facilityPages
+  ];
 }

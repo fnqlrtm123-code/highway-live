@@ -22,6 +22,16 @@ export const metadata: Metadata = {
   description: "전국 고속도로 실시간 교통상황 CCTV 영상, 노선별 상하행 휴게소 대표 음식, 알뜰주유소 실시간 유가 정보 및 전기차 충전기 현황을 한눈에 제공하는 필수 교통 가이드입니다.",
   keywords: ["고속도로 cctv", "실시간 교통상황", "휴게소 맛집", "휴게소 주유소 기름값", "전국 고속도로 지도", "상행 하행 맛집", "전기차 충전소", "알뜰주유소 최저가"],
   metadataBase: new URL("https://highway.mrbrisbaneinsouth.kr"), // Placeholder production domain
+  alternates: {
+    canonical: "/",
+  },
+  verification: {
+    google: "JyJRp5nIpMXkqus5LHoa1TpiwkTWxkeWn3g_D7j739E",
+    other: {
+      "msvalidate.01": "72FE2EED9E2A787ABAD7AC2E77CB6992",
+      "naver-site-verification": "1e33c0ce1d7ba9913442f8a4cc06ed97f2611834",
+    },
+  },
   openGraph: {
     title: "로드플러스 - 실시간 고속도로 CCTV & 휴게소 맛집 정보",
     description: "전국 고속도로의 실시간 교통상황 CCTV 영상, 노선별 상·하행 휴게소 대표 음식, 알뜰주유소 실시간 유가 정보 및 전기차 충전기 현황을 제공합니다.",
