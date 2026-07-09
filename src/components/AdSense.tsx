@@ -11,6 +11,7 @@ interface AdSenseProps {
 
 export default function AdSense({ slot = '3342272844', className = '', style = {}, type }: AdSenseProps) {
   const initialized = useRef(false);
+  const activeSlot = '3342272844'; // Force user's active AdSense slot across all ad placements
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -23,7 +24,7 @@ export default function AdSense({ slot = '3342272844', className = '', style = {
     } catch (err) {
       console.warn('AdSense push failed: ', err);
     }
-  }, [slot]);
+  }, []);
 
   if (type === 'sticky-bottom') {
     return (
@@ -33,7 +34,7 @@ export default function AdSense({ slot = '3342272844', className = '', style = {
             className="adsbygoogle"
             style={{ display: 'block', minHeight: '90px', ...style }}
             data-ad-client="ca-pub-1647402852124552"
-            data-ad-slot={slot}
+            data-ad-slot={activeSlot}
             data-ad-format="horizontal"
             data-full-width-responsive="false"
           />
@@ -48,7 +49,7 @@ export default function AdSense({ slot = '3342272844', className = '', style = {
         className="adsbygoogle"
         style={{ display: 'block', width: '100%', ...style }}
         data-ad-client="ca-pub-1647402852124552"
-        data-ad-slot={slot}
+        data-ad-slot={activeSlot}
         data-ad-format="auto"
         data-full-width-responsive="true"
       />
