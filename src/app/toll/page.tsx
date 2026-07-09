@@ -244,7 +244,7 @@ export default function TollIndexPage() {
           {/* 계산 결과 영역 */}
           <div className="border-t border-slate-100 pt-6">
             {calculationResult.hasError ? (
-              <div className="py-8 text-center text-slate-400 text-xs font-extrabold bg-slate-50 rounded-xl border border-slate-100">
+              <div className="py-8 text-center text-slate-500 text-xs font-black bg-slate-50 rounded-xl border border-slate-100">
                 출발지와 도착지가 동일합니다. 다른 경로를 선택해 주세요.
               </div>
             ) : (
@@ -254,7 +254,7 @@ export default function TollIndexPage() {
                 <div className="md:col-span-5 space-y-4">
                   <div>
                     <div className="flex items-center gap-1.5">
-                      <span className="text-[10px] text-slate-400 font-extrabold uppercase tracking-wider">예상 통행 요금</span>
+                      <span className="text-[10px] text-slate-500 font-black uppercase tracking-wider">예상 통행 요금</span>
                       {calculationResult.isOfficial && (
                         <span className="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded text-[9px] font-black border border-blue-100">
                           공공데이터
@@ -262,28 +262,28 @@ export default function TollIndexPage() {
                       )}
                     </div>
                     <div className="flex items-baseline gap-1 mt-1">
-                      <span className="font-mono text-4xl md:text-5xl font-black text-blue-600 tracking-tight">
+                      <span className="font-mono text-4xl md:text-5xl font-black text-blue-700 tracking-tight">
                         {calculationResult.toll.toLocaleString()}
                       </span>
-                      <span className="text-lg font-black text-slate-500">원</span>
+                      <span className="text-lg font-black text-slate-700">원</span>
                     </div>
                   </div>
 
                   {/* 차종별 정보 설명 */}
-                  <p className="text-xs text-slate-400 font-semibold leading-relaxed">
+                  <p className="text-xs text-slate-600 font-bold leading-relaxed">
                     {VEHICLE_CLASSES.find(c => c.id === vehicleId)?.name} &middot; {VEHICLE_CLASSES.find(c => c.id === vehicleId)?.description}
                   </p>
 
                   {/* 소요거리 및 시간 */}
                   <div className="flex gap-5 text-xs pt-1">
-                    <div className="flex items-center gap-1 text-slate-600 font-extrabold">
-                      <svg className="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                    <div className="flex items-center gap-1 text-slate-800 font-black">
+                      <svg className="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" />
                       </svg>
                       <span>{calculationResult.dist} km</span>
                     </div>
-                    <div className="flex items-center gap-1 text-slate-600 font-extrabold">
-                      <svg className="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                    <div className="flex items-center gap-1 text-slate-800 font-black">
+                      <svg className="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                       <span>{calculationResult.time}</span>
@@ -293,23 +293,23 @@ export default function TollIndexPage() {
 
                 {/* 오른쪽: 할인 및 결제수단 비교 (7열) */}
                 <div className="md:col-span-7 space-y-3">
-                  <span className="text-[10px] text-slate-400 font-extrabold uppercase tracking-wider block">할인 및 결제 수단별 비교</span>
+                  <span className="text-[10px] text-slate-500 font-black uppercase tracking-wider block">할인 및 결제 수단별 비교</span>
                   <div className="divide-y divide-slate-100 border-t border-b border-slate-100">
                     <div className="flex justify-between items-center py-2.5">
-                      <span className="text-xs text-slate-600 font-semibold">일반 요금 (현금/신용카드)</span>
-                      <span className="text-sm font-mono font-black text-slate-700">
+                      <span className="text-xs text-slate-700 font-bold">일반 요금 (현금/신용카드)</span>
+                      <span className="text-sm font-mono font-black text-slate-800">
                         {(calculationResult.toll + (calculationResult.isOfficial ? 0 : 200)).toLocaleString()}원
                       </span>
                     </div>
                     <div className="flex justify-between items-center py-2.5">
-                      <span className="text-xs text-blue-600 font-bold">하이패스 (기본할인 적용)</span>
-                      <span className="text-sm font-mono font-black text-blue-600">
+                      <span className="text-xs text-blue-700 font-black">하이패스 (기본할인 적용)</span>
+                      <span className="text-sm font-mono font-black text-blue-700">
                         {Math.round(calculationResult.toll * 0.95 / 10 * 10).toLocaleString()}원
                       </span>
                     </div>
                     <div className="flex justify-between items-center py-2.5">
-                      <span className="text-xs text-emerald-600 font-bold">경차 할인 (50% 감면 대상)</span>
-                      <span className="text-sm font-mono font-black text-emerald-600">
+                      <span className="text-xs text-emerald-700 font-black">경차 할인 (50% 감면 대상)</span>
+                      <span className="text-sm font-mono font-black text-emerald-700">
                         {calculationResult.lightCarToll.toLocaleString()}원
                       </span>
                     </div>
@@ -321,7 +321,7 @@ export default function TollIndexPage() {
           </div>
 
           {/* 하단 API 안내 문구 */}
-          <div className="text-[10px] text-slate-400 leading-relaxed pt-3 border-t border-slate-100">
+          <div className="text-[10px] text-slate-500 leading-relaxed pt-3 border-t border-slate-100 font-semibold">
             {calculationResult.isOfficial ? (
               <span>* 본 정보는 한국도로공사 공공데이터 API를 실시간 연동한 데이터입니다. 출퇴근 시간대/주말 할인 등 세부 하이패스 정기 요율에 따라 일부 차이가 발생할 수 있습니다.</span>
             ) : (
@@ -344,18 +344,18 @@ export default function TollIndexPage() {
                 <span className="w-1 bg-blue-600 h-4 rounded-full inline-block"></span>
                 하이패스 주요 할인제도 안내
               </h2>
-              <div className="space-y-4 text-xs font-semibold">
+              <div className="space-y-4 text-xs font-bold">
                 <div className="space-y-1">
-                  <span className="text-[10px] text-blue-600 font-extrabold uppercase">평일 출퇴근 할인</span>
-                  <p className="text-slate-700">평일 출근(05시~09시) 및 퇴근(18시~22시) 시 요금을 20%~50% 차등 할인합니다.</p>
+                  <span className="text-[10px] text-blue-700 font-black uppercase">평일 출퇴근 할인</span>
+                  <p className="text-slate-800 font-semibold leading-relaxed">평일 출근(05시~09시) 및 퇴근(18시~22시) 시 요금을 20%~50% 차등 할인합니다.</p>
                 </div>
                 <div className="space-y-1">
-                  <span className="text-[10px] text-emerald-600 font-extrabold uppercase">친환경차 50% 할인</span>
-                  <p className="text-slate-700">전기자동차 및 수소전기자동차 전용 단말기를 부착해 이용할 경우 요금을 50% 감면합니다.</p>
+                  <span className="text-[10px] text-emerald-700 font-black uppercase">친환경차 50% 할인</span>
+                  <p className="text-slate-800 font-semibold leading-relaxed">전기자동차 및 수소전기자동차 전용 단말기를 부착해 이용할 경우 요금을 50% 감면합니다.</p>
                 </div>
                 <div className="space-y-1">
-                  <span className="text-[10px] text-purple-600 font-extrabold uppercase">경차 50% 할인</span>
-                  <p className="text-slate-700">배기량 1,000cc 미만의 경형 승용차(모닝, 레이, 캐스퍼 등)는 50% 자동 상시 감면됩니다.</p>
+                  <span className="text-[10px] text-purple-700 font-black uppercase">경차 50% 할인</span>
+                  <p className="text-slate-800 font-semibold leading-relaxed">배기량 1,000cc 미만의 경형 승용차(모닝, 레이, 캐스퍼 등)는 50% 자동 상시 감면됩니다.</p>
                 </div>
               </div>
             </section>
@@ -366,14 +366,14 @@ export default function TollIndexPage() {
                 <span className="w-1 bg-blue-600 h-4 rounded-full inline-block"></span>
                 미납 통행료 조회 및 편리한 납부 수단
               </h2>
-              <div className="space-y-4 text-xs font-semibold">
+              <div className="space-y-4 text-xs font-bold">
                 <div className="space-y-1">
-                  <span className="text-[10px] text-slate-500 font-extrabold uppercase">간편 조회 방법</span>
-                  <p className="text-slate-700">도로공사 홈페이지, 공식 앱, 또는 전용 콜센터(1588-2504)에서 즉시 조회할 수 있습니다.</p>
+                  <span className="text-[10px] text-slate-600 font-black uppercase">간편 조회 방법</span>
+                  <p className="text-slate-800 font-semibold leading-relaxed">도로공사 홈페이지, 공식 앱, 또는 전용 콜센터(1588-2504)에서 즉시 조회할 수 있습니다.</p>
                 </div>
                 <div className="space-y-1">
-                  <span className="text-[10px] text-slate-500 font-extrabold uppercase">결제 수단</span>
-                  <p className="text-slate-700">톨게이트 영업소 창구 납부뿐만 아니라 전국 편의점 무인기기, 카카오페이/네이버페이 등으로 손쉽게 스마트 납부가 가능합니다.</p>
+                  <span className="text-[10px] text-slate-600 font-black uppercase">결제 수단</span>
+                  <p className="text-slate-800 font-semibold leading-relaxed">톨게이트 영업소 창구 납부뿐만 아니라 전국 편의점 무인기기, 카카오페이/네이버페이 등으로 손쉽게 스마트 납부가 가능합니다.</p>
                 </div>
               </div>
             </section>
@@ -387,22 +387,22 @@ export default function TollIndexPage() {
               차종별 구분 기준 및 가중치
             </h2>
             <div className="overflow-x-auto border border-slate-100 rounded-xl bg-white">
-              <table className="w-full text-left text-xs border-collapse font-semibold">
+              <table className="w-full text-left text-xs border-collapse font-bold">
                 <thead>
-                  <tr className="bg-slate-50 border-b border-slate-100 text-slate-500">
+                  <tr className="bg-slate-50 border-b border-slate-100 text-slate-700">
                     <th className="py-2.5 px-4 font-black w-24">구분</th>
                     <th className="py-2.5 px-4 font-black">차종 설명</th>
                     <th className="py-2.5 px-4 font-black">대표 차량 예시</th>
                     <th className="py-2.5 px-4 font-black text-right">요율</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-50 font-medium text-slate-600">
+                <tbody className="divide-y divide-slate-50 font-semibold text-slate-800">
                   {VEHICLE_CLASSES.map((v) => (
                     <tr key={v.id} className="hover:bg-slate-50/30 transition-colors">
                       <td className="py-3 px-4 font-black text-slate-900">{v.name}</td>
                       <td className="py-3 px-4">{v.description}</td>
-                      <td className="py-3 px-4 text-slate-400 font-bold">{v.examples}</td>
-                      <td className="py-3 px-4 text-right font-mono font-black text-blue-600">{(v.baseRate * 100).toFixed(0)}%</td>
+                      <td className="py-3 px-4 text-slate-700 font-bold">{v.examples}</td>
+                      <td className="py-3 px-4 text-right font-mono font-black text-blue-700">{(v.baseRate * 100).toFixed(0)}%</td>
                     </tr>
                   ))}
                 </tbody>
