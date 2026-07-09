@@ -78,6 +78,13 @@ export default function RootLayout({
           </div>
         </header>
 
+        {/* Global Header Ad */}
+        <div className="w-full bg-white border-b border-slate-100">
+          <div className="mx-auto max-w-[1000px] px-4 py-1">
+            <AdSense slot="3342272844" />
+          </div>
+        </div>
+
         {/* 메인 콘텐트 */}
         <div className="flex-grow flex flex-col">
           {children}

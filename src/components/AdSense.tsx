@@ -1,20 +1,27 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 interface AdSenseProps {
   slot?: string;
   className?: string;
+  style?: React.CSSProperties;
   type?: string;
 }
 
-export default function AdSense({ slot = '3342272844', className = '', type }: AdSenseProps) {
+export default function AdSense({ slot = '3342272844', className = '', style = {}, type }: AdSenseProps) {
+  const initialized = useRef(false);
+
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     try {
-      // @ts-ignore
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
+      if (!initialized.current) {
+        ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
+        initialized.current = true;
+      }
     } catch (err) {
-      console.error('AdSense push error:', err);
+      console.warn('AdSense push failed: ', err);
     }
   }, [slot]);
 
@@ -24,7 +31,7 @@ export default function AdSense({ slot = '3342272844', className = '', type }: A
         <div className="w-full max-w-[970px] px-4">
           <ins
             className="adsbygoogle"
-            style={{ display: 'block', minHeight: '90px' }}
+            style={{ display: 'block', minHeight: '90px', ...style }}
             data-ad-client="ca-pub-1647402852124552"
             data-ad-slot={slot}
             data-ad-format="horizontal"
@@ -36,10 +43,10 @@ export default function AdSense({ slot = '3342272844', className = '', type }: A
   }
 
   return (
-    <div className={`my-8 flex justify-center w-full overflow-hidden ${className}`}>
+    <div className={`w-full flex justify-center py-2 overflow-hidden min-h-[90px] ${className}`} style={style}>
       <ins
         className="adsbygoogle"
-        style={{ display: 'block', width: '100%', minHeight: '90px' }}
+        style={{ display: 'block', width: '100%', ...style }}
         data-ad-client="ca-pub-1647402852124552"
         data-ad-slot={slot}
         data-ad-format="auto"

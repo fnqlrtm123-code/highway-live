@@ -154,12 +154,6 @@ export default function HomeClient() {
           </div>
         </div>
       </section>
-
-      {/* 애드센스 */}
-      <div className="max-w-[1000px] mx-auto px-4 mt-8">
-        <AdSense slot="3342272844" />
-      </div>
-
       {/* 2. 메인 4대 섹션 영역 (세로열로 배치하여 컨테이너 없이 직관적으로 구성) */}
       <div className="max-w-[1000px] mx-auto px-4 mt-10 space-y-12 md:space-y-16">
         
