@@ -67,19 +67,7 @@ export default function RootLayout({
               <a href="/toll" className="px-3.5 py-2 text-[13px] font-semibold rounded-lg text-slate-650 hover:text-slate-950 hover:bg-slate-100/50 transition-all">고속도로 통행료</a>
             </nav>
 
-            {/* 우측 유틸리티 액션 */}
-            <div className="flex items-center gap-3">
-              <a 
-                href="/traffic" 
-                className="flex items-center gap-1.5 rounded-xl bg-blue-600 px-3.5 py-2 text-xs font-bold text-white hover:bg-blue-500 transition-all duration-200 shadow-xs"
-              >
-                <span className="relative flex h-1.5 w-1.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-500"></span>
-                </span>
-                실시간 상황판
-              </a>
-            </div>
+
           </div>
         </header>
 
