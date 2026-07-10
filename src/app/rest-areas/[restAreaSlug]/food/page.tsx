@@ -12,9 +12,23 @@ export async function generateMetadata({ params }: { params: Promise<{ restAreaS
   const area = getServiceAreaBySlug(restAreaSlug);
   if (!area) return {};
 
+  const pageUrl = `https://highway.mrbrisbaneinsouth.kr/rest-areas/${restAreaSlug}/food`;
+  const title = `${area.name} (${area.directionName}) 맛집 메뉴판 & 추천 대표음식 가격표`;
+  const description = `${area.name} (${area.directionName}) 휴게소의 대표 인기 음식인 ${area.signatureMenu.name}(${area.signatureMenu.price.toLocaleString()}원) 정보와 함께 식당가 푸드코트, 우동·라면 분식류 및 간식 코너 전체 메뉴 가격표를 실시간으로 확인해보세요.`;
+
   return {
-    title: `${area.name} (${area.directionName}) 맛집 메뉴판 & 추천 대표음식 가격표`,
-    description: `${area.name} (${area.directionName}) 휴게소의 대표 인기 음식인 ${area.signatureMenu.name}(${area.signatureMenu.price.toLocaleString()}원) 정보와 함께 식당가 푸드코트, 우동·라면 분식류 및 간식 코너 전체 메뉴 가격표를 실시간으로 확인해보세요.`,
+    title,
+    description,
+    alternates: {
+      canonical: pageUrl,
+    },
+    openGraph: {
+      title,
+      description,
+      url: pageUrl,
+      type: "website",
+      locale: "ko_KR",
+    }
   };
 }
 

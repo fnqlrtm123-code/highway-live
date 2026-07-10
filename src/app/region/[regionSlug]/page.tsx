@@ -13,9 +13,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const region = REGIONS.find((r) => r.slug === regionSlug);
   if (!region) return {};
 
+  const pageUrl = `https://highway.mrbrisbaneinsouth.kr/region/${regionSlug}`;
+  const title = `${region.fullName} 고속도로 휴게소 목록 - 대표 먹거리 및 주유소 유가`;
+  const description = `${region.fullName} 지역을 지나는 고속도로 상하행 휴게소 목록을 제공합니다. 대표 음식, 알뜰주유소 실시간 기름값 및 전기차 충전 현황을 비교해보세요.`;
+
   return {
-    title: `${region.fullName} 고속도로 휴게소 목록 - 대표 먹거리 및 주유소 유가`,
-    description: `${region.fullName} 지역을 지나는 고속도로 상하행 휴게소 목록을 제공합니다. 대표 음식, 알뜰주유소 실시간 기름값 및 전기차 충전 현황을 비교해보세요.`,
+    title,
+    description,
+    alternates: {
+      canonical: pageUrl,
+    },
+    openGraph: {
+      title,
+      description,
+      url: pageUrl,
+      type: "website",
+      locale: "ko_KR",
+    }
   };
 }
 

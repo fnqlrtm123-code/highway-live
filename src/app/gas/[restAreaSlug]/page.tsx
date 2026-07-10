@@ -12,12 +12,26 @@ export async function generateMetadata({ params }: { params: Promise<{ restAreaS
   const area = getServiceAreaBySlug(restAreaSlug);
   if (!area) return {};
 
+  const pageUrl = `https://highway.mrbrisbaneinsouth.kr/gas/${restAreaSlug}`;
+  const title = `${area.name} (${area.directionName}) 주유소 가격 휘발유 실시간 가격 비교`;
   const lpgText = area.gasStation.lpgPrice ? ` 및 LPG 충전소 가격` : '';
+  const description = `${area.name} (${area.directionName}) 휴게소에 위치한 ${area.gasStation.brand} 주유소의 실시간 휘발유(${area.gasStation.gasolinePrice.toLocaleString()}원), 경유(${area.gasStation.dieselPrice.toLocaleString()}원)${lpgText} 정보와 함께 알뜰 주유소 주유 팁을 확인하세요.`;
+
   return {
     title: {
-      absolute: `${area.name} (${area.directionName}) 주유소 가격 휘발유 실시간 가격 비교`
+      absolute: title
     },
-    description: `${area.name} (${area.directionName}) 휴게소에 위치한 ${area.gasStation.brand} 주유소의 실시간 휘발유(${area.gasStation.gasolinePrice.toLocaleString()}원), 경유(${area.gasStation.dieselPrice.toLocaleString()}원)${lpgText} 정보와 함께 알뜰 주유소 주유 팁을 확인하세요.`,
+    description,
+    alternates: {
+      canonical: pageUrl,
+    },
+    openGraph: {
+      title,
+      description,
+      url: pageUrl,
+      type: "website",
+      locale: "ko_KR",
+    }
   };
 }
 

@@ -21,9 +21,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const info = facilityMap[facility];
   if (!info) return {};
 
+  const pageUrl = `https://highway.mrbrisbaneinsouth.kr/facilities/${facility}`;
+  const title = `${info.name} 있는 고속도로 휴게소 목록 - 실시간 편의정보`;
+  const description = `${info.desc} 노선별 상행/하행 위치 정보를 한눈에 간편하게 확인해보세요.`;
+
   return {
-    title: `${info.name} 있는 고속도로 휴게소 목록 - 실시간 편의정보`,
-    description: `${info.desc} 노선별 상행/하행 위치 정보를 한눈에 간편하게 확인해보세요.`,
+    title,
+    description,
+    alternates: {
+      canonical: pageUrl,
+    },
+    openGraph: {
+      title,
+      description,
+      url: pageUrl,
+      type: "website",
+      locale: "ko_KR",
+    }
   };
 }
 

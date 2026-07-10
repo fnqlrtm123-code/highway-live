@@ -24,7 +24,7 @@ export default function Breadcrumb({ items }: Props) {
       '@type': 'ListItem',
       'position': index + 1,
       'name': item.name,
-      'item': item.href ? `https://highway-live.pages.dev${item.href}` : undefined
+      'item': item.href ? `https://highway.mrbrisbaneinsouth.kr${item.href}` : undefined
     }))
   };
 

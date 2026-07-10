@@ -10,14 +10,28 @@ interface Props {
 
 // SEO 동적 메타데이터 생성
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { section } = await params;
+  const { highway: highwaySlug, section } = await params;
   const cctv = getCctvPointById(section);
   if (!cctv) return {};
 
+  const pageUrl = `https://highway.mrbrisbaneinsouth.kr/cctv/${highwaySlug}/${section}`;
+  const title = `${cctv.highwayName} ${cctv.name} (${cctv.direction}) 실시간 CCTV 상황판`;
+  const description = `${cctv.highwayName} ${cctv.name} (${cctv.direction})의 실시간 교통상황 CCTV 영상을 확인하세요. 제한 속도 ${cctv.speedLimit} km/h 구간으로, 현재 주행 평균 속도는 ${cctv.currentSpeed} km/h 이며 통행 상태는 ${cctv.status === 'smooth' ? '원활' : cctv.status === 'slow' ? '서행' : '정체'}입니다.`;
+
   return {
-    title: `${cctv.highwayName} ${cctv.name} (${cctv.direction}) 실시간 CCTV 상황판`,
-    description: `${cctv.highwayName} ${cctv.name} (${cctv.direction})의 실시간 교통상황 CCTV 영상을 확인하세요. 제한 속도 ${cctv.speedLimit} km/h 구간으로, 현재 주행 평균 속도는 ${cctv.currentSpeed} km/h 이며 통행 상태는 ${cctv.status === 'smooth' ? '원활' : cctv.status === 'slow' ? '서행' : '정체'}입니다.`,
-    keywords: [`${cctv.name} cctv`, `${cctv.highwayName} cctv`, `${cctv.name} 실시간 교통상황`, `${cctv.name} 교통카메라`, `고속도로 실시간 cctv`]
+    title,
+    description,
+    keywords: [`${cctv.name} cctv`, `${cctv.highwayName} cctv`, `${cctv.name} 실시간 교통상황`, `${cctv.name} 교통카메라`, `고속도로 실시간 cctv`],
+    alternates: {
+      canonical: pageUrl,
+    },
+    openGraph: {
+      title,
+      description,
+      url: pageUrl,
+      type: "website",
+      locale: "ko_KR",
+    }
   };
 }
 

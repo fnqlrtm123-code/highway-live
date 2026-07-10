@@ -16,9 +16,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const highway = getHighwayBySlug(highwaySlug);
   if (!highway) return {};
 
+  const pageUrl = `https://highway.mrbrisbaneinsouth.kr/highways/${highwaySlug}`;
+  const title = `${highway.name} 노선 종합 상세 정보 - 휴게소, 주유소, 교통상황`;
+  const description = `${highway.name}의 기종점, 총연장, 전체 휴게소 편의시설, 맛집 메뉴, 알뜰주유소 실시간 가격 및 전기차 충전기 현황을 확인하세요.`;
+
   return {
-    title: `${highway.name} 노선 종합 상세 정보 - 휴게소, 주유소, 교통상황`,
-    description: `${highway.name}의 기종점, 총연장, 전체 휴게소 편의시설, 맛집 메뉴, 알뜰주유소 실시간 가격 및 전기차 충전기 현황을 확인하세요.`,
+    title,
+    description,
+    alternates: {
+      canonical: pageUrl,
+    },
+    openGraph: {
+      title,
+      description,
+      url: pageUrl,
+      type: "website",
+      locale: "ko_KR",
+    }
   };
 }
 

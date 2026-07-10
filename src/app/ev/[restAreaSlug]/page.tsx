@@ -12,13 +12,27 @@ export async function generateMetadata({ params }: { params: Promise<{ restAreaS
   const area = getServiceAreaBySlug(restAreaSlug);
   if (!area) return {};
 
+  const pageUrl = `https://highway.mrbrisbaneinsouth.kr/ev/${restAreaSlug}`;
+  const title = `${area.name} (${area.directionName}) 전기차 충전소 가격 운영 시간`;
   const hydrogenText = area.gasStation.hasHydrogen ? ' 및 수소 충전소 가능 여부' : '';
   const chargerCountText = area.gasStation.hasEvCharger ? `, 충전기 대수: ${area.gasStation.evChargersCount}대` : '';
+  const description = `${area.name} (${area.directionName}) 휴게소의 전기차(EV) 급속/완속 충전소 상세 위치${chargerCountText}${hydrogenText} 정보와 충전 표준 규격을 실시간으로 확인해보세요.`;
+
   return {
     title: {
-      absolute: `${area.name} (${area.directionName}) 전기차 충전소 가격 운영 시간`
+      absolute: title
     },
-    description: `${area.name} (${area.directionName}) 휴게소의 전기차(EV) 급속/완속 충전소 상세 위치${chargerCountText}${hydrogenText} 정보와 충전 표준 규격을 실시간으로 확인해보세요.`,
+    description,
+    alternates: {
+      canonical: pageUrl,
+    },
+    openGraph: {
+      title,
+      description,
+      url: pageUrl,
+      type: "website",
+      locale: "ko_KR",
+    }
   };
 }
 

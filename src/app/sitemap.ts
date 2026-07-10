@@ -1,5 +1,5 @@
 import { getRoadList } from "@/lib/roadData";
-import { serviceAreas } from "@/lib/data";
+import { serviceAreas, cctvPoints } from "@/lib/data";
 import { MetadataRoute } from "next";
 
 export const dynamic = "force-static";
@@ -46,9 +46,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  // 4. 고속도로 휴게소 개별 맛집/편의시설 상세 페이지
-  const restAreaPages = serviceAreas.map((area) => ({
+  // 4. 고속도로 휴게소 상세 페이지들
+  const restAreaMainPages = serviceAreas.map((area) => ({
     url: `${baseUrl}/rest-areas/${encodeURIComponent(area.slug)}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }));
+
+  // 4-1. 휴게소 음식/맛집 탭 서브페이지
+  const restAreaFoodPages = serviceAreas.map((area) => ({
+    url: `${baseUrl}/rest-areas/${encodeURIComponent(area.slug)}/food`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.6,
+  }));
+
+  // 4-2. 휴게소 편의시설 탭 서브페이지
+  const restAreaFacilityPages = serviceAreas.map((area) => ({
+    url: `${baseUrl}/rest-areas/${encodeURIComponent(area.slug)}/facilities`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.6,
@@ -79,13 +95,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
+  // 8. 개별 CCTV 플레이어 페이지 (CCTV 색인 생성용)
+  const cctvDetailPages = cctvPoints.map((cctv) => ({
+    url: `${baseUrl}/cctv/${cctv.highwaySlug}/${cctv.id}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.5,
+  }));
+
   return [
     ...staticPages,
     ...roadPages,
     ...highwayPages,
-    ...restAreaPages,
+    ...restAreaMainPages,
+    ...restAreaFoodPages,
+    ...restAreaFacilityPages,
     ...gasPages,
     ...evPages,
-    ...facilityPages
+    ...facilityPages,
+    ...cctvDetailPages
   ];
 }

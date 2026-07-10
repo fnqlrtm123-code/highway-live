@@ -16,19 +16,19 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: {
-    default: "로드플러스 전국 고속도로 실시간 CCTV 휴게소 맛집 주유소 가격",
-    template: "%s"
+    default: "로드플러스 | 전국 고속도로 실시간 CCTV 휴게소 맛집 주유소 가격",
+    template: "%s | 로드플러스"
   },
   description: "전국 고속도로 실시간 교통상황 CCTV 영상, 노선별 상하행 휴게소 대표 음식, 알뜰주유소 실시간 유가 정보 및 전기차 충전기 현황을 한눈에 제공하는 필수 교통 가이드입니다.",
   keywords: ["고속도로 cctv", "실시간 교통상황", "휴게소 맛집", "휴게소 주유소 기름값", "전국 고속도로 지도", "상행 하행 맛집", "전기차 충전소", "알뜰주유소 최저가"],
   metadataBase: new URL("https://highway.mrbrisbaneinsouth.kr"), // Placeholder production domain
   alternates: {
-    canonical: "/",
+    canonical: "https://highway.mrbrisbaneinsouth.kr",
   },
   verification: {
-    google: "여기에_고속도로_구글_인증키를_넣으세요",
+    google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION || "여기에_고속도로_구글_인증키를_넣으세요",
     other: {
-      "naver-site-verification": "여기에_고속도로_네이버_인증키를_넣으세요",
+      "naver-site-verification": process.env.NEXT_PUBLIC_NAVER_VERIFICATION || "여기에_고속도로_네이버_인증키를_넣으세요",
     },
   },
   openGraph: {
@@ -38,6 +38,11 @@ export const metadata: Metadata = {
     siteName: "로드플러스",
     locale: "ko_KR",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "로드플러스 - 실시간 고속도로 CCTV & 휴게소 맛집 정보",
+    description: "전국 고속도로의 실시간 교통상황 CCTV 영상, 노선별 상·하행 휴게소 대표 음식, 알뜰주유소 실시간 유가 정보 및 전기차 충전기 현황을 제공합니다.",
   }
 };
 

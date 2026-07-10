@@ -12,9 +12,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const highway = getHighwayBySlug(highwaySlug);
   if (!highway) return {};
 
+  const pageUrl = `https://highway.mrbrisbaneinsouth.kr/cctv/${highwaySlug}`;
+  const title = `${highway.name} 실시간 CCTV 보기 - 구간별 카메라 채널`;
+  const description = `${highway.name}에 설치된 실시간 교통상황 관제 CCTV 카메라 목록을 확인하세요. 지점별 실시간 주행 영상 및 평균속도 정보를 실시간으로 중계합니다.`;
+
   return {
-    title: `${highway.name} 실시간 CCTV 보기 - 구간별 카메라 채널`,
-    description: `${highway.name}에 설치된 실시간 교통상황 관제 CCTV 카메라 목록을 확인하세요. 지점별 실시간 주행 영상 및 평균속도 정보를 실시간으로 중계합니다.`,
+    title,
+    description,
+    alternates: {
+      canonical: pageUrl,
+    },
+    openGraph: {
+      title,
+      description,
+      url: pageUrl,
+      type: "website",
+      locale: "ko_KR",
+    }
   };
 }
 
