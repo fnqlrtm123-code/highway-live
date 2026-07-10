@@ -26,9 +26,10 @@ export const metadata: Metadata = {
     canonical: "https://highway.mrbrisbaneinsouth.kr",
   },
   verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION || "여기에_고속도로_구글_인증키를_넣으세요",
+    google: "JyJRp5nIpMXkqus5LHoa1TpiwkTWxkeWn3g_D7j739E",
     other: {
-      "naver-site-verification": process.env.NEXT_PUBLIC_NAVER_VERIFICATION || "여기에_고속도로_네이버_인증키를_넣으세요",
+      "naver-site-verification": "e4c50a32ba69bfcc00ab539fc0d7c71f096197df",
+      "msvalidate.01": "72FE2EED9E2A787ABAD7AC2E77CB6992",
     },
   },
   openGraph: {
