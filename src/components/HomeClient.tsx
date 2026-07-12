@@ -514,7 +514,7 @@ export default function HomeClient() {
               자주 묻는 질문 FAQ
             </h2>
             <p className="text-slate-500 text-xs md:text-[13px] mt-1 font-medium">
-              로드플러스 이용자들이 가장 많이 묻는 유가, CCTV, 전기차 충전소 관련 질문들을 모았습니다.
+              로드픽 이용자들이 가장 많이 묻는 유가, CCTV, 전기차 충전소 관련 질문들을 모았습니다.
             </p>
           </div>
 

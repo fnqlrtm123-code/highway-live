@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "개인정보처리방침",
-  description: "로드플러스 고속도로 정보 포털의 개인정보처리방침을 안내합니다. 본 사이트는 별도의 개인정보를 직접 수집하지 않습니다.",
+  description: "로드픽 고속도로 정보 포털의 개인정보처리방침을 안내합니다. 본 사이트는 별도의 개인정보를 직접 수집하지 않습니다.",
   alternates: {
     canonical: "/privacy",
   },
@@ -21,7 +21,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-xl font-bold text-slate-900 mb-3">1. 개인정보의 수집 및 이용 목적</h2>
           <p className="text-slate-650">
-            로드플러스(이하 &quot;사이트&quot;)는 다음의 목적으로 정보를 이용합니다.
+            로드픽(이하 &quot;사이트&quot;)는 다음의 목적으로 정보를 이용합니다.
           </p>
           <ul className="list-disc pl-5 mt-2 text-slate-650 flex flex-col gap-1">
             <li>서비스 이용 통계 분석 및 서비스 환경 개선</li>

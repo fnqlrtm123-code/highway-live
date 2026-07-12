@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "이용약관",
-  description: "로드플러스 고속도로 정보 포털의 이용약관 및 서비스 제공 범위를 안내합니다. 본 사이트는 참고용 교통 가이드 포털입니다.",
+  description: "로드픽 고속도로 정보 포털의 이용약관 및 서비스 제공 범위를 안내합니다. 본 사이트는 참고용 교통 가이드 포털입니다.",
   alternates: {
     canonical: "/terms",
   },
@@ -21,7 +21,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-xl font-bold text-slate-900 mb-3">제1조 (목적)</h2>
           <p className="text-slate-650">
-            본 약관은 로드플러스 고속도로 정보 포털(이하 &quot;사이트&quot;)이 제공하는 정보 제공 서비스의 이용 조건 및 면책 사항 등에 관한 기본 내용을 규정하는 것을 목적으로 합니다.
+            본 약관은 로드픽 고속도로 정보 포털(이하 &quot;사이트&quot;)이 제공하는 정보 제공 서비스의 이용 조건 및 면책 사항 등에 관한 기본 내용을 규정하는 것을 목적으로 합니다.
           </p>
         </section>
 

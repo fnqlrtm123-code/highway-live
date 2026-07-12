@@ -50,7 +50,7 @@ export default function NoticePage() {
         <div className="max-w-[1240px] mx-auto px-4">
           <h1 className="text-2xl font-black mt-1">공지사항 및 자주 묻는 질문(FAQ)</h1>
           <p className="text-slate-400 text-xs mt-2 max-w-xl leading-relaxed">
-            로드플러스 라이브 서비스의 신규 기능 업데이트 소식과 공지사항, 그리고 실시간 고속도로 정보 조회 시 자주 문의하시는 질문들을 빠르게 답변해 드립니다.
+            로드픽 라이브 서비스의 신규 기능 업데이트 소식과 공지사항, 그리고 실시간 고속도로 정보 조회 시 자주 문의하시는 질문들을 빠르게 답변해 드립니다.
           </p>
         </div>
       </section>
