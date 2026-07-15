@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import TrafficHubClient from '@/components/TrafficHubClient';
 
 export const metadata: Metadata = {
-  title: '전국 실시간 교통상황 확인 고속도로 도시고속 국도 대교 CCTV 정체구간',
-  description: '경부고속도로, 영동고속도로, 서해안선 등 전국 주요 고속도로와 서울 경기 도시고속화도로, 전국 국도 및 주요 대교의 실시간 교통상황과 CCTV 모니터링, 우회도로 가이드를 실시간으로 안내합니다.',
+  title: '전국 교통상황 확인 고속도로 도시고속 국도 대교 CCTV 정체구간',
+  description: '경부고속도로, 영동고속도로, 서해안선 등 전국 주요 고속도로와 서울 경기 도시고속화도로, 전국 국도 및 주요 대교의 교통상황과 CCTV 모니터링, 우회도로 가이드를 실시간으로 안내합니다.',
 };
 
 export default function TrafficIndexPage() {
@@ -24,7 +24,7 @@ export default function TrafficIndexPage() {
           전국 실시간 도로 상황 모니터링
         </div>
         <h1 className="text-2.5xl md:text-3.5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-          전국 실시간 교통상황 확인 방법 (CCTV·정체구간·우회도로)
+          전국 교통상황 확인 방법 (CCTV·정체구간·우회도로)
         </h1>
         <p className="text-slate-500 text-xs md:text-[13.5px] leading-relaxed max-w-3xl font-medium">
           대한민국 전국 주요 고속도로, 도시고속도로(간선도로), 국도 및 주요 한강/지방 대교의 실시간 교통 흐름을 분류별로 확인해 보세요. 
@@ -129,7 +129,7 @@ export default function TrafficIndexPage() {
       <section className="space-y-4">
         <h2 className="text-[15px] font-bold text-slate-900 flex items-center gap-2">
           <span className="w-1 h-3.5 bg-blue-600 rounded-full inline-block"></span>
-          노선별 실시간 교통상황 &amp; CCTV 확인
+          노선별 교통상황 &amp; CCTV 확인
         </h2>
         <p className="text-slate-550 text-xs md:text-[12.5px]">
           아래 리스트에서 원하시는 도로를 선택하시면, 해당 노선 전체 구간별 주행 평속 현황, 연동 CCTV 영상, 그리고 정체 발생 시 활용할 우회도로 가이드를 조회하실 수 있습니다.

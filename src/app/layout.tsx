@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://highway.mrbrisbaneinsouth.kr"), // Placeholder production domain
   alternates: {
     canonical: "https://highway.mrbrisbaneinsouth.kr",
+    types: {
+      "application/rss+xml": "/rss.xml",
+    },
   },
   verification: {
     google: "JyJRp5nIpMXkqus5LHoa1TpiwkTWxkeWn3g_D7j739E",

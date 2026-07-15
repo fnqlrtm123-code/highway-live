@@ -115,7 +115,7 @@ export default async function HighwayDetailPage({ params }: Props) {
       {/* 내부 링크 퀵 버튼 */}
       <div className="bg-white border border-slate-200 p-4 flex flex-wrap gap-2 justify-center shadow-2xs">
         <a href={`/traffic/${highway.name.replace(/[^a-zA-Z0-9가-힣]+/g, '-').replace(/^-|-$/g, '')}`} className="bg-slate-900 hover:bg-slate-800 text-white font-bold px-4 py-2 text-xs transition-all">
-          실시간 교통상황 &rarr;
+          교통상황 &rarr;
         </a>
         <a href={`#rest-areas-section`} className="bg-slate-150 hover:bg-slate-200 text-slate-800 font-bold px-4 py-2 text-xs transition-all">
           휴게소 목록
