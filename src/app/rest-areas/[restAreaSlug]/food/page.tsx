@@ -65,6 +65,17 @@ export default async function RestAreaFoodPage({ params }: Props) {
 
   return (
     <div className="max-w-3xl mx-auto space-y-8 text-slate-700 leading-relaxed font-normal">
+      <script dangerouslySetInnerHTML={{ __html: `
+        (function() {
+          var parts = window.location.pathname.split('/');
+          var currentSlug = decodeURIComponent(parts[2] || '');
+          var correctSlug = "${area.slug}";
+          if (currentSlug && currentSlug !== correctSlug) {
+            parts[2] = encodeURIComponent(correctSlug);
+            window.location.replace(parts.join('/'));
+          }
+        })()
+      `}} />
       
       {/* 타이틀 */}
       <div className="space-y-2">

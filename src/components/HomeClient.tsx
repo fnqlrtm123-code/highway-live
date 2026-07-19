@@ -387,14 +387,20 @@ export default function HomeClient() {
 
         {/* [섹션 3] 주유소 유가 비교 & 전기차 충전소 */}
         <section className="space-y-6">
-          <div className="border-b pb-3.5 border-slate-100">
-            <h2 className="text-xl md:text-2xl font-extrabold text-slate-900 flex items-center gap-2">
-              <span className="w-1.5 h-5 bg-emerald-600 rounded-full inline-block"></span>
-              실시간 유가 최저가 &middot; 전기차 충전 현황
-            </h2>
-            <p className="text-xs md:text-[13px] text-slate-500 font-medium mt-1">
-              전국 고속도로 노선의 알뜰주유소 유가 비교(휘발유/경유 최저가 TOP 3) 및 대용량 전기차(EV) 충전 시설을 갖춘 휴게소를 한눈에 비교합니다.
-            </p>
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end border-b pb-3.5 border-slate-100 gap-2">
+            <div>
+              <h2 className="text-xl md:text-2xl font-extrabold text-slate-900 flex items-center gap-2">
+                <span className="w-1.5 h-5 bg-emerald-600 rounded-full inline-block"></span>
+                실시간 유가 최저가 &middot; 전기차 충전 현황
+              </h2>
+              <p className="text-xs md:text-[13px] text-slate-500 font-medium mt-1">
+                전국 고속도로 노선의 알뜰주유소 유가 비교(휘발유/경유 최저가 TOP 3) 및 대용량 전기차(EV) 충전 시설을 갖춘 휴게소를 한눈에 비교합니다.
+              </p>
+            </div>
+            <div className="flex gap-4 text-xs font-bold text-blue-650 shrink-0">
+              <a href="/gas" className="hover:text-blue-800 hover:underline">주유소 비교 전체보기 &rarr;</a>
+              <a href="/ev" className="hover:text-blue-800 hover:underline">전기차 비교 전체보기 &rarr;</a>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -403,10 +409,14 @@ export default function HomeClient() {
               <span className="text-[10.5px] font-bold text-slate-400 block uppercase tracking-wider border-b pb-1.5">휘발유 최저가 TOP 3</span>
               <div className="space-y-2.5 pt-1.5">
                 {cheapestGasoline.map((g, idx) => (
-                  <div key={idx} className="flex justify-between items-center text-xs font-bold text-slate-700">
+                  <a 
+                    key={idx} 
+                    href={`/gas/${encodeURIComponent(g.slug)}`}
+                    className="flex justify-between items-center text-xs font-bold text-slate-700 hover:text-blue-650 transition-colors cursor-pointer"
+                  >
                     <span>{idx+1}. {g.name}</span>
                     <span className="font-mono text-blue-650">{g.gasStation.gasolinePrice.toLocaleString()}원</span>
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>
@@ -416,10 +426,14 @@ export default function HomeClient() {
               <span className="text-[10.5px] font-bold text-slate-400 block uppercase tracking-wider border-b pb-1.5">경유 최저가 TOP 3</span>
               <div className="space-y-2.5 pt-1.5">
                 {cheapestDiesel.map((d, idx) => (
-                  <div key={idx} className="flex justify-between items-center text-xs font-bold text-slate-700">
+                  <a 
+                    key={idx} 
+                    href={`/gas/${encodeURIComponent(d.slug)}`}
+                    className="flex justify-between items-center text-xs font-bold text-slate-700 hover:text-blue-650 transition-colors cursor-pointer"
+                  >
                     <span>{idx+1}. {d.name}</span>
                     <span className="font-mono text-blue-650">{d.gasStation.dieselPrice.toLocaleString()}원</span>
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>
@@ -430,10 +444,14 @@ export default function HomeClient() {
                 <span className="text-[10.5px] font-bold text-slate-400 block uppercase tracking-wider border-b border-slate-800 pb-1.5">전기차(EV) 최다 충전소 보유</span>
                 <div className="space-y-2.5 pt-2">
                   {topEvAreas.map((e, idx) => (
-                    <div key={idx} className="flex justify-between items-center text-xs font-bold">
+                    <a 
+                      key={idx} 
+                      href={`/ev/${encodeURIComponent(e.slug)}`}
+                      className="flex justify-between items-center text-xs font-bold text-white hover:text-emerald-400 transition-colors cursor-pointer"
+                    >
                       <span>{idx+1}. {e.name} ({e.directionName})</span>
                       <span className="text-emerald-400 font-mono">{e.gasStation.evChargersCount}기</span>
-                    </div>
+                    </a>
                   ))}
                 </div>
               </div>

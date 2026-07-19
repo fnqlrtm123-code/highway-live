@@ -1,5 +1,6 @@
 import { getRoadList } from "@/lib/roadData";
 import { serviceAreas, cctvPoints } from "@/lib/data";
+import { REGIONS } from "@/lib/regionHelper";
 import { MetadataRoute } from "next";
 
 export const dynamic = "force-static";
@@ -13,6 +14,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/traffic",
     "/rest-areas",
     "/gas",
+    "/ev",
+    "/food",
     "/toll",
     "/region",
     "/ranking",
@@ -103,6 +106,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
+  // 9. 지역별 상세 페이지들
+  const regionPages = REGIONS.map((reg) => ({
+    url: `${baseUrl}/region/${reg.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.6,
+  }));
+
   return [
     ...staticPages,
     ...roadPages,
@@ -113,6 +124,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...gasPages,
     ...evPages,
     ...facilityPages,
-    ...cctvDetailPages
+    ...cctvDetailPages,
+    ...regionPages
   ];
 }
