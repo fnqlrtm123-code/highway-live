@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const area = getServiceAreaBySlug(restAreaSlug);
   if (!area) return {};
 
-  const pageUrl = `https://highway.mrbrisbaneinsouth.kr/rest-areas/${restAreaSlug}`;
+  const pageUrl = `https://highway.mrbrisbaneinsouth.kr/rest-areas/${encodeURIComponent(area.slug)}`;
   const title = `${area.name} 휴게소 (${area.directionName}) 맛집 메뉴 주유소 가격 편의시설`;
   const description = `${area.name} 휴게소 (${area.directionName})의 시그니처 대표 메뉴인 ${area.signatureMenu.name} 정보를 비롯해 실시간 주유소 가격, 전기차 수소차 충전 현황 및 입점 브랜드 정보를 한눈에 제공합니다.`;
 
@@ -41,9 +41,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  return serviceAreas.map((area) => ({
-    restAreaSlug: area.slug,
-  }));
+  const params: { restAreaSlug: string }[] = [];
+  serviceAreas.forEach((area) => {
+    params.push({ restAreaSlug: area.slug });
+    const encoded = encodeURIComponent(area.slug);
+    if (encoded !== area.slug) {
+      params.push({ restAreaSlug: encoded });
+    }
+  });
+  return params;
 }
 
 export default async function RestAreaDashboardPage({ params }: Props) {
@@ -56,8 +62,25 @@ export default async function RestAreaDashboardPage({ params }: Props) {
 
   const siblingAreas = getServiceAreasByHighway(area.highwaySlug).filter(s => s.slug !== area.slug);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": `${area.name} (${area.directionName})`,
+    "description": `${area.name} 휴게소 (${area.directionName})의 시그니처 대표 메뉴인 ${area.signatureMenu.name} 정보를 비롯해 실시간 주유소 가격, 전기차 수소차 충전 현황 및 입점 브랜드 정보를 제공합니다.`,
+    "url": `https://highway.mrbrisbaneinsouth.kr/rest-areas/${encodeURIComponent(area.slug)}`,
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": area.highwayName,
+      "streetAddress": `${area.locationKm}km 지점`
+    }
+  };
+
   return (
     <div className="max-w-3xl mx-auto space-y-10 text-slate-700 leading-relaxed font-normal">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       
       {/* 1. 인트로/소개 */}
       <section className="space-y-3">

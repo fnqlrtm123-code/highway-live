@@ -11,6 +11,7 @@ export interface Highway {
 
 export interface ServiceArea {
   slug: string;
+  oldSlug: string;
   name: string;
   image: string;
   direction: "상행" | "하행" | "양방향";
@@ -349,7 +350,8 @@ export const highways: Highway[] = [
 
 export const serviceAreas: ServiceArea[] = [
   {
-    "slug": "seoulmannam-busan",
+    "slug": "서울만남-부산",
+    "oldSlug": "seoulmannam-busan",
     "name": "서울만남휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "하행",
@@ -604,7 +606,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.0392
   },
   {
-    "slug": "jugjeon-seoul",
+    "slug": "죽전-서울",
+    "oldSlug": "jugjeon-seoul",
     "name": "죽전휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "상행",
@@ -725,7 +728,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5993
   },
   {
-    "slug": "giheung-busan",
+    "slug": "기흥-부산",
+    "oldSlug": "giheung-busan",
     "name": "기흥휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "하행",
@@ -898,7 +902,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 0,
       "dieselPrice": 0,
-      "lpgPrice": 1157,
+      "lpgPrice": 1127,
       "hasEvCharger": true,
       "evChargersCount": 10,
       "hasHydrogen": true
@@ -913,7 +917,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4559
   },
   {
-    "slug": "anseong-seoul",
+    "slug": "안성-서울",
+    "oldSlug": "anseong-seoul",
     "name": "안성휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "상행",
@@ -1109,8 +1114,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
-      "dieselPrice": 1853,
+      "gasolinePrice": 1814,
+      "dieselPrice": 1803,
       "lpgPrice": 1236,
       "hasEvCharger": true,
       "evChargersCount": 6,
@@ -1132,7 +1137,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.1352
   },
   {
-    "slug": "anseong-busan",
+    "slug": "안성-부산",
+    "oldSlug": "anseong-busan",
     "name": "안성휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "하행",
@@ -1292,7 +1298,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1833,
       "dieselPrice": 1804,
-      "lpgPrice": 1165,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 6,
       "hasHydrogen": true
@@ -1308,7 +1314,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.1328
   },
   {
-    "slug": "ibjanggeobongpodo-seoul",
+    "slug": "입장거봉포도-서울",
+    "oldSlug": "ibjanggeobongpodo-seoul",
     "name": "입장거봉포도휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "상행",
@@ -1534,7 +1541,7 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1839,
+      "gasolinePrice": 1834,
       "dieselPrice": 1834,
       "lpgPrice": 1226,
       "hasEvCharger": true,
@@ -1555,7 +1562,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5608
   },
   {
-    "slug": "manghyang-busan",
+    "slug": "망향-부산",
+    "oldSlug": "manghyang-busan",
     "name": "망향휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "하행",
@@ -1770,7 +1778,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.1728
   },
   {
-    "slug": "cheonansamgeori-seoul",
+    "slug": "천안삼거리-서울",
+    "oldSlug": "cheonansamgeori-seoul",
     "name": "천안삼거리휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "상행",
@@ -2471,7 +2480,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4976
   },
   {
-    "slug": "cheonanhodu-busan",
+    "slug": "천안호두-부산",
+    "oldSlug": "cheonanhodu-busan",
     "name": "천안호두휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "하행",
@@ -2705,7 +2715,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3627
   },
   {
-    "slug": "cheongju-seoul",
+    "slug": "청주-서울",
+    "oldSlug": "cheongju-seoul",
     "name": "청주휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "상행",
@@ -2874,7 +2885,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.353
   },
   {
-    "slug": "ogsan-busan",
+    "slug": "옥산-부산",
+    "oldSlug": "ogsan-busan",
     "name": "옥산휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "하행",
@@ -3104,7 +3116,7 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1845,
+      "gasolinePrice": 1835,
       "dieselPrice": 1835,
       "lpgPrice": 1185,
       "hasEvCharger": true,
@@ -3124,7 +3136,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3638
   },
   {
-    "slug": "jugam-seoul",
+    "slug": "죽암-서울",
+    "oldSlug": "jugam-seoul",
     "name": "죽암휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "상행",
@@ -3304,7 +3317,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4904
   },
   {
-    "slug": "jugam-busan",
+    "slug": "죽암-부산",
+    "oldSlug": "jugam-busan",
     "name": "죽암휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "하행",
@@ -3489,7 +3503,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6163
   },
   {
-    "slug": "sintanjin-seoul",
+    "slug": "신탄진-서울",
+    "oldSlug": "sintanjin-seoul",
     "name": "신탄진휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "상행",
@@ -3736,9 +3751,9 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1859,
-      "dieselPrice": 1848,
-      "lpgPrice": 1234,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 12,
       "hasHydrogen": true
@@ -3757,7 +3772,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5206
   },
   {
-    "slug": "ogcheon-busan",
+    "slug": "옥천-부산",
+    "oldSlug": "ogcheon-busan",
     "name": "옥천휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "하행",
@@ -3959,7 +3975,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1855,
       "dieselPrice": 1848,
-      "lpgPrice": 1199,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 4,
       "hasHydrogen": false
@@ -3977,7 +3993,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5102
   },
   {
-    "slug": "ogcheon-seoul",
+    "slug": "옥천-서울",
+    "oldSlug": "ogcheon-seoul",
     "name": "옥천휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "상행",
@@ -4154,7 +4171,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3757
   },
   {
-    "slug": "geumgang-busan",
+    "slug": "금강-부산",
+    "oldSlug": "geumgang-busan",
     "name": "금강휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "하행",
@@ -4248,7 +4266,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3461
   },
   {
-    "slug": "hwanggan-busan",
+    "slug": "황간-부산",
+    "oldSlug": "hwanggan-busan",
     "name": "황간휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "하행",
@@ -4376,7 +4395,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4484
   },
   {
-    "slug": "hwanggan-seoul",
+    "slug": "황간-서울",
+    "oldSlug": "hwanggan-seoul",
     "name": "황간휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "상행",
@@ -4483,7 +4503,7 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1832,
+      "gasolinePrice": 1828,
       "dieselPrice": 1803,
       "lpgPrice": null,
       "hasEvCharger": true,
@@ -4501,7 +4521,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5887
   },
   {
-    "slug": "chupungryeong-busan",
+    "slug": "추풍령-부산",
+    "oldSlug": "chupungryeong-busan",
     "name": "추풍령휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "하행",
@@ -4618,8 +4639,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1829,
-      "dieselPrice": 1799,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": 1183,
       "hasEvCharger": true,
       "evChargersCount": 8,
@@ -4638,7 +4659,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.6539
   },
   {
-    "slug": "chupungryeong-seoul",
+    "slug": "추풍령-서울",
+    "oldSlug": "chupungryeong-seoul",
     "name": "추풍령휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "상행",
@@ -4745,7 +4767,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1829,
       "dieselPrice": 1799,
-      "lpgPrice": 1193,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 8,
       "hasHydrogen": false
@@ -4764,7 +4786,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5668
   },
   {
-    "slug": "chilgog-busan",
+    "slug": "칠곡-부산",
+    "oldSlug": "chilgog-busan",
     "name": "칠곡휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "하행",
@@ -4979,8 +5002,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1844,
-      "dieselPrice": 1833,
+      "gasolinePrice": 1855,
+      "dieselPrice": 1848,
       "lpgPrice": 1160,
       "hasEvCharger": true,
       "evChargersCount": 12,
@@ -5002,7 +5025,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.4234
   },
   {
-    "slug": "chilgog-seoul",
+    "slug": "칠곡-서울",
+    "oldSlug": "chilgog-seoul",
     "name": "칠곡휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "상행",
@@ -5118,7 +5142,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.3556
   },
   {
-    "slug": "gyeongsan-seoul",
+    "slug": "경산-서울",
+    "oldSlug": "gyeongsan-seoul",
     "name": "경산휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "상행",
@@ -5267,9 +5292,9 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 0,
-      "dieselPrice": 0,
-      "lpgPrice": 1199,
+      "gasolinePrice": 1855,
+      "dieselPrice": 1848,
+      "lpgPrice": 1119,
       "hasEvCharger": true,
       "evChargersCount": 12,
       "hasHydrogen": false
@@ -5289,7 +5314,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.4257
   },
   {
-    "slug": "pyeongsa-busan",
+    "slug": "평사-부산",
+    "oldSlug": "pyeongsa-busan",
     "name": "평사휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "하행",
@@ -5413,7 +5439,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5692
   },
   {
-    "slug": "geoncheon-seoul",
+    "slug": "건천-서울",
+    "oldSlug": "geoncheon-seoul",
     "name": "건천휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "상행",
@@ -5636,7 +5663,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.6543
   },
   {
-    "slug": "geoncheon-busan",
+    "slug": "건천-부산",
+    "oldSlug": "geoncheon-busan",
     "name": "건천휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "하행",
@@ -5745,8 +5773,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1855,
-      "dieselPrice": 1845,
+      "gasolinePrice": 1858,
+      "dieselPrice": 1848,
       "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 10,
@@ -5761,7 +5789,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.6026
   },
   {
-    "slug": "gyeongju-busan",
+    "slug": "경주-부산",
+    "oldSlug": "gyeongju-busan",
     "name": "경주휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "하행",
@@ -5891,8 +5920,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1858,
-      "dieselPrice": 1848,
+      "gasolinePrice": 1848,
+      "dieselPrice": 1838,
       "lpgPrice": 1208,
       "hasEvCharger": true,
       "evChargersCount": 10,
@@ -5909,7 +5938,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.4618
   },
   {
-    "slug": "eonyang-seoul",
+    "slug": "언양-서울",
+    "oldSlug": "eonyang-seoul",
     "name": "언양휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "상행",
@@ -6069,10 +6099,6 @@ export const serviceAreas: ServiceArea[] = [
         "price": 9500
       },
       {
-        "name": "오징어까스",
-        "price": 1800
-      },
-      {
         "name": "어묵잡채",
         "price": 3200
       },
@@ -6107,10 +6133,6 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "돈까스정식",
         "price": 10000
-      },
-      {
-        "name": "미나리비빔밥정식",
-        "price": 9500
       }
     ],
     "brandStores": [
@@ -6123,7 +6145,7 @@ export const serviceAreas: ServiceArea[] = [
     "gasStation": {
       "brand": "알뜰주유소",
       "gasolinePrice": 1928,
-      "dieselPrice": 1849,
+      "dieselPrice": 1835,
       "lpgPrice": 1294,
       "hasEvCharger": true,
       "evChargersCount": 10,
@@ -6141,7 +6163,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 129.167
   },
   {
-    "slug": "yangsan-seoul",
+    "slug": "양산-서울",
+    "oldSlug": "yangsan-seoul",
     "name": "양산휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "상행",
@@ -6239,9 +6262,9 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1839,
-      "dieselPrice": 1835,
-      "lpgPrice": 1214,
+      "gasolinePrice": 1844,
+      "dieselPrice": 1839,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 4,
       "hasHydrogen": false
@@ -6257,7 +6280,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5803
   },
   {
-    "slug": "jinyeong-busan",
+    "slug": "진영-부산",
+    "oldSlug": "jinyeong-busan",
     "name": "진영휴게소",
     "image": "/images/thumbnails/gangbyeon.jpg",
     "direction": "하행",
@@ -6978,7 +7002,7 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "S-OIL",
-      "gasolinePrice": 1868,
+      "gasolinePrice": 1848,
       "dieselPrice": 1838,
       "lpgPrice": 1063,
       "hasEvCharger": true,
@@ -6997,7 +7021,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.7156
   },
   {
-    "slug": "jinyeong-busan-1",
+    "slug": "진영-부산-1",
+    "oldSlug": "jinyeong-busan-1",
     "name": "진영휴게소",
     "image": "/images/thumbnails/gangbyeon.jpg",
     "direction": "하행",
@@ -8045,7 +8070,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.8297
   },
   {
-    "slug": "munsan-busan",
+    "slug": "문산-부산",
+    "oldSlug": "munsan-busan",
     "name": "문산휴게소",
     "image": "/images/thumbnails/gangbyeon.jpg",
     "direction": "하행",
@@ -8243,8 +8269,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1849,
-      "dieselPrice": 1839,
+      "gasolinePrice": 1844,
+      "dieselPrice": 1834,
       "lpgPrice": 1149,
       "hasEvCharger": true,
       "evChargersCount": 6,
@@ -8261,7 +8287,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.8176
   },
   {
-    "slug": "sacheon-busan",
+    "slug": "사천-부산",
+    "oldSlug": "sacheon-busan",
     "name": "사천휴게소",
     "image": "/images/thumbnails/gangbyeon.jpg",
     "direction": "하행",
@@ -8294,7 +8321,7 @@ export const serviceAreas: ServiceArea[] = [
       },
       {
         "name": "강된장고기비빔밥",
-        "price": 10000
+        "price": 10500
       },
       {
         "name": "매콤쭈꾸미덮밥",
@@ -8451,6 +8478,10 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "뚝배기불고기솥밥",
         "price": 13000
+      },
+      {
+        "name": "냉메밀소바",
+        "price": 8000
       }
     ],
     "brandStores": [
@@ -8472,8 +8503,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 0,
-      "dieselPrice": 0,
+      "gasolinePrice": 1864,
+      "dieselPrice": 1853,
       "lpgPrice": 1149,
       "hasEvCharger": true,
       "evChargersCount": 12,
@@ -8491,7 +8522,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.6905
   },
   {
-    "slug": "sacheon-busan-1",
+    "slug": "사천-부산-1",
+    "oldSlug": "sacheon-busan-1",
     "name": "사천휴게소",
     "image": "/images/thumbnails/gangbyeon.jpg",
     "direction": "하행",
@@ -8697,7 +8729,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5652
   },
   {
-    "slug": "seomjingang-busan",
+    "slug": "섬진강-부산",
+    "oldSlug": "seomjingang-busan",
     "name": "섬진강휴게소",
     "image": "/images/thumbnails/gangbyeon.jpg",
     "direction": "하행",
@@ -8875,7 +8908,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.3273
   },
   {
-    "slug": "seomjingang-busan-1",
+    "slug": "섬진강-부산-1",
+    "oldSlug": "seomjingang-busan-1",
     "name": "섬진강휴게소",
     "image": "/images/thumbnails/gangbyeon.jpg",
     "direction": "하행",
@@ -9041,7 +9075,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.4437
   },
   {
-    "slug": "geochang-seoul",
+    "slug": "거창-서울",
+    "oldSlug": "geochang-seoul",
     "name": "거창휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "상행",
@@ -9158,7 +9193,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.8073
   },
   {
-    "slug": "geochang-busan",
+    "slug": "거창-부산",
+    "oldSlug": "geochang-busan",
     "name": "거창휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -9275,7 +9311,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.8358
   },
   {
-    "slug": "jirisan-seoul",
+    "slug": "지리산-서울",
+    "oldSlug": "jirisan-seoul",
     "name": "지리산휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "상행",
@@ -9392,7 +9429,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.188
   },
   {
-    "slug": "jirisan-busan",
+    "slug": "지리산-부산",
+    "oldSlug": "jirisan-busan",
     "name": "지리산휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -9509,7 +9547,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.048
   },
   {
-    "slug": "hwaseong-seoul",
+    "slug": "화성-서울",
+    "oldSlug": "hwaseong-seoul",
     "name": "화성휴게소",
     "image": "/images/thumbnails/seohaean.jpg",
     "direction": "상행",
@@ -9826,7 +9865,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3702
   },
   {
-    "slug": "hwaseong-busan",
+    "slug": "화성-부산",
+    "oldSlug": "hwaseong-busan",
     "name": "화성휴게소",
     "image": "/images/thumbnails/seohaean.jpg",
     "direction": "하행",
@@ -10081,9 +10121,9 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
-      "dieselPrice": 1853,
-      "lpgPrice": 1216,
+      "gasolinePrice": 1814,
+      "dieselPrice": 1803,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 4,
       "hasHydrogen": true
@@ -10097,7 +10137,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4583
   },
   {
-    "slug": "seosan-busan",
+    "slug": "서산-부산",
+    "oldSlug": "seosan-busan",
     "name": "서산휴게소",
     "image": "/images/thumbnails/seohaean.jpg",
     "direction": "하행",
@@ -10224,7 +10265,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6016
   },
   {
-    "slug": "seosan-seoul",
+    "slug": "서산-서울",
+    "oldSlug": "seosan-seoul",
     "name": "서산휴게소",
     "image": "/images/thumbnails/seohaean.jpg",
     "direction": "상행",
@@ -10455,7 +10497,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.5428
   },
   {
-    "slug": "daecheon-seoul",
+    "slug": "대천-서울",
+    "oldSlug": "daecheon-seoul",
     "name": "대천휴게소",
     "image": "/images/thumbnails/seohaean.jpg",
     "direction": "상행",
@@ -10550,7 +10593,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4633
   },
   {
-    "slug": "daecheon-busan",
+    "slug": "대천-부산",
+    "oldSlug": "daecheon-busan",
     "name": "대천휴게소",
     "image": "/images/thumbnails/seohaean.jpg",
     "direction": "하행",
@@ -10643,7 +10687,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3197
   },
   {
-    "slug": "gunsan-seoul",
+    "slug": "군산-서울",
+    "oldSlug": "gunsan-seoul",
     "name": "군산휴게소",
     "image": "/images/thumbnails/seohaean.jpg",
     "direction": "상행",
@@ -10735,7 +10780,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.9991
   },
   {
-    "slug": "gunsan-busan",
+    "slug": "군산-부산",
+    "oldSlug": "gunsan-busan",
     "name": "군산휴게소",
     "image": "/images/thumbnails/seohaean.jpg",
     "direction": "하행",
@@ -10936,7 +10982,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4223
   },
   {
-    "slug": "gochanggoindol-busan",
+    "slug": "고창고인돌-부산",
+    "oldSlug": "gochanggoindol-busan",
     "name": "고창고인돌휴게소",
     "image": "/images/thumbnails/seohaean.jpg",
     "direction": "하행",
@@ -11098,8 +11145,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
-      "dieselPrice": 1853,
+      "gasolinePrice": 1814,
+      "dieselPrice": 1803,
       "lpgPrice": 1241,
       "hasEvCharger": true,
       "evChargersCount": 6,
@@ -11116,7 +11163,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.1931
   },
   {
-    "slug": "gochanggoindol-seoul",
+    "slug": "고창고인돌-서울",
+    "oldSlug": "gochanggoindol-seoul",
     "name": "고창고인돌휴게소",
     "image": "/images/thumbnails/seohaean.jpg",
     "direction": "상행",
@@ -11243,7 +11291,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.2927
   },
   {
-    "slug": "hampyeongcheonji-seoul",
+    "slug": "함평천지-서울",
+    "oldSlug": "hampyeongcheonji-seoul",
     "name": "함평천지휴게소",
     "image": "/images/thumbnails/seohaean.jpg",
     "direction": "상행",
@@ -11448,7 +11497,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6296
   },
   {
-    "slug": "hampyeongcheonji-busan",
+    "slug": "함평천지-부산",
+    "oldSlug": "hampyeongcheonji-busan",
     "name": "함평천지휴게소",
     "image": "/images/thumbnails/seohaean.jpg",
     "direction": "하행",
@@ -11585,7 +11635,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.4385
   },
   {
-    "slug": "igsanmireugsaji-both",
+    "slug": "익산미륵사지-양방향",
+    "oldSlug": "igsanmireugsaji-both",
     "name": "익산미륵사지휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -11730,7 +11781,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.0103
   },
   {
-    "slug": "igsanmireugsaji-busan",
+    "slug": "익산미륵사지-부산",
+    "oldSlug": "igsanmireugsaji-busan",
     "name": "익산미륵사지휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -11882,7 +11934,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.0236
   },
   {
-    "slug": "jeongeubnogdujanggun-both",
+    "slug": "정읍녹두장군-양방향",
+    "oldSlug": "jeongeubnogdujanggun-both",
     "name": "정읍녹두장군휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -12028,7 +12081,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.1513
   },
   {
-    "slug": "jeongeubnogdujanggun-busan",
+    "slug": "정읍녹두장군-부산",
+    "oldSlug": "jeongeubnogdujanggun-busan",
     "name": "정읍녹두장군휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -12174,8 +12228,8 @@ export const serviceAreas: ServiceArea[] = [
     "gasStation": {
       "brand": "알뜰주유소",
       "gasolinePrice": 1845,
-      "dieselPrice": 1839,
-      "lpgPrice": 1145,
+      "dieselPrice": 1835,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 8,
       "hasHydrogen": false
@@ -12190,7 +12244,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.276
   },
   {
-    "slug": "baegyangsa-both",
+    "slug": "백양사-양방향",
+    "oldSlug": "baegyangsa-both",
     "name": "백양사휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -12331,7 +12386,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6533
   },
   {
-    "slug": "baegyangsa-busan",
+    "slug": "백양사-부산",
+    "oldSlug": "baegyangsa-busan",
     "name": "백양사휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -12469,7 +12525,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5362
   },
   {
-    "slug": "gogseong-both",
+    "slug": "곡성-양방향",
+    "oldSlug": "gogseong-both",
     "name": "곡성휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -12618,7 +12675,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.3472
   },
   {
-    "slug": "gogseong-busan",
+    "slug": "곡성-부산",
+    "oldSlug": "gogseong-busan",
     "name": "곡성휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -12764,7 +12822,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1862,
       "dieselPrice": 1852,
-      "lpgPrice": 1230,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 12,
       "hasHydrogen": false
@@ -12780,7 +12838,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.32
   },
   {
-    "slug": "juam-busan",
+    "slug": "주암-부산",
+    "oldSlug": "juam-busan",
     "name": "주암휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -12897,7 +12956,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.4242
   },
   {
-    "slug": "juam-both",
+    "slug": "주암-양방향",
+    "oldSlug": "juam-both",
     "name": "주암휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -13022,7 +13082,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.5639
   },
   {
-    "slug": "suncheon-busan",
+    "slug": "순천-부산",
+    "oldSlug": "suncheon-busan",
     "name": "순천휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -13075,7 +13136,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.6108
   },
   {
-    "slug": "hanamdeurim-both",
+    "slug": "하남드림-양방향",
+    "oldSlug": "hanamdeurim-both",
     "name": "하남드림휴게소",
     "image": "/images/thumbnails/olympic.jpg",
     "direction": "양방향",
@@ -13275,7 +13337,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5771
   },
   {
-    "slug": "icheonssal-both",
+    "slug": "이천쌀-양방향",
+    "oldSlug": "icheonssal-both",
     "name": "이천쌀휴게소",
     "image": "/images/thumbnails/olympic.jpg",
     "direction": "양방향",
@@ -13477,6 +13540,22 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "(실속) 돈까스",
         "price": 10000
+      },
+      {
+        "name": "메밀소바",
+        "price": 8000
+      },
+      {
+        "name": "새우소바",
+        "price": 10000
+      },
+      {
+        "name": "물냉면",
+        "price": 10000
+      },
+      {
+        "name": "비빔냉면",
+        "price": 10000
       }
     ],
     "brandStores": [
@@ -13498,8 +13577,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
-      "dieselPrice": 1853,
+      "gasolinePrice": 1814,
+      "dieselPrice": 1803,
       "lpgPrice": 1216,
       "hasEvCharger": true,
       "evChargersCount": 4,
@@ -13517,7 +13596,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4339
   },
   {
-    "slug": "icheon-both",
+    "slug": "이천-양방향",
+    "oldSlug": "icheon-both",
     "name": "이천휴게소",
     "image": "/images/thumbnails/olympic.jpg",
     "direction": "양방향",
@@ -13669,7 +13749,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3684
   },
   {
-    "slug": "eumseong-both",
+    "slug": "음성-양방향",
+    "oldSlug": "eumseong-both",
     "name": "음성휴게소",
     "image": "/images/thumbnails/olympic.jpg",
     "direction": "양방향",
@@ -13831,8 +13912,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
-      "dieselPrice": 1853,
+      "gasolinePrice": 1814,
+      "dieselPrice": 1803,
       "lpgPrice": 1216,
       "hasEvCharger": true,
       "evChargersCount": 8,
@@ -13849,7 +13930,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.412
   },
   {
-    "slug": "eumseong-both-1",
+    "slug": "음성-양방향-1",
+    "oldSlug": "eumseong-both-1",
     "name": "음성휴게소",
     "image": "/images/thumbnails/olympic.jpg",
     "direction": "양방향",
@@ -14002,7 +14084,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5557
   },
   {
-    "slug": "ochang-both",
+    "slug": "오창-양방향",
+    "oldSlug": "ochang-both",
     "name": "오창휴게소",
     "image": "/images/thumbnails/olympic.jpg",
     "direction": "양방향",
@@ -14251,8 +14334,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1859,
-      "dieselPrice": 1848,
+      "gasolinePrice": 1855,
+      "dieselPrice": 1844,
       "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 12,
@@ -14270,7 +14353,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6387
   },
   {
-    "slug": "ochang-both-1",
+    "slug": "오창-양방향-1",
+    "oldSlug": "ochang-both-1",
     "name": "오창휴게소",
     "image": "/images/thumbnails/olympic.jpg",
     "direction": "양방향",
@@ -14446,7 +14530,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5847
   },
   {
-    "slug": "geumsaninsamraendeu-both",
+    "slug": "금산인삼랜드-양방향",
+    "oldSlug": "geumsaninsamraendeu-both",
     "name": "금산인삼랜드휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -14570,7 +14655,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3381
   },
   {
-    "slug": "geumsaninsamraendeu-both-1",
+    "slug": "금산인삼랜드-양방향-1",
+    "oldSlug": "geumsaninsamraendeu-both-1",
     "name": "금산인삼랜드휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -14648,10 +14734,6 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "장터국밥",
         "price": 10000
-      },
-      {
-        "name": "제육덮밥",
-        "price": 10500
       },
       {
         "name": "어린이돈까스",
@@ -14758,7 +14840,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.2394
   },
   {
-    "slug": "deogyusan-both",
+    "slug": "덕유산-양방향",
+    "oldSlug": "deogyusan-both",
     "name": "덕유산휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -14900,7 +14983,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4079
   },
   {
-    "slug": "deogyusan-both-1",
+    "slug": "덕유산-양방향-1",
+    "oldSlug": "deogyusan-both-1",
     "name": "덕유산휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -14999,8 +15083,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1849,
-      "dieselPrice": 1839,
+      "gasolinePrice": 1845,
+      "dieselPrice": 1835,
       "lpgPrice": 1212,
       "hasEvCharger": true,
       "evChargersCount": 10,
@@ -15017,7 +15101,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4103
   },
   {
-    "slug": "sancheong-both",
+    "slug": "산청-양방향",
+    "oldSlug": "sancheong-both",
     "name": "산청휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -15151,7 +15236,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.8308
   },
   {
-    "slug": "sancheong-both-1",
+    "slug": "산청-양방향-1",
+    "oldSlug": "sancheong-both-1",
     "name": "산청휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -15301,7 +15387,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.8161
   },
   {
-    "slug": "chungju-both",
+    "slug": "충주-양방향",
+    "oldSlug": "chungju-both",
     "name": "충주휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -15432,7 +15519,7 @@ export const serviceAreas: ServiceArea[] = [
     "gasStation": {
       "brand": "알뜰주유소",
       "gasolinePrice": 1859,
-      "dieselPrice": 1862,
+      "dieselPrice": 1852,
       "lpgPrice": 1259,
       "hasEvCharger": true,
       "evChargersCount": 6,
@@ -15454,7 +15541,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4851
   },
   {
-    "slug": "chungju-both-1",
+    "slug": "충주-양방향-1",
+    "oldSlug": "chungju-both-1",
     "name": "충주휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -15664,7 +15752,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.361
   },
   {
-    "slug": "seonsan-both",
+    "slug": "선산-양방향",
+    "oldSlug": "seonsan-both",
     "name": "선산휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -15785,7 +15874,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.3712
   },
   {
-    "slug": "seonsan-both-1",
+    "slug": "선산-양방향-1",
+    "oldSlug": "seonsan-both-1",
     "name": "선산휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -15932,7 +16022,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.489
   },
   {
-    "slug": "yeongsan-both",
+    "slug": "영산-양방향",
+    "oldSlug": "yeongsan-both",
     "name": "영산휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -16193,7 +16284,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.809
   },
   {
-    "slug": "chilseo-both",
+    "slug": "칠서-양방향",
+    "oldSlug": "chilseo-both",
     "name": "칠서휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -16325,7 +16417,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1864,
       "dieselPrice": 1853,
-      "lpgPrice": 1225,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 10,
       "hasHydrogen": false
@@ -16346,7 +16438,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.835
   },
   {
-    "slug": "gangreung-busan",
+    "slug": "강릉-부산",
+    "oldSlug": "gangreung-busan",
     "name": "강릉휴게소",
     "image": "/images/thumbnails/yeongdong.jpg",
     "direction": "하행",
@@ -16478,7 +16571,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1845,
       "dieselPrice": 1838,
-      "lpgPrice": 1219,
+      "lpgPrice": 1139,
       "hasEvCharger": true,
       "evChargersCount": 4,
       "hasHydrogen": false
@@ -16493,7 +16586,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.9134
   },
   {
-    "slug": "gangreung-seoul",
+    "slug": "강릉-서울",
+    "oldSlug": "gangreung-seoul",
     "name": "강릉휴게소",
     "image": "/images/thumbnails/yeongdong.jpg",
     "direction": "상행",
@@ -16634,7 +16728,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1845,
       "dieselPrice": 1838,
-      "lpgPrice": 1219,
+      "lpgPrice": 1199,
       "hasEvCharger": true,
       "evChargersCount": 4,
       "hasHydrogen": false
@@ -16649,7 +16743,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.774
   },
   {
-    "slug": "pyeongchang-seoul",
+    "slug": "평창-서울",
+    "oldSlug": "pyeongchang-seoul",
     "name": "평창휴게소",
     "image": "/images/thumbnails/yeongdong.jpg",
     "direction": "상행",
@@ -16802,7 +16897,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.7283
   },
   {
-    "slug": "pyeongchang-busan",
+    "slug": "평창-부산",
+    "oldSlug": "pyeongchang-busan",
     "name": "평창휴게소",
     "image": "/images/thumbnails/yeongdong.jpg",
     "direction": "하행",
@@ -17039,7 +17135,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.8184
   },
   {
-    "slug": "hoengseong-busan",
+    "slug": "횡성-부산",
+    "oldSlug": "hoengseong-busan",
     "name": "횡성휴게소",
     "image": "/images/thumbnails/yeongdong.jpg",
     "direction": "하행",
@@ -17383,7 +17480,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.9615
   },
   {
-    "slug": "hoengseong-seoul",
+    "slug": "횡성-서울",
+    "oldSlug": "hoengseong-seoul",
     "name": "횡성휴게소",
     "image": "/images/thumbnails/yeongdong.jpg",
     "direction": "상행",
@@ -17549,7 +17647,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.9715
   },
   {
-    "slug": "munmag-seoul",
+    "slug": "문막-서울",
+    "oldSlug": "munmag-seoul",
     "name": "문막휴게소",
     "image": "/images/thumbnails/yeongdong.jpg",
     "direction": "상행",
@@ -17664,8 +17763,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1835,
-      "dieselPrice": 1824,
+      "gasolinePrice": 1839,
+      "dieselPrice": 1828,
       "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 12,
@@ -17685,7 +17784,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.9525
   },
   {
-    "slug": "munmag-busan",
+    "slug": "문막-부산",
+    "oldSlug": "munmag-busan",
     "name": "문막휴게소",
     "image": "/images/thumbnails/yeongdong.jpg",
     "direction": "하행",
@@ -17874,7 +17974,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.8088
   },
   {
-    "slug": "yeoju-busan",
+    "slug": "여주-부산",
+    "oldSlug": "yeoju-busan",
     "name": "여주휴게소",
     "image": "/images/thumbnails/yeongdong.jpg",
     "direction": "하행",
@@ -17919,11 +18020,11 @@ export const serviceAreas: ServiceArea[] = [
       },
       {
         "name": "천서리 동치미막국수",
-        "price": 10000
+        "price": 11000
       },
       {
         "name": "천서리 비빔막국수",
-        "price": 10000
+        "price": 11000
       },
       {
         "name": "실속똑순이된장찌개",
@@ -18012,7 +18113,7 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1844,
+      "gasolinePrice": 1841,
       "dieselPrice": 1827,
       "lpgPrice": 1194,
       "hasEvCharger": true,
@@ -18033,7 +18134,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3691
   },
   {
-    "slug": "yeoju-seoul",
+    "slug": "여주-서울",
+    "oldSlug": "yeoju-seoul",
     "name": "여주휴게소",
     "image": "/images/thumbnails/yeongdong.jpg",
     "direction": "상행",
@@ -18332,7 +18434,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4243
   },
   {
-    "slug": "yongin-busan",
+    "slug": "용인-부산",
+    "oldSlug": "yongin-busan",
     "name": "용인휴게소",
     "image": "/images/thumbnails/yeongdong.jpg",
     "direction": "하행",
@@ -18525,9 +18628,9 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1853,
-      "dieselPrice": 1846,
-      "lpgPrice": 1228,
+      "gasolinePrice": 1844,
+      "dieselPrice": 1834,
+      "lpgPrice": 1288,
       "hasEvCharger": true,
       "evChargersCount": 6,
       "hasHydrogen": false
@@ -18542,7 +18645,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5659
   },
   {
-    "slug": "yongin-seoul",
+    "slug": "용인-서울",
+    "oldSlug": "yongin-seoul",
     "name": "용인휴게소",
     "image": "/images/thumbnails/yeongdong.jpg",
     "direction": "상행",
@@ -18681,8 +18785,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1853,
-      "dieselPrice": 1846,
+      "gasolinePrice": 1844,
+      "dieselPrice": 1834,
       "lpgPrice": 1228,
       "hasEvCharger": true,
       "evChargersCount": 6,
@@ -18699,7 +18803,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6637
   },
   {
-    "slug": "chuncheon-busan",
+    "slug": "춘천-부산",
+    "oldSlug": "chuncheon-busan",
     "name": "춘천휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -18789,9 +18894,9 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1849,
+      "gasolinePrice": 1839,
       "dieselPrice": 1839,
-      "lpgPrice": 1258,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 8,
       "hasHydrogen": true
@@ -18804,7 +18909,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.9855
   },
   {
-    "slug": "hongcheongang-both",
+    "slug": "홍천강-양방향",
+    "oldSlug": "hongcheongang-both",
     "name": "홍천강휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -19009,9 +19115,9 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1836,
-      "dieselPrice": 1834,
-      "lpgPrice": 1239,
+      "gasolinePrice": 1821,
+      "dieselPrice": 1819,
+      "lpgPrice": 1269,
       "hasEvCharger": true,
       "evChargersCount": 12,
       "hasHydrogen": false
@@ -19026,7 +19132,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.8489
   },
   {
-    "slug": "chiag-busan",
+    "slug": "치악-부산",
+    "oldSlug": "chiag-busan",
     "name": "치악휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -19131,8 +19238,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1855,
-      "dieselPrice": 1847,
+      "gasolinePrice": 1841,
+      "dieselPrice": 1834,
       "lpgPrice": 1214,
       "hasEvCharger": true,
       "evChargersCount": 4,
@@ -19150,7 +19257,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.7372
   },
   {
-    "slug": "chiag-both",
+    "slug": "치악-양방향",
+    "oldSlug": "chiag-both",
     "name": "치악휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -19171,7 +19279,7 @@ export const serviceAreas: ServiceArea[] = [
       },
       {
         "name": "메밀비빔막국수",
-        "price": 9000
+        "price": 9500
       },
       {
         "name": "치즈돈가스",
@@ -19179,7 +19287,7 @@ export const serviceAreas: ServiceArea[] = [
       },
       {
         "name": "메밀물막국수",
-        "price": 8500
+        "price": 9000
       },
       {
         "name": "놀부부대찌개",
@@ -19210,10 +19318,6 @@ export const serviceAreas: ServiceArea[] = [
         "price": 13000
       },
       {
-        "name": "냉모밀",
-        "price": 7000
-      },
-      {
         "name": "우거지국밥",
         "price": 7000
       },
@@ -19239,31 +19343,59 @@ export const serviceAreas: ServiceArea[] = [
       },
       {
         "name": "육개장",
-        "price": 9000
+        "price": 10000
       },
       {
         "name": "감자옹심이",
-        "price": 11000
+        "price": 12000
       },
       {
         "name": "김치콩나물국밥",
-        "price": 7000
+        "price": 8000
       },
       {
         "name": "메밀막국수 왕만두 세트",
-        "price": 11500
+        "price": 12000
       },
       {
         "name": "메밀비빔막국수 왕만두 세트",
-        "price": 12000
+        "price": 12500
       },
       {
         "name": "해물순두부찌개",
         "price": 9500
       },
       {
-        "name": "냉모밀돈가스정식",
-        "price": 13000
+        "name": "냉모밀",
+        "price": 8000
+      },
+      {
+        "name": "냉모밀 왕만두 세트",
+        "price": 11000
+      },
+      {
+        "name": "칼국수",
+        "price": 9000
+      },
+      {
+        "name": "칼국수 정식",
+        "price": 10000
+      },
+      {
+        "name": "칼만두",
+        "price": 12000
+      },
+      {
+        "name": "왕만두",
+        "price": 6000
+      },
+      {
+        "name": "떡 왕만두국",
+        "price": 9000
+      },
+      {
+        "name": "떡왕만두국",
+        "price": 9000
       }
     ],
     "brandStores": [
@@ -19280,9 +19412,9 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1855,
-      "dieselPrice": 1847,
-      "lpgPrice": null,
+      "gasolinePrice": 1841,
+      "dieselPrice": 1834,
+      "lpgPrice": 1214,
       "hasEvCharger": true,
       "evChargersCount": 4,
       "hasHydrogen": false
@@ -19296,7 +19428,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.7531
   },
   {
-    "slug": "danyangpalgyeong-both",
+    "slug": "단양팔경-양방향",
+    "oldSlug": "danyangpalgyeong-both",
     "name": "단양팔경휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -19380,7 +19513,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5243
   },
   {
-    "slug": "danyangpalgyeong-busan",
+    "slug": "단양팔경-부산",
+    "oldSlug": "danyangpalgyeong-busan",
     "name": "단양팔경휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -19473,7 +19607,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6476
   },
   {
-    "slug": "andong-busan",
+    "slug": "안동-부산",
+    "oldSlug": "andong-busan",
     "name": "안동휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -19546,8 +19681,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 0,
-      "dieselPrice": 0,
+      "gasolinePrice": 1849,
+      "dieselPrice": 1848,
       "lpgPrice": 1172,
       "hasEvCharger": true,
       "evChargersCount": 4,
@@ -19565,7 +19700,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.6394
   },
   {
-    "slug": "andong-both",
+    "slug": "안동-양방향",
+    "oldSlug": "andong-both",
     "name": "안동휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -19654,8 +19790,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1848,
-      "dieselPrice": 1843,
+      "gasolinePrice": 1858,
+      "dieselPrice": 1853,
       "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 4,
@@ -19672,7 +19808,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5208
   },
   {
-    "slug": "gunwi-busan",
+    "slug": "군위-부산",
+    "oldSlug": "gunwi-busan",
     "name": "군위휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -19816,7 +19953,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.4841
   },
   {
-    "slug": "gunwi-both",
+    "slug": "군위-양방향",
+    "oldSlug": "gunwi-both",
     "name": "군위휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -19959,7 +20097,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.3636
   },
   {
-    "slug": "donghae-both",
+    "slug": "동해-양방향",
+    "oldSlug": "donghae-both",
     "name": "동해휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -20223,7 +20362,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.8399
   },
   {
-    "slug": "jangyu-both",
+    "slug": "장유-양방향",
+    "oldSlug": "jangyu-both",
     "name": "장유휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -20382,7 +20522,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.7955
   },
   {
-    "slug": "beolgog-both",
+    "slug": "벌곡-양방향",
+    "oldSlug": "beolgog-both",
     "name": "벌곡휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -20523,7 +20664,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5319
   },
   {
-    "slug": "beolgog-both-1",
+    "slug": "벌곡-양방향-1",
+    "oldSlug": "beolgog-both-1",
     "name": "벌곡휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -20720,7 +20862,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4408
   },
   {
-    "slug": "hyeonpung-seoul",
+    "slug": "현풍-서울",
+    "oldSlug": "hyeonpung-seoul",
     "name": "현풍휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "상행",
@@ -20936,7 +21079,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5148
   },
   {
-    "slug": "hyeonpung-both",
+    "slug": "현풍-양방향",
+    "oldSlug": "hyeonpung-both",
     "name": "현풍휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -21198,7 +21342,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.4515
   },
   {
-    "slug": "dongmyeong-busan",
+    "slug": "동명-부산",
+    "oldSlug": "dongmyeong-busan",
     "name": "동명휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -21425,7 +21570,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.4302
   },
   {
-    "slug": "dongmyeong-both",
+    "slug": "동명-양방향",
+    "oldSlug": "dongmyeong-both",
     "name": "동명휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -21616,7 +21762,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.574
   },
   {
-    "slug": "hongseong-seoul",
+    "slug": "홍성-서울",
+    "oldSlug": "hongseong-seoul",
     "name": "홍성휴게소",
     "image": "/images/thumbnails/seohaean.jpg",
     "direction": "상행",
@@ -21739,7 +21886,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6676
   },
   {
-    "slug": "hongseong-busan",
+    "slug": "홍성-부산",
+    "oldSlug": "hongseong-busan",
     "name": "홍성휴게소",
     "image": "/images/thumbnails/seohaean.jpg",
     "direction": "하행",
@@ -21845,8 +21993,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1837,
-      "dieselPrice": 1829,
+      "gasolinePrice": 1847,
+      "dieselPrice": 1839,
       "lpgPrice": 1205,
       "hasEvCharger": true,
       "evChargersCount": 10,
@@ -21862,7 +22010,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4774
   },
   {
-    "slug": "yeongcheon-seoul",
+    "slug": "영천-서울",
+    "oldSlug": "yeongcheon-seoul",
     "name": "영천휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "상행",
@@ -21984,7 +22133,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.4567
   },
   {
-    "slug": "yeongcheon-both",
+    "slug": "영천-양방향",
+    "oldSlug": "yeongcheon-both",
     "name": "영천휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -22110,7 +22260,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.3599
   },
   {
-    "slug": "seocheon-seoul",
+    "slug": "서천-서울",
+    "oldSlug": "seocheon-seoul",
     "name": "서천휴게소",
     "image": "/images/thumbnails/seohaean.jpg",
     "direction": "상행",
@@ -22242,7 +22393,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.2759
   },
   {
-    "slug": "seocheon-busan",
+    "slug": "서천-부산",
+    "oldSlug": "seocheon-busan",
     "name": "서천휴게소",
     "image": "/images/thumbnails/seohaean.jpg",
     "direction": "하행",
@@ -22346,8 +22498,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
-      "dieselPrice": 1853,
+      "gasolinePrice": 1814,
+      "dieselPrice": 1803,
       "lpgPrice": 1216,
       "hasEvCharger": true,
       "evChargersCount": 6,
@@ -22362,7 +22514,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4129
   },
   {
-    "slug": "gujeong-both",
+    "slug": "구정-양방향",
+    "oldSlug": "gujeong-both",
     "name": "구정휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -22443,7 +22596,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 129.0153
   },
   {
-    "slug": "mungyeong-both",
+    "slug": "문경-양방향",
+    "oldSlug": "mungyeong-both",
     "name": "문경휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -22558,7 +22712,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.6277
   },
   {
-    "slug": "hampyeongnabi-busan",
+    "slug": "함평나비-부산",
+    "oldSlug": "hampyeongnabi-busan",
     "name": "함평나비휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -22688,7 +22843,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.4556
   },
   {
-    "slug": "hampyeongnabi-both",
+    "slug": "함평나비-양방향",
+    "oldSlug": "hampyeongnabi-both",
     "name": "함평나비휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -22786,8 +22942,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
-      "dieselPrice": 1853,
+      "gasolinePrice": 1814,
+      "dieselPrice": 1803,
       "lpgPrice": 1261,
       "hasEvCharger": true,
       "evChargersCount": 4,
@@ -22804,7 +22960,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.3329
   },
   {
-    "slug": "mungyeong-both-1",
+    "slug": "문경-양방향-1",
+    "oldSlug": "mungyeong-both-1",
     "name": "문경휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -22994,7 +23151,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.3724
   },
   {
-    "slug": "gujeong-both-1",
+    "slug": "구정-양방향-1",
+    "oldSlug": "gujeong-both-1",
     "name": "구정휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -23103,8 +23261,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1848,
-      "dieselPrice": 1838,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 8,
@@ -23120,7 +23278,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.8621
   },
   {
-    "slug": "namseongjuchamoe-both",
+    "slug": "남성주참외-양방향",
+    "oldSlug": "namseongjuchamoe-both",
     "name": "남성주참외휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -23290,7 +23449,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.6238
   },
   {
-    "slug": "namseongjuchamoe-both-1",
+    "slug": "남성주참외-양방향-1",
+    "oldSlug": "namseongjuchamoe-both-1",
     "name": "남성주참외휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -23453,7 +23613,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.6472
   },
   {
-    "slug": "sogrisan-both",
+    "slug": "속리산-양방향",
+    "oldSlug": "sogrisan-both",
     "name": "속리산휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -23606,7 +23767,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5246
   },
   {
-    "slug": "hwaseo-both",
+    "slug": "화서-양방향",
+    "oldSlug": "hwaseo-both",
     "name": "화서휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -23708,7 +23870,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.4017
   },
   {
-    "slug": "jinanmaisan-both",
+    "slug": "진안마이산-양방향",
+    "oldSlug": "jinanmaisan-both",
     "name": "진안마이산휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -23840,7 +24003,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1864,
       "dieselPrice": 1853,
-      "lpgPrice": null,
+      "lpgPrice": 1216,
       "hasEvCharger": true,
       "evChargersCount": 10,
       "hasHydrogen": false
@@ -23855,7 +24018,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.0008
   },
   {
-    "slug": "jinanmaisan-both-1",
+    "slug": "진안마이산-양방향-1",
+    "oldSlug": "jinanmaisan-both-1",
     "name": "진안마이산휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -23997,7 +24161,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.0929
   },
   {
-    "slug": "goseonggongryongnara-both",
+    "slug": "고성공룡나라-양방향",
+    "oldSlug": "goseonggongryongnara-both",
     "name": "고성공룡나라휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -24116,7 +24281,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.7801
   },
   {
-    "slug": "goseonggongryongnara-both-1",
+    "slug": "고성공룡나라-양방향-1",
+    "oldSlug": "goseonggongryongnara-both-1",
     "name": "고성공룡나라휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -24231,7 +24397,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5343
   },
   {
-    "slug": "deogpyeong-both",
+    "slug": "덕평-양방향",
+    "oldSlug": "deogpyeong-both",
     "name": "덕평휴게소",
     "image": "/images/thumbnails/yeongdong.jpg",
     "direction": "양방향",
@@ -24419,7 +24586,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5925
   },
   {
-    "slug": "cheongtong-seoul",
+    "slug": "청통-서울",
+    "oldSlug": "cheongtong-seoul",
     "name": "청통휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "상행",
@@ -24465,38 +24633,6 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "오색나물비빔밥",
         "price": 9000
-      },
-      {
-        "name": "순두부찌개",
-        "price": 12000
-      },
-      {
-        "name": "송이순두부",
-        "price": 18000
-      },
-      {
-        "name": "야채튀김우동",
-        "price": 7000
-      },
-      {
-        "name": "자장면",
-        "price": 6000
-      },
-      {
-        "name": "실속)EX라면",
-        "price": 4000
-      },
-      {
-        "name": "냉메밀",
-        "price": 7000
-      },
-      {
-        "name": "제육볶음",
-        "price": 10500
-      },
-      {
-        "name": "김치찌개",
-        "price": 9500
       }
     ],
     "brandStores": [
@@ -24536,7 +24672,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.436
   },
   {
-    "slug": "wachon-both",
+    "slug": "와촌-양방향",
+    "oldSlug": "wachon-both",
     "name": "와촌휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -24656,17 +24793,12 @@ export const serviceAreas: ServiceArea[] = [
         "name": "엔제리너스",
         "description": "커피류",
         "hours": "08:00 ~ 20:00"
-      },
-      {
-        "name": "용우동",
-        "description": "우동류/짜장면",
-        "hours": "06:00 ~ 19:20"
       }
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
-      "dieselPrice": 1853,
+      "gasolinePrice": 1814,
+      "dieselPrice": 1803,
       "lpgPrice": 1219,
       "hasEvCharger": true,
       "evChargersCount": 12,
@@ -24683,7 +24815,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.3562
   },
   {
-    "slug": "goesan-both",
+    "slug": "괴산-양방향",
+    "oldSlug": "goesan-both",
     "name": "괴산휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -24808,8 +24941,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1838,
-      "dieselPrice": 1827,
+      "gasolinePrice": 1833,
+      "dieselPrice": 1822,
       "lpgPrice": 1239,
       "hasEvCharger": true,
       "evChargersCount": 10,
@@ -24827,7 +24960,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3978
   },
   {
-    "slug": "wonju-busan",
+    "slug": "원주-부산",
+    "oldSlug": "wonju-busan",
     "name": "원주휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -24961,8 +25095,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
-      "dieselPrice": 1853,
+      "gasolinePrice": 1814,
+      "dieselPrice": 1803,
       "lpgPrice": 1266,
       "hasEvCharger": true,
       "evChargersCount": 10,
@@ -24978,7 +25112,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.9261
   },
   {
-    "slug": "wonju-both",
+    "slug": "원주-양방향",
+    "oldSlug": "wonju-both",
     "name": "원주휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -25102,8 +25237,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1842,
-      "dieselPrice": 1837,
+      "gasolinePrice": 1839,
+      "dieselPrice": 1832,
       "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 10,
@@ -25119,7 +25254,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 129.022
   },
   {
-    "slug": "oggye-both",
+    "slug": "옥계-양방향",
+    "oldSlug": "oggye-both",
     "name": "옥계휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -25248,8 +25384,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1853,
-      "dieselPrice": 1846,
+      "gasolinePrice": 1829,
+      "dieselPrice": 1819,
       "lpgPrice": 1228,
       "hasEvCharger": true,
       "evChargersCount": 10,
@@ -25265,7 +25401,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.9837
   },
   {
-    "slug": "goesan-both-1",
+    "slug": "괴산-양방향-1",
+    "oldSlug": "goesan-both-1",
     "name": "괴산휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -25417,7 +25554,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.46
   },
   {
-    "slug": "gimcheon-seoul",
+    "slug": "김천-서울",
+    "oldSlug": "gimcheon-seoul",
     "name": "김천휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "상행",
@@ -25561,7 +25699,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.3658
   },
   {
-    "slug": "yesan-both",
+    "slug": "예산-양방향",
+    "oldSlug": "yesan-both",
     "name": "예산휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -25712,7 +25851,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.2631
   },
   {
-    "slug": "yesan-both-1",
+    "slug": "예산-양방향-1",
+    "oldSlug": "yesan-both-1",
     "name": "예산휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -25861,7 +26001,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3931
   },
   {
-    "slug": "gongju-both",
+    "slug": "공주-양방향",
+    "oldSlug": "gongju-both",
     "name": "공주휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -26013,7 +26154,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5152
   },
   {
-    "slug": "buyeobaegje-both",
+    "slug": "부여백제-양방향",
+    "oldSlug": "buyeobaegje-both",
     "name": "부여백제휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -26137,8 +26279,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1859,
-      "dieselPrice": 1848,
+      "gasolinePrice": 1849,
+      "dieselPrice": 1842,
       "lpgPrice": 1250,
       "hasEvCharger": true,
       "evChargersCount": 4,
@@ -26154,7 +26296,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5171
   },
   {
-    "slug": "buyeobaegje-both-1",
+    "slug": "부여백제-양방향-1",
+    "oldSlug": "buyeobaegje-both-1",
     "name": "부여백제휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -26274,8 +26417,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1859,
-      "dieselPrice": 1848,
+      "gasolinePrice": 1849,
+      "dieselPrice": 1842,
       "lpgPrice": 1250,
       "hasEvCharger": true,
       "evChargersCount": 4,
@@ -26291,7 +26434,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3971
   },
   {
-    "slug": "gongju-both-1",
+    "slug": "공주-양방향-1",
+    "oldSlug": "gongju-both-1",
     "name": "공주휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -26452,7 +26596,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.2655
   },
   {
-    "slug": "moggam-seoul",
+    "slug": "목감-서울",
+    "oldSlug": "moggam-seoul",
     "name": "목감휴게소",
     "image": "/images/thumbnails/seohaean.jpg",
     "direction": "상행",
@@ -26592,7 +26737,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3771
   },
   {
-    "slug": "uiwang-seoul",
+    "slug": "의왕-서울",
+    "oldSlug": "uiwang-seoul",
     "name": "의왕휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "상행",
@@ -26724,7 +26870,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4847
   },
   {
-    "slug": "anseongmajchum-both",
+    "slug": "안성맞춤-양방향",
+    "oldSlug": "anseongmajchum-both",
     "name": "안성맞춤휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -26859,8 +27006,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1852,
-      "dieselPrice": 1842,
+      "gasolinePrice": 1849,
+      "dieselPrice": 1839,
       "lpgPrice": 1237,
       "hasEvCharger": true,
       "evChargersCount": 8,
@@ -26877,7 +27024,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6232
   },
   {
-    "slug": "anseongmajchum-both-1",
+    "slug": "안성맞춤-양방향-1",
+    "oldSlug": "anseongmajchum-both-1",
     "name": "안성맞춤휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -27030,7 +27178,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6652
   },
   {
-    "slug": "seohanamhaengbogdeurimswimteo-both",
+    "slug": "서하남행복드림쉼터-양방향",
+    "oldSlug": "seohanamhaengbogdeurimswimteo-both",
     "name": "서하남행복드림쉼터휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -27164,7 +27313,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5722
   },
   {
-    "slug": "yangyang-both",
+    "slug": "양양-양방향",
+    "oldSlug": "yangyang-both",
     "name": "양양휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -27296,7 +27446,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.7873
   },
   {
-    "slug": "yangyang-both-1",
+    "slug": "양양-양방향-1",
+    "oldSlug": "yangyang-both-1",
     "name": "양양휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -27428,7 +27579,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.7263
   },
   {
-    "slug": "haengdamdo-both",
+    "slug": "행담도-양방향",
+    "oldSlug": "haengdamdo-both",
     "name": "행담도휴게소",
     "image": "/images/thumbnails/seohaean.jpg",
     "direction": "양방향",
@@ -27598,7 +27750,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3114
   },
   {
-    "slug": "gimcheon-busan",
+    "slug": "김천-부산",
+    "oldSlug": "gimcheon-busan",
     "name": "김천휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "하행",
@@ -27720,7 +27873,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1869,
       "dieselPrice": 1855,
-      "lpgPrice": 1224,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 10,
       "hasHydrogen": false
@@ -27737,7 +27890,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5763
   },
   {
-    "slug": "haman-busan",
+    "slug": "함안-부산",
+    "oldSlug": "haman-busan",
     "name": "함안휴게소",
     "image": "/images/thumbnails/gangbyeon.jpg",
     "direction": "하행",
@@ -27898,7 +28052,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.842
   },
   {
-    "slug": "jinju-busan",
+    "slug": "진주-부산",
+    "oldSlug": "jinju-busan",
     "name": "진주휴게소",
     "image": "/images/thumbnails/gangbyeon.jpg",
     "direction": "하행",
@@ -28048,7 +28203,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.7833
   },
   {
-    "slug": "haman-busan-1",
+    "slug": "함안-부산-1",
+    "oldSlug": "haman-busan-1",
     "name": "함안휴게소",
     "image": "/images/thumbnails/gangbyeon.jpg",
     "direction": "하행",
@@ -28192,8 +28348,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
-      "dieselPrice": 1853,
+      "gasolinePrice": 1814,
+      "dieselPrice": 1803,
       "lpgPrice": 1276,
       "hasEvCharger": true,
       "evChargersCount": 6,
@@ -28210,7 +28366,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.6411
   },
   {
-    "slug": "seoyeoju-both",
+    "slug": "서여주-양방향",
+    "oldSlug": "seoyeoju-both",
     "name": "서여주휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -28356,7 +28513,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.372
   },
   {
-    "slug": "seoyeoju-both-1",
+    "slug": "서여주-양방향-1",
+    "oldSlug": "seoyeoju-both-1",
     "name": "서여주휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -28498,7 +28656,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4115
   },
   {
-    "slug": "iseo-busan",
+    "slug": "이서-부산",
+    "oldSlug": "iseo-busan",
     "name": "이서휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -28643,7 +28802,7 @@ export const serviceAreas: ServiceArea[] = [
     "gasStation": {
       "brand": "알뜰주유소",
       "gasolinePrice": 1845,
-      "dieselPrice": 1839,
+      "dieselPrice": 1835,
       "lpgPrice": 1160,
       "hasEvCharger": true,
       "evChargersCount": 6,
@@ -28662,7 +28821,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.009
   },
   {
-    "slug": "iseo-both",
+    "slug": "이서-양방향",
+    "oldSlug": "iseo-both",
     "name": "이서휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -28815,7 +28975,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.1182
   },
   {
-    "slug": "osu-both",
+    "slug": "오수-양방향",
+    "oldSlug": "osu-both",
     "name": "오수휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -28972,7 +29133,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.2686
   },
   {
-    "slug": "osu-busan",
+    "slug": "오수-부산",
+    "oldSlug": "osu-busan",
     "name": "오수휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -29128,7 +29290,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.138
   },
   {
-    "slug": "hwangjeon-busan",
+    "slug": "황전-부산",
+    "oldSlug": "hwangjeon-busan",
     "name": "황전휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -29265,7 +29428,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.3316
   },
   {
-    "slug": "hwangjeon-both",
+    "slug": "황전-양방향",
+    "oldSlug": "hwangjeon-both",
     "name": "황전휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -29411,7 +29575,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.3309
   },
   {
-    "slug": "guri-seoul",
+    "slug": "구리-서울",
+    "oldSlug": "guri-seoul",
     "name": "구리휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "상행",
@@ -29568,7 +29733,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.507
   },
   {
-    "slug": "tongdosa-busan",
+    "slug": "통도사-부산",
+    "oldSlug": "tongdosa-busan",
     "name": "통도사휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "하행",
@@ -29693,17 +29859,12 @@ export const serviceAreas: ServiceArea[] = [
         "name": "달콤커피",
         "description": "MZ의 Flex 라이프스타일",
         "hours": "09:00 ~ 20:00"
-      },
-      {
-        "name": "기타",
-        "description": "23번지 남산돈까스",
-        "hours": "10:00 ~ 20:30"
       }
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
-      "dieselPrice": 1853,
+      "gasolinePrice": 1814,
+      "dieselPrice": 1803,
       "lpgPrice": 1276,
       "hasEvCharger": true,
       "evChargersCount": 12,
@@ -29719,7 +29880,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.8123
   },
   {
-    "slug": "sinpung-both",
+    "slug": "신풍-양방향",
+    "oldSlug": "sinpung-both",
     "name": "신풍휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -29851,7 +30013,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5252
   },
   {
-    "slug": "myeoncheon-both",
+    "slug": "면천-양방향",
+    "oldSlug": "myeoncheon-both",
     "name": "면천휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -29979,7 +30142,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4168
   },
   {
-    "slug": "seongju-both",
+    "slug": "성주-양방향",
+    "oldSlug": "seongju-both",
     "name": "성주휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -30139,7 +30303,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.3998
   },
   {
-    "slug": "seongju-both-1",
+    "slug": "성주-양방향-1",
+    "oldSlug": "seongju-both-1",
     "name": "성주휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -30304,7 +30469,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.359
   },
   {
-    "slug": "boseongnogcha-busan",
+    "slug": "보성녹차-부산",
+    "oldSlug": "boseongnogcha-busan",
     "name": "보성녹차휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -30438,8 +30604,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
-      "dieselPrice": 1853,
+      "gasolinePrice": 1814,
+      "dieselPrice": 1803,
       "lpgPrice": 1261,
       "hasEvCharger": true,
       "evChargersCount": 6,
@@ -30458,7 +30624,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.4103
   },
   {
-    "slug": "boseongnogcha-both",
+    "slug": "보성녹차-양방향",
+    "oldSlug": "boseongnogcha-both",
     "name": "보성녹차휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -30612,7 +30779,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.5527
   },
   {
-    "slug": "ogcheonmannam-both",
+    "slug": "옥천만남-양방향",
+    "oldSlug": "ogcheonmannam-both",
     "name": "옥천만남휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "양방향",
@@ -30745,7 +30913,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6393
   },
   {
-    "slug": "majang-both",
+    "slug": "마장-양방향",
+    "oldSlug": "majang-both",
     "name": "마장휴게소",
     "image": "/images/thumbnails/olympic.jpg",
     "direction": "양방향",
@@ -30916,7 +31085,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5902
   },
   {
-    "slug": "geumwang-both",
+    "slug": "금왕-양방향",
+    "oldSlug": "geumwang-both",
     "name": "금왕휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -31065,7 +31235,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4178
   },
   {
-    "slug": "geumwang-both-1",
+    "slug": "금왕-양방향-1",
+    "oldSlug": "geumwang-both-1",
     "name": "금왕휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -31214,7 +31385,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3401
   },
   {
-    "slug": "gangcheonsan-seoul",
+    "slug": "강천산-서울",
+    "oldSlug": "gangcheonsan-seoul",
     "name": "강천산휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "상행",
@@ -31356,7 +31528,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4285
   },
   {
-    "slug": "cheondeungsan-both",
+    "slug": "천등산-양방향",
+    "oldSlug": "cheondeungsan-both",
     "name": "천등산휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -31493,7 +31666,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5423
   },
   {
-    "slug": "cheondeungsan-both-1",
+    "slug": "천등산-양방향-1",
+    "oldSlug": "cheondeungsan-both-1",
     "name": "천등산휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -31637,7 +31811,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6363
   },
   {
-    "slug": "gimpohaengbogdeurimswimteo-both",
+    "slug": "김포행복드림쉼터-양방향",
+    "oldSlug": "gimpohaengbogdeurimswimteo-both",
     "name": "김포행복드림쉼터휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -31770,7 +31945,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.0838
   },
   {
-    "slug": "gangcheonsan-busan",
+    "slug": "강천산-부산",
+    "oldSlug": "gangcheonsan-busan",
     "name": "강천산휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -31913,7 +32089,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5691
   },
   {
-    "slug": "oedong-both",
+    "slug": "외동-양방향",
+    "oldSlug": "oedong-both",
     "name": "외동휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -32063,7 +32240,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.3649
   },
   {
-    "slug": "oedong-busan",
+    "slug": "외동-부산",
+    "oldSlug": "oedong-busan",
     "name": "외동휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -32205,7 +32383,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3985
   },
   {
-    "slug": "nongong-seoul",
+    "slug": "논공-서울",
+    "oldSlug": "nongong-seoul",
     "name": "논공휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "상행",
@@ -32347,7 +32526,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.6127
   },
   {
-    "slug": "nongong-busan",
+    "slug": "논공-부산",
+    "oldSlug": "nongong-busan",
     "name": "논공휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -32493,7 +32673,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.7334
   },
   {
-    "slug": "gapyeong-seoul",
+    "slug": "가평-서울",
+    "oldSlug": "gapyeong-seoul",
     "name": "가평휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "상행",
@@ -32668,7 +32849,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6496
   },
   {
-    "slug": "gapyeong-both",
+    "slug": "가평-양방향",
+    "oldSlug": "gapyeong-both",
     "name": "가평휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -32842,7 +33024,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5282
   },
   {
-    "slug": "osan-both",
+    "slug": "오산-양방향",
+    "oldSlug": "osan-both",
     "name": "오산휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -32994,7 +33177,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3977
   },
   {
-    "slug": "osan-both-1",
+    "slug": "오산-양방향-1",
+    "oldSlug": "osan-both-1",
     "name": "오산휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -33155,7 +33339,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3781
   },
   {
-    "slug": "songsanpodo-both",
+    "slug": "송산포도-양방향",
+    "oldSlug": "songsanpodo-both",
     "name": "송산포도휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -33323,7 +33508,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4873
   },
   {
-    "slug": "jeonganalbam-both",
+    "slug": "정안알밤-양방향",
+    "oldSlug": "jeonganalbam-both",
     "name": "정안알밤휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -33486,7 +33672,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4913
   },
   {
-    "slug": "jeonganalbam-both-1",
+    "slug": "정안알밤-양방향-1",
+    "oldSlug": "jeonganalbam-both-1",
     "name": "정안알밤휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -33649,7 +33836,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5308
   },
   {
-    "slug": "iin-both",
+    "slug": "이인-양방향",
+    "oldSlug": "iin-both",
     "name": "이인휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -33817,7 +34005,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4359
   },
   {
-    "slug": "tancheon-both",
+    "slug": "탄천-양방향",
+    "oldSlug": "tancheon-both",
     "name": "탄천휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -33989,7 +34178,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.2937
   },
   {
-    "slug": "yangju-seoul",
+    "slug": "양주-서울",
+    "oldSlug": "yangju-seoul",
     "name": "양주휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "상행",
@@ -34150,7 +34340,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.8285
   },
   {
-    "slug": "cheongdosaemaeul-seoul",
+    "slug": "청도새마을-서울",
+    "oldSlug": "cheongdosaemaeul-seoul",
     "name": "청도새마을휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "상행",
@@ -34316,7 +34507,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.4349
   },
   {
-    "slug": "cheongdosaemaeul-busan",
+    "slug": "청도새마을-부산",
+    "oldSlug": "cheongdosaemaeul-busan",
     "name": "청도새마을휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -34481,7 +34673,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5787
   },
   {
-    "slug": "jangan-busan",
+    "slug": "장안-부산",
+    "oldSlug": "jangan-busan",
     "name": "장안휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -34618,7 +34811,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 129.2253
   },
   {
-    "slug": "jangan-busan-1",
+    "slug": "장안-부산-1",
+    "oldSlug": "jangan-busan-1",
     "name": "장안휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -34756,7 +34950,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 129.1643
   },
   {
-    "slug": "yeongjongdaegyo-both",
+    "slug": "영종대교-양방향",
+    "oldSlug": "yeongjongdaegyo-both",
     "name": "영종대교휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -34931,7 +35126,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.6513
   },
   {
-    "slug": "yangpyeong-busan",
+    "slug": "양평-부산",
+    "oldSlug": "yangpyeong-busan",
     "name": "양평휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -35080,7 +35276,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3714
   },
   {
-    "slug": "yangpyeong-both",
+    "slug": "양평-양방향",
+    "oldSlug": "yangpyeong-both",
     "name": "양평휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -35213,7 +35410,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4134
   },
   {
-    "slug": "gwangju-busan",
+    "slug": "광주-부산",
+    "oldSlug": "gwangju-busan",
     "name": "광주휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -35368,7 +35566,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5519
   },
   {
-    "slug": "gwangju-both",
+    "slug": "광주-양방향",
+    "oldSlug": "gwangju-both",
     "name": "광주휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -35522,7 +35721,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6595
   },
   {
-    "slug": "uiseong-both",
+    "slug": "의성-양방향",
+    "oldSlug": "uiseong-both",
     "name": "의성휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -35661,7 +35861,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.6246
   },
   {
-    "slug": "uiseong-both-1",
+    "slug": "의성-양방향-1",
+    "oldSlug": "uiseong-both-1",
     "name": "의성휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -35800,7 +36001,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.493
   },
   {
-    "slug": "cheongsong-both",
+    "slug": "청송-양방향",
+    "oldSlug": "cheongsong-both",
     "name": "청송휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -35946,7 +36148,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.373
   },
   {
-    "slug": "cheongsong-both-1",
+    "slug": "청송-양방향-1",
+    "oldSlug": "cheongsong-both-1",
     "name": "청송휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -36081,7 +36284,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.3749
   },
   {
-    "slug": "hongcheon-seoul",
+    "slug": "홍천-서울",
+    "oldSlug": "hongcheon-seoul",
     "name": "홍천휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "상행",
@@ -36210,8 +36414,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1849,
-      "dieselPrice": 1839,
+      "gasolinePrice": 1838,
+      "dieselPrice": 1832,
       "lpgPrice": 1255,
       "hasEvCharger": true,
       "evChargersCount": 6,
@@ -36228,7 +36432,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 126.9694
   },
   {
-    "slug": "hongcheon-both",
+    "slug": "홍천-양방향",
+    "oldSlug": "hongcheon-both",
     "name": "홍천휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -36357,8 +36562,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1849,
-      "dieselPrice": 1839,
+      "gasolinePrice": 1838,
+      "dieselPrice": 1832,
       "lpgPrice": 1255,
       "hasEvCharger": true,
       "evChargersCount": 6,
@@ -36375,7 +36580,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.0994
   },
   {
-    "slug": "naerincheon-both",
+    "slug": "내린천-양방향",
+    "oldSlug": "naerincheon-both",
     "name": "내린천휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -36519,8 +36725,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1849,
-      "dieselPrice": 1839,
+      "gasolinePrice": 1838,
+      "dieselPrice": 1832,
       "lpgPrice": 1255,
       "hasEvCharger": true,
       "evChargersCount": 8,
@@ -36536,7 +36742,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.1178
   },
   {
-    "slug": "nagdongganguiseong-both",
+    "slug": "낙동강의성-양방향",
+    "oldSlug": "nagdongganguiseong-both",
     "name": "낙동강의성휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -36687,7 +36894,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.548
   },
   {
-    "slug": "nagdongganggumi-both",
+    "slug": "낙동강구미-양방향",
+    "oldSlug": "nagdongganggumi-both",
     "name": "낙동강구미휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -36835,7 +37043,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4106
   },
   {
-    "slug": "gunwiyeongcheon-both",
+    "slug": "군위영천-양방향",
+    "oldSlug": "gunwiyeongcheon-both",
     "name": "군위영천휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -36980,7 +37189,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.3723
   },
   {
-    "slug": "samgugyusagunwi-both",
+    "slug": "삼국유사군위-양방향",
+    "oldSlug": "samgugyusagunwi-both",
     "name": "삼국유사군위휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -37114,7 +37324,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4682
   },
   {
-    "slug": "siheunghaneul-both",
+    "slug": "시흥하늘-양방향",
+    "oldSlug": "siheunghaneul-both",
     "name": "시흥하늘휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -37280,7 +37491,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.0699
   },
   {
-    "slug": "teseuteu-both",
+    "slug": "테스트-양방향",
+    "oldSlug": "teseuteu-both",
     "name": "테스트휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "양방향",
@@ -37413,7 +37625,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.1274
   },
   {
-    "slug": "gimhaegeumgwangaya-both",
+    "slug": "김해금관가야-양방향",
+    "oldSlug": "gimhaegeumgwangaya-both",
     "name": "김해금관가야휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -37556,7 +37769,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.7621
   },
   {
-    "slug": "hamyang-both",
+    "slug": "함양-양방향",
+    "oldSlug": "hamyang-both",
     "name": "함양휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -37705,7 +37919,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.6183
   },
   {
-    "slug": "hamyang-both-1",
+    "slug": "함양-양방향-1",
+    "oldSlug": "hamyang-both-1",
     "name": "함양휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -37836,7 +38051,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1848,
       "dieselPrice": 1838,
-      "lpgPrice": null,
+      "lpgPrice": 1199,
       "hasEvCharger": true,
       "evChargersCount": 12,
       "hasHydrogen": false
@@ -37854,7 +38069,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5427
   },
   {
-    "slug": "maesong-seoul",
+    "slug": "매송-서울",
+    "oldSlug": "maesong-seoul",
     "name": "매송휴게소",
     "image": "/images/thumbnails/seohaean.jpg",
     "direction": "상행",
@@ -38011,7 +38227,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4307
   },
   {
-    "slug": "maesong-busan",
+    "slug": "매송-부산",
+    "oldSlug": "maesong-busan",
     "name": "매송휴게소",
     "image": "/images/thumbnails/seohaean.jpg",
     "direction": "하행",
@@ -38150,8 +38367,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
-      "dieselPrice": 1853,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 8,
@@ -38173,7 +38390,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5734
   },
   {
-    "slug": "gunjahaengbogdeurimswimteo-both",
+    "slug": "군자행복드림쉼터-양방향",
+    "oldSlug": "gunjahaengbogdeurimswimteo-both",
     "name": "군자행복드림쉼터휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -38301,7 +38519,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6655
   },
   {
-    "slug": "gurinamyangjuhaengbogdeurimswimteo-both",
+    "slug": "구리남양주행복드림쉼터-양방향",
+    "oldSlug": "gurinamyangjuhaengbogdeurimswimteo-both",
     "name": "구리남양주행복드림쉼터휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -38435,7 +38654,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.0819
   },
   {
-    "slug": "pyeongtaeg-both",
+    "slug": "평택-양방향",
+    "oldSlug": "pyeongtaeg-both",
     "name": "평택휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -38601,7 +38821,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4834
   },
   {
-    "slug": "jangheungjeongnamjin-both",
+    "slug": "장흥정남진-양방향",
+    "oldSlug": "jangheungjeongnamjin-both",
     "name": "장흥정남진휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -38763,7 +38984,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.934
   },
   {
-    "slug": "ulju-both",
+    "slug": "울주-양방향",
+    "oldSlug": "ulju-both",
     "name": "울주휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -38912,7 +39134,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 129.1932
   },
   {
-    "slug": "ulju-busan",
+    "slug": "울주-부산",
+    "oldSlug": "ulju-busan",
     "name": "울주휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -39053,7 +39276,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 129.3253
   },
   {
-    "slug": "munuicheongnamdae-both",
+    "slug": "문의청남대-양방향",
+    "oldSlug": "munuicheongnamdae-both",
     "name": "문의청남대휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -39203,7 +39427,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6229
   },
   {
-    "slug": "munuicheongnamdae-both-1",
+    "slug": "문의청남대-양방향-1",
+    "oldSlug": "munuicheongnamdae-both-1",
     "name": "문의청남대휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -39353,7 +39578,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.6197
   },
   {
-    "slug": "buangoryeocheongja-seoul",
+    "slug": "부안고려청자-서울",
+    "oldSlug": "buangoryeocheongja-seoul",
     "name": "부안고려청자휴게소",
     "image": "/images/thumbnails/seohaean.jpg",
     "direction": "상행",
@@ -39502,7 +39728,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.1553
   },
   {
-    "slug": "buangoryeocheongja-busan",
+    "slug": "부안고려청자-부산",
+    "oldSlug": "buangoryeocheongja-busan",
     "name": "부안고려청자휴게소",
     "image": "/images/thumbnails/seohaean.jpg",
     "direction": "하행",
@@ -39631,8 +39858,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
-      "dieselPrice": 1853,
+      "gasolinePrice": 1814,
+      "dieselPrice": 1803,
       "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 10,
@@ -39651,7 +39878,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.0259
   },
   {
-    "slug": "ansan-both",
+    "slug": "안산-양방향",
+    "oldSlug": "ansan-both",
     "name": "안산휴게소",
     "image": "/images/thumbnails/yeongdong.jpg",
     "direction": "양방향",
@@ -39810,7 +40038,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.379
   },
   {
-    "slug": "seobusan-busan",
+    "slug": "서부산-부산",
+    "oldSlug": "seobusan-busan",
     "name": "서부산휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -39955,7 +40184,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 129.0472
   },
   {
-    "slug": "chunhyang-busan",
+    "slug": "춘향-부산",
+    "oldSlug": "chunhyang-busan",
     "name": "춘향휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -40111,7 +40341,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.2566
   },
   {
-    "slug": "chunhyang-both",
+    "slug": "춘향-양방향",
+    "oldSlug": "chunhyang-both",
     "name": "춘향휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -40263,7 +40494,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.2937
   },
   {
-    "slug": "namhangang-both",
+    "slug": "남한강-양방향",
+    "oldSlug": "namhangang-both",
     "name": "남한강휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -40416,7 +40648,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5672
   },
   {
-    "slug": "milyangyeongnamru-both",
+    "slug": "밀양영남루-양방향",
+    "oldSlug": "milyangyeongnamru-both",
     "name": "밀양영남루휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -40562,7 +40795,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5996
   },
   {
-    "slug": "milyangyeongnamru-busan",
+    "slug": "밀양영남루-부산",
+    "oldSlug": "milyangyeongnamru-busan",
     "name": "밀양영남루휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "하행",
@@ -40691,8 +40925,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1854,
-      "dieselPrice": 1846,
+      "gasolinePrice": 1844,
+      "dieselPrice": 1841,
       "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 8,
@@ -40712,7 +40946,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5432
   },
   {
-    "slug": "cheoin-both",
+    "slug": "처인-양방향",
+    "oldSlug": "cheoin-both",
     "name": "처인휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -40861,8 +41096,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1859,
-      "dieselPrice": 1864,
+      "gasolinePrice": 1854,
+      "dieselPrice": 1859,
       "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 4,
@@ -40880,7 +41115,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.4499
   },
   {
-    "slug": "gosamhosu-both",
+    "slug": "고삼호수-양방향",
+    "oldSlug": "gosamhosu-both",
     "name": "고삼호수휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -41029,8 +41265,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1859,
-      "dieselPrice": 1869,
+      "gasolinePrice": 1854,
+      "dieselPrice": 1852,
       "lpgPrice": 1219,
       "hasEvCharger": true,
       "evChargersCount": 12,
@@ -41047,7 +41283,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.5937
   },
   {
-    "slug": "yeongdeog-both",
+    "slug": "영덕-양방향",
+    "oldSlug": "yeongdeog-both",
     "name": "영덕휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -41194,7 +41431,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.6555
   },
   {
-    "slug": "pohang-both",
+    "slug": "포항-양방향",
+    "oldSlug": "pohang-both",
     "name": "포항휴게소",
     "image": "/images/thumbnails/default.jpg",
     "direction": "양방향",
@@ -41336,7 +41574,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 128.5921
   },
   {
-    "slug": "gimje-both",
+    "slug": "김제-양방향",
+    "oldSlug": "gimje-both",
     "name": "김제휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "양방향",
@@ -41483,7 +41722,8 @@ export const serviceAreas: ServiceArea[] = [
     "longitude": 127.0917
   },
   {
-    "slug": "gimje-both-1",
+    "slug": "김제-양방향-1",
+    "oldSlug": "gimje-both-1",
     "name": "김제휴게소",
     "image": "/images/thumbnails/gyeongbu.jpg",
     "direction": "양방향",
@@ -41804,7 +42044,14 @@ export function getServiceAreasByHighway(highwaySlug: string) {
 }
 
 export function getServiceAreaBySlug(slug: string) {
-  return serviceAreas.find((s) => s.slug === slug);
+  const decodedSlug = decodeURIComponent(slug);
+  return serviceAreas.find(
+    (s) =>
+      s.slug === slug ||
+      s.slug === decodedSlug ||
+      s.oldSlug === slug ||
+      s.oldSlug === decodedSlug
+  );
 }
 
 export function getCctvPointsByHighway(highwaySlug: string) {

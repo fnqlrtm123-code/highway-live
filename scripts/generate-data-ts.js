@@ -452,18 +452,30 @@ async function generateData() {
 
   // Map Service Areas
   const serviceAreasList = [];
+  const generatedOldSlugs = [];
 
   uniqueRestAreas.forEach((r, idx) => {
-    // Generate unique slug
+    // Generate unique old legacy English slug for static resource lookups (coords, locationKm, image)
     const engBaseSlug = romanize(r.cleanedName);
     const dirEng = r.direction === '상행' ? 'seoul' : (r.direction === '하행' ? 'busan' : 'both');
-    let slug = `${engBaseSlug}-${dirEng}`;
+    let oldSlug = `${engBaseSlug}-${dirEng}`;
+    let oldSlugCount = 0;
+    while (generatedOldSlugs.includes(oldSlug)) {
+      oldSlugCount++;
+      oldSlug = `${engBaseSlug}-${dirEng}-${oldSlugCount}`;
+    }
+    generatedOldSlugs.push(oldSlug);
+
+    // Generate unique slug in Korean
+    const baseSlug = r.cleanedName.replace(/[^a-zA-Z0-9가-힣]+/g, '-').replace(/^-|-$/g, '');
+    const dirKo = r.direction === '상행' ? '서울' : (r.direction === '하행' ? '부산' : '양방향');
+    let slug = `${baseSlug}-${dirKo}`;
     
     // Ensure uniqueness
     let count = 0;
     while (serviceAreasList.some(s => s.slug === slug)) {
       count++;
-      slug = `${engBaseSlug}-${dirEng}-${count}`;
+      slug = `${baseSlug}-${dirKo}-${count}`;
     }
 
     const routeName = r.routeName;
@@ -475,13 +487,13 @@ async function generateData() {
     const highwaySlug = highway ? highway.slug : 'gyeongbu';
     const highwayName = highway ? highway.name : '경부고속도로';
 
-    // Coordinate handling
-    let coords = PRECISE_COORDINATES[slug] || 
-                 PRECISE_COORDINATES[`${slug}-seoul`] || 
-                 PRECISE_COORDINATES[`${slug}-busan`] || 
-                 PRECISE_COORDINATES[`${slug}-both`] || 
-                 PRECISE_COORDINATES[`${slug}-mokpo`] || 
-                 PRECISE_COORDINATES[`${slug}-gangneung`];
+    // Coordinate handling using old legacy English slug
+    let coords = PRECISE_COORDINATES[oldSlug] || 
+                 PRECISE_COORDINATES[`${oldSlug}-seoul`] || 
+                 PRECISE_COORDINATES[`${oldSlug}-busan`] || 
+                 PRECISE_COORDINATES[`${oldSlug}-both`] || 
+                 PRECISE_COORDINATES[`${oldSlug}-mokpo`] || 
+                 PRECISE_COORDINATES[`${oldSlug}-gangneung`];
     if (!coords) {
       let region = '경기';
       for (const reg of Object.keys(REGION_COORDINATES)) {
@@ -634,12 +646,12 @@ async function generateData() {
       hasHydrogen
     };
 
-    let locationKm = PRECISE_LOCATION_KM[slug] || 
-                     PRECISE_LOCATION_KM[`${slug}-seoul`] || 
-                     PRECISE_LOCATION_KM[`${slug}-busan`] || 
-                     PRECISE_LOCATION_KM[`${slug}-both`] || 
-                     PRECISE_LOCATION_KM[`${slug}-mokpo`] || 
-                     PRECISE_LOCATION_KM[`${slug}-gangneung`];
+    let locationKm = PRECISE_LOCATION_KM[oldSlug] || 
+                     PRECISE_LOCATION_KM[`${oldSlug}-seoul`] || 
+                     PRECISE_LOCATION_KM[`${oldSlug}-busan`] || 
+                     PRECISE_LOCATION_KM[`${oldSlug}-both`] || 
+                     PRECISE_LOCATION_KM[`${oldSlug}-mokpo`] || 
+                     PRECISE_LOCATION_KM[`${oldSlug}-gangneung`];
     if (!locationKm) {
       locationKm = 10 + (idx * 7) % 350;
     }
@@ -649,15 +661,16 @@ async function generateData() {
     let image = getRestAreaThumbnail(highwaySlug);
     
     for (const ext of imageExtensions) {
-      const imgPath = path.join(__dirname, '..', 'public', 'images', 'rest-areas', `${slug}.${ext}`);
+      const imgPath = path.join(__dirname, '..', 'public', 'images', 'rest-areas', `${oldSlug}.${ext}`);
       if (fs.existsSync(imgPath)) {
-        image = `/images/rest-areas/${slug}.${ext}`;
+        image = `/images/rest-areas/${oldSlug}.${ext}`;
         break;
       }
     }
 
     serviceAreasList.push({
       slug,
+      oldSlug,
       name: `${r.cleanedName}휴게소`,
       image,
       direction: r.direction,
@@ -688,6 +701,7 @@ export interface Highway {
 
 export interface ServiceArea {
   slug: string;
+  oldSlug: string;
   name: string;
   image: string;
   direction: "상행" | "하행" | "양방향";
@@ -901,7 +915,14 @@ export function getServiceAreasByHighway(highwaySlug: string) {
 }
 
 export function getServiceAreaBySlug(slug: string) {
-  return serviceAreas.find((s) => s.slug === slug);
+  const decodedSlug = decodeURIComponent(slug);
+  return serviceAreas.find(
+    (s) =>
+      s.slug === slug ||
+      s.slug === decodedSlug ||
+      s.oldSlug === slug ||
+      s.oldSlug === decodedSlug
+  );
 }
 
 export function getCctvPointsByHighway(highwaySlug: string) {

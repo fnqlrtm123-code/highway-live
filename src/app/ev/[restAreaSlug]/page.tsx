@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ restAreaS
   const area = getServiceAreaBySlug(restAreaSlug);
   if (!area) return {};
 
-  const pageUrl = `https://highway.mrbrisbaneinsouth.kr/ev/${restAreaSlug}`;
+  const pageUrl = `https://highway.mrbrisbaneinsouth.kr/ev/${encodeURIComponent(area.slug)}`;
   const title = `${area.name} (${area.directionName}) 전기차 충전소 가격 운영 시간`;
   const hydrogenText = area.gasStation.hasHydrogen ? ' 및 수소 충전소 가능 여부' : '';
   const chargerCountText = area.gasStation.hasEvCharger ? `, 충전기 대수: ${area.gasStation.evChargersCount}대` : '';
@@ -37,9 +37,15 @@ export async function generateMetadata({ params }: { params: Promise<{ restAreaS
 }
 
 export async function generateStaticParams() {
-  return serviceAreas.map((area) => ({
-    restAreaSlug: area.slug,
-  }));
+  const params: { restAreaSlug: string }[] = [];
+  serviceAreas.forEach((area) => {
+    params.push({ restAreaSlug: area.slug });
+    const encoded = encodeURIComponent(area.slug);
+    if (encoded !== area.slug) {
+      params.push({ restAreaSlug: encoded });
+    }
+  });
+  return params;
 }
 
 export default async function EvDetailPage({ params }: Props) {
@@ -63,8 +69,25 @@ export default async function EvDetailPage({ params }: Props) {
     ? `또한, 승용 수소 전기차(FCEV) 전용 700bar 표준 규격을 지원하는 수소 충전소도 정상적으로 연동 및 가동 중입니다. 충전 대기 시간을 단축하고 편리하게 충전을 진행하실 수 있습니다.`
     : `수소차(FCEV) 충전소의 경우 현재 이 휴게소에서는 지원되지 않습니다. 수소 차량 운행 시 참고하시기 바랍니다.`;
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": `${area.name} (${area.directionName}) 전기차 충전소`,
+    "description": `${area.name} (${area.directionName}) 휴게소의 전기차(EV) 급속/완속 충전소 상세 위치 및 수소 충전소 가용 여부 정보입니다.`,
+    "url": `https://highway.mrbrisbaneinsouth.kr/ev/${encodeURIComponent(area.slug)}`,
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": area.highwayName,
+      "streetAddress": `${area.locationKm}km 지점`
+    }
+  };
+
   return (
     <div className="max-w-3xl mx-auto space-y-8 text-slate-700 leading-relaxed font-normal">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       
       {/* 타이틀 */}
       <div className="space-y-2">

@@ -23,9 +23,15 @@ export async function generateMetadata({ params }: { params: Promise<{ restAreaS
 
 // Programmatic SEO를 위한 정적 경로(Static Params) 사전 정의
 export async function generateStaticParams() {
-  return serviceAreas.map((area) => ({
-    restAreaSlug: area.slug,
-  }));
+  const params: { restAreaSlug: string }[] = [];
+  serviceAreas.forEach((area) => {
+    params.push({ restAreaSlug: area.slug });
+    const encoded = encodeURIComponent(area.slug);
+    if (encoded !== area.slug) {
+      params.push({ restAreaSlug: encoded });
+    }
+  });
+  return params;
 }
 
 export default async function EvAreaLayout({ children, params }: Props) {

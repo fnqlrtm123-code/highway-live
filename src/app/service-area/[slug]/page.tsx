@@ -6,9 +6,15 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return serviceAreas.map((area) => ({
-    slug: area.slug,
-  }));
+  const params: { slug: string }[] = [];
+  serviceAreas.forEach((area) => {
+    params.push({ slug: area.slug });
+    const encoded = encodeURIComponent(area.slug);
+    if (encoded !== area.slug) {
+      params.push({ slug: encoded });
+    }
+  });
+  return params;
 }
 
 export default async function ServiceAreaRedirectPage({ params }: Props) {

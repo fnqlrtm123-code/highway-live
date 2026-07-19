@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ restAreaS
   const area = getServiceAreaBySlug(restAreaSlug);
   if (!area) return {};
 
-  const pageUrl = `https://highway.mrbrisbaneinsouth.kr/gas/${restAreaSlug}`;
+  const pageUrl = `https://highway.mrbrisbaneinsouth.kr/gas/${encodeURIComponent(area.slug)}`;
   const title = `${area.name} (${area.directionName}) 주유소 가격 휘발유 실시간 가격 비교`;
   const lpgText = area.gasStation.lpgPrice ? ` 및 LPG 충전소 가격` : '';
   const description = `${area.name} (${area.directionName}) 휴게소에 위치한 ${area.gasStation.brand} 주유소의 실시간 휘발유(${area.gasStation.gasolinePrice.toLocaleString()}원), 경유(${area.gasStation.dieselPrice.toLocaleString()}원)${lpgText} 정보와 함께 알뜰 주유소 주유 팁을 확인하세요.`;
@@ -36,9 +36,15 @@ export async function generateMetadata({ params }: { params: Promise<{ restAreaS
 }
 
 export async function generateStaticParams() {
-  return serviceAreas.map((area) => ({
-    restAreaSlug: area.slug,
-  }));
+  const params: { restAreaSlug: string }[] = [];
+  serviceAreas.forEach((area) => {
+    params.push({ restAreaSlug: area.slug });
+    const encoded = encodeURIComponent(area.slug);
+    if (encoded !== area.slug) {
+      params.push({ restAreaSlug: encoded });
+    }
+  });
+  return params;
 }
 
 export default async function GasDetailPage({ params }: Props) {
@@ -61,8 +67,25 @@ export default async function GasDetailPage({ params }: Props) {
 
   const summaryText = `${area.name} 휴게소 주유소는 국토교통부와 한국도로공사가 지원하는 대표 주유인프라 브랜드인 ${area.gasStation.brand} 주유소를 채택하고 있습니다. 현재 휘발유는 노선 평균 대비 약 ${Math.abs(gasolineDiff)}원 ${isGasolineCheaper ? '저렴한' : '높은'} 수준으로 판매 중이며, 경유는 평균보다 ${Math.abs(dieselDiff)}원 ${isDieselCheaper ? '더 저렴하게' : '더 높게'} 판매되고 있어 장거리 정속 주행 차량의 급유 시 참고하시기 좋습니다.`;
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": `${area.name} (${area.directionName}) 주유소`,
+    "description": `${area.name} (${area.directionName}) 휴게소에 위치한 ${area.gasStation.brand} 주유소의 실시간 휘발유, 경유, LPG 가격 정보입니다.`,
+    "url": `https://highway.mrbrisbaneinsouth.kr/gas/${encodeURIComponent(area.slug)}`,
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": area.highwayName,
+      "streetAddress": `${area.locationKm}km 지점`
+    }
+  };
+
   return (
     <div className="max-w-3xl mx-auto space-y-8 text-slate-700 leading-relaxed font-normal">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       
       {/* 타이틀 */}
       <div className="space-y-2">
