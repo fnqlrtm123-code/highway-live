@@ -41,22 +41,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  const params: { restAreaSlug: string }[] = [];
-  serviceAreas.forEach((area) => {
-    params.push({ restAreaSlug: area.slug });
-    const encoded = encodeURIComponent(area.slug);
-    if (encoded !== area.slug) {
-      params.push({ restAreaSlug: encoded });
-    }
-    if (area.oldSlug) {
-      params.push({ restAreaSlug: area.oldSlug });
-      const encodedOld = encodeURIComponent(area.oldSlug);
-      if (encodedOld !== area.oldSlug) {
-        params.push({ restAreaSlug: encodedOld });
-      }
-    }
-  });
-  return params;
+  return serviceAreas.map((area) => ({
+    restAreaSlug: area.slug,
+  }));
 }
 
 export default async function RestAreaDashboardPage({ params }: Props) {
