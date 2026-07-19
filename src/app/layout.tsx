@@ -97,12 +97,11 @@ export default function RootLayout({
             </a>
 
             {/* 네비게이션 링크 */}
-            <nav className="hidden lg:flex items-center gap-1">
-              <a href="/traffic" className="px-3.5 py-2 text-[13px] font-semibold rounded-lg text-slate-650 hover:text-slate-950 hover:bg-slate-100/50 transition-all">교통상황 · CCTV</a>
-              <a href="/rest-areas" className="px-3.5 py-2 text-[13px] font-semibold rounded-lg text-slate-650 hover:text-slate-950 hover:bg-slate-100/50 transition-all">고속도로 휴게소</a>
-
-              <a href="/gas" className="px-3.5 py-2 text-[13px] font-semibold rounded-lg text-slate-650 hover:text-slate-950 hover:bg-slate-100/50 transition-all">주유소 · 충전소</a>
-              <a href="/toll" className="px-3.5 py-2 text-[13px] font-semibold rounded-lg text-slate-650 hover:text-slate-950 hover:bg-slate-100/50 transition-all">고속도로 통행료</a>
+            <nav className="flex items-center gap-1 overflow-x-auto scrollbar-none whitespace-nowrap max-w-[70%] md:max-w-none py-1">
+              <a href="/traffic" className="px-2.5 py-1.5 text-xs sm:text-[13px] font-semibold rounded-lg text-slate-650 hover:text-slate-950 hover:bg-slate-100/50 transition-all shrink-0">교통상황 · CCTV</a>
+              <a href="/rest-areas" className="px-2.5 py-1.5 text-xs sm:text-[13px] font-semibold rounded-lg text-slate-650 hover:text-slate-950 hover:bg-slate-100/50 transition-all shrink-0">고속도로 휴게소</a>
+              <a href="/gas" className="px-2.5 py-1.5 text-xs sm:text-[13px] font-semibold rounded-lg text-slate-650 hover:text-slate-950 hover:bg-slate-100/50 transition-all shrink-0">주유소 · 충전소</a>
+              <a href="/toll" className="px-2.5 py-1.5 text-xs sm:text-[13px] font-semibold rounded-lg text-slate-650 hover:text-slate-950 hover:bg-slate-100/50 transition-all shrink-0">고속도로 통행료</a>
             </nav>
 
 
@@ -144,6 +143,7 @@ export default function RootLayout({
                 <ul className="space-y-2 text-[12.5px] font-medium text-slate-500">
                   <li><a href="/traffic" className="hover:text-slate-900 transition-colors">실시간 교통지도 &amp; CCTV</a></li>
                   <li><a href="/rest-areas" className="hover:text-slate-900 transition-colors">전체 휴게소 목록</a></li>
+                  <li><a href="/gas" className="hover:text-slate-900 transition-colors">주유소 · 충전소 비교</a></li>
                   <li><a href="/region" className="hover:text-slate-900 transition-colors">지역별 휴게소 찾기</a></li>
                   <li><a href="/ranking" className="hover:text-slate-900 transition-colors">휴게소 추천 랭킹</a></li>
                 </ul>

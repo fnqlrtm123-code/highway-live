@@ -43,6 +43,13 @@ export async function generateStaticParams() {
     if (encoded !== area.slug) {
       params.push({ restAreaSlug: encoded });
     }
+    if (area.oldSlug) {
+      params.push({ restAreaSlug: area.oldSlug });
+      const encodedOld = encodeURIComponent(area.oldSlug);
+      if (encodedOld !== area.oldSlug) {
+        params.push({ restAreaSlug: encodedOld });
+      }
+    }
   });
   return params;
 }
@@ -89,9 +96,17 @@ export default async function GasDetailPage({ params }: Props) {
       
       {/* 타이틀 */}
       <div className="space-y-2">
-        <h2 className="text-xl font-semibold text-slate-900 border-l-3 border-blue-600 pl-3">
-          ⛽ {area.name} 휴게소 실시간 주유소 및 LPG 충전소 유가 정보
-        </h2>
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+          <h2 className="text-xl font-semibold text-slate-900 border-l-3 border-blue-600 pl-3">
+            ⛽ {area.name} 휴게소 실시간 주유소 및 LPG 충전소 유가 정보
+          </h2>
+          <a
+            href={`/rest-areas/${encodeURIComponent(area.slug)}`}
+            className="text-xs font-bold text-blue-650 hover:text-blue-800 transition-colors whitespace-nowrap shrink-0 hover:underline cursor-pointer"
+          >
+            휴게소 상세 정보 &rarr;
+          </a>
+        </div>
         <p className="text-sm text-slate-500">
           한국도로공사 유가정보 피드 데이터를 기반으로 제공하는 실시간 기름값 정보입니다.
         </p>

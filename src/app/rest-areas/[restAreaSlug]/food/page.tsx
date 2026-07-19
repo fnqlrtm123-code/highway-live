@@ -40,6 +40,13 @@ export async function generateStaticParams() {
     if (encoded !== area.slug) {
       params.push({ restAreaSlug: encoded });
     }
+    if (area.oldSlug) {
+      params.push({ restAreaSlug: area.oldSlug });
+      const encodedOld = encodeURIComponent(area.oldSlug);
+      if (encodedOld !== area.oldSlug) {
+        params.push({ restAreaSlug: encodedOld });
+      }
+    }
   });
   return params;
 }
@@ -61,9 +68,17 @@ export default async function RestAreaFoodPage({ params }: Props) {
       
       {/* 타이틀 */}
       <div className="space-y-2">
-        <h2 className="text-xl font-semibold text-slate-900 border-l-3 border-blue-600 pl-3">
-          🍴 {area.name} 휴게소 대표 음식 및 식당가 메뉴판
-        </h2>
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+          <h2 className="text-xl font-semibold text-slate-900 border-l-3 border-blue-600 pl-3">
+            🍴 {area.name} 휴게소 대표 음식 및 식당가 메뉴판
+          </h2>
+          <a
+            href={`/rest-areas/${encodeURIComponent(area.slug)}`}
+            className="text-xs font-bold text-blue-650 hover:text-blue-800 transition-colors whitespace-nowrap shrink-0 hover:underline cursor-pointer"
+          >
+            휴게소 상세 정보 &rarr;
+          </a>
+        </div>
         <p className="text-sm text-slate-500">
           한국도로공사에서 공식 인증한 대표 음식 정보와 함께 스낵 코너, 푸드코트 전체 식당가 메뉴 리스트입니다.
         </p>

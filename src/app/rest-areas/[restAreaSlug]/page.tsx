@@ -48,6 +48,13 @@ export async function generateStaticParams() {
     if (encoded !== area.slug) {
       params.push({ restAreaSlug: encoded });
     }
+    if (area.oldSlug) {
+      params.push({ restAreaSlug: area.oldSlug });
+      const encodedOld = encodeURIComponent(area.oldSlug);
+      if (encodedOld !== area.oldSlug) {
+        params.push({ restAreaSlug: encodedOld });
+      }
+    }
   });
   return params;
 }
@@ -122,13 +129,22 @@ export default async function RestAreaDashboardPage({ params }: Props) {
           🍴 일반 식당가 및 스낵 코너 메뉴 목록
         </h3>
         <ul className="divide-y divide-slate-100 text-sm">
-          {area.otherMenus.map((menu) => (
+          {area.otherMenus.slice(0, 5).map((menu) => (
             <li key={menu.name} className="py-3 flex justify-between">
               <span className="font-medium text-slate-700">{menu.name}</span>
               <span className="font-mono font-semibold text-slate-600">{menu.price.toLocaleString()}원</span>
             </li>
           ))}
         </ul>
+
+        <div className="pt-3">
+          <a
+            href={`/rest-areas/${encodeURIComponent(area.slug)}/food`}
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 hover:text-blue-700 transition-colors py-1.5 hover:underline cursor-pointer"
+          >
+            🍴 전체 식당가 메뉴판 및 브랜드 매장 정보 전체보기 &rarr;
+          </a>
+        </div>
 
         {/* 입점 브랜드 매장 */}
         {area.brandStores && area.brandStores.length > 0 && (
@@ -157,9 +173,25 @@ export default async function RestAreaDashboardPage({ params }: Props) {
 
       {/* 3. 주유 정보 */}
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold text-slate-900 border-l-3 border-blue-600 pl-3">
-          3. 알뜰주유소 및 전기차 충전소 가격 정보
-        </h2>
+        <div className="flex justify-between items-end border-b border-slate-100 pb-2">
+          <h2 className="text-xl font-semibold text-slate-900 border-l-3 border-blue-600 pl-3">
+            3. 알뜰주유소 및 전기차 충전소 가격 정보
+          </h2>
+          <div className="flex gap-3 text-xs font-bold">
+            <a
+              href={`/gas/${encodeURIComponent(area.slug)}`}
+              className="text-blue-600 hover:text-blue-700 hover:underline cursor-pointer"
+            >
+              ⛽ 상세 주유소 정보 &rarr;
+            </a>
+            <a
+              href={`/ev/${encodeURIComponent(area.slug)}`}
+              className="text-emerald-600 hover:text-emerald-700 hover:underline cursor-pointer"
+            >
+              ⚡ 상세 충전소 정보 &rarr;
+            </a>
+          </div>
+        </div>
         <p className="text-sm md:text-[15px] text-slate-600">
           고속도로 운행 중 연료 충전은 필수입니다. {area.name} 휴게소는 정량/정품을 판매하는 알뜰 주유소를 운영하고 있어 일반 시중보다 저렴하게 주유가 가능합니다.
         </p>
@@ -204,9 +236,17 @@ export default async function RestAreaDashboardPage({ params }: Props) {
 
       {/* 4. 편의시설 */}
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold text-slate-900 border-l-3 border-blue-600 pl-3">
-          4. 주요 편의시설 및 고객 지원 서비스
-        </h2>
+        <div className="flex justify-between items-end border-b border-slate-100 pb-2">
+          <h2 className="text-xl font-semibold text-slate-900 border-l-3 border-blue-600 pl-3">
+            4. 주요 편의시설 및 고객 지원 서비스
+          </h2>
+          <a
+            href={`/rest-areas/${encodeURIComponent(area.slug)}/facilities`}
+            className="text-xs font-bold text-blue-600 hover:text-blue-700 hover:underline cursor-pointer"
+          >
+            ⛺ 상세 편의시설 정보 &rarr;
+          </a>
+        </div>
         <p className="text-sm md:text-[15px] text-slate-600">
           운전자 및 동승객의 편의를 위해 {area.name} 휴게소에서 제공하는 맞춤 서비스 시설 목록입니다.
         </p>
