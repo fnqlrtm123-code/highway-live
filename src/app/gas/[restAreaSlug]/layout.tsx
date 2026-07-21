@@ -16,8 +16,8 @@ export async function generateMetadata({ params }: { params: Promise<{ restAreaS
   if (!area) return {};
 
   return {
-    title: `${area.name} (${area.directionName}) 주유소 실시간 기름값 & LPG 가격표`,
-    description: `${area.highwayName} ${area.name} (${area.directionName}) 휴게소 주유소의 실시간 휘발유, 경유, LPG 가격 및 전기차/수소차 충전소 위치 정보를 실시간으로 확인해보세요.`,
+    title: `${area.name} (${area.directionName}) 주유소 기름값 & LPG 가격표`,
+    description: `${area.highwayName} ${area.name} (${area.directionName}) 휴게소 주유소의 휘발유, 경유, LPG 가격 및 전기차/수소차 충전소 위치 정보를 확인해보세요.`,
   };
 }
 
@@ -75,8 +75,8 @@ export default async function GasAreaLayout({ children, params }: Props) {
         </h1>
         
         <p className="text-slate-600 text-sm md:text-[15px] leading-relaxed max-w-4xl font-normal">
-          {area.highwayName} 노선에 있는 {area.name}({area.directionName}) 휴게소 주유소의 실시간 유가 정보 안내 가이드입니다. 
-          정량/정품을 판매하는 알뜰주유소(ex-OIL) 및 브랜드별 주유소의 실시간 휘발유, 경유, LPG 판매 가격표와 함께 유류비 절약을 위한 팁을 안내해 드립니다.
+          {area.highwayName} 노선에 있는 {area.name}({area.directionName}) 휴게소 주유소의 유가 정보 안내 가이드입니다. 
+          정량/정품을 판매하는 알뜰주유소(ex-OIL) 및 브랜드별 주유소의 휘발유, 경유, LPG 판매 가격표와 함께 유류비 절약을 위한 팁을 안내해 드립니다.
         </p>
       </div>
 

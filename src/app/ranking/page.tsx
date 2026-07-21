@@ -94,7 +94,7 @@ export default function RankingPage() {
           전국 고속도로 휴게소 분야별 랭킹 TOP 10
         </h1>
         <p className="text-slate-500 text-sm md:text-[15px] leading-relaxed">
-          실시간 고속도로 공공데이터를 기반으로 분야별 우수 휴게소를 분석하여 소개합니다. 
+          고속도로 공공데이터를 기반으로 분야별 우수 휴게소를 분석하여 소개합니다. 
           어떤 휴게소의 메뉴가 가장 다양한지, 어떤 곳의 돈가스가 가장 가성비가 좋은지 확인해보세요.
         </p>
       </div>

@@ -153,7 +153,7 @@ export default async function HighwayTrafficDetailPage({ params }: Props) {
       {/* 애드센스 */}
       <AdSense slot="4455662211" />
 
-      {/* 2. 실시간 상황 조회 방법 */}
+      {/* 2. 상황 조회 방법 */}
       <section className="space-y-6">
         <h2 className="text-lg font-semibold text-slate-900 flex items-center gap-2">
           <span className="w-1.5 h-4 bg-blue-600 rounded-full inline-block"></span>
@@ -172,7 +172,7 @@ export default async function HighwayTrafficDetailPage({ params }: Props) {
           >
             <span className="font-bold text-slate-800 block mb-1 group-hover:text-blue-600 transition-colors">로드플러스 (도로공사)</span>
             <span className="text-slate-550 text-xs leading-normal block">
-              공식 웹사이트에서 경부선, 영동선 등 고속도로 전 구간의 교통지도 및 2분 간격의 CCTV 상황을 실시간 조회할 수 있습니다.
+              공식 웹사이트에서 경부선, 영동선 등 고속도로 전 구간의 교통지도 및 2분 간격의 CCTV 상황을 조회할 수 있습니다.
             </span>
             <svg className="w-4 h-4 text-slate-400 group-hover:text-blue-600 transition-colors absolute right-4 top-1/2 -translate-y-1/2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />

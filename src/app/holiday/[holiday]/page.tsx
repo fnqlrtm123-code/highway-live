@@ -96,7 +96,7 @@ export default async function HolidayDetailPage({ params }: Props) {
 
       {/* 노선별 명절 상세 상황판 퀵 바로가기 */}
       <section className="space-y-4">
-        <h2 className="text-xl font-black text-slate-900">노선별 명절 정체구간 실시간 조회</h2>
+        <h2 className="text-xl font-black text-slate-900">노선별 명절 정체구간 조회</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {highways.map(h => (
             <a 

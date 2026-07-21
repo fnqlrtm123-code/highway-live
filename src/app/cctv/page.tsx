@@ -2,8 +2,8 @@ import { highways, cctvPoints } from '@/lib/data';
 import AdSense from '@/components/AdSense';
 
 export const metadata = {
-  title: '전국 고속도로 실시간 CCTV 보기 - 구간별 교통상황 영상',
-  description: '경부고속도로, 영동고속도로, 서해안고속도로 등 전국 주요 고속도로 노선의 실시간 CCTV 주행 화면을 확인하세요. 정체 및 사고 구역을 영상으로 즉시 점검할 수 있습니다.',
+  title: '전국 고속도로 CCTV 보기 - 구간별 교통상황 영상',
+  description: '경부고속도로, 영동고속도로, 서해안고속도로 등 전국 주요 고속도로 노선의 CCTV 주행 화면을 확인하세요. 정체 및 사고 구역을 영상으로 즉시 점검할 수 있습니다.',
 };
 
 export default function CctvHubPage() {
@@ -13,10 +13,10 @@ export default function CctvHubPage() {
       {/* 타이틀 및 헤더 */}
       <div className="space-y-2">
         <h1 className="text-3xl font-black text-slate-900 tracking-tight">
-          전국 고속도로 실시간 CCTV
+          전국 고속도로 CCTV
         </h1>
         <p className="text-slate-500 text-sm max-w-2xl">
-          전국 고속도로에 설치된 CCTV 관제 실시간 영상 스트리밍 서비스입니다. 이동 전 정체 지점 및 기상 상태를 눈으로 확인해보세요.
+          전국 고속도로에 설치된 CCTV 관제 영상 스트리밍 서비스입니다. 이동 전 정체 지점 및 기상 상태를 눈으로 확인해보세요.
         </p>
       </div>
 
@@ -25,7 +25,7 @@ export default function CctvHubPage() {
 
       {/* 노선별 CCTV 카테고리 빠른 탐색 */}
       <section className="space-y-4">
-        <h2 className="text-xl font-black text-slate-900 border-b pb-3 border-slate-200">노선별 CCTV 실시간 보기</h2>
+        <h2 className="text-xl font-black text-slate-900 border-b pb-3 border-slate-200">노선별 CCTV 보기</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {highways.map((h) => (
             <a 
@@ -38,7 +38,7 @@ export default function CctvHubPage() {
                 <span className="text-xs text-slate-400 font-mono">CCTV 연동중</span>
               </div>
               <h3 className="text-base font-black text-slate-800">{h.name}</h3>
-              <p className="text-xs text-slate-400 mt-1 line-clamp-1">실시간 주행영상 확인</p>
+              <p className="text-xs text-slate-400 mt-1 line-clamp-1">주행영상 확인</p>
             </a>
           ))}
         </div>

@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ restAreaS
 
   return {
     title: `${area.name} (${area.directionName}) 전기차 충전소 위치 & 수소차 충전기 현황`,
-    description: `${area.highwayName} ${area.name} (${area.directionName}) 휴게소의 전기차(EV) 급속/초급속 충전기 수량 및 수소차 충전소 규격 정보를 실시간으로 확인해보세요.`,
+    description: `${area.highwayName} ${area.name} (${area.directionName}) 휴게소의 전기차(EV) 급속/초급속 충전기 수량 및 수소차 충전소 규격 정보를 확인해보세요.`,
   };
 }
 
@@ -76,7 +76,7 @@ export default async function EvAreaLayout({ children, params }: Props) {
         
         <p className="text-slate-600 text-sm md:text-[15px] leading-relaxed max-w-4xl font-normal">
           {area.highwayName} 노선에 있는 {area.name}({area.directionName}) 휴게소 전기차(EV) 및 수소차 충전 인프라 안내 가이드입니다. 
-          설치된 충전기 수량, 가용 여부, 충전 규격(속도) 및 충전 시 유용한 팁을 실시간으로 안내해 드립니다.
+          설치된 충전기 수량, 가용 여부, 충전 규격(속도) 및 충전 시 유용한 팁을 안내해 드립니다.
         </p>
       </div>
 

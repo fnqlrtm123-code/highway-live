@@ -16,7 +16,7 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: {
-    default: "로드픽 | 전국 고속도로 실시간 CCTV 휴게소 맛집 주유소 가격",
+    default: "로드픽 | 전국 고속도로 CCTV 및 휴게소 맛집 주유소 가격",
     template: "%s | 로드픽"
   },
   description: "전국 고속도로 실시간 CCTV 교통상황, 휴게소 맛집 메뉴, 주유소 최저가 가격 비교 및 전기차 충전소 현황을 한눈에 확인하세요.",
@@ -36,17 +36,26 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "로드픽 - 실시간 고속도로 CCTV & 휴게소 맛집 정보",
+    title: "로드픽 - 고속도로 CCTV & 휴게소 맛집 정보",
     description: "전국 고속도로 실시간 CCTV 교통상황, 휴게소 맛집 메뉴, 주유소 최저가 가격 비교 및 전기차 충전소 현황을 한눈에 확인하세요.",
     url: "https://highway.mrbrisbaneinsouth.kr",
     siteName: "로드픽",
+    images: [
+      {
+        url: "/highway_traffic_1.png",
+        width: 1200,
+        height: 630,
+        alt: "로드픽 - 고속도로 CCTV & 휴게소 맛집 정보",
+      },
+    ],
     locale: "ko_KR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "로드픽 - 실시간 고속도로 CCTV & 휴게소 맛집 정보",
+    title: "로드픽 - 고속도로 CCTV & 휴게소 맛집 정보",
     description: "전국 고속도로 실시간 CCTV 교통상황, 휴게소 맛집 메뉴, 주유소 최저가 가격 비교 및 전기차 충전소 현황을 한눈에 확인하세요.",
+    images: ["/highway_traffic_1.png"],
   }
 };
 
@@ -130,7 +139,7 @@ export default function RootLayout({
                   <span className="text-[15px] font-bold text-slate-800 tracking-tight">로드픽</span>
                 </div>
                 <p className="text-[12.5px] leading-relaxed text-slate-500 max-w-md font-medium font-sans">
-                  로드픽은 국토교통부 및 한국도로공사의 공공데이터 API를 실시간으로 가공하여 전국 고속도로 소통상황, 실시간 CCTV 영상, 방향별 휴게소 정보 및 실시간 주유소 유가 비교 정보를 직관적으로 시각화하여 제공합니다.
+                  로드픽은 국토교통부 및 한국도로공사의 공공데이터 API를 가공하여 전국 고속도로 소통상황, 실시간 CCTV 영상, 방향별 휴게소 정보 및 주유소 유가 비교 정보를 직관적으로 시각화하여 제공합니다.
                 </p>
                 <div className="text-[11.5px] text-slate-400 space-y-1 font-sans">
                   <p>제공기관: 국토교통부, 한국도로공사 &middot; 운영: 로드픽</p>
@@ -161,7 +170,7 @@ export default function RootLayout({
             <div className="mt-12 border-t border-slate-200/50 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[11.5px] text-slate-400">
               <p>&copy; {new Date().getFullYear()} 로드픽. All rights reserved.</p>
               <p className="max-w-md text-center md:text-right text-[10.5px] text-slate-455 leading-relaxed font-sans">
-                본 서비스에 등록된 교통 및 유가 정보는 공공 API 데이터를 바탕으로 실시간으로 가공된 정보이며 현장 상황과 일부 다를 수 있으므로 안전 운행의 참고용으로 활용하시기 바랍니다.
+                본 서비스에 등록된 교통 및 유가 정보는 공공 API 데이터를 바탕으로 가공된 정보이며 현장 상황과 일부 다를 수 있으므로 안전 운행의 참고용으로 활용하시기 바랍니다.
               </p>
             </div>
           </div>

@@ -82,7 +82,7 @@ export default function RestAreasPage() {
         {/* 애드센스 */}
         <AdSense slot="4455667788" />
 
-        {/* 실시간 필터 & 검색 대시보드 */}
+        {/* 필터 & 검색 대시보드 */}
         <section className="bg-white border border-slate-200/60 rounded-2xl p-6 md:p-8 shadow-xs space-y-6">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b pb-4 border-slate-100">
             <h2 className="text-[15px] font-bold text-slate-900 flex items-center gap-2">
@@ -265,7 +265,7 @@ export default function RestAreasPage() {
             <div className="space-y-1">
               <h4 className="font-bold text-slate-800 text-xs md:text-[13px]">Q. 한국도로공사가 지정한 휴게소 대표 음식은 무엇인가요?</h4>
               <p className="text-[12.5px] font-semibold text-slate-500 leading-relaxed">
-                대표 음식은 한국도로공사가 전국 휴게소 음식의 품질과 가격 조화를 평가하여 엄선한 공식 대표 메뉴입니다. 외부 요리 전문가와 고객들의 실시간 블라인드 평가를 종합하여 공인 평가단의 엄밀한 위생 및 맛 검증을 통과한 맛있는 요리입니다.
+                대표 음식은 한국도로공사가 전국 휴게소 음식의 품질과 가격 조화를 평가하여 엄선한 공식 대표 메뉴입니다. 외부 요리 전문가와 고객들의 블라인드 평가를 종합하여 공인 평가단의 엄밀한 위생 및 맛 검증을 통과한 맛있는 요리입니다.
               </p>
             </div>
 
@@ -279,7 +279,7 @@ export default function RestAreasPage() {
             <div className="space-y-1 border-t border-slate-100 pt-4">
               <h4 className="font-bold text-slate-800 text-xs md:text-[13px]">Q. 상행선 휴게소와 하행선 휴게소 음식이 다른가요?</h4>
               <p className="text-[12.5px] font-semibold text-slate-500 leading-relaxed">
-                대부분의 고속도로 휴게소는 상행선과 하행선이 마주보고 있거나 분리된 독자 법인으로 운영되므로 제공되는 맛집 메뉴와 실시간 유가가 다를 수 있습니다. 따라서 주행하시는 방향(예: 부산방향, 서울방향)을 반드시 확인하신 후 대표 먹거리 정보를 검토하시는 것이 권장됩니다.
+                대부분의 고속도로 휴게소는 상행선과 하행선이 마주보고 있거나 분리된 독자 법인으로 운영되므로 제공되는 맛집 메뉴와 유가가 다를 수 있습니다. 따라서 주행하시는 방향(예: 부산방향, 서울방향)을 반드시 확인하신 후 대표 먹거리 정보를 검토하시는 것이 권장됩니다.
               </p>
             </div>
           </div>

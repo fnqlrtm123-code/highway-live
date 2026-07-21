@@ -13,9 +13,9 @@ export async function generateMetadata({ params }: { params: Promise<{ restAreaS
   if (!area) return {};
 
   const pageUrl = `https://highway.mrbrisbaneinsouth.kr/gas/${encodeURIComponent(area.slug)}`;
-  const title = `${area.name} (${area.directionName}) 주유소 가격 휘발유 실시간 가격 비교`;
+  const title = `${area.name} (${area.directionName}) 주유소 가격 휘발유 가격 비교`;
   const lpgText = area.gasStation.lpgPrice ? ` 및 LPG 충전소 가격` : '';
-  const description = `${area.name} (${area.directionName}) 휴게소에 위치한 ${area.gasStation.brand} 주유소의 실시간 휘발유(${area.gasStation.gasolinePrice.toLocaleString()}원), 경유(${area.gasStation.dieselPrice.toLocaleString()}원)${lpgText} 정보와 함께 알뜰 주유소 주유 팁을 확인하세요.`;
+  const description = `${area.name} (${area.directionName}) 휴게소에 위치한 ${area.gasStation.brand} 주유소의 휘발유(${area.gasStation.gasolinePrice.toLocaleString()}원), 경유(${area.gasStation.dieselPrice.toLocaleString()}원)${lpgText} 정보와 함께 알뜰 주유소 주유 팁을 확인하세요.`;
 
   return {
     title: {
@@ -65,7 +65,7 @@ export default async function GasDetailPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": `${area.name} (${area.directionName}) 주유소`,
-    "description": `${area.name} (${area.directionName}) 휴게소에 위치한 ${area.gasStation.brand} 주유소의 실시간 휘발유, 경유, LPG 가격 정보입니다.`,
+    "description": `${area.name} (${area.directionName}) 휴게소에 위치한 ${area.gasStation.brand} 주유소의 휘발유, 경유, LPG 가격 정보입니다.`,
     "url": `https://highway.mrbrisbaneinsouth.kr/gas/${encodeURIComponent(area.slug)}`,
     "address": {
       "@type": "PostalAddress",
@@ -96,7 +96,7 @@ export default async function GasDetailPage({ params }: Props) {
       <div className="space-y-2">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
           <h2 className="text-xl font-semibold text-slate-900 border-l-3 border-blue-600 pl-3">
-            ⛽ {area.name} 휴게소 실시간 주유소 및 LPG 충전소 유가 정보
+            ⛽ {area.name} 휴게소 주유소 및 LPG 충전소 유가 정보
           </h2>
           <a
             href={`/rest-areas/${encodeURIComponent(area.slug)}`}
@@ -106,7 +106,7 @@ export default async function GasDetailPage({ params }: Props) {
           </a>
         </div>
         <p className="text-sm text-slate-500">
-          한국도로공사 유가정보 피드 데이터를 기반으로 제공하는 실시간 기름값 정보입니다.
+          한국도로공사 유가정보 피드 데이터를 기반으로 제공하는 기름값 정보입니다.
         </p>
       </div>
 

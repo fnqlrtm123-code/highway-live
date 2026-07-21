@@ -169,13 +169,13 @@ export default function TollIndexPage() {
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            공공데이터 API 실시간 계산기
+            공공데이터 API 계산기
           </div>
           <h1 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">
             전국 고속도로 통행료 계산기
           </h1>
           <p className="text-slate-500 text-xs md:text-sm leading-relaxed font-medium">
-            전국 주요 도시 간 고속도로 예상 요금 및 차종별 상세 요금을 실시간으로 조회하세요.
+            전국 주요 도시 간 고속도로 예상 요금 및 차종별 상세 요금을 조회하세요.
           </p>
         </div>
 
@@ -323,7 +323,7 @@ export default function TollIndexPage() {
           {/* 하단 API 안내 문구 */}
           <div className="text-[10px] text-slate-500 leading-relaxed pt-3 border-t border-slate-100 font-semibold">
             {calculationResult.isOfficial ? (
-              <span>* 본 정보는 한국도로공사 공공데이터 API를 실시간 연동한 데이터입니다. 출퇴근 시간대/주말 할인 등 세부 하이패스 정기 요율에 따라 일부 차이가 발생할 수 있습니다.</span>
+              <span>* 본 정보는 한국도로공사 공공데이터 API를 연동한 데이터입니다. 출퇴근 시간대/주말 할인 등 세부 하이패스 정기 요율에 따라 일부 차이가 발생할 수 있습니다.</span>
             ) : (
               <span>* 본 정보는 직선거리에 대한 보정치를 활용한 예상 데이터입니다. 실제 영업소(IC/JC) 위치에 따라 오차가 발생할 수 있습니다.</span>
             )}

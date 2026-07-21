@@ -13,8 +13,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!highway) return {};
 
   const pageUrl = `https://highway.mrbrisbaneinsouth.kr/cctv/${highwaySlug}`;
-  const title = `${highway.name} 실시간 CCTV 보기 - 구간별 카메라 채널`;
-  const description = `${highway.name}에 설치된 교통상황 관제 CCTV 카메라 목록을 확인하세요. 지점별 실시간 주행 영상 및 평균속도 정보를 실시간으로 중계합니다.`;
+  const title = `${highway.name} CCTV 보기 - 구간별 카메라 채널`;
+  const description = `${highway.name}에 설치된 교통상황 관제 CCTV 카메라 목록을 확인하세요. 지점별 주행 영상 및 평균속도 정보를 중계합니다.`;
 
   return {
     title,
@@ -64,9 +64,9 @@ export default async function HighwayCctvPage({ params }: Props) {
             <span className="text-[12px] font-black bg-blue-600 text-white px-2.5 py-0.5 rounded">{highway.number}</span>
             <span className="text-xs text-blue-300 font-mono tracking-tight">{highway.length} &middot; 기종점: {highway.start} &rarr; {highway.end}</span>
           </div>
-          <h1 className="text-3xl md:text-4xl font-black tracking-tight">{highway.name} CCTV 실시간 채널</h1>
+          <h1 className="text-3xl md:text-4xl font-black tracking-tight">{highway.name} CCTV 채널</h1>
           <p className="text-slate-400 text-sm max-w-3xl leading-relaxed">
-            {highway.name}의 모든 주요 지점 CCTV 영상을 제공합니다. 구간별 혼잡도 및 소통 흐름 상태를 실시간 영상으로 간편하게 확인해보세요.
+            {highway.name}의 모든 주요 지점 CCTV 영상을 제공합니다. 구간별 혼잡도 및 소통 흐름 상태를 영상으로 간편하게 확인해보세요.
           </p>
         </div>
       </div>

@@ -5,7 +5,7 @@ import TrafficHubClient from '@/components/TrafficHubClient';
 
 export const metadata: Metadata = {
   title: '전국 교통상황 확인 고속도로 도시고속 국도 대교 CCTV 정체구간',
-  description: '경부고속도로, 영동고속도로, 서해안선 등 전국 주요 고속도로와 서울 경기 도시고속화도로, 전국 국도 및 주요 대교의 교통상황과 CCTV 모니터링, 우회도로 가이드를 실시간으로 안내합니다.',
+  description: '경부고속도로, 영동고속도로, 서해안선 등 전국 주요 고속도로와 서울 경기 도시고속화도로, 전국 국도 및 주요 대교의 교통상황과 CCTV 모니터링, 우회도로 가이드를 안내합니다.',
 };
 
 export default function TrafficIndexPage() {
@@ -39,7 +39,7 @@ export default function TrafficIndexPage() {
       <section className="space-y-6">
         <h2 className="text-[15px] font-bold text-slate-900 flex items-center gap-2">
           <span className="w-1 h-3.5 bg-blue-600 rounded-full inline-block"></span>
-          실시간 고속도로 상황 확인 채널 TOP 5
+          고속도로 상황 확인 채널 TOP 5
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
@@ -71,7 +71,7 @@ export default function TrafficIndexPage() {
               국가교통정보센터 (ITS)
             </h3>
             <p className="text-[12px] text-slate-550 leading-relaxed">
-              국토교통부가 직접 구축하여 운영하는 공공 포털입니다. 고속도로뿐만 아니라 국도의 실시간 평균 주행 속도 정보와 전국 노면 상황 CCTV 영상을 무료로 광범위하게 수집할 수 있습니다.
+              국토교통부가 직접 구축하여 운영하는 공공 포털입니다. 고속도로뿐만 아니라 국도의 평균 주행 속도 정보와 전국 노면 상황 CCTV 영상을 무료로 광범위하게 수집할 수 있습니다.
             </p>
             <svg className="w-4 h-4 text-slate-400 group-hover:text-blue-600 transition-colors absolute right-4 top-1/2 -translate-y-1/2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -88,7 +88,7 @@ export default function TrafficIndexPage() {
               고속도로교통정보 앱
             </h3>
             <p className="text-[12px] text-slate-550 leading-relaxed">
-              한국도로공사 공식 모바일 어플리케이션입니다. 스마트폰 화면에서 노선별 실시간 지도, 돌발 사고 현황, 공사 통제 구간 및 졸음쉼터/임시주유소/충전소 위치 정보를 편리하게 제공합니다.
+              한국도로공사 공식 모바일 어플리케이션입니다. 스마트폰 화면에서 노선별 지도, 돌발 사고 현황, 공사 통제 구간 및 졸음쉼터/임시주유소/충전소 위치 정보를 편리하게 제공합니다.
             </p>
             <svg className="w-4 h-4 text-slate-400 group-hover:text-blue-600 transition-colors absolute right-4 top-1/2 -translate-y-1/2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -125,7 +125,7 @@ export default function TrafficIndexPage() {
         </div>
       </section>
 
-      {/* 3. 실시간 노선 리스트 (카테고리 탭 분류 컴포넌트) */}
+      {/* 3. 노선 리스트 (카테고리 탭 분류 컴포넌트) */}
       <section className="space-y-4">
         <h2 className="text-[15px] font-bold text-slate-900 flex items-center gap-2">
           <span className="w-1 h-3.5 bg-blue-600 rounded-full inline-block"></span>

@@ -67,7 +67,7 @@ export default function EvIndexPage() {
                 href={`/ev/${area.slug}`}
                 className="bg-slate-900 hover:bg-slate-800 text-white text-center py-2.5 rounded-lg text-xs font-bold transition-colors cursor-pointer"
               >
-                충전소 실시간 상태 &rarr;
+                충전소 상태 &rarr;
               </a>
             </div>
           ))}

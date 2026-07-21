@@ -4,7 +4,7 @@ import HubHeader from '@/components/HubHeader';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '고속도로 휴게소 맛집 및 인기메뉴 랭킹 - 실시간 대표 음식 가이드',
+  title: '고속도로 휴게소 맛집 및 인기메뉴 랭킹 - 대표 음식 가이드',
   description: '전국 고속도로 휴게소별 대표 음식, 맛집 가격표, 아이와 먹기 좋은 영양 간식 목록을 모아 최적의 휴식 식사 계획을 지원합니다.',
 };
 
@@ -32,7 +32,7 @@ export default function FoodIndexPage() {
         </div>
         <h1 className="text-2.5xl md:text-3.5xl font-extrabold text-slate-900 tracking-tight">고속도로 휴게소 대표 맛집 메뉴</h1>
         <p className="text-slate-500 text-xs md:text-[13.5px] max-w-2xl leading-relaxed font-medium">
-          한국도로공사에서 공식 인증한 대표 음식부터 휴게소마다 소문난 실시간 시그니처 밥상 가격표를 확인하세요.
+          한국도로공사에서 공식 인증한 대표 음식부터 휴게소마다 소문난 시그니처 밥상 가격표를 확인하세요.
         </p>
       </div>
 

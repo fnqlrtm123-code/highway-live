@@ -24,7 +24,7 @@ export default function WorkGuide() {
         <div className="max-w-[1240px] mx-auto px-4">
           <h1 className="text-2xl font-black mt-1">고속도로 작업 및 통제구간 안내</h1>
           <p className="text-slate-400 text-xs mt-2 max-w-xl leading-relaxed">
-            안전한 운전을 위해 현재 고속도로 노선별로 수행 중인 유지보수 공사, 차선 통제 정보 및 사고 돌발 발생 상황을 실시간으로 확인하시기 바랍니다.
+            안전한 운전을 위해 현재 고속도로 노선별로 수행 중인 유지보수 공사, 차선 통제 정보 및 사고 돌발 발생 상황을 확인하시기 바랍니다.
           </p>
         </div>
       </section>

@@ -1,4 +1,4 @@
-// 한국도로공사 공공데이터 기반 실시간 통행료 및 운행거리/시간 수집 데이터
+// 한국도로공사 공공데이터 기반 통행료 및 운행거리/시간 수집 데이터
 export interface TollRouteInfo {
   dist: number;
   time: string;

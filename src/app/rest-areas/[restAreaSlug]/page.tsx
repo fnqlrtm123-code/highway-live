@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const pageUrl = `https://highway.mrbrisbaneinsouth.kr/rest-areas/${encodeURIComponent(area.slug)}`;
   const title = `${area.name} 휴게소 (${area.directionName}) 맛집 메뉴 주유소 가격 편의시설`;
-  const description = `${area.name} 휴게소 (${area.directionName})의 시그니처 대표 메뉴인 ${area.signatureMenu.name} 정보를 비롯해 실시간 주유소 가격, 전기차 수소차 충전 현황 및 입점 브랜드 정보를 한눈에 제공합니다.`;
+  const description = `${area.name} 휴게소 (${area.directionName})의 시그니처 대표 메뉴인 ${area.signatureMenu.name} 정보를 비롯해 주유소 가격, 전기차 수소차 충전 현황 및 입점 브랜드 정보를 한눈에 제공합니다.`;
 
   return {
     title,
@@ -60,7 +60,7 @@ export default async function RestAreaDashboardPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": `${area.name} (${area.directionName})`,
-    "description": `${area.name} 휴게소 (${area.directionName})의 시그니처 대표 메뉴인 ${area.signatureMenu.name} 정보를 비롯해 실시간 주유소 가격, 전기차 수소차 충전 현황 및 입점 브랜드 정보를 제공합니다.`,
+    "description": `${area.name} 휴게소 (${area.directionName})의 시그니처 대표 메뉴인 ${area.signatureMenu.name} 정보를 비롯해 주유소 가격, 전기차 수소차 충전 현황 및 입점 브랜드 정보를 제공합니다.`,
     "url": `https://highway.mrbrisbaneinsouth.kr/rest-areas/${encodeURIComponent(area.slug)}`,
     "address": {
       "@type": "PostalAddress",
@@ -257,10 +257,10 @@ export default async function RestAreaDashboardPage({ params }: Props) {
         </div>
       </section>
 
-      {/* 5. 실시간 이용 꿀팁 */}
+      {/* 5. 이용 꿀팁 */}
       <section className="bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-200/80 space-y-3">
         <h2 className="text-base font-semibold text-slate-900 flex items-center gap-1.5">
-          💡 {area.name} 휴게소 실시간 이용 팁
+          💡 {area.name} 휴게소 이용 팁
         </h2>
         <p className="text-[13px] text-slate-600 leading-relaxed font-normal">
           {area.name} 휴게소는 노선 Km 지점에 최적화된 위치에 설계되어 있어 주말 및 연휴에는 진입 정체가 잦은 구간에 속합니다. 

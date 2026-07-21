@@ -97,10 +97,10 @@ export default function HomeClient() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-blue-600"></span>
               </span>
-              실시간 고속도로 종합 정보 안내
+              고속도로 종합 정보 안내
             </div>
             <h1 className="text-3xl md:text-[40px] font-extrabold text-slate-900 tracking-tight leading-tight">
-              고속도로 실시간 편의정보 포털
+              고속도로 편의정보 포털
             </h1>
             <p className="text-xs md:text-[13.5px] text-slate-500 max-w-xl mx-auto leading-relaxed font-medium">
               지금 막히는 노선 상황, 방향별 휴게소 맛집(대표 음식), 알뜰주유소 가격 및 전기차 충전기 수량을 한눈에 쉽게 확인해 드립니다.
@@ -166,7 +166,7 @@ export default function HomeClient() {
                 실시간 고속도로 교통상황 &middot; CCTV
               </h2>
               <p className="text-xs md:text-[13px] text-slate-500 font-medium mt-1">
-                주요 노선별 실시간 소요 시간 및 구간별 현재 차량 속도 정보를 신속하게 모니터링합니다.
+                주요 노선별 소요 시간 및 구간별 현재 차량 속도 정보를 신속하게 모니터링합니다.
               </p>
             </div>
             <a href="/traffic" className="text-xs font-bold text-blue-600 hover:text-blue-700 shrink-0">노선 전체보기 &rarr;</a>
@@ -194,7 +194,7 @@ export default function HomeClient() {
             ))}
           </div>
 
-          {/* 실시간 주요 CCTV 포인트 */}
+          {/* 주요 CCTV 포인트 */}
           <div className="space-y-3 pt-2">
             <span className="text-[10px] font-bold text-slate-400 block uppercase tracking-wider">주요 정체 발생지역 CCTV</span>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
@@ -391,7 +391,7 @@ export default function HomeClient() {
             <div>
               <h2 className="text-xl md:text-2xl font-extrabold text-slate-900 flex items-center gap-2">
                 <span className="w-1.5 h-5 bg-emerald-600 rounded-full inline-block"></span>
-                실시간 유가 최저가 &middot; 전기차 충전 현황
+                유가 최저가 &middot; 전기차 충전 현황
               </h2>
               <p className="text-xs md:text-[13px] text-slate-500 font-medium mt-1">
                 전국 고속도로 노선의 알뜰주유소 유가 비교(휘발유/경유 최저가 TOP 3) 및 대용량 전기차(EV) 충전 시설을 갖춘 휴게소를 한눈에 비교합니다.
@@ -541,20 +541,20 @@ export default function HomeClient() {
               <div className="pt-4 first:pt-0 space-y-1.5">
                 <h3 className="font-bold text-slate-850 text-xs md:text-sm flex items-start gap-1.5 leading-snug">
                   <span className="text-blue-600 font-extrabold shrink-0">Q.</span>
-                  고속도로 실시간 CCTV 화면은 어디서 확인하나요?
+                  고속도로 CCTV 화면은 어디서 확인하나요?
                 </h3>
                 <p className="text-slate-500 text-[11.5px] md:text-xs leading-relaxed pl-4 font-medium">
-                  전국 고속도로 및 국도의 구체적인 실시간 CCTV 라이브 화면은 국토교통부 국가교통정보센터(ITS) 홈페이지, 한국도로공사 로드플러스 공식 사이트, 혹은 네이버 지도 및 카카오맵 어플리케이션의 교통 레이어를 활성화하여 간편하게 시청하실 수 있습니다.
+                  전국 고속도로 및 국도의 구체적인 CCTV 라이브 화면은 국토교통부 국가교통정보센터(ITS) 홈페이지, 한국도로공사 로드플러스 공식 사이트, 혹은 네이버 지도 및 카카오맵 어플리케이션의 교통 레이어를 활성화하여 간편하게 시청하실 수 있습니다.
                 </p>
               </div>
 
               <div className="pt-4 space-y-1.5">
                 <h3 className="font-bold text-slate-855 text-xs md:text-sm flex items-start gap-1.5 leading-snug">
                   <span className="text-blue-600 font-extrabold shrink-0">Q.</span>
-                  알뜰주유소와 일반 휴게소 주유소의 유가 정보는 실시간인가요?
+                  알뜰주유소와 일반 휴게소 주유소의 유가 정보는 최신인가요?
                 </h3>
                 <p className="text-slate-500 text-[11.5px] md:text-xs leading-relaxed pl-4 font-medium">
-                  네, 한국석유공사 오피넷(Opinet) 및 도로공사 주유소 실시간 유가 API를 기반으로 휘발유, 경유 가격을 매 시각 갱신하여 비교합니다. 단, 주유소별 가격 신고 시점에 따라 실제 현장 고시 가격과 몇 원 단위의 소폭의 차이가 있을 수 있습니다.
+                  네, 한국석유공사 오피넷(Opinet) 및 도로공사 주유소 유가 API를 기반으로 휘발유, 경유 가격을 매 시각 갱신하여 비교합니다. 단, 주유소별 가격 신고 시점에 따라 실제 현장 고시 가격과 몇 원 단위의 소폭의 차이가 있을 수 있습니다.
                 </p>
               </div>
 
@@ -564,7 +564,7 @@ export default function HomeClient() {
                   휴게소 전기차(EV) 충전소의 사용 현황도 조회가 가능한가요?
                 </h3>
                 <p className="text-slate-500 text-[11.5px] md:text-xs leading-relaxed pl-4 font-medium">
-                  각 휴게소별 전기차 급속 및 초급속 충전기 개수가 등록되어 제공됩니다. 충전소의 현재 대기 대수나 점검 상태 등 실시간 가동 상태 정보는 공공 API 응답 기준에 따라 차례대로 업데이트 중입니다.
+                  각 휴게소별 전기차 급속 및 초급속 충전기 개수가 등록되어 제공됩니다. 충전소의 현재 대기 대수나 점검 상태 등 가동 상태 정보는 공공 API 응답 기준에 따라 차례대로 업데이트 중입니다.
                 </p>
               </div>
             </div>
@@ -586,7 +586,7 @@ export default function HomeClient() {
                   휴게소 맛집 메뉴와 수유실/샤워실 등의 편의시설은 최신인가요?
                 </h3>
                 <p className="text-slate-550 text-[11.5px] md:text-xs leading-relaxed pl-4 font-medium">
-                  네, 도로공사에서 제공하는 전국 고속도로 휴게소의 대표 음식 및 편의시설 표준 마스터 데이터를 연산하여 실시간 수준으로 가공 제공하고 있습니다. 휴게소 내부 인테리어 공사나 식당 교체 등으로 일시적으로 변경되는 부분도 점진적으로 업데이트하고 있습니다.
+                  네, 도로공사에서 제공하는 전국 고속도로 휴게소의 대표 음식 및 편의시설 표준 마스터 데이터를 연산하여 최신 정보 수준으로 가공 제공하고 있습니다. 휴게소 내부 인테리어 공사나 식당 교체 등으로 일시적으로 변경되는 부분도 점진적으로 업데이트하고 있습니다.
                 </p>
               </div>
             </div>
@@ -604,18 +604,18 @@ export default function HomeClient() {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "고속도로 실시간 CCTV 화면은 어디서 확인하나요?",
+                "name": "고속도로 CCTV 화면은 어디서 확인하나요?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "전국 고속도로 및 국도의 구체적인 실시간 CCTV 라이브 화면은 국토교통부 국가교통정보센터(ITS) 홈페이지, 한국도로공사 로드플러스 공식 사이트, 혹은 네이버 지도 및 카카오맵 어플리케이션의 교통 레이어를 활성화하여 간편하게 시청하실 수 있습니다."
+                  "text": "전국 고속도로 및 국도의 구체적인 CCTV 라이브 화면은 국토교통부 국가교통정보센터(ITS) 홈페이지, 한국도로공사 로드플러스 공식 사이트, 혹은 네이버 지도 및 카카오맵 어플리케이션의 교통 레이어를 활성화하여 간편하게 시청하실 수 있습니다."
                 }
               },
               {
                 "@type": "Question",
-                "name": "알뜰주유소와 일반 휴게소 주유소의 유가 정보는 실시간인가요?",
+                "name": "알뜰주유소와 일반 휴게소 주유소의 유가 정보는 최신인가요?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "네, 한국석유공사 오피넷(Opinet) 및 도로공사 주유소 실시간 유가 API를 기반으로 휘발유, 경유 가격을 매 시각 갱신하여 비교합니다. 단, 주유소별 가격 신고 시점에 따라 실제 현장 고시 가격과 몇 원 단위의 소폭의 차이가 있을 수 있습니다."
+                  "text": "네, 한국석유공사 오피넷(Opinet) 및 도로공사 주유소 유가 API를 기반으로 휘발유, 경유 가격을 매 시각 갱신하여 비교합니다. 단, 주유소별 가격 신고 시점에 따라 실제 현장 고시 가격과 몇 원 단위의 소폭의 차이가 있을 수 있습니다."
                 }
               },
               {
@@ -623,7 +623,7 @@ export default function HomeClient() {
                 "name": "휴게소 전기차(EV) 충전소의 사용 현황도 조회가 가능한가요?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "각 휴게소별 전기차 급속 및 초급속 충전기 개수가 등록되어 제공됩니다. 충전소의 현재 대기 대수나 점검 상태 등 실시간 가동 상태 정보는 공공 API 응답 기준에 따라 차례대로 업데이트 중입니다."
+                  "text": "각 휴게소별 전기차 급속 및 초급속 충전기 개수가 등록되어 제공됩니다. 충전소의 현재 대기 대수나 점검 상태 등 가동 상태 정보는 공공 API 응답 기준에 따라 차례대로 업데이트 중입니다."
                 }
               },
               {
@@ -639,7 +639,7 @@ export default function HomeClient() {
                 "name": "휴게소 맛집 메뉴와 수유실/샤워실 등의 편의시설은 최신인가요?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "네, 도로공사에서 제공하는 전국 고속도로 휴게소의 대표 음식 및 편의시설 표준 마스터 데이터를 연산하여 실시간 수준으로 가공 제공하고 있습니다. 휴게소 내부 인테리어 공사나 식당 교체 등으로 일시적으로 변경되는 부분도 점진적으로 업데이트하고 있습니다."
+                  "text": "네, 도로공사에서 제공하는 전국 고속도로 휴게소의 대표 음식 및 편의시설 표준 마스터 데이터를 연산하여 최신 정보 수준으로 가공 제공하고 있습니다. 휴게소 내부 인테리어 공사나 식당 교체 등으로 일시적으로 변경되는 부분도 점진적으로 업데이트하고 있습니다."
                 }
               }
             ]

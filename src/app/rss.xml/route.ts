@@ -75,7 +75,7 @@ export async function GET() {
   <channel>
     <title>로드픽 - 고속도로 교통상황 및 휴게소 정보</title>
     <link>${siteUrl}</link>
-    <description>전국 고속도로 노선별 실시간 교통 소통 상황, 사고 통제 정보, 실시간 CCTV 영상, 주요 휴게소 맛집 메뉴 및 주유소 요금 정보를 확인하세요.</description>
+    <description>전국 고속도로 노선별 실시간 교통 소통 상황, 사고 통제 정보, CCTV 영상, 주요 휴게소 맛집 메뉴 및 주유소 요금 정보를 확인하세요.</description>
     <language>ko</language>
     <lastBuildDate>${pubDate}</lastBuildDate>
     <atom:link href="${siteUrl}/rss.xml" rel="self" type="application/rss+xml" />

@@ -65,7 +65,7 @@ export default function TrafficHubClient({ roads }: TrafficHubClientProps) {
           <div className="space-y-1">
             <h2 className="text-[15px] font-bold text-slate-900 flex items-center gap-2">
               <span className="w-1 h-3.5 bg-blue-600 rounded-full inline-block"></span>
-              실시간 도로 및 노선 탐색
+              도로 및 노선 탐색
             </h2>
             <p className="text-slate-450 text-[11px]">카테고리를 선택하거나 찾으시는 도로명을 검색해보세요.</p>
           </div>

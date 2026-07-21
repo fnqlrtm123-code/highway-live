@@ -35,7 +35,7 @@ export default function HubHeader() {
       parentId: 'gas-ev',
       name: '주유소 가격 비교',
       href: '/gas',
-      badge: '실시간 유가',
+      badge: '유가 비교',
       badgeColor: 'bg-red-50 text-red-600 border-red-100'
     },
     {
@@ -67,7 +67,7 @@ export default function HubHeader() {
         <div className="hidden md:flex items-center gap-2 text-[10.5px] text-slate-450 font-bold uppercase tracking-wider">
           <span className="inline-block w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse"></span>
           <span>
-            {activeParentId === 'rest-areas' ? '고속도로 휴게소 정보 허브' : '실시간 에너지 충전소 비교'}
+            {activeParentId === 'rest-areas' ? '고속도로 휴게소 정보 허브' : '에너지 충전소 비교'}
           </span>
         </div>
 

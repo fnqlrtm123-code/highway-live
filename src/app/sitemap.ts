@@ -1,5 +1,5 @@
 import { getRoadList } from "@/lib/roadData";
-import { serviceAreas, cctvPoints } from "@/lib/data";
+import { serviceAreas, cctvPoints, highways } from "@/lib/data";
 import { REGIONS } from "@/lib/regionHelper";
 import { MetadataRoute } from "next";
 
@@ -21,10 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ranking",
     "/privacy",
     "/terms",
-    "/facilities",
-    "/notice",
-    "/forecast",
-    "/broadcast",
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
@@ -41,13 +37,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  // 3. 고속도로 노선 일반 상세 페이지
-  const highwayPages = roads.map((road) => ({
-    url: `${baseUrl}/highways/${encodeURIComponent(road.slug)}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly" as const,
-    priority: 0.6,
-  }));
 
   // 4. 고속도로 휴게소 상세 페이지들
   const restAreaMainPages = serviceAreas.map((area) => ({
@@ -89,14 +78,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  // 7. 편의시설 카테고리 상세 페이지
-  const facilitySlugs = ['baby-room', 'shower', 'sleep', 'dog', 'pharmacy', 'atm'];
-  const facilityPages = facilitySlugs.map((slug) => ({
-    url: `${baseUrl}/facilities/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly" as const,
-    priority: 0.5,
-  }));
 
   // 8. 개별 CCTV 플레이어 페이지 (CCTV 색인 생성용)
   const cctvDetailPages = cctvPoints.map((cctv) => ({
@@ -117,13 +98,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...staticPages,
     ...roadPages,
-    ...highwayPages,
     ...restAreaMainPages,
     ...restAreaFoodPages,
     ...restAreaFacilityPages,
     ...gasPages,
     ...evPages,
-    ...facilityPages,
     ...cctvDetailPages,
     ...regionPages
   ];

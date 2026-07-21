@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!cctv) return {};
 
   const pageUrl = `https://highway.mrbrisbaneinsouth.kr/cctv/${highwaySlug}/${section}`;
-  const title = `${cctv.highwayName} ${cctv.name} (${cctv.direction}) 실시간 CCTV 상황판`;
+  const title = `${cctv.highwayName} ${cctv.name} (${cctv.direction}) CCTV 상황판`;
   const description = `${cctv.highwayName} ${cctv.name} (${cctv.direction})의 교통상황 CCTV 영상을 확인하세요. 제한 속도 ${cctv.speedLimit} km/h 구간으로, 현재 주행 평균 속도는 ${cctv.currentSpeed} km/h 이며 통행 상태는 ${cctv.status === 'smooth' ? '원활' : cctv.status === 'slow' ? '서행' : '정체'}입니다.`;
 
   return {
@@ -70,21 +70,21 @@ export default async function CctvSectionDetailPage({ params }: Props) {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/40 via-transparent to-transparent pointer-events-none" />
         <div className="relative z-10 space-y-3">
           <div className="flex items-center gap-2">
-            <span className="text-[12px] font-black bg-red-600 text-white px-2.5 py-0.5 rounded">실시간 캠</span>
+            <span className="text-[12px] font-black bg-red-600 text-white px-2.5 py-0.5 rounded">캠</span>
             <span className="text-xs text-blue-300 font-mono tracking-tight">{cctv.highwayName} &middot; {cctv.locationKm}km 지점</span>
           </div>
           <h1 className="text-3xl md:text-4xl font-black tracking-tight">
-            {cctv.name} <span className="text-blue-500 font-extrabold text-2xl md:text-3xl">({cctv.direction})</span> 실시간 CCTV
+            {cctv.name} <span className="text-blue-500 font-extrabold text-2xl md:text-3xl">({cctv.direction})</span> CCTV
           </h1>
           <p className="text-slate-400 text-sm max-w-3xl leading-relaxed">
-            {cctv.highwayName} {cctv.name} 지점의 실시간 도로주행 상태 및 흐름을 보여드리는 CCTV 단독 채널 모니터링 화면입니다. 우천 및 사고 등의 돌발 정보를 24시간 실시간 관제 연동하고 있습니다.
+            {cctv.highwayName} {cctv.name} 지점의 도로주행 상태 및 흐름을 보여드리는 CCTV 단독 채널 모니터링 화면입니다. 우천 및 사고 등의 돌발 정보를 24시간 관제 연동하고 있습니다.
           </p>
         </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         
-        {/* 좌측: 실시간 CCTV 라이브 플레이어 스크린 (8열) */}
+        {/* 좌측: CCTV 라이브 플레이어 스크린 (8열) */}
         <div className="lg:col-span-8 space-y-6">
           <div className="border border-slate-200 rounded-2xl overflow-hidden bg-slate-950 text-white shadow-lg">
             {/* 스크린 헤더 */}
@@ -93,7 +93,7 @@ export default async function CctvSectionDetailPage({ params }: Props) {
                 <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
                 고속도로 CCTV 송출 &middot; {cctv.name} ({cctv.direction})
               </span>
-              <span>실시간 방송중</span>
+              <span>방송중</span>
             </div>
 
             {/* 실제 비디오 및 OpenAPI 연동 플레이어 */}
@@ -154,7 +154,7 @@ export default async function CctvSectionDetailPage({ params }: Props) {
             {/* 스크린 푸터 */}
             <div className="p-4 bg-slate-900 border-t border-slate-800 flex justify-between items-center text-xs text-slate-400">
               <span>관제 주체: 한국도로공사 교통정보센터</span>
-              <span>갱신 주기: 실시간 스트리밍</span>
+              <span>갱신 주기: 스트리밍</span>
             </div>
           </div>
 
@@ -162,7 +162,7 @@ export default async function CctvSectionDetailPage({ params }: Props) {
           <div className="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-2xs space-y-4 text-[14px] leading-relaxed text-slate-600">
             <h3 className="text-base font-black text-slate-900">{cctv.name} 지점 교통 흐름 분석 가이드</h3>
             <p>
-              {cctv.name} 지점은 {cctv.highwayName} 노선 중에서도 출퇴근 시간대와 주말 연휴에 병목 현상이 발생하기 쉬운 중추 구간입니다. 현재 해당 CCTV 단독 실시간 중계를 통해 도로 소통 지수와 구간 제한 속도 준수 현황을 신속하게 점검하실 수 있습니다.
+              {cctv.name} 지점은 {cctv.highwayName} 노선 중에서도 출퇴근 시간대와 주말 연휴에 병목 현상이 발생하기 쉬운 중추 구간입니다. 현재 해당 CCTV 단독 중계를 통해 도로 소통 지수와 구간 제한 속도 준수 현황을 신속하게 점검하실 수 있습니다.
             </p>
             <p>
               안개나 호우 등 나쁜 날씨에는 노면 마찰력이 떨어지므로 제한속도 대비 20%에서 50%까지 감속 주행하셔야 안전거리 확보가 가능합니다. 만일 해당 구간에서 정체가 발생하는 경우, 국도 우회 정보 전광판이나 TBN 교통방송 라디오 정보를 병행 조회하시는 것을 추천합니다.

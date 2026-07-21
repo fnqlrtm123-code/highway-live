@@ -119,13 +119,13 @@ export default function GasIndexPage() {
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
             </svg>
-            실시간 전국 유가 비교 포털
+            전국 유가 비교 포털
           </div>
           <h1 className="text-2.5xl md:text-3.5xl font-extrabold text-slate-900 tracking-tight">
-            실시간 고속도로 주유소 가격 비교
+            고속도로 주유소 가격 비교
           </h1>
           <p className="text-slate-500 text-xs md:text-[13.5px] max-w-3xl leading-relaxed font-medium">
-            오늘 전국의 고속도로 노선별 알뜰주유소(ex-OIL) 및 브랜드별 주유소의 실시간 휘발유, 경유, LPG 가격을 실시간으로 분석합니다. 출발 전 최적의 주유 계획을 세워 유류비를 효과적으로 아껴보세요.
+            오늘 전국의 고속도로 노선별 알뜰주유소(ex-OIL) 및 브랜드별 주유소의 휘발유, 경유, LPG 가격을 분석합니다. 출발 전 최적의 주유 계획을 세워 유류비를 효과적으로 아껴보세요.
           </p>
         </div>
 
@@ -182,12 +182,12 @@ export default function GasIndexPage() {
           </div>
         </div>
 
-        {/* 인터랙티브 실시간 비교 테이블 */}
+        {/* 인터랙티브 비교 테이블 */}
         <section className="bg-white border border-slate-200/60 rounded-2xl p-6 md:p-8 shadow-xs space-y-6">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b pb-4 border-slate-100">
             <div>
               <h2 className="text-[15px] font-bold text-slate-900 flex items-center gap-2">
-                노선별 주유소 &amp; 충전소 실시간 비교표
+                노선별 주유소 &amp; 충전소 비교표
               </h2>
               <p className="text-slate-450 text-[11px] font-bold mt-1">유종을 선택하고 검색어를 입력하여 맞춤형 가격표를 확인하세요.</p>
             </div>
@@ -345,7 +345,7 @@ export default function GasIndexPage() {
             <div className="space-y-1 border-t border-slate-800 pt-4">
               <h4 className="font-bold text-white text-[14px]">Q. 전기차(EV) 급속/초급속 충전소의 요금 및 결제는 어떻게 되나요?</h4>
               <p className="text-[12.5px]">
-                고속도로에 구축된 전기차 초급속 충전 시설(대표적으로 환경부 또는 현대 E-pit 등)은 충전기 종류에 따라 요금이 다르게 부과될 수 있습니다. 대부분 회원 카드 및 간편 카드를 태그하여 충전 결제가 진행되며, 실시간 충전기 가동 상황 및 고장 여부는 상단 '전기차 충전소' 전용 허브에서 실시간 기기 대수 목록으로 확인 가능합니다.
+                고속도로에 구축된 전기차 초급속 충전 시설(대표적으로 환경부 또는 현대 E-pit 등)은 충전기 종류에 따라 요금이 다르게 부과될 수 있습니다. 대부분 회원 카드 및 간편 카드를 태그하여 충전 결제가 진행되며, 충전기 가동 상황 및 고장 여부는 상단 '전기차 충전소' 전용 허브에서 기기 대수 목록으로 확인 가능합니다.
               </p>
             </div>
           </div>
