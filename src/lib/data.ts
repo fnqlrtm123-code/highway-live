@@ -539,10 +539,6 @@ export const serviceAreas: ServiceArea[] = [
         "price": 12900
       },
       {
-        "name": "서리태콩국수",
-        "price": 10000
-      },
-      {
         "name": "한돈 동파육 덮밥",
         "price": 10000
       },
@@ -572,6 +568,14 @@ export const serviceAreas: ServiceArea[] = [
       },
       {
         "name": "간장닭강정 세트",
+        "price": 12900
+      },
+      {
+        "name": "닭강정 세트제로",
+        "price": 12900
+      },
+      {
+        "name": "간장닭강정 세트제로",
         "price": 12900
       }
     ],
@@ -1307,7 +1311,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1838,
       "dieselPrice": 1835,
-      "lpgPrice": 1088,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 6,
       "hasHydrogen": true
@@ -6243,7 +6247,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1839,
       "dieselPrice": 1830,
-      "lpgPrice": 1214,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 4,
       "hasHydrogen": false
@@ -6982,7 +6986,7 @@ export const serviceAreas: ServiceArea[] = [
     "gasStation": {
       "brand": "S-OIL",
       "gasolinePrice": 1838,
-      "dieselPrice": 1828,
+      "dieselPrice": 1818,
       "lpgPrice": 1023,
       "hasEvCharger": true,
       "evChargersCount": 6,
@@ -8032,7 +8036,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1848,
       "dieselPrice": 1838,
-      "lpgPrice": null,
+      "lpgPrice": 1228,
       "hasEvCharger": true,
       "evChargersCount": 6,
       "hasHydrogen": false
@@ -19291,7 +19295,7 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1844,
+      "gasolinePrice": 1845,
       "dieselPrice": 1831,
       "lpgPrice": 1174,
       "hasEvCharger": true,
@@ -19560,9 +19564,9 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1849,
-      "dieselPrice": 1848,
-      "lpgPrice": 1172,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 4,
       "hasHydrogen": false
@@ -19669,8 +19673,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1838,
-      "dieselPrice": 1828,
+      "gasolinePrice": 1853,
+      "dieselPrice": 1843,
       "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 4,
@@ -20946,7 +20950,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1845,
       "dieselPrice": 1836,
-      "lpgPrice": 1238,
+      "lpgPrice": 1239,
       "hasEvCharger": true,
       "evChargersCount": 6,
       "hasHydrogen": false
@@ -22367,7 +22371,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1864,
       "dieselPrice": 1853,
-      "lpgPrice": null,
+      "lpgPrice": 1176,
       "hasEvCharger": true,
       "evChargersCount": 6,
       "hasHydrogen": false
@@ -24678,10 +24682,6 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "남산치즈돈가스",
         "price": 14000
-      },
-      {
-        "name": "콩나물해장라면",
-        "price": 5500
       }
     ],
     "brandStores": [
@@ -38274,8 +38274,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
-      "dieselPrice": 1853,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 8,
@@ -40832,8 +40832,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1842,
-      "dieselPrice": 1835,
+      "gasolinePrice": 1848,
+      "dieselPrice": 1838,
       "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 8,
