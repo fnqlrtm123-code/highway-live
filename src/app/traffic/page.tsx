@@ -1,5 +1,4 @@
 import { getRoadList } from '@/lib/roadData';
-import AdSense from '@/components/AdSense';
 import type { Metadata } from 'next';
 import TrafficHubClient from '@/components/TrafficHubClient';
 
@@ -33,7 +32,6 @@ export default function TrafficIndexPage() {
       </div>
 
       {/* 애드센스 */}
-      <AdSense slot="3344551122" />
 
       {/* 2. 교통상황 핵심 조회 채널 소개 */}
       <section className="space-y-6">

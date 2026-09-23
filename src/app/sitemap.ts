@@ -6,7 +6,7 @@ import { MetadataRoute } from "next";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://highway.mrbrisbaneinsouth.kr";
+  const baseUrl = "https://roadpick.kr";
 
   // 1. 기본 정적 페이지 목록
   const staticPages = [

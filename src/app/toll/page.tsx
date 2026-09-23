@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import AdSense from '@/components/AdSense';
 import HubHeader from '@/components/HubHeader';
 import { TOLLS_DATA } from '@/lib/tolls-data';
 
@@ -330,7 +329,6 @@ export default function TollIndexPage() {
           </div>
         </div>
 
-        <AdSense slot="1122334455" />
 
         {/* 통합 정보 영역 - 카드 테두리를 걷어내고 플랫한 웹 레이아웃 구축 */}
         <div className="border-t border-slate-200/60 pt-10 space-y-12">

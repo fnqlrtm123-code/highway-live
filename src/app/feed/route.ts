@@ -5,7 +5,7 @@ import { serviceAreas } from "@/lib/data";
 export const dynamic = "force-static";
 
 export async function GET() {
-  const siteUrl = "https://highway.mrbrisbaneinsouth.kr";
+  const siteUrl = "https://roadpick.kr";
   const pubDate = new Date().toUTCString();
 
   // 1. Highway road items

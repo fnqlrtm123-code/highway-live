@@ -63,21 +63,14 @@ export default function TermsPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-slate-900 mb-3">제5조 (광고 서비스 이용)</h2>
-          <p className="text-slate-650">
-            사이트는 이용자에게 무료 서비스를 영속적으로 제공하기 위해 Google AdSense를 이용한 스폰서 광고를 지면 곳곳에 배치할 수 있습니다. 노출되는 광고 상품 및 링크 연결에 대한 선택의 주체는 이용자 본인이며, 광고 링크를 통해 외부 사이트로 이동 시 해당 사이트의 서비스 정책을 적용받습니다.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold text-slate-900 mb-3">제6조 (약관의 변경)</h2>
+          <h2 className="text-xl font-bold text-slate-900 mb-3">제5조 (약관의 변경)</h2>
           <p className="text-slate-650">
             본 약관은 서비스 제공 정책이나 법률의 개정에 맞춰 수시로 개정될 수 있습니다. 변경 사항은 본 페이지의 시행일 업데이트 및 게재를 통해 공지하며, 공지와 동시에 효력이 발생합니다.
           </p>
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-slate-900 mb-3">제7조 (문의 사항)</h2>
+          <h2 className="text-xl font-bold text-slate-900 mb-3">제6조 (문의 사항)</h2>
           <p className="text-slate-650">
             약관이나 정보 출처 오류에 대한 신고는 아래 이메일 주소를 활용해 접수해 주시기 바랍니다.
           </p>

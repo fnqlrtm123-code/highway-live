@@ -25,7 +25,6 @@ export default function PrivacyPage() {
           </p>
           <ul className="list-disc pl-5 mt-2 text-slate-650 flex flex-col gap-1">
             <li>서비스 이용 통계 분석 및 서비스 환경 개선</li>
-            <li>구글 애드센스를 통한 맞춤형 광고 제공</li>
           </ul>
         </section>
 
@@ -38,26 +37,19 @@ export default function PrivacyPage() {
             <li>방문 일시, 페이지 조회(PV) 기록 및 체류 시간</li>
             <li>기기 정보 (브라우저 종류, 운영체제 버전)</li>
             <li>Google Analytics(GA4)를 통한 비식별 이용 통계 정보</li>
-            <li>Google AdSense 광고 게재를 위한 쿠키(Cookie) 정보</li>
           </ul>
         </section>
 
         <section>
           <h2 className="text-xl font-bold text-slate-900 mb-3">3. 쿠키(Cookie)의 사용 및 관리</h2>
           <p className="text-slate-650">
-            본 사이트는 이용자에게 최적의 광고 및 분석 환경을 제공하기 위해 쿠키를 활용합니다.
+            본 사이트는 이용 통계 분석을 위해 쿠키를 활용합니다.
           </p>
           <div className="mt-4 p-4 bg-slate-50 rounded-xl border border-slate-200/60 flex flex-col gap-4">
             <div>
               <h3 className="font-bold text-slate-900 mb-1">Google Analytics (GA4)</h3>
               <p className="text-sm text-slate-650">
                 사이트 이용 통계를 분석하기 위해 사용합니다. 분석 데이터는 사용자를 식별할 수 없는 통계 형태로만 보관됩니다. 자세한 내용은 구글의 정책을 참고하십시오. (구글 개인정보보호정책: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">링크</a>)
-              </p>
-            </div>
-            <div>
-              <h3 className="font-bold text-slate-900 mb-1">Google AdSense</h3>
-              <p className="text-sm text-slate-650">
-                이용자의 관심사에 기반한 맞춤형 광고를 제공하기 위해 쿠키를 사용합니다. 쿠키 거부 시에도 광고는 노출되나 맞춤형 광고가 비활성화됩니다. (구글 광고 설정: <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">링크</a>)
               </p>
             </div>
           </div>
@@ -71,14 +63,14 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-xl font-bold text-slate-900 mb-3">4. 개인정보의 보유 및 이용 기간</h2>
           <p className="text-slate-650">
-            자동으로 수집되는 로그성 비식별 정보는 목적 달성 후 지체 없이 파기합니다. Google Analytics 및 AdSense를 통해 수집된 데이터의 보관 기간은 구글사의 관리 기준 및 데이터 보유 정책을 따릅니다.
+            자동으로 수집되는 로그성 비식별 정보는 목적 달성 후 지체 없이 파기합니다. Google Analytics를 통해 수집된 데이터의 보관 기간은 구글사의 관리 기준 및 데이터 보유 정책을 따릅니다.
           </p>
         </section>
 
         <section>
           <h2 className="text-xl font-bold text-slate-900 mb-3">5. 개인정보의 제3자 제공 및 위탁</h2>
           <p className="text-slate-650">
-            본 사이트는 원칙적으로 개인정보를 수집하지 않으므로 제3자에게 제공할 개인정보를 보유하고 있지 않습니다. 다만, 구글 사의 로그 수집 모듈(GA4, AdSense)을 통한 비식별 분석 정보에 한해 기술적으로 위탁 처리됩니다.
+            본 사이트는 원칙적으로 개인정보를 수집하지 않으므로 제3자에게 제공할 개인정보를 보유하고 있지 않습니다. 다만, 구글 사의 로그 수집 모듈(GA4)을 통한 비식별 분석 정보에 한해 기술적으로 위탁 처리됩니다.
           </p>
         </section>
 

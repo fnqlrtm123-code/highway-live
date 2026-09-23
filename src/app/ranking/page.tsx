@@ -1,5 +1,4 @@
 import { serviceAreas } from '@/lib/data';
-import AdSense from '@/components/AdSense';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -100,7 +99,6 @@ export default function RankingPage() {
       </div>
 
       {/* 애드센스 */}
-      <AdSense slot="5566112233" />
 
       {/* 그리드 레이아웃 */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

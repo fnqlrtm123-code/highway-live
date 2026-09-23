@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { incidents, highways } from '@/lib/data';
-import AdSense from '@/components/AdSense';
 
 export default function WorkGuide() {
   const [selectedRoute, setSelectedRoute] = useState<string>('전체');
@@ -129,7 +128,6 @@ export default function WorkGuide() {
 
       {/* 애드센스 */}
       <div className="max-w-[1240px] mx-auto px-4 mt-8">
-        <AdSense slot="1122334455" />
       </div>
     </main>
   );

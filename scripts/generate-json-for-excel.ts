@@ -4,7 +4,7 @@ import { REGIONS } from "../src/lib/regionHelper";
 import * as fs from "fs";
 import * as path from "path";
 
-const baseUrl = "https://highway.mrbrisbaneinsouth.kr";
+const baseUrl = "https://roadpick.kr";
 
 interface RowData {
   title: string;

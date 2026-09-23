@@ -1,5 +1,4 @@
 import { highways, cctvPoints } from '@/lib/data';
-import AdSense from '@/components/AdSense';
 
 export const metadata = {
   title: '전국 고속도로 CCTV 보기 - 구간별 교통상황 영상',
@@ -21,7 +20,6 @@ export default function CctvHubPage() {
       </div>
 
       {/* 애드센스 */}
-      <AdSense slot="6677889900" />
 
       {/* 노선별 CCTV 카테고리 빠른 탐색 */}
       <section className="space-y-4">

@@ -1,5 +1,4 @@
 import { serviceAreas } from '@/lib/data';
-import AdSense from '@/components/AdSense';
 import HubHeader from '@/components/HubHeader';
 import type { Metadata } from 'next';
 
@@ -36,7 +35,6 @@ export default function FoodIndexPage() {
         </p>
       </div>
 
-      <AdSense slot="2233445566" />
 
       {/* 전국 휴게소 맛집 리스트 */}
       <section className="bg-white border border-slate-200/60 rounded-2xl p-6 md:p-8 shadow-xs space-y-6">

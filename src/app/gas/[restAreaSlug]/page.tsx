@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ restAreaS
   const area = getServiceAreaBySlug(restAreaSlug);
   if (!area) return {};
 
-  const pageUrl = `https://highway.mrbrisbaneinsouth.kr/gas/${encodeURIComponent(area.slug)}`;
+  const pageUrl = `https://roadpick.kr/gas/${encodeURIComponent(area.slug)}`;
   const title = `${area.name} (${area.directionName}) 주유소 가격 휘발유 가격 비교`;
   const lpgText = area.gasStation.lpgPrice ? ` 및 LPG 충전소 가격` : '';
   const description = `${area.name} (${area.directionName}) 휴게소에 위치한 ${area.gasStation.brand} 주유소의 휘발유(${area.gasStation.gasolinePrice.toLocaleString()}원), 경유(${area.gasStation.dieselPrice.toLocaleString()}원)${lpgText} 정보와 함께 알뜰 주유소 주유 팁을 확인하세요.`;
@@ -66,7 +66,7 @@ export default async function GasDetailPage({ params }: Props) {
     "@type": "LocalBusiness",
     "name": `${area.name} (${area.directionName}) 주유소`,
     "description": `${area.name} (${area.directionName}) 휴게소에 위치한 ${area.gasStation.brand} 주유소의 휘발유, 경유, LPG 가격 정보입니다.`,
-    "url": `https://highway.mrbrisbaneinsouth.kr/gas/${encodeURIComponent(area.slug)}`,
+    "url": `https://roadpick.kr/gas/${encodeURIComponent(area.slug)}`,
     "address": {
       "@type": "PostalAddress",
       "addressLocality": area.highwayName,

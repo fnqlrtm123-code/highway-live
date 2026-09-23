@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
-import AdSense from "@/components/AdSense";
-import Script from "next/script";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -21,9 +19,9 @@ export const metadata: Metadata = {
   },
   description: "전국 고속도로 실시간 CCTV 교통상황, 휴게소 맛집 메뉴, 주유소 최저가 가격 비교 및 전기차 충전소 현황을 한눈에 확인하세요.",
   keywords: ["고속도로 cctv", "실시간 교통상황", "휴게소 맛집", "휴게소 주유소 기름값", "전국 고속도로 지도", "상행 하행 맛집", "전기차 충전소", "알뜰주유소 최저가"],
-  metadataBase: new URL("https://highway.mrbrisbaneinsouth.kr"), // Placeholder production domain
+  metadataBase: new URL("https://roadpick.kr"), // Placeholder production domain
   alternates: {
-    canonical: "https://highway.mrbrisbaneinsouth.kr",
+    canonical: "https://roadpick.kr",
     types: {
       "application/rss+xml": "/rss.xml",
     },
@@ -38,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "로드픽 - 고속도로 CCTV & 휴게소 맛집 정보",
     description: "전국 고속도로 실시간 CCTV 교통상황, 휴게소 맛집 메뉴, 주유소 최저가 가격 비교 및 전기차 충전소 현황을 한눈에 확인하세요.",
-    url: "https://highway.mrbrisbaneinsouth.kr",
+    url: "https://roadpick.kr",
     siteName: "로드픽",
     images: [
       {
@@ -71,25 +69,6 @@ export default function RootLayout({
     >
       <head />
       <body className="min-h-full flex flex-col bg-white text-slate-900 font-sans antialiased">
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1647402852124552"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
-        <Script
-          id="adsense-config"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (window.adsbygoogle = window.adsbygoogle || []).push({
-                google_ad_client: "ca-pub-1647402852124552",
-                enable_page_level_ads: true,
-                overlays: { bottom: true }
-              });
-            `,
-          }}
-        />
 
 
         {/* 2. 글로벌 헤더 (모던 화이트 글래스 테마) */}
@@ -116,13 +95,6 @@ export default function RootLayout({
 
           </div>
         </header>
-
-        {/* Global Header Ad */}
-        <div className="w-full bg-white border-b border-slate-100">
-          <div className="mx-auto max-w-[1000px] px-4 py-1">
-            <AdSense slot="3342272844" />
-          </div>
-        </div>
 
         {/* 메인 콘텐트 */}
         <div className="flex-grow flex flex-col">

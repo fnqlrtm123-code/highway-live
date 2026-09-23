@@ -8,7 +8,6 @@ import {
   travelTimes, 
   ServiceArea
 } from '@/lib/data';
-import AdSense from '@/components/AdSense';
 import CctvPlayer from '@/components/CctvPlayer';
 
 export default function HomeClient() {
@@ -383,7 +382,6 @@ export default function HomeClient() {
 
         <hr className="border-slate-100" />
 
-        <AdSense slot="3342272844" />
 
         {/* [섹션 3] 주유소 유가 비교 & 전기차 충전소 */}
         <section className="space-y-6">
@@ -522,7 +520,6 @@ export default function HomeClient() {
 
         <hr className="border-slate-100" />
 
-        <AdSense slot="3342272844" />
 
         {/* [섹션 5] 자주 묻는 질문 FAQ */}
         <section className="space-y-6 pb-8">

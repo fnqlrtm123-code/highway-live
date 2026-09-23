@@ -1,6 +1,5 @@
 import { highways } from '@/lib/data';
 import { notFound } from 'next/navigation';
-import AdSense from '@/components/AdSense';
 import type { Metadata } from 'next';
 
 const holidayMap: Record<string, { name: string; title: string; desc: string; tips: string[] }> = {
@@ -80,7 +79,6 @@ export default async function HolidayDetailPage({ params }: Props) {
         </div>
       </div>
 
-      <AdSense slot="2233445566" />
 
       {/* 추천 행동 가이드 */}
       <section className="bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-2xs space-y-6">

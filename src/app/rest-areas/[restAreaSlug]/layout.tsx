@@ -1,6 +1,5 @@
 import { getServiceAreaBySlug, serviceAreas } from '@/lib/data';
 import { notFound } from 'next/navigation';
-import AdSense from '@/components/AdSense';
 import type { Metadata } from 'next';
 import Breadcrumb from '@/components/Breadcrumb';
 
@@ -59,7 +58,6 @@ export default async function RestAreaLayout({ children, params }: Props) {
       ]} />
 
       {/* 상단 애드센스 광고 */}
-      <AdSense slot="4455667788" />
 
       {/* 휴게소 상세 헤더 - 깔끔하고 읽기 편한 아티클 스타일 */}
       <div className="border-b border-slate-200 pb-6 mb-8 space-y-3">

@@ -2,7 +2,6 @@
 
 import { useState, useMemo } from 'react';
 import { serviceAreas, highways } from '@/lib/data';
-import AdSense from '@/components/AdSense';
 import HubHeader from '@/components/HubHeader';
 
 type FuelSortType = 'gasoline' | 'diesel' | 'lpg';
@@ -129,7 +128,6 @@ export default function GasIndexPage() {
           </p>
         </div>
 
-        <AdSense slot="5566778899" />
 
         {/* 최저가 요약 전광판 (TOP 3) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

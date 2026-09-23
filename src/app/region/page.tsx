@@ -1,6 +1,5 @@
 import { serviceAreas } from '@/lib/data';
 import { REGIONS, getRegionOfRestArea } from '@/lib/regionHelper';
-import AdSense from '@/components/AdSense';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -51,7 +50,6 @@ export default function RegionIndexPage() {
       </div>
 
       {/* 애드센스 */}
-      <AdSense slot="1122334499" />
 
       {/* 지역 카드 그리드 */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

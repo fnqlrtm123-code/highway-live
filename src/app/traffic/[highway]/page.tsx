@@ -1,7 +1,6 @@
 import { getServiceAreasByHighway } from '@/lib/data';
 import { getRoadList, getRoadBySlug } from '@/lib/roadData';
 import { notFound } from 'next/navigation';
-import AdSense from '@/components/AdSense';
 import type { Metadata } from 'next';
 
 interface Props {
@@ -13,7 +12,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const road = getRoadBySlug(highwaySlug);
   if (!road) return {};
 
-  const pageUrl = `https://highway.mrbrisbaneinsouth.kr/traffic/${highwaySlug}`;
+  const pageUrl = `https://roadpick.kr/traffic/${highwaySlug}`;
   const rangeText = road.start && road.end ? `${road.start}~${road.end}` : '주요';
 
   const getLineName = (name: string) => {
@@ -151,7 +150,6 @@ export default async function HighwayTrafficDetailPage({ params }: Props) {
       </div>
 
       {/* 애드센스 */}
-      <AdSense slot="4455662211" />
 
       {/* 2. 상황 조회 방법 */}
       <section className="space-y-6">

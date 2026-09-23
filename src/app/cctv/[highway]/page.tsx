@@ -1,6 +1,5 @@
 import { getHighwayBySlug, highways, getCctvPointsByHighway } from '@/lib/data';
 import { notFound } from 'next/navigation';
-import AdSense from '@/components/AdSense';
 import type { Metadata } from 'next';
 
 interface Props {
@@ -12,7 +11,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const highway = getHighwayBySlug(highwaySlug);
   if (!highway) return {};
 
-  const pageUrl = `https://highway.mrbrisbaneinsouth.kr/cctv/${highwaySlug}`;
+  const pageUrl = `https://roadpick.kr/cctv/${highwaySlug}`;
   const title = `${highway.name} CCTV 보기 - 구간별 카메라 채널`;
   const description = `${highway.name}에 설치된 교통상황 관제 CCTV 카메라 목록을 확인하세요. 지점별 주행 영상 및 평균속도 정보를 중계합니다.`;
 
@@ -72,7 +71,6 @@ export default async function HighwayCctvPage({ params }: Props) {
       </div>
 
       {/* 애드센스 */}
-      <AdSense slot="2233445566" />
 
       {/* CCTV 리스트 */}
       <section className="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-2xs space-y-6">

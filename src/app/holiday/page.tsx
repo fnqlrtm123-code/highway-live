@@ -1,4 +1,3 @@
-import AdSense from '@/components/AdSense';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -23,7 +22,6 @@ export default function HolidayIndexPage() {
         </p>
       </div>
 
-      <AdSense slot="1122334455" />
 
       {/* 명절 연휴 카드 */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -2,7 +2,6 @@
 
 import { useState, useMemo } from 'react';
 import { serviceAreas, highways } from '@/lib/data';
-import AdSense from '@/components/AdSense';
 import HubHeader from '@/components/HubHeader';
 import Breadcrumb from '@/components/Breadcrumb';
 
@@ -80,7 +79,6 @@ export default function RestAreasPage() {
         </div>
 
         {/* 애드센스 */}
-        <AdSense slot="4455667788" />
 
         {/* 필터 & 검색 대시보드 */}
         <section className="bg-white border border-slate-200/60 rounded-2xl p-6 md:p-8 shadow-xs space-y-6">

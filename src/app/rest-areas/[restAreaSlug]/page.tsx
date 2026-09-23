@@ -1,6 +1,5 @@
 import { getServiceAreaBySlug, getServiceAreasByHighway, serviceAreas } from '@/lib/data';
 import { notFound } from 'next/navigation';
-import AdSense from '@/components/AdSense';
 import type { Metadata } from 'next';
 
 interface Props {
@@ -12,7 +11,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const area = getServiceAreaBySlug(restAreaSlug);
   if (!area) return {};
 
-  const pageUrl = `https://highway.mrbrisbaneinsouth.kr/rest-areas/${encodeURIComponent(area.slug)}`;
+  const pageUrl = `https://roadpick.kr/rest-areas/${encodeURIComponent(area.slug)}`;
   const title = `${area.name} 휴게소 (${area.directionName}) 맛집 메뉴 주유소 가격 편의시설`;
   const description = `${area.name} 휴게소 (${area.directionName})의 시그니처 대표 메뉴인 ${area.signatureMenu.name} 정보를 비롯해 주유소 가격, 전기차 수소차 충전 현황 및 입점 브랜드 정보를 한눈에 제공합니다.`;
 
@@ -61,7 +60,7 @@ export default async function RestAreaDashboardPage({ params }: Props) {
     "@type": "LocalBusiness",
     "name": `${area.name} (${area.directionName})`,
     "description": `${area.name} 휴게소 (${area.directionName})의 시그니처 대표 메뉴인 ${area.signatureMenu.name} 정보를 비롯해 주유소 가격, 전기차 수소차 충전 현황 및 입점 브랜드 정보를 제공합니다.`,
-    "url": `https://highway.mrbrisbaneinsouth.kr/rest-areas/${encodeURIComponent(area.slug)}`,
+    "url": `https://roadpick.kr/rest-areas/${encodeURIComponent(area.slug)}`,
     "address": {
       "@type": "PostalAddress",
       "addressLocality": area.highwayName,
@@ -167,7 +166,6 @@ export default async function RestAreaDashboardPage({ params }: Props) {
         )}
       </section>
 
-      <AdSense slot="5566778899" />
 
       {/* 3. 주유 정보 */}
       <section className="space-y-4">

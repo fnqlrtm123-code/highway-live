@@ -1,5 +1,4 @@
 import { serviceAreas } from '@/lib/data';
-import AdSense from '@/components/AdSense';
 import HubHeader from '@/components/HubHeader';
 import type { Metadata } from 'next';
 
@@ -31,7 +30,6 @@ export default function EvIndexPage() {
         </p>
       </div>
 
-      <AdSense slot="9988776655" />
 
       {/* 충전기 다수 보유 순위 */}
       <section className="bg-white border border-slate-200/60 rounded-2xl p-6 md:p-8 shadow-xs space-y-6">

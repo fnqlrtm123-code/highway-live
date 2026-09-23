@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ restAreaS
   const area = getServiceAreaBySlug(restAreaSlug);
   if (!area) return {};
 
-  const pageUrl = `https://highway.mrbrisbaneinsouth.kr/ev/${encodeURIComponent(area.slug)}`;
+  const pageUrl = `https://roadpick.kr/ev/${encodeURIComponent(area.slug)}`;
   const title = `${area.name} (${area.directionName}) 전기차 충전소 가격 운영 시간`;
   const hydrogenText = area.gasStation.hasHydrogen ? ' 및 수소 충전소 가능 여부' : '';
   const chargerCountText = area.gasStation.hasEvCharger ? `, 충전기 대수: ${area.gasStation.evChargersCount}대` : '';
@@ -68,7 +68,7 @@ export default async function EvDetailPage({ params }: Props) {
     "@type": "LocalBusiness",
     "name": `${area.name} (${area.directionName}) 전기차 충전소`,
     "description": `${area.name} (${area.directionName}) 휴게소의 전기차(EV) 급속/완속 충전소 상세 위치 및 수소 충전소 가용 여부 정보입니다.`,
-    "url": `https://highway.mrbrisbaneinsouth.kr/ev/${encodeURIComponent(area.slug)}`,
+    "url": `https://roadpick.kr/ev/${encodeURIComponent(area.slug)}`,
     "address": {
       "@type": "PostalAddress",
       "addressLocality": area.highwayName,

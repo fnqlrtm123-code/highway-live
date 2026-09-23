@@ -1,6 +1,5 @@
 import { getCctvPointById, cctvPoints, getCctvPointsByHighway, getHighwayBySlug } from '@/lib/data';
 import { notFound } from 'next/navigation';
-import AdSense from '@/components/AdSense';
 import CctvPlayer from '@/components/CctvPlayer';
 import type { Metadata } from 'next';
 
@@ -14,7 +13,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cctv = getCctvPointById(section);
   if (!cctv) return {};
 
-  const pageUrl = `https://highway.mrbrisbaneinsouth.kr/cctv/${highwaySlug}/${section}`;
+  const pageUrl = `https://roadpick.kr/cctv/${highwaySlug}/${section}`;
   const title = `${cctv.highwayName} ${cctv.name} (${cctv.direction}) CCTV 상황판`;
   const description = `${cctv.highwayName} ${cctv.name} (${cctv.direction})의 교통상황 CCTV 영상을 확인하세요. 제한 속도 ${cctv.speedLimit} km/h 구간으로, 현재 주행 평균 속도는 ${cctv.currentSpeed} km/h 이며 통행 상태는 ${cctv.status === 'smooth' ? '원활' : cctv.status === 'slow' ? '서행' : '정체'}입니다.`;
 
@@ -63,7 +62,6 @@ export default async function CctvSectionDetailPage({ params }: Props) {
       </a>
 
       {/* 상단 애드센스 광고 */}
-      <AdSense slot="6677889900" />
 
       {/* CCTV 상세 헤더 카드 */}
       <div className="bg-slate-900 text-white p-8 md:p-10 rounded-2xl border border-slate-800 shadow-xl overflow-hidden relative mb-8">
