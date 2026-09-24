@@ -1,9 +1,10 @@
+import { pageMetadata } from "../../lib/seo";
 import { highways, cctvPoints } from '@/lib/data';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: '전국 고속도로 CCTV 보기 - 구간별 교통상황 영상',
   description: '경부고속도로, 영동고속도로, 서해안고속도로 등 전국 주요 고속도로 노선의 CCTV 주행 화면을 확인하세요. 정체 및 사고 구역을 영상으로 즉시 점검할 수 있습니다.',
-};
+}, "/cctv");
 
 export default function CctvHubPage() {
   return (

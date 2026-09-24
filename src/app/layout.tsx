@@ -1,3 +1,4 @@
+import { pageMetadata } from "../lib/seo";
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
@@ -12,10 +13,10 @@ const outfit = Outfit({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: {
-    default: "로드픽 | 전국 고속도로 CCTV 및 휴게소 맛집 주유소 가격",
-    template: "%s | 로드픽"
+    default: "전국 고속도로 CCTV·휴게소·주유소 안내",
+    template: "%s"
   },
   description: "전국 고속도로 실시간 CCTV 교통상황, 휴게소 맛집 메뉴, 주유소 최저가 가격 비교 및 전기차 충전소 현황을 한눈에 확인하세요.",
   keywords: ["고속도로 cctv", "실시간 교통상황", "휴게소 맛집", "휴게소 주유소 기름값", "전국 고속도로 지도", "상행 하행 맛집", "전기차 충전소", "알뜰주유소 최저가"],
@@ -55,7 +56,7 @@ export const metadata: Metadata = {
     description: "전국 고속도로 실시간 CCTV 교통상황, 휴게소 맛집 메뉴, 주유소 최저가 가격 비교 및 전기차 충전소 현황을 한눈에 확인하세요.",
     images: ["/highway_traffic_1.png"],
   }
-};
+}, "/");
 
 export default function RootLayout({
   children,

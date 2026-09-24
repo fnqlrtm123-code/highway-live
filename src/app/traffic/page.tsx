@@ -1,11 +1,12 @@
+import { pageMetadata } from "../../lib/seo";
 import { getRoadList } from '@/lib/roadData';
 import type { Metadata } from 'next';
 import TrafficHubClient from '@/components/TrafficHubClient';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: '전국 교통상황 확인 고속도로 도시고속 국도 대교 CCTV 정체구간',
   description: '경부고속도로, 영동고속도로, 서해안선 등 전국 주요 고속도로와 서울 경기 도시고속화도로, 전국 국도 및 주요 대교의 교통상황과 CCTV 모니터링, 우회도로 가이드를 안내합니다.',
-};
+}, "/traffic");
 
 export default function TrafficIndexPage() {
   const roadsList = getRoadList();

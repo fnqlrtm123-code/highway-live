@@ -1,3 +1,4 @@
+import { pageMetadata } from "../../../lib/seo";
 import { highways } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
@@ -8,9 +9,9 @@ const holidayMap: Record<string, { name: string; title: string; desc: string; ti
     title: '추석 연휴 고속도로 교통상황 예보', 
     desc: '한가위 명절 연휴 기간 동안 발생하는 대규모 통행량을 피해 정체를 우회할 수 있는 요령과 분석 자료입니다.',
     tips: [
-      '귀성길 추천 출발시간: 연휴 전날 오전 7시 이전 또는 연휴 둘째날 오후 8시 이후',
-      '귀경길 추천 출발시간: 추석 당일 다음날 새벽 6시 이전 또는 밤 10시 이후',
-      '통행료 무료: 연휴 시작일 00:00부터 종료일 24:00까지 전 차량 통행료 100% 면제',
+      '귀성길 출발 전 한국도로공사 교통정보에서 해당 연휴의 예상 소요시간을 확인하세요.',
+      '귀경길 혼잡 시간은 날짜와 노선에 따라 달라집니다. 출발 직전 교통상황을 확인하세요.',
+      '통행료 면제 여부와 적용 기간은 해당 연도의 정부 및 한국도로공사 공지를 확인하세요.',
       '휴게소 팁: 식당 대기줄을 줄이려면 간편식 스낵코너(호두과자, 소떡소떡 등) 전용 키오스크를 이용하세요.'
     ]
   },
@@ -19,9 +20,9 @@ const holidayMap: Record<string, { name: string; title: string; desc: string; ti
     title: '설날 연휴 고속도로 교통상황 예보', 
     desc: '겨울철 안전 주행 수칙과 설날 연휴 대이동 정체구간 피하기 꿀팁을 확인해보세요.',
     tips: [
-      '귀성길 추천 출발시간: 연휴 첫날 새벽 5시 이전 또는 전날 밤 9시 이후',
-      '귀경길 추천 출발시간: 설날 당일 당일 저녁 9시 이후 또는 다음날 새벽 시간대',
-      '통행료 무료: 연휴 첫날 00:00부터 마지막날 24:00까지 면제 적용',
+      '귀성길 출발 전 한국도로공사 교통정보에서 해당 연휴의 예상 소요시간을 확인하세요.',
+      '귀경길 혼잡 시간은 날짜와 노선에 따라 달라집니다. 출발 직전 교통상황을 확인하세요.',
+      '통행료 면제 여부와 적용 기간은 해당 연도의 정부 및 한국도로공사 공지를 확인하세요.',
       '결빙 주의: 터널 입구 및 다리 위 블랙아이스 결빙에 각별히 유의하고 감속 운전하세요.'
     ]
   }
@@ -36,10 +37,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const info = holidayMap[holiday];
   if (!info) return {};
 
-  return {
-    title: `${info.name} 고속도로 교통상황 - 귀성길/귀경길 정체 분석 및 우회로`,
-    description: `${info.title}. 추천 출발 시간대, 통행 요금 무료 일정 및 노선별 혼잡 예상 정보 안내.`,
-  };
+  return pageMetadata({
+    title: `${info.name} 연휴 고속도로 교통정보·통행료 확인 안내`,
+    description: `${info.name} 귀성·귀경길 출발 전 확인할 교통정보, 통행료 면제 공지와 휴게소 이용 안내를 살펴보세요.`,
+  }, `/holiday/${holiday}`);
 }
 
 export async function generateStaticParams() {

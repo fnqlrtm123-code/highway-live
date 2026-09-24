@@ -1,3 +1,4 @@
+import { pageMetadata } from "../../../lib/seo";
 import { getServiceAreaBySlug, serviceAreas } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
@@ -17,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ restAreaS
   const lpgText = area.gasStation.lpgPrice ? ` 및 LPG 충전소 가격` : '';
   const description = `${area.name} (${area.directionName}) 휴게소에 위치한 ${area.gasStation.brand} 주유소의 휘발유(${area.gasStation.gasolinePrice.toLocaleString()}원), 경유(${area.gasStation.dieselPrice.toLocaleString()}원)${lpgText} 정보와 함께 알뜰 주유소 주유 팁을 확인하세요.`;
 
-  return {
+  return pageMetadata({
     title: {
       absolute: title
     },
@@ -32,7 +33,7 @@ export async function generateMetadata({ params }: { params: Promise<{ restAreaS
       type: "website",
       locale: "ko_KR",
     }
-  };
+  });
 }
 
 export async function generateStaticParams() {
@@ -49,17 +50,7 @@ export default async function GasDetailPage({ params }: Props) {
     notFound();
   }
 
-  // 가상의 노선 평균 가격 설정
-  const highwayAvgGasoline = 1605;
-  const highwayAvgDiesel = 1430;
-
-  const gasolineDiff = area.gasStation.gasolinePrice - highwayAvgGasoline;
-  const dieselDiff = area.gasStation.dieselPrice - highwayAvgDiesel;
-
-  const isGasolineCheaper = gasolineDiff < 0;
-  const isDieselCheaper = dieselDiff < 0;
-
-  const summaryText = `${area.name} 휴게소 주유소는 국토교통부와 한국도로공사가 지원하는 대표 주유인프라 브랜드인 ${area.gasStation.brand} 주유소를 채택하고 있습니다. 현재 휘발유는 노선 평균 대비 약 ${Math.abs(gasolineDiff)}원 ${isGasolineCheaper ? '저렴한' : '높은'} 수준으로 판매 중이며, 경유는 평균보다 ${Math.abs(dieselDiff)}원 ${isDieselCheaper ? '더 저렴하게' : '더 높게'} 판매되고 있어 장거리 정속 주행 차량의 급유 시 참고하시기 좋습니다.`;
+  const summaryText = `${area.name} (${area.directionName})의 ${area.gasStation.brand} 주유소 가격 안내입니다. 표시 가격은 수집된 자료를 기준으로 하며, 결제 전 현장 가격을 확인해 주세요.`;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -126,11 +117,7 @@ export default async function GasDetailPage({ params }: Props) {
               {area.gasStation.gasolinePrice.toLocaleString()}원
             </span>
           </div>
-          <div className="sm:text-right">
-            <span className={`text-xs font-semibold px-2.5 py-1 rounded-lg ${isGasolineCheaper ? 'bg-emerald-50 text-emerald-700 border border-emerald-200/60' : 'bg-rose-50 text-rose-700 border border-rose-200/60'}`}>
-              {isGasolineCheaper ? `노선 평균 대비 ${Math.abs(gasolineDiff)}원 저렴` : `노선 평균 대비 ${gasolineDiff}원 비쌈`}
-            </span>
-          </div>
+
         </div>
 
         {/* 경유 */}
@@ -141,11 +128,7 @@ export default async function GasDetailPage({ params }: Props) {
               {area.gasStation.dieselPrice.toLocaleString()}원
             </span>
           </div>
-          <div className="sm:text-right">
-            <span className={`text-xs font-semibold px-2.5 py-1 rounded-lg ${isDieselCheaper ? 'bg-emerald-50 text-emerald-700 border border-emerald-200/60' : 'bg-rose-50 text-rose-700 border border-rose-200/60'}`}>
-              {isDieselCheaper ? `노선 평균 대비 ${Math.abs(dieselDiff)}원 저렴` : `노선 평균 대비 ${dieselDiff}원 비쌈`}
-            </span>
-          </div>
+
         </div>
 
         {/* LPG */}
@@ -169,7 +152,7 @@ export default async function GasDetailPage({ params }: Props) {
         <p className="text-xs md:text-sm text-slate-650 leading-relaxed font-normal">
           {area.name} 주유소는 <strong>{area.gasStation.brand}</strong> 브랜드로 운영되고 있습니다. 
           고속도로 알뜰주유소(ex-oil)는 도로공사의 일괄 공동구매 정책에 의해 시중 폴 주유소 대비 리터당 비교적 저렴한 가격에 주유가 가능한 장점이 있습니다. 
-          특히 본 {area.name} 주유소는 셀프 주유 인프라가 갖추어져 있어 보다 신속하게 급유가 가능합니다. 장거리 주행 시 다음 휴게소 주유소와의 유가 차이를 미리 확인하시어 현명하게 주유 계획을 세우시길 추천드립니다.
+          셀프 주유 여부와 운영 시간은 주유소에 확인해 주세요. 장거리 주행 시 다음 휴게소 주유소와의 유가 차이를 미리 확인하시어 현명하게 주유 계획을 세우시길 추천드립니다.
         </p>
       </div>
 

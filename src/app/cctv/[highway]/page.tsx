@@ -1,3 +1,4 @@
+import { pageMetadata } from "../../../lib/seo";
 import { getHighwayBySlug, highways, getCctvPointsByHighway } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
@@ -15,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = `${highway.name} CCTV 보기 - 구간별 카메라 채널`;
   const description = `${highway.name}에 설치된 교통상황 관제 CCTV 카메라 목록을 확인하세요. 지점별 주행 영상 및 평균속도 정보를 중계합니다.`;
 
-  return {
+  return pageMetadata({
     title,
     description,
     alternates: {
@@ -28,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
       locale: "ko_KR",
     }
-  };
+  });
 }
 
 export async function generateStaticParams() {

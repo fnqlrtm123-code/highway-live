@@ -1,9 +1,10 @@
+import { pageMetadata } from "../../lib/seo";
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: '명절 및 연휴 고속도로 특별 교통상황 예보 - 귀성/귀경 정보',
   description: '설날, 추석 등 명절 대이동 연휴 기간 동안의 우회로 정보, 최적 출발시간 분석, 통행료 면제 일정을 수록하고 있습니다.',
-};
+}, "/holiday");
 
 const holidays = [
   { slug: 'chuseok', name: '추석 연휴 교통 분석', period: '추석 당일 전후 3일간', desc: '민족 대이동 추석 연휴 기간 동안의 경부선, 서해안선 등 주요 노선별 우회도로 가이드 및 실시간 CCTV 확인 포인트입니다.' },

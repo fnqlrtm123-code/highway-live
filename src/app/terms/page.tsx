@@ -1,12 +1,13 @@
+import { pageMetadata } from "../../lib/seo";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "이용약관",
   description: "로드픽 고속도로 정보 포털의 이용약관 및 서비스 제공 범위를 안내합니다. 본 사이트는 참고용 교통 가이드 포털입니다.",
   alternates: {
     canonical: "/terms",
   },
-};
+}, "/terms");
 
 export default function TermsPage() {
   return (

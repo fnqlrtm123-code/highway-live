@@ -1,3 +1,4 @@
+import { pageMetadata } from "../../../lib/seo";
 import { getServiceAreaBySlug, getServiceAreasByHighway, serviceAreas } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
@@ -15,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = `${area.name} 휴게소 (${area.directionName}) 맛집 메뉴 주유소 가격 편의시설`;
   const description = `${area.name} 휴게소 (${area.directionName})의 시그니처 대표 메뉴인 ${area.signatureMenu.name} 정보를 비롯해 주유소 가격, 전기차 수소차 충전 현황 및 입점 브랜드 정보를 한눈에 제공합니다.`;
 
-  return {
+  return pageMetadata({
     title,
     description,
     keywords: [
@@ -36,7 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
       locale: "ko_KR",
     }
-  };
+  });
 }
 
 export async function generateStaticParams() {

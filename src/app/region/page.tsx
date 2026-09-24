@@ -1,11 +1,12 @@
+import { pageMetadata } from "../../lib/seo";
 import { serviceAreas } from '@/lib/data';
 import { REGIONS, getRegionOfRestArea } from '@/lib/regionHelper';
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: '지역별 고속도로 휴게소 찾기 경기 강원 충청 전라 경상 전국 안내',
   description: '전국 13개 시도(경기도, 강원도, 충청도, 전라도, 경상도 등) 지역별 고속도로 휴게소 위치, 대표 음식, 브랜드 주유소 및 편의시설 정보를 한눈에 조회하세요.',
-};
+}, "/region");
 
 export default function RegionIndexPage() {
   // 각 지역별 휴게소 개수 계산 및 대표 휴게소 추출

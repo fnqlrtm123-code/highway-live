@@ -1,3 +1,4 @@
+import { pageMetadata } from "../../../lib/seo";
 import { getServiceAreaBySlug, serviceAreas } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
@@ -18,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ restAreaS
   const chargerCountText = area.gasStation.hasEvCharger ? `, 충전기 대수: ${area.gasStation.evChargersCount}대` : '';
   const description = `${area.name} (${area.directionName}) 휴게소의 전기차(EV) 급속/완속 충전소 상세 위치${chargerCountText}${hydrogenText} 정보와 충전 표준 규격을 확인해보세요.`;
 
-  return {
+  return pageMetadata({
     title: {
       absolute: title
     },
@@ -33,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ restAreaS
       type: "website",
       locale: "ko_KR",
     }
-  };
+  });
 }
 
 export async function generateStaticParams() {

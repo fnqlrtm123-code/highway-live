@@ -1,3 +1,4 @@
+import { pageMetadata } from "../../../../lib/seo";
 import { getServiceAreaBySlug, serviceAreas } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
@@ -17,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ restAreaS
   const title = `${area.name} (${area.directionName}) 편의시설 안내 - 수유실/샤워실/수면실`;
   const description = `${area.name} (${area.directionName}) 휴게소에서 이용할 수 있는 주요 편의 편의서비스 시설(${mainFacilities})의 상세 가이드와 24시간 가용 여부를 확인해보세요.`;
 
-  return {
+  return pageMetadata({
     title,
     description,
     alternates: {
@@ -30,7 +31,7 @@ export async function generateMetadata({ params }: { params: Promise<{ restAreaS
       type: "website",
       locale: "ko_KR",
     }
-  };
+  });
 }
 
 export async function generateStaticParams() {

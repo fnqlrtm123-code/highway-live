@@ -1,11 +1,12 @@
+import { pageMetadata } from "../../lib/seo";
 import { serviceAreas } from '@/lib/data';
 import HubHeader from '@/components/HubHeader';
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: '고속도로 휴게소 맛집 및 인기메뉴 랭킹 - 대표 음식 가이드',
   description: '전국 고속도로 휴게소별 대표 음식, 맛집 가격표, 아이와 먹기 좋은 영양 간식 목록을 모아 최적의 휴식 식사 계획을 지원합니다.',
-};
+}, "/food");
 
 export default function FoodIndexPage() {
   // 대표 음식이나 평점이 좋은 메뉴들만 따로 요약 필터링

@@ -1,11 +1,12 @@
+import { pageMetadata } from "../../lib/seo";
 import { serviceAreas } from '@/lib/data';
 import HubHeader from '@/components/HubHeader';
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: '고속도로 전기차 충전소 현황 - 초급속 충전기 보유 휴게소 목록',
   description: '전국 고속도로 노선별 전기차(EV) 급속/초급속 충전기 보유 수량, 사용 팁 및 대기 최소화 가이드를 제공합니다.',
-};
+}, "/ev");
 
 export default function EvIndexPage() {
   const evServiceAreas = serviceAreas.filter(s => s.gasStation.hasEvCharger);

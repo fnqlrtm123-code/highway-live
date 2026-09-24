@@ -12,6 +12,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     "",
     "/traffic",
+    "/cctv",
+    "/work",
+    "/holiday",
+    "/holiday/chuseok",
+    "/holiday/seollal",
     "/rest-areas",
     "/gas",
     "/ev",
@@ -23,7 +28,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/terms",
   ].map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date(),
     changeFrequency: "daily" as const,
     priority: route === "" ? 1.0 : 0.8,
   }));
@@ -32,7 +36,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const roads = getRoadList();
   const roadPages = roads.map((road) => ({
     url: `${baseUrl}/traffic/${encodeURIComponent(road.slug)}`,
-    lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.6,
   }));
@@ -41,7 +44,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 4. 고속도로 휴게소 상세 페이지들
   const restAreaMainPages = serviceAreas.map((area) => ({
     url: `${baseUrl}/rest-areas/${encodeURIComponent(area.slug)}`,
-    lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.7,
   }));
@@ -49,7 +51,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 4-1. 휴게소 음식/맛집 탭 서브페이지
   const restAreaFoodPages = serviceAreas.map((area) => ({
     url: `${baseUrl}/rest-areas/${encodeURIComponent(area.slug)}/food`,
-    lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.6,
   }));
@@ -57,7 +58,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 4-2. 휴게소 편의시설 탭 서브페이지
   const restAreaFacilityPages = serviceAreas.map((area) => ({
     url: `${baseUrl}/rest-areas/${encodeURIComponent(area.slug)}/facilities`,
-    lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.6,
   }));
@@ -65,7 +65,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 5. 주유소 상세 페이지
   const gasPages = serviceAreas.map((area) => ({
     url: `${baseUrl}/gas/${encodeURIComponent(area.slug)}`,
-    lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.6,
   }));
@@ -73,7 +72,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 6. 전기차 충전 상세 페이지
   const evPages = serviceAreas.map((area) => ({
     url: `${baseUrl}/ev/${encodeURIComponent(area.slug)}`,
-    lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.6,
   }));
@@ -82,7 +80,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 8. 개별 CCTV 플레이어 페이지 (CCTV 색인 생성용)
   const cctvDetailPages = cctvPoints.map((cctv) => ({
     url: `${baseUrl}/cctv/${cctv.highwaySlug}/${cctv.id}`,
-    lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.5,
   }));
@@ -90,7 +87,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 9. 지역별 상세 페이지들
   const regionPages = REGIONS.map((reg) => ({
     url: `${baseUrl}/region/${reg.slug}`,
-    lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.6,
   }));
@@ -98,6 +94,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...staticPages,
     ...roadPages,
+    ...highways.map((highway) => ({ url: `${baseUrl}/cctv/${highway.slug}` })),
     ...restAreaMainPages,
     ...restAreaFoodPages,
     ...restAreaFacilityPages,
