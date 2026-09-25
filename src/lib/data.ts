@@ -952,19 +952,19 @@ export const serviceAreas: ServiceArea[] = [
       },
       {
         "name": "떡만두라면",
-        "price": 5500
+        "price": 6000
       },
       {
         "name": "EX-라면",
         "price": 4000
       },
       {
-        "name": "라면 + 퓨전충무김밥",
-        "price": 10000
+        "name": "라면 + 충무김밥",
+        "price": 10500
       },
       {
-        "name": "퓨전충무김밥",
-        "price": 6000
+        "name": "충무김밥",
+        "price": 6500
       },
       {
         "name": "의정부식부대찌개",
@@ -976,23 +976,23 @@ export const serviceAreas: ServiceArea[] = [
       },
       {
         "name": "초당순두부찌개",
-        "price": 10000
+        "price": 10500
       },
       {
         "name": "옛날돼지고기김치찌개",
-        "price": 10000
+        "price": 10500
       },
       {
         "name": "황태해장국",
-        "price": 10000
+        "price": 10500
       },
       {
         "name": "뚝배기 불고기(소고기)",
-        "price": 10000
+        "price": 11000
       },
       {
         "name": "제육비빔밥",
-        "price": 10000
+        "price": 11000
       },
       {
         "name": "왕돈가스",
@@ -1008,11 +1008,11 @@ export const serviceAreas: ServiceArea[] = [
       },
       {
         "name": "콩나물해장라면",
-        "price": 6000
+        "price": 6500
       },
       {
         "name": "맑은나주곰탕",
-        "price": 11000
+        "price": 12000
       },
       {
         "name": "한우소머리곰탕",
@@ -1068,7 +1068,7 @@ export const serviceAreas: ServiceArea[] = [
       },
       {
         "name": "육계장",
-        "price": 10000
+        "price": 10500
       },
       {
         "name": "(실속)어린이돈가스",
@@ -6243,7 +6243,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1739,
       "dieselPrice": 1730,
-      "lpgPrice": 1114,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 4,
       "hasHydrogen": false
@@ -6981,7 +6981,7 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "S-OIL",
-      "gasolinePrice": 1818,
+      "gasolinePrice": 1799,
       "dieselPrice": 1798,
       "lpgPrice": 1023,
       "hasEvCharger": true,
@@ -9101,8 +9101,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1843,
-      "dieselPrice": 1836,
+      "gasolinePrice": 1743,
+      "dieselPrice": 1736,
       "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 12,
@@ -10054,7 +10054,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1764,
       "dieselPrice": 1753,
-      "lpgPrice": null,
+      "lpgPrice": 1076,
       "hasEvCharger": true,
       "evChargersCount": 4,
       "hasHydrogen": true
@@ -10182,7 +10182,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 0,
       "dieselPrice": 0,
-      "lpgPrice": null,
+      "lpgPrice": 1055,
       "hasEvCharger": true,
       "evChargersCount": 12,
       "hasHydrogen": false
@@ -11019,7 +11019,7 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
+      "gasolinePrice": 1764,
       "dieselPrice": 1753,
       "lpgPrice": 1131,
       "hasEvCharger": true,
@@ -12681,6 +12681,10 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "곡성통상추한상도시락",
         "price": 10000
+      },
+      {
+        "name": "곡성토란조랭이떡수제비",
+        "price": 9500
       }
     ],
     "brandStores": [
@@ -18285,7 +18289,7 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1783,
+      "gasolinePrice": 1738,
       "dieselPrice": 1728,
       "lpgPrice": 1083,
       "hasEvCharger": true,
@@ -18775,7 +18779,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1734,
       "dieselPrice": 1734,
-      "lpgPrice": 1158,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 8,
       "hasHydrogen": true
@@ -19472,7 +19476,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1739,
       "dieselPrice": 1729,
-      "lpgPrice": null,
+      "lpgPrice": 1113,
       "hasEvCharger": true,
       "evChargersCount": 12,
       "hasHydrogen": false
@@ -22092,7 +22096,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1747,
       "dieselPrice": 1737,
-      "lpgPrice": 1226,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 12,
       "hasHydrogen": false
@@ -24678,10 +24682,6 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "떡만두라면",
         "price": 6000
-      },
-      {
-        "name": "(실속) EX라면",
-        "price": 4000
       }
     ],
     "brandStores": [
@@ -27772,8 +27772,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 0,
-      "dieselPrice": 0,
+      "gasolinePrice": 1742,
+      "dieselPrice": 1738,
       "lpgPrice": 1095,
       "hasEvCharger": true,
       "evChargersCount": 10,
@@ -32417,7 +32417,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1745,
       "dieselPrice": 1736,
-      "lpgPrice": 1155,
+      "lpgPrice": 1055,
       "hasEvCharger": true,
       "evChargersCount": 10,
       "hasHydrogen": false
@@ -38274,8 +38274,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1764,
-      "dieselPrice": 1753,
+      "gasolinePrice": 0,
+      "dieselPrice": 0,
       "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 8,
@@ -41169,7 +41169,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1749,
       "dieselPrice": 1744,
-      "lpgPrice": 1119,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 12,
       "hasHydrogen": false
