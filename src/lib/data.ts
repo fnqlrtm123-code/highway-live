@@ -594,7 +594,7 @@ export const serviceAreas: ServiceArea[] = [
     "gasStation": {
       "brand": "알뜰주유소",
       "gasolinePrice": 1864,
-      "dieselPrice": 1863,
+      "dieselPrice": 1853,
       "lpgPrice": 1186,
       "hasEvCharger": true,
       "evChargersCount": 6,
@@ -4209,8 +4209,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 0,
-      "dieselPrice": 0,
+      "gasolinePrice": 1834,
+      "dieselPrice": 1823,
       "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 4,
@@ -5395,8 +5395,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1845,
-      "dieselPrice": 1836,
+      "gasolinePrice": 1832,
+      "dieselPrice": 1821,
       "lpgPrice": 1155,
       "hasEvCharger": true,
       "evChargersCount": 6,
@@ -6243,7 +6243,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1900,
       "dieselPrice": 1880,
-      "lpgPrice": null,
+      "lpgPrice": 1214,
       "hasEvCharger": true,
       "evChargersCount": 4,
       "hasHydrogen": false
@@ -8030,8 +8030,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 0,
-      "dieselPrice": 0,
+      "gasolinePrice": 1848,
+      "dieselPrice": 1838,
       "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 6,
@@ -10054,7 +10054,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1864,
       "dieselPrice": 1853,
-      "lpgPrice": 1176,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 4,
       "hasHydrogen": true
@@ -12388,8 +12388,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 0,
-      "dieselPrice": 0,
+      "gasolinePrice": 1845,
+      "dieselPrice": 1835,
       "lpgPrice": 1095,
       "hasEvCharger": true,
       "evChargersCount": 10,
@@ -12711,8 +12711,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1852,
-      "dieselPrice": 1843,
+      "gasolinePrice": 1849,
+      "dieselPrice": 1841,
       "lpgPrice": 1220,
       "hasEvCharger": true,
       "evChargersCount": 12,
@@ -14716,7 +14716,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1843,
       "dieselPrice": 1834,
-      "lpgPrice": 1229,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 4,
       "hasHydrogen": false
@@ -15435,7 +15435,7 @@ export const serviceAreas: ServiceArea[] = [
     "gasStation": {
       "brand": "알뜰주유소",
       "gasolinePrice": 1879,
-      "dieselPrice": 1872,
+      "dieselPrice": 1862,
       "lpgPrice": 1259,
       "hasEvCharger": true,
       "evChargersCount": 6,
@@ -16788,8 +16788,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1850,
-      "dieselPrice": 1840,
+      "gasolinePrice": 1870,
+      "dieselPrice": 1860,
       "lpgPrice": 1198,
       "hasEvCharger": true,
       "evChargersCount": 8,
@@ -17000,8 +17000,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1850,
-      "dieselPrice": 1840,
+      "gasolinePrice": 1870,
+      "dieselPrice": 1860,
       "lpgPrice": 1198,
       "hasEvCharger": true,
       "evChargersCount": 8,
@@ -19684,7 +19684,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1838,
       "dieselPrice": 1828,
-      "lpgPrice": 1142,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 4,
       "hasHydrogen": true
@@ -24999,7 +24999,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1864,
       "dieselPrice": 1853,
-      "lpgPrice": 1226,
+      "lpgPrice": 1266,
       "hasEvCharger": true,
       "evChargersCount": 10,
       "hasHydrogen": false
@@ -26181,9 +26181,9 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 0,
-      "dieselPrice": 0,
-      "lpgPrice": null,
+      "gasolinePrice": 1845,
+      "dieselPrice": 1836,
+      "lpgPrice": 1220,
       "hasEvCharger": true,
       "evChargersCount": 4,
       "hasHydrogen": false
@@ -27775,7 +27775,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1842,
       "dieselPrice": 1838,
-      "lpgPrice": 1195,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 10,
       "hasHydrogen": false
@@ -30504,7 +30504,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 0,
       "dieselPrice": 0,
-      "lpgPrice": 1241,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 6,
       "hasHydrogen": false
@@ -32416,8 +32416,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 0,
-      "dieselPrice": 0,
+      "gasolinePrice": 1832,
+      "dieselPrice": 1821,
       "lpgPrice": 1155,
       "hasEvCharger": true,
       "evChargersCount": 10,
@@ -40828,7 +40828,7 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1864,
+      "gasolinePrice": 1894,
       "dieselPrice": 1838,
       "lpgPrice": null,
       "hasEvCharger": true,
