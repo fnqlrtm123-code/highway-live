@@ -32,8 +32,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 
   const lineName = getLineName(road.name);
-  const title = `${road.name} [${lineName}] 교통상황 확인 실시간 CCTV 정체구간 우회도로`;
-  const description = `${road.name} [${lineName}] ${rangeText} 구간의 교통상황 확인 방법을 안내합니다. 도로공사 로드플러스, ITS CCTV 평속 분석, 실시간 CCTV 영상, 정체 구간 및 우회도로 정보를 모아놓았습니다.`;
+  const displayName = lineName === road.name ? road.name : `${road.name} [${lineName}]`;
+  const title = `${displayName} 교통상황 확인 실시간 CCTV 정체구간 우회도로`;
+  const description = `${displayName} ${rangeText} 구간의 교통상황 확인 방법을 안내합니다. 도로공사 로드플러스, ITS CCTV 평속 분석, 실시간 CCTV 영상, 정체 구간 및 우회도로 정보를 모아놓았습니다.`;
 
   return pageMetadata({
     title,
