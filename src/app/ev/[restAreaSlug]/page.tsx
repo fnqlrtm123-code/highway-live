@@ -1,3 +1,4 @@
+import EvBottomCta from '@/components/EvBottomCta';
 import { pageMetadata } from "../../../lib/seo";
 import { getServiceAreaBySlug, serviceAreas } from '@/lib/data';
 import { notFound } from 'next/navigation';
@@ -221,6 +222,7 @@ export default async function EvDetailPage({ params }: Props) {
         </div>
       </section>
 
+      <EvBottomCta areaName={area.name} directionName={area.directionName} />
     </div>
   );
 }

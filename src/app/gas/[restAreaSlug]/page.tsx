@@ -1,3 +1,4 @@
+import GasBottomCta from '@/components/GasBottomCta';
 import { pageMetadata } from "../../../lib/seo";
 import { getServiceAreaBySlug, serviceAreas } from '@/lib/data';
 import { notFound } from 'next/navigation';
@@ -186,6 +187,7 @@ export default async function GasDetailPage({ params }: Props) {
         </div>
       </section>
 
+      <GasBottomCta areaName={area.name} directionName={area.directionName} />
     </div>
   );
 }

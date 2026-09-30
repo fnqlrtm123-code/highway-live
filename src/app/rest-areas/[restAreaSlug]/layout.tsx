@@ -1,3 +1,4 @@
+import GasBottomCta from '@/components/GasBottomCta';
 import { getServiceAreaBySlug, serviceAreas } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
@@ -93,6 +94,7 @@ export default async function RestAreaLayout({ children, params }: Props) {
       </div>
 
       {children}
+      <GasBottomCta areaName={area.name} directionName={area.directionName} />
     </main>
   );
 }

@@ -64,3 +64,11 @@ body {
   animation: marquee 30s linear infinite;
 }
 
+
+/* Leave room for the fixed CTAs after the footer, including phone safe areas. */
+body:has(.traffic-bottom-cta),
+body:has(.gas-bottom-cta),
+body:has(.ev-bottom-cta),
+body:has(.toll-bottom-cta) {
+  padding-bottom: calc(112px + env(safe-area-inset-bottom));
+}
