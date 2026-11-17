@@ -1780,7 +1780,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1832,
       "dieselPrice": 1823,
-      "lpgPrice": 1129,
+      "lpgPrice": 1143,
       "hasEvCharger": true,
       "evChargersCount": 12,
       "hasHydrogen": true
@@ -2473,7 +2473,7 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1827,
+      "gasolinePrice": 1825,
       "dieselPrice": 1825,
       "lpgPrice": 1143,
       "hasEvCharger": true,
@@ -4418,7 +4418,7 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1819,
+      "gasolinePrice": 1817,
       "dieselPrice": 1819,
       "lpgPrice": 1239,
       "hasEvCharger": true,
@@ -4547,7 +4547,7 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1819,
+      "gasolinePrice": 1817,
       "dieselPrice": 1819,
       "lpgPrice": null,
       "hasEvCharger": true,
@@ -4811,7 +4811,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1818,
       "dieselPrice": 1818,
-      "lpgPrice": 1234,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 8,
       "hasHydrogen": false
@@ -8554,6 +8554,10 @@ export const serviceAreas: ServiceArea[] = [
       {
         "name": "냉메밀소바",
         "price": 8000
+      },
+      {
+        "name": "사천바다보물솥밥정식",
+        "price": 17000
       }
     ],
     "brandStores": [
@@ -10159,7 +10163,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1864,
       "dieselPrice": 1853,
-      "lpgPrice": null,
+      "lpgPrice": 1261,
       "hasEvCharger": true,
       "evChargersCount": 4,
       "hasHydrogen": true
@@ -11015,8 +11019,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1834,
-      "dieselPrice": 1833,
+      "gasolinePrice": 1799,
+      "dieselPrice": 1839,
       "lpgPrice": 1286,
       "hasEvCharger": true,
       "evChargersCount": 10,
@@ -11608,8 +11612,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1834,
-      "dieselPrice": 1833,
+      "gasolinePrice": 1799,
+      "dieselPrice": 1839,
       "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 8,
@@ -14375,7 +14379,7 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 1837,
+      "gasolinePrice": 1839,
       "dieselPrice": 1829,
       "lpgPrice": null,
       "hasEvCharger": true,
@@ -16482,7 +16486,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1845,
       "dieselPrice": 1836,
-      "lpgPrice": 1245,
+      "lpgPrice": 1265,
       "hasEvCharger": true,
       "evChargersCount": 10,
       "hasHydrogen": false
@@ -19503,7 +19507,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1839,
       "dieselPrice": 1829,
-      "lpgPrice": 1257,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 4,
       "hasHydrogen": false
@@ -28147,7 +28151,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1845,
       "dieselPrice": 1835,
-      "lpgPrice": 1289,
+      "lpgPrice": null,
       "hasEvCharger": true,
       "evChargersCount": 6,
       "hasHydrogen": true
@@ -30710,8 +30714,8 @@ export const serviceAreas: ServiceArea[] = [
     ],
     "gasStation": {
       "brand": "알뜰주유소",
-      "gasolinePrice": 0,
-      "dieselPrice": 0,
+      "gasolinePrice": 1864,
+      "dieselPrice": 1853,
       "lpgPrice": 1326,
       "hasEvCharger": true,
       "evChargersCount": 6,
@@ -41378,7 +41382,7 @@ export const serviceAreas: ServiceArea[] = [
       "brand": "알뜰주유소",
       "gasolinePrice": 1849,
       "dieselPrice": 1844,
-      "lpgPrice": 1219,
+      "lpgPrice": 1269,
       "hasEvCharger": true,
       "evChargersCount": 12,
       "hasHydrogen": false
